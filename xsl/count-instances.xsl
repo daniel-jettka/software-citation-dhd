@@ -10,7 +10,7 @@
     
     <xsl:key name="token-by-id" match="tc:token" use="@ID"/>
     
-    <xsl:param name="type" select="'named-entity'" as="xs:string"/><!-- possible types to count: named-entity, tokens -->
+    <xsl:param name="type" select="'named-entity'" as="xs:string"/><!-- possible types to count: named-entity, token -->
     
     <xsl:variable name="collection-dirs" select="(
         '../data/DHd-Abstracts-2016/TCF-files',
@@ -36,10 +36,8 @@
                         </xsl:when>
                         <!-- collect all tokens -->
                         <xsl:when test="$type='token'">
-                            <xsl:for-each select="//*:text/*:body/descendant::text()">
-                                <xsl:for-each select="tokenize(., '[\s\.,:;!\?\)\(\[\]„“;]+')">
-                                    <i><xsl:value-of select="."/></i>
-                                </xsl:for-each>
+                            <xsl:for-each select="//tc:token">
+                                <i><xsl:value-of select="."/></i>                                
                             </xsl:for-each>
                         </xsl:when>
                         <!-- error for invalid type value -->
