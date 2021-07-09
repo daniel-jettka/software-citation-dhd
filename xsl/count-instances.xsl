@@ -10,23 +10,41 @@
     
     <xsl:key name="token-by-id" match="tc:token" use="@ID"/>
     
-    <xsl:param name="type" select="'named-entity'" as="xs:string"/><!-- possible types to count: named-entity, token -->
+    <xsl:param name="type" select="'software-names'" as="xs:string"/><!-- possible types to count: named-entity, token, software-names -->
+    <xsl:param name="file-type" select="'XML'" as="xs:string"/><!-- possible file types to analyze: XML (for TEI), TCF -->
+    
+    
+    <!-- Global variables -->
     
     <xsl:variable name="collection-dirs" select="(
+        (: directories with PDF types:)
         '../data/DHd-Abstracts-2016/TCF-files',
         '../data/DHd-Abstracts-2017/TCF-files',
         '../data/DHd-Abstracts-2018/TCF-files',
         '../data/DHd-Abstracts-2019/TCF-files',
-        '../data/DHd-Abstracts-2020/TCF-files'
-        )" as="xs:string+"/>
+        '../data/DHd-Abstracts-2020/TCF-files',
+        (: directroies with TEI files:)
+        '../data/DHd-Abstracts-2016/XML-files',
+        '../data/DHd-Abstracts-2017/XML-files',
+        '../data/DHd-Abstracts-2018/XML-files',
+        '../data/DHd-Abstracts-2019/XML-files',
+        '../data/DHd-Abstracts-2020/XML-files'
+        )[contains(., $file-type)]" as="xs:string+"/>
+    
+    <xsl:variable name="path-to-software-list" select="'../conf/software-names.txt'" as="xs:string"/>
+    
     <xsl:variable name="NEWLINE"><xsl:text>
 </xsl:text></xsl:variable>
+    
+    
+    <!-- Templates -->
     
     <xsl:template match="/">
         
         <xsl:variable name="all-instances" as="element(i)+">
             <xsl:for-each select="$collection-dirs">                
                 <xsl:for-each select="collection(concat(., '?select=*.xml;recurse=yes;on-error=warning'))">
+                    <xsl:variable name="doc" select="/"/>
                     <xsl:choose>
                         <!-- collect named entities -->
                         <xsl:when test="$type='named-entity'">                            
@@ -38,6 +56,20 @@
                         <xsl:when test="$type='token'">
                             <xsl:for-each select="//tc:token">
                                 <i><xsl:value-of select="."/></i>                                
+                            </xsl:for-each>
+                        </xsl:when>
+                        <xsl:when test="$type='software-names'">
+                            <xsl:variable name="software-names" select="tokenize(unparsed-text($path-to-software-list), '\n+')[not(matches(., '[\s\n]+'))]" as="xs:string+"/>
+                            <xsl:for-each select="$software-names">
+                                <xsl:variable name="software-name" select="." as="xs:string"/>
+                                <xsl:variable name="regex-instance" select="replace(., '[\s|\-\.]', '[\\s\\-\\.]*')" as="xs:string"/>
+                                <xsl:for-each select="$doc//*:body/descendant::text()">                                    
+                                    <xsl:analyze-string select="." regex="{$regex-instance}" flags="i">
+                                        <xsl:matching-substring>
+                                            <i><xsl:value-of select="$software-name"/></i>
+                                        </xsl:matching-substring>
+                                    </xsl:analyze-string>
+                                </xsl:for-each>
                             </xsl:for-each>
                         </xsl:when>
                         <!-- error for invalid type value -->
