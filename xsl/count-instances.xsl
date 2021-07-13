@@ -10,7 +10,7 @@
     
     <xsl:key name="token-by-id" match="tc:token" use="@ID"/>
     
-    <xsl:param name="type" select="'software-names'" as="xs:string"/><!-- possible types to count: named-entity, token, software-names -->
+    <xsl:param name="type" select="'software-names'" as="xs:string"/><!-- possible types to count: named-entity, token, sentence, software-names -->
     <xsl:param name="file-type" select="'XML'" as="xs:string"/><!-- possible file types to analyze: XML (for TEI), TCF -->
     
     
@@ -58,6 +58,12 @@
                                 <i><xsl:value-of select="."/></i>                                
                             </xsl:for-each>
                         </xsl:when>
+                        <!-- collect all sentences -->
+                        <xsl:when test="$type='sentence'">
+                            <xsl:for-each select="//tc:sentence">
+                                <i><xsl:value-of select="."/></i>                                
+                            </xsl:for-each>
+                        </xsl:when>
                         <xsl:when test="$type='software-names'">
                             <xsl:variable name="software-names" select="tokenize(unparsed-text($path-to-software-list), '\n+')[not(matches(., '[\s\n]+'))]" as="xs:string+"/>
                             <xsl:for-each select="$software-names">
@@ -81,9 +87,11 @@
             </xsl:for-each>
         </xsl:variable>
         
+        <xsl:message select="concat('Total of ', $type, ' instances: ', count($all-instances))"/>
+        
         <xsl:for-each-group select="$all-instances" group-by="text()">
             <xsl:sort select="count(current-group())" order="descending"/>
-            <xsl:value-of select="current-grouping-key()"/>;<xsl:value-of select="count(current-group())"/><xsl:value-of select="$NEWLINE"/>
+            <xsl:value-of select="concat('&quot;', current-grouping-key(), '&quot;')"/>;"<xsl:value-of select="concat('&quot;', count(current-group()), '&quot;')"/>"<xsl:value-of select="$NEWLINE"/>
         </xsl:for-each-group>
         
     </xsl:template>
