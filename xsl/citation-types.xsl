@@ -37,6 +37,7 @@
         
         <!-- header row -->
         <xsl:value-of select="concat($categories[1], ';', $categories[2])"/>
+        <xsl:value-of select="';NameOnly;NameOnly (bool)'"/>
         <xsl:for-each select="subsequence($categories, 3)">
             <xsl:value-of select="concat(';', ., ';', ., ' (bool)')"/>
         </xsl:for-each>
@@ -54,14 +55,20 @@
                     <xsl:variable name="current-key" select="." as="xs:string"/>
                     <xsl:variable name="rs-with-this-key" select="key('rs-by-key', $current-key, $doc)"/>
                     
+                    
                     <!-- SoftwareID and file path -->
                     <xsl:value-of select="concat($current-key, ';', $current-directory, substring-after(base-uri($doc), $current-directory))"/>
                     
+                    <!-- Name only instances -->
+                    <xsl:variable name="count-name-only" select="count($rs-with-this-key) - count($rs-with-this-key[exists(@ana)])" as="xs:integer"/>
+                    <xsl:value-of select="concat(';', $count-name-only)"/>
+                    <xsl:value-of select="concat(';', ('1'[(count($rs-with-this-key) = $count-name-only)], '0')[1])"/>
+                    
                     <!-- Name instances -->
-                    <xsl:variable name="count" select="count($rs-with-this-key[contains(lower-case(@ana), lower-case('#Name')) or not(contains(lower-case(@ana), lower-case('#Noname')))])" as="xs:integer"/>
+                    <xsl:variable name="count" select="count($rs-with-this-key[not(contains(lower-case(@ana), '#noname'))])" as="xs:integer"/>
                     <xsl:value-of select="concat(';', $count)"/>
                     <xsl:value-of select="concat(';', ('1'[$count &gt; 0],'0')[1])"/>
-                    
+                      
                     
                     <!-- other annotations -->
                     <xsl:for-each select="subsequence($categories, 4)">
