@@ -5,6 +5,9 @@
     exclude-result-prefixes="xs math"
     version="3.0">
     
+    <!-- creates a CSV file that lists all unique software/abstract combinations with the corresponding citation annotations -->
+    
+    
     <!-- Serialization details -->
     <xsl:output method="text" omit-xml-declaration="yes"/>
     
@@ -14,21 +17,19 @@
     
     <!-- Global variables -->
     
-    <xsl:variable name="collection-dirs" select="(
-        (: directories with TEI files:)
-        '../data/DHd-Abstracts-2016/XML-files',
-        '../data/DHd-Abstracts-2017/XML-files',
-        '../data/DHd-Abstracts-2018/XML-files',
-        '../data/DHd-Abstracts-2019/XML-files',
-        '../data/DHd-Abstracts-2020/XML-files'
-        )" as="xs:string+"/>
+    <!-- directories with TEI files -->
+    <xsl:variable name="collection-dirs" as="xs:string+" select="('../data/DHd-Abstracts-2016/XML-files', '../data/DHd-Abstracts-2017/XML-files', '../data/DHd-Abstracts-2018/XML-files', '../data/DHd-Abstracts-2019/XML-files', '../data/DHd-Abstracts-2020/XML-files')"/>
     
+    <!-- path to list with software names -->
     <xsl:variable name="path-to-software-list" select="'../conf/software-names.txt'" as="xs:string"/>
     
-    <xsl:variable name="categories" select="('SoftwareID','Dateipfad','Name','Bib.Ref','Bib.Soft','Agent','URL','PID','Ver','Noname')" as="xs:string+"/>
+    <!-- categories for CSV header (later extended by boolean columns) -->
+    <xsl:variable name="categories" select="('SoftwareID','Dateipfad','Name','Bib.Ref','Bib.Soft','Agent','URL','PID','Ver')" as="xs:string+"/>
     
+    <!-- character to be used as CSV separator -->
     <xsl:variable name="csv-separator" select="','" as="xs:string"/>
     
+    <!-- newline character -->
     <xsl:variable name="NEWLINE"><xsl:text>
 </xsl:text></xsl:variable>
     

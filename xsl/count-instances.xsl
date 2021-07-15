@@ -6,10 +6,16 @@
     exclude-result-prefixes="xs math"
     version="3.0">
     
+    <!-- counting instances of different elements or string in a list of XML files -->
+    
+    
+    <!-- Serialization details -->
     <xsl:output method="text" omit-xml-declaration="1"/>
     
+    <!-- Keys -->
     <xsl:key name="token-by-id" match="tc:token" use="@ID"/>
     
+    <!-- Global parameters -->
     <xsl:param name="type" select="'software-names'" as="xs:string"/><!-- possible types to count: named-entity, token, sentence, software-names -->
     <xsl:param name="file-type" select="'XML'" as="xs:string"/><!-- possible file types to analyze: XML (for TEI), TCF -->
     <xsl:param name="count-doc-unique" select="false()" as="xs:boolean"/>
