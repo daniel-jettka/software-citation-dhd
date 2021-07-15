@@ -5,6 +5,7 @@
     version="2.0">
     
     <!-- check if the values of @ana are correct -->
+    <!-- result is empty if values of //rs/@ana only contain defined values from $categories -->
     
     <!-- Serialization details -->
     <xsl:output method="text" omit-xml-declaration="yes"/>

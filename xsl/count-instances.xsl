@@ -6,13 +6,20 @@
     exclude-result-prefixes="xs math"
     version="3.0">
     
+    <!-- counting instances of different elements or string in a list of XML files -->
+    
+    
+    <!-- Serialization details -->
     <xsl:output method="text" omit-xml-declaration="1"/>
     
+    <!-- Keys -->
     <xsl:key name="token-by-id" match="tc:token" use="@ID"/>
     
-    <xsl:param name="type" select="'software-names'" as="xs:string"/><!-- possible types to count: named-entity, token, sentence, software-names -->
+    <!-- Global parameters -->
+    <xsl:param name="type" select="'external'" as="xs:string"/><!-- possible types to count: named-entity, token, sentence, external -->
     <xsl:param name="file-type" select="'XML'" as="xs:string"/><!-- possible file types to analyze: XML (for TEI), TCF -->
-    <xsl:param name="count-doc-unique" select="false()" as="xs:boolean"/>
+    <xsl:param name="count-doc-unique" select="true()" as="xs:boolean"/><!-- count all instances (false) or only one per XML document (true) -->
+    <xsl:param name="list" select="'../conf/software-names.txt'" as="xs:string"/><!-- path to line-separated list of values to count -->
     
     
     <!-- Global variables -->
@@ -32,7 +39,8 @@
         '../data/DHd-Abstracts-2020/XML-files'
         )[contains(., $file-type)]" as="xs:string+"/>
     
-    <xsl:variable name="path-to-software-list" select="'../conf/software-names.txt'" as="xs:string"/>
+    <xsl:variable name="list-values" select="tokenize(unparsed-text($list), '\n+')[not(matches(., '^[\s\n]*$'))]" as="xs:string+"/>
+    
     
     <xsl:variable name="csv-separator" select="','" as="xs:string"/>
     
@@ -67,10 +75,10 @@
                                 <xsl:sequence select="."/>                                
                             </xsl:for-each>
                         </xsl:when>
-                        <xsl:when test="$type='software-names'">
-                            <xsl:variable name="software-names" select="tokenize(unparsed-text($path-to-software-list), '\n+')[not(matches(., '^[\s\n]*$'))]" as="xs:string+"/>
-                            <xsl:variable name="software-names-in-doc" as="xs:string*">
-                                <xsl:for-each select="$software-names">
+                        <!-- collect software names -->
+                        <xsl:when test="$type='external'">
+                            <xsl:variable name="list-values-in-doc" as="xs:string*">
+                                <xsl:for-each select="$list-values">
                                     <xsl:variable name="software-name" select="." as="xs:string"/>
                                     <xsl:variable name="regex-instance" select="concat('[^\w]+', replace(., '[\s|\-\.]', '[\\s\\-\\.]*'), '[^\w]+')" as="xs:string"/>
                                     <xsl:for-each select="$doc//descendant::text()">                                    
@@ -84,10 +92,10 @@
                             </xsl:variable>
                             <xsl:choose>
                                 <xsl:when test="$count-doc-unique">
-                                    <xsl:sequence select="distinct-values($software-names-in-doc)"/>
+                                    <xsl:sequence select="distinct-values($list-values-in-doc)"/>
                                 </xsl:when>
                                 <xsl:otherwise>
-                                    <xsl:sequence select="$software-names-in-doc"/>
+                                    <xsl:sequence select="$list-values-in-doc"/>
                                 </xsl:otherwise>
                             </xsl:choose>
                         </xsl:when>
@@ -102,10 +110,28 @@
         
         <xsl:message select="concat('Total of ', $type, ' instances: ', count($all-instances))"/>
         
-        <xsl:for-each select="distinct-values($all-instances)">
-            <xsl:sort select="count($all-instances[.=current()])" order="descending"/>
-            <xsl:value-of select="concat('&quot;', ., '&quot;', $csv-separator)"/>"<xsl:value-of select="count($all-instances[.=current()])"/>"<xsl:value-of select="$NEWLINE"/>
-        </xsl:for-each>
+        <xsl:choose>
+            <!-- if an external list of values was provided, then also 0 counts are listed -->
+            <xsl:when test="$type='external'">
+                <xsl:for-each select="$list-values">
+                    <xsl:sort select="count($all-instances[.=current()])" order="descending" data-type="number"/>
+                    <xsl:sort select="." order="ascending" data-type="text"/>
+                    <xsl:value-of select="concat('&quot;', ., '&quot;', $csv-separator)"/>
+                    <xsl:value-of select="count($all-instances[.=current()])"/>
+                    <xsl:if test="position()!=last()"><xsl:value-of select="$NEWLINE"/></xsl:if>
+                </xsl:for-each>
+            </xsl:when>
+            <!-- if count is not based on a list, then 0 counts are not provided -->
+            <xsl:otherwise>
+                <xsl:for-each select="distinct-values($all-instances)">
+                    <xsl:sort select="count($all-instances[.=current()])" order="descending"/>
+                    <xsl:value-of select="concat('&quot;', ., '&quot;', $csv-separator)"/>
+                    <xsl:value-of select="count($all-instances[.=current()])"/>
+                    <xsl:if test="position()!=last()"><xsl:value-of select="$NEWLINE"/></xsl:if>
+                </xsl:for-each>
+            </xsl:otherwise>
+        </xsl:choose>
+               
         
     </xsl:template>
     
