@@ -18,10 +18,10 @@
     <!-- Global variables -->
     
     <!-- directories with TEI files -->
-    <xsl:variable name="collection-dirs" as="xs:string+" select="('../data/DHd-Abstracts-2016/XML-files', '../data/DHd-Abstracts-2017/XML-files', '../data/DHd-Abstracts-2018/XML-files', '../data/DHd-Abstracts-2019/XML-files', '../data/DHd-Abstracts-2020/XML-files')"/>
+    <xsl:variable name="collection-dirs" as="xs:string+" select="('../../data/DHd-Abstracts-2016/XML-files', '../../data/DHd-Abstracts-2017/XML-files', '../../data/DHd-Abstracts-2018/XML-files', '../../data/DHd-Abstracts-2019/XML-files', '../../data/DHd-Abstracts-2020/XML-files')"/>
     
     <!-- path to list with software names -->
-    <xsl:variable name="path-to-software-list" select="'../conf/software-names.txt'" as="xs:string"/>
+    <xsl:variable name="path-to-software-list" select="'../../conf/software-names.txt'" as="xs:string"/>
     
     <!-- categories for CSV header (later extended by boolean columns) -->
     <xsl:variable name="categories" select="('SoftwareID','Dateipfad','Name','Bib.Ref','Bib.Soft','Agent','URL','PID','Ver')" as="xs:string+"/>

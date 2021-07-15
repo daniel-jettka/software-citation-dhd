@@ -19,24 +19,24 @@
     <xsl:param name="type" select="'external'" as="xs:string"/><!-- possible types to count: named-entity, token, sentence, external -->
     <xsl:param name="file-type" select="'XML'" as="xs:string"/><!-- possible file types to analyze: XML (for TEI), TCF -->
     <xsl:param name="count-doc-unique" select="true()" as="xs:boolean"/><!-- count all instances (false) or only one per XML document (true) -->
-    <xsl:param name="list" select="'../conf/software-names.txt'" as="xs:string"/><!-- path to line-separated list of values to count -->
+    <xsl:param name="list" select="'../../conf/software-names.txt'" as="xs:string"/><!-- path to line-separated list of values to count -->
     
     
     <!-- Global variables -->
     
     <xsl:variable name="collection-dirs" select="(
         (: directories with PDF types:)
-        '../data/DHd-Abstracts-2016/TCF-files',
-        '../data/DHd-Abstracts-2017/TCF-files',
-        '../data/DHd-Abstracts-2018/TCF-files',
-        '../data/DHd-Abstracts-2019/TCF-files',
-        '../data/DHd-Abstracts-2020/TCF-files',
+        '../../data/DHd-Abstracts-2016/TCF-files',
+        '../../data/DHd-Abstracts-2017/TCF-files',
+        '../../data/DHd-Abstracts-2018/TCF-files',
+        '../../data/DHd-Abstracts-2019/TCF-files',
+        '../../data/DHd-Abstracts-2020/TCF-files',
         (: directroies with TEI files:)
-        '../data/DHd-Abstracts-2016/XML-files',
-        '../data/DHd-Abstracts-2017/XML-files',
-        '../data/DHd-Abstracts-2018/XML-files',
-        '../data/DHd-Abstracts-2019/XML-files',
-        '../data/DHd-Abstracts-2020/XML-files'
+        '../../data/DHd-Abstracts-2016/XML-files',
+        '../../data/DHd-Abstracts-2017/XML-files',
+        '../../data/DHd-Abstracts-2018/XML-files',
+        '../../data/DHd-Abstracts-2019/XML-files',
+        '../../data/DHd-Abstracts-2020/XML-files'
         )[contains(., $file-type)]" as="xs:string+"/>
     
     <xsl:variable name="list-values" select="tokenize(unparsed-text($list), '\n+')[not(matches(., '^[\s\n]*$'))]" as="xs:string+"/>

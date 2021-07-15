@@ -8,7 +8,7 @@
     
     <xsl:template match="/">
         
-        <xsl:variable name="citation-types" select="unparsed-text('citation-types.csv','UTF-8')"/>
+        <xsl:variable name="citation-types" select="unparsed-text('../csv/citation-types.csv','UTF-8')"/>
         <xsl:variable name="NEWLINE"><xsl:text>
 </xsl:text></xsl:variable>
         <xsl:variable name="SEP" select="','" as="xs:string"/>
