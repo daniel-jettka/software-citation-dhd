@@ -12,6 +12,7 @@
     
     <xsl:param name="type" select="'software-names'" as="xs:string"/><!-- possible types to count: named-entity, token, sentence, software-names -->
     <xsl:param name="file-type" select="'XML'" as="xs:string"/><!-- possible file types to analyze: XML (for TEI), TCF -->
+    <xsl:param name="count-doc-unique" select="false()" as="xs:boolean"/>
     
     
     <!-- Global variables -->
@@ -41,7 +42,7 @@
     
     <xsl:template match="/">
         
-        <xsl:variable name="all-instances" as="element(i)+">
+        <xsl:variable name="all-instances" as="xs:string*">
             <xsl:for-each select="$collection-dirs">                
                 <xsl:for-each select="collection(concat(., '?select=*.xml;recurse=yes;on-error=warning'))">
                     <xsl:variable name="doc" select="/"/>
@@ -49,34 +50,44 @@
                         <!-- collect named entities -->
                         <xsl:when test="$type='named-entity'">                            
                             <xsl:for-each select="//tc:entity">
-                                <i><xsl:value-of select="concat(string-join(key('token-by-id', tokenize(@tokenIDs, ' ')), ' '), ';', @class)"/></i>                    
+                                <xsl:sequence select="concat(string-join(key('token-by-id', tokenize(@tokenIDs, ' ')), ' '), ';', @class)"/>                    
                             </xsl:for-each>
                         </xsl:when>
                         <!-- collect all tokens -->
                         <xsl:when test="$type='token'">
                             <xsl:for-each select="//tc:token">
-                                <i><xsl:value-of select="."/></i>                                
+                                <xsl:sequence select="."/>                             
                             </xsl:for-each>
                         </xsl:when>
                         <!-- collect all sentences -->
                         <xsl:when test="$type='sentence'">
                             <xsl:for-each select="//tc:sentence">
-                                <i><xsl:value-of select="."/></i>                                
+                                <xsl:sequence select="."/>                                
                             </xsl:for-each>
                         </xsl:when>
                         <xsl:when test="$type='software-names'">
-                            <xsl:variable name="software-names" select="tokenize(unparsed-text($path-to-software-list), '\n+')[not(matches(., '[\s\n]+'))]" as="xs:string+"/>
-                            <xsl:for-each select="$software-names">
-                                <xsl:variable name="software-name" select="." as="xs:string"/>
-                                <xsl:variable name="regex-instance" select="replace(., '[\s|\-\.]', '[\\s\\-\\.]*')" as="xs:string"/>
-                                <xsl:for-each select="$doc//*:body/descendant::text()">                                    
-                                    <xsl:analyze-string select="." regex="{$regex-instance}" flags="i">
-                                        <xsl:matching-substring>
-                                            <i><xsl:value-of select="$software-name"/></i>
-                                        </xsl:matching-substring>
-                                    </xsl:analyze-string>
+                            <xsl:variable name="software-names" select="tokenize(unparsed-text($path-to-software-list), '\n+')[not(matches(., '^[\s\n]*$'))]" as="xs:string+"/>
+                            <xsl:variable name="software-names-in-doc" as="xs:string*">
+                                <xsl:for-each select="$software-names">
+                                    <xsl:variable name="software-name" select="." as="xs:string"/>
+                                    <xsl:variable name="regex-instance" select="concat('[^\w]+', replace(., '[\s|\-\.]', '[\\s\\-\\.]*'), '[^\w]+')" as="xs:string"/>
+                                    <xsl:for-each select="$doc//descendant::text()">                                    
+                                        <xsl:analyze-string select="." regex="{$regex-instance}" flags="i">
+                                            <xsl:matching-substring>
+                                                <xsl:sequence select="$software-name"/>
+                                            </xsl:matching-substring>
+                                        </xsl:analyze-string>
+                                    </xsl:for-each>
                                 </xsl:for-each>
-                            </xsl:for-each>
+                            </xsl:variable>
+                            <xsl:choose>
+                                <xsl:when test="$count-doc-unique">
+                                    <xsl:sequence select="distinct-values($software-names-in-doc)"/>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:sequence select="$software-names-in-doc"/>
+                                </xsl:otherwise>
+                            </xsl:choose>
                         </xsl:when>
                         <!-- error for invalid type value -->
                         <xsl:otherwise>
@@ -89,10 +100,10 @@
         
         <xsl:message select="concat('Total of ', $type, ' instances: ', count($all-instances))"/>
         
-        <xsl:for-each-group select="$all-instances" group-by="text()">
-            <xsl:sort select="count(current-group())" order="descending"/>
-            <xsl:value-of select="concat('&quot;', current-grouping-key(), '&quot;')"/>;"<xsl:value-of select="concat('&quot;', count(current-group()), '&quot;')"/>"<xsl:value-of select="$NEWLINE"/>
-        </xsl:for-each-group>
+        <xsl:for-each select="distinct-values($all-instances)">
+            <xsl:sort select="count($all-instances[.=current()])" order="descending"/>
+            <xsl:value-of select="concat('&quot;', ., '&quot;')"/>;"<xsl:value-of select="count($all-instances[.=current()])"/>"<xsl:value-of select="$NEWLINE"/>
+        </xsl:for-each>
         
     </xsl:template>
     
