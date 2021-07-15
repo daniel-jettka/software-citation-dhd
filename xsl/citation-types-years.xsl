@@ -11,10 +11,11 @@
         <xsl:variable name="citation-types" select="unparsed-text('citation-types.csv','UTF-8')"/>
         <xsl:variable name="NEWLINE"><xsl:text>
 </xsl:text></xsl:variable>
+        <xsl:variable name="SEP" select="','" as="xs:string"/>
         
         <xsl:variable name="year-counts">
             <counts>
-                <xsl:analyze-string select="$citation-types" regex="^([^;]+);([^;]+);[^;]+;([^;]+);[^;]+;[^;]+;[^;]+;([^;]+);[^;]+;([^;]+);[^;]+;([^;]+);[^;]+;([^;]+);[^;]+;([^;]+);[^;]+;([^;]+).*$" flags="m">
+                <xsl:analyze-string select="$citation-types" regex="{concat('^([^',$SEP,']+)',$SEP,'([^',$SEP,']+)',$SEP,'[^',$SEP,']+',$SEP,'([^',$SEP,']+)',$SEP,'[^',$SEP,']+',$SEP,'[^',$SEP,']+',$SEP,'[^',$SEP,']+',$SEP,'([^',$SEP,']+)',$SEP,'[^',$SEP,']+',$SEP,'([^',$SEP,']+)',$SEP,'[^',$SEP,']+',$SEP,'([^',$SEP,']+)',$SEP,'[^',$SEP,']+',$SEP,'([^',$SEP,']+)',$SEP,'[^',$SEP,']+',$SEP,'([^',$SEP,']+)',$SEP,'[^',$SEP,']+',$SEP,'([^',$SEP,']+).*$')}" flags="m">
                     <!-- regex-groups:
                     1: SoftwareID
                     2: Dateipfad
@@ -63,33 +64,33 @@
                 <xsl:variable name="sum-Ver" select="sum(current-group()/number(value[@type='Ver']))"/>
                 
                 <xsl:value-of select="substring-after(current-grouping-key(),'DHd-Abstracts-')"/>
-                <xsl:text>;</xsl:text>
+                <xsl:value-of select="$SEP"/>
                 <xsl:value-of select="$sum-NameOnly"/>
-                <xsl:text>;</xsl:text>
+                <xsl:value-of select="$SEP"/>
                 <xsl:value-of select="$sum-NameOnly div $group-size"/>
-                <xsl:text>;</xsl:text>
+                <xsl:value-of select="$SEP"/>
                 <xsl:value-of select="$sum-Bib.Ref"/>
-                <xsl:text>;</xsl:text>
+                <xsl:value-of select="$SEP"/>
                 <xsl:value-of select="$sum-Bib.Ref div $group-size"/>
-                <xsl:text>;</xsl:text>
+                <xsl:value-of select="$SEP"/>
                 <xsl:value-of select="$sum-Bib.Soft"/>
-                <xsl:text>;</xsl:text>
+                <xsl:value-of select="$SEP"/>
                 <xsl:value-of select="$sum-Bib.Soft div $group-size"/>
-                <xsl:text>;</xsl:text>
+                <xsl:value-of select="$SEP"/>
                 <xsl:value-of select="$sum-Agent"/>
-                <xsl:text>;</xsl:text>
+                <xsl:value-of select="$SEP"/>
                 <xsl:value-of select="$sum-Agent div $group-size"/>
-                <xsl:text>;</xsl:text>
+                <xsl:value-of select="$SEP"/>
                 <xsl:value-of select="$sum-URL"/>
-                <xsl:text>;</xsl:text>
+                <xsl:value-of select="$SEP"/>
                 <xsl:value-of select="$sum-URL div $group-size"/>
-                <xsl:text>;</xsl:text>
+                <xsl:value-of select="$SEP"/>
                 <xsl:value-of select="$sum-PID"/>
-                <xsl:text>;</xsl:text>
+                <xsl:value-of select="$SEP"/>
                 <xsl:value-of select="$sum-PID div $group-size"/>
-                <xsl:text>;</xsl:text>
+                <xsl:value-of select="$SEP"/>
                 <xsl:value-of select="$sum-Ver"/>
-                <xsl:text>;</xsl:text>
+                <xsl:value-of select="$SEP"/>
                 <xsl:value-of select="$sum-Ver div $group-size"/>
                 <xsl:if test="position() != last()">
                     <xsl:value-of select="$NEWLINE"/>
@@ -207,7 +208,7 @@
                         title: "Citation types per year",
                         yaxis: {title: "Citations"},
                         xaxis: {title: "Year"},
-                        barmode: "stack"
+                        barmode: "group"
                         };
                         
                         Plotly.newPlot('myDiv', data, layout);
