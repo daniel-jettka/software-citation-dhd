@@ -48,7 +48,7 @@
         
         <!-- following rows -->
         <xsl:for-each select="$collection-dirs">
-            <xsl:variable name="current-directory" select="substring(., 4)" as="xs:string"/>
+            <xsl:variable name="current-directory" select="substring(., 7)" as="xs:string"/>
             
             <xsl:for-each select="collection(concat(., '?select=*.xml;recurse=yes;on-error=warning'))">
                 <xsl:variable name="doc" select="/"/>
