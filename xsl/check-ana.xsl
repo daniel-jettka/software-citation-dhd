@@ -20,6 +20,8 @@
     
     <xsl:variable name="categories" select="('Bib.Ref','Bib.Soft','Agent','Ver','URL','PID')" as="xs:string+"/>
     
+    <xsl:variable name="csv-separator" select="','" as="xs:string"/>
+    
     <xsl:variable name="NEWLINE"><xsl:text>
 </xsl:text></xsl:variable>
     
@@ -36,7 +38,7 @@
                         <xsl:if test="not(substring-after(.,'#') = $categories)">
                             <!-- file path -->
                             <xsl:value-of select="concat($current-directory, substring-after(base-uri($doc), $current-directory))"/>
-                            <xsl:text>;</xsl:text>
+                            <xsl:value-of select="$csv-separator"/>
                             <xsl:text>"</xsl:text><xsl:value-of select="."/><xsl:text>"</xsl:text>
                             <xsl:value-of select="$NEWLINE"/>
                         </xsl:if>
