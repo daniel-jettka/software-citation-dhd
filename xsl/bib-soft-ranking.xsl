@@ -10,6 +10,8 @@
     <xsl:output method="text" omit-xml-declaration="yes"/>
     
     
+    <xsl:variable name="csv-separator" select="','" as="xs:string"/>
+    
     <xsl:variable name="NEWLINE"><xsl:text>
 </xsl:text></xsl:variable>
     
@@ -18,12 +20,13 @@
         
         <xsl:variable name="citation-types" select="unparsed-text('citation-types.csv','UTF-8')"/>
         
-        <xsl:text>Software-ID;Citations;Bib.Ref.abs;Bib.Ref.rel;Bib.Soft.abs;Bib.Soft.rel</xsl:text>
+        <xsl:value-of select="string-join(('Software-ID','Citations','Bib.Ref.abs','Bib.Ref.rel','Bib.Soft.abs','Bib.Soft.rel'), $csv-separator)"/>
+        <xsl:text></xsl:text>
         <xsl:value-of select="$NEWLINE"/>
         
         <xsl:variable name="Bib-counts">
             <counts>
-                <xsl:analyze-string select="$citation-types" regex="^([^;]+);[^;]+;[^;]+;[^;]+;[^;]+;[^;]+;[^;]+;([^;]+);[^;]+;([^;]+).*$" flags="m">
+                <xsl:analyze-string select="$citation-types" regex="{concat('^([^', $csv-separator,']+)', $csv-separator,'[^', $csv-separator,']+', $csv-separator,'[^', $csv-separator,']+', $csv-separator,'[^', $csv-separator,']+', $csv-separator,'[^', $csv-separator,']+', $csv-separator,'[^', $csv-separator,']+', $csv-separator,'[^', $csv-separator,']+', $csv-separator,'([^', $csv-separator,']+)', $csv-separator,'[^', $csv-separator,']+', $csv-separator,'([^', $csv-separator,']+).*$')}" flags="m">
                     <xsl:matching-substring>
                         <xsl:if test="position() > 1">
                             <entry>
@@ -43,15 +46,15 @@
             <xsl:variable name="Bib.Soft-sum" select="count(current-group()[value[@type='Bib.Soft']='1'])"/>
             <xsl:variable name="Cit.counts" select="count(current-group())"/>
             <xsl:value-of select="current-grouping-key()"/>
-            <xsl:text>;</xsl:text>
+            <xsl:value-of select="$csv-separator"/>
             <xsl:value-of select="$Cit.counts"/>
-            <xsl:text>;</xsl:text>
+            <xsl:value-of select="$csv-separator"/>
             <xsl:value-of select="$Bib.Ref-sum"/>
-            <xsl:text>;</xsl:text>
+            <xsl:value-of select="$csv-separator"/>
             <xsl:value-of select="$Bib.Ref-sum div $Cit.counts"/>
-            <xsl:text>;</xsl:text>
+            <xsl:value-of select="$csv-separator"/>
             <xsl:value-of select="$Bib.Soft-sum"/>
-            <xsl:text>;</xsl:text>
+            <xsl:value-of select="$csv-separator"/>
             <xsl:value-of select="$Bib.Soft-sum div $Cit.counts"/>
             <xsl:if test="position() != last()">
                 <xsl:value-of select="$NEWLINE"/>

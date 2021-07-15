@@ -34,6 +34,8 @@
     
     <xsl:variable name="path-to-software-list" select="'../conf/software-names.txt'" as="xs:string"/>
     
+    <xsl:variable name="csv-separator" select="','" as="xs:string"/>
+    
     <xsl:variable name="NEWLINE"><xsl:text>
 </xsl:text></xsl:variable>
     
@@ -50,7 +52,7 @@
                         <!-- collect named entities -->
                         <xsl:when test="$type='named-entity'">                            
                             <xsl:for-each select="//tc:entity">
-                                <xsl:sequence select="concat(string-join(key('token-by-id', tokenize(@tokenIDs, ' ')), ' '), ';', @class)"/>                    
+                                <xsl:sequence select="concat(string-join(key('token-by-id', tokenize(@tokenIDs, ' ')), ' '), $csv-separator, @class)"/>                    
                             </xsl:for-each>
                         </xsl:when>
                         <!-- collect all tokens -->
@@ -102,7 +104,7 @@
         
         <xsl:for-each select="distinct-values($all-instances)">
             <xsl:sort select="count($all-instances[.=current()])" order="descending"/>
-            <xsl:value-of select="concat('&quot;', ., '&quot;')"/>;"<xsl:value-of select="count($all-instances[.=current()])"/>"<xsl:value-of select="$NEWLINE"/>
+            <xsl:value-of select="concat('&quot;', ., '&quot;', $csv-separator)"/>"<xsl:value-of select="count($all-instances[.=current()])"/>"<xsl:value-of select="$NEWLINE"/>
         </xsl:for-each>
         
     </xsl:template>
