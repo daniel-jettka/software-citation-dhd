@@ -8,7 +8,7 @@
     
     <xsl:template match="/">
         
-        <xsl:variable name="citation-types" select="unparsed-text('citation-types.csv','UTF-8')"/>
+        <xsl:variable name="citation-types" select="unparsed-text('../csv/citation-types.csv','UTF-8')"/>
         <xsl:variable name="NEWLINE"><xsl:text>
 </xsl:text></xsl:variable>
         <xsl:variable name="SEP" select="','" as="xs:string"/>
@@ -48,7 +48,7 @@
         
         
         <!-- create CSV with values per year -->
-        <xsl:result-document href="citation-types-years.csv" encoding="UTF-8" method="text">
+        <xsl:result-document href="../csv/citation-types-years.csv" encoding="UTF-8" method="text">
             <xsl:text>Year;NameOnly.abs;NameOnly.rel;Bib.Ref.abs;Bib.Ref.rel;Bib.Soft.abs;Bib.Soft.rel;Agent.abs;Agent.rel;URL.abs;URL.rel;PID.abs;PID.rel;Ver.abs;Ver.rel</xsl:text>
             <xsl:value-of select="$NEWLINE"/>
             
@@ -99,7 +99,7 @@
         </xsl:result-document>
         
         <!-- create bar chart for values per year -->
-        <xsl:result-document href="citation-types-years.html" method="html" encoding="UTF-8">
+        <xsl:result-document href="../html/citation-types-years.html" method="html" encoding="UTF-8">
             
             <xsl:variable name="years" as="xs:string+">
                 <xsl:for-each-group select="$year-counts//entry" group-by="tokenize(path,'/')[2]">
@@ -122,7 +122,8 @@
                         var trace1 = {
                         x: [<xsl:value-of select="$year-labels"/>],
                         y: [<xsl:for-each-group select="$year-counts//entry" group-by="tokenize(path,'/')[2]">
-                                <xsl:value-of select="sum(current-group()/number(value[@type='NameOnly']))"/>
+                                <xsl:variable name="group-size" select="count(current-group())"/>
+                                <xsl:value-of select="sum(current-group()/number(value[@type='NameOnly'])) div $group-size"/>
                                 <xsl:if test="position() != last()">
                                     <xsl:text>,</xsl:text>
                                 </xsl:if>
@@ -134,7 +135,8 @@
                         var trace2 = {
                         x: [<xsl:value-of select="$year-labels"/>],
                         y: [<xsl:for-each-group select="$year-counts//entry" group-by="tokenize(path,'/')[2]">
-                                <xsl:value-of select="sum(current-group()/number(value[@type='Bib.Ref']))"/>
+                                <xsl:variable name="group-size" select="count(current-group())"/>
+                                <xsl:value-of select="sum(current-group()/number(value[@type='Bib.Ref'])) div $group-size"/>
                                 <xsl:if test="position() != last()">
                                     <xsl:text>,</xsl:text>
                                 </xsl:if>
@@ -146,7 +148,8 @@
                         var trace3 = {
                         x: [<xsl:value-of select="$year-labels"/>],
                         y: [<xsl:for-each-group select="$year-counts//entry" group-by="tokenize(path,'/')[2]">
-                                <xsl:value-of select="sum(current-group()/number(value[@type='Bib.Soft']))"/>
+                                <xsl:variable name="group-size" select="count(current-group())"/>
+                                <xsl:value-of select="sum(current-group()/number(value[@type='Bib.Soft'])) div $group-size"/>
                                 <xsl:if test="position() != last()">
                                     <xsl:text>,</xsl:text>
                                 </xsl:if>
@@ -158,7 +161,8 @@
                         var trace4 = {
                         x: [<xsl:value-of select="$year-labels"/>],
                         y: [<xsl:for-each-group select="$year-counts//entry" group-by="tokenize(path,'/')[2]">
-                                <xsl:value-of select="sum(current-group()/number(value[@type='Agent']))"/>
+                                <xsl:variable name="group-size" select="count(current-group())"/>
+                                <xsl:value-of select="sum(current-group()/number(value[@type='Agent'])) div $group-size"/>
                                 <xsl:if test="position() != last()">
                                     <xsl:text>,</xsl:text>
                                 </xsl:if>
@@ -170,7 +174,8 @@
                         var trace5 = {
                         x: [<xsl:value-of select="$year-labels"/>],
                         y: [<xsl:for-each-group select="$year-counts//entry" group-by="tokenize(path,'/')[2]">
-                                <xsl:value-of select="sum(current-group()/number(value[@type='URL']))"/>
+                                <xsl:variable name="group-size" select="count(current-group())"/>
+                                <xsl:value-of select="sum(current-group()/number(value[@type='URL'])) div $group-size"/>
                                 <xsl:if test="position() != last()">
                                     <xsl:text>,</xsl:text>
                                 </xsl:if>
@@ -182,7 +187,8 @@
                         var trace6 = {
                         x: [<xsl:value-of select="$year-labels"/>],
                         y: [<xsl:for-each-group select="$year-counts//entry" group-by="tokenize(path,'/')[2]">
-                                <xsl:value-of select="sum(current-group()/number(value[@type='PID']))"/>
+                                <xsl:variable name="group-size" select="count(current-group())"/>
+                                <xsl:value-of select="sum(current-group()/number(value[@type='PID'])) div $group-size"/>
                                 <xsl:if test="position() != last()">
                                     <xsl:text>,</xsl:text>
                                 </xsl:if>
@@ -194,7 +200,8 @@
                         var trace7 = {
                         x: [<xsl:value-of select="$year-labels"/>],
                         y: [<xsl:for-each-group select="$year-counts//entry" group-by="tokenize(path,'/')[2]">
-                                <xsl:value-of select="sum(current-group()/number(value[@type='Ver']))"/>
+                                <xsl:variable name="group-size" select="count(current-group())"/>
+                                <xsl:value-of select="sum(current-group()/number(value[@type='Ver'])) div $group-size"/>
                                 <xsl:if test="position() != last()">
                                     <xsl:text>,</xsl:text>
                                 </xsl:if>
@@ -205,9 +212,9 @@
                         
                         var data = [trace1, trace2, trace3, trace4, trace5, trace6, trace7];
                         var layout = {
-                        title: "Citation types per year",
-                        yaxis: {title: "Citations"},
-                        xaxis: {title: "Year"},
+                        title: "Zitationsarten nach Jahren",
+                        yaxis: {title: "Vorkommen Zitationsart (pro Beitrag, in %)"},
+                        xaxis: {title: "Jahr"},
                         barmode: "group"
                         };
                         
