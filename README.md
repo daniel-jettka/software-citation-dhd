@@ -6,16 +6,8 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[Contributors][contributors-url]
-·
-[Forks][forks-url]
-·
-[Issues][issues-url]
-·
-[License][license-url]
 
-<!-- PROJECT LOGO -->
-<br />
+
 <p align="center">
   <h3 align="center">Softwarezitation in den Digital Humanities</h3>
 
