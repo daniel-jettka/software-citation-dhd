@@ -15,7 +15,16 @@
         
         <xsl:variable name="year-counts">
             <counts>
-                <xsl:analyze-string select="$citation-types" regex="{concat('^([^',$SEP,']+)',$SEP,'([^',$SEP,']+)',$SEP,'[^',$SEP,']+',$SEP,'([^',$SEP,']+)',$SEP,'[^',$SEP,']+',$SEP,'[^',$SEP,']+',$SEP,'[^',$SEP,']+',$SEP,'([^',$SEP,']+)',$SEP,'[^',$SEP,']+',$SEP,'([^',$SEP,']+)',$SEP,'[^',$SEP,']+',$SEP,'([^',$SEP,']+)',$SEP,'[^',$SEP,']+',$SEP,'([^',$SEP,']+)',$SEP,'[^',$SEP,']+',$SEP,'([^',$SEP,']+)',$SEP,'[^',$SEP,']+',$SEP,'([^',$SEP,']+).*$')}" flags="m">
+                <xsl:analyze-string select="$citation-types" regex="{concat('^([^',$SEP,']+)',$SEP,
+                    '([^',$SEP,']+)',$SEP,'[^',$SEP,']+',$SEP,
+                    '([^',$SEP,']+)',$SEP,'[^',$SEP,']+',$SEP,
+                    '[^',$SEP,']+',$SEP,'[^',$SEP,']+',$SEP,
+                    '([^',$SEP,']+)',$SEP,'[^',$SEP,']+',$SEP,
+                    '([^',$SEP,']+)',$SEP,'[^',$SEP,']+',$SEP,
+                    '([^',$SEP,']+)',$SEP,'[^',$SEP,']+',$SEP,
+                    '([^',$SEP,']+)',$SEP,'[^',$SEP,']+',$SEP,
+                    '([^',$SEP,']+)',$SEP,'[^',$SEP,']+',$SEP,
+                    '([^',$SEP,']+)$')}" flags="m">
                     <!-- regex-groups:
                     1: SoftwareID
                     2: Dateipfad
@@ -46,10 +55,12 @@
             </counts>
         </xsl:variable>
         
+        <xsl:copy-of select="$year-counts"/>
+        
         
         <!-- create CSV with values per year -->
         <xsl:result-document href="../csv/citation-types-years.csv" encoding="UTF-8" method="text">
-            <xsl:text>Year;NameOnly.abs;NameOnly.rel;Bib.Ref.abs;Bib.Ref.rel;Bib.Soft.abs;Bib.Soft.rel;Agent.abs;Agent.rel;URL.abs;URL.rel;PID.abs;PID.rel;Ver.abs;Ver.rel</xsl:text>
+            <xsl:value-of select="string-join(('Year','NameOnly.abs','NameOnly.rel','Bib.Ref.abs','Bib.Ref.rel','Bib.Soft.abs','Bib.Soft.rel','Agent.abs','Agent.rel','URL.abs','URL.rel','PID.abs','PID.rel','Ver.abs','Ver.rel'),$SEP)"/>
             <xsl:value-of select="$NEWLINE"/>
             
             <xsl:for-each-group select="$year-counts//entry" group-by="tokenize(path,'/')[3]">
