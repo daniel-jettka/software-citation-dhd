@@ -12,11 +12,11 @@
     
     <xsl:variable name="collection-dirs" select="(
         (: directories with TEI files:)
-        '../data/DHd-Abstracts-2016/XML-files',
-        '../data/DHd-Abstracts-2017/XML-files',
-        '../data/DHd-Abstracts-2018/XML-files',
-        '../data/DHd-Abstracts-2019/XML-files',
-        '../data/DHd-Abstracts-2020/XML-files'
+        '../../data/DHd-Abstracts-2016/XML-files',
+        '../../data/DHd-Abstracts-2017/XML-files',
+        '../../data/DHd-Abstracts-2018/XML-files',
+        '../../data/DHd-Abstracts-2019/XML-files',
+        '../../data/DHd-Abstracts-2020/XML-files'
         )" as="xs:string+"/>
     
     <xsl:variable name="categories" select="('Bib.Ref','Bib.Soft','Agent','Ver','URL','PID')" as="xs:string+"/>

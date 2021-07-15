@@ -18,7 +18,7 @@
     
     <xsl:template match="/">
         
-        <xsl:variable name="citation-types" select="unparsed-text('citation-types.csv','UTF-8')"/>
+        <xsl:variable name="citation-types" select="unparsed-text('../csv/citation-types.csv','UTF-8')"/>
         
         <xsl:value-of select="string-join(('Software-ID','Citations','Bib.Ref.abs','Bib.Ref.rel','Bib.Soft.abs','Bib.Soft.rel'), $csv-separator)"/>
         <xsl:text></xsl:text>
