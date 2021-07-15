@@ -103,7 +103,7 @@ Dieses Projekt ist entstanden im Rahmen von NFDI4Culture, einem Konsortium in de
 
 Durch die öffentliche Verfügbarmachung der DHd-Abstracts durch den [DHd-Verband](https://github.com/DHd-Verband) sind die DHd-Abstracts leicht zugänglich und konnten so durch Annotationen erweitert und ausgewertet werden. Die Ergebnisse liegen in diesem Projekt ebenfalls öffentlich verfügbar vor.   
 
-Danke an alle Förderer, Unterstützer und [Contributor][contributors-url]!
+Danke an alle Förderer, Unterstützer und [Contributor][https://github.com/daniel-jettka/software-citation-dhd/graphs/contributors]!
 
 
 This README file was created on the basis of the [Best-README-Template](https://github.com/othneildrew/Best-README-Template/blob/master/README.md).
@@ -111,8 +111,4 @@ This README file was created on the basis of the [Best-README-Template](https://
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=flat-square
-[contributors-url]: https://gitlab.rrz.uni-hamburg.de/corpus-services/corpus-services/-/graphs/develop
-[forks-url]: https://gitlab.rrz.uni-hamburg.de/corpus-services/corpus-services/-/forks
-[issues-url]: https://gitlab.rrz.uni-hamburg.de/corpus-services/corpus-services/-/issues
-[license-url]: https://gitlab.rrz.uni-hamburg.de/corpus-services/corpus-services/-/blob/develop/LICENSE
 
