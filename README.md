@@ -83,7 +83,7 @@ Projektlink: [Softwarezitation in den Digital Humanities](https://github.com/dan
 
 ## Citation
 
-tba - Zenodo
+Henny-Krahmer, Ulrike / Jettka, Daniel (2021): "Softwarezitation in den Digital Humanities" (Version 0.1). GitHub.com / Zenodo. DOI: http://doi.org/10.5281/zenodo.5106391.
 
 [comment]: # (for more recent information please refer to ...)
 
