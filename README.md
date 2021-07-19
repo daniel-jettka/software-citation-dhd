@@ -43,9 +43,9 @@ Contributions are what make the open source community such an amazing place to b
 
 
 <!-- LICENSE -->
-## License
+## Lizenz
 
-See `LICENSE` for more information.
+Creative Commons Namensnennung 4.0 International Public License - siehe`LICENSE` für weitere Informationen.
 
 
 <!-- AUTHORS -->
@@ -66,9 +66,11 @@ Projektlink: [Softwarezitation in den Digital Humanities](https://github.com/dan
 
 
 
-## Citation
+## Zitation
 
 Henny-Krahmer, Ulrike / Jettka, Daniel (2021): "Softwarezitation in den Digital Humanities" (Version 0.1). GitHub.com / Zenodo. DOI: http://doi.org/10.5281/zenodo.5106391.
+
+Alle Versionen des Projekts können mittels der DOI 10.5281/zenodo.5106390 referenziert werden. Diese DOI repräsentiert alle Versionen, und wird immer auf die letzte Version zeigen.
 
 [comment]: # (for more recent information please refer to ...)
 
