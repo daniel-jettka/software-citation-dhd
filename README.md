@@ -70,7 +70,8 @@ Projektlink: [Softwarezitation in den Digital Humanities](https://github.com/dan
 
 Henny-Krahmer, Ulrike / Jettka, Daniel (2021): "Softwarezitation in den Digital Humanities" (Version 0.1). GitHub.com / Zenodo. DOI: http://doi.org/10.5281/zenodo.5106391.
 
-Alle Versionen des Projekts können mittels der DOI 10.5281/zenodo.5106390 referenziert werden. Diese DOI repräsentiert alle Versionen, und wird immer auf die letzte Version zeigen.
+Die folgende DOI kann verwendet werden, um die jeweils aktuelleste veröffentlichte Version zu referenzieren:
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5106390.svg)](https://doi.org/10.5281/zenodo.5106390)
 
 [comment]: # (for more recent information please refer to ...)
 
