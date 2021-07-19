@@ -23,21 +23,6 @@
 
 
 
-<!-- TABLE OF CONTENTS -->
-## Table of Contents
-
-* [Über das Projekt](#about-the-project)
-* [Getting Started](#getting-started)
-* [Verwendung](#usage)
-* [Roadmap](#roadmap)
-* [Beitragen](#contributing)
-* [Lizenz](#license)
-* [Author:innen](#authors)
-* [Kontakt](#contact)
-* [Acknowledgements](#acknowledgements)
-
-
-
 <!-- ABOUT THE PROJECT -->
 ## Über das Projekt
 
