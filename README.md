@@ -60,7 +60,7 @@ Contributions are what make the open source community such an amazing place to b
 <!-- LICENSE -->
 ## License
 
-Distributed under MIT License. See `LICENSE` for more information.
+See `LICENSE` for more information.
 
 
 <!-- AUTHORS -->
