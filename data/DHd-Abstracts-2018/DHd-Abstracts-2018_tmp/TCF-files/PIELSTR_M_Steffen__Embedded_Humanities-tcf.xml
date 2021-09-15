@@ -1,0 +1,1977 @@
+<?xml version='1.0' encoding='UTF-8'?><D-Spin xmlns="http://www.dspin.de/data" version="5">
+  <MetaData xmlns="http://www.dspin.de/data/metadata"><Services><cmd:CMD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cmd="http://www.clarin.eu/cmd/1" CMDVersion="1.2" xsi:schemaLocation="http://www.clarin.eu/cmd/1 http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_1320657629623/xsd"><cmd:Resources><cmd:ResourceProxyList/><cmd:JournalFileProxyList/><cmd:ResourceRelationList/></cmd:Resources><cmd:Components><cmd:WebServiceToolChain><cmd:GeneralInfo><cmd:Descriptions><cmd:Description/></cmd:Descriptions><cmd:ResourceName>Custom chain</cmd:ResourceName><cmd:ResourceClass>Toolchain</cmd:ResourceClass></cmd:GeneralInfo><cmd:Toolchain><cmd:ToolInChain><cmd:PID>https://hdl.handle.net/21.11120/0000-0008-319A-3</cmd:PID><cmd:Parameter value="de" name="lang"/></cmd:ToolInChain><cmd:ToolInChain><cmd:PID>https://hdl.handle.net/21.11120/0000-0008-3183-C</cmd:PID><cmd:Parameter value="5" name="version"/></cmd:ToolInChain><cmd:ToolInChain><cmd:PID>http://hdl.handle.net/11022/0000-0007-DA29-6</cmd:PID><cmd:Parameter value="de" name="lang"/><cmd:Parameter value="5" name="version"/></cmd:ToolInChain></cmd:Toolchain></cmd:WebServiceToolChain></cmd:Components></cmd:CMD></Services></MetaData>
+  <TextCorpus xmlns="http://www.dspin.de/data/textcorpus" lang="de">
+    <textSource type="application/tei+xml;format-variant=tei-dta;tokenized=0">&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="PIELSTR_M_Steffen__Embedded_Humanities">
+&lt;teiHeader>
+&lt;fileDesc>
+&lt;titleStmt>
+&lt;title> Embedded Humanities&lt;/title>
+&lt;author>
+&lt;persName>
+&lt;surname>Jannidis&lt;/surname>
+&lt;forename>Fotis&lt;/forename>
+&lt;/persName>
+&lt;affiliation>Universität Würzburg, Deutschland&lt;/affiliation>
+&lt;email>fotis.jannidis@uni-wuerzburg.de&lt;/email>
+&lt;/author>
+&lt;author>
+&lt;persName>
+&lt;surname>Kestemont&lt;/surname>
+&lt;forename>Mike&lt;/forename>
+&lt;/persName>
+&lt;affiliation>Universität Antwerpen, Belgien&lt;/affiliation>
+&lt;email>mike.kestemont@gmail.com&lt;/email>
+&lt;/author>
+&lt;/titleStmt>
+&lt;editionStmt>
+&lt;edition>
+&lt;date>2017-09-25T11:56:03.886360546&lt;/date>
+&lt;/edition>
+&lt;/editionStmt>
+&lt;publicationStmt>
+&lt;t:publisher xmlns:t="http://www.tei-c.org/ns/1.0">Georg Vogeler, im Auftrag des Verbands Digital Humanities im deutschaprachigen Raum e.V.&lt;/t:publisher>
+&lt;t:address xmlns:t="http://www.tei-c.org/ns/1.0">
+&lt;t:addrLine>Universität Graz&lt;/t:addrLine>
+&lt;t:addrLine>Zentrum für Informationsmodellierung - Austrian Centre for Digital Humanities&lt;/t:addrLine>
+&lt;t:addrLine>Elisabethstraße 59/III&lt;/t:addrLine>
+&lt;t:addrLine>8010 Graz&lt;/t:addrLine>
+&lt;/t:address>
+&lt;/publicationStmt>
+&lt;sourceDesc>
+&lt;p>Converted from an OASIS Open Document&lt;/p>
+&lt;/sourceDesc>
+&lt;/fileDesc>
+&lt;encodingDesc>
+&lt;appInfo>
+&lt;application ident="DHCONVALIDATOR" version="1.17">
+&lt;label>DHConvalidator&lt;/label>
+&lt;/application>
+&lt;/appInfo>
+&lt;/encodingDesc>
+&lt;profileDesc>
+&lt;textClass>
+&lt;keywords scheme="ConfTool" n="category">
+&lt;term>Paper&lt;/term>
+&lt;/keywords>
+&lt;keywords scheme="ConfTool" n="subcategory">
+&lt;term>Workshop&lt;/term>
+&lt;/keywords>
+&lt;keywords scheme="ConfTool" n="keywords">
+&lt;term>distributional semantics&lt;/term>
+&lt;term>word2vec&lt;/term>
+&lt;term>topic modeling&lt;/term>
+&lt;/keywords>
+&lt;keywords scheme="ConfTool" n="topics">
+&lt;term>Inhaltsanalyse&lt;/term>
+&lt;term>Strukturanalyse&lt;/term>
+&lt;term>Modellierung&lt;/term>
+&lt;/keywords>
+&lt;/textClass>
+&lt;settingDesc>
+&lt;ab n="conference">DHd2018 - "Kritik der Digitalen Vernunft", Köln&lt;/ab>
+&lt;ab n="paperID">220&lt;/ab>
+&lt;ab n="session_ID">9&lt;/ab>
+&lt;ab n="session_numberInSession">1&lt;/ab>
+&lt;ab n="session_short">Workshop_9&lt;/ab>
+&lt;ab n="session_start">2018-02-27 09:00&lt;/ab>
+&lt;ab n="session_end">2018-02-27 17:30&lt;/ab>
+&lt;/settingDesc>
+&lt;/profileDesc>
+&lt;/teiHeader>
+&lt;text>
+&lt;body>
+&lt;div type="div1" rend="DH-Heading1">
+&lt;head>The Use of Distributional Models in the Digital Humanities&lt;/head>
+&lt;p>In recent years, the Digital Humanities have witnessed the steadily growing popularity of models from distributional semantics which can be used to model the meaning of documents and words in large digital text collections. Well-known examples of influential distributional models include Latent Dirichlet Allocation for topic modelling (Blei et al.) or Word2vec for estimating word vectors (Mikolov et al. 2013). Such distributional models have recently gained much prominence in the fields of Natural Language Processing and, more recently, Deep Representation Learning (Manning 2016). Humanities data is typically sparse and distributional models help scholars obtain smoother estimations of them. Whereas, for instance, words are conventionally encoded as binary ‘one-hot vectors’ in digital text analysis, embedding techniques from distributional semantics allow scholars to obtain dense, yet rich representations of vocabularies. These embedded representations are known to capture all sorts of valuable relationships between data points, although embedding techniques are typically trained using unsupervised objectives and require relatively little parameter tuning from scholars. Inspiring applications of this emergent technology in DH have ranged from more technical work in cultural studies at large (Bamman et al. 2014), case studies in literary history (Mimno 2012; Schoech 2017) or valuable DH-oriented web apps, such as ShiCo (Martinez-Ortiz et al. 2016). The availability of high-quality implementations in the public domain, in software suites as gensim, word2vec, or mallet etc. has greatly added these methods’ popularity.&lt;/p>
+&lt;p>
+                    In spite of their huge potential for Digital Humanities, multiple aspects of their application still remain untapped. Unsupervised models such as Word2vec, for instance, are notoriously hard to evaluate directly – often researchers have to resort to indirect evaluations in this respect. This renders it intriguing to which extent the output of distributional models should play a decisive role in hermeneutical debates or controversies in the Humanities. With other techniques for Distant Reading, distributional models moreover share the drawback that they typically only yield a 
+                    &lt;hi rend="italic">single reading &lt;/hi>
+                    for a particular corpus so that for example the polysemy of a word isn’t rendered adequately. Interesting progress into representing the complex variability of meaning has been achieved, for example on the level of diachronic word embeddings, where convincing attempts have been made to allow for semantic shifts in an individual word’s meaning (Hamilton et al. 2016). Likewise, critical studies have revealed how tightly distributional models reproduce cultural biases with respect to gender and race (Bolukbasi et al. 2016), which calls for a debate about the ethical aspects of the matter. Likewise, it deserves emphasis how distributional models depend on large datasets and typically yield poor estimates for more restrictive data collections. This might help explain why word embeddings so far have not that many applications in fields like stylometry, that mostly work with relatively small corpora.
+&lt;/p>
+&lt;p>
+                    The DARIAH working group on Text and Data Analytics (@dariahtdawg), in collaboration with the FWO-sponsored scientific community Digital Humanities Flanders (DHuF) proposes to collocate a one-day workshop with the 2018 DHd conference in Cologne. The workshop aims to bring together ca. 
+                    10-12 practitioners from the Digital Humanities to present and discuss recent advances in the field, through 30-minute presentations on focused case studies, including work-in-progress or theoretical contributions. Additionally, the workshop aims to reach an audience of non-presenting participants who take an active interest in distributional models and who are planning to apply distributional models to their own data in the near future.
+                    We aim to bring together a diverse group of both junior and senior stakeholders in this nascent subfield of DH.
+                    The goal of the workshop is to identify the state of the art in the field, identify common challenges and share recommendations for a best practice. Special attention will be given to the (both hermeneutic and quantitative) evaluation of distributional models in the context of Humanities research, which remains a challenging issue. The workshop is open to scholars from all backgrounds with an interest in semantic representation learning and encourages submissions that deal with under-researched resource-scarce and/or historic languages.
+                    Abstracts (between 250 and 300 words, not including references) can be submitted to mike.kestemont@uantwerp.be. The workshop also explicitly welcomes submissions presenting previously published research which is of interest to the DH community (although this work should not overlap strongly with work presented at the main conference).
+                &lt;/p>
+&lt;p>Topics which seem of special interest to the DH community nowadays include, but are not limited to:&lt;/p>
+&lt;list type="unordered">
+&lt;item>the general use of distributional semantics in DH (such as topic modelling and word embeddings), but also more specific case studies, including work in progress;&lt;/item>
+&lt;item>the diachronic study of cultural phenomena via distributed methods;&lt;/item>
+&lt;item>the evaluation of distributional models, both from an empiric and hermeneutic perspective;&lt;/item>
+&lt;item>modelling the role and behaviour of (individual) readers or reading communities;&lt;/item>
+&lt;item>…&lt;/item>
+&lt;/list>
+&lt;p>In terms of technical requirements, the workshop would need a beamer to project from a laptop.&lt;/p>
+&lt;p>As keynote speaker, we have found David Bamman (University of California, Berkeley) willing to join our workshop and give a plenary lecture. Bamman is an authority in the field and will certainly increase the attractiveness of the workshop to potential participants.&lt;/p>
+&lt;div type="div2" rend="DH-Heading2">
+&lt;head>Convenors&lt;/head>
+&lt;p>Fotis Jannidis (University of Würzburg, Germany)&lt;/p>
+&lt;p>Fotis.jannidis@uni-wuerzburg.de,
+                        &lt;ref target="http://www.jannidis.de/">
+                            www.jannidis.de
+                        &lt;/ref>
+&lt;/p>
+&lt;p>Fotis holds the chair for literary computing in the department of German studies at the University of Würzburg. In the last years, the main focus of his work is the computational analysis of larger collections of literature, especially narrative texts. He is interested in developing new research methods for this new subfield of literary studies, but also in new applications for established methods and also in a better understanding, why successful algorithms in this field work.&lt;/p>
+&lt;p>Mike Kestemont (University of Antwerp, Belgium)&lt;/p>
+&lt;p>mike.kestemont@uantwerp.be,
+                    &lt;/p>
+&lt;p>
+&lt;ref target="http://www.mike-kestemont.org/">
+                           www.mike-kestemont.org
+                        &lt;/ref>
+&lt;/p>
+&lt;p>
+                        Mike is a tenure track research professor in the department of Literature the University of Antwerp. He specializes in computational text analysis for the Humanities, in particular stylometry or computational stylistics. He has published
+                         on the topic of authorship attribution in various fields, such as Classics or medieval European literature. Mike actively engages in the debate surrounding the Digital Humanities and attempts to merge methods from Artificial Intelligence with traditional scholarship in the Humanities. He recently took up an interest in so-called ‘deep’ representation learning using neural networks.
+&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/body>
+&lt;back>
+&lt;div type="bibliogr">
+&lt;listBibl>
+&lt;head>Bibliographie&lt;/head>
+&lt;bibl>
+&lt;hi rend="bold">Bamman, D./ Underwood, T./ Smith, N. A. &lt;/hi>
+                        (2014): „A Bayesian Mixed Effects Model of Literary Character“,
+                        in
+&lt;hi rend="italic">Proceedings of ACL&lt;/hi>.
+                    &lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Blei, &lt;/hi>
+&lt;hi rend="bold">David&lt;/hi>
+&lt;hi rend="bold">
+&lt;/hi>
+                        (2012): „Probabilistic Topic Models“,
+                        in
+&lt;hi rend="italic">Communications of the ACM&lt;/hi>
+                         55, 77-84.
+                    &lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Bolukbasi, T./ Chang, K. W./ Zou, J./ Saligrama, V./ Kalai, A.&lt;/hi>
+                         (2016): „Quantifying and Reducing Stereotypes in Word Embeddings“, 
+                        in
+&lt;hi rend="italic">arXiv:1606.06121&lt;/hi>.
+                    &lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Chang, J./ Gerrish, S./ &lt;/hi>
+&lt;hi rend="bold">Sang&lt;/hi>
+&lt;hi rend="bold">, C./ Boyd-Graber, J. L./ Blei, D. M. &lt;/hi>
+                        (2009): „Reading Tea Leaves: How Humans Interpret Topic Models“,
+                        in
+                         Proceedings of NIPS, 288-296.
+                    &lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Hamilton, W. L./ Leskovec, J./ Jurafsky, D.&lt;/hi>
+                         (2016): „Diachronic Word Embeddings Reveal Statistical Laws of Semantic Change“,
+                        in
+&lt;hi rend="italic">Proceedings of ACL&lt;/hi>.
+                    &lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Manning, &lt;/hi>
+&lt;hi rend="bold">Christopher D.&lt;/hi>
+                         (2016): „Computational Linguistics and Deep Learning“,
+                        in
+&lt;hi rend="italic">Computational Linguistics &lt;/hi>
+                        41, 701-707.
+                    &lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Martinez-Ortiz, C./ Huijnen, P./ Kenter, T./ Verheul, J./ Wevers, M./ van Eijnatten, J.&lt;/hi>
+                         (2016): „ShiCo: A Visualization Tool for Shifting Concepts Through Time“,
+                        in
+&lt;hi rend="italic">Digital Humanities Benelux: Book af Abstracts&lt;/hi>
+                        , s.p.
+                    &lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Mikolov, T./ Sutskever, I./ Chen, K./ Corrado, G. S./ Dean, J.&lt;/hi>
+                         (2013): „Distributed representations of words and phrases and their compositionality“,
+                        in
+&lt;hi rend="italic">Proceedings of NIPS 2013&lt;/hi>.
+                    &lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Mimno, &lt;/hi>
+&lt;hi rend="bold">David&lt;/hi>
+                         (2012): „Computational Historiography: Data Mining in a Century of Classics Journals“,
+                        in
+&lt;hi rend="italic">ACM Journal of Computing in Cultural Heritage&lt;/hi>
+                         5.
+                    &lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Schoech, &lt;/hi>
+&lt;hi rend="bold">Christof&lt;/hi>
+&lt;hi rend="bold">
+&lt;/hi>
+                        (2017): „Topic Modeling Genre: An Exploration of French Classical and Enlightenment Drama“,
+                        &lt;hi rend="italic">Digital Humanities Quarterly&lt;/hi>
+                         11, s.p.
+                    &lt;/bibl>
+&lt;/listBibl>
+&lt;/div>
+&lt;/back>
+&lt;/text>
+&lt;/TEI>
+    </textSource>
+    <text>
+
+
+In recent years, the Digital Humanities have witnessed the steadily growing popularity of models from distributional semantics which can be used to model the meaning of documents and words in large digital text collections. Well-known examples of influential distributional models include Latent Dirichlet Allocation for topic modelling (Blei et al.) or Word2vec for estimating word vectors (Mikolov et al. 2013). Such distributional models have recently gained much prominence in the fields of Natural Language Processing and, more recently, Deep Representation Learning (Manning 2016). Humanities data is typically sparse and distributional models help scholars obtain smoother estimations of them. Whereas, for instance, words are conventionally encoded as binary ‘one-hot vectors’ in digital text analysis, embedding techniques from distributional semantics allow scholars to obtain dense, yet rich representations of vocabularies. These embedded representations are known to capture all sorts of valuable relationships between data points, although embedding techniques are typically trained using unsupervised objectives and require relatively little parameter tuning from scholars. Inspiring applications of this emergent technology in DH have ranged from more technical work in cultural studies at large (Bamman et al. 2014), case studies in literary history (Mimno 2012; Schoech 2017) or valuable DH-oriented web apps, such as ShiCo (Martinez-Ortiz et al. 2016). The availability of high-quality implementations in the public domain, in software suites as gensim, word2vec, or mallet etc. has greatly added these methods’ popularity.
+
+  
+
+                     In spite of their huge potential for Digital Humanities, multiple aspects of their application still remain untapped. Unsupervised models such as Word2vec, for instance, are notoriously hard to evaluate directly – often researchers have to resort to indirect evaluations in this respect. This renders it intriguing to which extent the output of distributional models should play a decisive role in hermeneutical debates or controversies in the Humanities. With other techniques for Distant Reading, distributional models moreover share the drawback that they typically only yield a   single reading                      for a particular corpus so that for example the polysemy of a word isn’t rendered adequately. Interesting progress into representing the complex variability of meaning has been achieved, for example on the level of diachronic word embeddings, where convincing attempts have been made to allow for semantic shifts in an individual word’s meaning (Hamilton et al. 2016). Likewise, critical studies have revealed how tightly distributional models reproduce cultural biases with respect to gender and race (Bolukbasi et al. 2016), which calls for a debate about the ethical aspects of the matter. Likewise, it deserves emphasis how distributional models depend on large datasets and typically yield poor estimates for more restrictive data collections. This might help explain why word embeddings so far have not that many applications in fields like stylometry, that mostly work with relatively small corpora.  
+
+  
+
+                     The DARIAH working group on Text and Data Analytics (@dariahtdawg), in collaboration with the FWO-sponsored scientific community Digital Humanities Flanders (DHuF) proposes to collocate a one-day workshop with the 2018 DHd conference in Cologne. The workshop aims to bring together ca.                      10-12 practitioners from the Digital Humanities to present and discuss recent advances in the field, through 30-minute presentations on focused case studies, including work-in-progress or theoretical contributions. Additionally, the workshop aims to reach an audience of non-presenting participants who take an active interest in distributional models and who are planning to apply distributional models to their own data in the near future.                     We aim to bring together a diverse group of both junior and senior stakeholders in this nascent subfield of DH.                     The goal of the workshop is to identify the state of the art in the field, identify common challenges and share recommendations for a best practice. Special attention will be given to the (both hermeneutic and quantitative) evaluation of distributional models in the context of Humanities research, which remains a challenging issue. The workshop is open to scholars from all backgrounds with an interest in semantic representation learning and encourages submissions that deal with under-researched resource-scarce and/or historic languages.                     Abstracts (between 250 and 300 words, not including references) can be submitted to mike.kestemont@uantwerp.be. The workshop also explicitly welcomes submissions presenting previously published research which is of interest to the DH community (although this work should not overlap strongly with work presented at the main conference).  
+
+  
+
+Topics which seem of special interest to the DH community nowadays include, but are not limited to:
+
+    
+
+In terms of technical requirements, the workshop would need a beamer to project from a laptop.
+
+  
+
+As keynote speaker, we have found David Bamman (University of California, Berkeley) willing to join our workshop and give a plenary lecture. Bamman is an authority in the field and will certainly increase the attractiveness of the workshop to potential participants.
+
+  
+
+    
+
+Fotis Jannidis (University of Würzburg, Germany)
+
+  
+
+Fotis.jannidis@uni-wuerzburg.de,  
+                             www.jannidis.de  
+  
+
+  
+
+Fotis holds the chair for literary computing in the department of German studies at the University of Würzburg. In the last years, the main focus of his work is the computational analysis of larger collections of literature, especially narrative texts. He is interested in developing new research methods for this new subfield of literary studies, but also in new applications for established methods and also in a better understanding, why successful algorithms in this field work.
+
+  
+
+Mike Kestemont (University of Antwerp, Belgium)
+
+  
+
+mike.kestemont@uantwerp.be,  
+
+                            www.mike-kestemont.org  
+
+
+                         Mike is a tenure track research professor in the department of Literature the University of Antwerp. He specializes in computational text analysis for the Humanities, in particular stylometry or computational stylistics. He has published                          on the topic of authorship attribution in various fields, such as Classics or medieval European literature. Mike actively engages in the debate surrounding the Digital Humanities and attempts to merge methods from Artificial Intelligence with traditional scholarship in the Humanities. He recently took up an interest in so-called ‘deep’ representation learning using neural networks.  
+
+  
+
+
+
+
+The Use of Distributional Models in the Digital Humanities
+
+
+
+  
+
+the general use of distributional semantics in DH (such as topic modelling and word embeddings), but also more specific case studies, including work in progress;
+
+  
+
+the diachronic study of cultural phenomena via distributed methods;
+
+  
+
+the evaluation of distributional models, both from an empiric and hermeneutic perspective;
+
+  
+
+modelling the role and behaviour of (individual) readers or reading communities;
+
+  
+
+…
+
+  
+
+
+
+Convenors
+
+
+
+  
+
+        Bamman, D./ Underwood, T./ Smith, N. A.                          (2014): „A Bayesian Mixed Effects Model of Literary Character“,                         in  Proceedings of ACL.      Blei,   David                            (2012): „Probabilistic Topic Models“,                         in  Communications of the ACM                          55, 77-84.      Bolukbasi, T./ Chang, K. W./ Zou, J./ Saligrama, V./ Kalai, A.                          (2016): „Quantifying and Reducing Stereotypes in Word Embeddings“,                          in  arXiv:1606.06121.      Chang, J./ Gerrish, S./   Sang  , C./ Boyd-Graber, J. L./ Blei, D. M.                          (2009): „Reading Tea Leaves: How Humans Interpret Topic Models“,                         in                          Proceedings of NIPS, 288-296.      Hamilton, W. L./ Leskovec, J./ Jurafsky, D.                          (2016): „Diachronic Word Embeddings Reveal Statistical Laws of Semantic Change“,                         in  Proceedings of ACL.      Manning,   Christopher D.                          (2016): „Computational Linguistics and Deep Learning“,                         in  Computational Linguistics                          41, 701-707.      Martinez-Ortiz, C./ Huijnen, P./ Kenter, T./ Verheul, J./ Wevers, M./ van Eijnatten, J.                          (2016): „ShiCo: A Visualization Tool for Shifting Concepts Through Time“,                         in  Digital Humanities Benelux: Book af Abstracts                         , s.p.      Mikolov, T./ Sutskever, I./ Chen, K./ Corrado, G. S./ Dean, J.                          (2013): „Distributed representations of words and phrases and their compositionality“,                         in  Proceedings of NIPS 2013.      Mimno,   David                          (2012): „Computational Historiography: Data Mining in a Century of Classics Journals“,                         in  ACM Journal of Computing in Cultural Heritage                          5.      Schoech,   Christof                            (2017): „Topic Modeling Genre: An Exploration of French Classical and Enlightenment Drama“,  Digital Humanities Quarterly                          11, s.p.      
+
+  
+
+
+
+Bibliographie
+
+</text>
+    <tc:tokens xmlns:tc="http://www.dspin.de/data/textcorpus">
+      <tc:token ID="w1">In</tc:token>
+      <tc:token ID="w2">recent</tc:token>
+      <tc:token ID="w3">years</tc:token>
+      <tc:token ID="w4">,</tc:token>
+      <tc:token ID="w5">the</tc:token>
+      <tc:token ID="w6">Digital</tc:token>
+      <tc:token ID="w7">Humanities</tc:token>
+      <tc:token ID="w8">have</tc:token>
+      <tc:token ID="w9">witnessed</tc:token>
+      <tc:token ID="wa">the</tc:token>
+      <tc:token ID="wb">steadily</tc:token>
+      <tc:token ID="wc">growing</tc:token>
+      <tc:token ID="wd">popularity</tc:token>
+      <tc:token ID="we">of</tc:token>
+      <tc:token ID="wf">models</tc:token>
+      <tc:token ID="w10">from</tc:token>
+      <tc:token ID="w11">distributional</tc:token>
+      <tc:token ID="w12">semantics</tc:token>
+      <tc:token ID="w13">which</tc:token>
+      <tc:token ID="w14">can</tc:token>
+      <tc:token ID="w15">be</tc:token>
+      <tc:token ID="w16">used</tc:token>
+      <tc:token ID="w17">to</tc:token>
+      <tc:token ID="w18">model</tc:token>
+      <tc:token ID="w19">the</tc:token>
+      <tc:token ID="w1a">meaning</tc:token>
+      <tc:token ID="w1b">of</tc:token>
+      <tc:token ID="w1c">documents</tc:token>
+      <tc:token ID="w1d">and</tc:token>
+      <tc:token ID="w1e">words</tc:token>
+      <tc:token ID="w1f">in</tc:token>
+      <tc:token ID="w20">large</tc:token>
+      <tc:token ID="w21">digital</tc:token>
+      <tc:token ID="w22">text</tc:token>
+      <tc:token ID="w23">collections</tc:token>
+      <tc:token ID="w24">.</tc:token>
+      <tc:token ID="w25">Well-known</tc:token>
+      <tc:token ID="w26">examples</tc:token>
+      <tc:token ID="w27">of</tc:token>
+      <tc:token ID="w28">influential</tc:token>
+      <tc:token ID="w29">distributional</tc:token>
+      <tc:token ID="w2a">models</tc:token>
+      <tc:token ID="w2b">include</tc:token>
+      <tc:token ID="w2c">Latent</tc:token>
+      <tc:token ID="w2d">Dirichlet</tc:token>
+      <tc:token ID="w2e">Allocation</tc:token>
+      <tc:token ID="w2f">for</tc:token>
+      <tc:token ID="w30">topic</tc:token>
+      <tc:token ID="w31">modelling</tc:token>
+      <tc:token ID="w32">(</tc:token>
+      <tc:token ID="w33">Blei</tc:token>
+      <tc:token ID="w34">et</tc:token>
+      <tc:token ID="w35">al.</tc:token>
+      <tc:token ID="w36">)</tc:token>
+      <tc:token ID="w37">or</tc:token>
+      <tc:token ID="w38">Word</tc:token>
+      <tc:token ID="w39">2vec</tc:token>
+      <tc:token ID="w3a">for</tc:token>
+      <tc:token ID="w3b">estimating</tc:token>
+      <tc:token ID="w3c">word</tc:token>
+      <tc:token ID="w3d">vectors</tc:token>
+      <tc:token ID="w3e">(</tc:token>
+      <tc:token ID="w3f">Mikolov</tc:token>
+      <tc:token ID="w40">et</tc:token>
+      <tc:token ID="w41">al.</tc:token>
+      <tc:token ID="w42">2013</tc:token>
+      <tc:token ID="w43">)</tc:token>
+      <tc:token ID="w44">.</tc:token>
+      <tc:token ID="w45">Such</tc:token>
+      <tc:token ID="w46">distributional</tc:token>
+      <tc:token ID="w47">models</tc:token>
+      <tc:token ID="w48">have</tc:token>
+      <tc:token ID="w49">recently</tc:token>
+      <tc:token ID="w4a">gained</tc:token>
+      <tc:token ID="w4b">much</tc:token>
+      <tc:token ID="w4c">prominence</tc:token>
+      <tc:token ID="w4d">in</tc:token>
+      <tc:token ID="w4e">the</tc:token>
+      <tc:token ID="w4f">fields</tc:token>
+      <tc:token ID="w50">of</tc:token>
+      <tc:token ID="w51">Natural</tc:token>
+      <tc:token ID="w52">Language</tc:token>
+      <tc:token ID="w53">Processing</tc:token>
+      <tc:token ID="w54">and</tc:token>
+      <tc:token ID="w55">,</tc:token>
+      <tc:token ID="w56">more</tc:token>
+      <tc:token ID="w57">recently</tc:token>
+      <tc:token ID="w58">,</tc:token>
+      <tc:token ID="w59">Deep</tc:token>
+      <tc:token ID="w5a">Representation</tc:token>
+      <tc:token ID="w5b">Learning</tc:token>
+      <tc:token ID="w5c">(</tc:token>
+      <tc:token ID="w5d">Manning</tc:token>
+      <tc:token ID="w5e">2016</tc:token>
+      <tc:token ID="w5f">)</tc:token>
+      <tc:token ID="w60">.</tc:token>
+      <tc:token ID="w61">Humanities</tc:token>
+      <tc:token ID="w62">data</tc:token>
+      <tc:token ID="w63">is</tc:token>
+      <tc:token ID="w64">typically</tc:token>
+      <tc:token ID="w65">sparse</tc:token>
+      <tc:token ID="w66">and</tc:token>
+      <tc:token ID="w67">distributional</tc:token>
+      <tc:token ID="w68">models</tc:token>
+      <tc:token ID="w69">help</tc:token>
+      <tc:token ID="w6a">scholars</tc:token>
+      <tc:token ID="w6b">obtain</tc:token>
+      <tc:token ID="w6c">smoother</tc:token>
+      <tc:token ID="w6d">estimations</tc:token>
+      <tc:token ID="w6e">of</tc:token>
+      <tc:token ID="w6f">them</tc:token>
+      <tc:token ID="w70">.</tc:token>
+      <tc:token ID="w71">Whereas</tc:token>
+      <tc:token ID="w72">,</tc:token>
+      <tc:token ID="w73">for</tc:token>
+      <tc:token ID="w74">instance</tc:token>
+      <tc:token ID="w75">,</tc:token>
+      <tc:token ID="w76">words</tc:token>
+      <tc:token ID="w77">are</tc:token>
+      <tc:token ID="w78">conventionally</tc:token>
+      <tc:token ID="w79">encoded</tc:token>
+      <tc:token ID="w7a">as</tc:token>
+      <tc:token ID="w7b">binary</tc:token>
+      <tc:token ID="w7c">‘one-hot</tc:token>
+      <tc:token ID="w7d">vectors</tc:token>
+      <tc:token ID="w7e">’</tc:token>
+      <tc:token ID="w7f">in</tc:token>
+      <tc:token ID="w80">digital</tc:token>
+      <tc:token ID="w81">text</tc:token>
+      <tc:token ID="w82">analysis</tc:token>
+      <tc:token ID="w83">,</tc:token>
+      <tc:token ID="w84">embedding</tc:token>
+      <tc:token ID="w85">techniques</tc:token>
+      <tc:token ID="w86">from</tc:token>
+      <tc:token ID="w87">distributional</tc:token>
+      <tc:token ID="w88">semantics</tc:token>
+      <tc:token ID="w89">allow</tc:token>
+      <tc:token ID="w8a">scholars</tc:token>
+      <tc:token ID="w8b">to</tc:token>
+      <tc:token ID="w8c">obtain</tc:token>
+      <tc:token ID="w8d">dense</tc:token>
+      <tc:token ID="w8e">,</tc:token>
+      <tc:token ID="w8f">yet</tc:token>
+      <tc:token ID="w90">rich</tc:token>
+      <tc:token ID="w91">representations</tc:token>
+      <tc:token ID="w92">of</tc:token>
+      <tc:token ID="w93">vocabularies</tc:token>
+      <tc:token ID="w94">.</tc:token>
+      <tc:token ID="w95">These</tc:token>
+      <tc:token ID="w96">embedded</tc:token>
+      <tc:token ID="w97">representations</tc:token>
+      <tc:token ID="w98">are</tc:token>
+      <tc:token ID="w99">known</tc:token>
+      <tc:token ID="w9a">to</tc:token>
+      <tc:token ID="w9b">capture</tc:token>
+      <tc:token ID="w9c">all</tc:token>
+      <tc:token ID="w9d">sorts</tc:token>
+      <tc:token ID="w9e">of</tc:token>
+      <tc:token ID="w9f">valuable</tc:token>
+      <tc:token ID="wa0">relationships</tc:token>
+      <tc:token ID="wa1">between</tc:token>
+      <tc:token ID="wa2">data</tc:token>
+      <tc:token ID="wa3">points</tc:token>
+      <tc:token ID="wa4">,</tc:token>
+      <tc:token ID="wa5">although</tc:token>
+      <tc:token ID="wa6">embedding</tc:token>
+      <tc:token ID="wa7">techniques</tc:token>
+      <tc:token ID="wa8">are</tc:token>
+      <tc:token ID="wa9">typically</tc:token>
+      <tc:token ID="waa">trained</tc:token>
+      <tc:token ID="wab">using</tc:token>
+      <tc:token ID="wac">unsupervised</tc:token>
+      <tc:token ID="wad">objectives</tc:token>
+      <tc:token ID="wae">and</tc:token>
+      <tc:token ID="waf">require</tc:token>
+      <tc:token ID="wb0">relatively</tc:token>
+      <tc:token ID="wb1">little</tc:token>
+      <tc:token ID="wb2">parameter</tc:token>
+      <tc:token ID="wb3">tuning</tc:token>
+      <tc:token ID="wb4">from</tc:token>
+      <tc:token ID="wb5">scholars</tc:token>
+      <tc:token ID="wb6">.</tc:token>
+      <tc:token ID="wb7">Inspiring</tc:token>
+      <tc:token ID="wb8">applications</tc:token>
+      <tc:token ID="wb9">of</tc:token>
+      <tc:token ID="wba">this</tc:token>
+      <tc:token ID="wbb">emergent</tc:token>
+      <tc:token ID="wbc">technology</tc:token>
+      <tc:token ID="wbd">in</tc:token>
+      <tc:token ID="wbe">DH</tc:token>
+      <tc:token ID="wbf">have</tc:token>
+      <tc:token ID="wc0">ranged</tc:token>
+      <tc:token ID="wc1">from</tc:token>
+      <tc:token ID="wc2">more</tc:token>
+      <tc:token ID="wc3">technical</tc:token>
+      <tc:token ID="wc4">work</tc:token>
+      <tc:token ID="wc5">in</tc:token>
+      <tc:token ID="wc6">cultural</tc:token>
+      <tc:token ID="wc7">studies</tc:token>
+      <tc:token ID="wc8">at</tc:token>
+      <tc:token ID="wc9">large</tc:token>
+      <tc:token ID="wca">(</tc:token>
+      <tc:token ID="wcb">Bamman</tc:token>
+      <tc:token ID="wcc">et</tc:token>
+      <tc:token ID="wcd">al.</tc:token>
+      <tc:token ID="wce">2014</tc:token>
+      <tc:token ID="wcf">)</tc:token>
+      <tc:token ID="wd0">,</tc:token>
+      <tc:token ID="wd1">case</tc:token>
+      <tc:token ID="wd2">studies</tc:token>
+      <tc:token ID="wd3">in</tc:token>
+      <tc:token ID="wd4">literary</tc:token>
+      <tc:token ID="wd5">history</tc:token>
+      <tc:token ID="wd6">(</tc:token>
+      <tc:token ID="wd7">Mimno</tc:token>
+      <tc:token ID="wd8">2012</tc:token>
+      <tc:token ID="wd9">;</tc:token>
+      <tc:token ID="wda">Schoech</tc:token>
+      <tc:token ID="wdb">2017</tc:token>
+      <tc:token ID="wdc">)</tc:token>
+      <tc:token ID="wdd">or</tc:token>
+      <tc:token ID="wde">valuable</tc:token>
+      <tc:token ID="wdf">DH-oriented</tc:token>
+      <tc:token ID="we0">web</tc:token>
+      <tc:token ID="we1">apps</tc:token>
+      <tc:token ID="we2">,</tc:token>
+      <tc:token ID="we3">such</tc:token>
+      <tc:token ID="we4">as</tc:token>
+      <tc:token ID="we5">ShiCo</tc:token>
+      <tc:token ID="we6">(</tc:token>
+      <tc:token ID="we7">Martinez-Ortiz</tc:token>
+      <tc:token ID="we8">et</tc:token>
+      <tc:token ID="we9">al.</tc:token>
+      <tc:token ID="wea">2016</tc:token>
+      <tc:token ID="web">)</tc:token>
+      <tc:token ID="wec">.</tc:token>
+      <tc:token ID="wed">The</tc:token>
+      <tc:token ID="wee">availability</tc:token>
+      <tc:token ID="wef">of</tc:token>
+      <tc:token ID="wf0">high-quality</tc:token>
+      <tc:token ID="wf1">implementations</tc:token>
+      <tc:token ID="wf2">in</tc:token>
+      <tc:token ID="wf3">the</tc:token>
+      <tc:token ID="wf4">public</tc:token>
+      <tc:token ID="wf5">domain</tc:token>
+      <tc:token ID="wf6">,</tc:token>
+      <tc:token ID="wf7">in</tc:token>
+      <tc:token ID="wf8">software</tc:token>
+      <tc:token ID="wf9">suites</tc:token>
+      <tc:token ID="wfa">as</tc:token>
+      <tc:token ID="wfb">gensim</tc:token>
+      <tc:token ID="wfc">,</tc:token>
+      <tc:token ID="wfd">word</tc:token>
+      <tc:token ID="wfe">2vec</tc:token>
+      <tc:token ID="wff">,</tc:token>
+      <tc:token ID="w100">or</tc:token>
+      <tc:token ID="w101">mallet</tc:token>
+      <tc:token ID="w102">etc</tc:token>
+      <tc:token ID="w103">.</tc:token>
+      <tc:token ID="w104">has</tc:token>
+      <tc:token ID="w105">greatly</tc:token>
+      <tc:token ID="w106">added</tc:token>
+      <tc:token ID="w107">these</tc:token>
+      <tc:token ID="w108">methods’</tc:token>
+      <tc:token ID="w109">popularity</tc:token>
+      <tc:token ID="w10a">.</tc:token>
+      <tc:token ID="w10b">In</tc:token>
+      <tc:token ID="w10c">spite</tc:token>
+      <tc:token ID="w10d">of</tc:token>
+      <tc:token ID="w10e">their</tc:token>
+      <tc:token ID="w10f">huge</tc:token>
+      <tc:token ID="w110">potential</tc:token>
+      <tc:token ID="w111">for</tc:token>
+      <tc:token ID="w112">Digital</tc:token>
+      <tc:token ID="w113">Humanities</tc:token>
+      <tc:token ID="w114">,</tc:token>
+      <tc:token ID="w115">multiple</tc:token>
+      <tc:token ID="w116">aspects</tc:token>
+      <tc:token ID="w117">of</tc:token>
+      <tc:token ID="w118">their</tc:token>
+      <tc:token ID="w119">application</tc:token>
+      <tc:token ID="w11a">still</tc:token>
+      <tc:token ID="w11b">remain</tc:token>
+      <tc:token ID="w11c">untapped</tc:token>
+      <tc:token ID="w11d">.</tc:token>
+      <tc:token ID="w11e">Unsupervised</tc:token>
+      <tc:token ID="w11f">models</tc:token>
+      <tc:token ID="w120">such</tc:token>
+      <tc:token ID="w121">as</tc:token>
+      <tc:token ID="w122">Word</tc:token>
+      <tc:token ID="w123">2vec</tc:token>
+      <tc:token ID="w124">,</tc:token>
+      <tc:token ID="w125">for</tc:token>
+      <tc:token ID="w126">instance</tc:token>
+      <tc:token ID="w127">,</tc:token>
+      <tc:token ID="w128">are</tc:token>
+      <tc:token ID="w129">notoriously</tc:token>
+      <tc:token ID="w12a">hard</tc:token>
+      <tc:token ID="w12b">to</tc:token>
+      <tc:token ID="w12c">evaluate</tc:token>
+      <tc:token ID="w12d">directly</tc:token>
+      <tc:token ID="w12e">–</tc:token>
+      <tc:token ID="w12f">often</tc:token>
+      <tc:token ID="w130">researchers</tc:token>
+      <tc:token ID="w131">have</tc:token>
+      <tc:token ID="w132">to</tc:token>
+      <tc:token ID="w133">resort</tc:token>
+      <tc:token ID="w134">to</tc:token>
+      <tc:token ID="w135">indirect</tc:token>
+      <tc:token ID="w136">evaluations</tc:token>
+      <tc:token ID="w137">in</tc:token>
+      <tc:token ID="w138">this</tc:token>
+      <tc:token ID="w139">respect</tc:token>
+      <tc:token ID="w13a">.</tc:token>
+      <tc:token ID="w13b">This</tc:token>
+      <tc:token ID="w13c">renders</tc:token>
+      <tc:token ID="w13d">it</tc:token>
+      <tc:token ID="w13e">intriguing</tc:token>
+      <tc:token ID="w13f">to</tc:token>
+      <tc:token ID="w140">which</tc:token>
+      <tc:token ID="w141">extent</tc:token>
+      <tc:token ID="w142">the</tc:token>
+      <tc:token ID="w143">output</tc:token>
+      <tc:token ID="w144">of</tc:token>
+      <tc:token ID="w145">distributional</tc:token>
+      <tc:token ID="w146">models</tc:token>
+      <tc:token ID="w147">should</tc:token>
+      <tc:token ID="w148">play</tc:token>
+      <tc:token ID="w149">a</tc:token>
+      <tc:token ID="w14a">decisive</tc:token>
+      <tc:token ID="w14b">role</tc:token>
+      <tc:token ID="w14c">in</tc:token>
+      <tc:token ID="w14d">hermeneutical</tc:token>
+      <tc:token ID="w14e">debates</tc:token>
+      <tc:token ID="w14f">or</tc:token>
+      <tc:token ID="w150">controversies</tc:token>
+      <tc:token ID="w151">in</tc:token>
+      <tc:token ID="w152">the</tc:token>
+      <tc:token ID="w153">Humanities</tc:token>
+      <tc:token ID="w154">.</tc:token>
+      <tc:token ID="w155">With</tc:token>
+      <tc:token ID="w156">other</tc:token>
+      <tc:token ID="w157">techniques</tc:token>
+      <tc:token ID="w158">for</tc:token>
+      <tc:token ID="w159">Distant</tc:token>
+      <tc:token ID="w15a">Reading</tc:token>
+      <tc:token ID="w15b">,</tc:token>
+      <tc:token ID="w15c">distributional</tc:token>
+      <tc:token ID="w15d">models</tc:token>
+      <tc:token ID="w15e">moreover</tc:token>
+      <tc:token ID="w15f">share</tc:token>
+      <tc:token ID="w160">the</tc:token>
+      <tc:token ID="w161">drawback</tc:token>
+      <tc:token ID="w162">that</tc:token>
+      <tc:token ID="w163">they</tc:token>
+      <tc:token ID="w164">typically</tc:token>
+      <tc:token ID="w165">only</tc:token>
+      <tc:token ID="w166">yield</tc:token>
+      <tc:token ID="w167">a</tc:token>
+      <tc:token ID="w168">single</tc:token>
+      <tc:token ID="w169">reading</tc:token>
+      <tc:token ID="w16a">for</tc:token>
+      <tc:token ID="w16b">a</tc:token>
+      <tc:token ID="w16c">particular</tc:token>
+      <tc:token ID="w16d">corpus</tc:token>
+      <tc:token ID="w16e">so</tc:token>
+      <tc:token ID="w16f">that</tc:token>
+      <tc:token ID="w170">for</tc:token>
+      <tc:token ID="w171">example</tc:token>
+      <tc:token ID="w172">the</tc:token>
+      <tc:token ID="w173">polysemy</tc:token>
+      <tc:token ID="w174">of</tc:token>
+      <tc:token ID="w175">a</tc:token>
+      <tc:token ID="w176">word</tc:token>
+      <tc:token ID="w177">isn’t</tc:token>
+      <tc:token ID="w178">rendered</tc:token>
+      <tc:token ID="w179">adequately</tc:token>
+      <tc:token ID="w17a">.</tc:token>
+      <tc:token ID="w17b">Interesting</tc:token>
+      <tc:token ID="w17c">progress</tc:token>
+      <tc:token ID="w17d">into</tc:token>
+      <tc:token ID="w17e">representing</tc:token>
+      <tc:token ID="w17f">the</tc:token>
+      <tc:token ID="w180">complex</tc:token>
+      <tc:token ID="w181">variability</tc:token>
+      <tc:token ID="w182">of</tc:token>
+      <tc:token ID="w183">meaning</tc:token>
+      <tc:token ID="w184">has</tc:token>
+      <tc:token ID="w185">been</tc:token>
+      <tc:token ID="w186">achieved</tc:token>
+      <tc:token ID="w187">,</tc:token>
+      <tc:token ID="w188">for</tc:token>
+      <tc:token ID="w189">example</tc:token>
+      <tc:token ID="w18a">on</tc:token>
+      <tc:token ID="w18b">the</tc:token>
+      <tc:token ID="w18c">level</tc:token>
+      <tc:token ID="w18d">of</tc:token>
+      <tc:token ID="w18e">diachronic</tc:token>
+      <tc:token ID="w18f">word</tc:token>
+      <tc:token ID="w190">embeddings</tc:token>
+      <tc:token ID="w191">,</tc:token>
+      <tc:token ID="w192">where</tc:token>
+      <tc:token ID="w193">convincing</tc:token>
+      <tc:token ID="w194">attempts</tc:token>
+      <tc:token ID="w195">have</tc:token>
+      <tc:token ID="w196">been</tc:token>
+      <tc:token ID="w197">made</tc:token>
+      <tc:token ID="w198">to</tc:token>
+      <tc:token ID="w199">allow</tc:token>
+      <tc:token ID="w19a">for</tc:token>
+      <tc:token ID="w19b">semantic</tc:token>
+      <tc:token ID="w19c">shifts</tc:token>
+      <tc:token ID="w19d">in</tc:token>
+      <tc:token ID="w19e">an</tc:token>
+      <tc:token ID="w19f">individual</tc:token>
+      <tc:token ID="w1a0">word</tc:token>
+      <tc:token ID="w1a1">’s</tc:token>
+      <tc:token ID="w1a2">meaning</tc:token>
+      <tc:token ID="w1a3">(</tc:token>
+      <tc:token ID="w1a4">Hamilton</tc:token>
+      <tc:token ID="w1a5">et</tc:token>
+      <tc:token ID="w1a6">al.</tc:token>
+      <tc:token ID="w1a7">2016</tc:token>
+      <tc:token ID="w1a8">)</tc:token>
+      <tc:token ID="w1a9">.</tc:token>
+      <tc:token ID="w1aa">Likewise</tc:token>
+      <tc:token ID="w1ab">,</tc:token>
+      <tc:token ID="w1ac">critical</tc:token>
+      <tc:token ID="w1ad">studies</tc:token>
+      <tc:token ID="w1ae">have</tc:token>
+      <tc:token ID="w1af">revealed</tc:token>
+      <tc:token ID="w1b0">how</tc:token>
+      <tc:token ID="w1b1">tightly</tc:token>
+      <tc:token ID="w1b2">distributional</tc:token>
+      <tc:token ID="w1b3">models</tc:token>
+      <tc:token ID="w1b4">reproduce</tc:token>
+      <tc:token ID="w1b5">cultural</tc:token>
+      <tc:token ID="w1b6">biases</tc:token>
+      <tc:token ID="w1b7">with</tc:token>
+      <tc:token ID="w1b8">respect</tc:token>
+      <tc:token ID="w1b9">to</tc:token>
+      <tc:token ID="w1ba">gender</tc:token>
+      <tc:token ID="w1bb">and</tc:token>
+      <tc:token ID="w1bc">race</tc:token>
+      <tc:token ID="w1bd">(</tc:token>
+      <tc:token ID="w1be">Bolukbasi</tc:token>
+      <tc:token ID="w1bf">et</tc:token>
+      <tc:token ID="w1c0">al.</tc:token>
+      <tc:token ID="w1c1">2016</tc:token>
+      <tc:token ID="w1c2">)</tc:token>
+      <tc:token ID="w1c3">,</tc:token>
+      <tc:token ID="w1c4">which</tc:token>
+      <tc:token ID="w1c5">calls</tc:token>
+      <tc:token ID="w1c6">for</tc:token>
+      <tc:token ID="w1c7">a</tc:token>
+      <tc:token ID="w1c8">debate</tc:token>
+      <tc:token ID="w1c9">about</tc:token>
+      <tc:token ID="w1ca">the</tc:token>
+      <tc:token ID="w1cb">ethical</tc:token>
+      <tc:token ID="w1cc">aspects</tc:token>
+      <tc:token ID="w1cd">of</tc:token>
+      <tc:token ID="w1ce">the</tc:token>
+      <tc:token ID="w1cf">matter</tc:token>
+      <tc:token ID="w1d0">.</tc:token>
+      <tc:token ID="w1d1">Likewise</tc:token>
+      <tc:token ID="w1d2">,</tc:token>
+      <tc:token ID="w1d3">it</tc:token>
+      <tc:token ID="w1d4">deserves</tc:token>
+      <tc:token ID="w1d5">emphasis</tc:token>
+      <tc:token ID="w1d6">how</tc:token>
+      <tc:token ID="w1d7">distributional</tc:token>
+      <tc:token ID="w1d8">models</tc:token>
+      <tc:token ID="w1d9">depend</tc:token>
+      <tc:token ID="w1da">on</tc:token>
+      <tc:token ID="w1db">large</tc:token>
+      <tc:token ID="w1dc">datasets</tc:token>
+      <tc:token ID="w1dd">and</tc:token>
+      <tc:token ID="w1de">typically</tc:token>
+      <tc:token ID="w1df">yield</tc:token>
+      <tc:token ID="w1e0">poor</tc:token>
+      <tc:token ID="w1e1">estimates</tc:token>
+      <tc:token ID="w1e2">for</tc:token>
+      <tc:token ID="w1e3">more</tc:token>
+      <tc:token ID="w1e4">restrictive</tc:token>
+      <tc:token ID="w1e5">data</tc:token>
+      <tc:token ID="w1e6">collections</tc:token>
+      <tc:token ID="w1e7">.</tc:token>
+      <tc:token ID="w1e8">This</tc:token>
+      <tc:token ID="w1e9">might</tc:token>
+      <tc:token ID="w1ea">help</tc:token>
+      <tc:token ID="w1eb">explain</tc:token>
+      <tc:token ID="w1ec">why</tc:token>
+      <tc:token ID="w1ed">word</tc:token>
+      <tc:token ID="w1ee">embeddings</tc:token>
+      <tc:token ID="w1ef">so</tc:token>
+      <tc:token ID="w1f0">far</tc:token>
+      <tc:token ID="w1f1">have</tc:token>
+      <tc:token ID="w1f2">not</tc:token>
+      <tc:token ID="w1f3">that</tc:token>
+      <tc:token ID="w1f4">many</tc:token>
+      <tc:token ID="w1f5">applications</tc:token>
+      <tc:token ID="w1f6">in</tc:token>
+      <tc:token ID="w1f7">fields</tc:token>
+      <tc:token ID="w1f8">like</tc:token>
+      <tc:token ID="w1f9">stylometry</tc:token>
+      <tc:token ID="w1fa">,</tc:token>
+      <tc:token ID="w1fb">that</tc:token>
+      <tc:token ID="w1fc">mostly</tc:token>
+      <tc:token ID="w1fd">work</tc:token>
+      <tc:token ID="w1fe">with</tc:token>
+      <tc:token ID="w1ff">relatively</tc:token>
+      <tc:token ID="w200">small</tc:token>
+      <tc:token ID="w201">corpora</tc:token>
+      <tc:token ID="w202">.</tc:token>
+      <tc:token ID="w203">The</tc:token>
+      <tc:token ID="w204">DARIAH</tc:token>
+      <tc:token ID="w205">working</tc:token>
+      <tc:token ID="w206">group</tc:token>
+      <tc:token ID="w207">on</tc:token>
+      <tc:token ID="w208">Text</tc:token>
+      <tc:token ID="w209">and</tc:token>
+      <tc:token ID="w20a">Data</tc:token>
+      <tc:token ID="w20b">Analytics</tc:token>
+      <tc:token ID="w20c">(@dariahtdawg)</tc:token>
+      <tc:token ID="w20d">,</tc:token>
+      <tc:token ID="w20e">in</tc:token>
+      <tc:token ID="w20f">collaboration</tc:token>
+      <tc:token ID="w210">with</tc:token>
+      <tc:token ID="w211">the</tc:token>
+      <tc:token ID="w212">FWO-sponsored</tc:token>
+      <tc:token ID="w213">scientific</tc:token>
+      <tc:token ID="w214">community</tc:token>
+      <tc:token ID="w215">Digital</tc:token>
+      <tc:token ID="w216">Humanities</tc:token>
+      <tc:token ID="w217">Flanders</tc:token>
+      <tc:token ID="w218">(</tc:token>
+      <tc:token ID="w219">DHuF</tc:token>
+      <tc:token ID="w21a">)</tc:token>
+      <tc:token ID="w21b">proposes</tc:token>
+      <tc:token ID="w21c">to</tc:token>
+      <tc:token ID="w21d">collocate</tc:token>
+      <tc:token ID="w21e">a</tc:token>
+      <tc:token ID="w21f">one-day</tc:token>
+      <tc:token ID="w220">workshop</tc:token>
+      <tc:token ID="w221">with</tc:token>
+      <tc:token ID="w222">the</tc:token>
+      <tc:token ID="w223">2018</tc:token>
+      <tc:token ID="w224">DHd</tc:token>
+      <tc:token ID="w225">conference</tc:token>
+      <tc:token ID="w226">in</tc:token>
+      <tc:token ID="w227">Cologne</tc:token>
+      <tc:token ID="w228">.</tc:token>
+      <tc:token ID="w229">The</tc:token>
+      <tc:token ID="w22a">workshop</tc:token>
+      <tc:token ID="w22b">aims</tc:token>
+      <tc:token ID="w22c">to</tc:token>
+      <tc:token ID="w22d">bring</tc:token>
+      <tc:token ID="w22e">together</tc:token>
+      <tc:token ID="w22f">ca.</tc:token>
+      <tc:token ID="w230">10-12</tc:token>
+      <tc:token ID="w231">practitioners</tc:token>
+      <tc:token ID="w232">from</tc:token>
+      <tc:token ID="w233">the</tc:token>
+      <tc:token ID="w234">Digital</tc:token>
+      <tc:token ID="w235">Humanities</tc:token>
+      <tc:token ID="w236">to</tc:token>
+      <tc:token ID="w237">present</tc:token>
+      <tc:token ID="w238">and</tc:token>
+      <tc:token ID="w239">discuss</tc:token>
+      <tc:token ID="w23a">recent</tc:token>
+      <tc:token ID="w23b">advances</tc:token>
+      <tc:token ID="w23c">in</tc:token>
+      <tc:token ID="w23d">the</tc:token>
+      <tc:token ID="w23e">field</tc:token>
+      <tc:token ID="w23f">,</tc:token>
+      <tc:token ID="w240">through</tc:token>
+      <tc:token ID="w241">30-minute</tc:token>
+      <tc:token ID="w242">presentations</tc:token>
+      <tc:token ID="w243">on</tc:token>
+      <tc:token ID="w244">focused</tc:token>
+      <tc:token ID="w245">case</tc:token>
+      <tc:token ID="w246">studies</tc:token>
+      <tc:token ID="w247">,</tc:token>
+      <tc:token ID="w248">including</tc:token>
+      <tc:token ID="w249">work-in-progress</tc:token>
+      <tc:token ID="w24a">or</tc:token>
+      <tc:token ID="w24b">theoretical</tc:token>
+      <tc:token ID="w24c">contributions</tc:token>
+      <tc:token ID="w24d">.</tc:token>
+      <tc:token ID="w24e">Additionally</tc:token>
+      <tc:token ID="w24f">,</tc:token>
+      <tc:token ID="w250">the</tc:token>
+      <tc:token ID="w251">workshop</tc:token>
+      <tc:token ID="w252">aims</tc:token>
+      <tc:token ID="w253">to</tc:token>
+      <tc:token ID="w254">reach</tc:token>
+      <tc:token ID="w255">an</tc:token>
+      <tc:token ID="w256">audience</tc:token>
+      <tc:token ID="w257">of</tc:token>
+      <tc:token ID="w258">non-presenting</tc:token>
+      <tc:token ID="w259">participants</tc:token>
+      <tc:token ID="w25a">who</tc:token>
+      <tc:token ID="w25b">take</tc:token>
+      <tc:token ID="w25c">an</tc:token>
+      <tc:token ID="w25d">active</tc:token>
+      <tc:token ID="w25e">interest</tc:token>
+      <tc:token ID="w25f">in</tc:token>
+      <tc:token ID="w260">distributional</tc:token>
+      <tc:token ID="w261">models</tc:token>
+      <tc:token ID="w262">and</tc:token>
+      <tc:token ID="w263">who</tc:token>
+      <tc:token ID="w264">are</tc:token>
+      <tc:token ID="w265">planning</tc:token>
+      <tc:token ID="w266">to</tc:token>
+      <tc:token ID="w267">apply</tc:token>
+      <tc:token ID="w268">distributional</tc:token>
+      <tc:token ID="w269">models</tc:token>
+      <tc:token ID="w26a">to</tc:token>
+      <tc:token ID="w26b">their</tc:token>
+      <tc:token ID="w26c">own</tc:token>
+      <tc:token ID="w26d">data</tc:token>
+      <tc:token ID="w26e">in</tc:token>
+      <tc:token ID="w26f">the</tc:token>
+      <tc:token ID="w270">near</tc:token>
+      <tc:token ID="w271">future</tc:token>
+      <tc:token ID="w272">.</tc:token>
+      <tc:token ID="w273">We</tc:token>
+      <tc:token ID="w274">aim</tc:token>
+      <tc:token ID="w275">to</tc:token>
+      <tc:token ID="w276">bring</tc:token>
+      <tc:token ID="w277">together</tc:token>
+      <tc:token ID="w278">a</tc:token>
+      <tc:token ID="w279">diverse</tc:token>
+      <tc:token ID="w27a">group</tc:token>
+      <tc:token ID="w27b">of</tc:token>
+      <tc:token ID="w27c">both</tc:token>
+      <tc:token ID="w27d">junior</tc:token>
+      <tc:token ID="w27e">and</tc:token>
+      <tc:token ID="w27f">senior</tc:token>
+      <tc:token ID="w280">stakeholders</tc:token>
+      <tc:token ID="w281">in</tc:token>
+      <tc:token ID="w282">this</tc:token>
+      <tc:token ID="w283">nascent</tc:token>
+      <tc:token ID="w284">subfield</tc:token>
+      <tc:token ID="w285">of</tc:token>
+      <tc:token ID="w286">DH</tc:token>
+      <tc:token ID="w287">.</tc:token>
+      <tc:token ID="w288">The</tc:token>
+      <tc:token ID="w289">goal</tc:token>
+      <tc:token ID="w28a">of</tc:token>
+      <tc:token ID="w28b">the</tc:token>
+      <tc:token ID="w28c">workshop</tc:token>
+      <tc:token ID="w28d">is</tc:token>
+      <tc:token ID="w28e">to</tc:token>
+      <tc:token ID="w28f">identify</tc:token>
+      <tc:token ID="w290">the</tc:token>
+      <tc:token ID="w291">state</tc:token>
+      <tc:token ID="w292">of</tc:token>
+      <tc:token ID="w293">the</tc:token>
+      <tc:token ID="w294">art</tc:token>
+      <tc:token ID="w295">in</tc:token>
+      <tc:token ID="w296">the</tc:token>
+      <tc:token ID="w297">field</tc:token>
+      <tc:token ID="w298">,</tc:token>
+      <tc:token ID="w299">identify</tc:token>
+      <tc:token ID="w29a">common</tc:token>
+      <tc:token ID="w29b">challenges</tc:token>
+      <tc:token ID="w29c">and</tc:token>
+      <tc:token ID="w29d">share</tc:token>
+      <tc:token ID="w29e">recommendations</tc:token>
+      <tc:token ID="w29f">for</tc:token>
+      <tc:token ID="w2a0">a</tc:token>
+      <tc:token ID="w2a1">best</tc:token>
+      <tc:token ID="w2a2">practice</tc:token>
+      <tc:token ID="w2a3">.</tc:token>
+      <tc:token ID="w2a4">Special</tc:token>
+      <tc:token ID="w2a5">attention</tc:token>
+      <tc:token ID="w2a6">will</tc:token>
+      <tc:token ID="w2a7">be</tc:token>
+      <tc:token ID="w2a8">given</tc:token>
+      <tc:token ID="w2a9">to</tc:token>
+      <tc:token ID="w2aa">the</tc:token>
+      <tc:token ID="w2ab">(</tc:token>
+      <tc:token ID="w2ac">both</tc:token>
+      <tc:token ID="w2ad">hermeneutic</tc:token>
+      <tc:token ID="w2ae">and</tc:token>
+      <tc:token ID="w2af">quantitative</tc:token>
+      <tc:token ID="w2b0">)</tc:token>
+      <tc:token ID="w2b1">evaluation</tc:token>
+      <tc:token ID="w2b2">of</tc:token>
+      <tc:token ID="w2b3">distributional</tc:token>
+      <tc:token ID="w2b4">models</tc:token>
+      <tc:token ID="w2b5">in</tc:token>
+      <tc:token ID="w2b6">the</tc:token>
+      <tc:token ID="w2b7">context</tc:token>
+      <tc:token ID="w2b8">of</tc:token>
+      <tc:token ID="w2b9">Humanities</tc:token>
+      <tc:token ID="w2ba">research</tc:token>
+      <tc:token ID="w2bb">,</tc:token>
+      <tc:token ID="w2bc">which</tc:token>
+      <tc:token ID="w2bd">remains</tc:token>
+      <tc:token ID="w2be">a</tc:token>
+      <tc:token ID="w2bf">challenging</tc:token>
+      <tc:token ID="w2c0">issue</tc:token>
+      <tc:token ID="w2c1">.</tc:token>
+      <tc:token ID="w2c2">The</tc:token>
+      <tc:token ID="w2c3">workshop</tc:token>
+      <tc:token ID="w2c4">is</tc:token>
+      <tc:token ID="w2c5">open</tc:token>
+      <tc:token ID="w2c6">to</tc:token>
+      <tc:token ID="w2c7">scholars</tc:token>
+      <tc:token ID="w2c8">from</tc:token>
+      <tc:token ID="w2c9">all</tc:token>
+      <tc:token ID="w2ca">backgrounds</tc:token>
+      <tc:token ID="w2cb">with</tc:token>
+      <tc:token ID="w2cc">an</tc:token>
+      <tc:token ID="w2cd">interest</tc:token>
+      <tc:token ID="w2ce">in</tc:token>
+      <tc:token ID="w2cf">semantic</tc:token>
+      <tc:token ID="w2d0">representation</tc:token>
+      <tc:token ID="w2d1">learning</tc:token>
+      <tc:token ID="w2d2">and</tc:token>
+      <tc:token ID="w2d3">encourages</tc:token>
+      <tc:token ID="w2d4">submissions</tc:token>
+      <tc:token ID="w2d5">that</tc:token>
+      <tc:token ID="w2d6">deal</tc:token>
+      <tc:token ID="w2d7">with</tc:token>
+      <tc:token ID="w2d8">under-researched</tc:token>
+      <tc:token ID="w2d9">resource-scarce</tc:token>
+      <tc:token ID="w2da">and</tc:token>
+      <tc:token ID="w2db">/or</tc:token>
+      <tc:token ID="w2dc">historic</tc:token>
+      <tc:token ID="w2dd">languages</tc:token>
+      <tc:token ID="w2de">.</tc:token>
+      <tc:token ID="w2df">Abstracts</tc:token>
+      <tc:token ID="w2e0">(</tc:token>
+      <tc:token ID="w2e1">between</tc:token>
+      <tc:token ID="w2e2">250</tc:token>
+      <tc:token ID="w2e3">and</tc:token>
+      <tc:token ID="w2e4">300</tc:token>
+      <tc:token ID="w2e5">words</tc:token>
+      <tc:token ID="w2e6">,</tc:token>
+      <tc:token ID="w2e7">not</tc:token>
+      <tc:token ID="w2e8">including</tc:token>
+      <tc:token ID="w2e9">references</tc:token>
+      <tc:token ID="w2ea">)</tc:token>
+      <tc:token ID="w2eb">can</tc:token>
+      <tc:token ID="w2ec">be</tc:token>
+      <tc:token ID="w2ed">submitted</tc:token>
+      <tc:token ID="w2ee">to</tc:token>
+      <tc:token ID="w2ef">mike.kestemont@uantwerp.be</tc:token>
+      <tc:token ID="w2f0">.</tc:token>
+      <tc:token ID="w2f1">The</tc:token>
+      <tc:token ID="w2f2">workshop</tc:token>
+      <tc:token ID="w2f3">also</tc:token>
+      <tc:token ID="w2f4">explicitly</tc:token>
+      <tc:token ID="w2f5">welcomes</tc:token>
+      <tc:token ID="w2f6">submissions</tc:token>
+      <tc:token ID="w2f7">presenting</tc:token>
+      <tc:token ID="w2f8">previously</tc:token>
+      <tc:token ID="w2f9">published</tc:token>
+      <tc:token ID="w2fa">research</tc:token>
+      <tc:token ID="w2fb">which</tc:token>
+      <tc:token ID="w2fc">is</tc:token>
+      <tc:token ID="w2fd">of</tc:token>
+      <tc:token ID="w2fe">interest</tc:token>
+      <tc:token ID="w2ff">to</tc:token>
+      <tc:token ID="w300">the</tc:token>
+      <tc:token ID="w301">DH</tc:token>
+      <tc:token ID="w302">community</tc:token>
+      <tc:token ID="w303">(</tc:token>
+      <tc:token ID="w304">although</tc:token>
+      <tc:token ID="w305">this</tc:token>
+      <tc:token ID="w306">work</tc:token>
+      <tc:token ID="w307">should</tc:token>
+      <tc:token ID="w308">not</tc:token>
+      <tc:token ID="w309">overlap</tc:token>
+      <tc:token ID="w30a">strongly</tc:token>
+      <tc:token ID="w30b">with</tc:token>
+      <tc:token ID="w30c">work</tc:token>
+      <tc:token ID="w30d">presented</tc:token>
+      <tc:token ID="w30e">at</tc:token>
+      <tc:token ID="w30f">the</tc:token>
+      <tc:token ID="w310">main</tc:token>
+      <tc:token ID="w311">conference</tc:token>
+      <tc:token ID="w312">)</tc:token>
+      <tc:token ID="w313">.</tc:token>
+      <tc:token ID="w314">Topics</tc:token>
+      <tc:token ID="w315">which</tc:token>
+      <tc:token ID="w316">seem</tc:token>
+      <tc:token ID="w317">of</tc:token>
+      <tc:token ID="w318">special</tc:token>
+      <tc:token ID="w319">interest</tc:token>
+      <tc:token ID="w31a">to</tc:token>
+      <tc:token ID="w31b">the</tc:token>
+      <tc:token ID="w31c">DH</tc:token>
+      <tc:token ID="w31d">community</tc:token>
+      <tc:token ID="w31e">nowadays</tc:token>
+      <tc:token ID="w31f">include</tc:token>
+      <tc:token ID="w320">,</tc:token>
+      <tc:token ID="w321">but</tc:token>
+      <tc:token ID="w322">are</tc:token>
+      <tc:token ID="w323">not</tc:token>
+      <tc:token ID="w324">limited</tc:token>
+      <tc:token ID="w325">to</tc:token>
+      <tc:token ID="w326">:</tc:token>
+      <tc:token ID="w327">In</tc:token>
+      <tc:token ID="w328">terms</tc:token>
+      <tc:token ID="w329">of</tc:token>
+      <tc:token ID="w32a">technical</tc:token>
+      <tc:token ID="w32b">requirements</tc:token>
+      <tc:token ID="w32c">,</tc:token>
+      <tc:token ID="w32d">the</tc:token>
+      <tc:token ID="w32e">workshop</tc:token>
+      <tc:token ID="w32f">would</tc:token>
+      <tc:token ID="w330">need</tc:token>
+      <tc:token ID="w331">a</tc:token>
+      <tc:token ID="w332">beamer</tc:token>
+      <tc:token ID="w333">to</tc:token>
+      <tc:token ID="w334">project</tc:token>
+      <tc:token ID="w335">from</tc:token>
+      <tc:token ID="w336">a</tc:token>
+      <tc:token ID="w337">laptop</tc:token>
+      <tc:token ID="w338">.</tc:token>
+      <tc:token ID="w339">As</tc:token>
+      <tc:token ID="w33a">keynote</tc:token>
+      <tc:token ID="w33b">speaker</tc:token>
+      <tc:token ID="w33c">,</tc:token>
+      <tc:token ID="w33d">we</tc:token>
+      <tc:token ID="w33e">have</tc:token>
+      <tc:token ID="w33f">found</tc:token>
+      <tc:token ID="w340">David</tc:token>
+      <tc:token ID="w341">Bamman</tc:token>
+      <tc:token ID="w342">(</tc:token>
+      <tc:token ID="w343">University</tc:token>
+      <tc:token ID="w344">of</tc:token>
+      <tc:token ID="w345">California</tc:token>
+      <tc:token ID="w346">,</tc:token>
+      <tc:token ID="w347">Berkeley</tc:token>
+      <tc:token ID="w348">)</tc:token>
+      <tc:token ID="w349">willing</tc:token>
+      <tc:token ID="w34a">to</tc:token>
+      <tc:token ID="w34b">join</tc:token>
+      <tc:token ID="w34c">our</tc:token>
+      <tc:token ID="w34d">workshop</tc:token>
+      <tc:token ID="w34e">and</tc:token>
+      <tc:token ID="w34f">give</tc:token>
+      <tc:token ID="w350">a</tc:token>
+      <tc:token ID="w351">plenary</tc:token>
+      <tc:token ID="w352">lecture</tc:token>
+      <tc:token ID="w353">.</tc:token>
+      <tc:token ID="w354">Bamman</tc:token>
+      <tc:token ID="w355">is</tc:token>
+      <tc:token ID="w356">an</tc:token>
+      <tc:token ID="w357">authority</tc:token>
+      <tc:token ID="w358">in</tc:token>
+      <tc:token ID="w359">the</tc:token>
+      <tc:token ID="w35a">field</tc:token>
+      <tc:token ID="w35b">and</tc:token>
+      <tc:token ID="w35c">will</tc:token>
+      <tc:token ID="w35d">certainly</tc:token>
+      <tc:token ID="w35e">increase</tc:token>
+      <tc:token ID="w35f">the</tc:token>
+      <tc:token ID="w360">attractiveness</tc:token>
+      <tc:token ID="w361">of</tc:token>
+      <tc:token ID="w362">the</tc:token>
+      <tc:token ID="w363">workshop</tc:token>
+      <tc:token ID="w364">to</tc:token>
+      <tc:token ID="w365">potential</tc:token>
+      <tc:token ID="w366">participants</tc:token>
+      <tc:token ID="w367">.</tc:token>
+      <tc:token ID="w368">Fotis</tc:token>
+      <tc:token ID="w369">Jannidis</tc:token>
+      <tc:token ID="w36a">(</tc:token>
+      <tc:token ID="w36b">University</tc:token>
+      <tc:token ID="w36c">of</tc:token>
+      <tc:token ID="w36d">Würzburg</tc:token>
+      <tc:token ID="w36e">,</tc:token>
+      <tc:token ID="w36f">Germany</tc:token>
+      <tc:token ID="w370">)</tc:token>
+      <tc:token ID="w371">Fotis.jannidis@uni-wuerzburg.de</tc:token>
+      <tc:token ID="w372">,</tc:token>
+      <tc:token ID="w373">www.jannidis.de</tc:token>
+      <tc:token ID="w374">Fotis</tc:token>
+      <tc:token ID="w375">holds</tc:token>
+      <tc:token ID="w376">the</tc:token>
+      <tc:token ID="w377">chair</tc:token>
+      <tc:token ID="w378">for</tc:token>
+      <tc:token ID="w379">literary</tc:token>
+      <tc:token ID="w37a">computing</tc:token>
+      <tc:token ID="w37b">in</tc:token>
+      <tc:token ID="w37c">the</tc:token>
+      <tc:token ID="w37d">department</tc:token>
+      <tc:token ID="w37e">of</tc:token>
+      <tc:token ID="w37f">German</tc:token>
+      <tc:token ID="w380">studies</tc:token>
+      <tc:token ID="w381">at</tc:token>
+      <tc:token ID="w382">the</tc:token>
+      <tc:token ID="w383">University</tc:token>
+      <tc:token ID="w384">of</tc:token>
+      <tc:token ID="w385">Würzburg</tc:token>
+      <tc:token ID="w386">.</tc:token>
+      <tc:token ID="w387">In</tc:token>
+      <tc:token ID="w388">the</tc:token>
+      <tc:token ID="w389">last</tc:token>
+      <tc:token ID="w38a">years</tc:token>
+      <tc:token ID="w38b">,</tc:token>
+      <tc:token ID="w38c">the</tc:token>
+      <tc:token ID="w38d">main</tc:token>
+      <tc:token ID="w38e">focus</tc:token>
+      <tc:token ID="w38f">of</tc:token>
+      <tc:token ID="w390">his</tc:token>
+      <tc:token ID="w391">work</tc:token>
+      <tc:token ID="w392">is</tc:token>
+      <tc:token ID="w393">the</tc:token>
+      <tc:token ID="w394">computational</tc:token>
+      <tc:token ID="w395">analysis</tc:token>
+      <tc:token ID="w396">of</tc:token>
+      <tc:token ID="w397">larger</tc:token>
+      <tc:token ID="w398">collections</tc:token>
+      <tc:token ID="w399">of</tc:token>
+      <tc:token ID="w39a">literature</tc:token>
+      <tc:token ID="w39b">,</tc:token>
+      <tc:token ID="w39c">especially</tc:token>
+      <tc:token ID="w39d">narrative</tc:token>
+      <tc:token ID="w39e">texts</tc:token>
+      <tc:token ID="w39f">.</tc:token>
+      <tc:token ID="w3a0">He</tc:token>
+      <tc:token ID="w3a1">is</tc:token>
+      <tc:token ID="w3a2">interested</tc:token>
+      <tc:token ID="w3a3">in</tc:token>
+      <tc:token ID="w3a4">developing</tc:token>
+      <tc:token ID="w3a5">new</tc:token>
+      <tc:token ID="w3a6">research</tc:token>
+      <tc:token ID="w3a7">methods</tc:token>
+      <tc:token ID="w3a8">for</tc:token>
+      <tc:token ID="w3a9">this</tc:token>
+      <tc:token ID="w3aa">new</tc:token>
+      <tc:token ID="w3ab">subfield</tc:token>
+      <tc:token ID="w3ac">of</tc:token>
+      <tc:token ID="w3ad">literary</tc:token>
+      <tc:token ID="w3ae">studies</tc:token>
+      <tc:token ID="w3af">,</tc:token>
+      <tc:token ID="w3b0">but</tc:token>
+      <tc:token ID="w3b1">also</tc:token>
+      <tc:token ID="w3b2">in</tc:token>
+      <tc:token ID="w3b3">new</tc:token>
+      <tc:token ID="w3b4">applications</tc:token>
+      <tc:token ID="w3b5">for</tc:token>
+      <tc:token ID="w3b6">established</tc:token>
+      <tc:token ID="w3b7">methods</tc:token>
+      <tc:token ID="w3b8">and</tc:token>
+      <tc:token ID="w3b9">also</tc:token>
+      <tc:token ID="w3ba">in</tc:token>
+      <tc:token ID="w3bb">a</tc:token>
+      <tc:token ID="w3bc">better</tc:token>
+      <tc:token ID="w3bd">understanding</tc:token>
+      <tc:token ID="w3be">,</tc:token>
+      <tc:token ID="w3bf">why</tc:token>
+      <tc:token ID="w3c0">successful</tc:token>
+      <tc:token ID="w3c1">algorithms</tc:token>
+      <tc:token ID="w3c2">in</tc:token>
+      <tc:token ID="w3c3">this</tc:token>
+      <tc:token ID="w3c4">field</tc:token>
+      <tc:token ID="w3c5">work</tc:token>
+      <tc:token ID="w3c6">.</tc:token>
+      <tc:token ID="w3c7">Mike</tc:token>
+      <tc:token ID="w3c8">Kestemont</tc:token>
+      <tc:token ID="w3c9">(</tc:token>
+      <tc:token ID="w3ca">University</tc:token>
+      <tc:token ID="w3cb">of</tc:token>
+      <tc:token ID="w3cc">Antwerp</tc:token>
+      <tc:token ID="w3cd">,</tc:token>
+      <tc:token ID="w3ce">Belgium</tc:token>
+      <tc:token ID="w3cf">)</tc:token>
+      <tc:token ID="w3d0">mike.kestemont@uantwerp.be</tc:token>
+      <tc:token ID="w3d1">,</tc:token>
+      <tc:token ID="w3d2">www</tc:token>
+      <tc:token ID="w3d3">.mike-kestemont.org</tc:token>
+      <tc:token ID="w3d4">Mike</tc:token>
+      <tc:token ID="w3d5">is</tc:token>
+      <tc:token ID="w3d6">a</tc:token>
+      <tc:token ID="w3d7">tenure</tc:token>
+      <tc:token ID="w3d8">track</tc:token>
+      <tc:token ID="w3d9">research</tc:token>
+      <tc:token ID="w3da">professor</tc:token>
+      <tc:token ID="w3db">in</tc:token>
+      <tc:token ID="w3dc">the</tc:token>
+      <tc:token ID="w3dd">department</tc:token>
+      <tc:token ID="w3de">of</tc:token>
+      <tc:token ID="w3df">Literature</tc:token>
+      <tc:token ID="w3e0">the</tc:token>
+      <tc:token ID="w3e1">University</tc:token>
+      <tc:token ID="w3e2">of</tc:token>
+      <tc:token ID="w3e3">Antwerp.</tc:token>
+      <tc:token ID="w3e4">He</tc:token>
+      <tc:token ID="w3e5">specializes</tc:token>
+      <tc:token ID="w3e6">in</tc:token>
+      <tc:token ID="w3e7">computational</tc:token>
+      <tc:token ID="w3e8">text</tc:token>
+      <tc:token ID="w3e9">analysis</tc:token>
+      <tc:token ID="w3ea">for</tc:token>
+      <tc:token ID="w3eb">the</tc:token>
+      <tc:token ID="w3ec">Humanities</tc:token>
+      <tc:token ID="w3ed">,</tc:token>
+      <tc:token ID="w3ee">in</tc:token>
+      <tc:token ID="w3ef">particular</tc:token>
+      <tc:token ID="w3f0">stylometry</tc:token>
+      <tc:token ID="w3f1">or</tc:token>
+      <tc:token ID="w3f2">computational</tc:token>
+      <tc:token ID="w3f3">stylistics</tc:token>
+      <tc:token ID="w3f4">.</tc:token>
+      <tc:token ID="w3f5">He</tc:token>
+      <tc:token ID="w3f6">has</tc:token>
+      <tc:token ID="w3f7">published</tc:token>
+      <tc:token ID="w3f8">on</tc:token>
+      <tc:token ID="w3f9">the</tc:token>
+      <tc:token ID="w3fa">topic</tc:token>
+      <tc:token ID="w3fb">of</tc:token>
+      <tc:token ID="w3fc">authorship</tc:token>
+      <tc:token ID="w3fd">attribution</tc:token>
+      <tc:token ID="w3fe">in</tc:token>
+      <tc:token ID="w3ff">various</tc:token>
+      <tc:token ID="w400">fields</tc:token>
+      <tc:token ID="w401">,</tc:token>
+      <tc:token ID="w402">such</tc:token>
+      <tc:token ID="w403">as</tc:token>
+      <tc:token ID="w404">Classics</tc:token>
+      <tc:token ID="w405">or</tc:token>
+      <tc:token ID="w406">medieval</tc:token>
+      <tc:token ID="w407">European</tc:token>
+      <tc:token ID="w408">literature</tc:token>
+      <tc:token ID="w409">.</tc:token>
+      <tc:token ID="w40a">Mike</tc:token>
+      <tc:token ID="w40b">actively</tc:token>
+      <tc:token ID="w40c">engages</tc:token>
+      <tc:token ID="w40d">in</tc:token>
+      <tc:token ID="w40e">the</tc:token>
+      <tc:token ID="w40f">debate</tc:token>
+      <tc:token ID="w410">surrounding</tc:token>
+      <tc:token ID="w411">the</tc:token>
+      <tc:token ID="w412">Digital</tc:token>
+      <tc:token ID="w413">Humanities</tc:token>
+      <tc:token ID="w414">and</tc:token>
+      <tc:token ID="w415">attempts</tc:token>
+      <tc:token ID="w416">to</tc:token>
+      <tc:token ID="w417">merge</tc:token>
+      <tc:token ID="w418">methods</tc:token>
+      <tc:token ID="w419">from</tc:token>
+      <tc:token ID="w41a">Artificial</tc:token>
+      <tc:token ID="w41b">Intelligence</tc:token>
+      <tc:token ID="w41c">with</tc:token>
+      <tc:token ID="w41d">traditional</tc:token>
+      <tc:token ID="w41e">scholarship</tc:token>
+      <tc:token ID="w41f">in</tc:token>
+      <tc:token ID="w420">the</tc:token>
+      <tc:token ID="w421">Humanities</tc:token>
+      <tc:token ID="w422">.</tc:token>
+      <tc:token ID="w423">He</tc:token>
+      <tc:token ID="w424">recently</tc:token>
+      <tc:token ID="w425">took</tc:token>
+      <tc:token ID="w426">up</tc:token>
+      <tc:token ID="w427">an</tc:token>
+      <tc:token ID="w428">interest</tc:token>
+      <tc:token ID="w429">in</tc:token>
+      <tc:token ID="w42a">so-called</tc:token>
+      <tc:token ID="w42b">‘deep’</tc:token>
+      <tc:token ID="w42c">representation</tc:token>
+      <tc:token ID="w42d">learning</tc:token>
+      <tc:token ID="w42e">using</tc:token>
+      <tc:token ID="w42f">neural</tc:token>
+      <tc:token ID="w430">networks</tc:token>
+      <tc:token ID="w431">.</tc:token>
+      <tc:token ID="w432">The</tc:token>
+      <tc:token ID="w433">Use</tc:token>
+      <tc:token ID="w434">of</tc:token>
+      <tc:token ID="w435">Distributional</tc:token>
+      <tc:token ID="w436">Models</tc:token>
+      <tc:token ID="w437">in</tc:token>
+      <tc:token ID="w438">the</tc:token>
+      <tc:token ID="w439">Digital</tc:token>
+      <tc:token ID="w43a">Humanities</tc:token>
+      <tc:token ID="w43b">the</tc:token>
+      <tc:token ID="w43c">general</tc:token>
+      <tc:token ID="w43d">use</tc:token>
+      <tc:token ID="w43e">of</tc:token>
+      <tc:token ID="w43f">distributional</tc:token>
+      <tc:token ID="w440">semantics</tc:token>
+      <tc:token ID="w441">in</tc:token>
+      <tc:token ID="w442">DH</tc:token>
+      <tc:token ID="w443">(</tc:token>
+      <tc:token ID="w444">such</tc:token>
+      <tc:token ID="w445">as</tc:token>
+      <tc:token ID="w446">topic</tc:token>
+      <tc:token ID="w447">modelling</tc:token>
+      <tc:token ID="w448">and</tc:token>
+      <tc:token ID="w449">word</tc:token>
+      <tc:token ID="w44a">embeddings</tc:token>
+      <tc:token ID="w44b">)</tc:token>
+      <tc:token ID="w44c">,</tc:token>
+      <tc:token ID="w44d">but</tc:token>
+      <tc:token ID="w44e">also</tc:token>
+      <tc:token ID="w44f">more</tc:token>
+      <tc:token ID="w450">specific</tc:token>
+      <tc:token ID="w451">case</tc:token>
+      <tc:token ID="w452">studies</tc:token>
+      <tc:token ID="w453">,</tc:token>
+      <tc:token ID="w454">including</tc:token>
+      <tc:token ID="w455">work</tc:token>
+      <tc:token ID="w456">in</tc:token>
+      <tc:token ID="w457">progress</tc:token>
+      <tc:token ID="w458">;</tc:token>
+      <tc:token ID="w459">the</tc:token>
+      <tc:token ID="w45a">diachronic</tc:token>
+      <tc:token ID="w45b">study</tc:token>
+      <tc:token ID="w45c">of</tc:token>
+      <tc:token ID="w45d">cultural</tc:token>
+      <tc:token ID="w45e">phenomena</tc:token>
+      <tc:token ID="w45f">via</tc:token>
+      <tc:token ID="w460">distributed</tc:token>
+      <tc:token ID="w461">methods</tc:token>
+      <tc:token ID="w462">;</tc:token>
+      <tc:token ID="w463">the</tc:token>
+      <tc:token ID="w464">evaluation</tc:token>
+      <tc:token ID="w465">of</tc:token>
+      <tc:token ID="w466">distributional</tc:token>
+      <tc:token ID="w467">models</tc:token>
+      <tc:token ID="w468">,</tc:token>
+      <tc:token ID="w469">both</tc:token>
+      <tc:token ID="w46a">from</tc:token>
+      <tc:token ID="w46b">an</tc:token>
+      <tc:token ID="w46c">empiric</tc:token>
+      <tc:token ID="w46d">and</tc:token>
+      <tc:token ID="w46e">hermeneutic</tc:token>
+      <tc:token ID="w46f">perspective</tc:token>
+      <tc:token ID="w470">;</tc:token>
+      <tc:token ID="w471">modelling</tc:token>
+      <tc:token ID="w472">the</tc:token>
+      <tc:token ID="w473">role</tc:token>
+      <tc:token ID="w474">and</tc:token>
+      <tc:token ID="w475">behaviour</tc:token>
+      <tc:token ID="w476">of</tc:token>
+      <tc:token ID="w477">(</tc:token>
+      <tc:token ID="w478">individual</tc:token>
+      <tc:token ID="w479">)</tc:token>
+      <tc:token ID="w47a">readers</tc:token>
+      <tc:token ID="w47b">or</tc:token>
+      <tc:token ID="w47c">reading</tc:token>
+      <tc:token ID="w47d">communities</tc:token>
+      <tc:token ID="w47e">;</tc:token>
+      <tc:token ID="w47f">…</tc:token>
+      <tc:token ID="w480">Convenors</tc:token>
+      <tc:token ID="w481">Bamman</tc:token>
+      <tc:token ID="w482">,</tc:token>
+      <tc:token ID="w483">D.</tc:token>
+      <tc:token ID="w484">/</tc:token>
+      <tc:token ID="w485">Underwood</tc:token>
+      <tc:token ID="w486">,</tc:token>
+      <tc:token ID="w487">T.</tc:token>
+      <tc:token ID="w488">/</tc:token>
+      <tc:token ID="w489">Smith</tc:token>
+      <tc:token ID="w48a">,</tc:token>
+      <tc:token ID="w48b">N.</tc:token>
+      <tc:token ID="w48c">A.</tc:token>
+      <tc:token ID="w48d">(</tc:token>
+      <tc:token ID="w48e">2014</tc:token>
+      <tc:token ID="w48f">)</tc:token>
+      <tc:token ID="w490">:</tc:token>
+      <tc:token ID="w491">„</tc:token>
+      <tc:token ID="w492">A</tc:token>
+      <tc:token ID="w493">Bayesian</tc:token>
+      <tc:token ID="w494">Mixed</tc:token>
+      <tc:token ID="w495">Effects</tc:token>
+      <tc:token ID="w496">Model</tc:token>
+      <tc:token ID="w497">of</tc:token>
+      <tc:token ID="w498">Literary</tc:token>
+      <tc:token ID="w499">Character</tc:token>
+      <tc:token ID="w49a">“</tc:token>
+      <tc:token ID="w49b">,</tc:token>
+      <tc:token ID="w49c">in</tc:token>
+      <tc:token ID="w49d">Proceedings</tc:token>
+      <tc:token ID="w49e">of</tc:token>
+      <tc:token ID="w49f">ACL</tc:token>
+      <tc:token ID="w4a0">.</tc:token>
+      <tc:token ID="w4a1">Blei</tc:token>
+      <tc:token ID="w4a2">,</tc:token>
+      <tc:token ID="w4a3">David</tc:token>
+      <tc:token ID="w4a4">(</tc:token>
+      <tc:token ID="w4a5">2012</tc:token>
+      <tc:token ID="w4a6">)</tc:token>
+      <tc:token ID="w4a7">:</tc:token>
+      <tc:token ID="w4a8">„</tc:token>
+      <tc:token ID="w4a9">Probabilistic</tc:token>
+      <tc:token ID="w4aa">Topic</tc:token>
+      <tc:token ID="w4ab">Models</tc:token>
+      <tc:token ID="w4ac">“</tc:token>
+      <tc:token ID="w4ad">,</tc:token>
+      <tc:token ID="w4ae">in</tc:token>
+      <tc:token ID="w4af">Communications</tc:token>
+      <tc:token ID="w4b0">of</tc:token>
+      <tc:token ID="w4b1">the</tc:token>
+      <tc:token ID="w4b2">ACM</tc:token>
+      <tc:token ID="w4b3">55</tc:token>
+      <tc:token ID="w4b4">,</tc:token>
+      <tc:token ID="w4b5">77-84</tc:token>
+      <tc:token ID="w4b6">.</tc:token>
+      <tc:token ID="w4b7">Bolukbasi</tc:token>
+      <tc:token ID="w4b8">,</tc:token>
+      <tc:token ID="w4b9">T.</tc:token>
+      <tc:token ID="w4ba">/</tc:token>
+      <tc:token ID="w4bb">Chang</tc:token>
+      <tc:token ID="w4bc">,</tc:token>
+      <tc:token ID="w4bd">K.</tc:token>
+      <tc:token ID="w4be">W.</tc:token>
+      <tc:token ID="w4bf">/</tc:token>
+      <tc:token ID="w4c0">Zou</tc:token>
+      <tc:token ID="w4c1">,</tc:token>
+      <tc:token ID="w4c2">J.</tc:token>
+      <tc:token ID="w4c3">/</tc:token>
+      <tc:token ID="w4c4">Saligrama</tc:token>
+      <tc:token ID="w4c5">,</tc:token>
+      <tc:token ID="w4c6">V.</tc:token>
+      <tc:token ID="w4c7">/</tc:token>
+      <tc:token ID="w4c8">Kalai</tc:token>
+      <tc:token ID="w4c9">,</tc:token>
+      <tc:token ID="w4ca">A.</tc:token>
+      <tc:token ID="w4cb">(</tc:token>
+      <tc:token ID="w4cc">2016</tc:token>
+      <tc:token ID="w4cd">)</tc:token>
+      <tc:token ID="w4ce">:</tc:token>
+      <tc:token ID="w4cf">„</tc:token>
+      <tc:token ID="w4d0">Quantifying</tc:token>
+      <tc:token ID="w4d1">and</tc:token>
+      <tc:token ID="w4d2">Reducing</tc:token>
+      <tc:token ID="w4d3">Stereotypes</tc:token>
+      <tc:token ID="w4d4">in</tc:token>
+      <tc:token ID="w4d5">Word</tc:token>
+      <tc:token ID="w4d6">Embeddings</tc:token>
+      <tc:token ID="w4d7">“</tc:token>
+      <tc:token ID="w4d8">,</tc:token>
+      <tc:token ID="w4d9">in</tc:token>
+      <tc:token ID="w4da">arXiv</tc:token>
+      <tc:token ID="w4db">:</tc:token>
+      <tc:token ID="w4dc">1606</tc:token>
+      <tc:token ID="w4dd">.</tc:token>
+      <tc:token ID="w4de">06121</tc:token>
+      <tc:token ID="w4df">.</tc:token>
+      <tc:token ID="w4e0">Chang</tc:token>
+      <tc:token ID="w4e1">,</tc:token>
+      <tc:token ID="w4e2">J.</tc:token>
+      <tc:token ID="w4e3">/</tc:token>
+      <tc:token ID="w4e4">Gerrish</tc:token>
+      <tc:token ID="w4e5">,</tc:token>
+      <tc:token ID="w4e6">S.</tc:token>
+      <tc:token ID="w4e7">/</tc:token>
+      <tc:token ID="w4e8">Sang</tc:token>
+      <tc:token ID="w4e9">,</tc:token>
+      <tc:token ID="w4ea">C.</tc:token>
+      <tc:token ID="w4eb">/</tc:token>
+      <tc:token ID="w4ec">Boyd-Graber</tc:token>
+      <tc:token ID="w4ed">,</tc:token>
+      <tc:token ID="w4ee">J.</tc:token>
+      <tc:token ID="w4ef">L.</tc:token>
+      <tc:token ID="w4f0">/</tc:token>
+      <tc:token ID="w4f1">Blei</tc:token>
+      <tc:token ID="w4f2">,</tc:token>
+      <tc:token ID="w4f3">D.</tc:token>
+      <tc:token ID="w4f4">M.</tc:token>
+      <tc:token ID="w4f5">(</tc:token>
+      <tc:token ID="w4f6">2009</tc:token>
+      <tc:token ID="w4f7">)</tc:token>
+      <tc:token ID="w4f8">:</tc:token>
+      <tc:token ID="w4f9">„</tc:token>
+      <tc:token ID="w4fa">Reading</tc:token>
+      <tc:token ID="w4fb">Tea</tc:token>
+      <tc:token ID="w4fc">Leaves</tc:token>
+      <tc:token ID="w4fd">:</tc:token>
+      <tc:token ID="w4fe">How</tc:token>
+      <tc:token ID="w4ff">Humans</tc:token>
+      <tc:token ID="w500">Interpret</tc:token>
+      <tc:token ID="w501">Topic</tc:token>
+      <tc:token ID="w502">Models</tc:token>
+      <tc:token ID="w503">“</tc:token>
+      <tc:token ID="w504">,</tc:token>
+      <tc:token ID="w505">in</tc:token>
+      <tc:token ID="w506">Proceedings</tc:token>
+      <tc:token ID="w507">of</tc:token>
+      <tc:token ID="w508">NIPS</tc:token>
+      <tc:token ID="w509">,</tc:token>
+      <tc:token ID="w50a">288-296</tc:token>
+      <tc:token ID="w50b">.</tc:token>
+      <tc:token ID="w50c">Hamilton</tc:token>
+      <tc:token ID="w50d">,</tc:token>
+      <tc:token ID="w50e">W.</tc:token>
+      <tc:token ID="w50f">L.</tc:token>
+      <tc:token ID="w510">/</tc:token>
+      <tc:token ID="w511">Leskovec</tc:token>
+      <tc:token ID="w512">,</tc:token>
+      <tc:token ID="w513">J.</tc:token>
+      <tc:token ID="w514">/</tc:token>
+      <tc:token ID="w515">Jurafsky</tc:token>
+      <tc:token ID="w516">,</tc:token>
+      <tc:token ID="w517">D.</tc:token>
+      <tc:token ID="w518">(</tc:token>
+      <tc:token ID="w519">2016</tc:token>
+      <tc:token ID="w51a">)</tc:token>
+      <tc:token ID="w51b">:</tc:token>
+      <tc:token ID="w51c">„</tc:token>
+      <tc:token ID="w51d">Diachronic</tc:token>
+      <tc:token ID="w51e">Word</tc:token>
+      <tc:token ID="w51f">Embeddings</tc:token>
+      <tc:token ID="w520">Reveal</tc:token>
+      <tc:token ID="w521">Statistical</tc:token>
+      <tc:token ID="w522">Laws</tc:token>
+      <tc:token ID="w523">of</tc:token>
+      <tc:token ID="w524">Semantic</tc:token>
+      <tc:token ID="w525">Change</tc:token>
+      <tc:token ID="w526">“</tc:token>
+      <tc:token ID="w527">,</tc:token>
+      <tc:token ID="w528">in</tc:token>
+      <tc:token ID="w529">Proceedings</tc:token>
+      <tc:token ID="w52a">of</tc:token>
+      <tc:token ID="w52b">ACL</tc:token>
+      <tc:token ID="w52c">.</tc:token>
+      <tc:token ID="w52d">Manning</tc:token>
+      <tc:token ID="w52e">,</tc:token>
+      <tc:token ID="w52f">Christopher</tc:token>
+      <tc:token ID="w530">D.</tc:token>
+      <tc:token ID="w531">(</tc:token>
+      <tc:token ID="w532">2016</tc:token>
+      <tc:token ID="w533">)</tc:token>
+      <tc:token ID="w534">:</tc:token>
+      <tc:token ID="w535">„</tc:token>
+      <tc:token ID="w536">Computational</tc:token>
+      <tc:token ID="w537">Linguistics</tc:token>
+      <tc:token ID="w538">and</tc:token>
+      <tc:token ID="w539">Deep</tc:token>
+      <tc:token ID="w53a">Learning</tc:token>
+      <tc:token ID="w53b">“</tc:token>
+      <tc:token ID="w53c">,</tc:token>
+      <tc:token ID="w53d">in</tc:token>
+      <tc:token ID="w53e">Computational</tc:token>
+      <tc:token ID="w53f">Linguistics</tc:token>
+      <tc:token ID="w540">41</tc:token>
+      <tc:token ID="w541">,</tc:token>
+      <tc:token ID="w542">701-707</tc:token>
+      <tc:token ID="w543">.</tc:token>
+      <tc:token ID="w544">Martinez-Ortiz</tc:token>
+      <tc:token ID="w545">,</tc:token>
+      <tc:token ID="w546">C.</tc:token>
+      <tc:token ID="w547">/</tc:token>
+      <tc:token ID="w548">Huijnen</tc:token>
+      <tc:token ID="w549">,</tc:token>
+      <tc:token ID="w54a">P.</tc:token>
+      <tc:token ID="w54b">/</tc:token>
+      <tc:token ID="w54c">Kenter</tc:token>
+      <tc:token ID="w54d">,</tc:token>
+      <tc:token ID="w54e">T.</tc:token>
+      <tc:token ID="w54f">/</tc:token>
+      <tc:token ID="w550">Verheul</tc:token>
+      <tc:token ID="w551">,</tc:token>
+      <tc:token ID="w552">J.</tc:token>
+      <tc:token ID="w553">/</tc:token>
+      <tc:token ID="w554">Wevers</tc:token>
+      <tc:token ID="w555">,</tc:token>
+      <tc:token ID="w556">M.</tc:token>
+      <tc:token ID="w557">/</tc:token>
+      <tc:token ID="w558">van</tc:token>
+      <tc:token ID="w559">Eijnatten</tc:token>
+      <tc:token ID="w55a">,</tc:token>
+      <tc:token ID="w55b">J.</tc:token>
+      <tc:token ID="w55c">(</tc:token>
+      <tc:token ID="w55d">2016</tc:token>
+      <tc:token ID="w55e">)</tc:token>
+      <tc:token ID="w55f">:</tc:token>
+      <tc:token ID="w560">„</tc:token>
+      <tc:token ID="w561">ShiCo</tc:token>
+      <tc:token ID="w562">:</tc:token>
+      <tc:token ID="w563">A</tc:token>
+      <tc:token ID="w564">Visualization</tc:token>
+      <tc:token ID="w565">Tool</tc:token>
+      <tc:token ID="w566">for</tc:token>
+      <tc:token ID="w567">Shifting</tc:token>
+      <tc:token ID="w568">Concepts</tc:token>
+      <tc:token ID="w569">Through</tc:token>
+      <tc:token ID="w56a">Time</tc:token>
+      <tc:token ID="w56b">“</tc:token>
+      <tc:token ID="w56c">,</tc:token>
+      <tc:token ID="w56d">in</tc:token>
+      <tc:token ID="w56e">Digital</tc:token>
+      <tc:token ID="w56f">Humanities</tc:token>
+      <tc:token ID="w570">Benelux</tc:token>
+      <tc:token ID="w571">:</tc:token>
+      <tc:token ID="w572">Book</tc:token>
+      <tc:token ID="w573">af</tc:token>
+      <tc:token ID="w574">Abstracts</tc:token>
+      <tc:token ID="w575">,</tc:token>
+      <tc:token ID="w576">s.p.</tc:token>
+      <tc:token ID="w577">Mikolov</tc:token>
+      <tc:token ID="w578">,</tc:token>
+      <tc:token ID="w579">T.</tc:token>
+      <tc:token ID="w57a">/</tc:token>
+      <tc:token ID="w57b">Sutskever</tc:token>
+      <tc:token ID="w57c">,</tc:token>
+      <tc:token ID="w57d">I.</tc:token>
+      <tc:token ID="w57e">/</tc:token>
+      <tc:token ID="w57f">Chen</tc:token>
+      <tc:token ID="w580">,</tc:token>
+      <tc:token ID="w581">K.</tc:token>
+      <tc:token ID="w582">/</tc:token>
+      <tc:token ID="w583">Corrado</tc:token>
+      <tc:token ID="w584">,</tc:token>
+      <tc:token ID="w585">G.</tc:token>
+      <tc:token ID="w586">S.</tc:token>
+      <tc:token ID="w587">/</tc:token>
+      <tc:token ID="w588">Dean</tc:token>
+      <tc:token ID="w589">,</tc:token>
+      <tc:token ID="w58a">J.</tc:token>
+      <tc:token ID="w58b">(</tc:token>
+      <tc:token ID="w58c">2013</tc:token>
+      <tc:token ID="w58d">)</tc:token>
+      <tc:token ID="w58e">:</tc:token>
+      <tc:token ID="w58f">„</tc:token>
+      <tc:token ID="w590">Distributed</tc:token>
+      <tc:token ID="w591">representations</tc:token>
+      <tc:token ID="w592">of</tc:token>
+      <tc:token ID="w593">words</tc:token>
+      <tc:token ID="w594">and</tc:token>
+      <tc:token ID="w595">phrases</tc:token>
+      <tc:token ID="w596">and</tc:token>
+      <tc:token ID="w597">their</tc:token>
+      <tc:token ID="w598">compositionality</tc:token>
+      <tc:token ID="w599">“</tc:token>
+      <tc:token ID="w59a">,</tc:token>
+      <tc:token ID="w59b">in</tc:token>
+      <tc:token ID="w59c">Proceedings</tc:token>
+      <tc:token ID="w59d">of</tc:token>
+      <tc:token ID="w59e">NIPS</tc:token>
+      <tc:token ID="w59f">2013</tc:token>
+      <tc:token ID="w5a0">.</tc:token>
+      <tc:token ID="w5a1">Mimno</tc:token>
+      <tc:token ID="w5a2">,</tc:token>
+      <tc:token ID="w5a3">David</tc:token>
+      <tc:token ID="w5a4">(</tc:token>
+      <tc:token ID="w5a5">2012</tc:token>
+      <tc:token ID="w5a6">)</tc:token>
+      <tc:token ID="w5a7">:</tc:token>
+      <tc:token ID="w5a8">„</tc:token>
+      <tc:token ID="w5a9">Computational</tc:token>
+      <tc:token ID="w5aa">Historiography</tc:token>
+      <tc:token ID="w5ab">:</tc:token>
+      <tc:token ID="w5ac">Data</tc:token>
+      <tc:token ID="w5ad">Mining</tc:token>
+      <tc:token ID="w5ae">in</tc:token>
+      <tc:token ID="w5af">a</tc:token>
+      <tc:token ID="w5b0">Century</tc:token>
+      <tc:token ID="w5b1">of</tc:token>
+      <tc:token ID="w5b2">Classics</tc:token>
+      <tc:token ID="w5b3">Journals</tc:token>
+      <tc:token ID="w5b4">“</tc:token>
+      <tc:token ID="w5b5">,</tc:token>
+      <tc:token ID="w5b6">in</tc:token>
+      <tc:token ID="w5b7">ACM</tc:token>
+      <tc:token ID="w5b8">Journal</tc:token>
+      <tc:token ID="w5b9">of</tc:token>
+      <tc:token ID="w5ba">Computing</tc:token>
+      <tc:token ID="w5bb">in</tc:token>
+      <tc:token ID="w5bc">Cultural</tc:token>
+      <tc:token ID="w5bd">Heritage</tc:token>
+      <tc:token ID="w5be">5.</tc:token>
+      <tc:token ID="w5bf">Schoech</tc:token>
+      <tc:token ID="w5c0">,</tc:token>
+      <tc:token ID="w5c1">Christof</tc:token>
+      <tc:token ID="w5c2">(</tc:token>
+      <tc:token ID="w5c3">2017</tc:token>
+      <tc:token ID="w5c4">)</tc:token>
+      <tc:token ID="w5c5">:</tc:token>
+      <tc:token ID="w5c6">„</tc:token>
+      <tc:token ID="w5c7">Topic</tc:token>
+      <tc:token ID="w5c8">Modeling</tc:token>
+      <tc:token ID="w5c9">Genre</tc:token>
+      <tc:token ID="w5ca">:</tc:token>
+      <tc:token ID="w5cb">An</tc:token>
+      <tc:token ID="w5cc">Exploration</tc:token>
+      <tc:token ID="w5cd">of</tc:token>
+      <tc:token ID="w5ce">French</tc:token>
+      <tc:token ID="w5cf">Classical</tc:token>
+      <tc:token ID="w5d0">and</tc:token>
+      <tc:token ID="w5d1">Enlightenment</tc:token>
+      <tc:token ID="w5d2">Drama</tc:token>
+      <tc:token ID="w5d3">“</tc:token>
+      <tc:token ID="w5d4">,</tc:token>
+      <tc:token ID="w5d5">Digital</tc:token>
+      <tc:token ID="w5d6">Humanities</tc:token>
+      <tc:token ID="w5d7">Quarterly</tc:token>
+      <tc:token ID="w5d8">11</tc:token>
+      <tc:token ID="w5d9">,</tc:token>
+      <tc:token ID="w5da">s.p.</tc:token>
+      <tc:token ID="w5db">Bibliographie</tc:token>
+    </tc:tokens>
+    <tc:sentences xmlns:tc="http://www.dspin.de/data/textcorpus">
+      <tc:sentence tokenIDs="w1 w2 w3 w4 w5 w6 w7 w8 w9 wa wb wc wd we wf w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w1a w1b w1c w1d w1e w1f w20 w21 w22 w23 w24" ID="s1"/>
+      <tc:sentence tokenIDs="w25 w26 w27 w28 w29 w2a w2b w2c w2d w2e w2f w30 w31 w32 w33 w34 w35 w36 w37 w38 w39 w3a w3b w3c w3d w3e w3f w40 w41 w42 w43 w44" ID="s2"/>
+      <tc:sentence tokenIDs="w45 w46 w47 w48 w49 w4a w4b w4c w4d w4e w4f w50 w51 w52 w53 w54 w55 w56 w57 w58 w59 w5a w5b w5c w5d w5e w5f w60" ID="s3"/>
+      <tc:sentence tokenIDs="w61 w62 w63 w64 w65 w66 w67 w68 w69 w6a w6b w6c w6d w6e w6f w70" ID="s4"/>
+      <tc:sentence tokenIDs="w71 w72 w73 w74 w75 w76 w77 w78 w79 w7a w7b w7c w7d w7e w7f w80 w81 w82 w83 w84 w85 w86 w87 w88 w89 w8a w8b w8c w8d w8e w8f w90 w91 w92 w93 w94" ID="s5"/>
+      <tc:sentence tokenIDs="w95 w96 w97 w98 w99 w9a w9b w9c w9d w9e w9f wa0 wa1 wa2 wa3 wa4 wa5 wa6 wa7 wa8 wa9 waa wab wac wad wae waf wb0 wb1 wb2 wb3 wb4 wb5 wb6" ID="s6"/>
+      <tc:sentence tokenIDs="wb7 wb8 wb9 wba wbb wbc wbd wbe wbf wc0 wc1 wc2 wc3 wc4 wc5 wc6 wc7 wc8 wc9 wca wcb wcc wcd wce wcf wd0 wd1 wd2 wd3 wd4 wd5 wd6 wd7 wd8 wd9 wda wdb wdc wdd wde wdf we0 we1 we2 we3 we4 we5 we6 we7 we8 we9 wea web wec" ID="s7"/>
+      <tc:sentence tokenIDs="wed wee wef wf0 wf1 wf2 wf3 wf4 wf5 wf6 wf7 wf8 wf9 wfa wfb wfc wfd wfe wff w100 w101 w102 w103" ID="s8"/>
+      <tc:sentence tokenIDs="w104 w105 w106 w107 w108 w109 w10a" ID="s9"/>
+      <tc:sentence tokenIDs="w10b w10c w10d w10e w10f w110 w111 w112 w113 w114 w115 w116 w117 w118 w119 w11a w11b w11c w11d" ID="sa"/>
+      <tc:sentence tokenIDs="w11e w11f w120 w121 w122 w123 w124 w125 w126 w127 w128 w129 w12a w12b w12c w12d w12e w12f w130 w131 w132 w133 w134 w135 w136 w137 w138 w139 w13a" ID="sb"/>
+      <tc:sentence tokenIDs="w13b w13c w13d w13e w13f w140 w141 w142 w143 w144 w145 w146 w147 w148 w149 w14a w14b w14c w14d w14e w14f w150 w151 w152 w153 w154" ID="sc"/>
+      <tc:sentence tokenIDs="w155 w156 w157 w158 w159 w15a w15b w15c w15d w15e w15f w160 w161 w162 w163 w164 w165 w166 w167 w168 w169 w16a w16b w16c w16d w16e w16f w170 w171 w172 w173 w174 w175 w176 w177 w178 w179 w17a" ID="sd"/>
+      <tc:sentence tokenIDs="w17b w17c w17d w17e w17f w180 w181 w182 w183 w184 w185 w186 w187 w188 w189 w18a w18b w18c w18d w18e w18f w190 w191 w192 w193 w194 w195 w196 w197 w198 w199 w19a w19b w19c w19d w19e w19f w1a0 w1a1 w1a2 w1a3 w1a4 w1a5 w1a6 w1a7 w1a8 w1a9" ID="se"/>
+      <tc:sentence tokenIDs="w1aa w1ab w1ac w1ad w1ae w1af w1b0 w1b1 w1b2 w1b3 w1b4 w1b5 w1b6 w1b7 w1b8 w1b9 w1ba w1bb w1bc w1bd w1be w1bf w1c0 w1c1 w1c2 w1c3 w1c4 w1c5 w1c6 w1c7 w1c8 w1c9 w1ca w1cb w1cc w1cd w1ce w1cf w1d0" ID="sf"/>
+      <tc:sentence tokenIDs="w1d1 w1d2 w1d3 w1d4 w1d5 w1d6 w1d7 w1d8 w1d9 w1da w1db w1dc w1dd w1de w1df w1e0 w1e1 w1e2 w1e3 w1e4 w1e5 w1e6 w1e7" ID="s10"/>
+      <tc:sentence tokenIDs="w1e8 w1e9 w1ea w1eb w1ec w1ed w1ee w1ef w1f0 w1f1 w1f2 w1f3 w1f4 w1f5 w1f6 w1f7 w1f8 w1f9 w1fa w1fb w1fc w1fd w1fe w1ff w200 w201 w202" ID="s11"/>
+      <tc:sentence tokenIDs="w203 w204 w205 w206 w207 w208 w209 w20a w20b w20c w20d w20e w20f w210 w211 w212 w213 w214 w215 w216 w217 w218 w219 w21a w21b w21c w21d w21e w21f w220 w221 w222 w223 w224 w225 w226 w227 w228" ID="s12"/>
+      <tc:sentence tokenIDs="w229 w22a w22b w22c w22d w22e w22f w230 w231 w232 w233 w234 w235 w236 w237 w238 w239 w23a w23b w23c w23d w23e w23f w240 w241 w242 w243 w244 w245 w246 w247 w248 w249 w24a w24b w24c w24d" ID="s13"/>
+      <tc:sentence tokenIDs="w24e w24f w250 w251 w252 w253 w254 w255 w256 w257 w258 w259 w25a w25b w25c w25d w25e w25f w260 w261 w262 w263 w264 w265 w266 w267 w268 w269 w26a w26b w26c w26d w26e w26f w270 w271 w272" ID="s14"/>
+      <tc:sentence tokenIDs="w273 w274 w275 w276 w277 w278 w279 w27a w27b w27c w27d w27e w27f w280 w281 w282 w283 w284 w285 w286 w287" ID="s15"/>
+      <tc:sentence tokenIDs="w288 w289 w28a w28b w28c w28d w28e w28f w290 w291 w292 w293 w294 w295 w296 w297 w298 w299 w29a w29b w29c w29d w29e w29f w2a0 w2a1 w2a2 w2a3" ID="s16"/>
+      <tc:sentence tokenIDs="w2a4 w2a5 w2a6 w2a7 w2a8 w2a9 w2aa w2ab w2ac w2ad w2ae w2af w2b0 w2b1 w2b2 w2b3 w2b4 w2b5 w2b6 w2b7 w2b8 w2b9 w2ba w2bb w2bc w2bd w2be w2bf w2c0 w2c1" ID="s17"/>
+      <tc:sentence tokenIDs="w2c2 w2c3 w2c4 w2c5 w2c6 w2c7 w2c8 w2c9 w2ca w2cb w2cc w2cd w2ce w2cf w2d0 w2d1 w2d2 w2d3 w2d4 w2d5 w2d6 w2d7 w2d8 w2d9 w2da w2db w2dc w2dd w2de" ID="s18"/>
+      <tc:sentence tokenIDs="w2df w2e0 w2e1 w2e2 w2e3 w2e4 w2e5 w2e6 w2e7 w2e8 w2e9 w2ea w2eb w2ec w2ed w2ee w2ef w2f0" ID="s19"/>
+      <tc:sentence tokenIDs="w2f1 w2f2 w2f3 w2f4 w2f5 w2f6 w2f7 w2f8 w2f9 w2fa w2fb w2fc w2fd w2fe w2ff w300 w301 w302 w303 w304 w305 w306 w307 w308 w309 w30a w30b w30c w30d w30e w30f w310 w311 w312 w313" ID="s1a"/>
+      <tc:sentence tokenIDs="w314 w315 w316 w317 w318 w319 w31a w31b w31c w31d w31e w31f w320 w321 w322 w323 w324 w325 w326" ID="s1b"/>
+      <tc:sentence tokenIDs="w327 w328 w329 w32a w32b w32c w32d w32e w32f w330 w331 w332 w333 w334 w335 w336 w337 w338" ID="s1c"/>
+      <tc:sentence tokenIDs="w339 w33a w33b w33c w33d w33e w33f w340 w341 w342 w343 w344 w345 w346 w347 w348 w349 w34a w34b w34c w34d w34e w34f w350 w351 w352 w353" ID="s1d"/>
+      <tc:sentence tokenIDs="w354 w355 w356 w357 w358 w359 w35a w35b w35c w35d w35e w35f w360 w361 w362 w363 w364 w365 w366 w367" ID="s1e"/>
+      <tc:sentence tokenIDs="w368 w369 w36a w36b w36c w36d w36e w36f w370 w371 w372 w373 w374 w375 w376 w377 w378 w379 w37a w37b w37c w37d w37e w37f w380 w381 w382 w383 w384 w385 w386" ID="s1f"/>
+      <tc:sentence tokenIDs="w387 w388 w389 w38a w38b w38c w38d w38e w38f w390 w391 w392 w393 w394 w395 w396 w397 w398 w399 w39a w39b w39c w39d w39e w39f" ID="s20"/>
+      <tc:sentence tokenIDs="w3a0 w3a1 w3a2 w3a3 w3a4 w3a5 w3a6 w3a7 w3a8 w3a9 w3aa w3ab w3ac w3ad w3ae w3af w3b0 w3b1 w3b2 w3b3 w3b4 w3b5 w3b6 w3b7 w3b8 w3b9 w3ba w3bb w3bc w3bd w3be w3bf w3c0 w3c1 w3c2 w3c3 w3c4 w3c5 w3c6" ID="s21"/>
+      <tc:sentence tokenIDs="w3c7 w3c8 w3c9 w3ca w3cb w3cc w3cd w3ce w3cf w3d0 w3d1 w3d2 w3d3 w3d4 w3d5 w3d6 w3d7 w3d8 w3d9 w3da w3db w3dc w3dd w3de w3df w3e0 w3e1 w3e2 w3e3 w3e4 w3e5 w3e6 w3e7 w3e8 w3e9 w3ea w3eb w3ec w3ed w3ee w3ef w3f0 w3f1 w3f2 w3f3 w3f4" ID="s22"/>
+      <tc:sentence tokenIDs="w3f5 w3f6 w3f7 w3f8 w3f9 w3fa w3fb w3fc w3fd w3fe w3ff w400 w401 w402 w403 w404 w405 w406 w407 w408 w409" ID="s23"/>
+      <tc:sentence tokenIDs="w40a w40b w40c w40d w40e w40f w410 w411 w412 w413 w414 w415 w416 w417 w418 w419 w41a w41b w41c w41d w41e w41f w420 w421 w422" ID="s24"/>
+      <tc:sentence tokenIDs="w423 w424 w425 w426 w427 w428 w429 w42a w42b w42c w42d w42e w42f w430 w431" ID="s25"/>
+      <tc:sentence tokenIDs="w432 w433 w434 w435 w436 w437 w438 w439 w43a w43b w43c w43d w43e w43f w440 w441 w442 w443 w444 w445 w446 w447 w448 w449 w44a w44b w44c w44d w44e w44f w450 w451 w452 w453 w454 w455 w456 w457 w458 w459 w45a w45b w45c w45d w45e w45f w460 w461 w462 w463 w464 w465 w466 w467 w468 w469 w46a w46b w46c w46d w46e w46f w470 w471 w472 w473 w474 w475 w476 w477 w478 w479 w47a w47b w47c w47d w47e w47f w480 w481 w482 w483 w484 w485 w486 w487 w488 w489 w48a w48b w48c w48d w48e w48f w490" ID="s26"/>
+      <tc:sentence tokenIDs="w491 w492 w493 w494 w495 w496 w497 w498 w499 w49a w49b w49c w49d w49e w49f w4a0" ID="s27"/>
+      <tc:sentence tokenIDs="w4a1 w4a2 w4a3 w4a4 w4a5 w4a6 w4a7" ID="s28"/>
+      <tc:sentence tokenIDs="w4a8 w4a9 w4aa w4ab w4ac w4ad w4ae w4af w4b0 w4b1 w4b2 w4b3 w4b4 w4b5 w4b6" ID="s29"/>
+      <tc:sentence tokenIDs="w4b7 w4b8 w4b9 w4ba w4bb w4bc w4bd w4be w4bf w4c0 w4c1 w4c2 w4c3 w4c4 w4c5 w4c6 w4c7 w4c8 w4c9 w4ca w4cb w4cc w4cd w4ce w4cf w4d0 w4d1 w4d2 w4d3 w4d4 w4d5 w4d6 w4d7 w4d8 w4d9 w4da w4db w4dc w4dd w4de w4df" ID="s2a"/>
+      <tc:sentence tokenIDs="w4e0 w4e1 w4e2 w4e3 w4e4 w4e5 w4e6 w4e7 w4e8 w4e9 w4ea w4eb w4ec w4ed w4ee w4ef w4f0 w4f1 w4f2 w4f3 w4f4 w4f5 w4f6 w4f7 w4f8 w4f9 w4fa w4fb w4fc w4fd" ID="s2b"/>
+      <tc:sentence tokenIDs="w4fe w4ff w500 w501 w502 w503 w504 w505 w506 w507 w508 w509 w50a w50b" ID="s2c"/>
+      <tc:sentence tokenIDs="w50c w50d w50e w50f w510 w511 w512 w513 w514 w515 w516 w517 w518 w519 w51a w51b" ID="s2d"/>
+      <tc:sentence tokenIDs="w51c w51d w51e w51f w520 w521 w522 w523 w524 w525 w526 w527 w528 w529 w52a w52b w52c" ID="s2e"/>
+      <tc:sentence tokenIDs="w52d w52e w52f w530 w531 w532 w533 w534" ID="s2f"/>
+      <tc:sentence tokenIDs="w535 w536 w537 w538 w539 w53a w53b w53c w53d w53e w53f w540 w541 w542 w543" ID="s30"/>
+      <tc:sentence tokenIDs="w544 w545 w546 w547 w548 w549 w54a w54b w54c w54d w54e w54f w550 w551 w552 w553 w554 w555 w556 w557 w558 w559 w55a w55b w55c w55d w55e w55f" ID="s31"/>
+      <tc:sentence tokenIDs="w560 w561 w562 w563 w564 w565 w566 w567 w568 w569 w56a w56b w56c w56d w56e w56f w570 w571" ID="s32"/>
+      <tc:sentence tokenIDs="w572 w573 w574 w575 w576 w577 w578 w579 w57a w57b w57c w57d w57e w57f w580 w581 w582 w583 w584 w585 w586 w587 w588 w589 w58a w58b w58c w58d w58e" ID="s33"/>
+      <tc:sentence tokenIDs="w58f w590 w591 w592 w593 w594 w595 w596 w597 w598 w599 w59a w59b w59c w59d w59e w59f w5a0" ID="s34"/>
+      <tc:sentence tokenIDs="w5a1 w5a2 w5a3 w5a4 w5a5 w5a6 w5a7" ID="s35"/>
+      <tc:sentence tokenIDs="w5a8 w5a9 w5aa w5ab w5ac w5ad w5ae w5af w5b0 w5b1 w5b2 w5b3 w5b4 w5b5 w5b6 w5b7 w5b8 w5b9 w5ba w5bb w5bc w5bd w5be w5bf w5c0 w5c1 w5c2 w5c3 w5c4 w5c5" ID="s36"/>
+      <tc:sentence tokenIDs="w5c6 w5c7 w5c8 w5c9 w5ca w5cb w5cc w5cd w5ce w5cf w5d0 w5d1 w5d2 w5d3 w5d4 w5d5 w5d6 w5d7 w5d8 w5d9 w5da w5db" ID="s37"/>
+    </tc:sentences>
+    <tc:namedEntities xmlns:tc="http://www.dspin.de/data/textcorpus" type="tuebadz8">
+      <tc:entity class="PER" tokenIDs="w3f"/>
+      <tc:entity class="PER" tokenIDs="w5d"/>
+      <tc:entity class="OTH" tokenIDs="wcb wcc wcd"/>
+      <tc:entity class="PER" tokenIDs="wd7"/>
+      <tc:entity class="PER" tokenIDs="wda"/>
+      <tc:entity class="PER" tokenIDs="we7"/>
+      <tc:entity class="PER" tokenIDs="w1a4"/>
+      <tc:entity class="PER" tokenIDs="w1be"/>
+      <tc:entity class="GPE" tokenIDs="w227"/>
+      <tc:entity class="PER" tokenIDs="w340 w341"/>
+      <tc:entity class="ORG" tokenIDs="w343 w344 w345"/>
+      <tc:entity class="GPE" tokenIDs="w347"/>
+      <tc:entity class="PER" tokenIDs="w368 w369"/>
+      <tc:entity class="ORG" tokenIDs="w36b w36c w36d"/>
+      <tc:entity class="GPE" tokenIDs="w36f"/>
+      <tc:entity class="GPE" tokenIDs="w385"/>
+      <tc:entity class="PER" tokenIDs="w3c7 w3c8"/>
+      <tc:entity class="ORG" tokenIDs="w3ca w3cb w3cc"/>
+      <tc:entity class="GPE" tokenIDs="w3ce"/>
+      <tc:entity class="PER" tokenIDs="w40a"/>
+      <tc:entity class="PER" tokenIDs="w480 w481"/>
+      <tc:entity class="PER" tokenIDs="w483"/>
+      <tc:entity class="PER" tokenIDs="w485"/>
+      <tc:entity class="PER" tokenIDs="w487"/>
+      <tc:entity class="PER" tokenIDs="w489"/>
+      <tc:entity class="PER" tokenIDs="w48b w48c"/>
+      <tc:entity class="ORG" tokenIDs="w49f"/>
+      <tc:entity class="PER" tokenIDs="w4a1 w4a2 w4a3"/>
+      <tc:entity class="OTH" tokenIDs="w4af w4b0 w4b1 w4b2"/>
+      <tc:entity class="PER" tokenIDs="w4b7"/>
+      <tc:entity class="PER" tokenIDs="w4b9"/>
+      <tc:entity class="PER" tokenIDs="w4bb"/>
+      <tc:entity class="PER" tokenIDs="w4bd w4be"/>
+      <tc:entity class="PER" tokenIDs="w4c0"/>
+      <tc:entity class="PER" tokenIDs="w4c2"/>
+      <tc:entity class="PER" tokenIDs="w4c4"/>
+      <tc:entity class="PER" tokenIDs="w4c6"/>
+      <tc:entity class="PER" tokenIDs="w4c8"/>
+      <tc:entity class="PER" tokenIDs="w4ca"/>
+      <tc:entity class="PER" tokenIDs="w4e0"/>
+      <tc:entity class="PER" tokenIDs="w4e2"/>
+      <tc:entity class="PER" tokenIDs="w4e4"/>
+      <tc:entity class="PER" tokenIDs="w4e6"/>
+      <tc:entity class="PER" tokenIDs="w4e8"/>
+      <tc:entity class="PER" tokenIDs="w4ea"/>
+      <tc:entity class="PER" tokenIDs="w4ec"/>
+      <tc:entity class="PER" tokenIDs="w4ee w4ef"/>
+      <tc:entity class="PER" tokenIDs="w4f1"/>
+      <tc:entity class="PER" tokenIDs="w4f3 w4f4"/>
+      <tc:entity class="OTH" tokenIDs="w4fa w4fb w4fc"/>
+      <tc:entity class="OTH" tokenIDs="w4fe w4ff w500 w501 w502"/>
+      <tc:entity class="OTH" tokenIDs="w506 w507 w508"/>
+      <tc:entity class="PER" tokenIDs="w50c"/>
+      <tc:entity class="PER" tokenIDs="w50e w50f"/>
+      <tc:entity class="PER" tokenIDs="w511"/>
+      <tc:entity class="PER" tokenIDs="w513"/>
+      <tc:entity class="PER" tokenIDs="w515"/>
+      <tc:entity class="PER" tokenIDs="w517"/>
+      <tc:entity class="OTH" tokenIDs="w529 w52a w52b"/>
+      <tc:entity class="PER" tokenIDs="w52d"/>
+      <tc:entity class="PER" tokenIDs="w52f w530"/>
+      <tc:entity class="OTH" tokenIDs="w536 w537 w538 w539 w53a"/>
+      <tc:entity class="OTH" tokenIDs="w53e w53f"/>
+      <tc:entity class="PER" tokenIDs="w544 w545 w546"/>
+      <tc:entity class="PER" tokenIDs="w548"/>
+      <tc:entity class="PER" tokenIDs="w54a"/>
+      <tc:entity class="PER" tokenIDs="w54c"/>
+      <tc:entity class="PER" tokenIDs="w54e"/>
+      <tc:entity class="PER" tokenIDs="w550"/>
+      <tc:entity class="PER" tokenIDs="w552"/>
+      <tc:entity class="PER" tokenIDs="w554"/>
+      <tc:entity class="PER" tokenIDs="w556"/>
+      <tc:entity class="PER" tokenIDs="w558 w559"/>
+      <tc:entity class="PER" tokenIDs="w55b"/>
+      <tc:entity class="ORG" tokenIDs="w561"/>
+      <tc:entity class="OTH" tokenIDs="w563 w564 w565 w566 w567 w568 w569 w56a"/>
+      <tc:entity class="ORG" tokenIDs="w56e w56f w570"/>
+      <tc:entity class="PER" tokenIDs="w577"/>
+      <tc:entity class="PER" tokenIDs="w579"/>
+      <tc:entity class="PER" tokenIDs="w57b"/>
+      <tc:entity class="PER" tokenIDs="w57d"/>
+      <tc:entity class="PER" tokenIDs="w57f"/>
+      <tc:entity class="PER" tokenIDs="w581"/>
+      <tc:entity class="PER" tokenIDs="w583"/>
+      <tc:entity class="PER" tokenIDs="w585 w586"/>
+      <tc:entity class="PER" tokenIDs="w588"/>
+      <tc:entity class="PER" tokenIDs="w58a"/>
+      <tc:entity class="OTH" tokenIDs="w590 w591 w592 w593 w594 w595 w596 w597 w598"/>
+      <tc:entity class="OTH" tokenIDs="w59c w59d w59e"/>
+      <tc:entity class="PER" tokenIDs="w5a1 w5a2 w5a3"/>
+      <tc:entity class="OTH" tokenIDs="w5ac w5ad w5ae w5af w5b0 w5b1 w5b2 w5b3"/>
+      <tc:entity class="ORG" tokenIDs="w5b7 w5b8 w5b9 w5ba"/>
+      <tc:entity class="LOC" tokenIDs="w5bc w5bd w5be w5bf"/>
+      <tc:entity class="PER" tokenIDs="w5c1"/>
+      <tc:entity class="OTH" tokenIDs="w5cb w5cc w5cd w5ce w5cf w5d0 w5d1 w5d2"/>
+      <tc:entity class="ORG" tokenIDs="w5d5 w5d6 w5d7"/>
+    </tc:namedEntities>
+  </TextCorpus>
+</D-Spin>

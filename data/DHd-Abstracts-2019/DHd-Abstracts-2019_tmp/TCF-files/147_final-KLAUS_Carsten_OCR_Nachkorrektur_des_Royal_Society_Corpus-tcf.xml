@@ -1,0 +1,1706 @@
+<?xml version='1.0' encoding='UTF-8'?><D-Spin xmlns="http://www.dspin.de/data" version="5">
+  <MetaData xmlns="http://www.dspin.de/data/metadata"><Services><cmd:CMD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cmd="http://www.clarin.eu/cmd/1" CMDVersion="1.2" xsi:schemaLocation="http://www.clarin.eu/cmd/1 http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_1320657629623/xsd"><cmd:Resources><cmd:ResourceProxyList/><cmd:JournalFileProxyList/><cmd:ResourceRelationList/></cmd:Resources><cmd:Components><cmd:WebServiceToolChain><cmd:GeneralInfo><cmd:Descriptions><cmd:Description/></cmd:Descriptions><cmd:ResourceName>Custom chain</cmd:ResourceName><cmd:ResourceClass>Toolchain</cmd:ResourceClass></cmd:GeneralInfo><cmd:Toolchain><cmd:ToolInChain><cmd:PID>https://hdl.handle.net/21.11120/0000-0008-319A-3</cmd:PID><cmd:Parameter value="de" name="lang"/></cmd:ToolInChain><cmd:ToolInChain><cmd:PID>https://hdl.handle.net/21.11120/0000-0008-3183-C</cmd:PID><cmd:Parameter value="5" name="version"/></cmd:ToolInChain><cmd:ToolInChain><cmd:PID>http://hdl.handle.net/11022/0000-0007-DA29-6</cmd:PID><cmd:Parameter value="de" name="lang"/><cmd:Parameter value="5" name="version"/></cmd:ToolInChain></cmd:Toolchain></cmd:WebServiceToolChain></cmd:Components></cmd:CMD></Services></MetaData>
+  <TextCorpus xmlns="http://www.dspin.de/data/textcorpus" lang="de">
+    <textSource type="application/tei+xml;format-variant=tei-dta;tokenized=0">&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;TEI xml:id="147_final-KLAUS_Carsten_OCR_Nachkorrektur_des_Royal_Society_Corpus" xmlns="http://www.tei-c.org/ns/1.0">
+&lt;teiHeader>
+&lt;fileDesc>
+&lt;titleStmt>
+&lt;title type="full">
+&lt;title type="main">OCR Nachkorrektur des Royal Society Corpus&lt;/title>
+&lt;title type="sub"/>
+&lt;/title>
+&lt;author>
+&lt;persName>
+&lt;surname>Klaus&lt;/surname>
+&lt;forename>Carsten&lt;/forename>
+&lt;/persName>
+&lt;affiliation>Universität des Saarlandes, Saarbrücken, Deutschland&lt;/affiliation>
+&lt;email>s8caklau@stud.uni-saarland.de&lt;/email>
+&lt;/author>
+&lt;author>
+&lt;persName>
+&lt;surname>Fankhauser&lt;/surname>
+&lt;forename>Peter&lt;/forename>
+&lt;/persName>
+&lt;affiliation>Institut für Deutsche Sprache, Mannheim, Deutschland&lt;/affiliation>
+&lt;email>fankhauser@ids-mannheim.de&lt;/email>
+&lt;/author>
+&lt;author>
+&lt;persName>
+&lt;surname>Klakow&lt;/surname>
+&lt;forename>Dietrich&lt;/forename>
+&lt;/persName>
+&lt;affiliation>Universität des Saarlandes, Saarbrücken, Deutschland&lt;/affiliation>
+&lt;email>dklakow@lsv.uni-saarland.de&lt;/email>
+&lt;/author>
+&lt;/titleStmt>
+&lt;editionStmt>
+&lt;edition>
+&lt;date>2016-08-22T21:51:20.48&lt;/date>
+&lt;/edition>
+&lt;/editionStmt>
+&lt;publicationStmt>
+&lt;t:publisher xmlns:t="http://www.tei-c.org/ns/1.0">Patrick Sahle, im Auftrag des Verbands Digital Humanities im deutschsprachigen Raum e.V.&lt;/t:publisher>
+&lt;t:address xmlns:t="http://www.tei-c.org/ns/1.0">
+&lt;t:addrLine>Universität zu Köln&lt;/t:addrLine>
+&lt;t:addrLine>Cologne Center for eHumanities&lt;/t:addrLine>
+&lt;t:addrLine>Albertus-Magnus-Platz&lt;/t:addrLine>
+&lt;t:addrLine>50923 Köln&lt;/t:addrLine>
+&lt;/t:address>
+&lt;/publicationStmt>
+&lt;sourceDesc>
+&lt;p>Converted from an OASIS Open Document&lt;/p>
+&lt;/sourceDesc>
+&lt;/fileDesc>
+&lt;encodingDesc>
+&lt;appInfo>
+&lt;application ident="DHCONVALIDATOR" version="1.22">
+&lt;label>DHConvalidator&lt;/label>
+&lt;/application>
+&lt;/appInfo>
+&lt;/encodingDesc>
+&lt;profileDesc>
+&lt;textClass>
+&lt;keywords scheme="ConfTool" n="category">
+&lt;term>Paper&lt;/term>
+&lt;/keywords>
+&lt;keywords scheme="ConfTool" n="subcategory">
+&lt;term>Posterpräsentation&lt;/term>
+&lt;/keywords>
+&lt;keywords scheme="ConfTool" n="keywords">
+&lt;term>noisy channel model&lt;/term>
+&lt;term>historical corpus&lt;/term>
+&lt;term>ocr&lt;/term>
+&lt;term>misspellings&lt;/term>
+&lt;term>royal society&lt;/term>
+&lt;/keywords>
+&lt;keywords scheme="ConfTool" n="topics">
+&lt;term>Programmierung&lt;/term>
+&lt;term>Modellierung&lt;/term>
+&lt;term>Bereinigung&lt;/term>
+&lt;term>Kollaboration&lt;/term>
+&lt;term>Daten&lt;/term>
+&lt;term>Software&lt;/term>
+&lt;/keywords>
+&lt;/textClass>
+&lt;/profileDesc>
+&lt;/teiHeader>
+&lt;text>
+&lt;body>
+&lt;div type="div1" rend="DH-Heading">
+&lt;head>Einleitung&lt;/head>
+&lt;p>Linguistische Analysen historischer Texte stellen Forscher oftmals vor große Herausforderungen. Im Gegensatz zur Digitalisierung moderner Dokumente kann es bei jahrhundertealten Texten zu Schwierigkeiten kommen. Diese weisen oftmals eine geringere Qualität auf, sodass es beim Einlesen zu Fehlern kommt. Solche können schwerwiegende Störfaktoren für weitere Analysen sein. In diesem Beitrag beschreiben wir den
+&lt;hi rend="bold">Noisy Channel &lt;/hi>
+&lt;hi rend="bold">Spell Checker&lt;/hi>, ein Verfahren zur automatisierten Korrektur von Optical Character Recognition (OCR) induzierten Rechtschreibfehlern in historischen Texten, genauer dem 
+&lt;hi rend="bold">Royal Society Corpus&lt;/hi>.
+&lt;/p>
+&lt;p>Beim Royal Society Corpus (RSC) handelt es sich um eine Sammlung wissenschaftlicher Texte von 1665 bis 1869, veröffentlicht im Journal
+&lt;hi rend="italic">Philosophical Transactions of the Royal Society of London. &lt;/hi>Das Korpus umfasst ungefähr 10.000 Dokumente mit insgesamt 35.000.000 Tokens. Die Texte wurden mithilfe von Optical Character Recognition digitalisiert, bedingt durch das alte Material der Dokumente wurden jedoch Worte falsch erkannt und somit Rechtschreibfehler eingestreut. Diese sollen in einer Nachkorrektur berichtigt werden. (UdS Fedora Commons o.J.)
+&lt;/p>
+&lt;/div>
+&lt;div type="div1" rend="DH-Heading">
+&lt;head>State of the Art &lt;/head>
+&lt;p>Das Korpus wird einer strikten Versionskontrolle unterzogen. Fortschritte bzgl. Formatierung oder Fehlerkorrektur werden in aufsteigenden 
+&lt;hi rend="italic">corpusBuild&lt;/hi> Versionen festgehalten. Derzeit wird das Royal Society Corpus durch einen 
+&lt;hi rend="bold">Pattern&lt;/hi>-basierten Ansatz bereinigt (Knappen, 2017). Hierbei werden Ersetzungsregeln auf die Texte angewendet um Fehler mit ihrer richtigen Form auszutauschen, wie beispielsweise 
+&lt;hi rend="italic">tbe&lt;/hi> → 
+&lt;hi rend="italic">the&lt;/hi>. Der große Nachteil dieses Verfahrens ist jedoch, dass nur ein Bruchteil der induzierten OCR Fehler abgedeckt wird, was in einer geringen Fehlererkennung resultiert. Im Folgenden erläutern wir unseren Ansatz, welcher mit einem statistischen Lernverfahren deutlich bessere Ergebnisse erzielt.
+&lt;/p>
+&lt;/div>
+&lt;div type="div1" rend="DH-Heading">
+&lt;head>Methodik&lt;/head>
+&lt;p>Der 
+&lt;hi rend="italic">Noisy Channel Spell Checker&lt;/hi> basiert auf dem 
+&lt;hi rend="bold">Noisy Channel Model &lt;/hi>(Shannon, 1948). Ein potentiell fehlerhaftes Wort 
+&lt;hi rend="bold italic">w&lt;/hi>
+&lt;hi rend="italic">
+&lt;/hi>wird wie folgt korrigiert: Aus einer Vorauswahl an geeigneten Kandidaten 
+&lt;hi rend="bold italic">c&lt;/hi> aus 
+&lt;hi rend="bold italic">C&lt;/hi> wird abgeschätzt welcher am ehesten als Korrektur 
+&lt;hi rend="bold italic">ŵ&lt;/hi> in Frage kommt.
+&lt;/p>
+&lt;p>
+&lt;figure>
+&lt;graphic url="147_final-35d7dd4107cdde71e841941e11703323.png"/>
+&lt;/figure>
+&lt;/p>
+&lt;p>Das Noisy Channel Model besteht zum einen aus dem 
+&lt;hi rend="bold">Sprachmodell &lt;/hi>
+&lt;hi rend="bold italic">P(c)&lt;/hi> und zum anderen dem 
+&lt;hi rend="bold">Fehlermodell&lt;/hi>
+&lt;hi rend="bold italic">P(w|c)&lt;/hi>. Es werden hierbei zwei intuitive Gedanken kombiniert: Das Sprachmodell schätzt die Wahrscheinlichkeit des Kandidaten in seinem Wortkontext ab. Hochfrequentierte Worte sind demnach sehr wahrscheinlich. Das Gegengewicht hierzu bildet das Fehlermodell. Diese Verteilung gibt an wie sicher 
+&lt;hi rend="bold italic">w&lt;/hi> eine fehlerhafte Variante von 
+&lt;hi rend="bold italic">c&lt;/hi> ist, schätzt also ab, wie wahrscheinlich einzelne Korrekturschritte von
+&lt;hi rend="bold italic">w&lt;/hi> nach 
+&lt;hi rend="bold italic">c&lt;/hi> sind. 
+&lt;hi rend="color(#000000)bold">λ&lt;/hi>
+&lt;hi rend="color(#000000)">
+&lt;/hi>
+&lt;hi rend="color(#000000)">ist ein frei wählbarer Parameter, mithilfe dessen man das Sprachmodell gewichten kann. &lt;/hi>
+&lt;hi rend="color(#000000)">(Jurafsky 2016: &lt;/hi>
+&lt;hi rend="color(#000000)">61-73&lt;/hi>
+&lt;hi rend="color(#000000)">)&lt;/hi>
+&lt;/p>
+&lt;/div>
+&lt;div type="div1" rend="DH-Heading">
+&lt;head>Training des Modells&lt;/head>
+&lt;p>Die Besonderheit unseres Ansatzes besteht darin, dass Sprach-, sowie Fehlermodell 
+&lt;hi rend="bold">korpusspezifisch&lt;/hi> trainiert werden. Es sind keine aufwändigen Trainingsdatenannotationen notwendig, denn es werden lediglich die Korpusdateien verwendet.
+&lt;/p>
+&lt;list type="unordered">
+&lt;item>Das 
+&lt;hi rend="bold">Sprachmodell&lt;/hi> wurde mithilfe der aktuellsten 
+&lt;hi rend="italic">corpusBuild&lt;/hi> Version des Royal Society Corpus trainiert. Diese Texte sind durch die Patterns bereits best möglich bereinigt worden. Somit wurde versucht das Rauschen innerhalb der Verteilung zu reduzieren. 
+&lt;/item>
+&lt;item>Zum Trainieren des 
+&lt;hi rend="bold">Fehlermodells&lt;/hi> wurden die bereits erwähnten Patterns als Wissensbasis hinzugezogen. Die Idee war hier aus der Korrektur durch die Patterns eine Wahrscheinlichkeitsverteilung zu erzeugen, also das Fehlerverhalten im Korpus zu generalisieren. Anhand eines Beispiels lässt sich dies veranschaulichen: Gegeben die Ersetzungsregel 
+&lt;hi rend="bold italic">fuch → such. &lt;/hi>Diese wird in folgende Sequenz von edit Operationen aufgebrochen:
+&lt;hi rend="bold italic">f|s &lt;/hi>
+&lt;hi rend="bold italic">+&lt;/hi>
+&lt;hi rend="bold italic"> u|u &lt;/hi>
+&lt;hi rend="bold italic">+&lt;/hi>
+&lt;hi rend="bold italic"> c|c &lt;/hi>
+&lt;hi rend="bold italic">+&lt;/hi>
+&lt;hi rend="bold italic"> h|h&lt;/hi>. Der Trainingsprozess erfasst nun wie oft edit Operationen angewendet wurden und leitet daraus eine Verteilung ab.
+&lt;/item>
+&lt;/list>
+&lt;/div>
+&lt;div type="div1" rend="DH-Heading">
+&lt;head>Resultate und Diskussion&lt;/head>
+&lt;p>Als Testmenge haben wir 26 Dokumente aus dem Korpus extrahiert. Diese wurden eigens korrigiert um einen Gold Standard zu erhalten. Als Evaluationsmetriken wählten wir 
+&lt;hi rend="italic">Precision &lt;/hi>(Anteil der validen Korrekturen), 
+&lt;hi rend="italic">Recall &lt;/hi>(Abdeckung der einzelnen Fehler) und daraus den 
+&lt;hi rend="italic">F1-Score &lt;/hi>(harmonisches Mittel aus Pre. und Rec.). Um die Ergebnisse unserer Arbeit zu vergleichen, haben wir zwei weitere Methoden auf die Testdaten angewendet. Dies waren zum einen die 
+&lt;hi rend="bold">Pattern&lt;/hi>
+&lt;hi rend="bold">s&lt;/hi> und zum anderen nutzten wir als Referenzkorrektur für das Noisy Channel Model eine Implementierung von 
+&lt;hi rend="bold">Peter Norvig&lt;/hi> (Norvig, 2009). Die Ergebnisse sind in Abbildung 1 aufgetragen.
+&lt;/p>
+&lt;p>
+&lt;figure>
+&lt;graphic url="147_final-28a241507022c765c8b8182f40f73f0c.png"/>
+&lt;head>Abbildung 1: Resultate einzelner Korrekturmethoden angewendet auf den Testdatensatz&lt;/head>
+&lt;/figure>
+&lt;/p>
+&lt;p>
+&lt;hi rend="color(#000000)">Man kann erkennen, dass &lt;/hi>
+&lt;hi rend="color(#000000)">die Pattern&lt;/hi>
+&lt;hi rend="color(#000000)">korrektur &lt;/hi>
+&lt;hi rend="color(#000000)">(gelb)&lt;/hi>
+&lt;hi rend="color(#000000)"> die beste Precision &lt;/hi>
+&lt;hi rend="color(#000000)">erziel&lt;/hi>
+&lt;hi rend="color(#000000)">t&lt;/hi>
+&lt;hi rend="color(#000000)">.&lt;/hi>
+&lt;hi rend="color(#000000)"> Dies ist ein typisches Verhalten regelbasierte&lt;/hi>
+&lt;hi rend="color(#000000)">r&lt;/hi>
+&lt;hi rend="color(#000000)"> Systeme. Im Gegensatz dazu decken die beiden &lt;/hi>
+&lt;hi rend="color(#000000)">anderen Verfahren&lt;/hi>
+&lt;hi rend="color(#000000)"> eine größere Menge an Fehlern ab, dies wird am höheren Recall deutlich. &lt;/hi>
+&lt;hi rend="color(#000000)">Besonders Norvigs Variante &lt;/hi>
+&lt;hi rend="color(#000000)">(blau)&lt;/hi>
+&lt;hi rend="color(#000000)"> ist hier führend, jedoch tendiert diese auch zur Überkorrektur von richtig erfassten Wörtern. Wir waren bestrebt, dass unser &lt;/hi>
+&lt;hi rend="color(#000000)">Spell Checker&lt;/hi>
+&lt;hi rend="color(#000000)">
+&lt;/hi>
+&lt;hi rend="color(#000000)">(rot)&lt;/hi>
+&lt;hi rend="color(#000000)"> dies &lt;/hi>
+&lt;hi rend="color(#000000)">weitestgehend &lt;/hi>
+&lt;hi rend="color(#000000)">vermeidet, &lt;/hi>
+&lt;hi rend="color(#000000)">indem es&lt;/hi>
+&lt;hi rend="color(#000000)">
+&lt;/hi>
+&lt;hi rend="color(#000000)">Precision und Recall möglichst balanciert. Es werden also viele OCR Rechtschreibfehler korrigiert und gleichzeitig &lt;/hi>
+&lt;hi rend="color(#000000)">wird &lt;/hi>
+&lt;hi rend="color(#000000)">die Rate an Falsch Positiven &lt;/hi>
+&lt;hi rend="color(#000000)">gering gehalten&lt;/hi>
+&lt;hi rend="color(#000000)">. &lt;/hi>
+&lt;hi rend="color(#000000)">Hierbei w&lt;/hi>
+&lt;hi rend="color(#000000)">ar &lt;/hi>
+&lt;hi rend="color(#000000)">das Optimieren der Gewicht&lt;/hi>
+&lt;hi rend="color(#000000)">u&lt;/hi>
+&lt;hi rend="color(#000000)">ng &lt;/hi>
+&lt;hi rend="color(#000000)">λ &lt;/hi>
+&lt;hi rend="color(#000000)">des Language Models&lt;/hi>
+&lt;hi rend="color(#000000)">
+&lt;/hi>
+&lt;hi rend="color(#000000)">ein essentieller Bestandteil der Arbeit, &lt;/hi>
+&lt;hi rend="color(#000000)">sodass unser Modell &lt;/hi>
+&lt;hi rend="color(#000000)">schlussendlich &lt;/hi>
+&lt;hi rend="color(#000000)">einen F-Score von &lt;/hi>
+&lt;hi rend="color(#000000)bold">0.61&lt;/hi>
+&lt;hi rend="color(#000000)bold">2 &lt;/hi>
+&lt;hi rend="color(#000000)">erzielte. &lt;/hi>
+&lt;hi rend="color(#000000)">Bei der Überlegung unseren Ansatz auf andere historische, unaufbereitete Texte anzuwenden &lt;/hi>
+&lt;hi rend="color(#000000)">empfiehlt es sich das Fehlerverhalten in diesen Texten bestmöglich zu generalisieren&lt;/hi>
+&lt;hi rend="color(#000000)">. Deshalb sollte bereits eine Wissensbasis in Form von Ersetzungspatterns vorliegen um das Error Model korpusspezifisch zu trainieren, &lt;/hi>
+&lt;hi rend="color(#000000)">das heißt genauso wie in diesem Beitrag beschrieben.&lt;/hi>
+&lt;/p>
+&lt;/div>
+&lt;div type="div1" rend="DH-Heading">
+&lt;head>Zusammenfassung&lt;/head>
+&lt;p>Im Vergleich zur derzeitigen pattern-basierten Methode verbesserte der 
+&lt;hi rend="italic">Noisy Channel &lt;/hi>
+&lt;hi rend="italic">Spell Checker&lt;/hi> die Korrekturqualität um mehr als das Doppelte. Es werden nun Fehler berichtigt, die die Patterns nicht einmal als solche erkennen. Die Hauptmotivation zum Aufbau des Royal Society Corpus sind Untersuchungen der diachronischen Entwicklung von wissenschaftlichem Englisch (UdS Fedora Commons o.J.). Die Bereinigung der Texte macht es möglich, dass diese Analysen in Zukunft weitaus genauer und verlässlicher werden.
+&lt;/p>
+&lt;/div>
+&lt;/body>
+&lt;back>
+&lt;div type="bibliogr">
+&lt;listBibl>
+&lt;head>Bibliographie&lt;/head>
+&lt;bibl&gt;
+&lt;hi rend="bold">Jurafsky Daniel / Martin James H. (2016)&lt;/hi>: &lt;hi rend="italic">"Spelling Correction and the Noisy Channel"&lt;/hi> In: Speech and Language Processing, 3. Edition, S. 61-73.
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Kermes, Hannah / Degaetano-Ortlieb, Stefania / Khamis, Ashraf / Knappen, Jörg / Teich, Elke (2016)&lt;/hi>: &lt;hi rend="italic">"The Royal Society Corpus: From Uncharted Data to Corpus"&lt;/hi>, in: Proceedings of the Tenth International Conference on Language Resources and Evaluation (LREC 2016). European Language Resources Association (ELRA).
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Knappen, Jörg / Fischer, Stefan / Kermes, Hannah / Teich, Elke / Fankhauser, Peter (2017)&lt;/hi>: &lt;hi rend="italic">"The Making of the Royal Society Corpus"&lt;/hi>, in ListLang@NoDaLiDa.
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Norvig, Peter (2008)&lt;/hi>: &lt;hi rend="italic">"Natural Language Corpus Data: Beautiful Data"&lt;/hi>. [online] &lt;ptr target="http://norvig.com/ngrams/"/> [letzter Zugriff 08. November 2017].
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Shannon, Claude E. (1948)&lt;/hi>: &lt;hi rend="italic">"A Mathematical Theory of Communication"&lt;/hi>, in Bell System Technical Journal.
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">UdS Fedora Commons Repository (o.J.)&lt;/hi>: &lt;hi rend="italic">"The Royal Society Corpus (RSC)"&lt;/hi>, &lt;ptr target="https://fedora.clarin-d.uni-saarland.de/rsc/"/>. [letzter Zugriff 29. März 2018].
+&lt;/bibl>
+&lt;/listBibl>
+&lt;/div>
+&lt;/back>
+&lt;/text>
+&lt;/TEI>
+    </textSource>
+    <text>
+
+
+Linguistische Analysen historischer Texte stellen Forscher oftmals vor große Herausforderungen. Im Gegensatz zur Digitalisierung moderner Dokumente kann es bei jahrhundertealten Texten zu Schwierigkeiten kommen. Diese weisen oftmals eine geringere Qualität auf, sodass es beim Einlesen zu Fehlern kommt. Solche können schwerwiegende Störfaktoren für weitere Analysen sein. In diesem Beitrag beschreiben wir den  Noisy Channel   Spell Checker, ein Verfahren zur automatisierten Korrektur von Optical Character Recognition (OCR) induzierten Rechtschreibfehlern in historischen Texten, genauer dem   Royal Society Corpus.  
+
+  
+
+Beim Royal Society Corpus (RSC) handelt es sich um eine Sammlung wissenschaftlicher Texte von 1665 bis 1869, veröffentlicht im Journal  Philosophical Transactions of the Royal Society of London. Das Korpus umfasst ungefähr 10.000 Dokumente mit insgesamt 35.000.000 Tokens. Die Texte wurden mithilfe von Optical Character Recognition digitalisiert, bedingt durch das alte Material der Dokumente wurden jedoch Worte falsch erkannt und somit Rechtschreibfehler eingestreut. Diese sollen in einer Nachkorrektur berichtigt werden. (UdS Fedora Commons o.J.)  
+
+  
+
+
+Das Korpus wird einer strikten Versionskontrolle unterzogen. Fortschritte bzgl. Formatierung oder Fehlerkorrektur werden in aufsteigenden   corpusBuild Versionen festgehalten. Derzeit wird das Royal Society Corpus durch einen   Pattern-basierten Ansatz bereinigt (Knappen, 2017). Hierbei werden Ersetzungsregeln auf die Texte angewendet um Fehler mit ihrer richtigen Form auszutauschen, wie beispielsweise   tbe →   the. Der große Nachteil dieses Verfahrens ist jedoch, dass nur ein Bruchteil der induzierten OCR Fehler abgedeckt wird, was in einer geringen Fehlererkennung resultiert. Im Folgenden erläutern wir unseren Ansatz, welcher mit einem statistischen Lernverfahren deutlich bessere Ergebnisse erzielt.  
+
+
+    
+
+Der   Noisy Channel Spell Checker basiert auf dem   Noisy Channel Model (Shannon, 1948). Ein potentiell fehlerhaftes Wort   w   wird wie folgt korrigiert: Aus einer Vorauswahl an geeigneten Kandidaten   c aus   C wird abgeschätzt welcher am ehesten als Korrektur   ŵ in Frage kommt.  
+
+
+  
+
+Das Noisy Channel Model besteht zum einen aus dem   Sprachmodell   P(c) und zum anderen dem   Fehlermodell  P(w|c). Es werden hierbei zwei intuitive Gedanken kombiniert: Das Sprachmodell schätzt die Wahrscheinlichkeit des Kandidaten in seinem Wortkontext ab. Hochfrequentierte Worte sind demnach sehr wahrscheinlich. Das Gegengewicht hierzu bildet das Fehlermodell. Diese Verteilung gibt an wie sicher   w eine fehlerhafte Variante von   c ist, schätzt also ab, wie wahrscheinlich einzelne Korrekturschritte von   w nach   c sind.   λ     ist ein frei wählbarer Parameter, mithilfe dessen man das Sprachmodell gewichten kann.   (Jurafsky 2016:   61-73  )  
+
+
+    
+
+Die Besonderheit unseres Ansatzes besteht darin, dass Sprach-, sowie Fehlermodell   korpusspezifisch trainiert werden. Es sind keine aufwändigen Trainingsdatenannotationen notwendig, denn es werden lediglich die Korpusdateien verwendet.  
+
+
+    
+
+Als Testmenge haben wir 26 Dokumente aus dem Korpus extrahiert. Diese wurden eigens korrigiert um einen Gold Standard zu erhalten. Als Evaluationsmetriken wählten wir   Precision (Anteil der validen Korrekturen),   Recall (Abdeckung der einzelnen Fehler) und daraus den   F1-Score (harmonisches Mittel aus Pre. und Rec.). Um die Ergebnisse unserer Arbeit zu vergleichen, haben wir zwei weitere Methoden auf die Testdaten angewendet. Dies waren zum einen die   Pattern  s und zum anderen nutzten wir als Referenzkorrektur für das Noisy Channel Model eine Implementierung von   Peter Norvig (Norvig, 2009). Die Ergebnisse sind in Abbildung 1 aufgetragen.  
+
+
+  
+
+  Man kann erkennen, dass   die Pattern  korrektur   (gelb)   die beste Precision   erziel  t  .   Dies ist ein typisches Verhalten regelbasierte  r   Systeme. Im Gegensatz dazu decken die beiden   anderen Verfahren   eine größere Menge an Fehlern ab, dies wird am höheren Recall deutlich.   Besonders Norvigs Variante   (blau)   ist hier führend, jedoch tendiert diese auch zur Überkorrektur von richtig erfassten Wörtern. Wir waren bestrebt, dass unser   Spell Checker     (rot)   dies   weitestgehend   vermeidet,   indem es     Precision und Recall möglichst balanciert. Es werden also viele OCR Rechtschreibfehler korrigiert und gleichzeitig   wird   die Rate an Falsch Positiven   gering gehalten  .   Hierbei w  ar   das Optimieren der Gewicht  u  ng   λ   des Language Models     ein essentieller Bestandteil der Arbeit,   sodass unser Modell   schlussendlich   einen F-Score von   0.61  2   erzielte.   Bei der Überlegung unseren Ansatz auf andere historische, unaufbereitete Texte anzuwenden   empfiehlt es sich das Fehlerverhalten in diesen Texten bestmöglich zu generalisieren  . Deshalb sollte bereits eine Wissensbasis in Form von Ersetzungspatterns vorliegen um das Error Model korpusspezifisch zu trainieren,   das heißt genauso wie in diesem Beitrag beschrieben.  
+
+
+    
+
+Im Vergleich zur derzeitigen pattern-basierten Methode verbesserte der   Noisy Channel   Spell Checker die Korrekturqualität um mehr als das Doppelte. Es werden nun Fehler berichtigt, die die Patterns nicht einmal als solche erkennen. Die Hauptmotivation zum Aufbau des Royal Society Corpus sind Untersuchungen der diachronischen Entwicklung von wissenschaftlichem Englisch (UdS Fedora Commons o.J.). Die Bereinigung der Texte macht es möglich, dass diese Analysen in Zukunft weitaus genauer und verlässlicher werden.  
+
+
+
+
+Einleitung
+
+
+
+State of the Art 
+
+
+
+Methodik
+
+
+
+    
+
+
+
+Training des Modells
+
+
+
+  
+
+Das   Sprachmodell wurde mithilfe der aktuellsten   corpusBuild Version des Royal Society Corpus trainiert. Diese Texte sind durch die Patterns bereits best möglich bereinigt worden. Somit wurde versucht das Rauschen innerhalb der Verteilung zu reduzieren.   
+
+  
+
+Zum Trainieren des   Fehlermodells wurden die bereits erwähnten Patterns als Wissensbasis hinzugezogen. Die Idee war hier aus der Korrektur durch die Patterns eine Wahrscheinlichkeitsverteilung zu erzeugen, also das Fehlerverhalten im Korpus zu generalisieren. Anhand eines Beispiels lässt sich dies veranschaulichen: Gegeben die Ersetzungsregel   fuch → such. Diese wird in folgende Sequenz von edit Operationen aufgebrochen:  f|s   +   u|u   +   c|c   +   h|h. Der Trainingsprozess erfasst nun wie oft edit Operationen angewendet wurden und leitet daraus eine Verteilung ab.  
+
+  
+
+
+
+Resultate und Diskussion
+
+
+
+      
+
+
+
+Abbildung 1: Resultate einzelner Korrekturmethoden angewendet auf den Testdatensatz
+
+
+
+Zusammenfassung
+
+
+
+  
+
+        Jurafsky Daniel / Martin James H. (2016): "Spelling Correction and the Noisy Channel" In: Speech and Language Processing, 3. Edition, S. 61-73.      Kermes, Hannah / Degaetano-Ortlieb, Stefania / Khamis, Ashraf / Knappen, Jörg / Teich, Elke (2016): "The Royal Society Corpus: From Uncharted Data to Corpus", in: Proceedings of the Tenth International Conference on Language Resources and Evaluation (LREC 2016). European Language Resources Association (ELRA).      Knappen, Jörg / Fischer, Stefan / Kermes, Hannah / Teich, Elke / Fankhauser, Peter (2017): "The Making of the Royal Society Corpus", in ListLang@NoDaLiDa.      Norvig, Peter (2008): "Natural Language Corpus Data: Beautiful Data". [online]  [letzter Zugriff 08. November 2017].      Shannon, Claude E. (1948): "A Mathematical Theory of Communication", in Bell System Technical Journal.      UdS Fedora Commons Repository (o.J.): "The Royal Society Corpus (RSC)", . [letzter Zugriff 29. März 2018].      
+
+  
+
+
+
+Bibliographie
+
+</text>
+    <tc:tokens xmlns:tc="http://www.dspin.de/data/textcorpus">
+      <tc:token ID="w1">Linguistische</tc:token>
+      <tc:token ID="w2">Analysen</tc:token>
+      <tc:token ID="w3">historischer</tc:token>
+      <tc:token ID="w4">Texte</tc:token>
+      <tc:token ID="w5">stellen</tc:token>
+      <tc:token ID="w6">Forscher</tc:token>
+      <tc:token ID="w7">oftmals</tc:token>
+      <tc:token ID="w8">vor</tc:token>
+      <tc:token ID="w9">große</tc:token>
+      <tc:token ID="wa">Herausforderungen</tc:token>
+      <tc:token ID="wb">.</tc:token>
+      <tc:token ID="wc">Im</tc:token>
+      <tc:token ID="wd">Gegensatz</tc:token>
+      <tc:token ID="we">zur</tc:token>
+      <tc:token ID="wf">Digitalisierung</tc:token>
+      <tc:token ID="w10">moderner</tc:token>
+      <tc:token ID="w11">Dokumente</tc:token>
+      <tc:token ID="w12">kann</tc:token>
+      <tc:token ID="w13">es</tc:token>
+      <tc:token ID="w14">bei</tc:token>
+      <tc:token ID="w15">jahrhundertealten</tc:token>
+      <tc:token ID="w16">Texten</tc:token>
+      <tc:token ID="w17">zu</tc:token>
+      <tc:token ID="w18">Schwierigkeiten</tc:token>
+      <tc:token ID="w19">kommen</tc:token>
+      <tc:token ID="w1a">.</tc:token>
+      <tc:token ID="w1b">Diese</tc:token>
+      <tc:token ID="w1c">weisen</tc:token>
+      <tc:token ID="w1d">oftmals</tc:token>
+      <tc:token ID="w1e">eine</tc:token>
+      <tc:token ID="w1f">geringere</tc:token>
+      <tc:token ID="w20">Qualität</tc:token>
+      <tc:token ID="w21">auf</tc:token>
+      <tc:token ID="w22">,</tc:token>
+      <tc:token ID="w23">sodass</tc:token>
+      <tc:token ID="w24">es</tc:token>
+      <tc:token ID="w25">beim</tc:token>
+      <tc:token ID="w26">Einlesen</tc:token>
+      <tc:token ID="w27">zu</tc:token>
+      <tc:token ID="w28">Fehlern</tc:token>
+      <tc:token ID="w29">kommt</tc:token>
+      <tc:token ID="w2a">.</tc:token>
+      <tc:token ID="w2b">Solche</tc:token>
+      <tc:token ID="w2c">können</tc:token>
+      <tc:token ID="w2d">schwerwiegende</tc:token>
+      <tc:token ID="w2e">Störfaktoren</tc:token>
+      <tc:token ID="w2f">für</tc:token>
+      <tc:token ID="w30">weitere</tc:token>
+      <tc:token ID="w31">Analysen</tc:token>
+      <tc:token ID="w32">sein</tc:token>
+      <tc:token ID="w33">.</tc:token>
+      <tc:token ID="w34">In</tc:token>
+      <tc:token ID="w35">diesem</tc:token>
+      <tc:token ID="w36">Beitrag</tc:token>
+      <tc:token ID="w37">beschreiben</tc:token>
+      <tc:token ID="w38">wir</tc:token>
+      <tc:token ID="w39">den</tc:token>
+      <tc:token ID="w3a">Noisy</tc:token>
+      <tc:token ID="w3b">Channel</tc:token>
+      <tc:token ID="w3c">Spell</tc:token>
+      <tc:token ID="w3d">Checker</tc:token>
+      <tc:token ID="w3e">,</tc:token>
+      <tc:token ID="w3f">ein</tc:token>
+      <tc:token ID="w40">Verfahren</tc:token>
+      <tc:token ID="w41">zur</tc:token>
+      <tc:token ID="w42">automatisierten</tc:token>
+      <tc:token ID="w43">Korrektur</tc:token>
+      <tc:token ID="w44">von</tc:token>
+      <tc:token ID="w45">Optical</tc:token>
+      <tc:token ID="w46">Character</tc:token>
+      <tc:token ID="w47">Recognition</tc:token>
+      <tc:token ID="w48">(</tc:token>
+      <tc:token ID="w49">OCR</tc:token>
+      <tc:token ID="w4a">)</tc:token>
+      <tc:token ID="w4b">induzierten</tc:token>
+      <tc:token ID="w4c">Rechtschreibfehlern</tc:token>
+      <tc:token ID="w4d">in</tc:token>
+      <tc:token ID="w4e">historischen</tc:token>
+      <tc:token ID="w4f">Texten</tc:token>
+      <tc:token ID="w50">,</tc:token>
+      <tc:token ID="w51">genauer</tc:token>
+      <tc:token ID="w52">dem</tc:token>
+      <tc:token ID="w53">Royal</tc:token>
+      <tc:token ID="w54">Society</tc:token>
+      <tc:token ID="w55">Corpus</tc:token>
+      <tc:token ID="w56">.</tc:token>
+      <tc:token ID="w57">Beim</tc:token>
+      <tc:token ID="w58">Royal</tc:token>
+      <tc:token ID="w59">Society</tc:token>
+      <tc:token ID="w5a">Corpus</tc:token>
+      <tc:token ID="w5b">(</tc:token>
+      <tc:token ID="w5c">RSC</tc:token>
+      <tc:token ID="w5d">)</tc:token>
+      <tc:token ID="w5e">handelt</tc:token>
+      <tc:token ID="w5f">es</tc:token>
+      <tc:token ID="w60">sich</tc:token>
+      <tc:token ID="w61">um</tc:token>
+      <tc:token ID="w62">eine</tc:token>
+      <tc:token ID="w63">Sammlung</tc:token>
+      <tc:token ID="w64">wissenschaftlicher</tc:token>
+      <tc:token ID="w65">Texte</tc:token>
+      <tc:token ID="w66">von</tc:token>
+      <tc:token ID="w67">1665</tc:token>
+      <tc:token ID="w68">bis</tc:token>
+      <tc:token ID="w69">1869</tc:token>
+      <tc:token ID="w6a">,</tc:token>
+      <tc:token ID="w6b">veröffentlicht</tc:token>
+      <tc:token ID="w6c">im</tc:token>
+      <tc:token ID="w6d">Journal</tc:token>
+      <tc:token ID="w6e">Philosophical</tc:token>
+      <tc:token ID="w6f">Transactions</tc:token>
+      <tc:token ID="w70">of</tc:token>
+      <tc:token ID="w71">the</tc:token>
+      <tc:token ID="w72">Royal</tc:token>
+      <tc:token ID="w73">Society</tc:token>
+      <tc:token ID="w74">of</tc:token>
+      <tc:token ID="w75">London</tc:token>
+      <tc:token ID="w76">.</tc:token>
+      <tc:token ID="w77">Das</tc:token>
+      <tc:token ID="w78">Korpus</tc:token>
+      <tc:token ID="w79">umfasst</tc:token>
+      <tc:token ID="w7a">ungefähr</tc:token>
+      <tc:token ID="w7b">10.000</tc:token>
+      <tc:token ID="w7c">Dokumente</tc:token>
+      <tc:token ID="w7d">mit</tc:token>
+      <tc:token ID="w7e">insgesamt</tc:token>
+      <tc:token ID="w7f">35.</tc:token>
+      <tc:token ID="w80">000.000</tc:token>
+      <tc:token ID="w81">Tokens</tc:token>
+      <tc:token ID="w82">.</tc:token>
+      <tc:token ID="w83">Die</tc:token>
+      <tc:token ID="w84">Texte</tc:token>
+      <tc:token ID="w85">wurden</tc:token>
+      <tc:token ID="w86">mithilfe</tc:token>
+      <tc:token ID="w87">von</tc:token>
+      <tc:token ID="w88">Optical</tc:token>
+      <tc:token ID="w89">Character</tc:token>
+      <tc:token ID="w8a">Recognition</tc:token>
+      <tc:token ID="w8b">digitalisiert</tc:token>
+      <tc:token ID="w8c">,</tc:token>
+      <tc:token ID="w8d">bedingt</tc:token>
+      <tc:token ID="w8e">durch</tc:token>
+      <tc:token ID="w8f">das</tc:token>
+      <tc:token ID="w90">alte</tc:token>
+      <tc:token ID="w91">Material</tc:token>
+      <tc:token ID="w92">der</tc:token>
+      <tc:token ID="w93">Dokumente</tc:token>
+      <tc:token ID="w94">wurden</tc:token>
+      <tc:token ID="w95">jedoch</tc:token>
+      <tc:token ID="w96">Worte</tc:token>
+      <tc:token ID="w97">falsch</tc:token>
+      <tc:token ID="w98">erkannt</tc:token>
+      <tc:token ID="w99">und</tc:token>
+      <tc:token ID="w9a">somit</tc:token>
+      <tc:token ID="w9b">Rechtschreibfehler</tc:token>
+      <tc:token ID="w9c">eingestreut</tc:token>
+      <tc:token ID="w9d">.</tc:token>
+      <tc:token ID="w9e">Diese</tc:token>
+      <tc:token ID="w9f">sollen</tc:token>
+      <tc:token ID="wa0">in</tc:token>
+      <tc:token ID="wa1">einer</tc:token>
+      <tc:token ID="wa2">Nachkorrektur</tc:token>
+      <tc:token ID="wa3">berichtigt</tc:token>
+      <tc:token ID="wa4">werden</tc:token>
+      <tc:token ID="wa5">.</tc:token>
+      <tc:token ID="wa6">(</tc:token>
+      <tc:token ID="wa7">UdS</tc:token>
+      <tc:token ID="wa8">Fedora</tc:token>
+      <tc:token ID="wa9">Commons</tc:token>
+      <tc:token ID="waa">o.</tc:token>
+      <tc:token ID="wab">J.</tc:token>
+      <tc:token ID="wac">)</tc:token>
+      <tc:token ID="wad">Das</tc:token>
+      <tc:token ID="wae">Korpus</tc:token>
+      <tc:token ID="waf">wird</tc:token>
+      <tc:token ID="wb0">einer</tc:token>
+      <tc:token ID="wb1">strikten</tc:token>
+      <tc:token ID="wb2">Versionskontrolle</tc:token>
+      <tc:token ID="wb3">unterzogen</tc:token>
+      <tc:token ID="wb4">.</tc:token>
+      <tc:token ID="wb5">Fortschritte</tc:token>
+      <tc:token ID="wb6">bzgl.</tc:token>
+      <tc:token ID="wb7">Formatierung</tc:token>
+      <tc:token ID="wb8">oder</tc:token>
+      <tc:token ID="wb9">Fehlerkorrektur</tc:token>
+      <tc:token ID="wba">werden</tc:token>
+      <tc:token ID="wbb">in</tc:token>
+      <tc:token ID="wbc">aufsteigenden</tc:token>
+      <tc:token ID="wbd">corpusBuild</tc:token>
+      <tc:token ID="wbe">Versionen</tc:token>
+      <tc:token ID="wbf">festgehalten</tc:token>
+      <tc:token ID="wc0">.</tc:token>
+      <tc:token ID="wc1">Derzeit</tc:token>
+      <tc:token ID="wc2">wird</tc:token>
+      <tc:token ID="wc3">das</tc:token>
+      <tc:token ID="wc4">Royal</tc:token>
+      <tc:token ID="wc5">Society</tc:token>
+      <tc:token ID="wc6">Corpus</tc:token>
+      <tc:token ID="wc7">durch</tc:token>
+      <tc:token ID="wc8">einen</tc:token>
+      <tc:token ID="wc9">Pattern-basierten</tc:token>
+      <tc:token ID="wca">Ansatz</tc:token>
+      <tc:token ID="wcb">bereinigt</tc:token>
+      <tc:token ID="wcc">(</tc:token>
+      <tc:token ID="wcd">Knappen</tc:token>
+      <tc:token ID="wce">,</tc:token>
+      <tc:token ID="wcf">2017</tc:token>
+      <tc:token ID="wd0">)</tc:token>
+      <tc:token ID="wd1">.</tc:token>
+      <tc:token ID="wd2">Hierbei</tc:token>
+      <tc:token ID="wd3">werden</tc:token>
+      <tc:token ID="wd4">Ersetzungsregeln</tc:token>
+      <tc:token ID="wd5">auf</tc:token>
+      <tc:token ID="wd6">die</tc:token>
+      <tc:token ID="wd7">Texte</tc:token>
+      <tc:token ID="wd8">angewendet</tc:token>
+      <tc:token ID="wd9">um</tc:token>
+      <tc:token ID="wda">Fehler</tc:token>
+      <tc:token ID="wdb">mit</tc:token>
+      <tc:token ID="wdc">ihrer</tc:token>
+      <tc:token ID="wdd">richtigen</tc:token>
+      <tc:token ID="wde">Form</tc:token>
+      <tc:token ID="wdf">auszutauschen</tc:token>
+      <tc:token ID="we0">,</tc:token>
+      <tc:token ID="we1">wie</tc:token>
+      <tc:token ID="we2">beispielsweise</tc:token>
+      <tc:token ID="we3">tbe</tc:token>
+      <tc:token ID="we4">→</tc:token>
+      <tc:token ID="we5">the</tc:token>
+      <tc:token ID="we6">.</tc:token>
+      <tc:token ID="we7">Der</tc:token>
+      <tc:token ID="we8">große</tc:token>
+      <tc:token ID="we9">Nachteil</tc:token>
+      <tc:token ID="wea">dieses</tc:token>
+      <tc:token ID="web">Verfahrens</tc:token>
+      <tc:token ID="wec">ist</tc:token>
+      <tc:token ID="wed">jedoch</tc:token>
+      <tc:token ID="wee">,</tc:token>
+      <tc:token ID="wef">dass</tc:token>
+      <tc:token ID="wf0">nur</tc:token>
+      <tc:token ID="wf1">ein</tc:token>
+      <tc:token ID="wf2">Bruchteil</tc:token>
+      <tc:token ID="wf3">der</tc:token>
+      <tc:token ID="wf4">induzierten</tc:token>
+      <tc:token ID="wf5">OCR</tc:token>
+      <tc:token ID="wf6">Fehler</tc:token>
+      <tc:token ID="wf7">abgedeckt</tc:token>
+      <tc:token ID="wf8">wird</tc:token>
+      <tc:token ID="wf9">,</tc:token>
+      <tc:token ID="wfa">was</tc:token>
+      <tc:token ID="wfb">in</tc:token>
+      <tc:token ID="wfc">einer</tc:token>
+      <tc:token ID="wfd">geringen</tc:token>
+      <tc:token ID="wfe">Fehlererkennung</tc:token>
+      <tc:token ID="wff">resultiert</tc:token>
+      <tc:token ID="w100">.</tc:token>
+      <tc:token ID="w101">Im</tc:token>
+      <tc:token ID="w102">Folgenden</tc:token>
+      <tc:token ID="w103">erläutern</tc:token>
+      <tc:token ID="w104">wir</tc:token>
+      <tc:token ID="w105">unseren</tc:token>
+      <tc:token ID="w106">Ansatz</tc:token>
+      <tc:token ID="w107">,</tc:token>
+      <tc:token ID="w108">welcher</tc:token>
+      <tc:token ID="w109">mit</tc:token>
+      <tc:token ID="w10a">einem</tc:token>
+      <tc:token ID="w10b">statistischen</tc:token>
+      <tc:token ID="w10c">Lernverfahren</tc:token>
+      <tc:token ID="w10d">deutlich</tc:token>
+      <tc:token ID="w10e">bessere</tc:token>
+      <tc:token ID="w10f">Ergebnisse</tc:token>
+      <tc:token ID="w110">erzielt</tc:token>
+      <tc:token ID="w111">.</tc:token>
+      <tc:token ID="w112">Der</tc:token>
+      <tc:token ID="w113">Noisy</tc:token>
+      <tc:token ID="w114">Channel</tc:token>
+      <tc:token ID="w115">Spell</tc:token>
+      <tc:token ID="w116">Checker</tc:token>
+      <tc:token ID="w117">basiert</tc:token>
+      <tc:token ID="w118">auf</tc:token>
+      <tc:token ID="w119">dem</tc:token>
+      <tc:token ID="w11a">Noisy</tc:token>
+      <tc:token ID="w11b">Channel</tc:token>
+      <tc:token ID="w11c">Model</tc:token>
+      <tc:token ID="w11d">(</tc:token>
+      <tc:token ID="w11e">Shannon</tc:token>
+      <tc:token ID="w11f">,</tc:token>
+      <tc:token ID="w120">1948</tc:token>
+      <tc:token ID="w121">)</tc:token>
+      <tc:token ID="w122">.</tc:token>
+      <tc:token ID="w123">Ein</tc:token>
+      <tc:token ID="w124">potentiell</tc:token>
+      <tc:token ID="w125">fehlerhaftes</tc:token>
+      <tc:token ID="w126">Wort</tc:token>
+      <tc:token ID="w127">w</tc:token>
+      <tc:token ID="w128">wird</tc:token>
+      <tc:token ID="w129">wie</tc:token>
+      <tc:token ID="w12a">folgt</tc:token>
+      <tc:token ID="w12b">korrigiert</tc:token>
+      <tc:token ID="w12c">:</tc:token>
+      <tc:token ID="w12d">Aus</tc:token>
+      <tc:token ID="w12e">einer</tc:token>
+      <tc:token ID="w12f">Vorauswahl</tc:token>
+      <tc:token ID="w130">an</tc:token>
+      <tc:token ID="w131">geeigneten</tc:token>
+      <tc:token ID="w132">Kandidaten</tc:token>
+      <tc:token ID="w133">c</tc:token>
+      <tc:token ID="w134">aus</tc:token>
+      <tc:token ID="w135">C</tc:token>
+      <tc:token ID="w136">wird</tc:token>
+      <tc:token ID="w137">abgeschätzt</tc:token>
+      <tc:token ID="w138">welcher</tc:token>
+      <tc:token ID="w139">am</tc:token>
+      <tc:token ID="w13a">ehesten</tc:token>
+      <tc:token ID="w13b">als</tc:token>
+      <tc:token ID="w13c">Korrektur</tc:token>
+      <tc:token ID="w13d">ŵ</tc:token>
+      <tc:token ID="w13e">in</tc:token>
+      <tc:token ID="w13f">Frage</tc:token>
+      <tc:token ID="w140">kommt</tc:token>
+      <tc:token ID="w141">.</tc:token>
+      <tc:token ID="w142">Das</tc:token>
+      <tc:token ID="w143">Noisy</tc:token>
+      <tc:token ID="w144">Channel</tc:token>
+      <tc:token ID="w145">Model</tc:token>
+      <tc:token ID="w146">besteht</tc:token>
+      <tc:token ID="w147">zum</tc:token>
+      <tc:token ID="w148">einen</tc:token>
+      <tc:token ID="w149">aus</tc:token>
+      <tc:token ID="w14a">dem</tc:token>
+      <tc:token ID="w14b">Sprachmodell</tc:token>
+      <tc:token ID="w14c">P(c</tc:token>
+      <tc:token ID="w14d">)</tc:token>
+      <tc:token ID="w14e">und</tc:token>
+      <tc:token ID="w14f">zum</tc:token>
+      <tc:token ID="w150">anderen</tc:token>
+      <tc:token ID="w151">dem</tc:token>
+      <tc:token ID="w152">Fehlermodell</tc:token>
+      <tc:token ID="w153">P(w|c</tc:token>
+      <tc:token ID="w154">)</tc:token>
+      <tc:token ID="w155">.</tc:token>
+      <tc:token ID="w156">Es</tc:token>
+      <tc:token ID="w157">werden</tc:token>
+      <tc:token ID="w158">hierbei</tc:token>
+      <tc:token ID="w159">zwei</tc:token>
+      <tc:token ID="w15a">intuitive</tc:token>
+      <tc:token ID="w15b">Gedanken</tc:token>
+      <tc:token ID="w15c">kombiniert</tc:token>
+      <tc:token ID="w15d">:</tc:token>
+      <tc:token ID="w15e">Das</tc:token>
+      <tc:token ID="w15f">Sprachmodell</tc:token>
+      <tc:token ID="w160">schätzt</tc:token>
+      <tc:token ID="w161">die</tc:token>
+      <tc:token ID="w162">Wahrscheinlichkeit</tc:token>
+      <tc:token ID="w163">des</tc:token>
+      <tc:token ID="w164">Kandidaten</tc:token>
+      <tc:token ID="w165">in</tc:token>
+      <tc:token ID="w166">seinem</tc:token>
+      <tc:token ID="w167">Wortkontext</tc:token>
+      <tc:token ID="w168">ab</tc:token>
+      <tc:token ID="w169">.</tc:token>
+      <tc:token ID="w16a">Hochfrequentierte</tc:token>
+      <tc:token ID="w16b">Worte</tc:token>
+      <tc:token ID="w16c">sind</tc:token>
+      <tc:token ID="w16d">demnach</tc:token>
+      <tc:token ID="w16e">sehr</tc:token>
+      <tc:token ID="w16f">wahrscheinlich</tc:token>
+      <tc:token ID="w170">.</tc:token>
+      <tc:token ID="w171">Das</tc:token>
+      <tc:token ID="w172">Gegengewicht</tc:token>
+      <tc:token ID="w173">hierzu</tc:token>
+      <tc:token ID="w174">bildet</tc:token>
+      <tc:token ID="w175">das</tc:token>
+      <tc:token ID="w176">Fehlermodell</tc:token>
+      <tc:token ID="w177">.</tc:token>
+      <tc:token ID="w178">Diese</tc:token>
+      <tc:token ID="w179">Verteilung</tc:token>
+      <tc:token ID="w17a">gibt</tc:token>
+      <tc:token ID="w17b">an</tc:token>
+      <tc:token ID="w17c">wie</tc:token>
+      <tc:token ID="w17d">sicher</tc:token>
+      <tc:token ID="w17e">w</tc:token>
+      <tc:token ID="w17f">eine</tc:token>
+      <tc:token ID="w180">fehlerhafte</tc:token>
+      <tc:token ID="w181">Variante</tc:token>
+      <tc:token ID="w182">von</tc:token>
+      <tc:token ID="w183">c</tc:token>
+      <tc:token ID="w184">ist</tc:token>
+      <tc:token ID="w185">,</tc:token>
+      <tc:token ID="w186">schätzt</tc:token>
+      <tc:token ID="w187">also</tc:token>
+      <tc:token ID="w188">ab</tc:token>
+      <tc:token ID="w189">,</tc:token>
+      <tc:token ID="w18a">wie</tc:token>
+      <tc:token ID="w18b">wahrscheinlich</tc:token>
+      <tc:token ID="w18c">einzelne</tc:token>
+      <tc:token ID="w18d">Korrekturschritte</tc:token>
+      <tc:token ID="w18e">von</tc:token>
+      <tc:token ID="w18f">w</tc:token>
+      <tc:token ID="w190">nach</tc:token>
+      <tc:token ID="w191">c</tc:token>
+      <tc:token ID="w192">sind</tc:token>
+      <tc:token ID="w193">.</tc:token>
+      <tc:token ID="w194">λ</tc:token>
+      <tc:token ID="w195">ist</tc:token>
+      <tc:token ID="w196">ein</tc:token>
+      <tc:token ID="w197">frei</tc:token>
+      <tc:token ID="w198">wählbarer</tc:token>
+      <tc:token ID="w199">Parameter</tc:token>
+      <tc:token ID="w19a">,</tc:token>
+      <tc:token ID="w19b">mithilfe</tc:token>
+      <tc:token ID="w19c">dessen</tc:token>
+      <tc:token ID="w19d">man</tc:token>
+      <tc:token ID="w19e">das</tc:token>
+      <tc:token ID="w19f">Sprachmodell</tc:token>
+      <tc:token ID="w1a0">gewichten</tc:token>
+      <tc:token ID="w1a1">kann</tc:token>
+      <tc:token ID="w1a2">.</tc:token>
+      <tc:token ID="w1a3">(</tc:token>
+      <tc:token ID="w1a4">Jurafsky</tc:token>
+      <tc:token ID="w1a5">2016</tc:token>
+      <tc:token ID="w1a6">:</tc:token>
+      <tc:token ID="w1a7">61-73</tc:token>
+      <tc:token ID="w1a8">)</tc:token>
+      <tc:token ID="w1a9">Die</tc:token>
+      <tc:token ID="w1aa">Besonderheit</tc:token>
+      <tc:token ID="w1ab">unseres</tc:token>
+      <tc:token ID="w1ac">Ansatzes</tc:token>
+      <tc:token ID="w1ad">besteht</tc:token>
+      <tc:token ID="w1ae">darin</tc:token>
+      <tc:token ID="w1af">,</tc:token>
+      <tc:token ID="w1b0">dass</tc:token>
+      <tc:token ID="w1b1">Sprach-</tc:token>
+      <tc:token ID="w1b2">,</tc:token>
+      <tc:token ID="w1b3">sowie</tc:token>
+      <tc:token ID="w1b4">Fehlermodell</tc:token>
+      <tc:token ID="w1b5">korpusspezifisch</tc:token>
+      <tc:token ID="w1b6">trainiert</tc:token>
+      <tc:token ID="w1b7">werden</tc:token>
+      <tc:token ID="w1b8">.</tc:token>
+      <tc:token ID="w1b9">Es</tc:token>
+      <tc:token ID="w1ba">sind</tc:token>
+      <tc:token ID="w1bb">keine</tc:token>
+      <tc:token ID="w1bc">aufwändigen</tc:token>
+      <tc:token ID="w1bd">Trainingsdatenannotationen</tc:token>
+      <tc:token ID="w1be">notwendig</tc:token>
+      <tc:token ID="w1bf">,</tc:token>
+      <tc:token ID="w1c0">denn</tc:token>
+      <tc:token ID="w1c1">es</tc:token>
+      <tc:token ID="w1c2">werden</tc:token>
+      <tc:token ID="w1c3">lediglich</tc:token>
+      <tc:token ID="w1c4">die</tc:token>
+      <tc:token ID="w1c5">Korpusdateien</tc:token>
+      <tc:token ID="w1c6">verwendet</tc:token>
+      <tc:token ID="w1c7">.</tc:token>
+      <tc:token ID="w1c8">Als</tc:token>
+      <tc:token ID="w1c9">Testmenge</tc:token>
+      <tc:token ID="w1ca">haben</tc:token>
+      <tc:token ID="w1cb">wir</tc:token>
+      <tc:token ID="w1cc">26</tc:token>
+      <tc:token ID="w1cd">Dokumente</tc:token>
+      <tc:token ID="w1ce">aus</tc:token>
+      <tc:token ID="w1cf">dem</tc:token>
+      <tc:token ID="w1d0">Korpus</tc:token>
+      <tc:token ID="w1d1">extrahiert</tc:token>
+      <tc:token ID="w1d2">.</tc:token>
+      <tc:token ID="w1d3">Diese</tc:token>
+      <tc:token ID="w1d4">wurden</tc:token>
+      <tc:token ID="w1d5">eigens</tc:token>
+      <tc:token ID="w1d6">korrigiert</tc:token>
+      <tc:token ID="w1d7">um</tc:token>
+      <tc:token ID="w1d8">einen</tc:token>
+      <tc:token ID="w1d9">Gold</tc:token>
+      <tc:token ID="w1da">Standard</tc:token>
+      <tc:token ID="w1db">zu</tc:token>
+      <tc:token ID="w1dc">erhalten</tc:token>
+      <tc:token ID="w1dd">.</tc:token>
+      <tc:token ID="w1de">Als</tc:token>
+      <tc:token ID="w1df">Evaluationsmetriken</tc:token>
+      <tc:token ID="w1e0">wählten</tc:token>
+      <tc:token ID="w1e1">wir</tc:token>
+      <tc:token ID="w1e2">Precision</tc:token>
+      <tc:token ID="w1e3">(</tc:token>
+      <tc:token ID="w1e4">Anteil</tc:token>
+      <tc:token ID="w1e5">der</tc:token>
+      <tc:token ID="w1e6">validen</tc:token>
+      <tc:token ID="w1e7">Korrekturen</tc:token>
+      <tc:token ID="w1e8">)</tc:token>
+      <tc:token ID="w1e9">,</tc:token>
+      <tc:token ID="w1ea">Recall</tc:token>
+      <tc:token ID="w1eb">(</tc:token>
+      <tc:token ID="w1ec">Abdeckung</tc:token>
+      <tc:token ID="w1ed">der</tc:token>
+      <tc:token ID="w1ee">einzelnen</tc:token>
+      <tc:token ID="w1ef">Fehler</tc:token>
+      <tc:token ID="w1f0">)</tc:token>
+      <tc:token ID="w1f1">und</tc:token>
+      <tc:token ID="w1f2">daraus</tc:token>
+      <tc:token ID="w1f3">den</tc:token>
+      <tc:token ID="w1f4">F1-Score</tc:token>
+      <tc:token ID="w1f5">(</tc:token>
+      <tc:token ID="w1f6">harmonisches</tc:token>
+      <tc:token ID="w1f7">Mittel</tc:token>
+      <tc:token ID="w1f8">aus</tc:token>
+      <tc:token ID="w1f9">Pre</tc:token>
+      <tc:token ID="w1fa">.</tc:token>
+      <tc:token ID="w1fb">und</tc:token>
+      <tc:token ID="w1fc">Rec.</tc:token>
+      <tc:token ID="w1fd">)</tc:token>
+      <tc:token ID="w1fe">.</tc:token>
+      <tc:token ID="w1ff">Um</tc:token>
+      <tc:token ID="w200">die</tc:token>
+      <tc:token ID="w201">Ergebnisse</tc:token>
+      <tc:token ID="w202">unserer</tc:token>
+      <tc:token ID="w203">Arbeit</tc:token>
+      <tc:token ID="w204">zu</tc:token>
+      <tc:token ID="w205">vergleichen</tc:token>
+      <tc:token ID="w206">,</tc:token>
+      <tc:token ID="w207">haben</tc:token>
+      <tc:token ID="w208">wir</tc:token>
+      <tc:token ID="w209">zwei</tc:token>
+      <tc:token ID="w20a">weitere</tc:token>
+      <tc:token ID="w20b">Methoden</tc:token>
+      <tc:token ID="w20c">auf</tc:token>
+      <tc:token ID="w20d">die</tc:token>
+      <tc:token ID="w20e">Testdaten</tc:token>
+      <tc:token ID="w20f">angewendet</tc:token>
+      <tc:token ID="w210">.</tc:token>
+      <tc:token ID="w211">Dies</tc:token>
+      <tc:token ID="w212">waren</tc:token>
+      <tc:token ID="w213">zum</tc:token>
+      <tc:token ID="w214">einen</tc:token>
+      <tc:token ID="w215">die</tc:token>
+      <tc:token ID="w216">Pattern</tc:token>
+      <tc:token ID="w217">s</tc:token>
+      <tc:token ID="w218">und</tc:token>
+      <tc:token ID="w219">zum</tc:token>
+      <tc:token ID="w21a">anderen</tc:token>
+      <tc:token ID="w21b">nutzten</tc:token>
+      <tc:token ID="w21c">wir</tc:token>
+      <tc:token ID="w21d">als</tc:token>
+      <tc:token ID="w21e">Referenzkorrektur</tc:token>
+      <tc:token ID="w21f">für</tc:token>
+      <tc:token ID="w220">das</tc:token>
+      <tc:token ID="w221">Noisy</tc:token>
+      <tc:token ID="w222">Channel</tc:token>
+      <tc:token ID="w223">Model</tc:token>
+      <tc:token ID="w224">eine</tc:token>
+      <tc:token ID="w225">Implementierung</tc:token>
+      <tc:token ID="w226">von</tc:token>
+      <tc:token ID="w227">Peter</tc:token>
+      <tc:token ID="w228">Norvig</tc:token>
+      <tc:token ID="w229">(</tc:token>
+      <tc:token ID="w22a">Norvig</tc:token>
+      <tc:token ID="w22b">,</tc:token>
+      <tc:token ID="w22c">2009</tc:token>
+      <tc:token ID="w22d">)</tc:token>
+      <tc:token ID="w22e">.</tc:token>
+      <tc:token ID="w22f">Die</tc:token>
+      <tc:token ID="w230">Ergebnisse</tc:token>
+      <tc:token ID="w231">sind</tc:token>
+      <tc:token ID="w232">in</tc:token>
+      <tc:token ID="w233">Abbildung</tc:token>
+      <tc:token ID="w234">1</tc:token>
+      <tc:token ID="w235">aufgetragen</tc:token>
+      <tc:token ID="w236">.</tc:token>
+      <tc:token ID="w237">Man</tc:token>
+      <tc:token ID="w238">kann</tc:token>
+      <tc:token ID="w239">erkennen</tc:token>
+      <tc:token ID="w23a">,</tc:token>
+      <tc:token ID="w23b">dass</tc:token>
+      <tc:token ID="w23c">die</tc:token>
+      <tc:token ID="w23d">Pattern</tc:token>
+      <tc:token ID="w23e">korrektur</tc:token>
+      <tc:token ID="w23f">(</tc:token>
+      <tc:token ID="w240">gelb</tc:token>
+      <tc:token ID="w241">)</tc:token>
+      <tc:token ID="w242">die</tc:token>
+      <tc:token ID="w243">beste</tc:token>
+      <tc:token ID="w244">Precision</tc:token>
+      <tc:token ID="w245">erziel</tc:token>
+      <tc:token ID="w246">t</tc:token>
+      <tc:token ID="w247">.</tc:token>
+      <tc:token ID="w248">Dies</tc:token>
+      <tc:token ID="w249">ist</tc:token>
+      <tc:token ID="w24a">ein</tc:token>
+      <tc:token ID="w24b">typisches</tc:token>
+      <tc:token ID="w24c">Verhalten</tc:token>
+      <tc:token ID="w24d">regelbasierte</tc:token>
+      <tc:token ID="w24e">r</tc:token>
+      <tc:token ID="w24f">Systeme</tc:token>
+      <tc:token ID="w250">.</tc:token>
+      <tc:token ID="w251">Im</tc:token>
+      <tc:token ID="w252">Gegensatz</tc:token>
+      <tc:token ID="w253">dazu</tc:token>
+      <tc:token ID="w254">decken</tc:token>
+      <tc:token ID="w255">die</tc:token>
+      <tc:token ID="w256">beiden</tc:token>
+      <tc:token ID="w257">anderen</tc:token>
+      <tc:token ID="w258">Verfahren</tc:token>
+      <tc:token ID="w259">eine</tc:token>
+      <tc:token ID="w25a">größere</tc:token>
+      <tc:token ID="w25b">Menge</tc:token>
+      <tc:token ID="w25c">an</tc:token>
+      <tc:token ID="w25d">Fehlern</tc:token>
+      <tc:token ID="w25e">ab</tc:token>
+      <tc:token ID="w25f">,</tc:token>
+      <tc:token ID="w260">dies</tc:token>
+      <tc:token ID="w261">wird</tc:token>
+      <tc:token ID="w262">am</tc:token>
+      <tc:token ID="w263">höheren</tc:token>
+      <tc:token ID="w264">Recall</tc:token>
+      <tc:token ID="w265">deutlich</tc:token>
+      <tc:token ID="w266">.</tc:token>
+      <tc:token ID="w267">Besonders</tc:token>
+      <tc:token ID="w268">Norvigs</tc:token>
+      <tc:token ID="w269">Variante</tc:token>
+      <tc:token ID="w26a">(</tc:token>
+      <tc:token ID="w26b">blau</tc:token>
+      <tc:token ID="w26c">)</tc:token>
+      <tc:token ID="w26d">ist</tc:token>
+      <tc:token ID="w26e">hier</tc:token>
+      <tc:token ID="w26f">führend</tc:token>
+      <tc:token ID="w270">,</tc:token>
+      <tc:token ID="w271">jedoch</tc:token>
+      <tc:token ID="w272">tendiert</tc:token>
+      <tc:token ID="w273">diese</tc:token>
+      <tc:token ID="w274">auch</tc:token>
+      <tc:token ID="w275">zur</tc:token>
+      <tc:token ID="w276">Überkorrektur</tc:token>
+      <tc:token ID="w277">von</tc:token>
+      <tc:token ID="w278">richtig</tc:token>
+      <tc:token ID="w279">erfassten</tc:token>
+      <tc:token ID="w27a">Wörtern</tc:token>
+      <tc:token ID="w27b">.</tc:token>
+      <tc:token ID="w27c">Wir</tc:token>
+      <tc:token ID="w27d">waren</tc:token>
+      <tc:token ID="w27e">bestrebt</tc:token>
+      <tc:token ID="w27f">,</tc:token>
+      <tc:token ID="w280">dass</tc:token>
+      <tc:token ID="w281">unser</tc:token>
+      <tc:token ID="w282">Spell</tc:token>
+      <tc:token ID="w283">Checker</tc:token>
+      <tc:token ID="w284">(</tc:token>
+      <tc:token ID="w285">rot</tc:token>
+      <tc:token ID="w286">)</tc:token>
+      <tc:token ID="w287">dies</tc:token>
+      <tc:token ID="w288">weitestgehend</tc:token>
+      <tc:token ID="w289">vermeidet</tc:token>
+      <tc:token ID="w28a">,</tc:token>
+      <tc:token ID="w28b">indem</tc:token>
+      <tc:token ID="w28c">es</tc:token>
+      <tc:token ID="w28d">Precision</tc:token>
+      <tc:token ID="w28e">und</tc:token>
+      <tc:token ID="w28f">Recall</tc:token>
+      <tc:token ID="w290">möglichst</tc:token>
+      <tc:token ID="w291">balanciert</tc:token>
+      <tc:token ID="w292">.</tc:token>
+      <tc:token ID="w293">Es</tc:token>
+      <tc:token ID="w294">werden</tc:token>
+      <tc:token ID="w295">also</tc:token>
+      <tc:token ID="w296">viele</tc:token>
+      <tc:token ID="w297">OCR</tc:token>
+      <tc:token ID="w298">Rechtschreibfehler</tc:token>
+      <tc:token ID="w299">korrigiert</tc:token>
+      <tc:token ID="w29a">und</tc:token>
+      <tc:token ID="w29b">gleichzeitig</tc:token>
+      <tc:token ID="w29c">wird</tc:token>
+      <tc:token ID="w29d">die</tc:token>
+      <tc:token ID="w29e">Rate</tc:token>
+      <tc:token ID="w29f">an</tc:token>
+      <tc:token ID="w2a0">Falsch</tc:token>
+      <tc:token ID="w2a1">Positiven</tc:token>
+      <tc:token ID="w2a2">gering</tc:token>
+      <tc:token ID="w2a3">gehalten</tc:token>
+      <tc:token ID="w2a4">.</tc:token>
+      <tc:token ID="w2a5">Hierbei</tc:token>
+      <tc:token ID="w2a6">w</tc:token>
+      <tc:token ID="w2a7">ar</tc:token>
+      <tc:token ID="w2a8">das</tc:token>
+      <tc:token ID="w2a9">Optimieren</tc:token>
+      <tc:token ID="w2aa">der</tc:token>
+      <tc:token ID="w2ab">Gewicht</tc:token>
+      <tc:token ID="w2ac">u</tc:token>
+      <tc:token ID="w2ad">ng</tc:token>
+      <tc:token ID="w2ae">λ</tc:token>
+      <tc:token ID="w2af">des</tc:token>
+      <tc:token ID="w2b0">Language</tc:token>
+      <tc:token ID="w2b1">Models</tc:token>
+      <tc:token ID="w2b2">ein</tc:token>
+      <tc:token ID="w2b3">essentieller</tc:token>
+      <tc:token ID="w2b4">Bestandteil</tc:token>
+      <tc:token ID="w2b5">der</tc:token>
+      <tc:token ID="w2b6">Arbeit</tc:token>
+      <tc:token ID="w2b7">,</tc:token>
+      <tc:token ID="w2b8">sodass</tc:token>
+      <tc:token ID="w2b9">unser</tc:token>
+      <tc:token ID="w2ba">Modell</tc:token>
+      <tc:token ID="w2bb">schlussendlich</tc:token>
+      <tc:token ID="w2bc">einen</tc:token>
+      <tc:token ID="w2bd">F-Score</tc:token>
+      <tc:token ID="w2be">von</tc:token>
+      <tc:token ID="w2bf">0.61</tc:token>
+      <tc:token ID="w2c0">2</tc:token>
+      <tc:token ID="w2c1">erzielte</tc:token>
+      <tc:token ID="w2c2">.</tc:token>
+      <tc:token ID="w2c3">Bei</tc:token>
+      <tc:token ID="w2c4">der</tc:token>
+      <tc:token ID="w2c5">Überlegung</tc:token>
+      <tc:token ID="w2c6">unseren</tc:token>
+      <tc:token ID="w2c7">Ansatz</tc:token>
+      <tc:token ID="w2c8">auf</tc:token>
+      <tc:token ID="w2c9">andere</tc:token>
+      <tc:token ID="w2ca">historische</tc:token>
+      <tc:token ID="w2cb">,</tc:token>
+      <tc:token ID="w2cc">unaufbereitete</tc:token>
+      <tc:token ID="w2cd">Texte</tc:token>
+      <tc:token ID="w2ce">anzuwenden</tc:token>
+      <tc:token ID="w2cf">empfiehlt</tc:token>
+      <tc:token ID="w2d0">es</tc:token>
+      <tc:token ID="w2d1">sich</tc:token>
+      <tc:token ID="w2d2">das</tc:token>
+      <tc:token ID="w2d3">Fehlerverhalten</tc:token>
+      <tc:token ID="w2d4">in</tc:token>
+      <tc:token ID="w2d5">diesen</tc:token>
+      <tc:token ID="w2d6">Texten</tc:token>
+      <tc:token ID="w2d7">bestmöglich</tc:token>
+      <tc:token ID="w2d8">zu</tc:token>
+      <tc:token ID="w2d9">generalisieren</tc:token>
+      <tc:token ID="w2da">.</tc:token>
+      <tc:token ID="w2db">Deshalb</tc:token>
+      <tc:token ID="w2dc">sollte</tc:token>
+      <tc:token ID="w2dd">bereits</tc:token>
+      <tc:token ID="w2de">eine</tc:token>
+      <tc:token ID="w2df">Wissensbasis</tc:token>
+      <tc:token ID="w2e0">in</tc:token>
+      <tc:token ID="w2e1">Form</tc:token>
+      <tc:token ID="w2e2">von</tc:token>
+      <tc:token ID="w2e3">Ersetzungspatterns</tc:token>
+      <tc:token ID="w2e4">vorliegen</tc:token>
+      <tc:token ID="w2e5">um</tc:token>
+      <tc:token ID="w2e6">das</tc:token>
+      <tc:token ID="w2e7">Error</tc:token>
+      <tc:token ID="w2e8">Model</tc:token>
+      <tc:token ID="w2e9">korpusspezifisch</tc:token>
+      <tc:token ID="w2ea">zu</tc:token>
+      <tc:token ID="w2eb">trainieren</tc:token>
+      <tc:token ID="w2ec">,</tc:token>
+      <tc:token ID="w2ed">das</tc:token>
+      <tc:token ID="w2ee">heißt</tc:token>
+      <tc:token ID="w2ef">genauso</tc:token>
+      <tc:token ID="w2f0">wie</tc:token>
+      <tc:token ID="w2f1">in</tc:token>
+      <tc:token ID="w2f2">diesem</tc:token>
+      <tc:token ID="w2f3">Beitrag</tc:token>
+      <tc:token ID="w2f4">beschrieben</tc:token>
+      <tc:token ID="w2f5">.</tc:token>
+      <tc:token ID="w2f6">Im</tc:token>
+      <tc:token ID="w2f7">Vergleich</tc:token>
+      <tc:token ID="w2f8">zur</tc:token>
+      <tc:token ID="w2f9">derzeitigen</tc:token>
+      <tc:token ID="w2fa">pattern-basierten</tc:token>
+      <tc:token ID="w2fb">Methode</tc:token>
+      <tc:token ID="w2fc">verbesserte</tc:token>
+      <tc:token ID="w2fd">der</tc:token>
+      <tc:token ID="w2fe">Noisy</tc:token>
+      <tc:token ID="w2ff">Channel</tc:token>
+      <tc:token ID="w300">Spell</tc:token>
+      <tc:token ID="w301">Checker</tc:token>
+      <tc:token ID="w302">die</tc:token>
+      <tc:token ID="w303">Korrekturqualität</tc:token>
+      <tc:token ID="w304">um</tc:token>
+      <tc:token ID="w305">mehr</tc:token>
+      <tc:token ID="w306">als</tc:token>
+      <tc:token ID="w307">das</tc:token>
+      <tc:token ID="w308">Doppelte</tc:token>
+      <tc:token ID="w309">.</tc:token>
+      <tc:token ID="w30a">Es</tc:token>
+      <tc:token ID="w30b">werden</tc:token>
+      <tc:token ID="w30c">nun</tc:token>
+      <tc:token ID="w30d">Fehler</tc:token>
+      <tc:token ID="w30e">berichtigt</tc:token>
+      <tc:token ID="w30f">,</tc:token>
+      <tc:token ID="w310">die</tc:token>
+      <tc:token ID="w311">die</tc:token>
+      <tc:token ID="w312">Patterns</tc:token>
+      <tc:token ID="w313">nicht</tc:token>
+      <tc:token ID="w314">einmal</tc:token>
+      <tc:token ID="w315">als</tc:token>
+      <tc:token ID="w316">solche</tc:token>
+      <tc:token ID="w317">erkennen</tc:token>
+      <tc:token ID="w318">.</tc:token>
+      <tc:token ID="w319">Die</tc:token>
+      <tc:token ID="w31a">Hauptmotivation</tc:token>
+      <tc:token ID="w31b">zum</tc:token>
+      <tc:token ID="w31c">Aufbau</tc:token>
+      <tc:token ID="w31d">des</tc:token>
+      <tc:token ID="w31e">Royal</tc:token>
+      <tc:token ID="w31f">Society</tc:token>
+      <tc:token ID="w320">Corpus</tc:token>
+      <tc:token ID="w321">sind</tc:token>
+      <tc:token ID="w322">Untersuchungen</tc:token>
+      <tc:token ID="w323">der</tc:token>
+      <tc:token ID="w324">diachronischen</tc:token>
+      <tc:token ID="w325">Entwicklung</tc:token>
+      <tc:token ID="w326">von</tc:token>
+      <tc:token ID="w327">wissenschaftlichem</tc:token>
+      <tc:token ID="w328">Englisch</tc:token>
+      <tc:token ID="w329">(</tc:token>
+      <tc:token ID="w32a">UdS</tc:token>
+      <tc:token ID="w32b">Fedora</tc:token>
+      <tc:token ID="w32c">Commons</tc:token>
+      <tc:token ID="w32d">o.</tc:token>
+      <tc:token ID="w32e">J.</tc:token>
+      <tc:token ID="w32f">)</tc:token>
+      <tc:token ID="w330">.</tc:token>
+      <tc:token ID="w331">Die</tc:token>
+      <tc:token ID="w332">Bereinigung</tc:token>
+      <tc:token ID="w333">der</tc:token>
+      <tc:token ID="w334">Texte</tc:token>
+      <tc:token ID="w335">macht</tc:token>
+      <tc:token ID="w336">es</tc:token>
+      <tc:token ID="w337">möglich</tc:token>
+      <tc:token ID="w338">,</tc:token>
+      <tc:token ID="w339">dass</tc:token>
+      <tc:token ID="w33a">diese</tc:token>
+      <tc:token ID="w33b">Analysen</tc:token>
+      <tc:token ID="w33c">in</tc:token>
+      <tc:token ID="w33d">Zukunft</tc:token>
+      <tc:token ID="w33e">weitaus</tc:token>
+      <tc:token ID="w33f">genauer</tc:token>
+      <tc:token ID="w340">und</tc:token>
+      <tc:token ID="w341">verlässlicher</tc:token>
+      <tc:token ID="w342">werden</tc:token>
+      <tc:token ID="w343">.</tc:token>
+      <tc:token ID="w344">Einleitung</tc:token>
+      <tc:token ID="w345">State</tc:token>
+      <tc:token ID="w346">of</tc:token>
+      <tc:token ID="w347">the</tc:token>
+      <tc:token ID="w348">Art</tc:token>
+      <tc:token ID="w349">Methodik</tc:token>
+      <tc:token ID="w34a">Training</tc:token>
+      <tc:token ID="w34b">des</tc:token>
+      <tc:token ID="w34c">Modells</tc:token>
+      <tc:token ID="w34d">Das</tc:token>
+      <tc:token ID="w34e">Sprachmodell</tc:token>
+      <tc:token ID="w34f">wurde</tc:token>
+      <tc:token ID="w350">mithilfe</tc:token>
+      <tc:token ID="w351">der</tc:token>
+      <tc:token ID="w352">aktuellsten</tc:token>
+      <tc:token ID="w353">corpusBuild</tc:token>
+      <tc:token ID="w354">Version</tc:token>
+      <tc:token ID="w355">des</tc:token>
+      <tc:token ID="w356">Royal</tc:token>
+      <tc:token ID="w357">Society</tc:token>
+      <tc:token ID="w358">Corpus</tc:token>
+      <tc:token ID="w359">trainiert</tc:token>
+      <tc:token ID="w35a">.</tc:token>
+      <tc:token ID="w35b">Diese</tc:token>
+      <tc:token ID="w35c">Texte</tc:token>
+      <tc:token ID="w35d">sind</tc:token>
+      <tc:token ID="w35e">durch</tc:token>
+      <tc:token ID="w35f">die</tc:token>
+      <tc:token ID="w360">Patterns</tc:token>
+      <tc:token ID="w361">bereits</tc:token>
+      <tc:token ID="w362">best</tc:token>
+      <tc:token ID="w363">möglich</tc:token>
+      <tc:token ID="w364">bereinigt</tc:token>
+      <tc:token ID="w365">worden</tc:token>
+      <tc:token ID="w366">.</tc:token>
+      <tc:token ID="w367">Somit</tc:token>
+      <tc:token ID="w368">wurde</tc:token>
+      <tc:token ID="w369">versucht</tc:token>
+      <tc:token ID="w36a">das</tc:token>
+      <tc:token ID="w36b">Rauschen</tc:token>
+      <tc:token ID="w36c">innerhalb</tc:token>
+      <tc:token ID="w36d">der</tc:token>
+      <tc:token ID="w36e">Verteilung</tc:token>
+      <tc:token ID="w36f">zu</tc:token>
+      <tc:token ID="w370">reduzieren</tc:token>
+      <tc:token ID="w371">.</tc:token>
+      <tc:token ID="w372">Zum</tc:token>
+      <tc:token ID="w373">Trainieren</tc:token>
+      <tc:token ID="w374">des</tc:token>
+      <tc:token ID="w375">Fehlermodells</tc:token>
+      <tc:token ID="w376">wurden</tc:token>
+      <tc:token ID="w377">die</tc:token>
+      <tc:token ID="w378">bereits</tc:token>
+      <tc:token ID="w379">erwähnten</tc:token>
+      <tc:token ID="w37a">Patterns</tc:token>
+      <tc:token ID="w37b">als</tc:token>
+      <tc:token ID="w37c">Wissensbasis</tc:token>
+      <tc:token ID="w37d">hinzugezogen</tc:token>
+      <tc:token ID="w37e">.</tc:token>
+      <tc:token ID="w37f">Die</tc:token>
+      <tc:token ID="w380">Idee</tc:token>
+      <tc:token ID="w381">war</tc:token>
+      <tc:token ID="w382">hier</tc:token>
+      <tc:token ID="w383">aus</tc:token>
+      <tc:token ID="w384">der</tc:token>
+      <tc:token ID="w385">Korrektur</tc:token>
+      <tc:token ID="w386">durch</tc:token>
+      <tc:token ID="w387">die</tc:token>
+      <tc:token ID="w388">Patterns</tc:token>
+      <tc:token ID="w389">eine</tc:token>
+      <tc:token ID="w38a">Wahrscheinlichkeitsverteilung</tc:token>
+      <tc:token ID="w38b">zu</tc:token>
+      <tc:token ID="w38c">erzeugen</tc:token>
+      <tc:token ID="w38d">,</tc:token>
+      <tc:token ID="w38e">also</tc:token>
+      <tc:token ID="w38f">das</tc:token>
+      <tc:token ID="w390">Fehlerverhalten</tc:token>
+      <tc:token ID="w391">im</tc:token>
+      <tc:token ID="w392">Korpus</tc:token>
+      <tc:token ID="w393">zu</tc:token>
+      <tc:token ID="w394">generalisieren</tc:token>
+      <tc:token ID="w395">.</tc:token>
+      <tc:token ID="w396">Anhand</tc:token>
+      <tc:token ID="w397">eines</tc:token>
+      <tc:token ID="w398">Beispiels</tc:token>
+      <tc:token ID="w399">lässt</tc:token>
+      <tc:token ID="w39a">sich</tc:token>
+      <tc:token ID="w39b">dies</tc:token>
+      <tc:token ID="w39c">veranschaulichen</tc:token>
+      <tc:token ID="w39d">:</tc:token>
+      <tc:token ID="w39e">Gegeben</tc:token>
+      <tc:token ID="w39f">die</tc:token>
+      <tc:token ID="w3a0">Ersetzungsregel</tc:token>
+      <tc:token ID="w3a1">fuch</tc:token>
+      <tc:token ID="w3a2">→</tc:token>
+      <tc:token ID="w3a3">such</tc:token>
+      <tc:token ID="w3a4">.</tc:token>
+      <tc:token ID="w3a5">Diese</tc:token>
+      <tc:token ID="w3a6">wird</tc:token>
+      <tc:token ID="w3a7">in</tc:token>
+      <tc:token ID="w3a8">folgende</tc:token>
+      <tc:token ID="w3a9">Sequenz</tc:token>
+      <tc:token ID="w3aa">von</tc:token>
+      <tc:token ID="w3ab">edit</tc:token>
+      <tc:token ID="w3ac">Operationen</tc:token>
+      <tc:token ID="w3ad">aufgebrochen</tc:token>
+      <tc:token ID="w3ae">:</tc:token>
+      <tc:token ID="w3af">f|s</tc:token>
+      <tc:token ID="w3b0">+</tc:token>
+      <tc:token ID="w3b1">u|u</tc:token>
+      <tc:token ID="w3b2">+</tc:token>
+      <tc:token ID="w3b3">c|c</tc:token>
+      <tc:token ID="w3b4">+</tc:token>
+      <tc:token ID="w3b5">h|h</tc:token>
+      <tc:token ID="w3b6">.</tc:token>
+      <tc:token ID="w3b7">Der</tc:token>
+      <tc:token ID="w3b8">Trainingsprozess</tc:token>
+      <tc:token ID="w3b9">erfasst</tc:token>
+      <tc:token ID="w3ba">nun</tc:token>
+      <tc:token ID="w3bb">wie</tc:token>
+      <tc:token ID="w3bc">oft</tc:token>
+      <tc:token ID="w3bd">edit</tc:token>
+      <tc:token ID="w3be">Operationen</tc:token>
+      <tc:token ID="w3bf">angewendet</tc:token>
+      <tc:token ID="w3c0">wurden</tc:token>
+      <tc:token ID="w3c1">und</tc:token>
+      <tc:token ID="w3c2">leitet</tc:token>
+      <tc:token ID="w3c3">daraus</tc:token>
+      <tc:token ID="w3c4">eine</tc:token>
+      <tc:token ID="w3c5">Verteilung</tc:token>
+      <tc:token ID="w3c6">ab</tc:token>
+      <tc:token ID="w3c7">.</tc:token>
+      <tc:token ID="w3c8">Resultate</tc:token>
+      <tc:token ID="w3c9">und</tc:token>
+      <tc:token ID="w3ca">Diskussion</tc:token>
+      <tc:token ID="w3cb">Abbildung</tc:token>
+      <tc:token ID="w3cc">1</tc:token>
+      <tc:token ID="w3cd">:</tc:token>
+      <tc:token ID="w3ce">Resultate</tc:token>
+      <tc:token ID="w3cf">einzelner</tc:token>
+      <tc:token ID="w3d0">Korrekturmethoden</tc:token>
+      <tc:token ID="w3d1">angewendet</tc:token>
+      <tc:token ID="w3d2">auf</tc:token>
+      <tc:token ID="w3d3">den</tc:token>
+      <tc:token ID="w3d4">Testdatensatz</tc:token>
+      <tc:token ID="w3d5">Zusammenfassung</tc:token>
+      <tc:token ID="w3d6">Jurafsky</tc:token>
+      <tc:token ID="w3d7">Daniel</tc:token>
+      <tc:token ID="w3d8">/</tc:token>
+      <tc:token ID="w3d9">Martin</tc:token>
+      <tc:token ID="w3da">James</tc:token>
+      <tc:token ID="w3db">H.</tc:token>
+      <tc:token ID="w3dc">(</tc:token>
+      <tc:token ID="w3dd">2016</tc:token>
+      <tc:token ID="w3de">)</tc:token>
+      <tc:token ID="w3df">:</tc:token>
+      <tc:token ID="w3e0">"</tc:token>
+      <tc:token ID="w3e1">Spelling</tc:token>
+      <tc:token ID="w3e2">Correction</tc:token>
+      <tc:token ID="w3e3">and</tc:token>
+      <tc:token ID="w3e4">the</tc:token>
+      <tc:token ID="w3e5">Noisy</tc:token>
+      <tc:token ID="w3e6">Channel</tc:token>
+      <tc:token ID="w3e7">"</tc:token>
+      <tc:token ID="w3e8">In</tc:token>
+      <tc:token ID="w3e9">:</tc:token>
+      <tc:token ID="w3ea">Speech</tc:token>
+      <tc:token ID="w3eb">and</tc:token>
+      <tc:token ID="w3ec">Language</tc:token>
+      <tc:token ID="w3ed">Processing</tc:token>
+      <tc:token ID="w3ee">,</tc:token>
+      <tc:token ID="w3ef">3.</tc:token>
+      <tc:token ID="w3f0">Edition</tc:token>
+      <tc:token ID="w3f1">,</tc:token>
+      <tc:token ID="w3f2">S.</tc:token>
+      <tc:token ID="w3f3">61-73</tc:token>
+      <tc:token ID="w3f4">.</tc:token>
+      <tc:token ID="w3f5">Kermes</tc:token>
+      <tc:token ID="w3f6">,</tc:token>
+      <tc:token ID="w3f7">Hannah</tc:token>
+      <tc:token ID="w3f8">/</tc:token>
+      <tc:token ID="w3f9">Degaetano-Ortlieb</tc:token>
+      <tc:token ID="w3fa">,</tc:token>
+      <tc:token ID="w3fb">Stefania</tc:token>
+      <tc:token ID="w3fc">/</tc:token>
+      <tc:token ID="w3fd">Khamis</tc:token>
+      <tc:token ID="w3fe">,</tc:token>
+      <tc:token ID="w3ff">Ashraf</tc:token>
+      <tc:token ID="w400">/</tc:token>
+      <tc:token ID="w401">Knappen</tc:token>
+      <tc:token ID="w402">,</tc:token>
+      <tc:token ID="w403">Jörg</tc:token>
+      <tc:token ID="w404">/</tc:token>
+      <tc:token ID="w405">Teich</tc:token>
+      <tc:token ID="w406">,</tc:token>
+      <tc:token ID="w407">Elke</tc:token>
+      <tc:token ID="w408">(</tc:token>
+      <tc:token ID="w409">2016</tc:token>
+      <tc:token ID="w40a">)</tc:token>
+      <tc:token ID="w40b">:</tc:token>
+      <tc:token ID="w40c">"</tc:token>
+      <tc:token ID="w40d">The</tc:token>
+      <tc:token ID="w40e">Royal</tc:token>
+      <tc:token ID="w40f">Society</tc:token>
+      <tc:token ID="w410">Corpus</tc:token>
+      <tc:token ID="w411">:</tc:token>
+      <tc:token ID="w412">From</tc:token>
+      <tc:token ID="w413">Uncharted</tc:token>
+      <tc:token ID="w414">Data</tc:token>
+      <tc:token ID="w415">to</tc:token>
+      <tc:token ID="w416">Corpus</tc:token>
+      <tc:token ID="w417">"</tc:token>
+      <tc:token ID="w418">,</tc:token>
+      <tc:token ID="w419">in</tc:token>
+      <tc:token ID="w41a">:</tc:token>
+      <tc:token ID="w41b">Proceedings</tc:token>
+      <tc:token ID="w41c">of</tc:token>
+      <tc:token ID="w41d">the</tc:token>
+      <tc:token ID="w41e">Tenth</tc:token>
+      <tc:token ID="w41f">International</tc:token>
+      <tc:token ID="w420">Conference</tc:token>
+      <tc:token ID="w421">on</tc:token>
+      <tc:token ID="w422">Language</tc:token>
+      <tc:token ID="w423">Resources</tc:token>
+      <tc:token ID="w424">and</tc:token>
+      <tc:token ID="w425">Evaluation</tc:token>
+      <tc:token ID="w426">(</tc:token>
+      <tc:token ID="w427">LREC</tc:token>
+      <tc:token ID="w428">2016</tc:token>
+      <tc:token ID="w429">)</tc:token>
+      <tc:token ID="w42a">.</tc:token>
+      <tc:token ID="w42b">European</tc:token>
+      <tc:token ID="w42c">Language</tc:token>
+      <tc:token ID="w42d">Resources</tc:token>
+      <tc:token ID="w42e">Association</tc:token>
+      <tc:token ID="w42f">(</tc:token>
+      <tc:token ID="w430">ELRA</tc:token>
+      <tc:token ID="w431">)</tc:token>
+      <tc:token ID="w432">.</tc:token>
+      <tc:token ID="w433">Knappen</tc:token>
+      <tc:token ID="w434">,</tc:token>
+      <tc:token ID="w435">Jörg</tc:token>
+      <tc:token ID="w436">/</tc:token>
+      <tc:token ID="w437">Fischer</tc:token>
+      <tc:token ID="w438">,</tc:token>
+      <tc:token ID="w439">Stefan</tc:token>
+      <tc:token ID="w43a">/</tc:token>
+      <tc:token ID="w43b">Kermes</tc:token>
+      <tc:token ID="w43c">,</tc:token>
+      <tc:token ID="w43d">Hannah</tc:token>
+      <tc:token ID="w43e">/</tc:token>
+      <tc:token ID="w43f">Teich</tc:token>
+      <tc:token ID="w440">,</tc:token>
+      <tc:token ID="w441">Elke</tc:token>
+      <tc:token ID="w442">/</tc:token>
+      <tc:token ID="w443">Fankhauser</tc:token>
+      <tc:token ID="w444">,</tc:token>
+      <tc:token ID="w445">Peter</tc:token>
+      <tc:token ID="w446">(</tc:token>
+      <tc:token ID="w447">2017</tc:token>
+      <tc:token ID="w448">)</tc:token>
+      <tc:token ID="w449">:</tc:token>
+      <tc:token ID="w44a">"</tc:token>
+      <tc:token ID="w44b">The</tc:token>
+      <tc:token ID="w44c">Making</tc:token>
+      <tc:token ID="w44d">of</tc:token>
+      <tc:token ID="w44e">the</tc:token>
+      <tc:token ID="w44f">Royal</tc:token>
+      <tc:token ID="w450">Society</tc:token>
+      <tc:token ID="w451">Corpus</tc:token>
+      <tc:token ID="w452">"</tc:token>
+      <tc:token ID="w453">,</tc:token>
+      <tc:token ID="w454">in</tc:token>
+      <tc:token ID="w455">ListLang@NoDaLiDa</tc:token>
+      <tc:token ID="w456">.</tc:token>
+      <tc:token ID="w457">Norvig</tc:token>
+      <tc:token ID="w458">,</tc:token>
+      <tc:token ID="w459">Peter</tc:token>
+      <tc:token ID="w45a">(</tc:token>
+      <tc:token ID="w45b">2008</tc:token>
+      <tc:token ID="w45c">)</tc:token>
+      <tc:token ID="w45d">:</tc:token>
+      <tc:token ID="w45e">"</tc:token>
+      <tc:token ID="w45f">Natural</tc:token>
+      <tc:token ID="w460">Language</tc:token>
+      <tc:token ID="w461">Corpus</tc:token>
+      <tc:token ID="w462">Data</tc:token>
+      <tc:token ID="w463">:</tc:token>
+      <tc:token ID="w464">Beautiful</tc:token>
+      <tc:token ID="w465">Data</tc:token>
+      <tc:token ID="w466">"</tc:token>
+      <tc:token ID="w467">.</tc:token>
+      <tc:token ID="w468">[</tc:token>
+      <tc:token ID="w469">online</tc:token>
+      <tc:token ID="w46a">]</tc:token>
+      <tc:token ID="w46b">[</tc:token>
+      <tc:token ID="w46c">letzter</tc:token>
+      <tc:token ID="w46d">Zugriff</tc:token>
+      <tc:token ID="w46e">08.</tc:token>
+      <tc:token ID="w46f">November</tc:token>
+      <tc:token ID="w470">2017</tc:token>
+      <tc:token ID="w471">]</tc:token>
+      <tc:token ID="w472">.</tc:token>
+      <tc:token ID="w473">Shannon</tc:token>
+      <tc:token ID="w474">,</tc:token>
+      <tc:token ID="w475">Claude</tc:token>
+      <tc:token ID="w476">E.</tc:token>
+      <tc:token ID="w477">(</tc:token>
+      <tc:token ID="w478">1948</tc:token>
+      <tc:token ID="w479">)</tc:token>
+      <tc:token ID="w47a">:</tc:token>
+      <tc:token ID="w47b">"</tc:token>
+      <tc:token ID="w47c">A</tc:token>
+      <tc:token ID="w47d">Mathematical</tc:token>
+      <tc:token ID="w47e">Theory</tc:token>
+      <tc:token ID="w47f">of</tc:token>
+      <tc:token ID="w480">Communication</tc:token>
+      <tc:token ID="w481">"</tc:token>
+      <tc:token ID="w482">,</tc:token>
+      <tc:token ID="w483">in</tc:token>
+      <tc:token ID="w484">Bell</tc:token>
+      <tc:token ID="w485">System</tc:token>
+      <tc:token ID="w486">Technical</tc:token>
+      <tc:token ID="w487">Journal</tc:token>
+      <tc:token ID="w488">.</tc:token>
+      <tc:token ID="w489">UdS</tc:token>
+      <tc:token ID="w48a">Fedora</tc:token>
+      <tc:token ID="w48b">Commons</tc:token>
+      <tc:token ID="w48c">Repository</tc:token>
+      <tc:token ID="w48d">(</tc:token>
+      <tc:token ID="w48e">o.</tc:token>
+      <tc:token ID="w48f">J.</tc:token>
+      <tc:token ID="w490">)</tc:token>
+      <tc:token ID="w491">:</tc:token>
+      <tc:token ID="w492">"</tc:token>
+      <tc:token ID="w493">The</tc:token>
+      <tc:token ID="w494">Royal</tc:token>
+      <tc:token ID="w495">Society</tc:token>
+      <tc:token ID="w496">Corpus</tc:token>
+      <tc:token ID="w497">(</tc:token>
+      <tc:token ID="w498">RSC</tc:token>
+      <tc:token ID="w499">)</tc:token>
+      <tc:token ID="w49a">"</tc:token>
+      <tc:token ID="w49b">,</tc:token>
+      <tc:token ID="w49c">.</tc:token>
+      <tc:token ID="w49d">[</tc:token>
+      <tc:token ID="w49e">letzter</tc:token>
+      <tc:token ID="w49f">Zugriff</tc:token>
+      <tc:token ID="w4a0">29.</tc:token>
+      <tc:token ID="w4a1">März</tc:token>
+      <tc:token ID="w4a2">2018</tc:token>
+      <tc:token ID="w4a3">]</tc:token>
+      <tc:token ID="w4a4">.</tc:token>
+      <tc:token ID="w4a5">Bibliographie</tc:token>
+    </tc:tokens>
+    <tc:sentences xmlns:tc="http://www.dspin.de/data/textcorpus">
+      <tc:sentence tokenIDs="w1 w2 w3 w4 w5 w6 w7 w8 w9 wa wb" ID="s1"/>
+      <tc:sentence tokenIDs="wc wd we wf w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w1a" ID="s2"/>
+      <tc:sentence tokenIDs="w1b w1c w1d w1e w1f w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 w2a" ID="s3"/>
+      <tc:sentence tokenIDs="w2b w2c w2d w2e w2f w30 w31 w32 w33" ID="s4"/>
+      <tc:sentence tokenIDs="w34 w35 w36 w37 w38 w39 w3a w3b w3c w3d w3e w3f w40 w41 w42 w43 w44 w45 w46 w47 w48 w49 w4a w4b w4c w4d w4e w4f w50 w51 w52 w53 w54 w55 w56" ID="s5"/>
+      <tc:sentence tokenIDs="w57 w58 w59 w5a w5b w5c w5d w5e w5f w60 w61 w62 w63 w64 w65 w66 w67 w68 w69 w6a w6b w6c w6d w6e w6f w70 w71 w72 w73 w74 w75 w76" ID="s6"/>
+      <tc:sentence tokenIDs="w77 w78 w79 w7a w7b w7c w7d w7e w7f w80 w81 w82" ID="s7"/>
+      <tc:sentence tokenIDs="w83 w84 w85 w86 w87 w88 w89 w8a w8b w8c w8d w8e w8f w90 w91 w92 w93 w94 w95 w96 w97 w98 w99 w9a w9b w9c w9d" ID="s8"/>
+      <tc:sentence tokenIDs="w9e w9f wa0 wa1 wa2 wa3 wa4 wa5 wa6 wa7 wa8 wa9 waa wab wac" ID="s9"/>
+      <tc:sentence tokenIDs="wad wae waf wb0 wb1 wb2 wb3 wb4" ID="sa"/>
+      <tc:sentence tokenIDs="wb5 wb6 wb7 wb8 wb9 wba wbb wbc wbd wbe wbf wc0" ID="sb"/>
+      <tc:sentence tokenIDs="wc1 wc2 wc3 wc4 wc5 wc6 wc7 wc8 wc9 wca wcb wcc wcd wce wcf wd0 wd1" ID="sc"/>
+      <tc:sentence tokenIDs="wd2 wd3 wd4 wd5 wd6 wd7 wd8 wd9 wda wdb wdc wdd wde wdf we0 we1 we2 we3 we4 we5 we6" ID="sd"/>
+      <tc:sentence tokenIDs="we7 we8 we9 wea web wec wed wee wef wf0 wf1 wf2 wf3 wf4 wf5 wf6 wf7 wf8 wf9 wfa wfb wfc wfd wfe wff w100" ID="se"/>
+      <tc:sentence tokenIDs="w101 w102 w103 w104 w105 w106 w107 w108 w109 w10a w10b w10c w10d w10e w10f w110 w111" ID="sf"/>
+      <tc:sentence tokenIDs="w112 w113 w114 w115 w116 w117 w118 w119 w11a w11b w11c w11d w11e w11f w120 w121 w122" ID="s10"/>
+      <tc:sentence tokenIDs="w123 w124 w125 w126 w127 w128 w129 w12a w12b w12c" ID="s11"/>
+      <tc:sentence tokenIDs="w12d w12e w12f w130 w131 w132 w133 w134 w135 w136 w137 w138 w139 w13a w13b w13c w13d w13e w13f w140 w141" ID="s12"/>
+      <tc:sentence tokenIDs="w142 w143 w144 w145 w146 w147 w148 w149 w14a w14b w14c w14d w14e w14f w150 w151 w152 w153 w154 w155" ID="s13"/>
+      <tc:sentence tokenIDs="w156 w157 w158 w159 w15a w15b w15c w15d" ID="s14"/>
+      <tc:sentence tokenIDs="w15e w15f w160 w161 w162 w163 w164 w165 w166 w167 w168 w169" ID="s15"/>
+      <tc:sentence tokenIDs="w16a w16b w16c w16d w16e w16f w170" ID="s16"/>
+      <tc:sentence tokenIDs="w171 w172 w173 w174 w175 w176 w177" ID="s17"/>
+      <tc:sentence tokenIDs="w178 w179 w17a w17b w17c w17d w17e w17f w180 w181 w182 w183 w184 w185 w186 w187 w188 w189 w18a w18b w18c w18d w18e w18f w190 w191 w192 w193 w194 w195 w196 w197 w198 w199 w19a w19b w19c w19d w19e w19f w1a0 w1a1 w1a2" ID="s18"/>
+      <tc:sentence tokenIDs="w1a3 w1a4 w1a5 w1a6 w1a7 w1a8 w1a9 w1aa w1ab w1ac w1ad w1ae w1af w1b0 w1b1 w1b2 w1b3 w1b4 w1b5 w1b6 w1b7 w1b8" ID="s19"/>
+      <tc:sentence tokenIDs="w1b9 w1ba w1bb w1bc w1bd w1be w1bf w1c0 w1c1 w1c2 w1c3 w1c4 w1c5 w1c6 w1c7" ID="s1a"/>
+      <tc:sentence tokenIDs="w1c8 w1c9 w1ca w1cb w1cc w1cd w1ce w1cf w1d0 w1d1 w1d2" ID="s1b"/>
+      <tc:sentence tokenIDs="w1d3 w1d4 w1d5 w1d6 w1d7 w1d8 w1d9 w1da w1db w1dc w1dd" ID="s1c"/>
+      <tc:sentence tokenIDs="w1de w1df w1e0 w1e1 w1e2 w1e3 w1e4 w1e5 w1e6 w1e7 w1e8 w1e9 w1ea w1eb w1ec w1ed w1ee w1ef w1f0 w1f1 w1f2 w1f3 w1f4 w1f5 w1f6 w1f7 w1f8 w1f9 w1fa w1fb w1fc w1fd w1fe" ID="s1d"/>
+      <tc:sentence tokenIDs="w1ff w200 w201 w202 w203 w204 w205 w206 w207 w208 w209 w20a w20b w20c w20d w20e w20f w210" ID="s1e"/>
+      <tc:sentence tokenIDs="w211 w212 w213 w214 w215 w216 w217 w218 w219 w21a w21b w21c w21d w21e w21f w220 w221 w222 w223 w224 w225 w226 w227 w228 w229 w22a w22b w22c w22d w22e" ID="s1f"/>
+      <tc:sentence tokenIDs="w22f w230 w231 w232 w233 w234 w235 w236" ID="s20"/>
+      <tc:sentence tokenIDs="w237 w238 w239 w23a w23b w23c w23d w23e w23f w240 w241 w242 w243 w244 w245 w246 w247" ID="s21"/>
+      <tc:sentence tokenIDs="w248 w249 w24a w24b w24c w24d w24e w24f w250" ID="s22"/>
+      <tc:sentence tokenIDs="w251 w252 w253 w254 w255 w256 w257 w258 w259 w25a w25b w25c w25d w25e w25f w260 w261 w262 w263 w264 w265 w266" ID="s23"/>
+      <tc:sentence tokenIDs="w267 w268 w269 w26a w26b w26c w26d w26e w26f w270 w271 w272 w273 w274 w275 w276 w277 w278 w279 w27a w27b" ID="s24"/>
+      <tc:sentence tokenIDs="w27c w27d w27e w27f w280 w281 w282 w283 w284 w285 w286 w287 w288 w289 w28a w28b w28c w28d w28e w28f w290 w291 w292" ID="s25"/>
+      <tc:sentence tokenIDs="w293 w294 w295 w296 w297 w298 w299 w29a w29b w29c w29d w29e w29f w2a0 w2a1 w2a2 w2a3 w2a4 w2a5 w2a6 w2a7 w2a8 w2a9 w2aa w2ab w2ac w2ad w2ae w2af w2b0 w2b1 w2b2 w2b3 w2b4 w2b5 w2b6 w2b7 w2b8 w2b9 w2ba w2bb w2bc w2bd w2be w2bf w2c0 w2c1 w2c2" ID="s26"/>
+      <tc:sentence tokenIDs="w2c3 w2c4 w2c5 w2c6 w2c7 w2c8 w2c9 w2ca w2cb w2cc w2cd w2ce w2cf w2d0 w2d1 w2d2 w2d3 w2d4 w2d5 w2d6 w2d7 w2d8 w2d9 w2da w2db w2dc w2dd w2de w2df w2e0 w2e1 w2e2 w2e3 w2e4 w2e5 w2e6 w2e7 w2e8 w2e9 w2ea w2eb w2ec w2ed w2ee w2ef w2f0 w2f1 w2f2 w2f3 w2f4 w2f5" ID="s27"/>
+      <tc:sentence tokenIDs="w2f6 w2f7 w2f8 w2f9 w2fa w2fb w2fc w2fd w2fe w2ff w300 w301 w302 w303 w304 w305 w306 w307 w308 w309" ID="s28"/>
+      <tc:sentence tokenIDs="w30a w30b w30c w30d w30e w30f w310 w311 w312 w313 w314 w315 w316 w317 w318" ID="s29"/>
+      <tc:sentence tokenIDs="w319 w31a w31b w31c w31d w31e w31f w320 w321 w322 w323 w324 w325 w326 w327 w328 w329 w32a w32b w32c w32d w32e w32f w330" ID="s2a"/>
+      <tc:sentence tokenIDs="w331 w332 w333 w334 w335 w336 w337 w338 w339 w33a w33b w33c w33d w33e w33f w340 w341 w342 w343" ID="s2b"/>
+      <tc:sentence tokenIDs="w344 w345 w346 w347 w348 w349 w34a w34b w34c w34d w34e w34f w350 w351 w352 w353 w354 w355 w356 w357 w358 w359 w35a" ID="s2c"/>
+      <tc:sentence tokenIDs="w35b w35c w35d w35e w35f w360 w361 w362 w363 w364 w365 w366" ID="s2d"/>
+      <tc:sentence tokenIDs="w367 w368 w369 w36a w36b w36c w36d w36e w36f w370 w371" ID="s2e"/>
+      <tc:sentence tokenIDs="w372 w373 w374 w375 w376 w377 w378 w379 w37a w37b w37c w37d w37e" ID="s2f"/>
+      <tc:sentence tokenIDs="w37f w380 w381 w382 w383 w384 w385 w386 w387 w388 w389 w38a w38b w38c w38d w38e w38f w390 w391 w392 w393 w394 w395" ID="s30"/>
+      <tc:sentence tokenIDs="w396 w397 w398 w399 w39a w39b w39c w39d w39e w39f w3a0 w3a1 w3a2 w3a3 w3a4" ID="s31"/>
+      <tc:sentence tokenIDs="w3a5 w3a6 w3a7 w3a8 w3a9 w3aa w3ab w3ac w3ad w3ae w3af w3b0 w3b1 w3b2 w3b3 w3b4 w3b5 w3b6" ID="s32"/>
+      <tc:sentence tokenIDs="w3b7 w3b8 w3b9 w3ba w3bb w3bc w3bd w3be w3bf w3c0 w3c1 w3c2 w3c3 w3c4 w3c5 w3c6 w3c7" ID="s33"/>
+      <tc:sentence tokenIDs="w3c8 w3c9 w3ca w3cb w3cc w3cd" ID="s34"/>
+      <tc:sentence tokenIDs="w3ce w3cf w3d0 w3d1 w3d2 w3d3 w3d4 w3d5 w3d6 w3d7 w3d8 w3d9 w3da w3db w3dc w3dd w3de w3df" ID="s35"/>
+      <tc:sentence tokenIDs="w3e0 w3e1 w3e2 w3e3 w3e4 w3e5 w3e6 w3e7" ID="s36"/>
+      <tc:sentence tokenIDs="w3e8 w3e9 w3ea w3eb w3ec w3ed w3ee w3ef w3f0 w3f1 w3f2 w3f3 w3f4" ID="s37"/>
+      <tc:sentence tokenIDs="w3f5 w3f6 w3f7 w3f8 w3f9 w3fa w3fb w3fc w3fd w3fe w3ff w400 w401 w402 w403 w404 w405 w406 w407 w408 w409 w40a w40b w40c w40d w40e w40f w410 w411 w412 w413 w414 w415 w416 w417 w418 w419 w41a w41b w41c w41d w41e w41f w420 w421 w422 w423 w424 w425 w426 w427 w428 w429 w42a" ID="s38"/>
+      <tc:sentence tokenIDs="w42b w42c w42d w42e w42f w430 w431 w432" ID="s39"/>
+      <tc:sentence tokenIDs="w433 w434 w435 w436 w437 w438 w439 w43a w43b w43c w43d w43e w43f w440 w441 w442 w443 w444 w445 w446 w447 w448 w449" ID="s3a"/>
+      <tc:sentence tokenIDs="w44a w44b w44c w44d w44e w44f w450 w451 w452 w453 w454 w455 w456" ID="s3b"/>
+      <tc:sentence tokenIDs="w457 w458 w459 w45a w45b w45c w45d" ID="s3c"/>
+      <tc:sentence tokenIDs="w45e w45f w460 w461 w462 w463 w464 w465 w466 w467" ID="s3d"/>
+      <tc:sentence tokenIDs="w468 w469 w46a w46b w46c w46d w46e w46f w470 w471 w472" ID="s3e"/>
+      <tc:sentence tokenIDs="w473 w474 w475 w476 w477 w478 w479 w47a" ID="s3f"/>
+      <tc:sentence tokenIDs="w47b w47c w47d w47e w47f w480 w481 w482 w483 w484 w485 w486 w487 w488" ID="s40"/>
+      <tc:sentence tokenIDs="w489 w48a w48b w48c w48d w48e w48f w490 w491 w492 w493 w494 w495 w496 w497 w498 w499 w49a w49b w49c w49d w49e w49f w4a0 w4a1 w4a2 w4a3 w4a4" ID="s41"/>
+      <tc:sentence tokenIDs="w4a5" ID="s42"/>
+    </tc:sentences>
+    <tc:namedEntities xmlns:tc="http://www.dspin.de/data/textcorpus" type="tuebadz8">
+      <tc:entity class="OTH" tokenIDs="w3a w3b w3c w3d"/>
+      <tc:entity class="OTH" tokenIDs="w45 w46 w47"/>
+      <tc:entity class="OTH" tokenIDs="w49"/>
+      <tc:entity class="ORG" tokenIDs="w53 w54 w55"/>
+      <tc:entity class="ORG" tokenIDs="w58 w59 w5a"/>
+      <tc:entity class="ORG" tokenIDs="w5c"/>
+      <tc:entity class="ORG" tokenIDs="w6d w6e w6f w70 w71 w72 w73 w74 w75"/>
+      <tc:entity class="ORG" tokenIDs="wa7 wa8 wa9 waa wab"/>
+      <tc:entity class="ORG" tokenIDs="wc4 wc5 wc6"/>
+      <tc:entity class="OTH" tokenIDs="w113 w114 w115 w116"/>
+      <tc:entity class="OTH" tokenIDs="w11a w11b w11c"/>
+      <tc:entity class="GPE" tokenIDs="w11e"/>
+      <tc:entity class="ORG" tokenIDs="w143 w144 w145"/>
+      <tc:entity class="OTH" tokenIDs="w153"/>
+      <tc:entity class="PER" tokenIDs="w1a4"/>
+      <tc:entity class="OTH" tokenIDs="w1ea"/>
+      <tc:entity class="PER" tokenIDs="w227 w228"/>
+      <tc:entity class="PER" tokenIDs="w22a"/>
+      <tc:entity class="PER" tokenIDs="w268"/>
+      <tc:entity class="OTH" tokenIDs="w282 w283"/>
+      <tc:entity class="OTH" tokenIDs="w28f"/>
+      <tc:entity class="OTH" tokenIDs="w2ff w300 w301"/>
+      <tc:entity class="ORG" tokenIDs="w31e w31f w320"/>
+      <tc:entity class="PER" tokenIDs="w32e"/>
+      <tc:entity class="OTH" tokenIDs="w345 w346 w347 w348 w349 w34a w34b w34c w34d w34e"/>
+      <tc:entity class="ORG" tokenIDs="w356 w357 w358"/>
+      <tc:entity class="PER" tokenIDs="w3d6 w3d7"/>
+      <tc:entity class="PER" tokenIDs="w3d9 w3da w3db"/>
+      <tc:entity class="OTH" tokenIDs="w3ea w3eb w3ec w3ed"/>
+      <tc:entity class="PER" tokenIDs="w3f5 w3f6 w3f7"/>
+      <tc:entity class="PER" tokenIDs="w3f9"/>
+      <tc:entity class="PER" tokenIDs="w3fb"/>
+      <tc:entity class="PER" tokenIDs="w3fd"/>
+      <tc:entity class="PER" tokenIDs="w3ff"/>
+      <tc:entity class="PER" tokenIDs="w401"/>
+      <tc:entity class="PER" tokenIDs="w403"/>
+      <tc:entity class="PER" tokenIDs="w405"/>
+      <tc:entity class="PER" tokenIDs="w407"/>
+      <tc:entity class="OTH" tokenIDs="w40d w40e w40f w410 w411 w412 w413 w414 w415 w416"/>
+      <tc:entity class="OTH" tokenIDs="w41b w41c w41d w41e w41f w420 w421 w422 w423 w424 w425"/>
+      <tc:entity class="ORG" tokenIDs="w427"/>
+      <tc:entity class="ORG" tokenIDs="w42b w42c w42d w42e"/>
+      <tc:entity class="ORG" tokenIDs="w430"/>
+      <tc:entity class="PER" tokenIDs="w433"/>
+      <tc:entity class="PER" tokenIDs="w435"/>
+      <tc:entity class="PER" tokenIDs="w437"/>
+      <tc:entity class="PER" tokenIDs="w439"/>
+      <tc:entity class="PER" tokenIDs="w43b"/>
+      <tc:entity class="PER" tokenIDs="w43d"/>
+      <tc:entity class="PER" tokenIDs="w43f"/>
+      <tc:entity class="PER" tokenIDs="w441"/>
+      <tc:entity class="PER" tokenIDs="w443"/>
+      <tc:entity class="PER" tokenIDs="w445"/>
+      <tc:entity class="OTH" tokenIDs="w44b w44c w44d w44e w44f w450 w451"/>
+      <tc:entity class="PER" tokenIDs="w457 w458 w459"/>
+      <tc:entity class="OTH" tokenIDs="w464 w465"/>
+      <tc:entity class="PER" tokenIDs="w473"/>
+      <tc:entity class="PER" tokenIDs="w475 w476"/>
+      <tc:entity class="OTH" tokenIDs="w47c w47d w47e w47f w480"/>
+      <tc:entity class="ORG" tokenIDs="w484 w485 w486 w487"/>
+      <tc:entity class="ORG" tokenIDs="w489 w48a w48b w48c"/>
+      <tc:entity class="ORG" tokenIDs="w493 w494 w495 w496"/>
+      <tc:entity class="ORG" tokenIDs="w498"/>
+    </tc:namedEntities>
+  </TextCorpus>
+</D-Spin>

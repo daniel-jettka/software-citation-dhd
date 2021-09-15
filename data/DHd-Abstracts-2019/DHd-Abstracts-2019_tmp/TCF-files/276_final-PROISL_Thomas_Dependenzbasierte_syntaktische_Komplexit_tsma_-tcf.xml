@@ -1,0 +1,2222 @@
+<?xml version='1.0' encoding='UTF-8'?><D-Spin xmlns="http://www.dspin.de/data" version="5">
+  <MetaData xmlns="http://www.dspin.de/data/metadata"><Services><cmd:CMD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cmd="http://www.clarin.eu/cmd/1" CMDVersion="1.2" xsi:schemaLocation="http://www.clarin.eu/cmd/1 http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_1320657629623/xsd"><cmd:Resources><cmd:ResourceProxyList/><cmd:JournalFileProxyList/><cmd:ResourceRelationList/></cmd:Resources><cmd:Components><cmd:WebServiceToolChain><cmd:GeneralInfo><cmd:Descriptions><cmd:Description/></cmd:Descriptions><cmd:ResourceName>Custom chain</cmd:ResourceName><cmd:ResourceClass>Toolchain</cmd:ResourceClass></cmd:GeneralInfo><cmd:Toolchain><cmd:ToolInChain><cmd:PID>https://hdl.handle.net/21.11120/0000-0008-319A-3</cmd:PID><cmd:Parameter value="de" name="lang"/></cmd:ToolInChain><cmd:ToolInChain><cmd:PID>https://hdl.handle.net/21.11120/0000-0008-3183-C</cmd:PID><cmd:Parameter value="5" name="version"/></cmd:ToolInChain><cmd:ToolInChain><cmd:PID>http://hdl.handle.net/11022/0000-0007-DA29-6</cmd:PID><cmd:Parameter value="de" name="lang"/><cmd:Parameter value="5" name="version"/></cmd:ToolInChain></cmd:Toolchain></cmd:WebServiceToolChain></cmd:Components></cmd:CMD></Services></MetaData>
+  <TextCorpus xmlns="http://www.dspin.de/data/textcorpus" lang="de">
+    <textSource type="application/tei+xml;format-variant=tei-dta;tokenized=0">&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;TEI xml:id="276_final-PROISL_Thomas_Dependenzbasierte_syntaktische_Komplexit_tsma_" xmlns="http://www.tei-c.org/ns/1.0">
+&lt;teiHeader>
+&lt;fileDesc>
+&lt;titleStmt>
+&lt;title type="full">
+&lt;title type="main">Dependenzbasierte syntaktische Komplexitätsmaße&lt;/title>
+&lt;title type="sub"/>
+&lt;/title>
+&lt;author>
+&lt;persName>
+&lt;surname>Proisl&lt;/surname>
+&lt;forename>Thomas&lt;/forename>
+&lt;/persName>
+&lt;affiliation>Friedrich-Alexander-Universität Erlangen-Nürnberg, Deutschland&lt;/affiliation>
+&lt;email>thomas.proisl@fau.de&lt;/email>
+&lt;/author>
+&lt;author>
+&lt;persName>
+&lt;surname>Konle&lt;/surname>
+&lt;forename>Leonard&lt;/forename>
+&lt;/persName>
+&lt;affiliation>Julius-Maximilians-Universität Würzburg&lt;/affiliation>
+&lt;email>leonard.konle@uni-wuerzburg.de&lt;/email>
+&lt;/author>
+&lt;author>
+&lt;persName>
+&lt;surname>Evert&lt;/surname>
+&lt;forename>Stefan&lt;/forename>
+&lt;/persName>
+&lt;affiliation>Friedrich-Alexander-Universität Erlangen-Nürnberg, Deutschland&lt;/affiliation>
+&lt;email>stefan.evert@fau.de&lt;/email>
+&lt;/author>
+&lt;author>
+&lt;persName>
+&lt;surname>Jannidis&lt;/surname>
+&lt;forename>Fotis&lt;/forename>
+&lt;/persName>
+&lt;affiliation>Julius-Maximilians-Universität Würzburg&lt;/affiliation>
+&lt;email>fotis.jannidis@uni-wuerzburg.de&lt;/email>
+&lt;/author>
+&lt;/titleStmt>
+&lt;editionStmt>
+&lt;edition>
+&lt;date>2018-10-15T10:23:14.497763862&lt;/date>
+&lt;/edition>
+&lt;/editionStmt>
+&lt;publicationStmt>
+&lt;t:publisher xmlns:t="http://www.tei-c.org/ns/1.0">Patrick Sahle, im Auftrag des Verbands Digital Humanities im deutschsprachigen Raum e.V.&lt;/t:publisher>
+&lt;t:address xmlns:t="http://www.tei-c.org/ns/1.0">
+&lt;t:addrLine>Universität zu Köln&lt;/t:addrLine>
+&lt;t:addrLine>Cologne Center for eHumanities&lt;/t:addrLine>
+&lt;t:addrLine>Albertus-Magnus-Platz&lt;/t:addrLine>
+&lt;t:addrLine>50923 Köln&lt;/t:addrLine>
+&lt;/t:address>
+&lt;/publicationStmt>
+&lt;sourceDesc>
+&lt;p>Converted from an OASIS Open Document&lt;/p>
+&lt;/sourceDesc>
+&lt;/fileDesc>
+&lt;encodingDesc>
+&lt;appInfo>
+&lt;application ident="DHCONVALIDATOR" version="1.22">
+&lt;label>DHConvalidator&lt;/label>
+&lt;/application>
+&lt;/appInfo>
+&lt;/encodingDesc>
+&lt;profileDesc>
+&lt;textClass>
+&lt;keywords scheme="ConfTool" n="category">
+&lt;term>Paper&lt;/term>
+&lt;/keywords>
+&lt;keywords scheme="ConfTool" n="subcategory">
+&lt;term>Posterpräsentation&lt;/term>
+&lt;/keywords>
+&lt;keywords scheme="ConfTool" n="keywords">
+&lt;term>Komplexität&lt;/term>
+&lt;term>Syntax&lt;/term>
+&lt;term>Dependenzparsing&lt;/term>
+&lt;/keywords>
+&lt;keywords scheme="ConfTool" n="topics">
+&lt;term>Bewertung&lt;/term>
+&lt;term>Stilistische Analyse&lt;/term>
+&lt;term>Literatur&lt;/term>
+&lt;term>Text&lt;/term>
+&lt;/keywords>
+&lt;/textClass>
+&lt;/profileDesc>
+&lt;/teiHeader>
+&lt;text>
+&lt;body>
+&lt;p>Die Beschreibung der Komplexität von (literarischen) Texten muss für jeden Aspekt, also Vokabular, Satz/Syntax, uneigentliche Rede, Intertextualität usw., gesondert vorgenommen werden. Im Folgenden beschäftigen wir uns mit dem Aspekt Satz/Syntax, der lange Zeit vor allem über die durchschnittliche Satzlänge erfasst wurde (Sherman 1893, Flesch 1948, Best 2005). Dabei bleibt aber, so eine naheliegende Vermutung, die interne syntaktische Komplexität eines Satzes unberücksichtigt. Die meisten Leser würden z. B. einen stark verschachtelten Satz als syntaktisch komplexer einstufen als eine gleich lange parataktische Konstruktion. Unsere Arbeit zielt darauf, diesen Aspekt unter Verwendung der im 
+&lt;hi rend="italic">Natural Language Processing&lt;/hi> (NLP) weitverbreiteten dependenzbasierten Syntaxmodelle messen zu können. Kontext unserer Überlegungen ist das Unterfangen, Textkomplexität quantitativ zu erfassen. So können Annahmen in der Literaturwissenschaft und Linguistik über die unterschiedliche Komplexität der Texte bestimmter Gattungen, Autoren oder gar von Teilsystemen, z. B. populäre Literatur vs. Hochliteratur, empirisch überprüft werden. Bislang wird die syntaktische Komplexität überwiegend auf Phrasenstrukturbäumen ermittelt (für eine Übersicht siehe Vajjala Balakrishna 2015: 51–52), allerdings fehlen dafür in vielen Sprachen verlässliche NLP-Werkzeuge. Auf der anderen Seite stehen mit dem Universal-Dependencies-Projekt 
+
+                (Nivre u. a. 2016)&lt;hi rend="superscript">1&lt;/hi> bereits mehr als 100 manuell erstellte Baumbanken in über 60 Sprachen (darunter auch ältere Sprachstufen) in einer sprachübergreifend konsistenten Annotation zur Verfügung und es gibt computerlinguistische Pipelines wie etwa UDPipe 
+
+                (Straka und Straková 2017),&lt;hi rend="superscript">2&lt;/hi> die Texte in allen diesen Sprachen tokenisieren, taggen, lemmatisieren und parsen können. Von daher liegt es nahe, die syntaktische Komplexität von Texten auch mit dependenzbasierten Maßen zu messen. Einen ersten Vergleich von dependenzbasierten Komplexitätsmaßen hat Oya (2012) durchgeführt.
+&lt;/p>
+&lt;p>Für unsere Untersuchung verwenden wir ein deutschsprachiges Korpus von knapp 1.000 Romanen aus den letzten 60 Jahren. Bei etwa 85% der Texte handelt es sich um Heftromane (Romanzen (13%), Science Fiction (65%) und Horror (7%)), bei den restlichen 15% um Hochliteratur (kanonische Texte und/oder Literaturpreisträger). Alle Texte wurden mit dem DARIAH-DKPro-Wrapper 
+
+            (Jannidis u. a. 2016)&lt;hi rend="superscript">3&lt;/hi> verarbeitet.
+&lt;/p>
+&lt;p>Syntaktische Komplexitätsmaße sind typischerweise auf Satzebene definiert. Wir berechnen für jeden Satz die folgenden 
+
+            Maße:&lt;hi rend="superscript">4&lt;/hi>
+&lt;/p>
+&lt;list type="unordered">
+&lt;item>
+&lt;hi rend="italic">Average dependency distance&lt;/hi> (= durchschnittlicher Abstand zweier durch eine Dependenzrelation verbundener Tokens (Liu 2008; Oya 2011))
+&lt;/item>
+&lt;item>
+&lt;hi rend="italic">Closeness centrality&lt;/hi> des Wurzelknotens (= Kehrwert der durchschnittlichen Länge der kürzesten Pfade vom Wurzelknoten zu allen anderen Knoten); hier bedeutet ein kleinerer Wert eine höhere Komplexität
+&lt;/item>
+&lt;item>
+&lt;hi rend="italic">Closeness centralization&lt;/hi> (= Erweiterung der closeness centrality von einem einzelnen Knoten auf einen ganzen Graphen (Freeman 1978)); hier bedeutet ein kleinerer Wert eine höhere Komplexität
+&lt;/item>
+&lt;item>
+&lt;hi rend="italic">Outdegree centralization&lt;/hi>, die Erweiterung der 
+&lt;hi rend="italic">outdegree centrality&lt;/hi> (= Anzahl der von einem Knoten ausgehenden Kanten) von einem einzelnen Knoten auf einen ganzen Graph (Freeman 1978); hier bedeutet ein kleinerer Wert eine höhere Komplexität
+&lt;/item>
+&lt;item>Durchschnittliche Anzahl von Dependenten pro Token&lt;/item>
+&lt;item>Höhe des Dependenzbaums (= der längste kürzeste Pfad vom Wurzelknoten zu einem anderen Knoten)&lt;/item>
+&lt;/list>
+&lt;p>Zum Vergleich ermitteln wir zusätzlich die Satzlänge, d. h. die Anzahl Tokens pro Satz. Um einen Wert für die syntaktische Komplexität eines gesamten Textes zu erhalten, bilden wir jeweils die Mittelwerte über alle Sätze.&lt;/p>
+&lt;p>Die Ergebnisse sind in den folgenden sechs Grafiken als Boxplots dargestellt (der weiße Kreis markiert zusätzlich das arithmetische Mittel):&lt;/p>
+&lt;p>
+&lt;figure>
+&lt;graphic url="276_final-68845ec25494ae1982a7a30987f775c8.png"/>
+&lt;head>
+&lt;lb/>Abbildung 1. Average dependency distance
+&lt;/head>
+&lt;/figure>
+&lt;/p>
+&lt;p>
+&lt;figure>
+&lt;graphic url="276_final-1f62594c2dfb29b65e70c58e7ee284e7.png"/>
+&lt;head>
+&lt;lb/>Abbildung 2. Closeness centrality
+&lt;/head>
+&lt;/figure>
+&lt;/p>
+&lt;p>
+&lt;figure>
+&lt;graphic url="276_final-ff69c8b4433888f12f70e7f1fb1605a5.png"/>
+&lt;head>
+&lt;lb/>Abbildung 3.Closeness centralization
+&lt;/head>
+&lt;/figure>
+&lt;/p>
+&lt;p>
+&lt;figure>
+&lt;graphic url="276_final-d922d2d76c44248f84b586d67e3aa57e.png"/>
+&lt;head>
+&lt;lb/>Abbildung 4. Outdegree centralization
+&lt;/head>
+&lt;/figure>
+&lt;/p>
+&lt;p>
+&lt;figure>
+&lt;graphic url="276_final-23d73a7b0099d30df4446a04ab753ac7.png"/>
+&lt;head>
+&lt;lb/>Abbildung 5. Dependenten pro Token
+&lt;/head>
+&lt;/figure>
+&lt;/p>
+&lt;p>
+&lt;figure>
+&lt;graphic url="276_final-1e6207df237e2b0b63ed26529241b14e.png"/>
+&lt;head>
+&lt;lb/>Abbildung 6. Höhe des Dependenzbaums
+&lt;/head>
+&lt;/figure>
+&lt;/p>
+&lt;p>
+&lt;figure>
+&lt;graphic url="276_final-245096169bf192b9c8122d44f23b3a77.png"/>
+&lt;head>
+&lt;lb/>Abbildung 7. Satzlänge
+&lt;/head>
+&lt;/figure>
+&lt;/p>
+&lt;p>Die Boxplots für Hoch- und Schemaliteratur insgesamt würden nahelegen, dass es für die untersuchten Maße keinen statistisch signifikanten Unterschied zwischen Hoch- und Schemaliteratur gibt. Die Detailansicht für die einzelnen Unterkategorien der Schemaliteratur bringt jedoch Interessantes zu Tage. Zwischen den einzelnen Kategorien untereinander gibt es deutlich ausgeprägtere Unterschiede als zwischen Hoch- und Schemaliteratur insgesamt. Besonders auffällig ist, dass fast alle Maße eine signifikant höhere Komplexität für Science-Fiction-Literatur anzeigen als für Romanzen oder Horrorhefte. Wahrscheinlich liegt das daran, dass das SF-Teilkorpus aus Romanen der Serie ‚Perry Rhodan‘ besteht, der auch von literaturwissenschaftlicher Seite eine Sonderrolle innerhalb der Heftromane zugeschrieben wird (Nast 2017). Ebenfalls auffällig ist, dass alle Maße eine viel größere Streuung für die Hochliteratur aufweisen als für die zahlenmäßig viel stärker vertretene Schemaliteratur. Dafür bieten sich zwei Erklärungsmodelle an: a) die Hochliteratur besteht eigentlich aus mehreren Gattungen, die sich wiederum deutlich voneinander unterscheiden; b) der Unterschied lässt sich auf die unterschiedlichen Eigenschaften der literarischen Teilfelder zurückführen – In der Hochliteratur dominiert der Wert Variation/Überraschung, in den populären Genres der Wert Erwartbarkeit, wahrscheinlich sogar erzwungen durch Lektoren.&lt;/p>
+&lt;p>
+&lt;figure>
+&lt;graphic url="276_final-a66dfd02e1a2a1359940fc1174e5638c.png"/>
+&lt;head>
+&lt;lb/>Abbildung 8.Pearson-Korrelationen zwischen den Komplexitätsmaßen
+&lt;/head>
+&lt;/figure>
+&lt;/p>
+&lt;p>Eine Analyse der Pearson-Korrelationen zwischen den Komplexitätsmaßen zeigt, dass einige davon nahezu perfekt 
+
+            korrelieren.&lt;hi rend="superscript">5&lt;/hi> So beispielsweise 
+&lt;hi rend="italic">closeness centralization&lt;/hi> und 
+&lt;hi rend="italic">outdegree centralization&lt;/hi> (r = 0,99), 
+&lt;hi rend="italic">closeness centrality&lt;/hi> und 
+&lt;hi rend="italic">closeness centralization&lt;/hi> (r = 0,98), die Höhe des Dependenzbaums und die Satzlänge (r = 0,97) und 
+&lt;hi rend="italic">closeness centrality&lt;/hi> und die Anzahl Dependenten pro Wort (r = 0,96). 
+&lt;hi rend="italic">Average dependency distance&lt;/hi> ist den anderen dependenzbasierten Maßen am unähnlichsten (0,50 ≤ r ≤ 0,78). Insgesamt betrachtet, korrelieren die verwendeten Maße zwar recht robust mit der durchschnittlichen Satzlänge (0,65 ≤ r ≤ 0,83), scheinen sich aber (mit Ausnahme der Höhe des Dependenzbaums) doch auch ausreichend stark von ihr zu unterscheiden um den durch das Parsen der Texte und Berechnen der dependenzbasierten Maße entstehenden Mehraufwand zu rechtfertigen. Zusätzlich könnte es durch die gezielte Entwicklung längenkorrigierter Maße gelingen, unterschiedliche Aspekte syntaktischer Komplexität getrennt voneinander zu erfassen.
+&lt;/p>
+&lt;/body>
+&lt;back>
+&lt;div type="notes">
+&lt;note xml:id="ftn1" place="foot" n="1">
+&lt;ptr target="http://universaldependencies.org/"/>
+&lt;/note>
+&lt;note xml:id="ftn2" place="foot" n="2">
+&lt;ptr target="http://ufal.mff.cuni.cz/udpipe"/>
+&lt;/note>
+&lt;note xml:id="ftn3" place="foot" n="3">
+&lt;ptr target="https://github.com/DARIAH-DE/DARIAH-DKPro-Wrapper"/>
+&lt;/note>
+&lt;note xml:id="ftn4" place="foot" n="4">
+&lt;ptr target="https://github.com/tsproisl/Linguistic_and_Stylistic_Complexity"/>
+&lt;/note>
+&lt;note xml:id="ftn5" place="foot" n="5">
+&lt;hi rend="italic">Closeness centrality&lt;/hi>, 
+&lt;hi rend="italic">closeness centralization&lt;/hi> und 
+&lt;hi rend="italic">outdegree centralization&lt;/hi> wurden für diese Analyse mit −1 multipliziert, damit für alle Maße größere Werte eine höhere Komplexität anzeigen.
+&lt;/note>
+&lt;/div>
+&lt;div type="bibliogr">
+&lt;listBibl>
+&lt;head>Bibliographie&lt;/head>
+&lt;bibl>
+&lt;hi rend="bold">Best, Karl-Heinz (2005):&lt;/hi>
+&lt;hi rend="italic">Satzlänge&lt;/hi>, 
+
+                        in: 
+&lt;hi rend="bold">Köhler, Reinhard / Altmann, Gabriel / Piotrowski, Rajmund G.:&lt;/hi>
+&lt;hi rend="italic">Quantitative Linguistik / Quantitative Linguistics&lt;/hi>. 
+
+                        Berlin: de Gruyter-Mouton 298–304.
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Flesch, Rudolf (1948):&lt;/hi>
+&lt;hi rend="italic">A New Readability Yardstick&lt;/hi>, 
+
+                        in: Journal of Applied Psychology 32 Nr. 3: 221–233. 
+&lt;ref target="https://doi.org/10.1037/h0057532">10.1037/h0057532&lt;/ref>[letzter Zugriff am 8. Januar 2019].
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Freeman, Linton C. (1978):&lt;/hi>
+&lt;hi rend="italic">Centrality in Social Networks. Conceptual Clarification&lt;/hi>, 
+
+                        in: Social Networks 1, Nr. 3: 215–239. 
+&lt;ref target="https://doi.org/10.1016/0378-8733(78)90021-7">10.1016/0378-8733(78)90021-7&lt;/ref> [letzter Zugriff am 15. Oktober 2018].
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Jannidis, Fotis / Pernes, Stefan / Pielström, Steffen / Reger, Isabella / Reimers, Nils / Vitt, Thorsten (2016):&lt;/hi>
+&lt;hi rend="italic">DARIAH-DKPro-Wrapper Output Format (DOF) Specification&lt;/hi>, 
+
+                        in: DARIAH-DE Working Papers 20. 
+&lt;ptr target="http://nbn-resolving.de/urn:nbn:de:gbv:7-dariah-2016-6-2"/> [letzter Zugriff am 15. Oktober 2018].
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Liu, Haitao (2008):&lt;/hi>
+&lt;hi rend="italic">Dependency Distance as a Metric of Language Comprehension Difficulty&lt;/hi>, 
+
+                        in: Journal of Cognitive Science 9, Nr. 2: 159–191. 
+&lt;ref target="http://cogsci.snu.ac.kr/jcs/issue/vol9/no2/JCS_Vol_09_+No_2+p.+159+-+191+Dependency+Distance+as+a+Metric+of+Language+Comprehension+Difficulty.pdf">http://cogsci.snu.ac.kr/jcs/issue/vol9/no2/JCS_Vol_09_+No_2+p.+159+-&lt;/ref>
+&lt;ref target="http://cogsci.snu.ac.kr/jcs/issue/vol9/no2/JCS_Vol_09_+No_2+p.+159+-+191+Dependency+Distance+as+a+Metric+of+Language+Comprehension+Difficulty.pdf">+191+Dependency+Distance+as+a+Metric+of+Language+Comprehension+Difficulty.pdf&lt;/ref> [letzter Zugriff am 15. Oktober 2018].
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Nast, Mirjam (2017): &lt;/hi>
+&lt;hi rend="italic">„Perry Rhodan“ lesen. Zur Serialität der Lektürepraktiken einer Heftromanserie&lt;/hi>. 
+
+                        Bielefeld: transcript.
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Nivre, Joakim / >de Marneffe, Marie-Catherine / Ginter, Filip / Goldberg, Yoav / Hajic, Jan / Manning, Christopher D. / McDonald, Ryan / Petrov, Slav / Pyysalo, Sampo / Silveira, Natalia / Tsarfaty, Reut / Zeman, Daniel (2016):&lt;/hi>
+&lt;hi rend="italic">Universal Dependencies v1: A Multilingual Treebank Collection&lt;/hi>, 
+
+                        in: 
+&lt;hi rend="bold">Calzolari, Nicoletta / Choukri, Khalid / Declerck, Thierry / Goggi, Sara / Grobelnik, Marko / Maegaard, Bente / Mariani, Joseph / Mazo, Hélène / Moreno, Asunción / Odijk, Jan / Piperidis, Stelios (eds.): &lt;/hi>
+&lt;hi rend="italic">Proceedings of the Tenth International Conference on Language Resources and Evaluation (LREC’16).&lt;/hi>
+
+                        Portorož: European Language Resources Association 1659–1666. 
+&lt;ptr target="http://www.lrec-conf.org/proceedings/lrec2016/pdf/348_Paper.pdf"/> [letzter Zugriff am 15. Oktober 2018].
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Oya, Masanori (2011):&lt;/hi>
+&lt;hi rend="italic">Syntactic Dependency Distance as Sentence Complexity Measure&lt;/hi>, 
+
+                        in: Proceedings of the 16th International Conference of Pan-Pacific Association of Applied Linguistics. 313–316. 
+&lt;ptr target="https://www.researchgate.net/profile/Masanori_Oya2/publication/266584664_Syntactic_Dependency_Distance_as_Sentence_Complexity_Measure/links/54fe480f0cf2672e223ed842.pdf"/> [letzter Zugriff am 15. Oktober 2018].
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Sherman, Lucius Adelno (1893): &lt;/hi>
+&lt;hi rend="italic">Analytics of literature, a manual for the objective study of English prose and poetry&lt;/hi>. 
+
+                        Boston: Ginn. 
+&lt;ptr target="https://archive.org/details/analyticsofliter00sheruoft/page/n3"/> [letzter Zugriff am 8. Januar 2019].
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Straka, Milan / Straková, Jana (2017):&lt;/hi>
+&lt;hi rend="italic">Tokenizing, POS Tagging, Lemmatizing and Parsing UD 2.0 with UDPipe&lt;/hi>, 
+
+                        in: Proceedings of the CoNLL 2017 Shared Task: Multilingual Parsing from Raw Text to Universal Dependencies. Vancouver: Association for Computational Linguistics 88–99. 
+&lt;ptr target="http://www.aclweb.org/anthology/K17-3009"/> [letzter Zugriff am 15. Oktober 2018].
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Vajjala Balakrishna, Sowmya (2015): &lt;/hi>
+&lt;hi rend="italic">Analyzing Text Complexity and Text Simplification: Connecting Linguistics, Processing and Educational Applications&lt;/hi>. 
+
+                        Dissertation, Eberhard-Karls-Universität Tübingen. 
+&lt;ptr target="https://publikationen.uni-tuebingen.de/xmlui/bitstream/handle/10900/64359/THESIS-FINAL.pdf"/> [letzter Zugriff am 15. Oktober 2018].
+&lt;/bibl>
+&lt;/listBibl>
+&lt;/div>
+&lt;/back>
+&lt;/text>
+&lt;/TEI>
+    </textSource>
+    <text>
+
+    
+
+
+
+
+
+Die Beschreibung der Komplexität von (literarischen) Texten muss für jeden Aspekt, also Vokabular, Satz/Syntax, uneigentliche Rede, Intertextualität usw., gesondert vorgenommen werden. Im Folgenden beschäftigen wir uns mit dem Aspekt Satz/Syntax, der lange Zeit vor allem über die durchschnittliche Satzlänge erfasst wurde (Sherman 1893, Flesch 1948, Best 2005). Dabei bleibt aber, so eine naheliegende Vermutung, die interne syntaktische Komplexität eines Satzes unberücksichtigt. Die meisten Leser würden z. B. einen stark verschachtelten Satz als syntaktisch komplexer einstufen als eine gleich lange parataktische Konstruktion. Unsere Arbeit zielt darauf, diesen Aspekt unter Verwendung der im   Natural Language Processing (NLP) weitverbreiteten dependenzbasierten Syntaxmodelle messen zu können. Kontext unserer Überlegungen ist das Unterfangen, Textkomplexität quantitativ zu erfassen. So können Annahmen in der Literaturwissenschaft und Linguistik über die unterschiedliche Komplexität der Texte bestimmter Gattungen, Autoren oder gar von Teilsystemen, z. B. populäre Literatur vs. Hochliteratur, empirisch überprüft werden. Bislang wird die syntaktische Komplexität überwiegend auf Phrasenstrukturbäumen ermittelt (für eine Übersicht siehe Vajjala Balakrishna 2015: 51–52), allerdings fehlen dafür in vielen Sprachen verlässliche NLP-Werkzeuge. Auf der anderen Seite stehen mit dem Universal-Dependencies-Projekt                  (Nivre u. a. 2016)1 bereits mehr als 100 manuell erstellte Baumbanken in über 60 Sprachen (darunter auch ältere Sprachstufen) in einer sprachübergreifend konsistenten Annotation zur Verfügung und es gibt computerlinguistische Pipelines wie etwa UDPipe                  (Straka und Straková 2017),2 die Texte in allen diesen Sprachen tokenisieren, taggen, lemmatisieren und parsen können. Von daher liegt es nahe, die syntaktische Komplexität von Texten auch mit dependenzbasierten Maßen zu messen. Einen ersten Vergleich von dependenzbasierten Komplexitätsmaßen hat Oya (2012) durchgeführt.  
+
+  
+
+Für unsere Untersuchung verwenden wir ein deutschsprachiges Korpus von knapp 1.000 Romanen aus den letzten 60 Jahren. Bei etwa 85% der Texte handelt es sich um Heftromane (Romanzen (13%), Science Fiction (65%) und Horror (7%)), bei den restlichen 15% um Hochliteratur (kanonische Texte und/oder Literaturpreisträger). Alle Texte wurden mit dem DARIAH-DKPro-Wrapper              (Jannidis u. a. 2016)3 verarbeitet.  
+
+  
+
+Syntaktische Komplexitätsmaße sind typischerweise auf Satzebene definiert. Wir berechnen für jeden Satz die folgenden              Maße:4  
+
+    
+
+Zum Vergleich ermitteln wir zusätzlich die Satzlänge, d. h. die Anzahl Tokens pro Satz. Um einen Wert für die syntaktische Komplexität eines gesamten Textes zu erhalten, bilden wir jeweils die Mittelwerte über alle Sätze.
+
+  
+
+Die Ergebnisse sind in den folgenden sechs Grafiken als Boxplots dargestellt (der weiße Kreis markiert zusätzlich das arithmetische Mittel):
+
+
+  
+
+Die Boxplots für Hoch- und Schemaliteratur insgesamt würden nahelegen, dass es für die untersuchten Maße keinen statistisch signifikanten Unterschied zwischen Hoch- und Schemaliteratur gibt. Die Detailansicht für die einzelnen Unterkategorien der Schemaliteratur bringt jedoch Interessantes zu Tage. Zwischen den einzelnen Kategorien untereinander gibt es deutlich ausgeprägtere Unterschiede als zwischen Hoch- und Schemaliteratur insgesamt. Besonders auffällig ist, dass fast alle Maße eine signifikant höhere Komplexität für Science-Fiction-Literatur anzeigen als für Romanzen oder Horrorhefte. Wahrscheinlich liegt das daran, dass das SF-Teilkorpus aus Romanen der Serie ‚Perry Rhodan‘ besteht, der auch von literaturwissenschaftlicher Seite eine Sonderrolle innerhalb der Heftromane zugeschrieben wird (Nast 2017). Ebenfalls auffällig ist, dass alle Maße eine viel größere Streuung für die Hochliteratur aufweisen als für die zahlenmäßig viel stärker vertretene Schemaliteratur. Dafür bieten sich zwei Erklärungsmodelle an: a) die Hochliteratur besteht eigentlich aus mehreren Gattungen, die sich wiederum deutlich voneinander unterscheiden; b) der Unterschied lässt sich auf die unterschiedlichen Eigenschaften der literarischen Teilfelder zurückführen – In der Hochliteratur dominiert der Wert Variation/Überraschung, in den populären Genres der Wert Erwartbarkeit, wahrscheinlich sogar erzwungen durch Lektoren.
+
+
+  
+
+Eine Analyse der Pearson-Korrelationen zwischen den Komplexitätsmaßen zeigt, dass einige davon nahezu perfekt              korrelieren.5 So beispielsweise   closeness centralization und   outdegree centralization (r = 0,99),   closeness centrality und   closeness centralization (r = 0,98), die Höhe des Dependenzbaums und die Satzlänge (r = 0,97) und   closeness centrality und die Anzahl Dependenten pro Wort (r = 0,96).   Average dependency distance ist den anderen dependenzbasierten Maßen am unähnlichsten (0,50 ≤ r ≤ 0,78). Insgesamt betrachtet, korrelieren die verwendeten Maße zwar recht robust mit der durchschnittlichen Satzlänge (0,65 ≤ r ≤ 0,83), scheinen sich aber (mit Ausnahme der Höhe des Dependenzbaums) doch auch ausreichend stark von ihr zu unterscheiden um den durch das Parsen der Texte und Berechnen der dependenzbasierten Maße entstehenden Mehraufwand zu rechtfertigen. Zusätzlich könnte es durch die gezielte Entwicklung längenkorrigierter Maße gelingen, unterschiedliche Aspekte syntaktischer Komplexität getrennt voneinander zu erfassen.  
+
+
+  Average dependency distance (= durchschnittlicher Abstand zweier durch eine Dependenzrelation verbundener Tokens (Liu 2008; Oya 2011))  
+
+  
+
+  Closeness centrality des Wurzelknotens (= Kehrwert der durchschnittlichen Länge der kürzesten Pfade vom Wurzelknoten zu allen anderen Knoten); hier bedeutet ein kleinerer Wert eine höhere Komplexität  
+
+  
+
+  Closeness centralization (= Erweiterung der closeness centrality von einem einzelnen Knoten auf einen ganzen Graphen (Freeman 1978)); hier bedeutet ein kleinerer Wert eine höhere Komplexität  
+
+  
+
+  Outdegree centralization, die Erweiterung der   outdegree centrality (= Anzahl der von einem Knoten ausgehenden Kanten) von einem einzelnen Knoten auf einen ganzen Graph (Freeman 1978); hier bedeutet ein kleinerer Wert eine höhere Komplexität  
+
+  
+
+Durchschnittliche Anzahl von Dependenten pro Token
+
+  
+
+Höhe des Dependenzbaums (= der längste kürzeste Pfad vom Wurzelknoten zu einem anderen Knoten)
+
+  
+
+Abbildung 1. Average dependency distance  
+
+
+
+      
+
+
+
+  
+Abbildung 2. Closeness centrality  
+
+Abbildung 3.Closeness centralization  
+
+
+
+      
+
+
+
+  
+Abbildung 4. Outdegree centralization  
+
+Abbildung 5. Dependenten pro Token  
+
+
+
+      
+
+
+
+  
+Abbildung 6. Höhe des Dependenzbaums  
+
+Abbildung 7. Satzlänge  
+
+
+
+      
+
+
+
+  
+Abbildung 8.Pearson-Korrelationen zwischen den Komplexitätsmaßen  
+
+
+  
+
+        Best, Karl-Heinz (2005):   Satzlänge,                          in:   Köhler, Reinhard / Altmann, Gabriel / Piotrowski, Rajmund G.:  Quantitative Linguistik / Quantitative Linguistics.                          Berlin: de Gruyter-Mouton 298–304.      Flesch, Rudolf (1948):   A New Readability Yardstick,                          in: Journal of Applied Psychology 32 Nr. 3: 221–233.   
+10.1037/h0057532
+[letzter Zugriff am 8. Januar 2019].      Freeman, Linton C. (1978):   Centrality in Social Networks. Conceptual Clarification,                          in: Social Networks 1, Nr. 3: 215–239.   
+10.1016/0378-8733(78)90021-7
+ [letzter Zugriff am 15. Oktober 2018].      Jannidis, Fotis / Pernes, Stefan / Pielström, Steffen / Reger, Isabella / Reimers, Nils / Vitt, Thorsten (2016):   DARIAH-DKPro-Wrapper Output Format (DOF) Specification,                          in: DARIAH-DE Working Papers 20.    [letzter Zugriff am 15. Oktober 2018].      Liu, Haitao (2008):   Dependency Distance as a Metric of Language Comprehension Difficulty,                          in: Journal of Cognitive Science 9, Nr. 2: 159–191.   
+http://cogsci.snu.ac.kr/jcs/issue/vol9/no2/JCS_Vol_09_+No_2+p.+159+-
+  
++191+Dependency+Distance+as+a+Metric+of+Language+Comprehension+Difficulty.pdf
+ [letzter Zugriff am 15. Oktober 2018].      Nast, Mirjam (2017):   „Perry Rhodan“ lesen. Zur Serialität der Lektürepraktiken einer Heftromanserie.                          Bielefeld: transcript.      Nivre, Joakim / >de Marneffe, Marie-Catherine / Ginter, Filip / Goldberg, Yoav / Hajic, Jan / Manning, Christopher D. / McDonald, Ryan / Petrov, Slav / Pyysalo, Sampo / Silveira, Natalia / Tsarfaty, Reut / Zeman, Daniel (2016):   Universal Dependencies v1: A Multilingual Treebank Collection,                          in:   Calzolari, Nicoletta / Choukri, Khalid / Declerck, Thierry / Goggi, Sara / Grobelnik, Marko / Maegaard, Bente / Mariani, Joseph / Mazo, Hélène / Moreno, Asunción / Odijk, Jan / Piperidis, Stelios (eds.):   Proceedings of the Tenth International Conference on Language Resources and Evaluation (LREC’16).                          Portorož: European Language Resources Association 1659–1666.    [letzter Zugriff am 15. Oktober 2018].      Oya, Masanori (2011):   Syntactic Dependency Distance as Sentence Complexity Measure,                          in: Proceedings of the 16th International Conference of Pan-Pacific Association of Applied Linguistics. 313–316.    [letzter Zugriff am 15. Oktober 2018].      Sherman, Lucius Adelno (1893):   Analytics of literature, a manual for the objective study of English prose and poetry.                          Boston: Ginn.    [letzter Zugriff am 8. Januar 2019].      Straka, Milan / Straková, Jana (2017):   Tokenizing, POS Tagging, Lemmatizing and Parsing UD 2.0 with UDPipe,                          in: Proceedings of the CoNLL 2017 Shared Task: Multilingual Parsing from Raw Text to Universal Dependencies. Vancouver: Association for Computational Linguistics 88–99.    [letzter Zugriff am 15. Oktober 2018].      Vajjala Balakrishna, Sowmya (2015):   Analyzing Text Complexity and Text Simplification: Connecting Linguistics, Processing and Educational Applications.                          Dissertation, Eberhard-Karls-Universität Tübingen.    [letzter Zugriff am 15. Oktober 2018].      
+
+
+
+
+   
+
+
+
+ Closeness centrality,   closeness centralization und   outdegree centralization wurden für diese Analyse mit −1 multipliziert, damit für alle Maße größere Werte eine höhere Komplexität anzeigen.  
+
+
+
+Bibliographie
+
+</text>
+    <tc:tokens xmlns:tc="http://www.dspin.de/data/textcorpus">
+      <tc:token ID="w1">Die</tc:token>
+      <tc:token ID="w2">Beschreibung</tc:token>
+      <tc:token ID="w3">der</tc:token>
+      <tc:token ID="w4">Komplexität</tc:token>
+      <tc:token ID="w5">von</tc:token>
+      <tc:token ID="w6">(</tc:token>
+      <tc:token ID="w7">literarischen</tc:token>
+      <tc:token ID="w8">)</tc:token>
+      <tc:token ID="w9">Texten</tc:token>
+      <tc:token ID="wa">muss</tc:token>
+      <tc:token ID="wb">für</tc:token>
+      <tc:token ID="wc">jeden</tc:token>
+      <tc:token ID="wd">Aspekt</tc:token>
+      <tc:token ID="we">,</tc:token>
+      <tc:token ID="wf">also</tc:token>
+      <tc:token ID="w10">Vokabular</tc:token>
+      <tc:token ID="w11">,</tc:token>
+      <tc:token ID="w12">Satz</tc:token>
+      <tc:token ID="w13">/Syntax</tc:token>
+      <tc:token ID="w14">,</tc:token>
+      <tc:token ID="w15">uneigentliche</tc:token>
+      <tc:token ID="w16">Rede</tc:token>
+      <tc:token ID="w17">,</tc:token>
+      <tc:token ID="w18">Intertextualität</tc:token>
+      <tc:token ID="w19">usw.</tc:token>
+      <tc:token ID="w1a">,</tc:token>
+      <tc:token ID="w1b">gesondert</tc:token>
+      <tc:token ID="w1c">vorgenommen</tc:token>
+      <tc:token ID="w1d">werden</tc:token>
+      <tc:token ID="w1e">.</tc:token>
+      <tc:token ID="w1f">Im</tc:token>
+      <tc:token ID="w20">Folgenden</tc:token>
+      <tc:token ID="w21">beschäftigen</tc:token>
+      <tc:token ID="w22">wir</tc:token>
+      <tc:token ID="w23">uns</tc:token>
+      <tc:token ID="w24">mit</tc:token>
+      <tc:token ID="w25">dem</tc:token>
+      <tc:token ID="w26">Aspekt</tc:token>
+      <tc:token ID="w27">Satz</tc:token>
+      <tc:token ID="w28">/Syntax</tc:token>
+      <tc:token ID="w29">,</tc:token>
+      <tc:token ID="w2a">der</tc:token>
+      <tc:token ID="w2b">lange</tc:token>
+      <tc:token ID="w2c">Zeit</tc:token>
+      <tc:token ID="w2d">vor</tc:token>
+      <tc:token ID="w2e">allem</tc:token>
+      <tc:token ID="w2f">über</tc:token>
+      <tc:token ID="w30">die</tc:token>
+      <tc:token ID="w31">durchschnittliche</tc:token>
+      <tc:token ID="w32">Satzlänge</tc:token>
+      <tc:token ID="w33">erfasst</tc:token>
+      <tc:token ID="w34">wurde</tc:token>
+      <tc:token ID="w35">(</tc:token>
+      <tc:token ID="w36">Sherman</tc:token>
+      <tc:token ID="w37">1893</tc:token>
+      <tc:token ID="w38">,</tc:token>
+      <tc:token ID="w39">Flesch</tc:token>
+      <tc:token ID="w3a">1948</tc:token>
+      <tc:token ID="w3b">,</tc:token>
+      <tc:token ID="w3c">Best</tc:token>
+      <tc:token ID="w3d">2005</tc:token>
+      <tc:token ID="w3e">)</tc:token>
+      <tc:token ID="w3f">.</tc:token>
+      <tc:token ID="w40">Dabei</tc:token>
+      <tc:token ID="w41">bleibt</tc:token>
+      <tc:token ID="w42">aber</tc:token>
+      <tc:token ID="w43">,</tc:token>
+      <tc:token ID="w44">so</tc:token>
+      <tc:token ID="w45">eine</tc:token>
+      <tc:token ID="w46">naheliegende</tc:token>
+      <tc:token ID="w47">Vermutung</tc:token>
+      <tc:token ID="w48">,</tc:token>
+      <tc:token ID="w49">die</tc:token>
+      <tc:token ID="w4a">interne</tc:token>
+      <tc:token ID="w4b">syntaktische</tc:token>
+      <tc:token ID="w4c">Komplexität</tc:token>
+      <tc:token ID="w4d">eines</tc:token>
+      <tc:token ID="w4e">Satzes</tc:token>
+      <tc:token ID="w4f">unberücksichtigt</tc:token>
+      <tc:token ID="w50">.</tc:token>
+      <tc:token ID="w51">Die</tc:token>
+      <tc:token ID="w52">meisten</tc:token>
+      <tc:token ID="w53">Leser</tc:token>
+      <tc:token ID="w54">würden</tc:token>
+      <tc:token ID="w55">z.</tc:token>
+      <tc:token ID="w56">B.</tc:token>
+      <tc:token ID="w57">einen</tc:token>
+      <tc:token ID="w58">stark</tc:token>
+      <tc:token ID="w59">verschachtelten</tc:token>
+      <tc:token ID="w5a">Satz</tc:token>
+      <tc:token ID="w5b">als</tc:token>
+      <tc:token ID="w5c">syntaktisch</tc:token>
+      <tc:token ID="w5d">komplexer</tc:token>
+      <tc:token ID="w5e">einstufen</tc:token>
+      <tc:token ID="w5f">als</tc:token>
+      <tc:token ID="w60">eine</tc:token>
+      <tc:token ID="w61">gleich</tc:token>
+      <tc:token ID="w62">lange</tc:token>
+      <tc:token ID="w63">parataktische</tc:token>
+      <tc:token ID="w64">Konstruktion</tc:token>
+      <tc:token ID="w65">.</tc:token>
+      <tc:token ID="w66">Unsere</tc:token>
+      <tc:token ID="w67">Arbeit</tc:token>
+      <tc:token ID="w68">zielt</tc:token>
+      <tc:token ID="w69">darauf</tc:token>
+      <tc:token ID="w6a">,</tc:token>
+      <tc:token ID="w6b">diesen</tc:token>
+      <tc:token ID="w6c">Aspekt</tc:token>
+      <tc:token ID="w6d">unter</tc:token>
+      <tc:token ID="w6e">Verwendung</tc:token>
+      <tc:token ID="w6f">der</tc:token>
+      <tc:token ID="w70">im</tc:token>
+      <tc:token ID="w71">Natural</tc:token>
+      <tc:token ID="w72">Language</tc:token>
+      <tc:token ID="w73">Processing</tc:token>
+      <tc:token ID="w74">(</tc:token>
+      <tc:token ID="w75">NLP</tc:token>
+      <tc:token ID="w76">)</tc:token>
+      <tc:token ID="w77">weitverbreiteten</tc:token>
+      <tc:token ID="w78">dependenzbasierten</tc:token>
+      <tc:token ID="w79">Syntaxmodelle</tc:token>
+      <tc:token ID="w7a">messen</tc:token>
+      <tc:token ID="w7b">zu</tc:token>
+      <tc:token ID="w7c">können</tc:token>
+      <tc:token ID="w7d">.</tc:token>
+      <tc:token ID="w7e">Kontext</tc:token>
+      <tc:token ID="w7f">unserer</tc:token>
+      <tc:token ID="w80">Überlegungen</tc:token>
+      <tc:token ID="w81">ist</tc:token>
+      <tc:token ID="w82">das</tc:token>
+      <tc:token ID="w83">Unterfangen</tc:token>
+      <tc:token ID="w84">,</tc:token>
+      <tc:token ID="w85">Textkomplexität</tc:token>
+      <tc:token ID="w86">quantitativ</tc:token>
+      <tc:token ID="w87">zu</tc:token>
+      <tc:token ID="w88">erfassen</tc:token>
+      <tc:token ID="w89">.</tc:token>
+      <tc:token ID="w8a">So</tc:token>
+      <tc:token ID="w8b">können</tc:token>
+      <tc:token ID="w8c">Annahmen</tc:token>
+      <tc:token ID="w8d">in</tc:token>
+      <tc:token ID="w8e">der</tc:token>
+      <tc:token ID="w8f">Literaturwissenschaft</tc:token>
+      <tc:token ID="w90">und</tc:token>
+      <tc:token ID="w91">Linguistik</tc:token>
+      <tc:token ID="w92">über</tc:token>
+      <tc:token ID="w93">die</tc:token>
+      <tc:token ID="w94">unterschiedliche</tc:token>
+      <tc:token ID="w95">Komplexität</tc:token>
+      <tc:token ID="w96">der</tc:token>
+      <tc:token ID="w97">Texte</tc:token>
+      <tc:token ID="w98">bestimmter</tc:token>
+      <tc:token ID="w99">Gattungen</tc:token>
+      <tc:token ID="w9a">,</tc:token>
+      <tc:token ID="w9b">Autoren</tc:token>
+      <tc:token ID="w9c">oder</tc:token>
+      <tc:token ID="w9d">gar</tc:token>
+      <tc:token ID="w9e">von</tc:token>
+      <tc:token ID="w9f">Teilsystemen</tc:token>
+      <tc:token ID="wa0">,</tc:token>
+      <tc:token ID="wa1">z.</tc:token>
+      <tc:token ID="wa2">B.</tc:token>
+      <tc:token ID="wa3">populäre</tc:token>
+      <tc:token ID="wa4">Literatur</tc:token>
+      <tc:token ID="wa5">vs</tc:token>
+      <tc:token ID="wa6">.</tc:token>
+      <tc:token ID="wa7">Hochliteratur</tc:token>
+      <tc:token ID="wa8">,</tc:token>
+      <tc:token ID="wa9">empirisch</tc:token>
+      <tc:token ID="waa">überprüft</tc:token>
+      <tc:token ID="wab">werden</tc:token>
+      <tc:token ID="wac">.</tc:token>
+      <tc:token ID="wad">Bislang</tc:token>
+      <tc:token ID="wae">wird</tc:token>
+      <tc:token ID="waf">die</tc:token>
+      <tc:token ID="wb0">syntaktische</tc:token>
+      <tc:token ID="wb1">Komplexität</tc:token>
+      <tc:token ID="wb2">überwiegend</tc:token>
+      <tc:token ID="wb3">auf</tc:token>
+      <tc:token ID="wb4">Phrasenstrukturbäumen</tc:token>
+      <tc:token ID="wb5">ermittelt</tc:token>
+      <tc:token ID="wb6">(</tc:token>
+      <tc:token ID="wb7">für</tc:token>
+      <tc:token ID="wb8">eine</tc:token>
+      <tc:token ID="wb9">Übersicht</tc:token>
+      <tc:token ID="wba">siehe</tc:token>
+      <tc:token ID="wbb">Vajjala</tc:token>
+      <tc:token ID="wbc">Balakrishna</tc:token>
+      <tc:token ID="wbd">2015</tc:token>
+      <tc:token ID="wbe">:</tc:token>
+      <tc:token ID="wbf">51–52</tc:token>
+      <tc:token ID="wc0">)</tc:token>
+      <tc:token ID="wc1">,</tc:token>
+      <tc:token ID="wc2">allerdings</tc:token>
+      <tc:token ID="wc3">fehlen</tc:token>
+      <tc:token ID="wc4">dafür</tc:token>
+      <tc:token ID="wc5">in</tc:token>
+      <tc:token ID="wc6">vielen</tc:token>
+      <tc:token ID="wc7">Sprachen</tc:token>
+      <tc:token ID="wc8">verlässliche</tc:token>
+      <tc:token ID="wc9">NLP-Werkzeuge</tc:token>
+      <tc:token ID="wca">.</tc:token>
+      <tc:token ID="wcb">Auf</tc:token>
+      <tc:token ID="wcc">der</tc:token>
+      <tc:token ID="wcd">anderen</tc:token>
+      <tc:token ID="wce">Seite</tc:token>
+      <tc:token ID="wcf">stehen</tc:token>
+      <tc:token ID="wd0">mit</tc:token>
+      <tc:token ID="wd1">dem</tc:token>
+      <tc:token ID="wd2">Universal-Dependencies-Projekt</tc:token>
+      <tc:token ID="wd3">(</tc:token>
+      <tc:token ID="wd4">Nivre</tc:token>
+      <tc:token ID="wd5">u.</tc:token>
+      <tc:token ID="wd6">a.</tc:token>
+      <tc:token ID="wd7">2016</tc:token>
+      <tc:token ID="wd8">)1</tc:token>
+      <tc:token ID="wd9">bereits</tc:token>
+      <tc:token ID="wda">mehr</tc:token>
+      <tc:token ID="wdb">als</tc:token>
+      <tc:token ID="wdc">100</tc:token>
+      <tc:token ID="wdd">manuell</tc:token>
+      <tc:token ID="wde">erstellte</tc:token>
+      <tc:token ID="wdf">Baumbanken</tc:token>
+      <tc:token ID="we0">in</tc:token>
+      <tc:token ID="we1">über</tc:token>
+      <tc:token ID="we2">60</tc:token>
+      <tc:token ID="we3">Sprachen</tc:token>
+      <tc:token ID="we4">(</tc:token>
+      <tc:token ID="we5">darunter</tc:token>
+      <tc:token ID="we6">auch</tc:token>
+      <tc:token ID="we7">ältere</tc:token>
+      <tc:token ID="we8">Sprachstufen</tc:token>
+      <tc:token ID="we9">)</tc:token>
+      <tc:token ID="wea">in</tc:token>
+      <tc:token ID="web">einer</tc:token>
+      <tc:token ID="wec">sprachübergreifend</tc:token>
+      <tc:token ID="wed">konsistenten</tc:token>
+      <tc:token ID="wee">Annotation</tc:token>
+      <tc:token ID="wef">zur</tc:token>
+      <tc:token ID="wf0">Verfügung</tc:token>
+      <tc:token ID="wf1">und</tc:token>
+      <tc:token ID="wf2">es</tc:token>
+      <tc:token ID="wf3">gibt</tc:token>
+      <tc:token ID="wf4">computerlinguistische</tc:token>
+      <tc:token ID="wf5">Pipelines</tc:token>
+      <tc:token ID="wf6">wie</tc:token>
+      <tc:token ID="wf7">etwa</tc:token>
+      <tc:token ID="wf8">UDPipe</tc:token>
+      <tc:token ID="wf9">(</tc:token>
+      <tc:token ID="wfa">Straka</tc:token>
+      <tc:token ID="wfb">und</tc:token>
+      <tc:token ID="wfc">Straková</tc:token>
+      <tc:token ID="wfd">2017</tc:token>
+      <tc:token ID="wfe">),2</tc:token>
+      <tc:token ID="wff">die</tc:token>
+      <tc:token ID="w100">Texte</tc:token>
+      <tc:token ID="w101">in</tc:token>
+      <tc:token ID="w102">allen</tc:token>
+      <tc:token ID="w103">diesen</tc:token>
+      <tc:token ID="w104">Sprachen</tc:token>
+      <tc:token ID="w105">tokenisieren</tc:token>
+      <tc:token ID="w106">,</tc:token>
+      <tc:token ID="w107">taggen</tc:token>
+      <tc:token ID="w108">,</tc:token>
+      <tc:token ID="w109">lemmatisieren</tc:token>
+      <tc:token ID="w10a">und</tc:token>
+      <tc:token ID="w10b">parsen</tc:token>
+      <tc:token ID="w10c">können</tc:token>
+      <tc:token ID="w10d">.</tc:token>
+      <tc:token ID="w10e">Von</tc:token>
+      <tc:token ID="w10f">daher</tc:token>
+      <tc:token ID="w110">liegt</tc:token>
+      <tc:token ID="w111">es</tc:token>
+      <tc:token ID="w112">nahe</tc:token>
+      <tc:token ID="w113">,</tc:token>
+      <tc:token ID="w114">die</tc:token>
+      <tc:token ID="w115">syntaktische</tc:token>
+      <tc:token ID="w116">Komplexität</tc:token>
+      <tc:token ID="w117">von</tc:token>
+      <tc:token ID="w118">Texten</tc:token>
+      <tc:token ID="w119">auch</tc:token>
+      <tc:token ID="w11a">mit</tc:token>
+      <tc:token ID="w11b">dependenzbasierten</tc:token>
+      <tc:token ID="w11c">Maßen</tc:token>
+      <tc:token ID="w11d">zu</tc:token>
+      <tc:token ID="w11e">messen</tc:token>
+      <tc:token ID="w11f">.</tc:token>
+      <tc:token ID="w120">Einen</tc:token>
+      <tc:token ID="w121">ersten</tc:token>
+      <tc:token ID="w122">Vergleich</tc:token>
+      <tc:token ID="w123">von</tc:token>
+      <tc:token ID="w124">dependenzbasierten</tc:token>
+      <tc:token ID="w125">Komplexitätsmaßen</tc:token>
+      <tc:token ID="w126">hat</tc:token>
+      <tc:token ID="w127">Oya</tc:token>
+      <tc:token ID="w128">(</tc:token>
+      <tc:token ID="w129">2012</tc:token>
+      <tc:token ID="w12a">)</tc:token>
+      <tc:token ID="w12b">durchgeführt</tc:token>
+      <tc:token ID="w12c">.</tc:token>
+      <tc:token ID="w12d">Für</tc:token>
+      <tc:token ID="w12e">unsere</tc:token>
+      <tc:token ID="w12f">Untersuchung</tc:token>
+      <tc:token ID="w130">verwenden</tc:token>
+      <tc:token ID="w131">wir</tc:token>
+      <tc:token ID="w132">ein</tc:token>
+      <tc:token ID="w133">deutschsprachiges</tc:token>
+      <tc:token ID="w134">Korpus</tc:token>
+      <tc:token ID="w135">von</tc:token>
+      <tc:token ID="w136">knapp</tc:token>
+      <tc:token ID="w137">1.000</tc:token>
+      <tc:token ID="w138">Romanen</tc:token>
+      <tc:token ID="w139">aus</tc:token>
+      <tc:token ID="w13a">den</tc:token>
+      <tc:token ID="w13b">letzten</tc:token>
+      <tc:token ID="w13c">60</tc:token>
+      <tc:token ID="w13d">Jahren</tc:token>
+      <tc:token ID="w13e">.</tc:token>
+      <tc:token ID="w13f">Bei</tc:token>
+      <tc:token ID="w140">etwa</tc:token>
+      <tc:token ID="w141">85</tc:token>
+      <tc:token ID="w142">%</tc:token>
+      <tc:token ID="w143">der</tc:token>
+      <tc:token ID="w144">Texte</tc:token>
+      <tc:token ID="w145">handelt</tc:token>
+      <tc:token ID="w146">es</tc:token>
+      <tc:token ID="w147">sich</tc:token>
+      <tc:token ID="w148">um</tc:token>
+      <tc:token ID="w149">Heftromane</tc:token>
+      <tc:token ID="w14a">(</tc:token>
+      <tc:token ID="w14b">Romanzen</tc:token>
+      <tc:token ID="w14c">(</tc:token>
+      <tc:token ID="w14d">13</tc:token>
+      <tc:token ID="w14e">%</tc:token>
+      <tc:token ID="w14f">)</tc:token>
+      <tc:token ID="w150">,</tc:token>
+      <tc:token ID="w151">Science</tc:token>
+      <tc:token ID="w152">Fiction</tc:token>
+      <tc:token ID="w153">(</tc:token>
+      <tc:token ID="w154">65</tc:token>
+      <tc:token ID="w155">%</tc:token>
+      <tc:token ID="w156">)</tc:token>
+      <tc:token ID="w157">und</tc:token>
+      <tc:token ID="w158">Horror</tc:token>
+      <tc:token ID="w159">(</tc:token>
+      <tc:token ID="w15a">7</tc:token>
+      <tc:token ID="w15b">%</tc:token>
+      <tc:token ID="w15c">)</tc:token>
+      <tc:token ID="w15d">)</tc:token>
+      <tc:token ID="w15e">,</tc:token>
+      <tc:token ID="w15f">bei</tc:token>
+      <tc:token ID="w160">den</tc:token>
+      <tc:token ID="w161">restlichen</tc:token>
+      <tc:token ID="w162">15</tc:token>
+      <tc:token ID="w163">%</tc:token>
+      <tc:token ID="w164">um</tc:token>
+      <tc:token ID="w165">Hochliteratur</tc:token>
+      <tc:token ID="w166">(</tc:token>
+      <tc:token ID="w167">kanonische</tc:token>
+      <tc:token ID="w168">Texte</tc:token>
+      <tc:token ID="w169">und</tc:token>
+      <tc:token ID="w16a">/</tc:token>
+      <tc:token ID="w16b">oder</tc:token>
+      <tc:token ID="w16c">Literaturpreisträger</tc:token>
+      <tc:token ID="w16d">)</tc:token>
+      <tc:token ID="w16e">.</tc:token>
+      <tc:token ID="w16f">Alle</tc:token>
+      <tc:token ID="w170">Texte</tc:token>
+      <tc:token ID="w171">wurden</tc:token>
+      <tc:token ID="w172">mit</tc:token>
+      <tc:token ID="w173">dem</tc:token>
+      <tc:token ID="w174">DARIAH-DKPro-Wrapper</tc:token>
+      <tc:token ID="w175">(</tc:token>
+      <tc:token ID="w176">Jannidis</tc:token>
+      <tc:token ID="w177">u.</tc:token>
+      <tc:token ID="w178">a.</tc:token>
+      <tc:token ID="w179">2016</tc:token>
+      <tc:token ID="w17a">)3</tc:token>
+      <tc:token ID="w17b">verarbeitet</tc:token>
+      <tc:token ID="w17c">.</tc:token>
+      <tc:token ID="w17d">Syntaktische</tc:token>
+      <tc:token ID="w17e">Komplexitätsmaße</tc:token>
+      <tc:token ID="w17f">sind</tc:token>
+      <tc:token ID="w180">typischerweise</tc:token>
+      <tc:token ID="w181">auf</tc:token>
+      <tc:token ID="w182">Satzebene</tc:token>
+      <tc:token ID="w183">definiert</tc:token>
+      <tc:token ID="w184">.</tc:token>
+      <tc:token ID="w185">Wir</tc:token>
+      <tc:token ID="w186">berechnen</tc:token>
+      <tc:token ID="w187">für</tc:token>
+      <tc:token ID="w188">jeden</tc:token>
+      <tc:token ID="w189">Satz</tc:token>
+      <tc:token ID="w18a">die</tc:token>
+      <tc:token ID="w18b">folgenden</tc:token>
+      <tc:token ID="w18c">Maße:4</tc:token>
+      <tc:token ID="w18d">Zum</tc:token>
+      <tc:token ID="w18e">Vergleich</tc:token>
+      <tc:token ID="w18f">ermitteln</tc:token>
+      <tc:token ID="w190">wir</tc:token>
+      <tc:token ID="w191">zusätzlich</tc:token>
+      <tc:token ID="w192">die</tc:token>
+      <tc:token ID="w193">Satzlänge</tc:token>
+      <tc:token ID="w194">,</tc:token>
+      <tc:token ID="w195">d.</tc:token>
+      <tc:token ID="w196">h.</tc:token>
+      <tc:token ID="w197">die</tc:token>
+      <tc:token ID="w198">Anzahl</tc:token>
+      <tc:token ID="w199">Tokens</tc:token>
+      <tc:token ID="w19a">pro</tc:token>
+      <tc:token ID="w19b">Satz</tc:token>
+      <tc:token ID="w19c">.</tc:token>
+      <tc:token ID="w19d">Um</tc:token>
+      <tc:token ID="w19e">einen</tc:token>
+      <tc:token ID="w19f">Wert</tc:token>
+      <tc:token ID="w1a0">für</tc:token>
+      <tc:token ID="w1a1">die</tc:token>
+      <tc:token ID="w1a2">syntaktische</tc:token>
+      <tc:token ID="w1a3">Komplexität</tc:token>
+      <tc:token ID="w1a4">eines</tc:token>
+      <tc:token ID="w1a5">gesamten</tc:token>
+      <tc:token ID="w1a6">Textes</tc:token>
+      <tc:token ID="w1a7">zu</tc:token>
+      <tc:token ID="w1a8">erhalten</tc:token>
+      <tc:token ID="w1a9">,</tc:token>
+      <tc:token ID="w1aa">bilden</tc:token>
+      <tc:token ID="w1ab">wir</tc:token>
+      <tc:token ID="w1ac">jeweils</tc:token>
+      <tc:token ID="w1ad">die</tc:token>
+      <tc:token ID="w1ae">Mittelwerte</tc:token>
+      <tc:token ID="w1af">über</tc:token>
+      <tc:token ID="w1b0">alle</tc:token>
+      <tc:token ID="w1b1">Sätze</tc:token>
+      <tc:token ID="w1b2">.</tc:token>
+      <tc:token ID="w1b3">Die</tc:token>
+      <tc:token ID="w1b4">Ergebnisse</tc:token>
+      <tc:token ID="w1b5">sind</tc:token>
+      <tc:token ID="w1b6">in</tc:token>
+      <tc:token ID="w1b7">den</tc:token>
+      <tc:token ID="w1b8">folgenden</tc:token>
+      <tc:token ID="w1b9">sechs</tc:token>
+      <tc:token ID="w1ba">Grafiken</tc:token>
+      <tc:token ID="w1bb">als</tc:token>
+      <tc:token ID="w1bc">Boxplots</tc:token>
+      <tc:token ID="w1bd">dargestellt</tc:token>
+      <tc:token ID="w1be">(</tc:token>
+      <tc:token ID="w1bf">der</tc:token>
+      <tc:token ID="w1c0">weiße</tc:token>
+      <tc:token ID="w1c1">Kreis</tc:token>
+      <tc:token ID="w1c2">markiert</tc:token>
+      <tc:token ID="w1c3">zusätzlich</tc:token>
+      <tc:token ID="w1c4">das</tc:token>
+      <tc:token ID="w1c5">arithmetische</tc:token>
+      <tc:token ID="w1c6">Mittel</tc:token>
+      <tc:token ID="w1c7">)</tc:token>
+      <tc:token ID="w1c8">:</tc:token>
+      <tc:token ID="w1c9">Die</tc:token>
+      <tc:token ID="w1ca">Boxplots</tc:token>
+      <tc:token ID="w1cb">für</tc:token>
+      <tc:token ID="w1cc">Hoch-</tc:token>
+      <tc:token ID="w1cd">und</tc:token>
+      <tc:token ID="w1ce">Schemaliteratur</tc:token>
+      <tc:token ID="w1cf">insgesamt</tc:token>
+      <tc:token ID="w1d0">würden</tc:token>
+      <tc:token ID="w1d1">nahelegen</tc:token>
+      <tc:token ID="w1d2">,</tc:token>
+      <tc:token ID="w1d3">dass</tc:token>
+      <tc:token ID="w1d4">es</tc:token>
+      <tc:token ID="w1d5">für</tc:token>
+      <tc:token ID="w1d6">die</tc:token>
+      <tc:token ID="w1d7">untersuchten</tc:token>
+      <tc:token ID="w1d8">Maße</tc:token>
+      <tc:token ID="w1d9">keinen</tc:token>
+      <tc:token ID="w1da">statistisch</tc:token>
+      <tc:token ID="w1db">signifikanten</tc:token>
+      <tc:token ID="w1dc">Unterschied</tc:token>
+      <tc:token ID="w1dd">zwischen</tc:token>
+      <tc:token ID="w1de">Hoch-</tc:token>
+      <tc:token ID="w1df">und</tc:token>
+      <tc:token ID="w1e0">Schemaliteratur</tc:token>
+      <tc:token ID="w1e1">gibt</tc:token>
+      <tc:token ID="w1e2">.</tc:token>
+      <tc:token ID="w1e3">Die</tc:token>
+      <tc:token ID="w1e4">Detailansicht</tc:token>
+      <tc:token ID="w1e5">für</tc:token>
+      <tc:token ID="w1e6">die</tc:token>
+      <tc:token ID="w1e7">einzelnen</tc:token>
+      <tc:token ID="w1e8">Unterkategorien</tc:token>
+      <tc:token ID="w1e9">der</tc:token>
+      <tc:token ID="w1ea">Schemaliteratur</tc:token>
+      <tc:token ID="w1eb">bringt</tc:token>
+      <tc:token ID="w1ec">jedoch</tc:token>
+      <tc:token ID="w1ed">Interessantes</tc:token>
+      <tc:token ID="w1ee">zu</tc:token>
+      <tc:token ID="w1ef">Tage</tc:token>
+      <tc:token ID="w1f0">.</tc:token>
+      <tc:token ID="w1f1">Zwischen</tc:token>
+      <tc:token ID="w1f2">den</tc:token>
+      <tc:token ID="w1f3">einzelnen</tc:token>
+      <tc:token ID="w1f4">Kategorien</tc:token>
+      <tc:token ID="w1f5">untereinander</tc:token>
+      <tc:token ID="w1f6">gibt</tc:token>
+      <tc:token ID="w1f7">es</tc:token>
+      <tc:token ID="w1f8">deutlich</tc:token>
+      <tc:token ID="w1f9">ausgeprägtere</tc:token>
+      <tc:token ID="w1fa">Unterschiede</tc:token>
+      <tc:token ID="w1fb">als</tc:token>
+      <tc:token ID="w1fc">zwischen</tc:token>
+      <tc:token ID="w1fd">Hoch-</tc:token>
+      <tc:token ID="w1fe">und</tc:token>
+      <tc:token ID="w1ff">Schemaliteratur</tc:token>
+      <tc:token ID="w200">insgesamt</tc:token>
+      <tc:token ID="w201">.</tc:token>
+      <tc:token ID="w202">Besonders</tc:token>
+      <tc:token ID="w203">auffällig</tc:token>
+      <tc:token ID="w204">ist</tc:token>
+      <tc:token ID="w205">,</tc:token>
+      <tc:token ID="w206">dass</tc:token>
+      <tc:token ID="w207">fast</tc:token>
+      <tc:token ID="w208">alle</tc:token>
+      <tc:token ID="w209">Maße</tc:token>
+      <tc:token ID="w20a">eine</tc:token>
+      <tc:token ID="w20b">signifikant</tc:token>
+      <tc:token ID="w20c">höhere</tc:token>
+      <tc:token ID="w20d">Komplexität</tc:token>
+      <tc:token ID="w20e">für</tc:token>
+      <tc:token ID="w20f">Science-Fiction-Literatur</tc:token>
+      <tc:token ID="w210">anzeigen</tc:token>
+      <tc:token ID="w211">als</tc:token>
+      <tc:token ID="w212">für</tc:token>
+      <tc:token ID="w213">Romanzen</tc:token>
+      <tc:token ID="w214">oder</tc:token>
+      <tc:token ID="w215">Horrorhefte</tc:token>
+      <tc:token ID="w216">.</tc:token>
+      <tc:token ID="w217">Wahrscheinlich</tc:token>
+      <tc:token ID="w218">liegt</tc:token>
+      <tc:token ID="w219">das</tc:token>
+      <tc:token ID="w21a">daran</tc:token>
+      <tc:token ID="w21b">,</tc:token>
+      <tc:token ID="w21c">dass</tc:token>
+      <tc:token ID="w21d">das</tc:token>
+      <tc:token ID="w21e">SF-Teilkorpus</tc:token>
+      <tc:token ID="w21f">aus</tc:token>
+      <tc:token ID="w220">Romanen</tc:token>
+      <tc:token ID="w221">der</tc:token>
+      <tc:token ID="w222">Serie</tc:token>
+      <tc:token ID="w223">‚</tc:token>
+      <tc:token ID="w224">Perry</tc:token>
+      <tc:token ID="w225">Rhodan</tc:token>
+      <tc:token ID="w226">‘</tc:token>
+      <tc:token ID="w227">besteht</tc:token>
+      <tc:token ID="w228">,</tc:token>
+      <tc:token ID="w229">der</tc:token>
+      <tc:token ID="w22a">auch</tc:token>
+      <tc:token ID="w22b">von</tc:token>
+      <tc:token ID="w22c">literaturwissenschaftlicher</tc:token>
+      <tc:token ID="w22d">Seite</tc:token>
+      <tc:token ID="w22e">eine</tc:token>
+      <tc:token ID="w22f">Sonderrolle</tc:token>
+      <tc:token ID="w230">innerhalb</tc:token>
+      <tc:token ID="w231">der</tc:token>
+      <tc:token ID="w232">Heftromane</tc:token>
+      <tc:token ID="w233">zugeschrieben</tc:token>
+      <tc:token ID="w234">wird</tc:token>
+      <tc:token ID="w235">(</tc:token>
+      <tc:token ID="w236">Nast</tc:token>
+      <tc:token ID="w237">2017</tc:token>
+      <tc:token ID="w238">)</tc:token>
+      <tc:token ID="w239">.</tc:token>
+      <tc:token ID="w23a">Ebenfalls</tc:token>
+      <tc:token ID="w23b">auffällig</tc:token>
+      <tc:token ID="w23c">ist</tc:token>
+      <tc:token ID="w23d">,</tc:token>
+      <tc:token ID="w23e">dass</tc:token>
+      <tc:token ID="w23f">alle</tc:token>
+      <tc:token ID="w240">Maße</tc:token>
+      <tc:token ID="w241">eine</tc:token>
+      <tc:token ID="w242">viel</tc:token>
+      <tc:token ID="w243">größere</tc:token>
+      <tc:token ID="w244">Streuung</tc:token>
+      <tc:token ID="w245">für</tc:token>
+      <tc:token ID="w246">die</tc:token>
+      <tc:token ID="w247">Hochliteratur</tc:token>
+      <tc:token ID="w248">aufweisen</tc:token>
+      <tc:token ID="w249">als</tc:token>
+      <tc:token ID="w24a">für</tc:token>
+      <tc:token ID="w24b">die</tc:token>
+      <tc:token ID="w24c">zahlenmäßig</tc:token>
+      <tc:token ID="w24d">viel</tc:token>
+      <tc:token ID="w24e">stärker</tc:token>
+      <tc:token ID="w24f">vertretene</tc:token>
+      <tc:token ID="w250">Schemaliteratur</tc:token>
+      <tc:token ID="w251">.</tc:token>
+      <tc:token ID="w252">Dafür</tc:token>
+      <tc:token ID="w253">bieten</tc:token>
+      <tc:token ID="w254">sich</tc:token>
+      <tc:token ID="w255">zwei</tc:token>
+      <tc:token ID="w256">Erklärungsmodelle</tc:token>
+      <tc:token ID="w257">an</tc:token>
+      <tc:token ID="w258">:</tc:token>
+      <tc:token ID="w259">a</tc:token>
+      <tc:token ID="w25a">)</tc:token>
+      <tc:token ID="w25b">die</tc:token>
+      <tc:token ID="w25c">Hochliteratur</tc:token>
+      <tc:token ID="w25d">besteht</tc:token>
+      <tc:token ID="w25e">eigentlich</tc:token>
+      <tc:token ID="w25f">aus</tc:token>
+      <tc:token ID="w260">mehreren</tc:token>
+      <tc:token ID="w261">Gattungen</tc:token>
+      <tc:token ID="w262">,</tc:token>
+      <tc:token ID="w263">die</tc:token>
+      <tc:token ID="w264">sich</tc:token>
+      <tc:token ID="w265">wiederum</tc:token>
+      <tc:token ID="w266">deutlich</tc:token>
+      <tc:token ID="w267">voneinander</tc:token>
+      <tc:token ID="w268">unterscheiden</tc:token>
+      <tc:token ID="w269">;</tc:token>
+      <tc:token ID="w26a">b</tc:token>
+      <tc:token ID="w26b">)</tc:token>
+      <tc:token ID="w26c">der</tc:token>
+      <tc:token ID="w26d">Unterschied</tc:token>
+      <tc:token ID="w26e">lässt</tc:token>
+      <tc:token ID="w26f">sich</tc:token>
+      <tc:token ID="w270">auf</tc:token>
+      <tc:token ID="w271">die</tc:token>
+      <tc:token ID="w272">unterschiedlichen</tc:token>
+      <tc:token ID="w273">Eigenschaften</tc:token>
+      <tc:token ID="w274">der</tc:token>
+      <tc:token ID="w275">literarischen</tc:token>
+      <tc:token ID="w276">Teilfelder</tc:token>
+      <tc:token ID="w277">zurückführen</tc:token>
+      <tc:token ID="w278">–</tc:token>
+      <tc:token ID="w279">In</tc:token>
+      <tc:token ID="w27a">der</tc:token>
+      <tc:token ID="w27b">Hochliteratur</tc:token>
+      <tc:token ID="w27c">dominiert</tc:token>
+      <tc:token ID="w27d">der</tc:token>
+      <tc:token ID="w27e">Wert</tc:token>
+      <tc:token ID="w27f">Variation/Überraschung</tc:token>
+      <tc:token ID="w280">,</tc:token>
+      <tc:token ID="w281">in</tc:token>
+      <tc:token ID="w282">den</tc:token>
+      <tc:token ID="w283">populären</tc:token>
+      <tc:token ID="w284">Genres</tc:token>
+      <tc:token ID="w285">der</tc:token>
+      <tc:token ID="w286">Wert</tc:token>
+      <tc:token ID="w287">Erwartbarkeit</tc:token>
+      <tc:token ID="w288">,</tc:token>
+      <tc:token ID="w289">wahrscheinlich</tc:token>
+      <tc:token ID="w28a">sogar</tc:token>
+      <tc:token ID="w28b">erzwungen</tc:token>
+      <tc:token ID="w28c">durch</tc:token>
+      <tc:token ID="w28d">Lektoren</tc:token>
+      <tc:token ID="w28e">.</tc:token>
+      <tc:token ID="w28f">Eine</tc:token>
+      <tc:token ID="w290">Analyse</tc:token>
+      <tc:token ID="w291">der</tc:token>
+      <tc:token ID="w292">Pearson-Korrelationen</tc:token>
+      <tc:token ID="w293">zwischen</tc:token>
+      <tc:token ID="w294">den</tc:token>
+      <tc:token ID="w295">Komplexitätsmaßen</tc:token>
+      <tc:token ID="w296">zeigt</tc:token>
+      <tc:token ID="w297">,</tc:token>
+      <tc:token ID="w298">dass</tc:token>
+      <tc:token ID="w299">einige</tc:token>
+      <tc:token ID="w29a">davon</tc:token>
+      <tc:token ID="w29b">nahezu</tc:token>
+      <tc:token ID="w29c">perfekt</tc:token>
+      <tc:token ID="w29d">korrelieren</tc:token>
+      <tc:token ID="w29e">.5</tc:token>
+      <tc:token ID="w29f">So</tc:token>
+      <tc:token ID="w2a0">beispielsweise</tc:token>
+      <tc:token ID="w2a1">closeness</tc:token>
+      <tc:token ID="w2a2">centralization</tc:token>
+      <tc:token ID="w2a3">und</tc:token>
+      <tc:token ID="w2a4">outdegree</tc:token>
+      <tc:token ID="w2a5">centralization</tc:token>
+      <tc:token ID="w2a6">(</tc:token>
+      <tc:token ID="w2a7">r</tc:token>
+      <tc:token ID="w2a8">=</tc:token>
+      <tc:token ID="w2a9">0,99</tc:token>
+      <tc:token ID="w2aa">)</tc:token>
+      <tc:token ID="w2ab">,</tc:token>
+      <tc:token ID="w2ac">closeness</tc:token>
+      <tc:token ID="w2ad">centrality</tc:token>
+      <tc:token ID="w2ae">und</tc:token>
+      <tc:token ID="w2af">closeness</tc:token>
+      <tc:token ID="w2b0">centralization</tc:token>
+      <tc:token ID="w2b1">(</tc:token>
+      <tc:token ID="w2b2">r</tc:token>
+      <tc:token ID="w2b3">=</tc:token>
+      <tc:token ID="w2b4">0,98</tc:token>
+      <tc:token ID="w2b5">)</tc:token>
+      <tc:token ID="w2b6">,</tc:token>
+      <tc:token ID="w2b7">die</tc:token>
+      <tc:token ID="w2b8">Höhe</tc:token>
+      <tc:token ID="w2b9">des</tc:token>
+      <tc:token ID="w2ba">Dependenzbaums</tc:token>
+      <tc:token ID="w2bb">und</tc:token>
+      <tc:token ID="w2bc">die</tc:token>
+      <tc:token ID="w2bd">Satzlänge</tc:token>
+      <tc:token ID="w2be">(</tc:token>
+      <tc:token ID="w2bf">r</tc:token>
+      <tc:token ID="w2c0">=</tc:token>
+      <tc:token ID="w2c1">0,97</tc:token>
+      <tc:token ID="w2c2">)</tc:token>
+      <tc:token ID="w2c3">und</tc:token>
+      <tc:token ID="w2c4">closeness</tc:token>
+      <tc:token ID="w2c5">centrality</tc:token>
+      <tc:token ID="w2c6">und</tc:token>
+      <tc:token ID="w2c7">die</tc:token>
+      <tc:token ID="w2c8">Anzahl</tc:token>
+      <tc:token ID="w2c9">Dependenten</tc:token>
+      <tc:token ID="w2ca">pro</tc:token>
+      <tc:token ID="w2cb">Wort</tc:token>
+      <tc:token ID="w2cc">(</tc:token>
+      <tc:token ID="w2cd">r</tc:token>
+      <tc:token ID="w2ce">=</tc:token>
+      <tc:token ID="w2cf">0,96</tc:token>
+      <tc:token ID="w2d0">)</tc:token>
+      <tc:token ID="w2d1">.</tc:token>
+      <tc:token ID="w2d2">Average</tc:token>
+      <tc:token ID="w2d3">dependency</tc:token>
+      <tc:token ID="w2d4">distance</tc:token>
+      <tc:token ID="w2d5">ist</tc:token>
+      <tc:token ID="w2d6">den</tc:token>
+      <tc:token ID="w2d7">anderen</tc:token>
+      <tc:token ID="w2d8">dependenzbasierten</tc:token>
+      <tc:token ID="w2d9">Maßen</tc:token>
+      <tc:token ID="w2da">am</tc:token>
+      <tc:token ID="w2db">unähnlichsten</tc:token>
+      <tc:token ID="w2dc">(</tc:token>
+      <tc:token ID="w2dd">0,50</tc:token>
+      <tc:token ID="w2de">≤</tc:token>
+      <tc:token ID="w2df">r</tc:token>
+      <tc:token ID="w2e0">≤</tc:token>
+      <tc:token ID="w2e1">0,78</tc:token>
+      <tc:token ID="w2e2">)</tc:token>
+      <tc:token ID="w2e3">.</tc:token>
+      <tc:token ID="w2e4">Insgesamt</tc:token>
+      <tc:token ID="w2e5">betrachtet</tc:token>
+      <tc:token ID="w2e6">,</tc:token>
+      <tc:token ID="w2e7">korrelieren</tc:token>
+      <tc:token ID="w2e8">die</tc:token>
+      <tc:token ID="w2e9">verwendeten</tc:token>
+      <tc:token ID="w2ea">Maße</tc:token>
+      <tc:token ID="w2eb">zwar</tc:token>
+      <tc:token ID="w2ec">recht</tc:token>
+      <tc:token ID="w2ed">robust</tc:token>
+      <tc:token ID="w2ee">mit</tc:token>
+      <tc:token ID="w2ef">der</tc:token>
+      <tc:token ID="w2f0">durchschnittlichen</tc:token>
+      <tc:token ID="w2f1">Satzlänge</tc:token>
+      <tc:token ID="w2f2">(</tc:token>
+      <tc:token ID="w2f3">0,65</tc:token>
+      <tc:token ID="w2f4">≤</tc:token>
+      <tc:token ID="w2f5">r</tc:token>
+      <tc:token ID="w2f6">≤</tc:token>
+      <tc:token ID="w2f7">0,83</tc:token>
+      <tc:token ID="w2f8">)</tc:token>
+      <tc:token ID="w2f9">,</tc:token>
+      <tc:token ID="w2fa">scheinen</tc:token>
+      <tc:token ID="w2fb">sich</tc:token>
+      <tc:token ID="w2fc">aber</tc:token>
+      <tc:token ID="w2fd">(</tc:token>
+      <tc:token ID="w2fe">mit</tc:token>
+      <tc:token ID="w2ff">Ausnahme</tc:token>
+      <tc:token ID="w300">der</tc:token>
+      <tc:token ID="w301">Höhe</tc:token>
+      <tc:token ID="w302">des</tc:token>
+      <tc:token ID="w303">Dependenzbaums</tc:token>
+      <tc:token ID="w304">)</tc:token>
+      <tc:token ID="w305">doch</tc:token>
+      <tc:token ID="w306">auch</tc:token>
+      <tc:token ID="w307">ausreichend</tc:token>
+      <tc:token ID="w308">stark</tc:token>
+      <tc:token ID="w309">von</tc:token>
+      <tc:token ID="w30a">ihr</tc:token>
+      <tc:token ID="w30b">zu</tc:token>
+      <tc:token ID="w30c">unterscheiden</tc:token>
+      <tc:token ID="w30d">um</tc:token>
+      <tc:token ID="w30e">den</tc:token>
+      <tc:token ID="w30f">durch</tc:token>
+      <tc:token ID="w310">das</tc:token>
+      <tc:token ID="w311">Parsen</tc:token>
+      <tc:token ID="w312">der</tc:token>
+      <tc:token ID="w313">Texte</tc:token>
+      <tc:token ID="w314">und</tc:token>
+      <tc:token ID="w315">Berechnen</tc:token>
+      <tc:token ID="w316">der</tc:token>
+      <tc:token ID="w317">dependenzbasierten</tc:token>
+      <tc:token ID="w318">Maße</tc:token>
+      <tc:token ID="w319">entstehenden</tc:token>
+      <tc:token ID="w31a">Mehraufwand</tc:token>
+      <tc:token ID="w31b">zu</tc:token>
+      <tc:token ID="w31c">rechtfertigen</tc:token>
+      <tc:token ID="w31d">.</tc:token>
+      <tc:token ID="w31e">Zusätzlich</tc:token>
+      <tc:token ID="w31f">könnte</tc:token>
+      <tc:token ID="w320">es</tc:token>
+      <tc:token ID="w321">durch</tc:token>
+      <tc:token ID="w322">die</tc:token>
+      <tc:token ID="w323">gezielte</tc:token>
+      <tc:token ID="w324">Entwicklung</tc:token>
+      <tc:token ID="w325">längenkorrigierter</tc:token>
+      <tc:token ID="w326">Maße</tc:token>
+      <tc:token ID="w327">gelingen</tc:token>
+      <tc:token ID="w328">,</tc:token>
+      <tc:token ID="w329">unterschiedliche</tc:token>
+      <tc:token ID="w32a">Aspekte</tc:token>
+      <tc:token ID="w32b">syntaktischer</tc:token>
+      <tc:token ID="w32c">Komplexität</tc:token>
+      <tc:token ID="w32d">getrennt</tc:token>
+      <tc:token ID="w32e">voneinander</tc:token>
+      <tc:token ID="w32f">zu</tc:token>
+      <tc:token ID="w330">erfassen</tc:token>
+      <tc:token ID="w331">.</tc:token>
+      <tc:token ID="w332">Average</tc:token>
+      <tc:token ID="w333">dependency</tc:token>
+      <tc:token ID="w334">distance</tc:token>
+      <tc:token ID="w335">(</tc:token>
+      <tc:token ID="w336">=</tc:token>
+      <tc:token ID="w337">durchschnittlicher</tc:token>
+      <tc:token ID="w338">Abstand</tc:token>
+      <tc:token ID="w339">zweier</tc:token>
+      <tc:token ID="w33a">durch</tc:token>
+      <tc:token ID="w33b">eine</tc:token>
+      <tc:token ID="w33c">Dependenzrelation</tc:token>
+      <tc:token ID="w33d">verbundener</tc:token>
+      <tc:token ID="w33e">Tokens</tc:token>
+      <tc:token ID="w33f">(</tc:token>
+      <tc:token ID="w340">Liu</tc:token>
+      <tc:token ID="w341">2008</tc:token>
+      <tc:token ID="w342">;</tc:token>
+      <tc:token ID="w343">Oya</tc:token>
+      <tc:token ID="w344">2011</tc:token>
+      <tc:token ID="w345">)</tc:token>
+      <tc:token ID="w346">)</tc:token>
+      <tc:token ID="w347">Closeness</tc:token>
+      <tc:token ID="w348">centrality</tc:token>
+      <tc:token ID="w349">des</tc:token>
+      <tc:token ID="w34a">Wurzelknotens</tc:token>
+      <tc:token ID="w34b">(</tc:token>
+      <tc:token ID="w34c">=</tc:token>
+      <tc:token ID="w34d">Kehrwert</tc:token>
+      <tc:token ID="w34e">der</tc:token>
+      <tc:token ID="w34f">durchschnittlichen</tc:token>
+      <tc:token ID="w350">Länge</tc:token>
+      <tc:token ID="w351">der</tc:token>
+      <tc:token ID="w352">kürzesten</tc:token>
+      <tc:token ID="w353">Pfade</tc:token>
+      <tc:token ID="w354">vom</tc:token>
+      <tc:token ID="w355">Wurzelknoten</tc:token>
+      <tc:token ID="w356">zu</tc:token>
+      <tc:token ID="w357">allen</tc:token>
+      <tc:token ID="w358">anderen</tc:token>
+      <tc:token ID="w359">Knoten</tc:token>
+      <tc:token ID="w35a">)</tc:token>
+      <tc:token ID="w35b">;</tc:token>
+      <tc:token ID="w35c">hier</tc:token>
+      <tc:token ID="w35d">bedeutet</tc:token>
+      <tc:token ID="w35e">ein</tc:token>
+      <tc:token ID="w35f">kleinerer</tc:token>
+      <tc:token ID="w360">Wert</tc:token>
+      <tc:token ID="w361">eine</tc:token>
+      <tc:token ID="w362">höhere</tc:token>
+      <tc:token ID="w363">Komplexität</tc:token>
+      <tc:token ID="w364">Closeness</tc:token>
+      <tc:token ID="w365">centralization</tc:token>
+      <tc:token ID="w366">(</tc:token>
+      <tc:token ID="w367">=</tc:token>
+      <tc:token ID="w368">Erweiterung</tc:token>
+      <tc:token ID="w369">der</tc:token>
+      <tc:token ID="w36a">closeness</tc:token>
+      <tc:token ID="w36b">centrality</tc:token>
+      <tc:token ID="w36c">von</tc:token>
+      <tc:token ID="w36d">einem</tc:token>
+      <tc:token ID="w36e">einzelnen</tc:token>
+      <tc:token ID="w36f">Knoten</tc:token>
+      <tc:token ID="w370">auf</tc:token>
+      <tc:token ID="w371">einen</tc:token>
+      <tc:token ID="w372">ganzen</tc:token>
+      <tc:token ID="w373">Graphen</tc:token>
+      <tc:token ID="w374">(</tc:token>
+      <tc:token ID="w375">Freeman</tc:token>
+      <tc:token ID="w376">1978</tc:token>
+      <tc:token ID="w377">)</tc:token>
+      <tc:token ID="w378">)</tc:token>
+      <tc:token ID="w379">;</tc:token>
+      <tc:token ID="w37a">hier</tc:token>
+      <tc:token ID="w37b">bedeutet</tc:token>
+      <tc:token ID="w37c">ein</tc:token>
+      <tc:token ID="w37d">kleinerer</tc:token>
+      <tc:token ID="w37e">Wert</tc:token>
+      <tc:token ID="w37f">eine</tc:token>
+      <tc:token ID="w380">höhere</tc:token>
+      <tc:token ID="w381">Komplexität</tc:token>
+      <tc:token ID="w382">Outdegree</tc:token>
+      <tc:token ID="w383">centralization</tc:token>
+      <tc:token ID="w384">,</tc:token>
+      <tc:token ID="w385">die</tc:token>
+      <tc:token ID="w386">Erweiterung</tc:token>
+      <tc:token ID="w387">der</tc:token>
+      <tc:token ID="w388">outdegree</tc:token>
+      <tc:token ID="w389">centrality</tc:token>
+      <tc:token ID="w38a">(</tc:token>
+      <tc:token ID="w38b">=</tc:token>
+      <tc:token ID="w38c">Anzahl</tc:token>
+      <tc:token ID="w38d">der</tc:token>
+      <tc:token ID="w38e">von</tc:token>
+      <tc:token ID="w38f">einem</tc:token>
+      <tc:token ID="w390">Knoten</tc:token>
+      <tc:token ID="w391">ausgehenden</tc:token>
+      <tc:token ID="w392">Kanten</tc:token>
+      <tc:token ID="w393">)</tc:token>
+      <tc:token ID="w394">von</tc:token>
+      <tc:token ID="w395">einem</tc:token>
+      <tc:token ID="w396">einzelnen</tc:token>
+      <tc:token ID="w397">Knoten</tc:token>
+      <tc:token ID="w398">auf</tc:token>
+      <tc:token ID="w399">einen</tc:token>
+      <tc:token ID="w39a">ganzen</tc:token>
+      <tc:token ID="w39b">Graph</tc:token>
+      <tc:token ID="w39c">(</tc:token>
+      <tc:token ID="w39d">Freeman</tc:token>
+      <tc:token ID="w39e">1978</tc:token>
+      <tc:token ID="w39f">)</tc:token>
+      <tc:token ID="w3a0">;</tc:token>
+      <tc:token ID="w3a1">hier</tc:token>
+      <tc:token ID="w3a2">bedeutet</tc:token>
+      <tc:token ID="w3a3">ein</tc:token>
+      <tc:token ID="w3a4">kleinerer</tc:token>
+      <tc:token ID="w3a5">Wert</tc:token>
+      <tc:token ID="w3a6">eine</tc:token>
+      <tc:token ID="w3a7">höhere</tc:token>
+      <tc:token ID="w3a8">Komplexität</tc:token>
+      <tc:token ID="w3a9">Durchschnittliche</tc:token>
+      <tc:token ID="w3aa">Anzahl</tc:token>
+      <tc:token ID="w3ab">von</tc:token>
+      <tc:token ID="w3ac">Dependenten</tc:token>
+      <tc:token ID="w3ad">pro</tc:token>
+      <tc:token ID="w3ae">Token</tc:token>
+      <tc:token ID="w3af">Höhe</tc:token>
+      <tc:token ID="w3b0">des</tc:token>
+      <tc:token ID="w3b1">Dependenzbaums</tc:token>
+      <tc:token ID="w3b2">(</tc:token>
+      <tc:token ID="w3b3">=</tc:token>
+      <tc:token ID="w3b4">der</tc:token>
+      <tc:token ID="w3b5">längste</tc:token>
+      <tc:token ID="w3b6">kürzeste</tc:token>
+      <tc:token ID="w3b7">Pfad</tc:token>
+      <tc:token ID="w3b8">vom</tc:token>
+      <tc:token ID="w3b9">Wurzelknoten</tc:token>
+      <tc:token ID="w3ba">zu</tc:token>
+      <tc:token ID="w3bb">einem</tc:token>
+      <tc:token ID="w3bc">anderen</tc:token>
+      <tc:token ID="w3bd">Knoten</tc:token>
+      <tc:token ID="w3be">)</tc:token>
+      <tc:token ID="w3bf">Abbildung</tc:token>
+      <tc:token ID="w3c0">1.</tc:token>
+      <tc:token ID="w3c1">Average</tc:token>
+      <tc:token ID="w3c2">dependency</tc:token>
+      <tc:token ID="w3c3">distance</tc:token>
+      <tc:token ID="w3c4">Abbildung</tc:token>
+      <tc:token ID="w3c5">2.</tc:token>
+      <tc:token ID="w3c6">Closeness</tc:token>
+      <tc:token ID="w3c7">centrality</tc:token>
+      <tc:token ID="w3c8">Abbildung</tc:token>
+      <tc:token ID="w3c9">3.</tc:token>
+      <tc:token ID="w3ca">Closeness</tc:token>
+      <tc:token ID="w3cb">centralization</tc:token>
+      <tc:token ID="w3cc">Abbildung</tc:token>
+      <tc:token ID="w3cd">4.</tc:token>
+      <tc:token ID="w3ce">Outdegree</tc:token>
+      <tc:token ID="w3cf">centralization</tc:token>
+      <tc:token ID="w3d0">Abbildung</tc:token>
+      <tc:token ID="w3d1">5.</tc:token>
+      <tc:token ID="w3d2">Dependenten</tc:token>
+      <tc:token ID="w3d3">pro</tc:token>
+      <tc:token ID="w3d4">Token</tc:token>
+      <tc:token ID="w3d5">Abbildung</tc:token>
+      <tc:token ID="w3d6">6.</tc:token>
+      <tc:token ID="w3d7">Höhe</tc:token>
+      <tc:token ID="w3d8">des</tc:token>
+      <tc:token ID="w3d9">Dependenzbaums</tc:token>
+      <tc:token ID="w3da">Abbildung</tc:token>
+      <tc:token ID="w3db">7.</tc:token>
+      <tc:token ID="w3dc">Satzlänge</tc:token>
+      <tc:token ID="w3dd">Abbildung</tc:token>
+      <tc:token ID="w3de">8.Pearson-Korrelationen</tc:token>
+      <tc:token ID="w3df">zwischen</tc:token>
+      <tc:token ID="w3e0">den</tc:token>
+      <tc:token ID="w3e1">Komplexitätsmaßen</tc:token>
+      <tc:token ID="w3e2">Best</tc:token>
+      <tc:token ID="w3e3">,</tc:token>
+      <tc:token ID="w3e4">Karl-Heinz</tc:token>
+      <tc:token ID="w3e5">(</tc:token>
+      <tc:token ID="w3e6">2005</tc:token>
+      <tc:token ID="w3e7">)</tc:token>
+      <tc:token ID="w3e8">:</tc:token>
+      <tc:token ID="w3e9">Satzlänge</tc:token>
+      <tc:token ID="w3ea">,</tc:token>
+      <tc:token ID="w3eb">in</tc:token>
+      <tc:token ID="w3ec">:</tc:token>
+      <tc:token ID="w3ed">Köhler</tc:token>
+      <tc:token ID="w3ee">,</tc:token>
+      <tc:token ID="w3ef">Reinhard</tc:token>
+      <tc:token ID="w3f0">/</tc:token>
+      <tc:token ID="w3f1">Altmann</tc:token>
+      <tc:token ID="w3f2">,</tc:token>
+      <tc:token ID="w3f3">Gabriel</tc:token>
+      <tc:token ID="w3f4">/</tc:token>
+      <tc:token ID="w3f5">Piotrowski</tc:token>
+      <tc:token ID="w3f6">,</tc:token>
+      <tc:token ID="w3f7">Rajmund</tc:token>
+      <tc:token ID="w3f8">G.</tc:token>
+      <tc:token ID="w3f9">:</tc:token>
+      <tc:token ID="w3fa">Quantitative</tc:token>
+      <tc:token ID="w3fb">Linguistik</tc:token>
+      <tc:token ID="w3fc">/</tc:token>
+      <tc:token ID="w3fd">Quantitative</tc:token>
+      <tc:token ID="w3fe">Linguistics</tc:token>
+      <tc:token ID="w3ff">.</tc:token>
+      <tc:token ID="w400">Berlin</tc:token>
+      <tc:token ID="w401">:</tc:token>
+      <tc:token ID="w402">de</tc:token>
+      <tc:token ID="w403">Gruyter-Mouton</tc:token>
+      <tc:token ID="w404">298–304</tc:token>
+      <tc:token ID="w405">.</tc:token>
+      <tc:token ID="w406">Flesch</tc:token>
+      <tc:token ID="w407">,</tc:token>
+      <tc:token ID="w408">Rudolf</tc:token>
+      <tc:token ID="w409">(</tc:token>
+      <tc:token ID="w40a">1948</tc:token>
+      <tc:token ID="w40b">)</tc:token>
+      <tc:token ID="w40c">:</tc:token>
+      <tc:token ID="w40d">A</tc:token>
+      <tc:token ID="w40e">New</tc:token>
+      <tc:token ID="w40f">Readability</tc:token>
+      <tc:token ID="w410">Yardstick</tc:token>
+      <tc:token ID="w411">,</tc:token>
+      <tc:token ID="w412">in</tc:token>
+      <tc:token ID="w413">:</tc:token>
+      <tc:token ID="w414">Journal</tc:token>
+      <tc:token ID="w415">of</tc:token>
+      <tc:token ID="w416">Applied</tc:token>
+      <tc:token ID="w417">Psychology</tc:token>
+      <tc:token ID="w418">32</tc:token>
+      <tc:token ID="w419">Nr.</tc:token>
+      <tc:token ID="w41a">3</tc:token>
+      <tc:token ID="w41b">:</tc:token>
+      <tc:token ID="w41c">221–233.</tc:token>
+      <tc:token ID="w41d">10.</tc:token>
+      <tc:token ID="w41e">1037/h</tc:token>
+      <tc:token ID="w41f">0057532</tc:token>
+      <tc:token ID="w420">[</tc:token>
+      <tc:token ID="w421">letzter</tc:token>
+      <tc:token ID="w422">Zugriff</tc:token>
+      <tc:token ID="w423">am</tc:token>
+      <tc:token ID="w424">8.</tc:token>
+      <tc:token ID="w425">Januar</tc:token>
+      <tc:token ID="w426">2019</tc:token>
+      <tc:token ID="w427">]</tc:token>
+      <tc:token ID="w428">.</tc:token>
+      <tc:token ID="w429">Freeman</tc:token>
+      <tc:token ID="w42a">,</tc:token>
+      <tc:token ID="w42b">Linton</tc:token>
+      <tc:token ID="w42c">C.</tc:token>
+      <tc:token ID="w42d">(</tc:token>
+      <tc:token ID="w42e">1978</tc:token>
+      <tc:token ID="w42f">)</tc:token>
+      <tc:token ID="w430">:</tc:token>
+      <tc:token ID="w431">Centrality</tc:token>
+      <tc:token ID="w432">in</tc:token>
+      <tc:token ID="w433">Social</tc:token>
+      <tc:token ID="w434">Networks</tc:token>
+      <tc:token ID="w435">.</tc:token>
+      <tc:token ID="w436">Conceptual</tc:token>
+      <tc:token ID="w437">Clarification</tc:token>
+      <tc:token ID="w438">,</tc:token>
+      <tc:token ID="w439">in</tc:token>
+      <tc:token ID="w43a">:</tc:token>
+      <tc:token ID="w43b">Social</tc:token>
+      <tc:token ID="w43c">Networks</tc:token>
+      <tc:token ID="w43d">1</tc:token>
+      <tc:token ID="w43e">,</tc:token>
+      <tc:token ID="w43f">Nr.</tc:token>
+      <tc:token ID="w440">3</tc:token>
+      <tc:token ID="w441">:</tc:token>
+      <tc:token ID="w442">215–239.</tc:token>
+      <tc:token ID="w443">10.</tc:token>
+      <tc:token ID="w444">1016/</tc:token>
+      <tc:token ID="w445">0378-8733(</tc:token>
+      <tc:token ID="w446">78</tc:token>
+      <tc:token ID="w447">)</tc:token>
+      <tc:token ID="w448">90021-7</tc:token>
+      <tc:token ID="w449">[</tc:token>
+      <tc:token ID="w44a">letzter</tc:token>
+      <tc:token ID="w44b">Zugriff</tc:token>
+      <tc:token ID="w44c">am</tc:token>
+      <tc:token ID="w44d">15.</tc:token>
+      <tc:token ID="w44e">Oktober</tc:token>
+      <tc:token ID="w44f">2018</tc:token>
+      <tc:token ID="w450">]</tc:token>
+      <tc:token ID="w451">.</tc:token>
+      <tc:token ID="w452">Jannidis</tc:token>
+      <tc:token ID="w453">,</tc:token>
+      <tc:token ID="w454">Fotis</tc:token>
+      <tc:token ID="w455">/</tc:token>
+      <tc:token ID="w456">Pernes</tc:token>
+      <tc:token ID="w457">,</tc:token>
+      <tc:token ID="w458">Stefan</tc:token>
+      <tc:token ID="w459">/</tc:token>
+      <tc:token ID="w45a">Pielström</tc:token>
+      <tc:token ID="w45b">,</tc:token>
+      <tc:token ID="w45c">Steffen</tc:token>
+      <tc:token ID="w45d">/</tc:token>
+      <tc:token ID="w45e">Reger</tc:token>
+      <tc:token ID="w45f">,</tc:token>
+      <tc:token ID="w460">Isabella</tc:token>
+      <tc:token ID="w461">/</tc:token>
+      <tc:token ID="w462">Reimers</tc:token>
+      <tc:token ID="w463">,</tc:token>
+      <tc:token ID="w464">Nils</tc:token>
+      <tc:token ID="w465">/</tc:token>
+      <tc:token ID="w466">Vitt</tc:token>
+      <tc:token ID="w467">,</tc:token>
+      <tc:token ID="w468">Thorsten</tc:token>
+      <tc:token ID="w469">(</tc:token>
+      <tc:token ID="w46a">2016</tc:token>
+      <tc:token ID="w46b">)</tc:token>
+      <tc:token ID="w46c">:</tc:token>
+      <tc:token ID="w46d">DARIAH-DKPro-Wrapper</tc:token>
+      <tc:token ID="w46e">Output</tc:token>
+      <tc:token ID="w46f">Format</tc:token>
+      <tc:token ID="w470">(</tc:token>
+      <tc:token ID="w471">DOF</tc:token>
+      <tc:token ID="w472">)</tc:token>
+      <tc:token ID="w473">Specification</tc:token>
+      <tc:token ID="w474">,</tc:token>
+      <tc:token ID="w475">in</tc:token>
+      <tc:token ID="w476">:</tc:token>
+      <tc:token ID="w477">DARIAH-DE</tc:token>
+      <tc:token ID="w478">Working</tc:token>
+      <tc:token ID="w479">Papers</tc:token>
+      <tc:token ID="w47a">20.</tc:token>
+      <tc:token ID="w47b">[</tc:token>
+      <tc:token ID="w47c">letzter</tc:token>
+      <tc:token ID="w47d">Zugriff</tc:token>
+      <tc:token ID="w47e">am</tc:token>
+      <tc:token ID="w47f">15.</tc:token>
+      <tc:token ID="w480">Oktober</tc:token>
+      <tc:token ID="w481">2018</tc:token>
+      <tc:token ID="w482">]</tc:token>
+      <tc:token ID="w483">.</tc:token>
+      <tc:token ID="w484">Liu</tc:token>
+      <tc:token ID="w485">,</tc:token>
+      <tc:token ID="w486">Haitao</tc:token>
+      <tc:token ID="w487">(</tc:token>
+      <tc:token ID="w488">2008</tc:token>
+      <tc:token ID="w489">)</tc:token>
+      <tc:token ID="w48a">:</tc:token>
+      <tc:token ID="w48b">Dependency</tc:token>
+      <tc:token ID="w48c">Distance</tc:token>
+      <tc:token ID="w48d">as</tc:token>
+      <tc:token ID="w48e">a</tc:token>
+      <tc:token ID="w48f">Metric</tc:token>
+      <tc:token ID="w490">of</tc:token>
+      <tc:token ID="w491">Language</tc:token>
+      <tc:token ID="w492">Comprehension</tc:token>
+      <tc:token ID="w493">Difficulty</tc:token>
+      <tc:token ID="w494">,</tc:token>
+      <tc:token ID="w495">in</tc:token>
+      <tc:token ID="w496">:</tc:token>
+      <tc:token ID="w497">Journal</tc:token>
+      <tc:token ID="w498">of</tc:token>
+      <tc:token ID="w499">Cognitive</tc:token>
+      <tc:token ID="w49a">Science</tc:token>
+      <tc:token ID="w49b">9</tc:token>
+      <tc:token ID="w49c">,</tc:token>
+      <tc:token ID="w49d">Nr.</tc:token>
+      <tc:token ID="w49e">2</tc:token>
+      <tc:token ID="w49f">:</tc:token>
+      <tc:token ID="w4a0">159–191</tc:token>
+      <tc:token ID="w4a1">.</tc:token>
+      <tc:token ID="w4a2">http://cogsci.snu.ac.kr/jcs/issue/vol9/no2/JCS_Vol_09_+No_2+p.+159+-</tc:token>
+      <tc:token ID="w4a3">+191+Dependency+Distance+</tc:token>
+      <tc:token ID="w4a4">as+a+Metric+</tc:token>
+      <tc:token ID="w4a5">of+Language+Comprehension+Difficulty</tc:token>
+      <tc:token ID="w4a6">.</tc:token>
+      <tc:token ID="w4a7">pdf</tc:token>
+      <tc:token ID="w4a8">[</tc:token>
+      <tc:token ID="w4a9">letzter</tc:token>
+      <tc:token ID="w4aa">Zugriff</tc:token>
+      <tc:token ID="w4ab">am</tc:token>
+      <tc:token ID="w4ac">15.</tc:token>
+      <tc:token ID="w4ad">Oktober</tc:token>
+      <tc:token ID="w4ae">2018</tc:token>
+      <tc:token ID="w4af">]</tc:token>
+      <tc:token ID="w4b0">.</tc:token>
+      <tc:token ID="w4b1">Nast</tc:token>
+      <tc:token ID="w4b2">,</tc:token>
+      <tc:token ID="w4b3">Mirjam</tc:token>
+      <tc:token ID="w4b4">(</tc:token>
+      <tc:token ID="w4b5">2017</tc:token>
+      <tc:token ID="w4b6">)</tc:token>
+      <tc:token ID="w4b7">:</tc:token>
+      <tc:token ID="w4b8">„</tc:token>
+      <tc:token ID="w4b9">Perry</tc:token>
+      <tc:token ID="w4ba">Rhodan</tc:token>
+      <tc:token ID="w4bb">“</tc:token>
+      <tc:token ID="w4bc">lesen</tc:token>
+      <tc:token ID="w4bd">.</tc:token>
+      <tc:token ID="w4be">Zur</tc:token>
+      <tc:token ID="w4bf">Serialität</tc:token>
+      <tc:token ID="w4c0">der</tc:token>
+      <tc:token ID="w4c1">Lektürepraktiken</tc:token>
+      <tc:token ID="w4c2">einer</tc:token>
+      <tc:token ID="w4c3">Heftromanserie</tc:token>
+      <tc:token ID="w4c4">.</tc:token>
+      <tc:token ID="w4c5">Bielefeld</tc:token>
+      <tc:token ID="w4c6">:</tc:token>
+      <tc:token ID="w4c7">transcript</tc:token>
+      <tc:token ID="w4c8">.</tc:token>
+      <tc:token ID="w4c9">Nivre</tc:token>
+      <tc:token ID="w4ca">,</tc:token>
+      <tc:token ID="w4cb">Joakim</tc:token>
+      <tc:token ID="w4cc">/</tc:token>
+      <tc:token ID="w4cd">&gt;</tc:token>
+      <tc:token ID="w4ce">de</tc:token>
+      <tc:token ID="w4cf">Marneffe</tc:token>
+      <tc:token ID="w4d0">,</tc:token>
+      <tc:token ID="w4d1">Marie-Catherine</tc:token>
+      <tc:token ID="w4d2">/</tc:token>
+      <tc:token ID="w4d3">Ginter</tc:token>
+      <tc:token ID="w4d4">,</tc:token>
+      <tc:token ID="w4d5">Filip</tc:token>
+      <tc:token ID="w4d6">/</tc:token>
+      <tc:token ID="w4d7">Goldberg</tc:token>
+      <tc:token ID="w4d8">,</tc:token>
+      <tc:token ID="w4d9">Yoav</tc:token>
+      <tc:token ID="w4da">/</tc:token>
+      <tc:token ID="w4db">Hajic</tc:token>
+      <tc:token ID="w4dc">,</tc:token>
+      <tc:token ID="w4dd">Jan</tc:token>
+      <tc:token ID="w4de">/</tc:token>
+      <tc:token ID="w4df">Manning</tc:token>
+      <tc:token ID="w4e0">,</tc:token>
+      <tc:token ID="w4e1">Christopher</tc:token>
+      <tc:token ID="w4e2">D.</tc:token>
+      <tc:token ID="w4e3">/</tc:token>
+      <tc:token ID="w4e4">McDonald</tc:token>
+      <tc:token ID="w4e5">,</tc:token>
+      <tc:token ID="w4e6">Ryan</tc:token>
+      <tc:token ID="w4e7">/</tc:token>
+      <tc:token ID="w4e8">Petrov</tc:token>
+      <tc:token ID="w4e9">,</tc:token>
+      <tc:token ID="w4ea">Slav</tc:token>
+      <tc:token ID="w4eb">/</tc:token>
+      <tc:token ID="w4ec">Pyysalo</tc:token>
+      <tc:token ID="w4ed">,</tc:token>
+      <tc:token ID="w4ee">Sampo</tc:token>
+      <tc:token ID="w4ef">/</tc:token>
+      <tc:token ID="w4f0">Silveira</tc:token>
+      <tc:token ID="w4f1">,</tc:token>
+      <tc:token ID="w4f2">Natalia</tc:token>
+      <tc:token ID="w4f3">/</tc:token>
+      <tc:token ID="w4f4">Tsarfaty</tc:token>
+      <tc:token ID="w4f5">,</tc:token>
+      <tc:token ID="w4f6">Reut</tc:token>
+      <tc:token ID="w4f7">/</tc:token>
+      <tc:token ID="w4f8">Zeman</tc:token>
+      <tc:token ID="w4f9">,</tc:token>
+      <tc:token ID="w4fa">Daniel</tc:token>
+      <tc:token ID="w4fb">(</tc:token>
+      <tc:token ID="w4fc">2016</tc:token>
+      <tc:token ID="w4fd">)</tc:token>
+      <tc:token ID="w4fe">:</tc:token>
+      <tc:token ID="w4ff">Universal</tc:token>
+      <tc:token ID="w500">Dependencies</tc:token>
+      <tc:token ID="w501">v1</tc:token>
+      <tc:token ID="w502">:</tc:token>
+      <tc:token ID="w503">A</tc:token>
+      <tc:token ID="w504">Multilingual</tc:token>
+      <tc:token ID="w505">Treebank</tc:token>
+      <tc:token ID="w506">Collection</tc:token>
+      <tc:token ID="w507">,</tc:token>
+      <tc:token ID="w508">in</tc:token>
+      <tc:token ID="w509">:</tc:token>
+      <tc:token ID="w50a">Calzolari</tc:token>
+      <tc:token ID="w50b">,</tc:token>
+      <tc:token ID="w50c">Nicoletta</tc:token>
+      <tc:token ID="w50d">/</tc:token>
+      <tc:token ID="w50e">Choukri</tc:token>
+      <tc:token ID="w50f">,</tc:token>
+      <tc:token ID="w510">Khalid</tc:token>
+      <tc:token ID="w511">/</tc:token>
+      <tc:token ID="w512">Declerck</tc:token>
+      <tc:token ID="w513">,</tc:token>
+      <tc:token ID="w514">Thierry</tc:token>
+      <tc:token ID="w515">/</tc:token>
+      <tc:token ID="w516">Goggi</tc:token>
+      <tc:token ID="w517">,</tc:token>
+      <tc:token ID="w518">Sara</tc:token>
+      <tc:token ID="w519">/</tc:token>
+      <tc:token ID="w51a">Grobelnik</tc:token>
+      <tc:token ID="w51b">,</tc:token>
+      <tc:token ID="w51c">Marko</tc:token>
+      <tc:token ID="w51d">/</tc:token>
+      <tc:token ID="w51e">Maegaard</tc:token>
+      <tc:token ID="w51f">,</tc:token>
+      <tc:token ID="w520">Bente</tc:token>
+      <tc:token ID="w521">/</tc:token>
+      <tc:token ID="w522">Mariani</tc:token>
+      <tc:token ID="w523">,</tc:token>
+      <tc:token ID="w524">Joseph</tc:token>
+      <tc:token ID="w525">/</tc:token>
+      <tc:token ID="w526">Mazo</tc:token>
+      <tc:token ID="w527">,</tc:token>
+      <tc:token ID="w528">Hélène</tc:token>
+      <tc:token ID="w529">/</tc:token>
+      <tc:token ID="w52a">Moreno</tc:token>
+      <tc:token ID="w52b">,</tc:token>
+      <tc:token ID="w52c">Asunción</tc:token>
+      <tc:token ID="w52d">/</tc:token>
+      <tc:token ID="w52e">Odijk</tc:token>
+      <tc:token ID="w52f">,</tc:token>
+      <tc:token ID="w530">Jan</tc:token>
+      <tc:token ID="w531">/</tc:token>
+      <tc:token ID="w532">Piperidis</tc:token>
+      <tc:token ID="w533">,</tc:token>
+      <tc:token ID="w534">Stelios</tc:token>
+      <tc:token ID="w535">(</tc:token>
+      <tc:token ID="w536">eds</tc:token>
+      <tc:token ID="w537">.</tc:token>
+      <tc:token ID="w538">)</tc:token>
+      <tc:token ID="w539">:</tc:token>
+      <tc:token ID="w53a">Proceedings</tc:token>
+      <tc:token ID="w53b">of</tc:token>
+      <tc:token ID="w53c">the</tc:token>
+      <tc:token ID="w53d">Tenth</tc:token>
+      <tc:token ID="w53e">International</tc:token>
+      <tc:token ID="w53f">Conference</tc:token>
+      <tc:token ID="w540">on</tc:token>
+      <tc:token ID="w541">Language</tc:token>
+      <tc:token ID="w542">Resources</tc:token>
+      <tc:token ID="w543">and</tc:token>
+      <tc:token ID="w544">Evaluation</tc:token>
+      <tc:token ID="w545">(</tc:token>
+      <tc:token ID="w546">LREC’</tc:token>
+      <tc:token ID="w547">16</tc:token>
+      <tc:token ID="w548">)</tc:token>
+      <tc:token ID="w549">.</tc:token>
+      <tc:token ID="w54a">Portorož</tc:token>
+      <tc:token ID="w54b">:</tc:token>
+      <tc:token ID="w54c">European</tc:token>
+      <tc:token ID="w54d">Language</tc:token>
+      <tc:token ID="w54e">Resources</tc:token>
+      <tc:token ID="w54f">Association</tc:token>
+      <tc:token ID="w550">1659–1666</tc:token>
+      <tc:token ID="w551">.</tc:token>
+      <tc:token ID="w552">[</tc:token>
+      <tc:token ID="w553">letzter</tc:token>
+      <tc:token ID="w554">Zugriff</tc:token>
+      <tc:token ID="w555">am</tc:token>
+      <tc:token ID="w556">15.</tc:token>
+      <tc:token ID="w557">Oktober</tc:token>
+      <tc:token ID="w558">2018</tc:token>
+      <tc:token ID="w559">]</tc:token>
+      <tc:token ID="w55a">.</tc:token>
+      <tc:token ID="w55b">Oya</tc:token>
+      <tc:token ID="w55c">,</tc:token>
+      <tc:token ID="w55d">Masanori</tc:token>
+      <tc:token ID="w55e">(</tc:token>
+      <tc:token ID="w55f">2011</tc:token>
+      <tc:token ID="w560">)</tc:token>
+      <tc:token ID="w561">:</tc:token>
+      <tc:token ID="w562">Syntactic</tc:token>
+      <tc:token ID="w563">Dependency</tc:token>
+      <tc:token ID="w564">Distance</tc:token>
+      <tc:token ID="w565">as</tc:token>
+      <tc:token ID="w566">Sentence</tc:token>
+      <tc:token ID="w567">Complexity</tc:token>
+      <tc:token ID="w568">Measure</tc:token>
+      <tc:token ID="w569">,</tc:token>
+      <tc:token ID="w56a">in</tc:token>
+      <tc:token ID="w56b">:</tc:token>
+      <tc:token ID="w56c">Proceedings</tc:token>
+      <tc:token ID="w56d">of</tc:token>
+      <tc:token ID="w56e">the</tc:token>
+      <tc:token ID="w56f">16th</tc:token>
+      <tc:token ID="w570">International</tc:token>
+      <tc:token ID="w571">Conference</tc:token>
+      <tc:token ID="w572">of</tc:token>
+      <tc:token ID="w573">Pan-Pacific</tc:token>
+      <tc:token ID="w574">Association</tc:token>
+      <tc:token ID="w575">of</tc:token>
+      <tc:token ID="w576">Applied</tc:token>
+      <tc:token ID="w577">Linguistics</tc:token>
+      <tc:token ID="w578">.</tc:token>
+      <tc:token ID="w579">313–316</tc:token>
+      <tc:token ID="w57a">.</tc:token>
+      <tc:token ID="w57b">[</tc:token>
+      <tc:token ID="w57c">letzter</tc:token>
+      <tc:token ID="w57d">Zugriff</tc:token>
+      <tc:token ID="w57e">am</tc:token>
+      <tc:token ID="w57f">15.</tc:token>
+      <tc:token ID="w580">Oktober</tc:token>
+      <tc:token ID="w581">2018</tc:token>
+      <tc:token ID="w582">]</tc:token>
+      <tc:token ID="w583">.</tc:token>
+      <tc:token ID="w584">Sherman</tc:token>
+      <tc:token ID="w585">,</tc:token>
+      <tc:token ID="w586">Lucius</tc:token>
+      <tc:token ID="w587">Adelno</tc:token>
+      <tc:token ID="w588">(</tc:token>
+      <tc:token ID="w589">1893</tc:token>
+      <tc:token ID="w58a">)</tc:token>
+      <tc:token ID="w58b">:</tc:token>
+      <tc:token ID="w58c">Analytics</tc:token>
+      <tc:token ID="w58d">of</tc:token>
+      <tc:token ID="w58e">literature</tc:token>
+      <tc:token ID="w58f">,</tc:token>
+      <tc:token ID="w590">a</tc:token>
+      <tc:token ID="w591">manual</tc:token>
+      <tc:token ID="w592">for</tc:token>
+      <tc:token ID="w593">the</tc:token>
+      <tc:token ID="w594">objective</tc:token>
+      <tc:token ID="w595">study</tc:token>
+      <tc:token ID="w596">of</tc:token>
+      <tc:token ID="w597">English</tc:token>
+      <tc:token ID="w598">prose</tc:token>
+      <tc:token ID="w599">and</tc:token>
+      <tc:token ID="w59a">poetry</tc:token>
+      <tc:token ID="w59b">.</tc:token>
+      <tc:token ID="w59c">Boston</tc:token>
+      <tc:token ID="w59d">:</tc:token>
+      <tc:token ID="w59e">Ginn</tc:token>
+      <tc:token ID="w59f">.</tc:token>
+      <tc:token ID="w5a0">[</tc:token>
+      <tc:token ID="w5a1">letzter</tc:token>
+      <tc:token ID="w5a2">Zugriff</tc:token>
+      <tc:token ID="w5a3">am</tc:token>
+      <tc:token ID="w5a4">8.</tc:token>
+      <tc:token ID="w5a5">Januar</tc:token>
+      <tc:token ID="w5a6">2019</tc:token>
+      <tc:token ID="w5a7">]</tc:token>
+      <tc:token ID="w5a8">.</tc:token>
+      <tc:token ID="w5a9">Straka</tc:token>
+      <tc:token ID="w5aa">,</tc:token>
+      <tc:token ID="w5ab">Milan</tc:token>
+      <tc:token ID="w5ac">/</tc:token>
+      <tc:token ID="w5ad">Straková</tc:token>
+      <tc:token ID="w5ae">,</tc:token>
+      <tc:token ID="w5af">Jana</tc:token>
+      <tc:token ID="w5b0">(</tc:token>
+      <tc:token ID="w5b1">2017</tc:token>
+      <tc:token ID="w5b2">)</tc:token>
+      <tc:token ID="w5b3">:</tc:token>
+      <tc:token ID="w5b4">Tokenizing</tc:token>
+      <tc:token ID="w5b5">,</tc:token>
+      <tc:token ID="w5b6">POS</tc:token>
+      <tc:token ID="w5b7">Tagging</tc:token>
+      <tc:token ID="w5b8">,</tc:token>
+      <tc:token ID="w5b9">Lemmatizing</tc:token>
+      <tc:token ID="w5ba">and</tc:token>
+      <tc:token ID="w5bb">Parsing</tc:token>
+      <tc:token ID="w5bc">UD</tc:token>
+      <tc:token ID="w5bd">2.0</tc:token>
+      <tc:token ID="w5be">with</tc:token>
+      <tc:token ID="w5bf">UDPipe</tc:token>
+      <tc:token ID="w5c0">,</tc:token>
+      <tc:token ID="w5c1">in</tc:token>
+      <tc:token ID="w5c2">:</tc:token>
+      <tc:token ID="w5c3">Proceedings</tc:token>
+      <tc:token ID="w5c4">of</tc:token>
+      <tc:token ID="w5c5">the</tc:token>
+      <tc:token ID="w5c6">CoNLL</tc:token>
+      <tc:token ID="w5c7">2017</tc:token>
+      <tc:token ID="w5c8">Shared</tc:token>
+      <tc:token ID="w5c9">Task</tc:token>
+      <tc:token ID="w5ca">:</tc:token>
+      <tc:token ID="w5cb">Multilingual</tc:token>
+      <tc:token ID="w5cc">Parsing</tc:token>
+      <tc:token ID="w5cd">from</tc:token>
+      <tc:token ID="w5ce">Raw</tc:token>
+      <tc:token ID="w5cf">Text</tc:token>
+      <tc:token ID="w5d0">to</tc:token>
+      <tc:token ID="w5d1">Universal</tc:token>
+      <tc:token ID="w5d2">Dependencies</tc:token>
+      <tc:token ID="w5d3">.</tc:token>
+      <tc:token ID="w5d4">Vancouver</tc:token>
+      <tc:token ID="w5d5">:</tc:token>
+      <tc:token ID="w5d6">Association</tc:token>
+      <tc:token ID="w5d7">for</tc:token>
+      <tc:token ID="w5d8">Computational</tc:token>
+      <tc:token ID="w5d9">Linguistics</tc:token>
+      <tc:token ID="w5da">88–99</tc:token>
+      <tc:token ID="w5db">.</tc:token>
+      <tc:token ID="w5dc">[</tc:token>
+      <tc:token ID="w5dd">letzter</tc:token>
+      <tc:token ID="w5de">Zugriff</tc:token>
+      <tc:token ID="w5df">am</tc:token>
+      <tc:token ID="w5e0">15.</tc:token>
+      <tc:token ID="w5e1">Oktober</tc:token>
+      <tc:token ID="w5e2">2018</tc:token>
+      <tc:token ID="w5e3">]</tc:token>
+      <tc:token ID="w5e4">.</tc:token>
+      <tc:token ID="w5e5">Vajjala</tc:token>
+      <tc:token ID="w5e6">Balakrishna</tc:token>
+      <tc:token ID="w5e7">,</tc:token>
+      <tc:token ID="w5e8">Sowmya</tc:token>
+      <tc:token ID="w5e9">(</tc:token>
+      <tc:token ID="w5ea">2015</tc:token>
+      <tc:token ID="w5eb">)</tc:token>
+      <tc:token ID="w5ec">:</tc:token>
+      <tc:token ID="w5ed">Analyzing</tc:token>
+      <tc:token ID="w5ee">Text</tc:token>
+      <tc:token ID="w5ef">Complexity</tc:token>
+      <tc:token ID="w5f0">and</tc:token>
+      <tc:token ID="w5f1">Text</tc:token>
+      <tc:token ID="w5f2">Simplification</tc:token>
+      <tc:token ID="w5f3">:</tc:token>
+      <tc:token ID="w5f4">Connecting</tc:token>
+      <tc:token ID="w5f5">Linguistics</tc:token>
+      <tc:token ID="w5f6">,</tc:token>
+      <tc:token ID="w5f7">Processing</tc:token>
+      <tc:token ID="w5f8">and</tc:token>
+      <tc:token ID="w5f9">Educational</tc:token>
+      <tc:token ID="w5fa">Applications</tc:token>
+      <tc:token ID="w5fb">.</tc:token>
+      <tc:token ID="w5fc">Dissertation</tc:token>
+      <tc:token ID="w5fd">,</tc:token>
+      <tc:token ID="w5fe">Eberhard-Karls-Universität</tc:token>
+      <tc:token ID="w5ff">Tübingen</tc:token>
+      <tc:token ID="w600">.</tc:token>
+      <tc:token ID="w601">[</tc:token>
+      <tc:token ID="w602">letzter</tc:token>
+      <tc:token ID="w603">Zugriff</tc:token>
+      <tc:token ID="w604">am</tc:token>
+      <tc:token ID="w605">15.</tc:token>
+      <tc:token ID="w606">Oktober</tc:token>
+      <tc:token ID="w607">2018</tc:token>
+      <tc:token ID="w608">]</tc:token>
+      <tc:token ID="w609">.</tc:token>
+      <tc:token ID="w60a">Closeness</tc:token>
+      <tc:token ID="w60b">centrality</tc:token>
+      <tc:token ID="w60c">,</tc:token>
+      <tc:token ID="w60d">closeness</tc:token>
+      <tc:token ID="w60e">centralization</tc:token>
+      <tc:token ID="w60f">und</tc:token>
+      <tc:token ID="w610">outdegree</tc:token>
+      <tc:token ID="w611">centralization</tc:token>
+      <tc:token ID="w612">wurden</tc:token>
+      <tc:token ID="w613">für</tc:token>
+      <tc:token ID="w614">diese</tc:token>
+      <tc:token ID="w615">Analyse</tc:token>
+      <tc:token ID="w616">mit</tc:token>
+      <tc:token ID="w617">−1</tc:token>
+      <tc:token ID="w618">multipliziert</tc:token>
+      <tc:token ID="w619">,</tc:token>
+      <tc:token ID="w61a">damit</tc:token>
+      <tc:token ID="w61b">für</tc:token>
+      <tc:token ID="w61c">alle</tc:token>
+      <tc:token ID="w61d">Maße</tc:token>
+      <tc:token ID="w61e">größere</tc:token>
+      <tc:token ID="w61f">Werte</tc:token>
+      <tc:token ID="w620">eine</tc:token>
+      <tc:token ID="w621">höhere</tc:token>
+      <tc:token ID="w622">Komplexität</tc:token>
+      <tc:token ID="w623">anzeigen</tc:token>
+      <tc:token ID="w624">.</tc:token>
+      <tc:token ID="w625">Bibliographie</tc:token>
+    </tc:tokens>
+    <tc:sentences xmlns:tc="http://www.dspin.de/data/textcorpus">
+      <tc:sentence tokenIDs="w1 w2 w3 w4 w5 w6 w7 w8 w9 wa wb wc wd we wf w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w1a w1b w1c w1d w1e" ID="s1"/>
+      <tc:sentence tokenIDs="w1f w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 w2a w2b w2c w2d w2e w2f w30 w31 w32 w33 w34 w35 w36 w37 w38 w39 w3a w3b w3c w3d w3e w3f" ID="s2"/>
+      <tc:sentence tokenIDs="w40 w41 w42 w43 w44 w45 w46 w47 w48 w49 w4a w4b w4c w4d w4e w4f w50" ID="s3"/>
+      <tc:sentence tokenIDs="w51 w52 w53 w54 w55 w56 w57 w58 w59 w5a w5b w5c w5d w5e w5f w60 w61 w62 w63 w64 w65" ID="s4"/>
+      <tc:sentence tokenIDs="w66 w67 w68 w69 w6a w6b w6c w6d w6e w6f w70 w71 w72 w73 w74 w75 w76 w77 w78 w79 w7a w7b w7c w7d" ID="s5"/>
+      <tc:sentence tokenIDs="w7e w7f w80 w81 w82 w83 w84 w85 w86 w87 w88 w89" ID="s6"/>
+      <tc:sentence tokenIDs="w8a w8b w8c w8d w8e w8f w90 w91 w92 w93 w94 w95 w96 w97 w98 w99 w9a w9b w9c w9d w9e w9f wa0 wa1 wa2 wa3 wa4 wa5 wa6" ID="s7"/>
+      <tc:sentence tokenIDs="wa7 wa8 wa9 waa wab wac" ID="s8"/>
+      <tc:sentence tokenIDs="wad wae waf wb0 wb1 wb2 wb3 wb4 wb5 wb6 wb7 wb8 wb9 wba wbb wbc wbd wbe wbf wc0 wc1 wc2 wc3 wc4 wc5 wc6 wc7 wc8 wc9 wca" ID="s9"/>
+      <tc:sentence tokenIDs="wcb wcc wcd wce wcf wd0 wd1 wd2 wd3 wd4 wd5 wd6 wd7 wd8 wd9 wda wdb wdc wdd wde wdf we0 we1 we2 we3 we4 we5 we6 we7 we8 we9 wea web wec wed wee wef wf0 wf1 wf2 wf3 wf4 wf5 wf6 wf7 wf8 wf9 wfa wfb wfc wfd wfe wff w100 w101 w102 w103 w104 w105 w106 w107 w108 w109 w10a w10b w10c w10d" ID="sa"/>
+      <tc:sentence tokenIDs="w10e w10f w110 w111 w112 w113 w114 w115 w116 w117 w118 w119 w11a w11b w11c w11d w11e w11f" ID="sb"/>
+      <tc:sentence tokenIDs="w120 w121 w122 w123 w124 w125 w126 w127 w128 w129 w12a w12b w12c" ID="sc"/>
+      <tc:sentence tokenIDs="w12d w12e w12f w130 w131 w132 w133 w134 w135 w136 w137 w138 w139 w13a w13b w13c w13d w13e" ID="sd"/>
+      <tc:sentence tokenIDs="w13f w140 w141 w142 w143 w144 w145 w146 w147 w148 w149 w14a w14b w14c w14d w14e w14f w150 w151 w152 w153 w154 w155 w156 w157 w158 w159 w15a w15b w15c w15d w15e w15f w160 w161 w162 w163 w164 w165 w166 w167 w168 w169 w16a w16b w16c w16d w16e" ID="se"/>
+      <tc:sentence tokenIDs="w16f w170 w171 w172 w173 w174 w175 w176 w177 w178 w179 w17a w17b w17c" ID="sf"/>
+      <tc:sentence tokenIDs="w17d w17e w17f w180 w181 w182 w183 w184" ID="s10"/>
+      <tc:sentence tokenIDs="w185 w186 w187 w188 w189 w18a w18b w18c w18d w18e w18f w190 w191 w192 w193 w194 w195 w196 w197 w198 w199 w19a w19b w19c" ID="s11"/>
+      <tc:sentence tokenIDs="w19d w19e w19f w1a0 w1a1 w1a2 w1a3 w1a4 w1a5 w1a6 w1a7 w1a8 w1a9 w1aa w1ab w1ac w1ad w1ae w1af w1b0 w1b1 w1b2" ID="s12"/>
+      <tc:sentence tokenIDs="w1b3 w1b4 w1b5 w1b6 w1b7 w1b8 w1b9 w1ba w1bb w1bc w1bd w1be w1bf w1c0 w1c1 w1c2 w1c3 w1c4 w1c5 w1c6 w1c7 w1c8" ID="s13"/>
+      <tc:sentence tokenIDs="w1c9 w1ca w1cb w1cc w1cd w1ce w1cf w1d0 w1d1 w1d2 w1d3 w1d4 w1d5 w1d6 w1d7 w1d8 w1d9 w1da w1db w1dc w1dd w1de w1df w1e0 w1e1 w1e2" ID="s14"/>
+      <tc:sentence tokenIDs="w1e3 w1e4 w1e5 w1e6 w1e7 w1e8 w1e9 w1ea w1eb w1ec w1ed w1ee w1ef w1f0" ID="s15"/>
+      <tc:sentence tokenIDs="w1f1 w1f2 w1f3 w1f4 w1f5 w1f6 w1f7 w1f8 w1f9 w1fa w1fb w1fc w1fd w1fe w1ff w200 w201" ID="s16"/>
+      <tc:sentence tokenIDs="w202 w203 w204 w205 w206 w207 w208 w209 w20a w20b w20c w20d w20e w20f w210 w211 w212 w213 w214 w215 w216" ID="s17"/>
+      <tc:sentence tokenIDs="w217 w218 w219 w21a w21b w21c w21d w21e w21f w220 w221 w222 w223 w224 w225 w226 w227 w228 w229 w22a w22b w22c w22d w22e w22f w230 w231 w232 w233 w234 w235 w236 w237 w238 w239" ID="s18"/>
+      <tc:sentence tokenIDs="w23a w23b w23c w23d w23e w23f w240 w241 w242 w243 w244 w245 w246 w247 w248 w249 w24a w24b w24c w24d w24e w24f w250 w251" ID="s19"/>
+      <tc:sentence tokenIDs="w252 w253 w254 w255 w256 w257 w258 w259 w25a w25b w25c w25d w25e w25f w260 w261 w262 w263 w264 w265 w266 w267 w268 w269 w26a w26b w26c w26d w26e w26f w270 w271 w272 w273 w274 w275 w276 w277 w278 w279 w27a w27b w27c w27d w27e w27f w280 w281 w282 w283 w284 w285 w286 w287 w288 w289 w28a w28b w28c w28d w28e" ID="s1a"/>
+      <tc:sentence tokenIDs="w28f w290 w291 w292 w293 w294 w295 w296 w297 w298 w299 w29a w29b w29c w29d w29e w29f w2a0 w2a1 w2a2 w2a3 w2a4 w2a5 w2a6 w2a7 w2a8 w2a9 w2aa w2ab w2ac w2ad w2ae w2af w2b0 w2b1 w2b2 w2b3 w2b4 w2b5 w2b6 w2b7 w2b8 w2b9 w2ba w2bb w2bc w2bd w2be w2bf w2c0 w2c1 w2c2 w2c3 w2c4 w2c5 w2c6 w2c7 w2c8 w2c9 w2ca w2cb w2cc w2cd w2ce w2cf w2d0 w2d1" ID="s1b"/>
+      <tc:sentence tokenIDs="w2d2 w2d3 w2d4 w2d5 w2d6 w2d7 w2d8 w2d9 w2da w2db w2dc w2dd w2de w2df w2e0 w2e1 w2e2 w2e3" ID="s1c"/>
+      <tc:sentence tokenIDs="w2e4 w2e5 w2e6 w2e7 w2e8 w2e9 w2ea w2eb w2ec w2ed w2ee w2ef w2f0 w2f1 w2f2 w2f3 w2f4 w2f5 w2f6 w2f7 w2f8 w2f9 w2fa w2fb w2fc w2fd w2fe w2ff w300 w301 w302 w303 w304 w305 w306 w307 w308 w309 w30a w30b w30c w30d w30e w30f w310 w311 w312 w313 w314 w315 w316 w317 w318 w319 w31a w31b w31c w31d" ID="s1d"/>
+      <tc:sentence tokenIDs="w31e w31f w320 w321 w322 w323 w324 w325 w326 w327 w328 w329 w32a w32b w32c w32d w32e w32f w330 w331" ID="s1e"/>
+      <tc:sentence tokenIDs="w332 w333 w334 w335 w336 w337 w338 w339 w33a w33b w33c w33d w33e w33f w340 w341 w342 w343 w344 w345 w346 w347 w348 w349 w34a w34b w34c w34d w34e w34f w350 w351 w352 w353 w354 w355 w356 w357 w358 w359 w35a w35b w35c w35d w35e w35f w360 w361 w362 w363 w364 w365 w366 w367 w368 w369 w36a w36b w36c w36d w36e w36f w370 w371 w372 w373 w374 w375 w376 w377 w378 w379 w37a w37b w37c w37d w37e w37f w380 w381 w382 w383 w384 w385 w386 w387 w388 w389 w38a w38b w38c w38d w38e w38f w390 w391 w392 w393 w394 w395 w396 w397 w398 w399 w39a w39b w39c w39d w39e w39f w3a0 w3a1 w3a2 w3a3 w3a4 w3a5 w3a6 w3a7 w3a8 w3a9 w3aa w3ab w3ac w3ad w3ae w3af w3b0 w3b1 w3b2 w3b3 w3b4 w3b5 w3b6 w3b7 w3b8 w3b9 w3ba w3bb w3bc w3bd w3be w3bf w3c0 w3c1 w3c2 w3c3 w3c4 w3c5 w3c6 w3c7 w3c8 w3c9 w3ca w3cb w3cc w3cd w3ce w3cf w3d0 w3d1 w3d2 w3d3 w3d4 w3d5 w3d6 w3d7 w3d8 w3d9 w3da w3db w3dc w3dd w3de w3df w3e0 w3e1 w3e2 w3e3 w3e4 w3e5 w3e6 w3e7 w3e8 w3e9 w3ea w3eb w3ec w3ed w3ee w3ef w3f0 w3f1 w3f2 w3f3 w3f4 w3f5 w3f6 w3f7 w3f8 w3f9" ID="s1f"/>
+      <tc:sentence tokenIDs="w3fa w3fb w3fc w3fd w3fe w3ff" ID="s20"/>
+      <tc:sentence tokenIDs="w400 w401 w402 w403 w404 w405" ID="s21"/>
+      <tc:sentence tokenIDs="w406 w407 w408 w409 w40a w40b w40c w40d w40e w40f w410 w411 w412 w413 w414 w415 w416 w417 w418 w419 w41a w41b w41c w41d w41e w41f w420 w421 w422 w423 w424 w425 w426 w427 w428" ID="s22"/>
+      <tc:sentence tokenIDs="w429 w42a w42b w42c w42d w42e w42f w430 w431 w432 w433 w434 w435" ID="s23"/>
+      <tc:sentence tokenIDs="w436 w437 w438 w439 w43a w43b w43c w43d w43e w43f w440 w441 w442 w443 w444 w445 w446 w447 w448 w449 w44a w44b w44c w44d w44e w44f w450 w451" ID="s24"/>
+      <tc:sentence tokenIDs="w452 w453 w454 w455 w456 w457 w458 w459 w45a w45b w45c w45d w45e w45f w460 w461 w462 w463 w464 w465 w466 w467 w468 w469 w46a w46b w46c" ID="s25"/>
+      <tc:sentence tokenIDs="w46d w46e w46f w470 w471 w472 w473 w474 w475 w476 w477 w478 w479 w47a w47b w47c w47d w47e w47f w480 w481 w482 w483" ID="s26"/>
+      <tc:sentence tokenIDs="w484 w485 w486 w487 w488 w489 w48a w48b w48c w48d w48e w48f w490 w491 w492 w493 w494 w495 w496 w497 w498 w499 w49a w49b w49c w49d w49e w49f w4a0 w4a1 w4a2 w4a3 w4a4 w4a5 w4a6 w4a7 w4a8 w4a9 w4aa w4ab w4ac w4ad w4ae w4af w4b0" ID="s27"/>
+      <tc:sentence tokenIDs="w4b1 w4b2 w4b3 w4b4 w4b5 w4b6 w4b7" ID="s28"/>
+      <tc:sentence tokenIDs="w4b8 w4b9 w4ba w4bb w4bc w4bd" ID="s29"/>
+      <tc:sentence tokenIDs="w4be w4bf w4c0 w4c1 w4c2 w4c3 w4c4" ID="s2a"/>
+      <tc:sentence tokenIDs="w4c5 w4c6 w4c7 w4c8" ID="s2b"/>
+      <tc:sentence tokenIDs="w4c9 w4ca w4cb w4cc w4cd w4ce w4cf w4d0 w4d1 w4d2 w4d3 w4d4 w4d5 w4d6 w4d7 w4d8 w4d9 w4da w4db w4dc w4dd w4de w4df w4e0 w4e1 w4e2 w4e3 w4e4 w4e5 w4e6 w4e7 w4e8 w4e9 w4ea w4eb w4ec w4ed w4ee w4ef w4f0 w4f1 w4f2 w4f3 w4f4 w4f5 w4f6 w4f7 w4f8 w4f9 w4fa w4fb w4fc w4fd w4fe w4ff w500 w501 w502" ID="s2c"/>
+      <tc:sentence tokenIDs="w503 w504 w505 w506 w507 w508 w509 w50a w50b w50c w50d w50e w50f w510 w511 w512 w513 w514 w515 w516 w517 w518 w519 w51a w51b w51c w51d w51e w51f w520 w521 w522 w523 w524 w525 w526 w527 w528 w529 w52a w52b w52c w52d w52e w52f w530 w531 w532 w533 w534 w535 w536 w537 w538 w539" ID="s2d"/>
+      <tc:sentence tokenIDs="w53a w53b w53c w53d w53e w53f w540 w541 w542 w543 w544 w545 w546 w547 w548 w549" ID="s2e"/>
+      <tc:sentence tokenIDs="w54a w54b w54c w54d w54e w54f w550 w551" ID="s2f"/>
+      <tc:sentence tokenIDs="w552 w553 w554 w555 w556 w557 w558 w559 w55a" ID="s30"/>
+      <tc:sentence tokenIDs="w55b w55c w55d w55e w55f w560 w561 w562 w563 w564 w565 w566 w567 w568 w569 w56a w56b w56c w56d w56e w56f w570 w571 w572 w573 w574 w575 w576 w577 w578" ID="s31"/>
+      <tc:sentence tokenIDs="w579 w57a" ID="s32"/>
+      <tc:sentence tokenIDs="w57b w57c w57d w57e w57f w580 w581 w582 w583" ID="s33"/>
+      <tc:sentence tokenIDs="w584 w585 w586 w587 w588 w589 w58a w58b" ID="s34"/>
+      <tc:sentence tokenIDs="w58c w58d w58e w58f w590 w591 w592 w593 w594 w595 w596 w597 w598 w599 w59a w59b" ID="s35"/>
+      <tc:sentence tokenIDs="w59c w59d w59e w59f" ID="s36"/>
+      <tc:sentence tokenIDs="w5a0 w5a1 w5a2 w5a3 w5a4 w5a5 w5a6 w5a7 w5a8" ID="s37"/>
+      <tc:sentence tokenIDs="w5a9 w5aa w5ab w5ac w5ad w5ae w5af w5b0 w5b1 w5b2 w5b3 w5b4 w5b5 w5b6 w5b7 w5b8 w5b9 w5ba w5bb w5bc w5bd w5be w5bf w5c0 w5c1 w5c2 w5c3 w5c4 w5c5 w5c6 w5c7 w5c8 w5c9 w5ca w5cb w5cc w5cd w5ce w5cf w5d0 w5d1 w5d2 w5d3" ID="s38"/>
+      <tc:sentence tokenIDs="w5d4 w5d5 w5d6 w5d7 w5d8 w5d9 w5da w5db" ID="s39"/>
+      <tc:sentence tokenIDs="w5dc w5dd w5de w5df w5e0 w5e1 w5e2 w5e3 w5e4" ID="s3a"/>
+      <tc:sentence tokenIDs="w5e5 w5e6 w5e7 w5e8 w5e9 w5ea w5eb w5ec w5ed w5ee w5ef w5f0 w5f1 w5f2 w5f3 w5f4 w5f5 w5f6 w5f7 w5f8 w5f9 w5fa w5fb" ID="s3b"/>
+      <tc:sentence tokenIDs="w5fc w5fd w5fe w5ff w600" ID="s3c"/>
+      <tc:sentence tokenIDs="w601 w602 w603 w604 w605 w606 w607 w608 w609" ID="s3d"/>
+      <tc:sentence tokenIDs="w60a w60b w60c w60d w60e w60f w610 w611 w612 w613 w614 w615 w616 w617 w618 w619 w61a w61b w61c w61d w61e w61f w620 w621 w622 w623 w624" ID="s3e"/>
+      <tc:sentence tokenIDs="w625" ID="s3f"/>
+    </tc:sentences>
+    <tc:namedEntities xmlns:tc="http://www.dspin.de/data/textcorpus" type="tuebadz8">
+      <tc:entity class="PER" tokenIDs="w36"/>
+      <tc:entity class="PER" tokenIDs="w39"/>
+      <tc:entity class="OTH" tokenIDs="w3c w3d"/>
+      <tc:entity class="ORG" tokenIDs="w71 w72 w73"/>
+      <tc:entity class="ORG" tokenIDs="w75"/>
+      <tc:entity class="PER" tokenIDs="wbb wbc"/>
+      <tc:entity class="PER" tokenIDs="wfa"/>
+      <tc:entity class="PER" tokenIDs="wfc"/>
+      <tc:entity class="ORG" tokenIDs="w127"/>
+      <tc:entity class="OTH" tokenIDs="w151 w152"/>
+      <tc:entity class="OTH" tokenIDs="w158"/>
+      <tc:entity class="PER" tokenIDs="w176"/>
+      <tc:entity class="PER" tokenIDs="w17a"/>
+      <tc:entity class="OTH" tokenIDs="w224 w225"/>
+      <tc:entity class="ORG" tokenIDs="w236 w237"/>
+      <tc:entity class="OTH" tokenIDs="w332 w333 w334"/>
+      <tc:entity class="PER" tokenIDs="w340"/>
+      <tc:entity class="PER" tokenIDs="w343"/>
+      <tc:entity class="PER" tokenIDs="w375"/>
+      <tc:entity class="PER" tokenIDs="w39d"/>
+      <tc:entity class="OTH" tokenIDs="w3e2 w3e3 w3e4"/>
+      <tc:entity class="PER" tokenIDs="w3ed"/>
+      <tc:entity class="PER" tokenIDs="w3ef"/>
+      <tc:entity class="PER" tokenIDs="w3f1"/>
+      <tc:entity class="PER" tokenIDs="w3f3"/>
+      <tc:entity class="PER" tokenIDs="w3f5"/>
+      <tc:entity class="PER" tokenIDs="w3f7 w3f8"/>
+      <tc:entity class="GPE" tokenIDs="w400"/>
+      <tc:entity class="PER" tokenIDs="w402 w403"/>
+      <tc:entity class="PER" tokenIDs="w406 w407 w408"/>
+      <tc:entity class="OTH" tokenIDs="w40d w40e w40f w410"/>
+      <tc:entity class="ORG" tokenIDs="w414 w415 w416 w417"/>
+      <tc:entity class="PER" tokenIDs="w429"/>
+      <tc:entity class="PER" tokenIDs="w42b w42c"/>
+      <tc:entity class="OTH" tokenIDs="w431 w432 w433 w434"/>
+      <tc:entity class="OTH" tokenIDs="w436 w437"/>
+      <tc:entity class="OTH" tokenIDs="w43b w43c w43d"/>
+      <tc:entity class="PER" tokenIDs="w452"/>
+      <tc:entity class="PER" tokenIDs="w454"/>
+      <tc:entity class="PER" tokenIDs="w456"/>
+      <tc:entity class="PER" tokenIDs="w458"/>
+      <tc:entity class="PER" tokenIDs="w45a"/>
+      <tc:entity class="PER" tokenIDs="w45c"/>
+      <tc:entity class="PER" tokenIDs="w45e"/>
+      <tc:entity class="PER" tokenIDs="w460"/>
+      <tc:entity class="PER" tokenIDs="w462"/>
+      <tc:entity class="PER" tokenIDs="w464"/>
+      <tc:entity class="PER" tokenIDs="w466"/>
+      <tc:entity class="PER" tokenIDs="w468"/>
+      <tc:entity class="ORG" tokenIDs="w471"/>
+      <tc:entity class="ORG" tokenIDs="w477 w478 w479"/>
+      <tc:entity class="PER" tokenIDs="w484"/>
+      <tc:entity class="ORG" tokenIDs="w486"/>
+      <tc:entity class="OTH" tokenIDs="w48b w48c w48d w48e w48f w490 w491 w492 w493"/>
+      <tc:entity class="OTH" tokenIDs="w497 w498 w499 w49a w49b"/>
+      <tc:entity class="PER" tokenIDs="w4b1 w4b2 w4b3"/>
+      <tc:entity class="ORG" tokenIDs="w4b9 w4ba"/>
+      <tc:entity class="GPE" tokenIDs="w4c5"/>
+      <tc:entity class="PER" tokenIDs="w4c9"/>
+      <tc:entity class="PER" tokenIDs="w4cb"/>
+      <tc:entity class="PER" tokenIDs="w4ce w4cf"/>
+      <tc:entity class="PER" tokenIDs="w4d1"/>
+      <tc:entity class="PER" tokenIDs="w4d3"/>
+      <tc:entity class="PER" tokenIDs="w4d5"/>
+      <tc:entity class="PER" tokenIDs="w4d7"/>
+      <tc:entity class="PER" tokenIDs="w4d9"/>
+      <tc:entity class="PER" tokenIDs="w4db"/>
+      <tc:entity class="PER" tokenIDs="w4dd"/>
+      <tc:entity class="PER" tokenIDs="w4df"/>
+      <tc:entity class="PER" tokenIDs="w4e1 w4e2"/>
+      <tc:entity class="PER" tokenIDs="w4e4"/>
+      <tc:entity class="PER" tokenIDs="w4e6"/>
+      <tc:entity class="PER" tokenIDs="w4e8"/>
+      <tc:entity class="PER" tokenIDs="w4ea"/>
+      <tc:entity class="PER" tokenIDs="w4ec"/>
+      <tc:entity class="PER" tokenIDs="w4ee"/>
+      <tc:entity class="PER" tokenIDs="w4f0"/>
+      <tc:entity class="PER" tokenIDs="w4f2"/>
+      <tc:entity class="PER" tokenIDs="w4f4"/>
+      <tc:entity class="PER" tokenIDs="w4f6"/>
+      <tc:entity class="PER" tokenIDs="w4f8"/>
+      <tc:entity class="PER" tokenIDs="w4fa"/>
+      <tc:entity class="ORG" tokenIDs="w4ff w500 w501"/>
+      <tc:entity class="PER" tokenIDs="w50a"/>
+      <tc:entity class="PER" tokenIDs="w50c"/>
+      <tc:entity class="PER" tokenIDs="w50e"/>
+      <tc:entity class="PER" tokenIDs="w510"/>
+      <tc:entity class="PER" tokenIDs="w512"/>
+      <tc:entity class="PER" tokenIDs="w514"/>
+      <tc:entity class="PER" tokenIDs="w516"/>
+      <tc:entity class="PER" tokenIDs="w518"/>
+      <tc:entity class="PER" tokenIDs="w51a"/>
+      <tc:entity class="PER" tokenIDs="w51c"/>
+      <tc:entity class="PER" tokenIDs="w51e"/>
+      <tc:entity class="PER" tokenIDs="w520"/>
+      <tc:entity class="PER" tokenIDs="w522"/>
+      <tc:entity class="PER" tokenIDs="w524"/>
+      <tc:entity class="PER" tokenIDs="w526"/>
+      <tc:entity class="PER" tokenIDs="w528"/>
+      <tc:entity class="PER" tokenIDs="w52a"/>
+      <tc:entity class="PER" tokenIDs="w52c"/>
+      <tc:entity class="PER" tokenIDs="w52e"/>
+      <tc:entity class="PER" tokenIDs="w530"/>
+      <tc:entity class="PER" tokenIDs="w532"/>
+      <tc:entity class="PER" tokenIDs="w534"/>
+      <tc:entity class="OTH" tokenIDs="w53a w53b w53c w53d w53e w53f w540 w541 w542 w543 w544"/>
+      <tc:entity class="ORG" tokenIDs="w546 w547"/>
+      <tc:entity class="GPE" tokenIDs="w54a"/>
+      <tc:entity class="ORG" tokenIDs="w54c w54d w54e w54f"/>
+      <tc:entity class="PER" tokenIDs="w55b"/>
+      <tc:entity class="PER" tokenIDs="w55d"/>
+      <tc:entity class="OTH" tokenIDs="w56c w56d w56e w56f w570 w571 w572 w573 w574 w575 w576 w577"/>
+      <tc:entity class="PER" tokenIDs="w584"/>
+      <tc:entity class="PER" tokenIDs="w586 w587"/>
+      <tc:entity class="GPE" tokenIDs="w59c"/>
+      <tc:entity class="PER" tokenIDs="w59e"/>
+      <tc:entity class="PER" tokenIDs="w5a9"/>
+      <tc:entity class="PER" tokenIDs="w5ab"/>
+      <tc:entity class="PER" tokenIDs="w5ad"/>
+      <tc:entity class="PER" tokenIDs="w5af"/>
+      <tc:entity class="PER" tokenIDs="w5b4"/>
+      <tc:entity class="ORG" tokenIDs="w5c3 w5c4 w5c5 w5c6"/>
+      <tc:entity class="GPE" tokenIDs="w5d4"/>
+      <tc:entity class="ORG" tokenIDs="w5d6 w5d7 w5d8 w5d9"/>
+      <tc:entity class="PER" tokenIDs="w5e5 w5e6"/>
+      <tc:entity class="OTH" tokenIDs="w5e8"/>
+      <tc:entity class="OTH" tokenIDs="w5f4 w5f5 w5f6 w5f7 w5f8 w5f9 w5fa"/>
+      <tc:entity class="ORG" tokenIDs="w5fe"/>
+      <tc:entity class="GPE" tokenIDs="w5ff"/>
+    </tc:namedEntities>
+  </TextCorpus>
+</D-Spin>

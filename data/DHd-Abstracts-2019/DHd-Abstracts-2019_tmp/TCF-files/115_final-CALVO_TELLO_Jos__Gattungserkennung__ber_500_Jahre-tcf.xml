@@ -1,0 +1,1554 @@
+<?xml version='1.0' encoding='UTF-8'?><D-Spin xmlns="http://www.dspin.de/data" version="5">
+  <MetaData xmlns="http://www.dspin.de/data/metadata"><Services><cmd:CMD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cmd="http://www.clarin.eu/cmd/1" CMDVersion="1.2" xsi:schemaLocation="http://www.clarin.eu/cmd/1 http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_1320657629623/xsd"><cmd:Resources><cmd:ResourceProxyList/><cmd:JournalFileProxyList/><cmd:ResourceRelationList/></cmd:Resources><cmd:Components><cmd:WebServiceToolChain><cmd:GeneralInfo><cmd:Descriptions><cmd:Description/></cmd:Descriptions><cmd:ResourceName>Custom chain</cmd:ResourceName><cmd:ResourceClass>Toolchain</cmd:ResourceClass></cmd:GeneralInfo><cmd:Toolchain><cmd:ToolInChain><cmd:PID>https://hdl.handle.net/21.11120/0000-0008-319A-3</cmd:PID><cmd:Parameter value="de" name="lang"/></cmd:ToolInChain><cmd:ToolInChain><cmd:PID>https://hdl.handle.net/21.11120/0000-0008-3183-C</cmd:PID><cmd:Parameter value="5" name="version"/></cmd:ToolInChain><cmd:ToolInChain><cmd:PID>http://hdl.handle.net/11022/0000-0007-DA29-6</cmd:PID><cmd:Parameter value="de" name="lang"/><cmd:Parameter value="5" name="version"/></cmd:ToolInChain></cmd:Toolchain></cmd:WebServiceToolChain></cmd:Components></cmd:CMD></Services></MetaData>
+  <TextCorpus xmlns="http://www.dspin.de/data/textcorpus" lang="de">
+    <textSource type="application/tei+xml;format-variant=tei-dta;tokenized=0">&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;TEI xml:id="115_final-CALVO_TELLO_Jos__Gattungserkennung__ber_500_Jahre" xmlns="http://www.tei-c.org/ns/1.0">
+&lt;teiHeader>
+&lt;fileDesc>
+&lt;titleStmt>
+&lt;title type="full">
+&lt;title type="main">Gattungserkennung über 500 Jahre&lt;/title>
+&lt;title type="sub"/>
+&lt;/title>
+&lt;author>
+&lt;persName>
+&lt;surname>Calvo Tello&lt;/surname>
+&lt;forename>José&lt;/forename>
+&lt;/persName>
+&lt;affiliation>Universität Würzburg, Deutschland&lt;/affiliation>
+&lt;email>jose.calvo@morethanbooks.eu&lt;/email>
+&lt;/author>
+&lt;/titleStmt>
+&lt;editionStmt>
+&lt;edition>
+&lt;date>2018-10-12T11:26:05.451802797&lt;/date>
+&lt;/edition>
+&lt;/editionStmt>
+&lt;publicationStmt>
+&lt;t:publisher xmlns:t="http://www.tei-c.org/ns/1.0">Patrick Sahle, im Auftrag des Verbands Digital Humanities im deutschsprachigen Raum e.V.&lt;/t:publisher>
+&lt;t:address xmlns:t="http://www.tei-c.org/ns/1.0">
+&lt;t:addrLine>Universität zu Köln&lt;/t:addrLine>
+&lt;t:addrLine>Cologne Center for eHumanities&lt;/t:addrLine>
+&lt;t:addrLine>Albertus-Magnus-Platz&lt;/t:addrLine>
+&lt;t:addrLine>50923 Köln&lt;/t:addrLine>
+&lt;/t:address>
+&lt;/publicationStmt>
+&lt;sourceDesc>
+&lt;p>Converted from an OASIS Open Document&lt;/p>
+&lt;/sourceDesc>
+&lt;/fileDesc>
+&lt;encodingDesc>
+&lt;appInfo>
+&lt;application ident="DHCONVALIDATOR" version="1.22">
+&lt;label>DHConvalidator&lt;/label>
+&lt;/application>
+&lt;/appInfo>
+&lt;/encodingDesc>
+&lt;profileDesc>
+&lt;textClass>
+&lt;keywords scheme="ConfTool" n="category">
+&lt;term>Paper&lt;/term>
+&lt;/keywords>
+&lt;keywords scheme="ConfTool" n="subcategory">
+&lt;term>Posterpräsentation&lt;/term>
+&lt;/keywords>
+&lt;keywords scheme="ConfTool" n="keywords">
+&lt;term>Gattung&lt;/term>
+&lt;term>Maschinelles Lernen&lt;/term>
+&lt;term>Korpora&lt;/term>
+&lt;term>Spanisch&lt;/term>
+&lt;/keywords>
+&lt;keywords scheme="ConfTool" n="topics">
+&lt;term>Datenerkennung&lt;/term>
+&lt;term>Programmierung&lt;/term>
+&lt;term>Inhaltsanalyse&lt;/term>
+&lt;term>Stilistische Analyse&lt;/term>
+&lt;term>Literatur&lt;/term>
+&lt;term>Text&lt;/term>
+&lt;/keywords>
+&lt;/textClass>
+&lt;/profileDesc>
+&lt;/teiHeader>
+&lt;text>
+&lt;body>
+&lt;div type="div1" rend="DH-Heading1">
+&lt;head>Fragen&lt;/head>
+&lt;p>Wie gut lassen sich Gattungen und Untergattungen durch Maschinelles Lernen über eine längere Periode erkennen? Obwohl eine Reihe von Artikeln die Frage hauptsächlich für Englisch (Kessler, Numberg, und Schütze 1997; Petrenz und Webber 2011; Underwood 2014) und Deutsch (Hettinger et al. 2016) beantwortet hat, befasst sich wenig Forschung mit diesem Thema aus einer diachronischen Perspektive oder wird auf spanischen Texte angewendet (Henny-Krahmer 2018). Welche Gattungen sind leichter zu erkennen, welche komplizierter? Welche Algorithmen, Transformationen und Anzahl der lexikalischen Einheiten funktionieren am besten?&lt;/p>
+&lt;/div>
+&lt;div type="div1" rend="DH-Heading">
+&lt;head>Datensatz: CORDE 1475-1975&lt;/head>
+&lt;p>Zur Beantwortung ob verschiedene Gattungen durch Maschinelles Lernen erkannt werden können, wurde das umfangreichste historische Korpus des Spanischen analysiert, CORDE. Dieses Korpus wurde von der Real Academia Española kompiliert (Rojo Sánchez 2010; Sánchez Sánchez und Domínguez Cintas 2007) und ist ein standard-Tool in der Hispanistik über das online Such-Interface (Kabatek und Pusch 2011). Für die Analyse wurden die Frequenzen der Tokens und die Metadaten jedes Texts an Forscher weitergegeben. Das Korpus beinhaltet ca. 300 Millionen Tokens (34.000 Texte) und die Texte sind mit expliziten Metadaten über Jahrhunderte, Länder und Gattungen markiert.&lt;/p>
+&lt;p>Die Daten der mittelalterlichen Sektion des Korpus präsentieren mehrere Probleme (Rodríguez Molina und Octavio de Toledo y Huerta 2017), wie beispielsweise ausgeprägte Unausgewogenheit der Anzahl der Texten im Vergleich zu anderen Jahrhunderten oder schwankende philologische Qualität. Deswegen wurden für diese Analyse nur die Texte der letzten 500 Jahre des Korpus selektiert, die länger als 100 Tokens sind. Somit beinhaltet das analysierte Korpus über 22.000 Texte (über 244 Millionen Tokens). Die Metadaten unterscheiden:&lt;/p>
+&lt;list type="unordered">
+&lt;item>Fachtexte in Themen (Jura, Geschichte, Geisteswissenschaften…)&lt;/item>
+&lt;item>Gattungen und Untergattungen (lyrischer Vers, kurzer dramatischer Vers…)&lt;/item>
+&lt;item>oder Medien (journalistische Texte, Briefe…).&lt;/item>
+&lt;/list>
+&lt;p>Eine komplette Liste der Gattungen ist auf den Abbildungen zu finden.&lt;/p>
+&lt;/div>
+&lt;div type="div1" rend="DH-Heading">
+&lt;head>Methoden der Evaluation&lt;/head>
+&lt;p>Die Klassifikation wurde binarisiert durchgeführt, d. h. jeder Text könnte zu jeder Gattung gehören oder nicht. Verschiedene Parameter wurden evaluiert:&lt;/p>
+&lt;list type="unordered">
+&lt;item>Transformation der lexikalischen Information: relative Frequenz, binäre Frequenz, z-scores, TF-IDF, logarithmierte relative Frequenz&lt;/item>
+&lt;item>Algorithmen: k-Nearest Neighbors, Random Forest, Logistic Regression und Support Vector Machine&lt;/item>
+&lt;item>Anzahl der Tokens: 10, 50, 100, 500, 1.000, 2.000, 3.000, 4.000, 5.000 und 6.000&lt;/item>
+&lt;/list>
+&lt;p>Das Korpus wurde für jede Gattung undersampled: die gleiche Anzahl an positiven wie an negativen Fällen wurden für jede Gattung gesamplet. Die Evaluation wurde mit Hilfe von Cross-Validation (10 folds) durchgeführt und der Mittelwert der F1 Scores berechnet. Der Code wird als Python Notebook über GitHub zugänglich sein.&lt;/p>
+&lt;/div>
+&lt;div type="div1" rend="DH-Heading">
+&lt;head>Ergebnisse und Diskussion&lt;/head>
+&lt;p>Die höchsten F1 Scores der Kombinationen von Parametern für jede Gattung lagen zwischen 0,9 und 1,0 mit einem Mittelwert der verschiedenen Gattungen von 0,96 (Standardabweichung von 0,03). Diese sehr hohen Ergebnisse ähneln sich denen von Underwood (2014), der an einem sehr großen Datensatz forschte. Die häufigsten Parameter bei den besten Ergebnissen waren Logistic Regression (16 Fälle von 27), binäre Häufigkeit (16, was nicht zu erwarten war) und 6.000 MFW (9).&lt;/p>
+&lt;p>Auf den nächsten Boxplots sind die 10 besten Kombinationen zu sehen. Jeder Punkt entspricht dem Mittelwert der F1 Scores der Cross-Validation der 10 besten Kombinationen von Parametern. Diese sind nach Gattung differenziert aufgelistet:&lt;/p>
+&lt;p>
+&lt;figure>
+&lt;graphic url="115_final-ca880c08008862585b2aac1668633e35.png"/>
+&lt;/figure>
+&lt;/p>
+&lt;p>Folgende Gattungen wurden am besten erkannt: Theater (Vers und Prosa), Romane, lyrischer Vers, und Fachtexte über Naturwissenschaften und Kunst. Lyrische Prosa zeigt heftige Schwankungen, außerdem wurden die niedrigsten Ergebnisse von folgenden Gattungen erreicht: Autobiografie, narrativer Vers, Essay, lyrische Prosa, Prosa sowie Fachtexte über Gesellschaft, Geschichte und Geisteswissenschaften.&lt;/p>
+&lt;p>Ein interessanter Aspekt ist, welche die allgemeinen Tendenzen der Parameter und dessen Kombinationen sind. Dafür eignet sich ein Facet Grid Scatter Plot mit den Algorithmen als Spalten und den Transformationen als Reihen (einzelne Punkte entsprechen den Mittelwert der F1 Scores pro Gattung):&lt;/p>
+&lt;p>
+&lt;figure>
+&lt;graphic url="115_final-2be3a1525663c41671a88e1432c72f78.png"/>
+&lt;/figure>
+&lt;/p>
+&lt;p>Hinsichtlich der Transformation (Reihen) zeigen die relative und die logarithmierte Häufigkeit niedrigere Ergebnisse als TF-IDF, z-scores und die binäre Häufigkeit. Bei den Algorithmen (Spalten) ist KNN merklich schlechter als die anderen drei. Zuletzt ist noch zu erkennen, dass die Qualität der Ergebnisse bis zu einer Anzahl von 2.000 Tokens zunimmt, und mit Schwankungen bis 6.000 stabil bleibt. Ein interessanter Aspekt ist die Tatsache, dass spezifische Kombinationen (SVC + TF-IDF, binäre + Logistic Regression, relative + Random Forest) von Vorteil im Vergleich zu anderen sind.&lt;/p>
+&lt;/div>
+&lt;/body>
+&lt;back>
+&lt;div type="bibliogr">
+&lt;head>Bibliographie&lt;/head>
+&lt;bibl>
+&lt;hi rend="bold">Henny-Krahmer, Ulrike (2018)&lt;/hi>: &lt;hi rend="italic">“Exploration of Sentiments and Genre in Spanish American Novels.”&lt;/hi> In DH Conference. Mexico City: ADHO.
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Hettinger, Lena / Reger, Isabella / Jannidis, Fotis / Hotho, Andreas (2016)&lt;/hi>: &lt;hi rend="italic">“Classification of Literary Subgenres.”&lt;/hi> In DHd Konferenz, 154–58. Leipzig: Universität Leipzig.
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Kabatek, Johannes / Pusch, Claus D. (2011)&lt;/hi>: &lt;hi rend="italic">Spanische Sprachwissenschaft: eine Einführung&lt;/hi>. Tübingen: Narr.
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Kessler, Brett/ Numberg, Geoffrey / Schütze, Hinrich (1997)&lt;/hi>: &lt;hi rend="italic">“Automatic Detection of Text Genre.”&lt;/hi> In Proceedings of the 35th Annual Meeting of the Association for Computational Linguistics and Eighth Conference of the European Chapter of the Association for Computational Linguistics, 32–38. ACL ’98. Stroudsburg, PA, USA: Association for Computational Linguistics.
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Petrenz, Philipp / Webber, Bonnie (2011)&lt;/hi>: &lt;hi rend="italic">“Stable Classification of Text Genres.”&lt;/hi> Computational Linguistics 37 (2): 385–93.
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Rodríguez Molina, Javier / Octavio de Toledo y Huerta, Álvaro Sebastián (2017)&lt;/hi>: &lt;hi rend="italic">“La imprescindible distinción entre texto y testimonio: el CORDE y los criterios de fiabilidad lingüística.”&lt;/hi> Scriptum digital: revista de corpus diacrònics i edició digital en llengües iberoromàniques, no. 6: 5–68.
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Rojo Sánchez, Guillermo (2010)&lt;/hi>: &lt;hi rend="italic">“Sobre codificación y explotación de corpus textuales: Otra comparación del Corpus del español con el CORDE y el CREA.”&lt;/hi> Lingüística, no. 24: 11–50.
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Sánchez Sánchez, Mercedes / Domínguez Cintas, Carlos (2007)&lt;/hi>: &lt;hi rend="italic">“El banco de datos de la RAE: CREA y CORDE.”&lt;/hi> Per Abbat: boletín filológico de actualización académica y didáctica, no. 2: 137–48.
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Underwood, Ted (2014)&lt;/hi>: &lt;hi rend="italic">“Understanding Genre in a Collection of a Million Volumes&lt;/hi>, Interim Report.”
+&lt;/bibl>
+&lt;/div>
+&lt;/back>
+&lt;/text>
+&lt;/TEI>
+    </textSource>
+    <text>
+
+
+Wie gut lassen sich Gattungen und Untergattungen durch Maschinelles Lernen über eine längere Periode erkennen? Obwohl eine Reihe von Artikeln die Frage hauptsächlich für Englisch (Kessler, Numberg, und Schütze 1997; Petrenz und Webber 2011; Underwood 2014) und Deutsch (Hettinger et al. 2016) beantwortet hat, befasst sich wenig Forschung mit diesem Thema aus einer diachronischen Perspektive oder wird auf spanischen Texte angewendet (Henny-Krahmer 2018). Welche Gattungen sind leichter zu erkennen, welche komplizierter? Welche Algorithmen, Transformationen und Anzahl der lexikalischen Einheiten funktionieren am besten?
+
+  
+
+
+Zur Beantwortung ob verschiedene Gattungen durch Maschinelles Lernen erkannt werden können, wurde das umfangreichste historische Korpus des Spanischen analysiert, CORDE. Dieses Korpus wurde von der Real Academia Española kompiliert (Rojo Sánchez 2010; Sánchez Sánchez und Domínguez Cintas 2007) und ist ein standard-Tool in der Hispanistik über das online Such-Interface (Kabatek und Pusch 2011). Für die Analyse wurden die Frequenzen der Tokens und die Metadaten jedes Texts an Forscher weitergegeben. Das Korpus beinhaltet ca. 300 Millionen Tokens (34.000 Texte) und die Texte sind mit expliziten Metadaten über Jahrhunderte, Länder und Gattungen markiert.
+
+  
+
+Die Daten der mittelalterlichen Sektion des Korpus präsentieren mehrere Probleme (Rodríguez Molina und Octavio de Toledo y Huerta 2017), wie beispielsweise ausgeprägte Unausgewogenheit der Anzahl der Texten im Vergleich zu anderen Jahrhunderten oder schwankende philologische Qualität. Deswegen wurden für diese Analyse nur die Texte der letzten 500 Jahre des Korpus selektiert, die länger als 100 Tokens sind. Somit beinhaltet das analysierte Korpus über 22.000 Texte (über 244 Millionen Tokens). Die Metadaten unterscheiden:
+
+    
+
+Eine komplette Liste der Gattungen ist auf den Abbildungen zu finden.
+
+
+    
+
+Die Klassifikation wurde binarisiert durchgeführt, d. h. jeder Text könnte zu jeder Gattung gehören oder nicht. Verschiedene Parameter wurden evaluiert:
+
+    
+
+Das Korpus wurde für jede Gattung undersampled: die gleiche Anzahl an positiven wie an negativen Fällen wurden für jede Gattung gesamplet. Die Evaluation wurde mit Hilfe von Cross-Validation (10 folds) durchgeführt und der Mittelwert der F1 Scores berechnet. Der Code wird als Python Notebook über GitHub zugänglich sein.
+
+
+    
+
+Die höchsten F1 Scores der Kombinationen von Parametern für jede Gattung lagen zwischen 0,9 und 1,0 mit einem Mittelwert der verschiedenen Gattungen von 0,96 (Standardabweichung von 0,03). Diese sehr hohen Ergebnisse ähneln sich denen von Underwood (2014), der an einem sehr großen Datensatz forschte. Die häufigsten Parameter bei den besten Ergebnissen waren Logistic Regression (16 Fälle von 27), binäre Häufigkeit (16, was nicht zu erwarten war) und 6.000 MFW (9).
+
+  
+
+Auf den nächsten Boxplots sind die 10 besten Kombinationen zu sehen. Jeder Punkt entspricht dem Mittelwert der F1 Scores der Cross-Validation der 10 besten Kombinationen von Parametern. Diese sind nach Gattung differenziert aufgelistet:
+
+
+  
+
+Folgende Gattungen wurden am besten erkannt: Theater (Vers und Prosa), Romane, lyrischer Vers, und Fachtexte über Naturwissenschaften und Kunst. Lyrische Prosa zeigt heftige Schwankungen, außerdem wurden die niedrigsten Ergebnisse von folgenden Gattungen erreicht: Autobiografie, narrativer Vers, Essay, lyrische Prosa, Prosa sowie Fachtexte über Gesellschaft, Geschichte und Geisteswissenschaften.
+
+  
+
+Ein interessanter Aspekt ist, welche die allgemeinen Tendenzen der Parameter und dessen Kombinationen sind. Dafür eignet sich ein Facet Grid Scatter Plot mit den Algorithmen als Spalten und den Transformationen als Reihen (einzelne Punkte entsprechen den Mittelwert der F1 Scores pro Gattung):
+
+
+  
+
+Hinsichtlich der Transformation (Reihen) zeigen die relative und die logarithmierte Häufigkeit niedrigere Ergebnisse als TF-IDF, z-scores und die binäre Häufigkeit. Bei den Algorithmen (Spalten) ist KNN merklich schlechter als die anderen drei. Zuletzt ist noch zu erkennen, dass die Qualität der Ergebnisse bis zu einer Anzahl von 2.000 Tokens zunimmt, und mit Schwankungen bis 6.000 stabil bleibt. Ein interessanter Aspekt ist die Tatsache, dass spezifische Kombinationen (SVC + TF-IDF, binäre + Logistic Regression, relative + Random Forest) von Vorteil im Vergleich zu anderen sind.
+
+
+
+
+Fragen
+
+
+
+Datensatz: CORDE 1475-1975
+
+
+
+  
+
+Fachtexte in Themen (Jura, Geschichte, Geisteswissenschaften…)
+
+  
+
+Gattungen und Untergattungen (lyrischer Vers, kurzer dramatischer Vers…)
+
+  
+
+oder Medien (journalistische Texte, Briefe…).
+
+  
+
+
+
+Methoden der Evaluation
+
+
+
+  
+
+Transformation der lexikalischen Information: relative Frequenz, binäre Frequenz, z-scores, TF-IDF, logarithmierte relative Frequenz
+
+  
+
+Algorithmen: k-Nearest Neighbors, Random Forest, Logistic Regression und Support Vector Machine
+
+  
+
+Anzahl der Tokens: 10, 50, 100, 500, 1.000, 2.000, 3.000, 4.000, 5.000 und 6.000
+
+  
+
+
+
+Ergebnisse und Diskussion
+
+
+
+
+  
+
+      Henny-Krahmer, Ulrike (2018): “Exploration of Sentiments and Genre in Spanish American Novels.” In DH Conference. Mexico City: ADHO.      Hettinger, Lena / Reger, Isabella / Jannidis, Fotis / Hotho, Andreas (2016): “Classification of Literary Subgenres.” In DHd Konferenz, 154–58. Leipzig: Universität Leipzig.      Kabatek, Johannes / Pusch, Claus D. (2011): Spanische Sprachwissenschaft: eine Einführung. Tübingen: Narr.      Kessler, Brett/ Numberg, Geoffrey / Schütze, Hinrich (1997): “Automatic Detection of Text Genre.” In Proceedings of the 35th Annual Meeting of the Association for Computational Linguistics and Eighth Conference of the European Chapter of the Association for Computational Linguistics, 32–38. ACL ’98. Stroudsburg, PA, USA: Association for Computational Linguistics.      Petrenz, Philipp / Webber, Bonnie (2011): “Stable Classification of Text Genres.” Computational Linguistics 37 (2): 385–93.      Rodríguez Molina, Javier / Octavio de Toledo y Huerta, Álvaro Sebastián (2017): “La imprescindible distinción entre texto y testimonio: el CORDE y los criterios de fiabilidad lingüística.” Scriptum digital: revista de corpus diacrònics i edició digital en llengües iberoromàniques, no. 6: 5–68.      Rojo Sánchez, Guillermo (2010): “Sobre codificación y explotación de corpus textuales: Otra comparación del Corpus del español con el CORDE y el CREA.” Lingüística, no. 24: 11–50.      Sánchez Sánchez, Mercedes / Domínguez Cintas, Carlos (2007): “El banco de datos de la RAE: CREA y CORDE.” Per Abbat: boletín filológico de actualización académica y didáctica, no. 2: 137–48.      Underwood, Ted (2014): “Understanding Genre in a Collection of a Million Volumes, Interim Report.
+
+
+
+
+Bibliographie
+
+</text>
+    <tc:tokens xmlns:tc="http://www.dspin.de/data/textcorpus">
+      <tc:token ID="w1">Wie</tc:token>
+      <tc:token ID="w2">gut</tc:token>
+      <tc:token ID="w3">lassen</tc:token>
+      <tc:token ID="w4">sich</tc:token>
+      <tc:token ID="w5">Gattungen</tc:token>
+      <tc:token ID="w6">und</tc:token>
+      <tc:token ID="w7">Untergattungen</tc:token>
+      <tc:token ID="w8">durch</tc:token>
+      <tc:token ID="w9">Maschinelles</tc:token>
+      <tc:token ID="wa">Lernen</tc:token>
+      <tc:token ID="wb">über</tc:token>
+      <tc:token ID="wc">eine</tc:token>
+      <tc:token ID="wd">längere</tc:token>
+      <tc:token ID="we">Periode</tc:token>
+      <tc:token ID="wf">erkennen</tc:token>
+      <tc:token ID="w10">?</tc:token>
+      <tc:token ID="w11">Obwohl</tc:token>
+      <tc:token ID="w12">eine</tc:token>
+      <tc:token ID="w13">Reihe</tc:token>
+      <tc:token ID="w14">von</tc:token>
+      <tc:token ID="w15">Artikeln</tc:token>
+      <tc:token ID="w16">die</tc:token>
+      <tc:token ID="w17">Frage</tc:token>
+      <tc:token ID="w18">hauptsächlich</tc:token>
+      <tc:token ID="w19">für</tc:token>
+      <tc:token ID="w1a">Englisch</tc:token>
+      <tc:token ID="w1b">(</tc:token>
+      <tc:token ID="w1c">Kessler</tc:token>
+      <tc:token ID="w1d">,</tc:token>
+      <tc:token ID="w1e">Numberg</tc:token>
+      <tc:token ID="w1f">,</tc:token>
+      <tc:token ID="w20">und</tc:token>
+      <tc:token ID="w21">Schütze</tc:token>
+      <tc:token ID="w22">1997</tc:token>
+      <tc:token ID="w23">;</tc:token>
+      <tc:token ID="w24">Petrenz</tc:token>
+      <tc:token ID="w25">und</tc:token>
+      <tc:token ID="w26">Webber</tc:token>
+      <tc:token ID="w27">2011</tc:token>
+      <tc:token ID="w28">;</tc:token>
+      <tc:token ID="w29">Underwood</tc:token>
+      <tc:token ID="w2a">2014</tc:token>
+      <tc:token ID="w2b">)</tc:token>
+      <tc:token ID="w2c">und</tc:token>
+      <tc:token ID="w2d">Deutsch</tc:token>
+      <tc:token ID="w2e">(</tc:token>
+      <tc:token ID="w2f">Hettinger</tc:token>
+      <tc:token ID="w30">et</tc:token>
+      <tc:token ID="w31">al.</tc:token>
+      <tc:token ID="w32">2016</tc:token>
+      <tc:token ID="w33">)</tc:token>
+      <tc:token ID="w34">beantwortet</tc:token>
+      <tc:token ID="w35">hat</tc:token>
+      <tc:token ID="w36">,</tc:token>
+      <tc:token ID="w37">befasst</tc:token>
+      <tc:token ID="w38">sich</tc:token>
+      <tc:token ID="w39">wenig</tc:token>
+      <tc:token ID="w3a">Forschung</tc:token>
+      <tc:token ID="w3b">mit</tc:token>
+      <tc:token ID="w3c">diesem</tc:token>
+      <tc:token ID="w3d">Thema</tc:token>
+      <tc:token ID="w3e">aus</tc:token>
+      <tc:token ID="w3f">einer</tc:token>
+      <tc:token ID="w40">diachronischen</tc:token>
+      <tc:token ID="w41">Perspektive</tc:token>
+      <tc:token ID="w42">oder</tc:token>
+      <tc:token ID="w43">wird</tc:token>
+      <tc:token ID="w44">auf</tc:token>
+      <tc:token ID="w45">spanischen</tc:token>
+      <tc:token ID="w46">Texte</tc:token>
+      <tc:token ID="w47">angewendet</tc:token>
+      <tc:token ID="w48">(</tc:token>
+      <tc:token ID="w49">Henny-Krahmer</tc:token>
+      <tc:token ID="w4a">2018</tc:token>
+      <tc:token ID="w4b">)</tc:token>
+      <tc:token ID="w4c">.</tc:token>
+      <tc:token ID="w4d">Welche</tc:token>
+      <tc:token ID="w4e">Gattungen</tc:token>
+      <tc:token ID="w4f">sind</tc:token>
+      <tc:token ID="w50">leichter</tc:token>
+      <tc:token ID="w51">zu</tc:token>
+      <tc:token ID="w52">erkennen</tc:token>
+      <tc:token ID="w53">,</tc:token>
+      <tc:token ID="w54">welche</tc:token>
+      <tc:token ID="w55">komplizierter</tc:token>
+      <tc:token ID="w56">?</tc:token>
+      <tc:token ID="w57">Welche</tc:token>
+      <tc:token ID="w58">Algorithmen</tc:token>
+      <tc:token ID="w59">,</tc:token>
+      <tc:token ID="w5a">Transformationen</tc:token>
+      <tc:token ID="w5b">und</tc:token>
+      <tc:token ID="w5c">Anzahl</tc:token>
+      <tc:token ID="w5d">der</tc:token>
+      <tc:token ID="w5e">lexikalischen</tc:token>
+      <tc:token ID="w5f">Einheiten</tc:token>
+      <tc:token ID="w60">funktionieren</tc:token>
+      <tc:token ID="w61">am</tc:token>
+      <tc:token ID="w62">besten</tc:token>
+      <tc:token ID="w63">?</tc:token>
+      <tc:token ID="w64">Zur</tc:token>
+      <tc:token ID="w65">Beantwortung</tc:token>
+      <tc:token ID="w66">ob</tc:token>
+      <tc:token ID="w67">verschiedene</tc:token>
+      <tc:token ID="w68">Gattungen</tc:token>
+      <tc:token ID="w69">durch</tc:token>
+      <tc:token ID="w6a">Maschinelles</tc:token>
+      <tc:token ID="w6b">Lernen</tc:token>
+      <tc:token ID="w6c">erkannt</tc:token>
+      <tc:token ID="w6d">werden</tc:token>
+      <tc:token ID="w6e">können</tc:token>
+      <tc:token ID="w6f">,</tc:token>
+      <tc:token ID="w70">wurde</tc:token>
+      <tc:token ID="w71">das</tc:token>
+      <tc:token ID="w72">umfangreichste</tc:token>
+      <tc:token ID="w73">historische</tc:token>
+      <tc:token ID="w74">Korpus</tc:token>
+      <tc:token ID="w75">des</tc:token>
+      <tc:token ID="w76">Spanischen</tc:token>
+      <tc:token ID="w77">analysiert</tc:token>
+      <tc:token ID="w78">,</tc:token>
+      <tc:token ID="w79">CORDE</tc:token>
+      <tc:token ID="w7a">.</tc:token>
+      <tc:token ID="w7b">Dieses</tc:token>
+      <tc:token ID="w7c">Korpus</tc:token>
+      <tc:token ID="w7d">wurde</tc:token>
+      <tc:token ID="w7e">von</tc:token>
+      <tc:token ID="w7f">der</tc:token>
+      <tc:token ID="w80">Real</tc:token>
+      <tc:token ID="w81">Academia</tc:token>
+      <tc:token ID="w82">Española</tc:token>
+      <tc:token ID="w83">kompiliert</tc:token>
+      <tc:token ID="w84">(</tc:token>
+      <tc:token ID="w85">Rojo</tc:token>
+      <tc:token ID="w86">Sánchez</tc:token>
+      <tc:token ID="w87">2010</tc:token>
+      <tc:token ID="w88">;</tc:token>
+      <tc:token ID="w89">Sánchez</tc:token>
+      <tc:token ID="w8a">Sánchez</tc:token>
+      <tc:token ID="w8b">und</tc:token>
+      <tc:token ID="w8c">Domínguez</tc:token>
+      <tc:token ID="w8d">Cintas</tc:token>
+      <tc:token ID="w8e">2007</tc:token>
+      <tc:token ID="w8f">)</tc:token>
+      <tc:token ID="w90">und</tc:token>
+      <tc:token ID="w91">ist</tc:token>
+      <tc:token ID="w92">ein</tc:token>
+      <tc:token ID="w93">standard-Tool</tc:token>
+      <tc:token ID="w94">in</tc:token>
+      <tc:token ID="w95">der</tc:token>
+      <tc:token ID="w96">Hispanistik</tc:token>
+      <tc:token ID="w97">über</tc:token>
+      <tc:token ID="w98">das</tc:token>
+      <tc:token ID="w99">online</tc:token>
+      <tc:token ID="w9a">Such-Interface</tc:token>
+      <tc:token ID="w9b">(</tc:token>
+      <tc:token ID="w9c">Kabatek</tc:token>
+      <tc:token ID="w9d">und</tc:token>
+      <tc:token ID="w9e">Pusch</tc:token>
+      <tc:token ID="w9f">2011</tc:token>
+      <tc:token ID="wa0">)</tc:token>
+      <tc:token ID="wa1">.</tc:token>
+      <tc:token ID="wa2">Für</tc:token>
+      <tc:token ID="wa3">die</tc:token>
+      <tc:token ID="wa4">Analyse</tc:token>
+      <tc:token ID="wa5">wurden</tc:token>
+      <tc:token ID="wa6">die</tc:token>
+      <tc:token ID="wa7">Frequenzen</tc:token>
+      <tc:token ID="wa8">der</tc:token>
+      <tc:token ID="wa9">Tokens</tc:token>
+      <tc:token ID="waa">und</tc:token>
+      <tc:token ID="wab">die</tc:token>
+      <tc:token ID="wac">Metadaten</tc:token>
+      <tc:token ID="wad">jedes</tc:token>
+      <tc:token ID="wae">Texts</tc:token>
+      <tc:token ID="waf">an</tc:token>
+      <tc:token ID="wb0">Forscher</tc:token>
+      <tc:token ID="wb1">weitergegeben</tc:token>
+      <tc:token ID="wb2">.</tc:token>
+      <tc:token ID="wb3">Das</tc:token>
+      <tc:token ID="wb4">Korpus</tc:token>
+      <tc:token ID="wb5">beinhaltet</tc:token>
+      <tc:token ID="wb6">ca.</tc:token>
+      <tc:token ID="wb7">300</tc:token>
+      <tc:token ID="wb8">Millionen</tc:token>
+      <tc:token ID="wb9">Tokens</tc:token>
+      <tc:token ID="wba">(</tc:token>
+      <tc:token ID="wbb">34.000</tc:token>
+      <tc:token ID="wbc">Texte</tc:token>
+      <tc:token ID="wbd">)</tc:token>
+      <tc:token ID="wbe">und</tc:token>
+      <tc:token ID="wbf">die</tc:token>
+      <tc:token ID="wc0">Texte</tc:token>
+      <tc:token ID="wc1">sind</tc:token>
+      <tc:token ID="wc2">mit</tc:token>
+      <tc:token ID="wc3">expliziten</tc:token>
+      <tc:token ID="wc4">Metadaten</tc:token>
+      <tc:token ID="wc5">über</tc:token>
+      <tc:token ID="wc6">Jahrhunderte</tc:token>
+      <tc:token ID="wc7">,</tc:token>
+      <tc:token ID="wc8">Länder</tc:token>
+      <tc:token ID="wc9">und</tc:token>
+      <tc:token ID="wca">Gattungen</tc:token>
+      <tc:token ID="wcb">markiert</tc:token>
+      <tc:token ID="wcc">.</tc:token>
+      <tc:token ID="wcd">Die</tc:token>
+      <tc:token ID="wce">Daten</tc:token>
+      <tc:token ID="wcf">der</tc:token>
+      <tc:token ID="wd0">mittelalterlichen</tc:token>
+      <tc:token ID="wd1">Sektion</tc:token>
+      <tc:token ID="wd2">des</tc:token>
+      <tc:token ID="wd3">Korpus</tc:token>
+      <tc:token ID="wd4">präsentieren</tc:token>
+      <tc:token ID="wd5">mehrere</tc:token>
+      <tc:token ID="wd6">Probleme</tc:token>
+      <tc:token ID="wd7">(</tc:token>
+      <tc:token ID="wd8">Rodríguez</tc:token>
+      <tc:token ID="wd9">Molina</tc:token>
+      <tc:token ID="wda">und</tc:token>
+      <tc:token ID="wdb">Octavio</tc:token>
+      <tc:token ID="wdc">de</tc:token>
+      <tc:token ID="wdd">Toledo</tc:token>
+      <tc:token ID="wde">y</tc:token>
+      <tc:token ID="wdf">Huerta</tc:token>
+      <tc:token ID="we0">2017</tc:token>
+      <tc:token ID="we1">)</tc:token>
+      <tc:token ID="we2">,</tc:token>
+      <tc:token ID="we3">wie</tc:token>
+      <tc:token ID="we4">beispielsweise</tc:token>
+      <tc:token ID="we5">ausgeprägte</tc:token>
+      <tc:token ID="we6">Unausgewogenheit</tc:token>
+      <tc:token ID="we7">der</tc:token>
+      <tc:token ID="we8">Anzahl</tc:token>
+      <tc:token ID="we9">der</tc:token>
+      <tc:token ID="wea">Texten</tc:token>
+      <tc:token ID="web">im</tc:token>
+      <tc:token ID="wec">Vergleich</tc:token>
+      <tc:token ID="wed">zu</tc:token>
+      <tc:token ID="wee">anderen</tc:token>
+      <tc:token ID="wef">Jahrhunderten</tc:token>
+      <tc:token ID="wf0">oder</tc:token>
+      <tc:token ID="wf1">schwankende</tc:token>
+      <tc:token ID="wf2">philologische</tc:token>
+      <tc:token ID="wf3">Qualität</tc:token>
+      <tc:token ID="wf4">.</tc:token>
+      <tc:token ID="wf5">Deswegen</tc:token>
+      <tc:token ID="wf6">wurden</tc:token>
+      <tc:token ID="wf7">für</tc:token>
+      <tc:token ID="wf8">diese</tc:token>
+      <tc:token ID="wf9">Analyse</tc:token>
+      <tc:token ID="wfa">nur</tc:token>
+      <tc:token ID="wfb">die</tc:token>
+      <tc:token ID="wfc">Texte</tc:token>
+      <tc:token ID="wfd">der</tc:token>
+      <tc:token ID="wfe">letzten</tc:token>
+      <tc:token ID="wff">500</tc:token>
+      <tc:token ID="w100">Jahre</tc:token>
+      <tc:token ID="w101">des</tc:token>
+      <tc:token ID="w102">Korpus</tc:token>
+      <tc:token ID="w103">selektiert</tc:token>
+      <tc:token ID="w104">,</tc:token>
+      <tc:token ID="w105">die</tc:token>
+      <tc:token ID="w106">länger</tc:token>
+      <tc:token ID="w107">als</tc:token>
+      <tc:token ID="w108">100</tc:token>
+      <tc:token ID="w109">Tokens</tc:token>
+      <tc:token ID="w10a">sind</tc:token>
+      <tc:token ID="w10b">.</tc:token>
+      <tc:token ID="w10c">Somit</tc:token>
+      <tc:token ID="w10d">beinhaltet</tc:token>
+      <tc:token ID="w10e">das</tc:token>
+      <tc:token ID="w10f">analysierte</tc:token>
+      <tc:token ID="w110">Korpus</tc:token>
+      <tc:token ID="w111">über</tc:token>
+      <tc:token ID="w112">22.000</tc:token>
+      <tc:token ID="w113">Texte</tc:token>
+      <tc:token ID="w114">(</tc:token>
+      <tc:token ID="w115">über</tc:token>
+      <tc:token ID="w116">244</tc:token>
+      <tc:token ID="w117">Millionen</tc:token>
+      <tc:token ID="w118">Tokens</tc:token>
+      <tc:token ID="w119">)</tc:token>
+      <tc:token ID="w11a">.</tc:token>
+      <tc:token ID="w11b">Die</tc:token>
+      <tc:token ID="w11c">Metadaten</tc:token>
+      <tc:token ID="w11d">unterscheiden</tc:token>
+      <tc:token ID="w11e">:</tc:token>
+      <tc:token ID="w11f">Eine</tc:token>
+      <tc:token ID="w120">komplette</tc:token>
+      <tc:token ID="w121">Liste</tc:token>
+      <tc:token ID="w122">der</tc:token>
+      <tc:token ID="w123">Gattungen</tc:token>
+      <tc:token ID="w124">ist</tc:token>
+      <tc:token ID="w125">auf</tc:token>
+      <tc:token ID="w126">den</tc:token>
+      <tc:token ID="w127">Abbildungen</tc:token>
+      <tc:token ID="w128">zu</tc:token>
+      <tc:token ID="w129">finden</tc:token>
+      <tc:token ID="w12a">.</tc:token>
+      <tc:token ID="w12b">Die</tc:token>
+      <tc:token ID="w12c">Klassifikation</tc:token>
+      <tc:token ID="w12d">wurde</tc:token>
+      <tc:token ID="w12e">binarisiert</tc:token>
+      <tc:token ID="w12f">durchgeführt</tc:token>
+      <tc:token ID="w130">,</tc:token>
+      <tc:token ID="w131">d.</tc:token>
+      <tc:token ID="w132">h.</tc:token>
+      <tc:token ID="w133">jeder</tc:token>
+      <tc:token ID="w134">Text</tc:token>
+      <tc:token ID="w135">könnte</tc:token>
+      <tc:token ID="w136">zu</tc:token>
+      <tc:token ID="w137">jeder</tc:token>
+      <tc:token ID="w138">Gattung</tc:token>
+      <tc:token ID="w139">gehören</tc:token>
+      <tc:token ID="w13a">oder</tc:token>
+      <tc:token ID="w13b">nicht</tc:token>
+      <tc:token ID="w13c">.</tc:token>
+      <tc:token ID="w13d">Verschiedene</tc:token>
+      <tc:token ID="w13e">Parameter</tc:token>
+      <tc:token ID="w13f">wurden</tc:token>
+      <tc:token ID="w140">evaluiert</tc:token>
+      <tc:token ID="w141">:</tc:token>
+      <tc:token ID="w142">Das</tc:token>
+      <tc:token ID="w143">Korpus</tc:token>
+      <tc:token ID="w144">wurde</tc:token>
+      <tc:token ID="w145">für</tc:token>
+      <tc:token ID="w146">jede</tc:token>
+      <tc:token ID="w147">Gattung</tc:token>
+      <tc:token ID="w148">undersampled</tc:token>
+      <tc:token ID="w149">:</tc:token>
+      <tc:token ID="w14a">die</tc:token>
+      <tc:token ID="w14b">gleiche</tc:token>
+      <tc:token ID="w14c">Anzahl</tc:token>
+      <tc:token ID="w14d">an</tc:token>
+      <tc:token ID="w14e">positiven</tc:token>
+      <tc:token ID="w14f">wie</tc:token>
+      <tc:token ID="w150">an</tc:token>
+      <tc:token ID="w151">negativen</tc:token>
+      <tc:token ID="w152">Fällen</tc:token>
+      <tc:token ID="w153">wurden</tc:token>
+      <tc:token ID="w154">für</tc:token>
+      <tc:token ID="w155">jede</tc:token>
+      <tc:token ID="w156">Gattung</tc:token>
+      <tc:token ID="w157">gesamplet</tc:token>
+      <tc:token ID="w158">.</tc:token>
+      <tc:token ID="w159">Die</tc:token>
+      <tc:token ID="w15a">Evaluation</tc:token>
+      <tc:token ID="w15b">wurde</tc:token>
+      <tc:token ID="w15c">mit</tc:token>
+      <tc:token ID="w15d">Hilfe</tc:token>
+      <tc:token ID="w15e">von</tc:token>
+      <tc:token ID="w15f">Cross-Validation</tc:token>
+      <tc:token ID="w160">(</tc:token>
+      <tc:token ID="w161">10</tc:token>
+      <tc:token ID="w162">folds</tc:token>
+      <tc:token ID="w163">)</tc:token>
+      <tc:token ID="w164">durchgeführt</tc:token>
+      <tc:token ID="w165">und</tc:token>
+      <tc:token ID="w166">der</tc:token>
+      <tc:token ID="w167">Mittelwert</tc:token>
+      <tc:token ID="w168">der</tc:token>
+      <tc:token ID="w169">F1</tc:token>
+      <tc:token ID="w16a">Scores</tc:token>
+      <tc:token ID="w16b">berechnet</tc:token>
+      <tc:token ID="w16c">.</tc:token>
+      <tc:token ID="w16d">Der</tc:token>
+      <tc:token ID="w16e">Code</tc:token>
+      <tc:token ID="w16f">wird</tc:token>
+      <tc:token ID="w170">als</tc:token>
+      <tc:token ID="w171">Python</tc:token>
+      <tc:token ID="w172">Notebook</tc:token>
+      <tc:token ID="w173">über</tc:token>
+      <tc:token ID="w174">GitHub</tc:token>
+      <tc:token ID="w175">zugänglich</tc:token>
+      <tc:token ID="w176">sein</tc:token>
+      <tc:token ID="w177">.</tc:token>
+      <tc:token ID="w178">Die</tc:token>
+      <tc:token ID="w179">höchsten</tc:token>
+      <tc:token ID="w17a">F1</tc:token>
+      <tc:token ID="w17b">Scores</tc:token>
+      <tc:token ID="w17c">der</tc:token>
+      <tc:token ID="w17d">Kombinationen</tc:token>
+      <tc:token ID="w17e">von</tc:token>
+      <tc:token ID="w17f">Parametern</tc:token>
+      <tc:token ID="w180">für</tc:token>
+      <tc:token ID="w181">jede</tc:token>
+      <tc:token ID="w182">Gattung</tc:token>
+      <tc:token ID="w183">lagen</tc:token>
+      <tc:token ID="w184">zwischen</tc:token>
+      <tc:token ID="w185">0,9</tc:token>
+      <tc:token ID="w186">und</tc:token>
+      <tc:token ID="w187">1,0</tc:token>
+      <tc:token ID="w188">mit</tc:token>
+      <tc:token ID="w189">einem</tc:token>
+      <tc:token ID="w18a">Mittelwert</tc:token>
+      <tc:token ID="w18b">der</tc:token>
+      <tc:token ID="w18c">verschiedenen</tc:token>
+      <tc:token ID="w18d">Gattungen</tc:token>
+      <tc:token ID="w18e">von</tc:token>
+      <tc:token ID="w18f">0,96</tc:token>
+      <tc:token ID="w190">(</tc:token>
+      <tc:token ID="w191">Standardabweichung</tc:token>
+      <tc:token ID="w192">von</tc:token>
+      <tc:token ID="w193">0,03</tc:token>
+      <tc:token ID="w194">)</tc:token>
+      <tc:token ID="w195">.</tc:token>
+      <tc:token ID="w196">Diese</tc:token>
+      <tc:token ID="w197">sehr</tc:token>
+      <tc:token ID="w198">hohen</tc:token>
+      <tc:token ID="w199">Ergebnisse</tc:token>
+      <tc:token ID="w19a">ähneln</tc:token>
+      <tc:token ID="w19b">sich</tc:token>
+      <tc:token ID="w19c">denen</tc:token>
+      <tc:token ID="w19d">von</tc:token>
+      <tc:token ID="w19e">Underwood</tc:token>
+      <tc:token ID="w19f">(</tc:token>
+      <tc:token ID="w1a0">2014</tc:token>
+      <tc:token ID="w1a1">)</tc:token>
+      <tc:token ID="w1a2">,</tc:token>
+      <tc:token ID="w1a3">der</tc:token>
+      <tc:token ID="w1a4">an</tc:token>
+      <tc:token ID="w1a5">einem</tc:token>
+      <tc:token ID="w1a6">sehr</tc:token>
+      <tc:token ID="w1a7">großen</tc:token>
+      <tc:token ID="w1a8">Datensatz</tc:token>
+      <tc:token ID="w1a9">forschte</tc:token>
+      <tc:token ID="w1aa">.</tc:token>
+      <tc:token ID="w1ab">Die</tc:token>
+      <tc:token ID="w1ac">häufigsten</tc:token>
+      <tc:token ID="w1ad">Parameter</tc:token>
+      <tc:token ID="w1ae">bei</tc:token>
+      <tc:token ID="w1af">den</tc:token>
+      <tc:token ID="w1b0">besten</tc:token>
+      <tc:token ID="w1b1">Ergebnissen</tc:token>
+      <tc:token ID="w1b2">waren</tc:token>
+      <tc:token ID="w1b3">Logistic</tc:token>
+      <tc:token ID="w1b4">Regression</tc:token>
+      <tc:token ID="w1b5">(</tc:token>
+      <tc:token ID="w1b6">16</tc:token>
+      <tc:token ID="w1b7">Fälle</tc:token>
+      <tc:token ID="w1b8">von</tc:token>
+      <tc:token ID="w1b9">27</tc:token>
+      <tc:token ID="w1ba">)</tc:token>
+      <tc:token ID="w1bb">,</tc:token>
+      <tc:token ID="w1bc">binäre</tc:token>
+      <tc:token ID="w1bd">Häufigkeit</tc:token>
+      <tc:token ID="w1be">(</tc:token>
+      <tc:token ID="w1bf">16</tc:token>
+      <tc:token ID="w1c0">,</tc:token>
+      <tc:token ID="w1c1">was</tc:token>
+      <tc:token ID="w1c2">nicht</tc:token>
+      <tc:token ID="w1c3">zu</tc:token>
+      <tc:token ID="w1c4">erwarten</tc:token>
+      <tc:token ID="w1c5">war</tc:token>
+      <tc:token ID="w1c6">)</tc:token>
+      <tc:token ID="w1c7">und</tc:token>
+      <tc:token ID="w1c8">6.000</tc:token>
+      <tc:token ID="w1c9">MFW</tc:token>
+      <tc:token ID="w1ca">(</tc:token>
+      <tc:token ID="w1cb">9</tc:token>
+      <tc:token ID="w1cc">)</tc:token>
+      <tc:token ID="w1cd">.</tc:token>
+      <tc:token ID="w1ce">Auf</tc:token>
+      <tc:token ID="w1cf">den</tc:token>
+      <tc:token ID="w1d0">nächsten</tc:token>
+      <tc:token ID="w1d1">Boxplots</tc:token>
+      <tc:token ID="w1d2">sind</tc:token>
+      <tc:token ID="w1d3">die</tc:token>
+      <tc:token ID="w1d4">10</tc:token>
+      <tc:token ID="w1d5">besten</tc:token>
+      <tc:token ID="w1d6">Kombinationen</tc:token>
+      <tc:token ID="w1d7">zu</tc:token>
+      <tc:token ID="w1d8">sehen</tc:token>
+      <tc:token ID="w1d9">.</tc:token>
+      <tc:token ID="w1da">Jeder</tc:token>
+      <tc:token ID="w1db">Punkt</tc:token>
+      <tc:token ID="w1dc">entspricht</tc:token>
+      <tc:token ID="w1dd">dem</tc:token>
+      <tc:token ID="w1de">Mittelwert</tc:token>
+      <tc:token ID="w1df">der</tc:token>
+      <tc:token ID="w1e0">F1</tc:token>
+      <tc:token ID="w1e1">Scores</tc:token>
+      <tc:token ID="w1e2">der</tc:token>
+      <tc:token ID="w1e3">Cross-Validation</tc:token>
+      <tc:token ID="w1e4">der</tc:token>
+      <tc:token ID="w1e5">10</tc:token>
+      <tc:token ID="w1e6">besten</tc:token>
+      <tc:token ID="w1e7">Kombinationen</tc:token>
+      <tc:token ID="w1e8">von</tc:token>
+      <tc:token ID="w1e9">Parametern</tc:token>
+      <tc:token ID="w1ea">.</tc:token>
+      <tc:token ID="w1eb">Diese</tc:token>
+      <tc:token ID="w1ec">sind</tc:token>
+      <tc:token ID="w1ed">nach</tc:token>
+      <tc:token ID="w1ee">Gattung</tc:token>
+      <tc:token ID="w1ef">differenziert</tc:token>
+      <tc:token ID="w1f0">aufgelistet</tc:token>
+      <tc:token ID="w1f1">:</tc:token>
+      <tc:token ID="w1f2">Folgende</tc:token>
+      <tc:token ID="w1f3">Gattungen</tc:token>
+      <tc:token ID="w1f4">wurden</tc:token>
+      <tc:token ID="w1f5">am</tc:token>
+      <tc:token ID="w1f6">besten</tc:token>
+      <tc:token ID="w1f7">erkannt</tc:token>
+      <tc:token ID="w1f8">:</tc:token>
+      <tc:token ID="w1f9">Theater</tc:token>
+      <tc:token ID="w1fa">(</tc:token>
+      <tc:token ID="w1fb">Vers</tc:token>
+      <tc:token ID="w1fc">und</tc:token>
+      <tc:token ID="w1fd">Prosa</tc:token>
+      <tc:token ID="w1fe">)</tc:token>
+      <tc:token ID="w1ff">,</tc:token>
+      <tc:token ID="w200">Romane</tc:token>
+      <tc:token ID="w201">,</tc:token>
+      <tc:token ID="w202">lyrischer</tc:token>
+      <tc:token ID="w203">Vers</tc:token>
+      <tc:token ID="w204">,</tc:token>
+      <tc:token ID="w205">und</tc:token>
+      <tc:token ID="w206">Fachtexte</tc:token>
+      <tc:token ID="w207">über</tc:token>
+      <tc:token ID="w208">Naturwissenschaften</tc:token>
+      <tc:token ID="w209">und</tc:token>
+      <tc:token ID="w20a">Kunst</tc:token>
+      <tc:token ID="w20b">.</tc:token>
+      <tc:token ID="w20c">Lyrische</tc:token>
+      <tc:token ID="w20d">Prosa</tc:token>
+      <tc:token ID="w20e">zeigt</tc:token>
+      <tc:token ID="w20f">heftige</tc:token>
+      <tc:token ID="w210">Schwankungen</tc:token>
+      <tc:token ID="w211">,</tc:token>
+      <tc:token ID="w212">außerdem</tc:token>
+      <tc:token ID="w213">wurden</tc:token>
+      <tc:token ID="w214">die</tc:token>
+      <tc:token ID="w215">niedrigsten</tc:token>
+      <tc:token ID="w216">Ergebnisse</tc:token>
+      <tc:token ID="w217">von</tc:token>
+      <tc:token ID="w218">folgenden</tc:token>
+      <tc:token ID="w219">Gattungen</tc:token>
+      <tc:token ID="w21a">erreicht</tc:token>
+      <tc:token ID="w21b">:</tc:token>
+      <tc:token ID="w21c">Autobiografie</tc:token>
+      <tc:token ID="w21d">,</tc:token>
+      <tc:token ID="w21e">narrativer</tc:token>
+      <tc:token ID="w21f">Vers</tc:token>
+      <tc:token ID="w220">,</tc:token>
+      <tc:token ID="w221">Essay</tc:token>
+      <tc:token ID="w222">,</tc:token>
+      <tc:token ID="w223">lyrische</tc:token>
+      <tc:token ID="w224">Prosa</tc:token>
+      <tc:token ID="w225">,</tc:token>
+      <tc:token ID="w226">Prosa</tc:token>
+      <tc:token ID="w227">sowie</tc:token>
+      <tc:token ID="w228">Fachtexte</tc:token>
+      <tc:token ID="w229">über</tc:token>
+      <tc:token ID="w22a">Gesellschaft</tc:token>
+      <tc:token ID="w22b">,</tc:token>
+      <tc:token ID="w22c">Geschichte</tc:token>
+      <tc:token ID="w22d">und</tc:token>
+      <tc:token ID="w22e">Geisteswissenschaften</tc:token>
+      <tc:token ID="w22f">.</tc:token>
+      <tc:token ID="w230">Ein</tc:token>
+      <tc:token ID="w231">interessanter</tc:token>
+      <tc:token ID="w232">Aspekt</tc:token>
+      <tc:token ID="w233">ist</tc:token>
+      <tc:token ID="w234">,</tc:token>
+      <tc:token ID="w235">welche</tc:token>
+      <tc:token ID="w236">die</tc:token>
+      <tc:token ID="w237">allgemeinen</tc:token>
+      <tc:token ID="w238">Tendenzen</tc:token>
+      <tc:token ID="w239">der</tc:token>
+      <tc:token ID="w23a">Parameter</tc:token>
+      <tc:token ID="w23b">und</tc:token>
+      <tc:token ID="w23c">dessen</tc:token>
+      <tc:token ID="w23d">Kombinationen</tc:token>
+      <tc:token ID="w23e">sind</tc:token>
+      <tc:token ID="w23f">.</tc:token>
+      <tc:token ID="w240">Dafür</tc:token>
+      <tc:token ID="w241">eignet</tc:token>
+      <tc:token ID="w242">sich</tc:token>
+      <tc:token ID="w243">ein</tc:token>
+      <tc:token ID="w244">Facet</tc:token>
+      <tc:token ID="w245">Grid</tc:token>
+      <tc:token ID="w246">Scatter</tc:token>
+      <tc:token ID="w247">Plot</tc:token>
+      <tc:token ID="w248">mit</tc:token>
+      <tc:token ID="w249">den</tc:token>
+      <tc:token ID="w24a">Algorithmen</tc:token>
+      <tc:token ID="w24b">als</tc:token>
+      <tc:token ID="w24c">Spalten</tc:token>
+      <tc:token ID="w24d">und</tc:token>
+      <tc:token ID="w24e">den</tc:token>
+      <tc:token ID="w24f">Transformationen</tc:token>
+      <tc:token ID="w250">als</tc:token>
+      <tc:token ID="w251">Reihen</tc:token>
+      <tc:token ID="w252">(</tc:token>
+      <tc:token ID="w253">einzelne</tc:token>
+      <tc:token ID="w254">Punkte</tc:token>
+      <tc:token ID="w255">entsprechen</tc:token>
+      <tc:token ID="w256">den</tc:token>
+      <tc:token ID="w257">Mittelwert</tc:token>
+      <tc:token ID="w258">der</tc:token>
+      <tc:token ID="w259">F1</tc:token>
+      <tc:token ID="w25a">Scores</tc:token>
+      <tc:token ID="w25b">pro</tc:token>
+      <tc:token ID="w25c">Gattung</tc:token>
+      <tc:token ID="w25d">)</tc:token>
+      <tc:token ID="w25e">:</tc:token>
+      <tc:token ID="w25f">Hinsichtlich</tc:token>
+      <tc:token ID="w260">der</tc:token>
+      <tc:token ID="w261">Transformation</tc:token>
+      <tc:token ID="w262">(</tc:token>
+      <tc:token ID="w263">Reihen</tc:token>
+      <tc:token ID="w264">)</tc:token>
+      <tc:token ID="w265">zeigen</tc:token>
+      <tc:token ID="w266">die</tc:token>
+      <tc:token ID="w267">relative</tc:token>
+      <tc:token ID="w268">und</tc:token>
+      <tc:token ID="w269">die</tc:token>
+      <tc:token ID="w26a">logarithmierte</tc:token>
+      <tc:token ID="w26b">Häufigkeit</tc:token>
+      <tc:token ID="w26c">niedrigere</tc:token>
+      <tc:token ID="w26d">Ergebnisse</tc:token>
+      <tc:token ID="w26e">als</tc:token>
+      <tc:token ID="w26f">TF-IDF</tc:token>
+      <tc:token ID="w270">,</tc:token>
+      <tc:token ID="w271">z-scores</tc:token>
+      <tc:token ID="w272">und</tc:token>
+      <tc:token ID="w273">die</tc:token>
+      <tc:token ID="w274">binäre</tc:token>
+      <tc:token ID="w275">Häufigkeit</tc:token>
+      <tc:token ID="w276">.</tc:token>
+      <tc:token ID="w277">Bei</tc:token>
+      <tc:token ID="w278">den</tc:token>
+      <tc:token ID="w279">Algorithmen</tc:token>
+      <tc:token ID="w27a">(</tc:token>
+      <tc:token ID="w27b">Spalten</tc:token>
+      <tc:token ID="w27c">)</tc:token>
+      <tc:token ID="w27d">ist</tc:token>
+      <tc:token ID="w27e">KNN</tc:token>
+      <tc:token ID="w27f">merklich</tc:token>
+      <tc:token ID="w280">schlechter</tc:token>
+      <tc:token ID="w281">als</tc:token>
+      <tc:token ID="w282">die</tc:token>
+      <tc:token ID="w283">anderen</tc:token>
+      <tc:token ID="w284">drei</tc:token>
+      <tc:token ID="w285">.</tc:token>
+      <tc:token ID="w286">Zuletzt</tc:token>
+      <tc:token ID="w287">ist</tc:token>
+      <tc:token ID="w288">noch</tc:token>
+      <tc:token ID="w289">zu</tc:token>
+      <tc:token ID="w28a">erkennen</tc:token>
+      <tc:token ID="w28b">,</tc:token>
+      <tc:token ID="w28c">dass</tc:token>
+      <tc:token ID="w28d">die</tc:token>
+      <tc:token ID="w28e">Qualität</tc:token>
+      <tc:token ID="w28f">der</tc:token>
+      <tc:token ID="w290">Ergebnisse</tc:token>
+      <tc:token ID="w291">bis</tc:token>
+      <tc:token ID="w292">zu</tc:token>
+      <tc:token ID="w293">einer</tc:token>
+      <tc:token ID="w294">Anzahl</tc:token>
+      <tc:token ID="w295">von</tc:token>
+      <tc:token ID="w296">2.000</tc:token>
+      <tc:token ID="w297">Tokens</tc:token>
+      <tc:token ID="w298">zunimmt</tc:token>
+      <tc:token ID="w299">,</tc:token>
+      <tc:token ID="w29a">und</tc:token>
+      <tc:token ID="w29b">mit</tc:token>
+      <tc:token ID="w29c">Schwankungen</tc:token>
+      <tc:token ID="w29d">bis</tc:token>
+      <tc:token ID="w29e">6.000</tc:token>
+      <tc:token ID="w29f">stabil</tc:token>
+      <tc:token ID="w2a0">bleibt</tc:token>
+      <tc:token ID="w2a1">.</tc:token>
+      <tc:token ID="w2a2">Ein</tc:token>
+      <tc:token ID="w2a3">interessanter</tc:token>
+      <tc:token ID="w2a4">Aspekt</tc:token>
+      <tc:token ID="w2a5">ist</tc:token>
+      <tc:token ID="w2a6">die</tc:token>
+      <tc:token ID="w2a7">Tatsache</tc:token>
+      <tc:token ID="w2a8">,</tc:token>
+      <tc:token ID="w2a9">dass</tc:token>
+      <tc:token ID="w2aa">spezifische</tc:token>
+      <tc:token ID="w2ab">Kombinationen</tc:token>
+      <tc:token ID="w2ac">(</tc:token>
+      <tc:token ID="w2ad">SVC</tc:token>
+      <tc:token ID="w2ae">+</tc:token>
+      <tc:token ID="w2af">TF-IDF</tc:token>
+      <tc:token ID="w2b0">,</tc:token>
+      <tc:token ID="w2b1">binäre</tc:token>
+      <tc:token ID="w2b2">+</tc:token>
+      <tc:token ID="w2b3">Logistic</tc:token>
+      <tc:token ID="w2b4">Regression</tc:token>
+      <tc:token ID="w2b5">,</tc:token>
+      <tc:token ID="w2b6">relative</tc:token>
+      <tc:token ID="w2b7">+</tc:token>
+      <tc:token ID="w2b8">Random</tc:token>
+      <tc:token ID="w2b9">Forest</tc:token>
+      <tc:token ID="w2ba">)</tc:token>
+      <tc:token ID="w2bb">von</tc:token>
+      <tc:token ID="w2bc">Vorteil</tc:token>
+      <tc:token ID="w2bd">im</tc:token>
+      <tc:token ID="w2be">Vergleich</tc:token>
+      <tc:token ID="w2bf">zu</tc:token>
+      <tc:token ID="w2c0">anderen</tc:token>
+      <tc:token ID="w2c1">sind</tc:token>
+      <tc:token ID="w2c2">.</tc:token>
+      <tc:token ID="w2c3">Fragen</tc:token>
+      <tc:token ID="w2c4">Datensatz</tc:token>
+      <tc:token ID="w2c5">:</tc:token>
+      <tc:token ID="w2c6">CORDE</tc:token>
+      <tc:token ID="w2c7">1475-1975</tc:token>
+      <tc:token ID="w2c8">Fachtexte</tc:token>
+      <tc:token ID="w2c9">in</tc:token>
+      <tc:token ID="w2ca">Themen</tc:token>
+      <tc:token ID="w2cb">(</tc:token>
+      <tc:token ID="w2cc">Jura</tc:token>
+      <tc:token ID="w2cd">,</tc:token>
+      <tc:token ID="w2ce">Geschichte</tc:token>
+      <tc:token ID="w2cf">,</tc:token>
+      <tc:token ID="w2d0">Geisteswissenschaften</tc:token>
+      <tc:token ID="w2d1">…</tc:token>
+      <tc:token ID="w2d2">)</tc:token>
+      <tc:token ID="w2d3">Gattungen</tc:token>
+      <tc:token ID="w2d4">und</tc:token>
+      <tc:token ID="w2d5">Untergattungen</tc:token>
+      <tc:token ID="w2d6">(</tc:token>
+      <tc:token ID="w2d7">lyrischer</tc:token>
+      <tc:token ID="w2d8">Vers</tc:token>
+      <tc:token ID="w2d9">,</tc:token>
+      <tc:token ID="w2da">kurzer</tc:token>
+      <tc:token ID="w2db">dramatischer</tc:token>
+      <tc:token ID="w2dc">Vers</tc:token>
+      <tc:token ID="w2dd">…</tc:token>
+      <tc:token ID="w2de">)</tc:token>
+      <tc:token ID="w2df">oder</tc:token>
+      <tc:token ID="w2e0">Medien</tc:token>
+      <tc:token ID="w2e1">(</tc:token>
+      <tc:token ID="w2e2">journalistische</tc:token>
+      <tc:token ID="w2e3">Texte</tc:token>
+      <tc:token ID="w2e4">,</tc:token>
+      <tc:token ID="w2e5">Briefe</tc:token>
+      <tc:token ID="w2e6">…</tc:token>
+      <tc:token ID="w2e7">)</tc:token>
+      <tc:token ID="w2e8">.</tc:token>
+      <tc:token ID="w2e9">Methoden</tc:token>
+      <tc:token ID="w2ea">der</tc:token>
+      <tc:token ID="w2eb">Evaluation</tc:token>
+      <tc:token ID="w2ec">Transformation</tc:token>
+      <tc:token ID="w2ed">der</tc:token>
+      <tc:token ID="w2ee">lexikalischen</tc:token>
+      <tc:token ID="w2ef">Information</tc:token>
+      <tc:token ID="w2f0">:</tc:token>
+      <tc:token ID="w2f1">relative</tc:token>
+      <tc:token ID="w2f2">Frequenz</tc:token>
+      <tc:token ID="w2f3">,</tc:token>
+      <tc:token ID="w2f4">binäre</tc:token>
+      <tc:token ID="w2f5">Frequenz</tc:token>
+      <tc:token ID="w2f6">,</tc:token>
+      <tc:token ID="w2f7">z-scores</tc:token>
+      <tc:token ID="w2f8">,</tc:token>
+      <tc:token ID="w2f9">TF-IDF</tc:token>
+      <tc:token ID="w2fa">,</tc:token>
+      <tc:token ID="w2fb">logarithmierte</tc:token>
+      <tc:token ID="w2fc">relative</tc:token>
+      <tc:token ID="w2fd">Frequenz</tc:token>
+      <tc:token ID="w2fe">Algorithmen</tc:token>
+      <tc:token ID="w2ff">:</tc:token>
+      <tc:token ID="w300">k-Nearest</tc:token>
+      <tc:token ID="w301">Neighbors</tc:token>
+      <tc:token ID="w302">,</tc:token>
+      <tc:token ID="w303">Random</tc:token>
+      <tc:token ID="w304">Forest</tc:token>
+      <tc:token ID="w305">,</tc:token>
+      <tc:token ID="w306">Logistic</tc:token>
+      <tc:token ID="w307">Regression</tc:token>
+      <tc:token ID="w308">und</tc:token>
+      <tc:token ID="w309">Support</tc:token>
+      <tc:token ID="w30a">Vector</tc:token>
+      <tc:token ID="w30b">Machine</tc:token>
+      <tc:token ID="w30c">Anzahl</tc:token>
+      <tc:token ID="w30d">der</tc:token>
+      <tc:token ID="w30e">Tokens</tc:token>
+      <tc:token ID="w30f">:</tc:token>
+      <tc:token ID="w310">10</tc:token>
+      <tc:token ID="w311">,</tc:token>
+      <tc:token ID="w312">50</tc:token>
+      <tc:token ID="w313">,</tc:token>
+      <tc:token ID="w314">100</tc:token>
+      <tc:token ID="w315">,</tc:token>
+      <tc:token ID="w316">500</tc:token>
+      <tc:token ID="w317">,</tc:token>
+      <tc:token ID="w318">1.000</tc:token>
+      <tc:token ID="w319">,</tc:token>
+      <tc:token ID="w31a">2.000</tc:token>
+      <tc:token ID="w31b">,</tc:token>
+      <tc:token ID="w31c">3.000</tc:token>
+      <tc:token ID="w31d">,</tc:token>
+      <tc:token ID="w31e">4.000</tc:token>
+      <tc:token ID="w31f">,</tc:token>
+      <tc:token ID="w320">5.000</tc:token>
+      <tc:token ID="w321">und</tc:token>
+      <tc:token ID="w322">6.000</tc:token>
+      <tc:token ID="w323">Ergebnisse</tc:token>
+      <tc:token ID="w324">und</tc:token>
+      <tc:token ID="w325">Diskussion</tc:token>
+      <tc:token ID="w326">Henny-Krahmer</tc:token>
+      <tc:token ID="w327">,</tc:token>
+      <tc:token ID="w328">Ulrike</tc:token>
+      <tc:token ID="w329">(</tc:token>
+      <tc:token ID="w32a">2018</tc:token>
+      <tc:token ID="w32b">)</tc:token>
+      <tc:token ID="w32c">:</tc:token>
+      <tc:token ID="w32d">“</tc:token>
+      <tc:token ID="w32e">Exploration</tc:token>
+      <tc:token ID="w32f">of</tc:token>
+      <tc:token ID="w330">Sentiments</tc:token>
+      <tc:token ID="w331">and</tc:token>
+      <tc:token ID="w332">Genre</tc:token>
+      <tc:token ID="w333">in</tc:token>
+      <tc:token ID="w334">Spanish</tc:token>
+      <tc:token ID="w335">American</tc:token>
+      <tc:token ID="w336">Novels</tc:token>
+      <tc:token ID="w337">.</tc:token>
+      <tc:token ID="w338">”</tc:token>
+      <tc:token ID="w339">In</tc:token>
+      <tc:token ID="w33a">DH</tc:token>
+      <tc:token ID="w33b">Conference</tc:token>
+      <tc:token ID="w33c">.</tc:token>
+      <tc:token ID="w33d">Mexico</tc:token>
+      <tc:token ID="w33e">City</tc:token>
+      <tc:token ID="w33f">:</tc:token>
+      <tc:token ID="w340">ADHO</tc:token>
+      <tc:token ID="w341">.</tc:token>
+      <tc:token ID="w342">Hettinger</tc:token>
+      <tc:token ID="w343">,</tc:token>
+      <tc:token ID="w344">Lena</tc:token>
+      <tc:token ID="w345">/</tc:token>
+      <tc:token ID="w346">Reger</tc:token>
+      <tc:token ID="w347">,</tc:token>
+      <tc:token ID="w348">Isabella</tc:token>
+      <tc:token ID="w349">/</tc:token>
+      <tc:token ID="w34a">Jannidis</tc:token>
+      <tc:token ID="w34b">,</tc:token>
+      <tc:token ID="w34c">Fotis</tc:token>
+      <tc:token ID="w34d">/</tc:token>
+      <tc:token ID="w34e">Hotho</tc:token>
+      <tc:token ID="w34f">,</tc:token>
+      <tc:token ID="w350">Andreas</tc:token>
+      <tc:token ID="w351">(</tc:token>
+      <tc:token ID="w352">2016</tc:token>
+      <tc:token ID="w353">)</tc:token>
+      <tc:token ID="w354">:</tc:token>
+      <tc:token ID="w355">“</tc:token>
+      <tc:token ID="w356">Classification</tc:token>
+      <tc:token ID="w357">of</tc:token>
+      <tc:token ID="w358">Literary</tc:token>
+      <tc:token ID="w359">Subgenres</tc:token>
+      <tc:token ID="w35a">.</tc:token>
+      <tc:token ID="w35b">”</tc:token>
+      <tc:token ID="w35c">In</tc:token>
+      <tc:token ID="w35d">DHd</tc:token>
+      <tc:token ID="w35e">Konferenz</tc:token>
+      <tc:token ID="w35f">,</tc:token>
+      <tc:token ID="w360">154–58</tc:token>
+      <tc:token ID="w361">.</tc:token>
+      <tc:token ID="w362">Leipzig</tc:token>
+      <tc:token ID="w363">:</tc:token>
+      <tc:token ID="w364">Universität</tc:token>
+      <tc:token ID="w365">Leipzig</tc:token>
+      <tc:token ID="w366">.</tc:token>
+      <tc:token ID="w367">Kabatek</tc:token>
+      <tc:token ID="w368">,</tc:token>
+      <tc:token ID="w369">Johannes</tc:token>
+      <tc:token ID="w36a">/</tc:token>
+      <tc:token ID="w36b">Pusch</tc:token>
+      <tc:token ID="w36c">,</tc:token>
+      <tc:token ID="w36d">Claus</tc:token>
+      <tc:token ID="w36e">D.</tc:token>
+      <tc:token ID="w36f">(</tc:token>
+      <tc:token ID="w370">2011</tc:token>
+      <tc:token ID="w371">)</tc:token>
+      <tc:token ID="w372">:</tc:token>
+      <tc:token ID="w373">Spanische</tc:token>
+      <tc:token ID="w374">Sprachwissenschaft</tc:token>
+      <tc:token ID="w375">:</tc:token>
+      <tc:token ID="w376">eine</tc:token>
+      <tc:token ID="w377">Einführung</tc:token>
+      <tc:token ID="w378">.</tc:token>
+      <tc:token ID="w379">Tübingen</tc:token>
+      <tc:token ID="w37a">:</tc:token>
+      <tc:token ID="w37b">Narr</tc:token>
+      <tc:token ID="w37c">.</tc:token>
+      <tc:token ID="w37d">Kessler</tc:token>
+      <tc:token ID="w37e">,</tc:token>
+      <tc:token ID="w37f">Brett</tc:token>
+      <tc:token ID="w380">/</tc:token>
+      <tc:token ID="w381">Numberg</tc:token>
+      <tc:token ID="w382">,</tc:token>
+      <tc:token ID="w383">Geoffrey</tc:token>
+      <tc:token ID="w384">/</tc:token>
+      <tc:token ID="w385">Schütze</tc:token>
+      <tc:token ID="w386">,</tc:token>
+      <tc:token ID="w387">Hinrich</tc:token>
+      <tc:token ID="w388">(</tc:token>
+      <tc:token ID="w389">1997</tc:token>
+      <tc:token ID="w38a">)</tc:token>
+      <tc:token ID="w38b">:</tc:token>
+      <tc:token ID="w38c">“</tc:token>
+      <tc:token ID="w38d">Automatic</tc:token>
+      <tc:token ID="w38e">Detection</tc:token>
+      <tc:token ID="w38f">of</tc:token>
+      <tc:token ID="w390">Text</tc:token>
+      <tc:token ID="w391">Genre</tc:token>
+      <tc:token ID="w392">.</tc:token>
+      <tc:token ID="w393">”</tc:token>
+      <tc:token ID="w394">In</tc:token>
+      <tc:token ID="w395">Proceedings</tc:token>
+      <tc:token ID="w396">of</tc:token>
+      <tc:token ID="w397">the</tc:token>
+      <tc:token ID="w398">35th</tc:token>
+      <tc:token ID="w399">Annual</tc:token>
+      <tc:token ID="w39a">Meeting</tc:token>
+      <tc:token ID="w39b">of</tc:token>
+      <tc:token ID="w39c">the</tc:token>
+      <tc:token ID="w39d">Association</tc:token>
+      <tc:token ID="w39e">for</tc:token>
+      <tc:token ID="w39f">Computational</tc:token>
+      <tc:token ID="w3a0">Linguistics</tc:token>
+      <tc:token ID="w3a1">and</tc:token>
+      <tc:token ID="w3a2">Eighth</tc:token>
+      <tc:token ID="w3a3">Conference</tc:token>
+      <tc:token ID="w3a4">of</tc:token>
+      <tc:token ID="w3a5">the</tc:token>
+      <tc:token ID="w3a6">European</tc:token>
+      <tc:token ID="w3a7">Chapter</tc:token>
+      <tc:token ID="w3a8">of</tc:token>
+      <tc:token ID="w3a9">the</tc:token>
+      <tc:token ID="w3aa">Association</tc:token>
+      <tc:token ID="w3ab">for</tc:token>
+      <tc:token ID="w3ac">Computational</tc:token>
+      <tc:token ID="w3ad">Linguistics</tc:token>
+      <tc:token ID="w3ae">,</tc:token>
+      <tc:token ID="w3af">32–38</tc:token>
+      <tc:token ID="w3b0">.</tc:token>
+      <tc:token ID="w3b1">ACL</tc:token>
+      <tc:token ID="w3b2">’98</tc:token>
+      <tc:token ID="w3b3">.</tc:token>
+      <tc:token ID="w3b4">Stroudsburg</tc:token>
+      <tc:token ID="w3b5">,</tc:token>
+      <tc:token ID="w3b6">PA</tc:token>
+      <tc:token ID="w3b7">,</tc:token>
+      <tc:token ID="w3b8">USA</tc:token>
+      <tc:token ID="w3b9">:</tc:token>
+      <tc:token ID="w3ba">Association</tc:token>
+      <tc:token ID="w3bb">for</tc:token>
+      <tc:token ID="w3bc">Computational</tc:token>
+      <tc:token ID="w3bd">Linguistics</tc:token>
+      <tc:token ID="w3be">.</tc:token>
+      <tc:token ID="w3bf">Petrenz</tc:token>
+      <tc:token ID="w3c0">,</tc:token>
+      <tc:token ID="w3c1">Philipp</tc:token>
+      <tc:token ID="w3c2">/</tc:token>
+      <tc:token ID="w3c3">Webber</tc:token>
+      <tc:token ID="w3c4">,</tc:token>
+      <tc:token ID="w3c5">Bonnie</tc:token>
+      <tc:token ID="w3c6">(</tc:token>
+      <tc:token ID="w3c7">2011</tc:token>
+      <tc:token ID="w3c8">)</tc:token>
+      <tc:token ID="w3c9">:</tc:token>
+      <tc:token ID="w3ca">“</tc:token>
+      <tc:token ID="w3cb">Stable</tc:token>
+      <tc:token ID="w3cc">Classification</tc:token>
+      <tc:token ID="w3cd">of</tc:token>
+      <tc:token ID="w3ce">Text</tc:token>
+      <tc:token ID="w3cf">Genres</tc:token>
+      <tc:token ID="w3d0">.</tc:token>
+      <tc:token ID="w3d1">”</tc:token>
+      <tc:token ID="w3d2">Computational</tc:token>
+      <tc:token ID="w3d3">Linguistics</tc:token>
+      <tc:token ID="w3d4">37</tc:token>
+      <tc:token ID="w3d5">(</tc:token>
+      <tc:token ID="w3d6">2</tc:token>
+      <tc:token ID="w3d7">)</tc:token>
+      <tc:token ID="w3d8">:</tc:token>
+      <tc:token ID="w3d9">385–93</tc:token>
+      <tc:token ID="w3da">.</tc:token>
+      <tc:token ID="w3db">Rodríguez</tc:token>
+      <tc:token ID="w3dc">Molina</tc:token>
+      <tc:token ID="w3dd">,</tc:token>
+      <tc:token ID="w3de">Javier</tc:token>
+      <tc:token ID="w3df">/</tc:token>
+      <tc:token ID="w3e0">Octavio</tc:token>
+      <tc:token ID="w3e1">de</tc:token>
+      <tc:token ID="w3e2">Toledo</tc:token>
+      <tc:token ID="w3e3">y</tc:token>
+      <tc:token ID="w3e4">Huerta</tc:token>
+      <tc:token ID="w3e5">,</tc:token>
+      <tc:token ID="w3e6">Álvaro</tc:token>
+      <tc:token ID="w3e7">Sebastián</tc:token>
+      <tc:token ID="w3e8">(</tc:token>
+      <tc:token ID="w3e9">2017</tc:token>
+      <tc:token ID="w3ea">)</tc:token>
+      <tc:token ID="w3eb">:</tc:token>
+      <tc:token ID="w3ec">“</tc:token>
+      <tc:token ID="w3ed">La</tc:token>
+      <tc:token ID="w3ee">imprescindible</tc:token>
+      <tc:token ID="w3ef">distinción</tc:token>
+      <tc:token ID="w3f0">entre</tc:token>
+      <tc:token ID="w3f1">texto</tc:token>
+      <tc:token ID="w3f2">y</tc:token>
+      <tc:token ID="w3f3">testimonio</tc:token>
+      <tc:token ID="w3f4">:</tc:token>
+      <tc:token ID="w3f5">el</tc:token>
+      <tc:token ID="w3f6">CORDE</tc:token>
+      <tc:token ID="w3f7">y</tc:token>
+      <tc:token ID="w3f8">los</tc:token>
+      <tc:token ID="w3f9">criterios</tc:token>
+      <tc:token ID="w3fa">de</tc:token>
+      <tc:token ID="w3fb">fiabilidad</tc:token>
+      <tc:token ID="w3fc">lingüística</tc:token>
+      <tc:token ID="w3fd">.</tc:token>
+      <tc:token ID="w3fe">”</tc:token>
+      <tc:token ID="w3ff">Scriptum</tc:token>
+      <tc:token ID="w400">digital</tc:token>
+      <tc:token ID="w401">:</tc:token>
+      <tc:token ID="w402">revista</tc:token>
+      <tc:token ID="w403">de</tc:token>
+      <tc:token ID="w404">corpus</tc:token>
+      <tc:token ID="w405">diacrònics</tc:token>
+      <tc:token ID="w406">i</tc:token>
+      <tc:token ID="w407">edició</tc:token>
+      <tc:token ID="w408">digital</tc:token>
+      <tc:token ID="w409">en</tc:token>
+      <tc:token ID="w40a">llengües</tc:token>
+      <tc:token ID="w40b">iberoromàniques</tc:token>
+      <tc:token ID="w40c">,</tc:token>
+      <tc:token ID="w40d">no.</tc:token>
+      <tc:token ID="w40e">6</tc:token>
+      <tc:token ID="w40f">:</tc:token>
+      <tc:token ID="w410">5–68</tc:token>
+      <tc:token ID="w411">.</tc:token>
+      <tc:token ID="w412">Rojo</tc:token>
+      <tc:token ID="w413">Sánchez</tc:token>
+      <tc:token ID="w414">,</tc:token>
+      <tc:token ID="w415">Guillermo</tc:token>
+      <tc:token ID="w416">(</tc:token>
+      <tc:token ID="w417">2010</tc:token>
+      <tc:token ID="w418">)</tc:token>
+      <tc:token ID="w419">:</tc:token>
+      <tc:token ID="w41a">“</tc:token>
+      <tc:token ID="w41b">Sobre</tc:token>
+      <tc:token ID="w41c">codificación</tc:token>
+      <tc:token ID="w41d">y</tc:token>
+      <tc:token ID="w41e">explotación</tc:token>
+      <tc:token ID="w41f">de</tc:token>
+      <tc:token ID="w420">corpus</tc:token>
+      <tc:token ID="w421">textuales</tc:token>
+      <tc:token ID="w422">:</tc:token>
+      <tc:token ID="w423">Otra</tc:token>
+      <tc:token ID="w424">comparación</tc:token>
+      <tc:token ID="w425">del</tc:token>
+      <tc:token ID="w426">Corpus</tc:token>
+      <tc:token ID="w427">del</tc:token>
+      <tc:token ID="w428">español</tc:token>
+      <tc:token ID="w429">con</tc:token>
+      <tc:token ID="w42a">el</tc:token>
+      <tc:token ID="w42b">CORDE</tc:token>
+      <tc:token ID="w42c">y</tc:token>
+      <tc:token ID="w42d">el</tc:token>
+      <tc:token ID="w42e">CREA</tc:token>
+      <tc:token ID="w42f">.</tc:token>
+      <tc:token ID="w430">”</tc:token>
+      <tc:token ID="w431">Lingüística</tc:token>
+      <tc:token ID="w432">,</tc:token>
+      <tc:token ID="w433">no.</tc:token>
+      <tc:token ID="w434">24</tc:token>
+      <tc:token ID="w435">:</tc:token>
+      <tc:token ID="w436">11–50</tc:token>
+      <tc:token ID="w437">.</tc:token>
+      <tc:token ID="w438">Sánchez</tc:token>
+      <tc:token ID="w439">Sánchez</tc:token>
+      <tc:token ID="w43a">,</tc:token>
+      <tc:token ID="w43b">Mercedes</tc:token>
+      <tc:token ID="w43c">/</tc:token>
+      <tc:token ID="w43d">Domínguez</tc:token>
+      <tc:token ID="w43e">Cintas</tc:token>
+      <tc:token ID="w43f">,</tc:token>
+      <tc:token ID="w440">Carlos</tc:token>
+      <tc:token ID="w441">(</tc:token>
+      <tc:token ID="w442">2007</tc:token>
+      <tc:token ID="w443">)</tc:token>
+      <tc:token ID="w444">:</tc:token>
+      <tc:token ID="w445">“</tc:token>
+      <tc:token ID="w446">El</tc:token>
+      <tc:token ID="w447">banco</tc:token>
+      <tc:token ID="w448">de</tc:token>
+      <tc:token ID="w449">datos</tc:token>
+      <tc:token ID="w44a">de</tc:token>
+      <tc:token ID="w44b">la</tc:token>
+      <tc:token ID="w44c">RAE</tc:token>
+      <tc:token ID="w44d">:</tc:token>
+      <tc:token ID="w44e">CREA</tc:token>
+      <tc:token ID="w44f">y</tc:token>
+      <tc:token ID="w450">CORDE</tc:token>
+      <tc:token ID="w451">.</tc:token>
+      <tc:token ID="w452">”</tc:token>
+      <tc:token ID="w453">Per</tc:token>
+      <tc:token ID="w454">Abbat</tc:token>
+      <tc:token ID="w455">:</tc:token>
+      <tc:token ID="w456">boletín</tc:token>
+      <tc:token ID="w457">filológico</tc:token>
+      <tc:token ID="w458">de</tc:token>
+      <tc:token ID="w459">actualización</tc:token>
+      <tc:token ID="w45a">académica</tc:token>
+      <tc:token ID="w45b">y</tc:token>
+      <tc:token ID="w45c">didáctica</tc:token>
+      <tc:token ID="w45d">,</tc:token>
+      <tc:token ID="w45e">no.</tc:token>
+      <tc:token ID="w45f">2</tc:token>
+      <tc:token ID="w460">:</tc:token>
+      <tc:token ID="w461">137–48</tc:token>
+      <tc:token ID="w462">.</tc:token>
+      <tc:token ID="w463">Underwood</tc:token>
+      <tc:token ID="w464">,</tc:token>
+      <tc:token ID="w465">Ted</tc:token>
+      <tc:token ID="w466">(</tc:token>
+      <tc:token ID="w467">2014</tc:token>
+      <tc:token ID="w468">)</tc:token>
+      <tc:token ID="w469">:</tc:token>
+      <tc:token ID="w46a">“</tc:token>
+      <tc:token ID="w46b">Understanding</tc:token>
+      <tc:token ID="w46c">Genre</tc:token>
+      <tc:token ID="w46d">in</tc:token>
+      <tc:token ID="w46e">a</tc:token>
+      <tc:token ID="w46f">Collection</tc:token>
+      <tc:token ID="w470">of</tc:token>
+      <tc:token ID="w471">a</tc:token>
+      <tc:token ID="w472">Million</tc:token>
+      <tc:token ID="w473">Volumes</tc:token>
+      <tc:token ID="w474">,</tc:token>
+      <tc:token ID="w475">Interim</tc:token>
+      <tc:token ID="w476">Report</tc:token>
+      <tc:token ID="w477">.</tc:token>
+      <tc:token ID="w478">Bibliographie</tc:token>
+    </tc:tokens>
+    <tc:sentences xmlns:tc="http://www.dspin.de/data/textcorpus">
+      <tc:sentence tokenIDs="w1 w2 w3 w4 w5 w6 w7 w8 w9 wa wb wc wd we wf w10" ID="s1"/>
+      <tc:sentence tokenIDs="w11 w12 w13 w14 w15 w16 w17 w18 w19 w1a w1b w1c w1d w1e w1f w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 w2a w2b w2c w2d w2e w2f w30 w31 w32 w33 w34 w35 w36 w37 w38 w39 w3a w3b w3c w3d w3e w3f w40 w41 w42 w43 w44 w45 w46 w47 w48 w49 w4a w4b w4c" ID="s2"/>
+      <tc:sentence tokenIDs="w4d w4e w4f w50 w51 w52 w53 w54 w55 w56" ID="s3"/>
+      <tc:sentence tokenIDs="w57 w58 w59 w5a w5b w5c w5d w5e w5f w60 w61 w62 w63" ID="s4"/>
+      <tc:sentence tokenIDs="w64 w65 w66 w67 w68 w69 w6a w6b w6c w6d w6e w6f w70 w71 w72 w73 w74 w75 w76 w77 w78 w79 w7a" ID="s5"/>
+      <tc:sentence tokenIDs="w7b w7c w7d w7e w7f w80 w81 w82 w83 w84 w85 w86 w87 w88 w89 w8a w8b w8c w8d w8e w8f w90 w91 w92 w93 w94 w95 w96 w97 w98 w99 w9a w9b w9c w9d w9e w9f wa0 wa1" ID="s6"/>
+      <tc:sentence tokenIDs="wa2 wa3 wa4 wa5 wa6 wa7 wa8 wa9 waa wab wac wad wae waf wb0 wb1 wb2" ID="s7"/>
+      <tc:sentence tokenIDs="wb3 wb4 wb5 wb6 wb7 wb8 wb9 wba wbb wbc wbd wbe wbf wc0 wc1 wc2 wc3 wc4 wc5 wc6 wc7 wc8 wc9 wca wcb wcc" ID="s8"/>
+      <tc:sentence tokenIDs="wcd wce wcf wd0 wd1 wd2 wd3 wd4 wd5 wd6 wd7 wd8 wd9 wda wdb wdc wdd wde wdf we0 we1 we2 we3 we4 we5 we6 we7 we8 we9 wea web wec wed wee wef wf0 wf1 wf2 wf3 wf4" ID="s9"/>
+      <tc:sentence tokenIDs="wf5 wf6 wf7 wf8 wf9 wfa wfb wfc wfd wfe wff w100 w101 w102 w103 w104 w105 w106 w107 w108 w109 w10a w10b" ID="sa"/>
+      <tc:sentence tokenIDs="w10c w10d w10e w10f w110 w111 w112 w113 w114 w115 w116 w117 w118 w119 w11a" ID="sb"/>
+      <tc:sentence tokenIDs="w11b w11c w11d w11e" ID="sc"/>
+      <tc:sentence tokenIDs="w11f w120 w121 w122 w123 w124 w125 w126 w127 w128 w129 w12a" ID="sd"/>
+      <tc:sentence tokenIDs="w12b w12c w12d w12e w12f w130 w131 w132 w133 w134 w135 w136 w137 w138 w139 w13a w13b w13c" ID="se"/>
+      <tc:sentence tokenIDs="w13d w13e w13f w140 w141" ID="sf"/>
+      <tc:sentence tokenIDs="w142 w143 w144 w145 w146 w147 w148 w149 w14a w14b w14c w14d w14e w14f w150 w151 w152 w153 w154 w155 w156 w157 w158" ID="s10"/>
+      <tc:sentence tokenIDs="w159 w15a w15b w15c w15d w15e w15f w160 w161 w162 w163 w164 w165 w166 w167 w168 w169 w16a w16b w16c" ID="s11"/>
+      <tc:sentence tokenIDs="w16d w16e w16f w170 w171 w172 w173 w174 w175 w176 w177" ID="s12"/>
+      <tc:sentence tokenIDs="w178 w179 w17a w17b w17c w17d w17e w17f w180 w181 w182 w183 w184 w185 w186 w187 w188 w189 w18a w18b w18c w18d w18e w18f w190 w191 w192 w193 w194 w195" ID="s13"/>
+      <tc:sentence tokenIDs="w196 w197 w198 w199 w19a w19b w19c w19d w19e w19f w1a0 w1a1 w1a2 w1a3 w1a4 w1a5 w1a6 w1a7 w1a8 w1a9 w1aa" ID="s14"/>
+      <tc:sentence tokenIDs="w1ab w1ac w1ad w1ae w1af w1b0 w1b1 w1b2 w1b3 w1b4 w1b5 w1b6 w1b7 w1b8 w1b9 w1ba w1bb w1bc w1bd w1be w1bf w1c0 w1c1 w1c2 w1c3 w1c4 w1c5 w1c6 w1c7 w1c8 w1c9 w1ca w1cb w1cc w1cd" ID="s15"/>
+      <tc:sentence tokenIDs="w1ce w1cf w1d0 w1d1 w1d2 w1d3 w1d4 w1d5 w1d6 w1d7 w1d8 w1d9" ID="s16"/>
+      <tc:sentence tokenIDs="w1da w1db w1dc w1dd w1de w1df w1e0 w1e1 w1e2 w1e3 w1e4 w1e5 w1e6 w1e7 w1e8 w1e9 w1ea" ID="s17"/>
+      <tc:sentence tokenIDs="w1eb w1ec w1ed w1ee w1ef w1f0 w1f1" ID="s18"/>
+      <tc:sentence tokenIDs="w1f2 w1f3 w1f4 w1f5 w1f6 w1f7 w1f8 w1f9 w1fa w1fb w1fc w1fd w1fe w1ff w200 w201 w202 w203 w204 w205 w206 w207 w208 w209 w20a w20b" ID="s19"/>
+      <tc:sentence tokenIDs="w20c w20d w20e w20f w210 w211 w212 w213 w214 w215 w216 w217 w218 w219 w21a w21b w21c w21d w21e w21f w220 w221 w222 w223 w224 w225 w226 w227 w228 w229 w22a w22b w22c w22d w22e w22f" ID="s1a"/>
+      <tc:sentence tokenIDs="w230 w231 w232 w233 w234 w235 w236 w237 w238 w239 w23a w23b w23c w23d w23e w23f" ID="s1b"/>
+      <tc:sentence tokenIDs="w240 w241 w242 w243 w244 w245 w246 w247 w248 w249 w24a w24b w24c w24d w24e w24f w250 w251 w252 w253 w254 w255 w256 w257 w258 w259 w25a w25b w25c w25d w25e w25f w260 w261 w262 w263 w264 w265 w266 w267 w268 w269 w26a w26b w26c w26d w26e w26f w270 w271 w272 w273 w274 w275 w276" ID="s1c"/>
+      <tc:sentence tokenIDs="w277 w278 w279 w27a w27b w27c w27d w27e w27f w280 w281 w282 w283 w284 w285" ID="s1d"/>
+      <tc:sentence tokenIDs="w286 w287 w288 w289 w28a w28b w28c w28d w28e w28f w290 w291 w292 w293 w294 w295 w296 w297 w298 w299 w29a w29b w29c w29d w29e w29f w2a0 w2a1" ID="s1e"/>
+      <tc:sentence tokenIDs="w2a2 w2a3 w2a4 w2a5 w2a6 w2a7 w2a8 w2a9 w2aa w2ab w2ac w2ad w2ae w2af w2b0 w2b1 w2b2 w2b3 w2b4 w2b5 w2b6 w2b7 w2b8 w2b9 w2ba w2bb w2bc w2bd w2be w2bf w2c0 w2c1 w2c2" ID="s1f"/>
+      <tc:sentence tokenIDs="w2c3 w2c4 w2c5 w2c6 w2c7 w2c8 w2c9 w2ca w2cb w2cc w2cd w2ce w2cf w2d0 w2d1 w2d2 w2d3 w2d4 w2d5 w2d6 w2d7 w2d8 w2d9 w2da w2db w2dc w2dd w2de w2df w2e0 w2e1 w2e2 w2e3 w2e4 w2e5 w2e6 w2e7 w2e8" ID="s20"/>
+      <tc:sentence tokenIDs="w2e9 w2ea w2eb w2ec w2ed w2ee w2ef w2f0 w2f1 w2f2 w2f3 w2f4 w2f5 w2f6 w2f7 w2f8 w2f9 w2fa w2fb w2fc w2fd w2fe w2ff w300 w301 w302 w303 w304 w305 w306 w307 w308 w309 w30a w30b w30c w30d w30e w30f w310 w311 w312 w313 w314 w315 w316 w317 w318 w319 w31a w31b w31c w31d w31e w31f w320 w321 w322 w323 w324 w325 w326 w327 w328 w329 w32a w32b w32c" ID="s21"/>
+      <tc:sentence tokenIDs="w32d w32e w32f w330 w331 w332 w333 w334 w335 w336 w337 w338" ID="s22"/>
+      <tc:sentence tokenIDs="w339 w33a w33b w33c" ID="s23"/>
+      <tc:sentence tokenIDs="w33d w33e w33f w340 w341" ID="s24"/>
+      <tc:sentence tokenIDs="w342 w343 w344 w345 w346 w347 w348 w349 w34a w34b w34c w34d w34e w34f w350 w351 w352 w353 w354" ID="s25"/>
+      <tc:sentence tokenIDs="w355 w356 w357 w358 w359 w35a w35b" ID="s26"/>
+      <tc:sentence tokenIDs="w35c w35d w35e w35f w360 w361" ID="s27"/>
+      <tc:sentence tokenIDs="w362 w363 w364 w365 w366" ID="s28"/>
+      <tc:sentence tokenIDs="w367 w368 w369 w36a w36b w36c w36d w36e w36f w370 w371 w372" ID="s29"/>
+      <tc:sentence tokenIDs="w373 w374 w375 w376 w377 w378" ID="s2a"/>
+      <tc:sentence tokenIDs="w379 w37a w37b w37c" ID="s2b"/>
+      <tc:sentence tokenIDs="w37d w37e w37f w380 w381 w382 w383 w384 w385 w386 w387 w388 w389 w38a w38b" ID="s2c"/>
+      <tc:sentence tokenIDs="w38c w38d w38e w38f w390 w391 w392 w393" ID="s2d"/>
+      <tc:sentence tokenIDs="w394 w395 w396 w397 w398 w399 w39a w39b w39c w39d w39e w39f w3a0 w3a1 w3a2 w3a3 w3a4 w3a5 w3a6 w3a7 w3a8 w3a9 w3aa w3ab w3ac w3ad w3ae w3af w3b0" ID="s2e"/>
+      <tc:sentence tokenIDs="w3b1 w3b2 w3b3" ID="s2f"/>
+      <tc:sentence tokenIDs="w3b4 w3b5 w3b6 w3b7 w3b8 w3b9" ID="s30"/>
+      <tc:sentence tokenIDs="w3ba w3bb w3bc w3bd w3be" ID="s31"/>
+      <tc:sentence tokenIDs="w3bf w3c0 w3c1 w3c2 w3c3 w3c4 w3c5 w3c6 w3c7 w3c8 w3c9" ID="s32"/>
+      <tc:sentence tokenIDs="w3ca w3cb w3cc w3cd w3ce w3cf w3d0 w3d1" ID="s33"/>
+      <tc:sentence tokenIDs="w3d2 w3d3 w3d4 w3d5 w3d6 w3d7 w3d8 w3d9 w3da" ID="s34"/>
+      <tc:sentence tokenIDs="w3db w3dc w3dd w3de w3df w3e0 w3e1 w3e2 w3e3 w3e4 w3e5 w3e6 w3e7 w3e8 w3e9 w3ea w3eb" ID="s35"/>
+      <tc:sentence tokenIDs="w3ec w3ed w3ee w3ef w3f0 w3f1 w3f2 w3f3 w3f4 w3f5 w3f6 w3f7 w3f8 w3f9 w3fa w3fb w3fc w3fd w3fe" ID="s36"/>
+      <tc:sentence tokenIDs="w3ff w400 w401 w402 w403 w404 w405 w406 w407 w408 w409 w40a w40b w40c w40d w40e w40f w410 w411" ID="s37"/>
+      <tc:sentence tokenIDs="w412 w413 w414 w415 w416 w417 w418 w419" ID="s38"/>
+      <tc:sentence tokenIDs="w41a w41b w41c w41d w41e w41f w420 w421 w422" ID="s39"/>
+      <tc:sentence tokenIDs="w423 w424 w425 w426 w427 w428 w429 w42a w42b w42c w42d w42e w42f w430 w431 w432 w433 w434 w435 w436 w437" ID="s3a"/>
+      <tc:sentence tokenIDs="w438 w439 w43a w43b w43c w43d w43e w43f w440 w441 w442 w443 w444" ID="s3b"/>
+      <tc:sentence tokenIDs="w445 w446 w447 w448 w449 w44a w44b w44c w44d w44e w44f w450 w451 w452" ID="s3c"/>
+      <tc:sentence tokenIDs="w453 w454 w455 w456 w457 w458 w459 w45a w45b w45c w45d w45e w45f w460 w461 w462" ID="s3d"/>
+      <tc:sentence tokenIDs="w463 w464 w465 w466 w467 w468 w469" ID="s3e"/>
+      <tc:sentence tokenIDs="w46a w46b w46c w46d w46e w46f w470 w471 w472 w473 w474 w475 w476 w477" ID="s3f"/>
+      <tc:sentence tokenIDs="w478" ID="s40"/>
+    </tc:sentences>
+    <tc:namedEntities xmlns:tc="http://www.dspin.de/data/textcorpus" type="tuebadz8">
+      <tc:entity class="PER" tokenIDs="w1c"/>
+      <tc:entity class="PER" tokenIDs="w1e"/>
+      <tc:entity class="PER" tokenIDs="w21"/>
+      <tc:entity class="PER" tokenIDs="w24"/>
+      <tc:entity class="PER" tokenIDs="w26"/>
+      <tc:entity class="PER" tokenIDs="w29"/>
+      <tc:entity class="PER" tokenIDs="w2d"/>
+      <tc:entity class="OTH" tokenIDs="w2f w30 w31 w32"/>
+      <tc:entity class="PER" tokenIDs="w49"/>
+      <tc:entity class="ORG" tokenIDs="w80 w81 w82"/>
+      <tc:entity class="PER" tokenIDs="w85 w86"/>
+      <tc:entity class="PER" tokenIDs="w89 w8a"/>
+      <tc:entity class="PER" tokenIDs="w8c w8d"/>
+      <tc:entity class="PER" tokenIDs="w9c"/>
+      <tc:entity class="PER" tokenIDs="w9e"/>
+      <tc:entity class="PER" tokenIDs="wd8 wd9"/>
+      <tc:entity class="PER" tokenIDs="wdb wdc wdd wde wdf"/>
+      <tc:entity class="ORG" tokenIDs="w174"/>
+      <tc:entity class="PER" tokenIDs="w19e"/>
+      <tc:entity class="ORG" tokenIDs="w303 w304"/>
+      <tc:entity class="PER" tokenIDs="w326"/>
+      <tc:entity class="PER" tokenIDs="w328"/>
+      <tc:entity class="OTH" tokenIDs="w334 w335 w336"/>
+      <tc:entity class="OTH" tokenIDs="w33a w33b"/>
+      <tc:entity class="GPE" tokenIDs="w33d w33e"/>
+      <tc:entity class="PER" tokenIDs="w342"/>
+      <tc:entity class="PER" tokenIDs="w344"/>
+      <tc:entity class="PER" tokenIDs="w346"/>
+      <tc:entity class="PER" tokenIDs="w348"/>
+      <tc:entity class="PER" tokenIDs="w34a"/>
+      <tc:entity class="PER" tokenIDs="w34c"/>
+      <tc:entity class="PER" tokenIDs="w34e"/>
+      <tc:entity class="PER" tokenIDs="w350"/>
+      <tc:entity class="OTH" tokenIDs="w35d w35e w35f w360"/>
+      <tc:entity class="GPE" tokenIDs="w362"/>
+      <tc:entity class="GPE" tokenIDs="w365"/>
+      <tc:entity class="PER" tokenIDs="w367"/>
+      <tc:entity class="PER" tokenIDs="w369"/>
+      <tc:entity class="PER" tokenIDs="w36b"/>
+      <tc:entity class="PER" tokenIDs="w36d w36e"/>
+      <tc:entity class="GPE" tokenIDs="w379"/>
+      <tc:entity class="PER" tokenIDs="w37b"/>
+      <tc:entity class="PER" tokenIDs="w37d"/>
+      <tc:entity class="PER" tokenIDs="w37f"/>
+      <tc:entity class="PER" tokenIDs="w381"/>
+      <tc:entity class="PER" tokenIDs="w383"/>
+      <tc:entity class="PER" tokenIDs="w385"/>
+      <tc:entity class="PER" tokenIDs="w387"/>
+      <tc:entity class="OTH" tokenIDs="w395 w396 w397 w398 w399 w39a w39b w39c w39d w39e w39f w3a0 w3a1 w3a2 w3a3 w3a4 w3a5 w3a6 w3a7 w3a8 w3a9 w3aa w3ab w3ac w3ad"/>
+      <tc:entity class="ORG" tokenIDs="w3b1"/>
+      <tc:entity class="GPE" tokenIDs="w3b4"/>
+      <tc:entity class="GPE" tokenIDs="w3b6"/>
+      <tc:entity class="GPE" tokenIDs="w3b8"/>
+      <tc:entity class="ORG" tokenIDs="w3ba w3bb w3bc w3bd"/>
+      <tc:entity class="PER" tokenIDs="w3bf"/>
+      <tc:entity class="PER" tokenIDs="w3c1"/>
+      <tc:entity class="PER" tokenIDs="w3c3"/>
+      <tc:entity class="PER" tokenIDs="w3c5"/>
+      <tc:entity class="OTH" tokenIDs="w3d2 w3d3"/>
+      <tc:entity class="PER" tokenIDs="w3db w3dc"/>
+      <tc:entity class="PER" tokenIDs="w3de"/>
+      <tc:entity class="PER" tokenIDs="w3e0 w3e1 w3e2 w3e3 w3e4"/>
+      <tc:entity class="PER" tokenIDs="w3e6 w3e7"/>
+      <tc:entity class="OTH" tokenIDs="w402 w403 w404 w405 w406 w407 w408 w409 w40a w40b"/>
+      <tc:entity class="PER" tokenIDs="w412 w413"/>
+      <tc:entity class="PER" tokenIDs="w415"/>
+      <tc:entity class="PER" tokenIDs="w438 w439"/>
+      <tc:entity class="ORG" tokenIDs="w43b"/>
+      <tc:entity class="PER" tokenIDs="w43d w43e"/>
+      <tc:entity class="PER" tokenIDs="w440"/>
+      <tc:entity class="ORG" tokenIDs="w44e w44f w450"/>
+      <tc:entity class="OTH" tokenIDs="w456 w457 w458 w459 w45a w45b w45c"/>
+      <tc:entity class="PER" tokenIDs="w463"/>
+      <tc:entity class="PER" tokenIDs="w465"/>
+    </tc:namedEntities>
+  </TextCorpus>
+</D-Spin>

@@ -1,0 +1,3463 @@
+<?xml version='1.0' encoding='UTF-8'?><D-Spin xmlns="http://www.dspin.de/data" version="5">
+  <MetaData xmlns="http://www.dspin.de/data/metadata"><Services><cmd:CMD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cmd="http://www.clarin.eu/cmd/1" CMDVersion="1.2" xsi:schemaLocation="http://www.clarin.eu/cmd/1 http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_1320657629623/xsd"><cmd:Resources><cmd:ResourceProxyList/><cmd:JournalFileProxyList/><cmd:ResourceRelationList/></cmd:Resources><cmd:Components><cmd:WebServiceToolChain><cmd:GeneralInfo><cmd:Descriptions><cmd:Description/></cmd:Descriptions><cmd:ResourceName>Custom chain</cmd:ResourceName><cmd:ResourceClass>Toolchain</cmd:ResourceClass></cmd:GeneralInfo><cmd:Toolchain><cmd:ToolInChain><cmd:PID>https://hdl.handle.net/21.11120/0000-0008-319A-3</cmd:PID><cmd:Parameter value="de" name="lang"/></cmd:ToolInChain><cmd:ToolInChain><cmd:PID>https://hdl.handle.net/21.11120/0000-0008-3183-C</cmd:PID><cmd:Parameter value="5" name="version"/></cmd:ToolInChain><cmd:ToolInChain><cmd:PID>http://hdl.handle.net/11022/0000-0007-DA29-6</cmd:PID><cmd:Parameter value="de" name="lang"/><cmd:Parameter value="5" name="version"/></cmd:ToolInChain></cmd:Toolchain></cmd:WebServiceToolChain></cmd:Components></cmd:CMD></Services></MetaData>
+  <TextCorpus xmlns="http://www.dspin.de/data/textcorpus" lang="de">
+    <textSource type="application/tei+xml;format-variant=tei-dta;tokenized=0">&lt;?xml version="1.0" encoding="utf-8"?>
+&lt;TEI xml:id="vortrag-FISCH" xmlns="http://www.tei-c.org/ns/1.0">
+&lt;teiHeader>
+&lt;fileDesc>
+&lt;titleStmt>
+&lt;title type="full">
+&lt;title type="main">„Der Helmut Kohl unter den Brotaufstrichen“. Zur Extraktion vossianischer Antonomasien aus großen Zeitungskorpora&lt;/title>
+&lt;title type="sub"/>
+&lt;/title>
+&lt;author>
+&lt;persName>
+&lt;surname>Jäschke&lt;/surname>
+&lt;forename>Robert&lt;/forename>
+&lt;/persName>
+&lt;affiliation>University of Sheffield&lt;/affiliation>
+&lt;email>r.jaschke@sheffield.ac.uk&lt;/email>
+&lt;/author>
+&lt;author>
+&lt;persName>
+&lt;surname>Strötgen&lt;/surname>
+&lt;forename>Jannik&lt;/forename>
+&lt;/persName>
+&lt;affiliation>Max-Planck-Institut für Informatik, Saarbrücken&lt;/affiliation>
+&lt;email>jannik.stroetgen@mpi-inf.mpg.de&lt;/email>
+&lt;/author>
+&lt;author>
+&lt;persName>
+&lt;surname>Krotova&lt;/surname>
+&lt;forename>Elena&lt;/forename>
+&lt;/persName>
+&lt;affiliation>Higher School of Economics, Moskau&lt;/affiliation>
+&lt;email>kroelebor@gmail.com&lt;/email>
+&lt;/author>
+&lt;author>
+&lt;persName>
+&lt;surname>Fischer&lt;/surname>
+&lt;forename>Frank&lt;/forename>
+&lt;/persName>
+&lt;affiliation>Higher School of Economics, Moskau&lt;/affiliation>
+&lt;email>frafis@gmail.com&lt;/email>
+&lt;/author>
+&lt;/titleStmt>
+&lt;editionStmt>
+&lt;edition>
+&lt;date>2016-11-29T01:00:48.936622345&lt;/date>
+&lt;/edition>
+&lt;/editionStmt>
+&lt;publicationStmt>
+&lt;publisher>Prof. Dr. Michael Stolz&lt;/publisher>
+&lt;address>
+&lt;addrLine>UniversitÃ¤t Bern&lt;/addrLine>
+&lt;addrLine>Institut fÃ¼r Germanistik&lt;/addrLine>
+&lt;addrLine>Laenggass-Str. 49&lt;/addrLine>
+&lt;addrLine>CH-3000 Bern 9&lt;/addrLine>
+&lt;/address>
+&lt;/publicationStmt>
+&lt;sourceDesc>
+&lt;p>Converted from an OASIS Open Document&lt;/p>
+&lt;/sourceDesc>
+&lt;/fileDesc>
+&lt;encodingDesc>
+&lt;appInfo>
+&lt;application ident="DHCONVALIDATOR" version="1.17">
+&lt;label>DHConvalidator&lt;/label>
+&lt;/application>
+&lt;/appInfo>
+&lt;/encodingDesc>
+&lt;profileDesc>
+&lt;textClass>
+&lt;keywords n="category" scheme="ConfTool">
+&lt;term>Vortrag&lt;/term>
+&lt;/keywords>
+&lt;keywords n="subcategory" scheme="ConfTool">
+&lt;term/>
+&lt;/keywords>
+&lt;keywords n="keywords" scheme="ConfTool">
+&lt;term>Antonomasie&lt;/term>
+&lt;term>vossianische Antonomasie&lt;/term>
+&lt;term>Stilistik&lt;/term>
+&lt;term>Zeitungskorpora&lt;/term>
+&lt;/keywords>
+&lt;keywords n="topics" scheme="ConfTool">
+&lt;term>Programmierung&lt;/term>
+&lt;term>Stilistische Analyse&lt;/term>
+&lt;term>Sprache&lt;/term>
+&lt;term>Literatur&lt;/term>
+&lt;/keywords>
+&lt;/textClass>
+&lt;/profileDesc>
+&lt;/teiHeader>
+&lt;text>
+&lt;body>
+&lt;div rend="DH-Heading1" type="div1">
+&lt;head>Einführung und Forschungslage&lt;/head>
+&lt;p>Wenn Peter Paul Rubens als »Tarantino des Barock« beschrieben wird (im 
+                    &lt;hi rend="italic">Tagesspiegel&lt;/hi>, 2014) oder Alice Schwarzer als der »Erich Honecker des Feminismus« (in 
+                    &lt;hi rend="italic">Cicero&lt;/hi>, 2014), dann handelt es sich um eine Vossianische Antonomasie. Diese Trope ist nach dem niederländischen Humanisten und Rhetoriklehrer Vossius benannt (und wird im Folgenden als ›Vossanto‹ abgekürzt, in Anlehnung an den Vorschlag von Fischer/Wälzholz 2014). Generell spricht man von Antonomasie, wenn eine bestimmte Eigenschaft einer Person für diese selbst steht (z. B. »der Leimener« für Boris Becker). Beim Spezialfall der Vossanto wird einer Person über die Nennung einer anderen (bekannteren, populäreren, berüchtigteren) Person als Referenzgröße eine bestimmte Eigenschaft zugeschrieben. Dabei sorgt ein »untypologisches, aktualisierendes Signal« (Lausberg 1960) für den Bedeutungstransfer (in den oben genannten Beispielen wären dies der Barock und der Feminismus). Anders ausgedrückt: Die Vossanto stellt über einen ›modifier‹ einen Zusammenhang zwischen ›source‹ und ›target‹ her (Bergien 2013). Entitäten können sowohl als ›source‹ als auch als ›target‹ auftreten, wie ebd. am Beispiel Obama demonstriert: bis 2011 trat er in Vossantos vor allem als ›target‹ auf, danach diente er immer mehr als ›source‹. Die ›source‹-Referenz wird im Fachdiskurs im Anschluss an Lakoff 1987 auch als ›paragon‹ bezeichnet (»a specific example that comes close to embodying the qualities of the ideal«, ebd.).
+                &lt;/p>
+&lt;p>Der Begriff »Vossianische Antonomasie« wird international kaum verwendet, stattdessen wird etwa zwischen »Antonomasia1« und »Antonomasia2« unterschieden: »metonymic« vs. »metaphorical antonomasia« (Holmqvist/Płuciennik 2010). Innerhalb dieses Klassifikationsschemas wäre unsere Vossanto ein Spezialfall von »Antonomasia2«, nämlich wenn es um »comparisons with paragons from other spheres of culture« geht: »Lyotard is a pope of postmodernism, Bush is no Demosthenes; and we can buy the Cadillac of vacuum cleaners.« (ebd.)&lt;/p>
+&lt;p>Dieses Stilmittel, dessen reger Gebrauch seit der Antike belegt ist, ist heute medial ubiquitär anzutreffen. Oft findet es sich schon in Überschriften, da es zugleich informativ und rätselhaft sein kann und zudem oft unterhaltsame Qualitäten bietet. Eine eigene größere Sammlung an Musterexemplaren (
+                    &lt;ptr target="http://www.umblaetterer.de/datenzentrum/vossianische-antonomasien.html"/>) gab den Ausschlag, dieses Phänomen systematisch zu erforschen, mit historischer Perspektive und auf Grundlage größerer englischer und deutscher Zeitungskorpora. Ziel dieser Arbeit ist eine erste methodisch-explorative Analyse des Phänomens Vossanto in der Tageszeitung 
+                    &lt;hi rend="italic">New York Times&lt;/hi> (1987–2007) und der Wochenzeitung 
+                    &lt;hi rend="italic">Die Zeit&lt;/hi> (1995–2011). Die Korpora wurden aufgrund ihrer Verfügbarkeit, Bedeutung und ihres Umfangs gewählt. Die Extraktion der Vossantos erfolgte jeweils korpusspezifisch, um den verschiedenen Formaten und Sprachen Rechnung zu tragen.
+                &lt;/p>
+&lt;/div>
+&lt;div rend="DH-Heading1" type="div1">
+&lt;head>Englischsprachiges Korpus&lt;/head>
+&lt;p>Aus den XML-Daten des 
+                    &lt;hi rend="italic">New York Times&lt;/hi>-Korpus (Sandhaus 2008) wurde für jeden der 1.854.726 Artikel der Volltext extrahiert. Anschließend wurde der Text mit Hilfe des NLTK (Bird/Loper/Klein 2009) in Sätze zerlegt und die Wörter jedes Satzes mit dem Part-of-Speech-Tagger des NLTK annotiert. Zusätzlich wurden Named Entities (Personen, Orte, Organisationen) mit dem NLTK-eigenen Named-Entity-Extraktor annotiert. Die so annotierten Sätze wurden mit einer Liste von Vossanto-typischen Mustern (in Form von regulären Ausdrücken) abgeglichen. Eine vereinfachte Darstellung eines solchen Musters ist beispielsweise:
+                &lt;/p>
+&lt;quote>\((PERSON|ORGANIZATION|GPE) *\) (is|has) (often|sometimes)? (been)? (called)? the \(PERSON|ORGANIZATION|GPE) *\) (of|among|from) \((PERSON|ORGANIZATION|GPE) *\)&lt;/quote>
+&lt;p>Die zu findenden drei Elemente einer Vossanto sind darin durch * gekennzeichnet. Passte ein Satz auf eines der Muster, so wurden diese drei Teile extrahiert und tabellarisch ausgegeben. Anschließend wurden die extrahierten 10.744 Kandidaten manuell überprüft. Nicht-Vossantos und Vossantos mit Städten und Firmen wurden entfernt (Treffer der Art »Algarve, the Riviera of Portugal« oder »Pepsi is the Nike of soft drinks« sind eine eigene Untersuchung wert) und der Fokus auf Vossantos gelegt, in denen Individuen (Personen, Tiere, fiktive Figuren) als ›source‹ oder ›target‹ dienen. 246 Vossantos blieben dabei übrig (Übersicht in unserem Arbeitsrepo, siehe Bibliografie), die sich wie folgt über das Korpus verteilen:&lt;/p>
+&lt;p>
+&lt;figure>
+&lt;graphic url="vortrag-FISCH-1000020000000320000002584F1C62E428FC24BB.png"/>
+&lt;head>vossantos_nyt.png&lt;/head>
+&lt;/figure>
+&lt;/p>
+&lt;p>Am häufigsten als ›source‹ verwendet wurden folgende Namen:&lt;/p>
+&lt;table rend="frame" xml:id="Table1">
+&lt;row>
+&lt;cell rend="center bold">Anzahl&lt;/cell>
+&lt;cell rend="center bold">source&lt;/cell>
+&lt;/row>
+&lt;row>
+&lt;cell rend="center">6&lt;/cell>
+&lt;cell rend="center">Michael Jordan&lt;/cell>
+&lt;/row>
+&lt;row>
+&lt;cell rend="center">5&lt;/cell>
+&lt;cell rend="center">Michelangelo&lt;/cell>
+&lt;/row>
+&lt;row>
+&lt;cell rend="center">4&lt;/cell>
+&lt;cell rend="center">Babe Ruth&lt;/cell>
+&lt;/row>
+&lt;row>
+&lt;cell rend="center">3&lt;/cell>
+&lt;cell rend="center">Zelig&lt;/cell>
+&lt;/row>
+&lt;row>
+&lt;cell rend="center">3&lt;/cell>
+&lt;cell rend="center">Rodney Dangerfield&lt;/cell>
+&lt;/row>
+&lt;row>
+&lt;cell rend="center">3&lt;/cell>
+&lt;cell rend="center">Neil Young&lt;/cell>
+&lt;/row>
+&lt;row>
+&lt;cell rend="center">3&lt;/cell>
+&lt;cell rend="center">Elvis&lt;/cell>
+&lt;/row>
+&lt;row>
+&lt;cell rend="center">3&lt;/cell>
+&lt;cell rend="center">Don Quixote&lt;/cell>
+&lt;/row>
+&lt;/table>
+&lt;p>Als Beispiel für Treffer seien diejenigen für Michael Jordan genannt:&lt;/p>
+&lt;list type="unordered">
+&lt;item>»Romario is the 
+                        &lt;hi rend="italic">Michael Jordan&lt;/hi> of soccer and Bebeto is the Magic Johnson of soccer« (1994)
+                    &lt;/item>
+&lt;item>»Bonfire, the 
+                        &lt;hi rend="italic">Michael Jordan&lt;/hi> of dressage horses« (1998)
+                    &lt;/item>
+&lt;item>»Brian Foster, the 
+                        &lt;hi rend="italic">Michael Jordan&lt;/hi> of BMX racing« (1998)
+                    &lt;/item>
+&lt;item>»The stunt biker Dave Mirra, the 
+                        &lt;hi rend="italic">Michael Jordan&lt;/hi> of the dirt set« (2000)
+                    &lt;/item>
+&lt;item>»Cynthia Cooper is the 
+                        &lt;hi rend="italic">Michael Jordan&lt;/hi>, the Larry Bird, the Magic Johnson of this league« (2000)
+                    &lt;/item>
+&lt;item>»McNabb has been called the 
+                        &lt;hi rend="italic">Michael Jordan&lt;/hi> of the National Football League« (2001)
+                    &lt;/item>
+&lt;/list>
+&lt;p>Trotz der zeitlichen Einschränkung des Korpus lassen sich bereits einige vielversprechende Beobachtungen anstellen und Thesen bilden: 1. Produktive Referenzgrößen einer Vossanto sind sowohl reale als auch fiktionale Figuren (Bsp. für letztere aus der obigen Liste: Woody Allens »Zelig«, Cervantes’ »Don Quixote«). 2. Öffentliche Personen oder bekannte fiktionale Charaktere haben bestimmte Eigenschaften, die sie für die Verwendung als Referenzgröße einer Vossanto prädestinieren oder nicht (es bleibt etwa zu erforschen, warum gerade Michael Jordan und Michelangelo sich so gut eignen und nicht andere Sportler bzw. Künstler). 3. Es gibt historisch stabile Referenzgrößen, deren Bekanntheit vorausgesetzt werden kann (z. B. Michelangelo), und es gibt ephemere Referenzgrößen, die ab irgendeinem Zeitpunkt nicht mehr als Bezugspunkt taugen (für das benutzte zeitgenössische Korpus eher noch nicht relevant).&lt;/p>
+&lt;/div>
+&lt;div rend="DH-Heading1" type="div1">
+&lt;head>Deutschsprachiges Korpus&lt;/head>
+&lt;p>Das deutsche Datenset besteht aus einer Sammlung des Archivs der Wochenzeitung 
+                    &lt;hi rend="italic">Die Zeit&lt;/hi> und enthält die Artikel aus den Jahren 1995 bis 2011. Insgesamt umfasst das Korpus 126.702 Dokumente.
+                &lt;/p>
+&lt;p>Zunächst wurden die Volltexte (inklusive Überschriften) aller Dokumente extrahiert. Diese wurden dann mit Hilfe des Part-of-Speech-Taggers und Named-Entity-Recognition-Tools des Stanford CoreNLP Package verarbeitet. Für die Analyse deutschsprachiger Texte enthält Stanford CoreNLP speziell für das Deutsche trainierte Modelle (Faruqui und Pado 2010). Somit können alle Texte auf drei Ebenen untersucht werden: auf der Wortebene, der Part-of-Speech-Ebene sowie der Named-Entity-Ebene. Mithilfe von regulären Ausdrücken, die auf den verschiedenen Ebenen angewandt werden können, wurde dann nach Vossanto-Mustern gesucht. Im Gegensatz zur Verarbeitung des englischsprachigen Korpus wurde jedoch noch nicht versucht, auch das ›target‹ einer Vossanto zu extrahieren. Stattdessen wurden Muster entworfen, die das ›source‹-Objekt sowie das »aktualisierende Signal« matchen. Ausschlaggebend für diese Herangehensweise waren die in einem Testdurchlauf beobachtete hohe Anzahl an Vossantos ohne unmittelbaren Verweis auf das ›target‹ sowie eine große Vielfalt an möglichen Formulierungen, die auf die Relation zum ›target‹ hinweisen können. Mithilfe relativ strikter Regeln konnte die Anzahl an falschen Extraktionen im Rahmen gehalten werden. Ein vereinfachtes Beispiel für eine Extraktionsregel lautet etwa: »eine Art PERSON (der|des) (ADJECTIVE)? NOUN«.&lt;/p>
+&lt;p>Die Produktivität der beiden häufigsten Referenznamen des NYT-Korpus bestätigt sich im verwendeten deutschen Korpus, etwa wenn vom »Michael Jordan der analytischen Philosophie« die Rede ist (
+                    &lt;hi rend="italic">Die Zeit&lt;/hi> 44/1999) oder vom »bulgarischen Michelangelo« (
+                    &lt;hi rend="italic">Die Zeit&lt;/hi> 14/2001). Ansonsten scheint es sprachen- bzw. kulturspezifische Präferenzen zu geben. Die häufigsten ›sources‹ sind:
+                &lt;/p>
+&lt;table rend="frame" xml:id="Table2">
+&lt;row>
+&lt;cell rend="center bold">Anzahl&lt;/cell>
+&lt;cell rend="center bold">source&lt;/cell>
+&lt;/row>
+&lt;row>
+&lt;cell rend="center">9&lt;/cell>
+&lt;cell rend="center">Robin Hood&lt;/cell>
+&lt;/row>
+&lt;row>
+&lt;cell rend="center">6&lt;/cell>
+&lt;cell rend="center">Bill Gates&lt;/cell>
+&lt;/row>
+&lt;row>
+&lt;cell rend="center">4&lt;/cell>
+&lt;cell rend="center">Franz Beckenbauer&lt;/cell>
+&lt;/row>
+&lt;row>
+&lt;cell rend="center">3&lt;/cell>
+&lt;cell rend="center">Daniel Düsentrieb&lt;/cell>
+&lt;/row>
+&lt;row>
+&lt;cell rend="center">3&lt;/cell>
+&lt;cell rend="center">Heinz Rühmann&lt;/cell>
+&lt;/row>
+&lt;row>
+&lt;cell rend="center">3&lt;/cell>
+&lt;cell rend="center">James Dean&lt;/cell>
+&lt;/row>
+&lt;row>
+&lt;cell rend="center">3&lt;/cell>
+&lt;cell rend="center">Jesus Christus&lt;/cell>
+&lt;/row>
+&lt;row>
+&lt;cell rend="center">3&lt;/cell>
+&lt;cell rend="center">Norbert Blüm&lt;/cell>
+&lt;/row>
+&lt;row>
+&lt;cell rend="center">3&lt;/cell>
+&lt;cell rend="center">Willy Brandt&lt;/cell>
+&lt;/row>
+&lt;/table>
+&lt;p>Ähnlich wie im NYT-Korpus ist erkennbar, wie stark typisierend mythische bzw. fiktive Figuren sind (Robin Hood, Daniel Düsentrieb). Daneben zeigt sich, dass »Bill Gates«, der im NYT-Korpus nur zweimal als ›source‹ einer Vossanto vorkommt, im 
+         
+&lt;hi rend="italic">Zeit&lt;/hi>-Korpus sechs Mal als Referenz vertreten ist:
+                &lt;/p>
+&lt;list type="unordered">
+&lt;item>»eine Art Bill Gates des Stolperns« (1998)&lt;/item>
+&lt;item>»Der Bill Gates von Aurich« (2001)&lt;/item>
+&lt;item>»der Bill Gates von Ostfriesland« (2001)&lt;/item>
+&lt;item>»der Bill Gates von Aurich« (2002)&lt;/item>
+&lt;item>»der britische Bill Gates« (2008)&lt;/item>
+&lt;item>»der Bill Gates von Estland« (2010)&lt;/item>
+&lt;/list>
+&lt;p>Die wiederholte Verwendung des »Bill Gates von Aurich« zeigt, wie stark ein ›target‹ mit einer ›source‹ verwachsen kann. (Paradebeispiel hierfür ist im Übrigen Vittorio Hösle, »der Boris Becker der Philosophie«, eine Bezeichnung, die es bis in den Wikipedia-Artikel zu Hösle geschafft hat.) Am Beispiel Bill Gates’ lässt sich wie zuvor am Beispiel Obama demonstrieren, dass ein Name sowohl als ›target‹ als auch als ›source‹ vorkommen kann. Bevor Bill Gates selbst als Referenz verwendet wird, wird er in einem Artikel von 1995 noch durch eine andere Person beschrieben: »Bill Gates ist der Henry Ford des Computerzeitalters«.&lt;/p>
+&lt;p>Insgesamt wurden aus 1.456 Vossanto-Kandidaten 225 manuell als Vossantos markiert, die sich wie folgt über die im Korpus vorhandenen Jahre verteilen:&lt;/p>
+&lt;p>
+&lt;figure>
+&lt;graphic url="vortrag-FISCH-100002000000032000000258BB20B0C3704E9BD3.png"/>
+&lt;head>vossantos_zeit.png&lt;/head>
+&lt;/figure>
+&lt;/p>
+&lt;p>Zu den fälschlich extrahierten Named Entities gehören »der Berliner Klaus Wowereit«, »der deutsche Michel« oder »der Anton aus Tirol«, stehende Wendungen, die grammatisch unseren definierten Vossanto-Mustern entsprechen.&lt;/p>
+&lt;/div>
+&lt;div rend="DH-Heading1" type="div1">
+&lt;head>Erkenntnisse und Ausblick&lt;/head>
+&lt;p>Die Vossanto ist als Stilmittel nur scheinbar einfach strukturiert, das Erstellen von Extraktionsregeln daher alles andere als trivial. Die vorliegenden Skripte weisen bekannte Lücken auf, die Qualität hängt v. a. von der Verlässlichkeit der benutzten NER-Tools und der Präzision der definierten Muster ab. Fehlende Goldannotationen für dieses Phänomen erschweren zudem eine Evaluierung. Die vorliegende Arbeit hat daher explorativen Charakter, die Optimierung von Precision und Recall lag noch nicht in deren Fokus, ist aber das nächste Ziel dieses Projekts.&lt;/p>
+&lt;p>Trotz der genannten Einschränkungen konnten durch diesen korpusbasierten Ansatz neue Erkenntnisse zur Vielgestaltigkeit des Phänomens ›Vossianische Antonomasie‹ gewonnen werden. So lassen sich zahlreiche Spezialfälle unterscheiden und systematisch untersuchen (vgl. auch Fischer/Wälzholz 2014), beispielhaft genannt seien:&lt;/p>
+&lt;list type="unordered">
+&lt;item>Tiere als ›target‹ (»
+                        &lt;hi rend="italic">Sea Hero&lt;/hi> is the Bobo Holloman of racing«, NYT, 1993; »
+                        &lt;hi rend="italic">Bonfire&lt;/hi>, the Michael Jordan of dressage horses«, NYT, 1998),
+                    &lt;/item>
+&lt;item>Feminisierungen (Adele Schopenhauer, »eine Art 
+                        &lt;hi rend="italic">Donna Quichotta&lt;/hi> des Weimarer Musenvereins«, 
+                        &lt;hi rend="italic">Die Zeit&lt;/hi> 18/2002; »Tracey [Emin], die 
+&lt;hi rend="italic">Donna Giovanna&lt;/hi> der britischen Gegenwartskunst«, 
+                        &lt;hi rend="italic">Die Zeit&lt;/hi> 9/2006; »Kati Witt ist jetzt eine 
+                        &lt;hi rend="italic">Franziska Beckenbauer&lt;/hi> der Münchner Olympiabewerbung.«, 
+                        &lt;hi rend="italic">Die Zeit&lt;/hi> 39/2010),
+                    &lt;/item>
+&lt;item>nicht individualisierbare ›sources‹: »the [God, King, Queen, Satan, Emperor, Oracle, Shogun, Czar, Sultan, Buddha] of«,&lt;/item>
+&lt;item>mythologische und fiktive Figuren als ›sources‹: »the [Santa Claus, Midas, Godzilla, Pied Piper, Energizer Bunny, Jupiter, Icarus] of«,&lt;/item>
+&lt;item>Personifizierungen, also der Einsatz individueller Personen/Figuren als ›source‹ für Firmen, Vereine, Bands oder Orte als ›target‹ (»
+                        &lt;hi rend="italic">Sturm, Ruger&lt;/hi> is the 
+                        &lt;hi rend="italic">Benedict Arnold&lt;/hi> of the gun industry«, NYT, 1989; »
+                        &lt;hi rend="italic">Aerosmith&lt;/hi>, the 
+                        &lt;hi rend="italic">Dorian Gray&lt;/hi> of rock bands«, NYT, 1993; »the 
+                        &lt;hi rend="italic">Hudson&lt;/hi> has been the 
+                        &lt;hi rend="italic">John Barrymore&lt;/hi> of rivers, noble in profile but a sorry wreck«, NYT, 1996; »the 
+                        &lt;hi rend="italic">National Collegiate Athletic Association&lt;/hi>, the 
+                        &lt;hi rend="italic">Kenneth Starr&lt;/hi> of sports«, NYT, 1998).
+                    &lt;/item>
+&lt;/list>
+&lt;p>Zu letzteren Beispielen gehört nun endlich auch der titelgebende »Helmut Kohl unter den Brotaufstrichen« (
+                    &lt;hi rend="italic">der Freitag&lt;/hi> 35/2011).
+                &lt;/p>
+&lt;p>Auch zur Distribution der Vossantos innerhalb der beiden Zeitungskorpora ließen sich belastbare Ergebnisse gewinnen. Demnach sind Vossantos besonders im Kultur- und Sport-Ressort beliebt (Vorkommen in der Sektion »Arts« der NYT: 78; in der Sektion »Sports«: 57; auf dem nächsten Rang mit großem Abstand »New York and Region«: 28 – im »Feuilleton + Literatur«-Ressort der Zeit: 76, »Politik«: 54, nächstrangig ist weit entfernt »Wirtschaft« mit 23 Vorkommen; »Sport« hat hier keine Treffer, denn die gedruckte 
+                    &lt;hi rend="italic">Zeit&lt;/hi> hat kein dediziertes Sport-Ressort).
+                &lt;/p>
+&lt;/div>
+&lt;/body>
+&lt;back>
+&lt;div type="bibliogr">
+&lt;listBibl>
+&lt;head>Bibliographie&lt;/head>
+&lt;bibl>
+&lt;hi rend="bold">Bergien, Angelika&lt;/hi> (2013):
+                        „Names as frames in current-day media discourse“, 
+                        in: Felecan, Oliviu (ed.): 
+                        &lt;hi rend="italic">Name and Naming&lt;/hi>. Proceedings of the second international conference on onomastics. Cluj-Napoca: Editura Mega 2013: 19–27.
+                    &lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Bird, Steven / Loper, Edward / Klein, Ewan&lt;/hi> (2009): 
+                        &lt;hi rend="italic">Natural Language Processing with Python&lt;/hi>. 
+                        O’Reilly Media Inc.
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Faruqui, Manaal / Pado, Sebastian&lt;/hi> (2010):
+                        „Training and Evaluating a German Named Entity Recognizer with Semantic Generalization“, 
+                        in: 
+                        &lt;hi rend="italic">Proceedings of Konvens 2010&lt;/hi>.
+                    &lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Fischer, Frank / Wälzholz, Joseph&lt;/hi> (2014): 
+                        „Jeder kann Napoleon sein: Vossianische Antonomasie: Eine Stilkunde“, 
+                        in:
+                        &lt;hi rend="italic">Frankfurter Allgemeine Sonntagszeitung&lt;/hi> 51 (21. Dezember 2014): 34 
+                        &lt;ptr target="http://www.umblaetterer.de/wp-content/uploads/2014/12/vossanto_fas.png"/>.
+                    &lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Holmqvist Kenneth / Płuciennik Jarosław&lt;/hi> (2010): 
+                        „Princess antonomasia and the truth: Two types of metonymic relations“,
+                        in: Burkhardt, Armin / Nerlich, Brigitte (eds.): 
+                        &lt;hi rend="italic">Tropical Truth(s): The Epistemology of Metaphor and Other Tropes&lt;/hi>. 
+                        Berlin/New York: De Gruyter 373–381 
+                        10.1515/9783110230215.
+                    &lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Lakoff, George&lt;/hi> (1987): 
+                        &lt;hi rend="italic">Women, Fire, and Dangerous Things: What Categories Reveal about the Mind&lt;/hi>. 
+                        Chicago: The University of Chicago Press.
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Lausberg, Heinrich&lt;/hi> (1960): 
+                        &lt;hi rend="italic">Handbuch der literarischen Rhetorik. Eine Grundlegung der Literaturwissenschaft&lt;/hi> 2. 
+                        München: Hueber.
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Sandhaus, Evan&lt;/hi> (2008): 
+                        &lt;hi rend="italic">The New York Times Annotated Corpus LDC2008T19&lt;/hi>. DVD. 
+                        Philadelphia: Linguistic Data Consortium.
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold italic">Arbeitsrepositorium&lt;/hi>: 
+                        &lt;ptr target="https://github.com/weltliteratur/vossanto"/>
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold italic">Folien zum Vortrag&lt;/hi>: 
+                        &lt;ptr target="https://lehkost.github.io/slides/2017-bern/"/>
+&lt;/bibl>
+&lt;/listBibl>
+&lt;/div>
+&lt;/back>
+&lt;/text>
+&lt;/TEI></textSource>
+    <text>
+
+
+Wenn Peter Paul Rubens als »Tarantino des Barock« beschrieben wird (im   Tagesspiegel, 2014) oder Alice Schwarzer als der »Erich Honecker des Feminismus« (in   Cicero, 2014), dann handelt es sich um eine Vossianische Antonomasie. Diese Trope ist nach dem niederländischen Humanisten und Rhetoriklehrer Vossius benannt (und wird im Folgenden als ›Vossanto‹ abgekürzt, in Anlehnung an den Vorschlag von Fischer/Wälzholz 2014). Generell spricht man von Antonomasie, wenn eine bestimmte Eigenschaft einer Person für diese selbst steht (z. B. »der Leimener« für Boris Becker). Beim Spezialfall der Vossanto wird einer Person über die Nennung einer anderen (bekannteren, populäreren, berüchtigteren) Person als Referenzgröße eine bestimmte Eigenschaft zugeschrieben. Dabei sorgt ein »untypologisches, aktualisierendes Signal« (Lausberg 1960) für den Bedeutungstransfer (in den oben genannten Beispielen wären dies der Barock und der Feminismus). Anders ausgedrückt: Die Vossanto stellt über einen ›modifier‹ einen Zusammenhang zwischen ›source‹ und ›target‹ her (Bergien 2013). Entitäten können sowohl als ›source‹ als auch als ›target‹ auftreten, wie ebd. am Beispiel Obama demonstriert: bis 2011 trat er in Vossantos vor allem als ›target‹ auf, danach diente er immer mehr als ›source‹. Die ›source‹-Referenz wird im Fachdiskurs im Anschluss an Lakoff 1987 auch als ›paragon‹ bezeichnet (»a specific example that comes close to embodying the qualities of the ideal«, ebd.).  
+
+ 
+
+Der Begriff »Vossianische Antonomasie« wird international kaum verwendet, stattdessen wird etwa zwischen »Antonomasia1« und »Antonomasia2« unterschieden: »metonymic« vs. »metaphorical antonomasia« (Holmqvist/Płuciennik 2010). Innerhalb dieses Klassifikationsschemas wäre unsere Vossanto ein Spezialfall von »Antonomasia2«, nämlich wenn es um »comparisons with paragons from other spheres of culture« geht: »Lyotard is a pope of postmodernism, Bush is no Demosthenes; and we can buy the Cadillac of vacuum cleaners.« (ebd.)
+
+ 
+
+Dieses Stilmittel, dessen reger Gebrauch seit der Antike belegt ist, ist heute medial ubiquitär anzutreffen. Oft findet es sich schon in Überschriften, da es zugleich informativ und rätselhaft sein kann und zudem oft unterhaltsame Qualitäten bietet. Eine eigene größere Sammlung an Musterexemplaren (  ) gab den Ausschlag, dieses Phänomen systematisch zu erforschen, mit historischer Perspektive und auf Grundlage größerer englischer und deutscher Zeitungskorpora. Ziel dieser Arbeit ist eine erste methodisch-explorative Analyse des Phänomens Vossanto in der Tageszeitung   New York Times (1987–2007) und der Wochenzeitung   Die Zeit (1995–2011). Die Korpora wurden aufgrund ihrer Verfügbarkeit, Bedeutung und ihres Umfangs gewählt. Die Extraktion der Vossantos erfolgte jeweils korpusspezifisch, um den verschiedenen Formaten und Sprachen Rechnung zu tragen.  
+
+ 
+
+
+Aus den XML-Daten des   New York Times-Korpus (Sandhaus 2008) wurde für jeden der 1.854.726 Artikel der Volltext extrahiert. Anschließend wurde der Text mit Hilfe des NLTK (Bird/Loper/Klein 2009) in Sätze zerlegt und die Wörter jedes Satzes mit dem Part-of-Speech-Tagger des NLTK annotiert. Zusätzlich wurden Named Entities (Personen, Orte, Organisationen) mit dem NLTK-eigenen Named-Entity-Extraktor annotiert. Die so annotierten Sätze wurden mit einer Liste von Vossanto-typischen Mustern (in Form von regulären Ausdrücken) abgeglichen. Eine vereinfachte Darstellung eines solchen Musters ist beispielsweise:  
+
+ 
+\((PERSON|ORGANIZATION|GPE) *\) (is|has) (often|sometimes)? (been)? (called)? the \(PERSON|ORGANIZATION|GPE) *\) (of|among|from) \((PERSON|ORGANIZATION|GPE) *\)
+ 
+
+Die zu findenden drei Elemente einer Vossanto sind darin durch * gekennzeichnet. Passte ein Satz auf eines der Muster, so wurden diese drei Teile extrahiert und tabellarisch ausgegeben. Anschließend wurden die extrahierten 10.744 Kandidaten manuell überprüft. Nicht-Vossantos und Vossantos mit Städten und Firmen wurden entfernt (Treffer der Art »Algarve, the Riviera of Portugal« oder »Pepsi is the Nike of soft drinks« sind eine eigene Untersuchung wert) und der Fokus auf Vossantos gelegt, in denen Individuen (Personen, Tiere, fiktive Figuren) als ›source‹ oder ›target‹ dienen. 246 Vossantos blieben dabei übrig (Übersicht in unserem Arbeitsrepo, siehe Bibliografie), die sich wie folgt über das Korpus verteilen:
+
+ 
+
+
+Am häufigsten als ›source‹ verwendet wurden folgende Namen:
+
+  
+
+Als Beispiel für Treffer seien diejenigen für Michael Jordan genannt:
+
+  
+
+Trotz der zeitlichen Einschränkung des Korpus lassen sich bereits einige vielversprechende Beobachtungen anstellen und Thesen bilden: 1. Produktive Referenzgrößen einer Vossanto sind sowohl reale als auch fiktionale Figuren (Bsp. für letztere aus der obigen Liste: Woody Allens »Zelig«, Cervantes’ »Don Quixote«). 2. Öffentliche Personen oder bekannte fiktionale Charaktere haben bestimmte Eigenschaften, die sie für die Verwendung als Referenzgröße einer Vossanto prädestinieren oder nicht (es bleibt etwa zu erforschen, warum gerade Michael Jordan und Michelangelo sich so gut eignen und nicht andere Sportler bzw. Künstler). 3. Es gibt historisch stabile Referenzgrößen, deren Bekanntheit vorausgesetzt werden kann (z. B. Michelangelo), und es gibt ephemere Referenzgrößen, die ab irgendeinem Zeitpunkt nicht mehr als Bezugspunkt taugen (für das benutzte zeitgenössische Korpus eher noch nicht relevant).
+
+ 
+
+
+Das deutsche Datenset besteht aus einer Sammlung des Archivs der Wochenzeitung   Die Zeit und enthält die Artikel aus den Jahren 1995 bis 2011. Insgesamt umfasst das Korpus 126.702 Dokumente.  
+
+ 
+
+Zunächst wurden die Volltexte (inklusive Überschriften) aller Dokumente extrahiert. Diese wurden dann mit Hilfe des Part-of-Speech-Taggers und Named-Entity-Recognition-Tools des Stanford CoreNLP Package verarbeitet. Für die Analyse deutschsprachiger Texte enthält Stanford CoreNLP speziell für das Deutsche trainierte Modelle (Faruqui und Pado 2010). Somit können alle Texte auf drei Ebenen untersucht werden: auf der Wortebene, der Part-of-Speech-Ebene sowie der Named-Entity-Ebene. Mithilfe von regulären Ausdrücken, die auf den verschiedenen Ebenen angewandt werden können, wurde dann nach Vossanto-Mustern gesucht. Im Gegensatz zur Verarbeitung des englischsprachigen Korpus wurde jedoch noch nicht versucht, auch das ›target‹ einer Vossanto zu extrahieren. Stattdessen wurden Muster entworfen, die das ›source‹-Objekt sowie das »aktualisierende Signal« matchen. Ausschlaggebend für diese Herangehensweise waren die in einem Testdurchlauf beobachtete hohe Anzahl an Vossantos ohne unmittelbaren Verweis auf das ›target‹ sowie eine große Vielfalt an möglichen Formulierungen, die auf die Relation zum ›target‹ hinweisen können. Mithilfe relativ strikter Regeln konnte die Anzahl an falschen Extraktionen im Rahmen gehalten werden. Ein vereinfachtes Beispiel für eine Extraktionsregel lautet etwa: »eine Art PERSON (der|des) (ADJECTIVE)? NOUN«.
+
+ 
+
+Die Produktivität der beiden häufigsten Referenznamen des NYT-Korpus bestätigt sich im verwendeten deutschen Korpus, etwa wenn vom »Michael Jordan der analytischen Philosophie« die Rede ist (  Die Zeit 44/1999) oder vom »bulgarischen Michelangelo« (  Die Zeit 14/2001). Ansonsten scheint es sprachen- bzw. kulturspezifische Präferenzen zu geben. Die häufigsten ›sources‹ sind:  
+
+  
+
+Ähnlich wie im NYT-Korpus ist erkennbar, wie stark typisierend mythische bzw. fiktive Figuren sind (Robin Hood, Daniel Düsentrieb). Daneben zeigt sich, dass »Bill Gates«, der im NYT-Korpus nur zweimal als ›source‹ einer Vossanto vorkommt, im   Zeit-Korpus sechs Mal als Referenz vertreten ist:  
+
+  
+
+Die wiederholte Verwendung des »Bill Gates von Aurich« zeigt, wie stark ein ›target‹ mit einer ›source‹ verwachsen kann. (Paradebeispiel hierfür ist im Übrigen Vittorio Hösle, »der Boris Becker der Philosophie«, eine Bezeichnung, die es bis in den Wikipedia-Artikel zu Hösle geschafft hat.) Am Beispiel Bill Gates’ lässt sich wie zuvor am Beispiel Obama demonstrieren, dass ein Name sowohl als ›target‹ als auch als ›source‹ vorkommen kann. Bevor Bill Gates selbst als Referenz verwendet wird, wird er in einem Artikel von 1995 noch durch eine andere Person beschrieben: »Bill Gates ist der Henry Ford des Computerzeitalters«.
+
+ 
+
+Insgesamt wurden aus 1.456 Vossanto-Kandidaten 225 manuell als Vossantos markiert, die sich wie folgt über die im Korpus vorhandenen Jahre verteilen:
+
+
+ 
+
+Zu den fälschlich extrahierten Named Entities gehören »der Berliner Klaus Wowereit«, »der deutsche Michel« oder »der Anton aus Tirol«, stehende Wendungen, die grammatisch unseren definierten Vossanto-Mustern entsprechen.
+
+
+  
+
+Die Vossanto ist als Stilmittel nur scheinbar einfach strukturiert, das Erstellen von Extraktionsregeln daher alles andere als trivial. Die vorliegenden Skripte weisen bekannte Lücken auf, die Qualität hängt v. a. von der Verlässlichkeit der benutzten NER-Tools und der Präzision der definierten Muster ab. Fehlende Goldannotationen für dieses Phänomen erschweren zudem eine Evaluierung. Die vorliegende Arbeit hat daher explorativen Charakter, die Optimierung von Precision und Recall lag noch nicht in deren Fokus, ist aber das nächste Ziel dieses Projekts.
+
+ 
+
+Trotz der genannten Einschränkungen konnten durch diesen korpusbasierten Ansatz neue Erkenntnisse zur Vielgestaltigkeit des Phänomens ›Vossianische Antonomasie‹ gewonnen werden. So lassen sich zahlreiche Spezialfälle unterscheiden und systematisch untersuchen (vgl. auch Fischer/Wälzholz 2014), beispielhaft genannt seien:
+
+  
+
+Zu letzteren Beispielen gehört nun endlich auch der titelgebende »Helmut Kohl unter den Brotaufstrichen« (  der Freitag 35/2011).  
+
+ 
+
+Auch zur Distribution der Vossantos innerhalb der beiden Zeitungskorpora ließen sich belastbare Ergebnisse gewinnen. Demnach sind Vossantos besonders im Kultur- und Sport-Ressort beliebt (Vorkommen in der Sektion »Arts« der NYT: 78; in der Sektion »Sports«: 57; auf dem nächsten Rang mit großem Abstand »New York and Region«: 28 – im »Feuilleton + Literatur«-Ressort der Zeit: 76, »Politik«: 54, nächstrangig ist weit entfernt »Wirtschaft« mit 23 Vorkommen; »Sport« hat hier keine Treffer, denn die gedruckte   Zeit hat kein dediziertes Sport-Ressort).  
+
+
+
+
+Einführung und Forschungslage
+
+
+
+Englischsprachiges Korpus
+
+
+
+   
+
+
+
+vossantos_nyt.png
+
+Anzahl
+ 
+source
+ 
+
+6
+ 
+Michael Jordan
+ 
+
+5
+ 
+Michelangelo
+ 
+
+4
+ 
+Babe Ruth
+ 
+
+3
+ 
+Zelig
+ 
+
+3
+ 
+Rodney Dangerfield
+ 
+
+3
+ 
+Neil Young
+ 
+
+3
+ 
+Elvis
+ 
+
+3
+ 
+Don Quixote
+ 
+
+
+  Romario is the   Michael Jordan of soccer and Bebeto is the Magic Johnson of soccer« (1994)  
+
+ 
+
+  Bonfire, the   Michael Jordan of dressage horses« (1998)  
+
+ 
+
+  Brian Foster, the   Michael Jordan of BMX racing« (1998)  
+
+ 
+
+  The stunt biker Dave Mirra, the   Michael Jordan of the dirt set« (2000)  
+
+ 
+
+  Cynthia Cooper is the   Michael Jordan, the Larry Bird, the Magic Johnson of this league« (2000)  
+
+ 
+
+  McNabb has been called the   Michael Jordan of the National Football League« (2001)  
+
+ 
+
+
+
+Deutschsprachiges Korpus
+
+
+
+ 
+ 
+Anzahl
+ 
+source
+
+ 
+9
+ 
+Robin Hood
+
+ 
+6
+ 
+Bill Gates
+
+ 
+4
+ 
+Franz Beckenbauer
+
+ 
+3
+ 
+Daniel Düsentrieb
+
+ 
+3
+ 
+Heinz Rühmann
+
+ 
+3
+ 
+James Dean
+
+ 
+3
+ 
+Jesus Christus
+
+ 
+3
+ 
+Norbert Blüm
+
+ 
+3
+ 
+Willy Brandt
+
+
+
+
+ 
+
+  eine Art Bill Gates des Stolperns« (1998)
+
+ 
+
+  Der Bill Gates von Aurich« (2001)
+
+ 
+
+  der Bill Gates von Ostfriesland« (2001)
+
+ 
+
+  der Bill Gates von Aurich« (2002)
+
+ 
+
+  der britische Bill Gates« (2008)
+
+ 
+
+  der Bill Gates von Estland« (2010)
+
+
+
+
+vossantos_zeit.png
+
+
+
+Erkenntnisse und Ausblick
+
+
+
+ 
+
+Tiere als ›target‹ (»  Sea Hero is the Bobo Holloman of racing«, NYT, 1993; »  Bonfire, the Michael Jordan of dressage horses«, NYT, 1998),  
+
+ 
+
+Feminisierungen (Adele Schopenhauer, »eine Art   Donna Quichotta des Weimarer Musenvereins«,   Die Zeit 18/2002; »Tracey [Emin], die   Donna Giovanna der britischen Gegenwartskunst«,   Die Zeit 9/2006; »Kati Witt ist jetzt eine   Franziska Beckenbauer der Münchner Olympiabewerbung.«,   Die Zeit 39/2010),  
+
+ 
+
+nicht individualisierbare ›sources‹: »the [God, King, Queen, Satan, Emperor, Oracle, Shogun, Czar, Sultan, Buddha] of«,
+
+ 
+
+mythologische und fiktive Figuren als ›sources‹: »the [Santa Claus, Midas, Godzilla, Pied Piper, Energizer Bunny, Jupiter, Icarus] of«,
+
+ 
+
+Personifizierungen, also der Einsatz individueller Personen/Figuren als ›source‹ für Firmen, Vereine, Bands oder Orte als ›target‹ (»  Sturm, Ruger is the   Benedict Arnold of the gun industry«, NYT, 1989; »  Aerosmith, the   Dorian Gray of rock bands«, NYT, 1993; »the   Hudson has been the   John Barrymore of rivers, noble in profile but a sorry wreck«, NYT, 1996; »the   National Collegiate Athletic Association, the   Kenneth Starr of sports«, NYT, 1998).  
+
+ 
+
+
+
+ 
+
+    Bergien, Angelika (2013):                         „Names as frames in current-day media discourse“,                          in: Felecan, Oliviu (ed.):   Name and Naming. Proceedings of the second international conference on onomastics. Cluj-Napoca: Editura Mega 2013: 19–27.    Bird, Steven / Loper, Edward / Klein, Ewan (2009):   Natural Language Processing with Python.                          O’Reilly Media Inc.    Faruqui, Manaal / Pado, Sebastian (2010):                         „Training and Evaluating a German Named Entity Recognizer with Semantic Generalization“,                          in:   Proceedings of Konvens 2010.    Fischer, Frank / Wälzholz, Joseph (2014):                          „Jeder kann Napoleon sein: Vossianische Antonomasie: Eine Stilkunde“,                          in:  Frankfurter Allgemeine Sonntagszeitung 51 (21. Dezember 2014): 34   .    Holmqvist Kenneth / Płuciennik Jarosław (2010):                          „Princess antonomasia and the truth: Two types of metonymic relations“,                         in: Burkhardt, Armin / Nerlich, Brigitte (eds.):   Tropical Truth(s): The Epistemology of Metaphor and Other Tropes.                          Berlin/New York: De Gruyter 373–381                          10.1515/9783110230215.    Lakoff, George (1987):   Women, Fire, and Dangerous Things: What Categories Reveal about the Mind.                          Chicago: The University of Chicago Press.    Lausberg, Heinrich (1960):   Handbuch der literarischen Rhetorik. Eine Grundlegung der Literaturwissenschaft 2.                          München: Hueber.    Sandhaus, Evan (2008):   The New York Times Annotated Corpus LDC2008T19. DVD.                          Philadelphia: Linguistic Data Consortium.    Arbeitsrepositorium:      Folien zum Vortrag:      
+
+ 
+
+
+
+Bibliographie
+
+</text>
+    <tc:tokens xmlns:tc="http://www.dspin.de/data/textcorpus">
+      <tc:token ID="w1">Wenn</tc:token>
+      <tc:token ID="w2">Peter</tc:token>
+      <tc:token ID="w3">Paul</tc:token>
+      <tc:token ID="w4">Rubens</tc:token>
+      <tc:token ID="w5">als</tc:token>
+      <tc:token ID="w6">»</tc:token>
+      <tc:token ID="w7">Tarantino</tc:token>
+      <tc:token ID="w8">des</tc:token>
+      <tc:token ID="w9">Barock</tc:token>
+      <tc:token ID="wa">«</tc:token>
+      <tc:token ID="wb">beschrieben</tc:token>
+      <tc:token ID="wc">wird</tc:token>
+      <tc:token ID="wd">(</tc:token>
+      <tc:token ID="we">im</tc:token>
+      <tc:token ID="wf">Tagesspiegel</tc:token>
+      <tc:token ID="w10">,</tc:token>
+      <tc:token ID="w11">2014</tc:token>
+      <tc:token ID="w12">)</tc:token>
+      <tc:token ID="w13">oder</tc:token>
+      <tc:token ID="w14">Alice</tc:token>
+      <tc:token ID="w15">Schwarzer</tc:token>
+      <tc:token ID="w16">als</tc:token>
+      <tc:token ID="w17">der</tc:token>
+      <tc:token ID="w18">»</tc:token>
+      <tc:token ID="w19">Erich</tc:token>
+      <tc:token ID="w1a">Honecker</tc:token>
+      <tc:token ID="w1b">des</tc:token>
+      <tc:token ID="w1c">Feminismus</tc:token>
+      <tc:token ID="w1d">«</tc:token>
+      <tc:token ID="w1e">(</tc:token>
+      <tc:token ID="w1f">in</tc:token>
+      <tc:token ID="w20">Cicero</tc:token>
+      <tc:token ID="w21">,</tc:token>
+      <tc:token ID="w22">2014</tc:token>
+      <tc:token ID="w23">)</tc:token>
+      <tc:token ID="w24">,</tc:token>
+      <tc:token ID="w25">dann</tc:token>
+      <tc:token ID="w26">handelt</tc:token>
+      <tc:token ID="w27">es</tc:token>
+      <tc:token ID="w28">sich</tc:token>
+      <tc:token ID="w29">um</tc:token>
+      <tc:token ID="w2a">eine</tc:token>
+      <tc:token ID="w2b">Vossianische</tc:token>
+      <tc:token ID="w2c">Antonomasie</tc:token>
+      <tc:token ID="w2d">.</tc:token>
+      <tc:token ID="w2e">Diese</tc:token>
+      <tc:token ID="w2f">Trope</tc:token>
+      <tc:token ID="w30">ist</tc:token>
+      <tc:token ID="w31">nach</tc:token>
+      <tc:token ID="w32">dem</tc:token>
+      <tc:token ID="w33">niederländischen</tc:token>
+      <tc:token ID="w34">Humanisten</tc:token>
+      <tc:token ID="w35">und</tc:token>
+      <tc:token ID="w36">Rhetoriklehrer</tc:token>
+      <tc:token ID="w37">Vossius</tc:token>
+      <tc:token ID="w38">benannt</tc:token>
+      <tc:token ID="w39">(</tc:token>
+      <tc:token ID="w3a">und</tc:token>
+      <tc:token ID="w3b">wird</tc:token>
+      <tc:token ID="w3c">im</tc:token>
+      <tc:token ID="w3d">Folgenden</tc:token>
+      <tc:token ID="w3e">als</tc:token>
+      <tc:token ID="w3f">›</tc:token>
+      <tc:token ID="w40">Vossanto</tc:token>
+      <tc:token ID="w41">‹</tc:token>
+      <tc:token ID="w42">abgekürzt</tc:token>
+      <tc:token ID="w43">,</tc:token>
+      <tc:token ID="w44">in</tc:token>
+      <tc:token ID="w45">Anlehnung</tc:token>
+      <tc:token ID="w46">an</tc:token>
+      <tc:token ID="w47">den</tc:token>
+      <tc:token ID="w48">Vorschlag</tc:token>
+      <tc:token ID="w49">von</tc:token>
+      <tc:token ID="w4a">Fischer/</tc:token>
+      <tc:token ID="w4b">Wälzholz</tc:token>
+      <tc:token ID="w4c">2014</tc:token>
+      <tc:token ID="w4d">)</tc:token>
+      <tc:token ID="w4e">.</tc:token>
+      <tc:token ID="w4f">Generell</tc:token>
+      <tc:token ID="w50">spricht</tc:token>
+      <tc:token ID="w51">man</tc:token>
+      <tc:token ID="w52">von</tc:token>
+      <tc:token ID="w53">Antonomasie</tc:token>
+      <tc:token ID="w54">,</tc:token>
+      <tc:token ID="w55">wenn</tc:token>
+      <tc:token ID="w56">eine</tc:token>
+      <tc:token ID="w57">bestimmte</tc:token>
+      <tc:token ID="w58">Eigenschaft</tc:token>
+      <tc:token ID="w59">einer</tc:token>
+      <tc:token ID="w5a">Person</tc:token>
+      <tc:token ID="w5b">für</tc:token>
+      <tc:token ID="w5c">diese</tc:token>
+      <tc:token ID="w5d">selbst</tc:token>
+      <tc:token ID="w5e">steht</tc:token>
+      <tc:token ID="w5f">(</tc:token>
+      <tc:token ID="w60">z.</tc:token>
+      <tc:token ID="w61">B.</tc:token>
+      <tc:token ID="w62">»</tc:token>
+      <tc:token ID="w63">der</tc:token>
+      <tc:token ID="w64">Leimener</tc:token>
+      <tc:token ID="w65">«</tc:token>
+      <tc:token ID="w66">für</tc:token>
+      <tc:token ID="w67">Boris</tc:token>
+      <tc:token ID="w68">Becker</tc:token>
+      <tc:token ID="w69">)</tc:token>
+      <tc:token ID="w6a">.</tc:token>
+      <tc:token ID="w6b">Beim</tc:token>
+      <tc:token ID="w6c">Spezialfall</tc:token>
+      <tc:token ID="w6d">der</tc:token>
+      <tc:token ID="w6e">Vossanto</tc:token>
+      <tc:token ID="w6f">wird</tc:token>
+      <tc:token ID="w70">einer</tc:token>
+      <tc:token ID="w71">Person</tc:token>
+      <tc:token ID="w72">über</tc:token>
+      <tc:token ID="w73">die</tc:token>
+      <tc:token ID="w74">Nennung</tc:token>
+      <tc:token ID="w75">einer</tc:token>
+      <tc:token ID="w76">anderen</tc:token>
+      <tc:token ID="w77">(</tc:token>
+      <tc:token ID="w78">bekannteren</tc:token>
+      <tc:token ID="w79">,</tc:token>
+      <tc:token ID="w7a">populäreren</tc:token>
+      <tc:token ID="w7b">,</tc:token>
+      <tc:token ID="w7c">berüchtigteren</tc:token>
+      <tc:token ID="w7d">)</tc:token>
+      <tc:token ID="w7e">Person</tc:token>
+      <tc:token ID="w7f">als</tc:token>
+      <tc:token ID="w80">Referenzgröße</tc:token>
+      <tc:token ID="w81">eine</tc:token>
+      <tc:token ID="w82">bestimmte</tc:token>
+      <tc:token ID="w83">Eigenschaft</tc:token>
+      <tc:token ID="w84">zugeschrieben</tc:token>
+      <tc:token ID="w85">.</tc:token>
+      <tc:token ID="w86">Dabei</tc:token>
+      <tc:token ID="w87">sorgt</tc:token>
+      <tc:token ID="w88">ein</tc:token>
+      <tc:token ID="w89">»</tc:token>
+      <tc:token ID="w8a">untypologisches</tc:token>
+      <tc:token ID="w8b">,</tc:token>
+      <tc:token ID="w8c">aktualisierendes</tc:token>
+      <tc:token ID="w8d">Signal</tc:token>
+      <tc:token ID="w8e">«</tc:token>
+      <tc:token ID="w8f">(</tc:token>
+      <tc:token ID="w90">Lausberg</tc:token>
+      <tc:token ID="w91">1960</tc:token>
+      <tc:token ID="w92">)</tc:token>
+      <tc:token ID="w93">für</tc:token>
+      <tc:token ID="w94">den</tc:token>
+      <tc:token ID="w95">Bedeutungstransfer</tc:token>
+      <tc:token ID="w96">(</tc:token>
+      <tc:token ID="w97">in</tc:token>
+      <tc:token ID="w98">den</tc:token>
+      <tc:token ID="w99">oben</tc:token>
+      <tc:token ID="w9a">genannten</tc:token>
+      <tc:token ID="w9b">Beispielen</tc:token>
+      <tc:token ID="w9c">wären</tc:token>
+      <tc:token ID="w9d">dies</tc:token>
+      <tc:token ID="w9e">der</tc:token>
+      <tc:token ID="w9f">Barock</tc:token>
+      <tc:token ID="wa0">und</tc:token>
+      <tc:token ID="wa1">der</tc:token>
+      <tc:token ID="wa2">Feminismus</tc:token>
+      <tc:token ID="wa3">)</tc:token>
+      <tc:token ID="wa4">.</tc:token>
+      <tc:token ID="wa5">Anders</tc:token>
+      <tc:token ID="wa6">ausgedrückt</tc:token>
+      <tc:token ID="wa7">:</tc:token>
+      <tc:token ID="wa8">Die</tc:token>
+      <tc:token ID="wa9">Vossanto</tc:token>
+      <tc:token ID="waa">stellt</tc:token>
+      <tc:token ID="wab">über</tc:token>
+      <tc:token ID="wac">einen</tc:token>
+      <tc:token ID="wad">›</tc:token>
+      <tc:token ID="wae">modifier</tc:token>
+      <tc:token ID="waf">‹</tc:token>
+      <tc:token ID="wb0">einen</tc:token>
+      <tc:token ID="wb1">Zusammenhang</tc:token>
+      <tc:token ID="wb2">zwischen</tc:token>
+      <tc:token ID="wb3">›</tc:token>
+      <tc:token ID="wb4">source</tc:token>
+      <tc:token ID="wb5">‹</tc:token>
+      <tc:token ID="wb6">und</tc:token>
+      <tc:token ID="wb7">›</tc:token>
+      <tc:token ID="wb8">target</tc:token>
+      <tc:token ID="wb9">‹</tc:token>
+      <tc:token ID="wba">her</tc:token>
+      <tc:token ID="wbb">(</tc:token>
+      <tc:token ID="wbc">Bergien</tc:token>
+      <tc:token ID="wbd">2013</tc:token>
+      <tc:token ID="wbe">)</tc:token>
+      <tc:token ID="wbf">.</tc:token>
+      <tc:token ID="wc0">Entitäten</tc:token>
+      <tc:token ID="wc1">können</tc:token>
+      <tc:token ID="wc2">sowohl</tc:token>
+      <tc:token ID="wc3">als</tc:token>
+      <tc:token ID="wc4">›</tc:token>
+      <tc:token ID="wc5">source</tc:token>
+      <tc:token ID="wc6">‹</tc:token>
+      <tc:token ID="wc7">als</tc:token>
+      <tc:token ID="wc8">auch</tc:token>
+      <tc:token ID="wc9">als</tc:token>
+      <tc:token ID="wca">›</tc:token>
+      <tc:token ID="wcb">target</tc:token>
+      <tc:token ID="wcc">‹</tc:token>
+      <tc:token ID="wcd">auftreten</tc:token>
+      <tc:token ID="wce">,</tc:token>
+      <tc:token ID="wcf">wie</tc:token>
+      <tc:token ID="wd0">ebd.</tc:token>
+      <tc:token ID="wd1">am</tc:token>
+      <tc:token ID="wd2">Beispiel</tc:token>
+      <tc:token ID="wd3">Obama</tc:token>
+      <tc:token ID="wd4">demonstriert</tc:token>
+      <tc:token ID="wd5">:</tc:token>
+      <tc:token ID="wd6">bis</tc:token>
+      <tc:token ID="wd7">2011</tc:token>
+      <tc:token ID="wd8">trat</tc:token>
+      <tc:token ID="wd9">er</tc:token>
+      <tc:token ID="wda">in</tc:token>
+      <tc:token ID="wdb">Vossantos</tc:token>
+      <tc:token ID="wdc">vor</tc:token>
+      <tc:token ID="wdd">allem</tc:token>
+      <tc:token ID="wde">als</tc:token>
+      <tc:token ID="wdf">›</tc:token>
+      <tc:token ID="we0">target</tc:token>
+      <tc:token ID="we1">‹</tc:token>
+      <tc:token ID="we2">auf</tc:token>
+      <tc:token ID="we3">,</tc:token>
+      <tc:token ID="we4">danach</tc:token>
+      <tc:token ID="we5">diente</tc:token>
+      <tc:token ID="we6">er</tc:token>
+      <tc:token ID="we7">immer</tc:token>
+      <tc:token ID="we8">mehr</tc:token>
+      <tc:token ID="we9">als</tc:token>
+      <tc:token ID="wea">›</tc:token>
+      <tc:token ID="web">source</tc:token>
+      <tc:token ID="wec">‹</tc:token>
+      <tc:token ID="wed">.</tc:token>
+      <tc:token ID="wee">Die</tc:token>
+      <tc:token ID="wef">›source‹-Referenz</tc:token>
+      <tc:token ID="wf0">wird</tc:token>
+      <tc:token ID="wf1">im</tc:token>
+      <tc:token ID="wf2">Fachdiskurs</tc:token>
+      <tc:token ID="wf3">im</tc:token>
+      <tc:token ID="wf4">Anschluss</tc:token>
+      <tc:token ID="wf5">an</tc:token>
+      <tc:token ID="wf6">Lakoff</tc:token>
+      <tc:token ID="wf7">1987</tc:token>
+      <tc:token ID="wf8">auch</tc:token>
+      <tc:token ID="wf9">als</tc:token>
+      <tc:token ID="wfa">›</tc:token>
+      <tc:token ID="wfb">paragon</tc:token>
+      <tc:token ID="wfc">‹</tc:token>
+      <tc:token ID="wfd">bezeichnet</tc:token>
+      <tc:token ID="wfe">(</tc:token>
+      <tc:token ID="wff">»a</tc:token>
+      <tc:token ID="w100">specific</tc:token>
+      <tc:token ID="w101">example</tc:token>
+      <tc:token ID="w102">that</tc:token>
+      <tc:token ID="w103">comes</tc:token>
+      <tc:token ID="w104">close</tc:token>
+      <tc:token ID="w105">to</tc:token>
+      <tc:token ID="w106">embodying</tc:token>
+      <tc:token ID="w107">the</tc:token>
+      <tc:token ID="w108">qualities</tc:token>
+      <tc:token ID="w109">of</tc:token>
+      <tc:token ID="w10a">the</tc:token>
+      <tc:token ID="w10b">ideal</tc:token>
+      <tc:token ID="w10c">«</tc:token>
+      <tc:token ID="w10d">,</tc:token>
+      <tc:token ID="w10e">ebd.</tc:token>
+      <tc:token ID="w10f">)</tc:token>
+      <tc:token ID="w110">.</tc:token>
+      <tc:token ID="w111">Der</tc:token>
+      <tc:token ID="w112">Begriff</tc:token>
+      <tc:token ID="w113">»</tc:token>
+      <tc:token ID="w114">Vossianische</tc:token>
+      <tc:token ID="w115">Antonomasie</tc:token>
+      <tc:token ID="w116">«</tc:token>
+      <tc:token ID="w117">wird</tc:token>
+      <tc:token ID="w118">international</tc:token>
+      <tc:token ID="w119">kaum</tc:token>
+      <tc:token ID="w11a">verwendet</tc:token>
+      <tc:token ID="w11b">,</tc:token>
+      <tc:token ID="w11c">stattdessen</tc:token>
+      <tc:token ID="w11d">wird</tc:token>
+      <tc:token ID="w11e">etwa</tc:token>
+      <tc:token ID="w11f">zwischen</tc:token>
+      <tc:token ID="w120">»</tc:token>
+      <tc:token ID="w121">Antonomasia</tc:token>
+      <tc:token ID="w122">1</tc:token>
+      <tc:token ID="w123">«</tc:token>
+      <tc:token ID="w124">und</tc:token>
+      <tc:token ID="w125">»</tc:token>
+      <tc:token ID="w126">Antonomasia</tc:token>
+      <tc:token ID="w127">2</tc:token>
+      <tc:token ID="w128">«</tc:token>
+      <tc:token ID="w129">unterschieden</tc:token>
+      <tc:token ID="w12a">:</tc:token>
+      <tc:token ID="w12b">»</tc:token>
+      <tc:token ID="w12c">metonymic</tc:token>
+      <tc:token ID="w12d">«</tc:token>
+      <tc:token ID="w12e">vs</tc:token>
+      <tc:token ID="w12f">.</tc:token>
+      <tc:token ID="w130">»</tc:token>
+      <tc:token ID="w131">metaphorical</tc:token>
+      <tc:token ID="w132">antonomasia</tc:token>
+      <tc:token ID="w133">«</tc:token>
+      <tc:token ID="w134">(</tc:token>
+      <tc:token ID="w135">Holmqvist/</tc:token>
+      <tc:token ID="w136">Płuciennik</tc:token>
+      <tc:token ID="w137">2010</tc:token>
+      <tc:token ID="w138">)</tc:token>
+      <tc:token ID="w139">.</tc:token>
+      <tc:token ID="w13a">Innerhalb</tc:token>
+      <tc:token ID="w13b">dieses</tc:token>
+      <tc:token ID="w13c">Klassifikationsschemas</tc:token>
+      <tc:token ID="w13d">wäre</tc:token>
+      <tc:token ID="w13e">unsere</tc:token>
+      <tc:token ID="w13f">Vossanto</tc:token>
+      <tc:token ID="w140">ein</tc:token>
+      <tc:token ID="w141">Spezialfall</tc:token>
+      <tc:token ID="w142">von</tc:token>
+      <tc:token ID="w143">»</tc:token>
+      <tc:token ID="w144">Antonomasia</tc:token>
+      <tc:token ID="w145">2</tc:token>
+      <tc:token ID="w146">«</tc:token>
+      <tc:token ID="w147">,</tc:token>
+      <tc:token ID="w148">nämlich</tc:token>
+      <tc:token ID="w149">wenn</tc:token>
+      <tc:token ID="w14a">es</tc:token>
+      <tc:token ID="w14b">um</tc:token>
+      <tc:token ID="w14c">»</tc:token>
+      <tc:token ID="w14d">comparisons</tc:token>
+      <tc:token ID="w14e">with</tc:token>
+      <tc:token ID="w14f">paragons</tc:token>
+      <tc:token ID="w150">from</tc:token>
+      <tc:token ID="w151">other</tc:token>
+      <tc:token ID="w152">spheres</tc:token>
+      <tc:token ID="w153">of</tc:token>
+      <tc:token ID="w154">culture</tc:token>
+      <tc:token ID="w155">«</tc:token>
+      <tc:token ID="w156">geht</tc:token>
+      <tc:token ID="w157">:</tc:token>
+      <tc:token ID="w158">»</tc:token>
+      <tc:token ID="w159">Lyotard</tc:token>
+      <tc:token ID="w15a">is</tc:token>
+      <tc:token ID="w15b">a</tc:token>
+      <tc:token ID="w15c">pope</tc:token>
+      <tc:token ID="w15d">of</tc:token>
+      <tc:token ID="w15e">postmodernism</tc:token>
+      <tc:token ID="w15f">,</tc:token>
+      <tc:token ID="w160">Bush</tc:token>
+      <tc:token ID="w161">is</tc:token>
+      <tc:token ID="w162">no</tc:token>
+      <tc:token ID="w163">Demosthenes</tc:token>
+      <tc:token ID="w164">;</tc:token>
+      <tc:token ID="w165">and</tc:token>
+      <tc:token ID="w166">we</tc:token>
+      <tc:token ID="w167">can</tc:token>
+      <tc:token ID="w168">buy</tc:token>
+      <tc:token ID="w169">the</tc:token>
+      <tc:token ID="w16a">Cadillac</tc:token>
+      <tc:token ID="w16b">of</tc:token>
+      <tc:token ID="w16c">vacuum</tc:token>
+      <tc:token ID="w16d">cleaners</tc:token>
+      <tc:token ID="w16e">.</tc:token>
+      <tc:token ID="w16f">«</tc:token>
+      <tc:token ID="w170">(</tc:token>
+      <tc:token ID="w171">ebd</tc:token>
+      <tc:token ID="w172">.</tc:token>
+      <tc:token ID="w173">)</tc:token>
+      <tc:token ID="w174">Dieses</tc:token>
+      <tc:token ID="w175">Stilmittel</tc:token>
+      <tc:token ID="w176">,</tc:token>
+      <tc:token ID="w177">dessen</tc:token>
+      <tc:token ID="w178">reger</tc:token>
+      <tc:token ID="w179">Gebrauch</tc:token>
+      <tc:token ID="w17a">seit</tc:token>
+      <tc:token ID="w17b">der</tc:token>
+      <tc:token ID="w17c">Antike</tc:token>
+      <tc:token ID="w17d">belegt</tc:token>
+      <tc:token ID="w17e">ist</tc:token>
+      <tc:token ID="w17f">,</tc:token>
+      <tc:token ID="w180">ist</tc:token>
+      <tc:token ID="w181">heute</tc:token>
+      <tc:token ID="w182">medial</tc:token>
+      <tc:token ID="w183">ubiquitär</tc:token>
+      <tc:token ID="w184">anzutreffen</tc:token>
+      <tc:token ID="w185">.</tc:token>
+      <tc:token ID="w186">Oft</tc:token>
+      <tc:token ID="w187">findet</tc:token>
+      <tc:token ID="w188">es</tc:token>
+      <tc:token ID="w189">sich</tc:token>
+      <tc:token ID="w18a">schon</tc:token>
+      <tc:token ID="w18b">in</tc:token>
+      <tc:token ID="w18c">Überschriften</tc:token>
+      <tc:token ID="w18d">,</tc:token>
+      <tc:token ID="w18e">da</tc:token>
+      <tc:token ID="w18f">es</tc:token>
+      <tc:token ID="w190">zugleich</tc:token>
+      <tc:token ID="w191">informativ</tc:token>
+      <tc:token ID="w192">und</tc:token>
+      <tc:token ID="w193">rätselhaft</tc:token>
+      <tc:token ID="w194">sein</tc:token>
+      <tc:token ID="w195">kann</tc:token>
+      <tc:token ID="w196">und</tc:token>
+      <tc:token ID="w197">zudem</tc:token>
+      <tc:token ID="w198">oft</tc:token>
+      <tc:token ID="w199">unterhaltsame</tc:token>
+      <tc:token ID="w19a">Qualitäten</tc:token>
+      <tc:token ID="w19b">bietet</tc:token>
+      <tc:token ID="w19c">.</tc:token>
+      <tc:token ID="w19d">Eine</tc:token>
+      <tc:token ID="w19e">eigene</tc:token>
+      <tc:token ID="w19f">größere</tc:token>
+      <tc:token ID="w1a0">Sammlung</tc:token>
+      <tc:token ID="w1a1">an</tc:token>
+      <tc:token ID="w1a2">Musterexemplaren</tc:token>
+      <tc:token ID="w1a3">(</tc:token>
+      <tc:token ID="w1a4">)</tc:token>
+      <tc:token ID="w1a5">gab</tc:token>
+      <tc:token ID="w1a6">den</tc:token>
+      <tc:token ID="w1a7">Ausschlag</tc:token>
+      <tc:token ID="w1a8">,</tc:token>
+      <tc:token ID="w1a9">dieses</tc:token>
+      <tc:token ID="w1aa">Phänomen</tc:token>
+      <tc:token ID="w1ab">systematisch</tc:token>
+      <tc:token ID="w1ac">zu</tc:token>
+      <tc:token ID="w1ad">erforschen</tc:token>
+      <tc:token ID="w1ae">,</tc:token>
+      <tc:token ID="w1af">mit</tc:token>
+      <tc:token ID="w1b0">historischer</tc:token>
+      <tc:token ID="w1b1">Perspektive</tc:token>
+      <tc:token ID="w1b2">und</tc:token>
+      <tc:token ID="w1b3">auf</tc:token>
+      <tc:token ID="w1b4">Grundlage</tc:token>
+      <tc:token ID="w1b5">größerer</tc:token>
+      <tc:token ID="w1b6">englischer</tc:token>
+      <tc:token ID="w1b7">und</tc:token>
+      <tc:token ID="w1b8">deutscher</tc:token>
+      <tc:token ID="w1b9">Zeitungskorpora</tc:token>
+      <tc:token ID="w1ba">.</tc:token>
+      <tc:token ID="w1bb">Ziel</tc:token>
+      <tc:token ID="w1bc">dieser</tc:token>
+      <tc:token ID="w1bd">Arbeit</tc:token>
+      <tc:token ID="w1be">ist</tc:token>
+      <tc:token ID="w1bf">eine</tc:token>
+      <tc:token ID="w1c0">erste</tc:token>
+      <tc:token ID="w1c1">methodisch-explorative</tc:token>
+      <tc:token ID="w1c2">Analyse</tc:token>
+      <tc:token ID="w1c3">des</tc:token>
+      <tc:token ID="w1c4">Phänomens</tc:token>
+      <tc:token ID="w1c5">Vossanto</tc:token>
+      <tc:token ID="w1c6">in</tc:token>
+      <tc:token ID="w1c7">der</tc:token>
+      <tc:token ID="w1c8">Tageszeitung</tc:token>
+      <tc:token ID="w1c9">New</tc:token>
+      <tc:token ID="w1ca">York</tc:token>
+      <tc:token ID="w1cb">Times</tc:token>
+      <tc:token ID="w1cc">(</tc:token>
+      <tc:token ID="w1cd">1987–2007</tc:token>
+      <tc:token ID="w1ce">)</tc:token>
+      <tc:token ID="w1cf">und</tc:token>
+      <tc:token ID="w1d0">der</tc:token>
+      <tc:token ID="w1d1">Wochenzeitung</tc:token>
+      <tc:token ID="w1d2">Die</tc:token>
+      <tc:token ID="w1d3">Zeit</tc:token>
+      <tc:token ID="w1d4">(</tc:token>
+      <tc:token ID="w1d5">1995–2011</tc:token>
+      <tc:token ID="w1d6">)</tc:token>
+      <tc:token ID="w1d7">.</tc:token>
+      <tc:token ID="w1d8">Die</tc:token>
+      <tc:token ID="w1d9">Korpora</tc:token>
+      <tc:token ID="w1da">wurden</tc:token>
+      <tc:token ID="w1db">aufgrund</tc:token>
+      <tc:token ID="w1dc">ihrer</tc:token>
+      <tc:token ID="w1dd">Verfügbarkeit</tc:token>
+      <tc:token ID="w1de">,</tc:token>
+      <tc:token ID="w1df">Bedeutung</tc:token>
+      <tc:token ID="w1e0">und</tc:token>
+      <tc:token ID="w1e1">ihres</tc:token>
+      <tc:token ID="w1e2">Umfangs</tc:token>
+      <tc:token ID="w1e3">gewählt</tc:token>
+      <tc:token ID="w1e4">.</tc:token>
+      <tc:token ID="w1e5">Die</tc:token>
+      <tc:token ID="w1e6">Extraktion</tc:token>
+      <tc:token ID="w1e7">der</tc:token>
+      <tc:token ID="w1e8">Vossantos</tc:token>
+      <tc:token ID="w1e9">erfolgte</tc:token>
+      <tc:token ID="w1ea">jeweils</tc:token>
+      <tc:token ID="w1eb">korpusspezifisch</tc:token>
+      <tc:token ID="w1ec">,</tc:token>
+      <tc:token ID="w1ed">um</tc:token>
+      <tc:token ID="w1ee">den</tc:token>
+      <tc:token ID="w1ef">verschiedenen</tc:token>
+      <tc:token ID="w1f0">Formaten</tc:token>
+      <tc:token ID="w1f1">und</tc:token>
+      <tc:token ID="w1f2">Sprachen</tc:token>
+      <tc:token ID="w1f3">Rechnung</tc:token>
+      <tc:token ID="w1f4">zu</tc:token>
+      <tc:token ID="w1f5">tragen</tc:token>
+      <tc:token ID="w1f6">.</tc:token>
+      <tc:token ID="w1f7">Aus</tc:token>
+      <tc:token ID="w1f8">den</tc:token>
+      <tc:token ID="w1f9">XML-Daten</tc:token>
+      <tc:token ID="w1fa">des</tc:token>
+      <tc:token ID="w1fb">New</tc:token>
+      <tc:token ID="w1fc">York</tc:token>
+      <tc:token ID="w1fd">Times-Korpus</tc:token>
+      <tc:token ID="w1fe">(</tc:token>
+      <tc:token ID="w1ff">Sandhaus</tc:token>
+      <tc:token ID="w200">2008</tc:token>
+      <tc:token ID="w201">)</tc:token>
+      <tc:token ID="w202">wurde</tc:token>
+      <tc:token ID="w203">für</tc:token>
+      <tc:token ID="w204">jeden</tc:token>
+      <tc:token ID="w205">der</tc:token>
+      <tc:token ID="w206">1.</tc:token>
+      <tc:token ID="w207">854.726</tc:token>
+      <tc:token ID="w208">Artikel</tc:token>
+      <tc:token ID="w209">der</tc:token>
+      <tc:token ID="w20a">Volltext</tc:token>
+      <tc:token ID="w20b">extrahiert</tc:token>
+      <tc:token ID="w20c">.</tc:token>
+      <tc:token ID="w20d">Anschließend</tc:token>
+      <tc:token ID="w20e">wurde</tc:token>
+      <tc:token ID="w20f">der</tc:token>
+      <tc:token ID="w210">Text</tc:token>
+      <tc:token ID="w211">mit</tc:token>
+      <tc:token ID="w212">Hilfe</tc:token>
+      <tc:token ID="w213">des</tc:token>
+      <tc:token ID="w214">NLTK</tc:token>
+      <tc:token ID="w215">(</tc:token>
+      <tc:token ID="w216">Bird/</tc:token>
+      <tc:token ID="w217">Loper/</tc:token>
+      <tc:token ID="w218">Klein</tc:token>
+      <tc:token ID="w219">2009</tc:token>
+      <tc:token ID="w21a">)</tc:token>
+      <tc:token ID="w21b">in</tc:token>
+      <tc:token ID="w21c">Sätze</tc:token>
+      <tc:token ID="w21d">zerlegt</tc:token>
+      <tc:token ID="w21e">und</tc:token>
+      <tc:token ID="w21f">die</tc:token>
+      <tc:token ID="w220">Wörter</tc:token>
+      <tc:token ID="w221">jedes</tc:token>
+      <tc:token ID="w222">Satzes</tc:token>
+      <tc:token ID="w223">mit</tc:token>
+      <tc:token ID="w224">dem</tc:token>
+      <tc:token ID="w225">Part-of-Speech-Tagger</tc:token>
+      <tc:token ID="w226">des</tc:token>
+      <tc:token ID="w227">NLTK</tc:token>
+      <tc:token ID="w228">annotiert</tc:token>
+      <tc:token ID="w229">.</tc:token>
+      <tc:token ID="w22a">Zusätzlich</tc:token>
+      <tc:token ID="w22b">wurden</tc:token>
+      <tc:token ID="w22c">Named</tc:token>
+      <tc:token ID="w22d">Entities</tc:token>
+      <tc:token ID="w22e">(</tc:token>
+      <tc:token ID="w22f">Personen</tc:token>
+      <tc:token ID="w230">,</tc:token>
+      <tc:token ID="w231">Orte</tc:token>
+      <tc:token ID="w232">,</tc:token>
+      <tc:token ID="w233">Organisationen</tc:token>
+      <tc:token ID="w234">)</tc:token>
+      <tc:token ID="w235">mit</tc:token>
+      <tc:token ID="w236">dem</tc:token>
+      <tc:token ID="w237">NLTK-eigenen</tc:token>
+      <tc:token ID="w238">Named-Entity-Extraktor</tc:token>
+      <tc:token ID="w239">annotiert</tc:token>
+      <tc:token ID="w23a">.</tc:token>
+      <tc:token ID="w23b">Die</tc:token>
+      <tc:token ID="w23c">so</tc:token>
+      <tc:token ID="w23d">annotierten</tc:token>
+      <tc:token ID="w23e">Sätze</tc:token>
+      <tc:token ID="w23f">wurden</tc:token>
+      <tc:token ID="w240">mit</tc:token>
+      <tc:token ID="w241">einer</tc:token>
+      <tc:token ID="w242">Liste</tc:token>
+      <tc:token ID="w243">von</tc:token>
+      <tc:token ID="w244">Vossanto-typischen</tc:token>
+      <tc:token ID="w245">Mustern</tc:token>
+      <tc:token ID="w246">(</tc:token>
+      <tc:token ID="w247">in</tc:token>
+      <tc:token ID="w248">Form</tc:token>
+      <tc:token ID="w249">von</tc:token>
+      <tc:token ID="w24a">regulären</tc:token>
+      <tc:token ID="w24b">Ausdrücken</tc:token>
+      <tc:token ID="w24c">)</tc:token>
+      <tc:token ID="w24d">abgeglichen</tc:token>
+      <tc:token ID="w24e">.</tc:token>
+      <tc:token ID="w24f">Eine</tc:token>
+      <tc:token ID="w250">vereinfachte</tc:token>
+      <tc:token ID="w251">Darstellung</tc:token>
+      <tc:token ID="w252">eines</tc:token>
+      <tc:token ID="w253">solchen</tc:token>
+      <tc:token ID="w254">Musters</tc:token>
+      <tc:token ID="w255">ist</tc:token>
+      <tc:token ID="w256">beispielsweise</tc:token>
+      <tc:token ID="w257">:</tc:token>
+      <tc:token ID="w258">\((</tc:token>
+      <tc:token ID="w259">PERSON</tc:token>
+      <tc:token ID="w25a">|</tc:token>
+      <tc:token ID="w25b">ORGANIZATION</tc:token>
+      <tc:token ID="w25c">|</tc:token>
+      <tc:token ID="w25d">GPE</tc:token>
+      <tc:token ID="w25e">)</tc:token>
+      <tc:token ID="w25f">*</tc:token>
+      <tc:token ID="w260">\</tc:token>
+      <tc:token ID="w261">)</tc:token>
+      <tc:token ID="w262">(</tc:token>
+      <tc:token ID="w263">is|has</tc:token>
+      <tc:token ID="w264">)</tc:token>
+      <tc:token ID="w265">(</tc:token>
+      <tc:token ID="w266">often|</tc:token>
+      <tc:token ID="w267">sometimes</tc:token>
+      <tc:token ID="w268">)</tc:token>
+      <tc:token ID="w269">?</tc:token>
+      <tc:token ID="w26a">(</tc:token>
+      <tc:token ID="w26b">been</tc:token>
+      <tc:token ID="w26c">)</tc:token>
+      <tc:token ID="w26d">?</tc:token>
+      <tc:token ID="w26e">(</tc:token>
+      <tc:token ID="w26f">called</tc:token>
+      <tc:token ID="w270">)</tc:token>
+      <tc:token ID="w271">?</tc:token>
+      <tc:token ID="w272">the</tc:token>
+      <tc:token ID="w273">\(</tc:token>
+      <tc:token ID="w274">PERSON</tc:token>
+      <tc:token ID="w275">|</tc:token>
+      <tc:token ID="w276">ORGANIZATION</tc:token>
+      <tc:token ID="w277">|</tc:token>
+      <tc:token ID="w278">GPE</tc:token>
+      <tc:token ID="w279">)</tc:token>
+      <tc:token ID="w27a">*</tc:token>
+      <tc:token ID="w27b">\</tc:token>
+      <tc:token ID="w27c">)</tc:token>
+      <tc:token ID="w27d">(</tc:token>
+      <tc:token ID="w27e">of|</tc:token>
+      <tc:token ID="w27f">among|</tc:token>
+      <tc:token ID="w280">from</tc:token>
+      <tc:token ID="w281">)</tc:token>
+      <tc:token ID="w282">\((</tc:token>
+      <tc:token ID="w283">PERSON</tc:token>
+      <tc:token ID="w284">|</tc:token>
+      <tc:token ID="w285">ORGANIZATION</tc:token>
+      <tc:token ID="w286">|</tc:token>
+      <tc:token ID="w287">GPE</tc:token>
+      <tc:token ID="w288">)</tc:token>
+      <tc:token ID="w289">*</tc:token>
+      <tc:token ID="w28a">\</tc:token>
+      <tc:token ID="w28b">)</tc:token>
+      <tc:token ID="w28c">Die</tc:token>
+      <tc:token ID="w28d">zu</tc:token>
+      <tc:token ID="w28e">findenden</tc:token>
+      <tc:token ID="w28f">drei</tc:token>
+      <tc:token ID="w290">Elemente</tc:token>
+      <tc:token ID="w291">einer</tc:token>
+      <tc:token ID="w292">Vossanto</tc:token>
+      <tc:token ID="w293">sind</tc:token>
+      <tc:token ID="w294">darin</tc:token>
+      <tc:token ID="w295">durch</tc:token>
+      <tc:token ID="w296">*</tc:token>
+      <tc:token ID="w297">gekennzeichnet</tc:token>
+      <tc:token ID="w298">.</tc:token>
+      <tc:token ID="w299">Passte</tc:token>
+      <tc:token ID="w29a">ein</tc:token>
+      <tc:token ID="w29b">Satz</tc:token>
+      <tc:token ID="w29c">auf</tc:token>
+      <tc:token ID="w29d">eines</tc:token>
+      <tc:token ID="w29e">der</tc:token>
+      <tc:token ID="w29f">Muster</tc:token>
+      <tc:token ID="w2a0">,</tc:token>
+      <tc:token ID="w2a1">so</tc:token>
+      <tc:token ID="w2a2">wurden</tc:token>
+      <tc:token ID="w2a3">diese</tc:token>
+      <tc:token ID="w2a4">drei</tc:token>
+      <tc:token ID="w2a5">Teile</tc:token>
+      <tc:token ID="w2a6">extrahiert</tc:token>
+      <tc:token ID="w2a7">und</tc:token>
+      <tc:token ID="w2a8">tabellarisch</tc:token>
+      <tc:token ID="w2a9">ausgegeben</tc:token>
+      <tc:token ID="w2aa">.</tc:token>
+      <tc:token ID="w2ab">Anschließend</tc:token>
+      <tc:token ID="w2ac">wurden</tc:token>
+      <tc:token ID="w2ad">die</tc:token>
+      <tc:token ID="w2ae">extrahierten</tc:token>
+      <tc:token ID="w2af">10.744</tc:token>
+      <tc:token ID="w2b0">Kandidaten</tc:token>
+      <tc:token ID="w2b1">manuell</tc:token>
+      <tc:token ID="w2b2">überprüft</tc:token>
+      <tc:token ID="w2b3">.</tc:token>
+      <tc:token ID="w2b4">Nicht-Vossantos</tc:token>
+      <tc:token ID="w2b5">und</tc:token>
+      <tc:token ID="w2b6">Vossantos</tc:token>
+      <tc:token ID="w2b7">mit</tc:token>
+      <tc:token ID="w2b8">Städten</tc:token>
+      <tc:token ID="w2b9">und</tc:token>
+      <tc:token ID="w2ba">Firmen</tc:token>
+      <tc:token ID="w2bb">wurden</tc:token>
+      <tc:token ID="w2bc">entfernt</tc:token>
+      <tc:token ID="w2bd">(</tc:token>
+      <tc:token ID="w2be">Treffer</tc:token>
+      <tc:token ID="w2bf">der</tc:token>
+      <tc:token ID="w2c0">Art</tc:token>
+      <tc:token ID="w2c1">»</tc:token>
+      <tc:token ID="w2c2">Algarve</tc:token>
+      <tc:token ID="w2c3">,</tc:token>
+      <tc:token ID="w2c4">the</tc:token>
+      <tc:token ID="w2c5">Riviera</tc:token>
+      <tc:token ID="w2c6">of</tc:token>
+      <tc:token ID="w2c7">Portugal</tc:token>
+      <tc:token ID="w2c8">«</tc:token>
+      <tc:token ID="w2c9">oder</tc:token>
+      <tc:token ID="w2ca">»</tc:token>
+      <tc:token ID="w2cb">Pepsi</tc:token>
+      <tc:token ID="w2cc">is</tc:token>
+      <tc:token ID="w2cd">the</tc:token>
+      <tc:token ID="w2ce">Nike</tc:token>
+      <tc:token ID="w2cf">of</tc:token>
+      <tc:token ID="w2d0">soft</tc:token>
+      <tc:token ID="w2d1">drinks</tc:token>
+      <tc:token ID="w2d2">«</tc:token>
+      <tc:token ID="w2d3">sind</tc:token>
+      <tc:token ID="w2d4">eine</tc:token>
+      <tc:token ID="w2d5">eigene</tc:token>
+      <tc:token ID="w2d6">Untersuchung</tc:token>
+      <tc:token ID="w2d7">wert</tc:token>
+      <tc:token ID="w2d8">)</tc:token>
+      <tc:token ID="w2d9">und</tc:token>
+      <tc:token ID="w2da">der</tc:token>
+      <tc:token ID="w2db">Fokus</tc:token>
+      <tc:token ID="w2dc">auf</tc:token>
+      <tc:token ID="w2dd">Vossantos</tc:token>
+      <tc:token ID="w2de">gelegt</tc:token>
+      <tc:token ID="w2df">,</tc:token>
+      <tc:token ID="w2e0">in</tc:token>
+      <tc:token ID="w2e1">denen</tc:token>
+      <tc:token ID="w2e2">Individuen</tc:token>
+      <tc:token ID="w2e3">(</tc:token>
+      <tc:token ID="w2e4">Personen</tc:token>
+      <tc:token ID="w2e5">,</tc:token>
+      <tc:token ID="w2e6">Tiere</tc:token>
+      <tc:token ID="w2e7">,</tc:token>
+      <tc:token ID="w2e8">fiktive</tc:token>
+      <tc:token ID="w2e9">Figuren</tc:token>
+      <tc:token ID="w2ea">)</tc:token>
+      <tc:token ID="w2eb">als</tc:token>
+      <tc:token ID="w2ec">›</tc:token>
+      <tc:token ID="w2ed">source</tc:token>
+      <tc:token ID="w2ee">‹</tc:token>
+      <tc:token ID="w2ef">oder</tc:token>
+      <tc:token ID="w2f0">›</tc:token>
+      <tc:token ID="w2f1">target</tc:token>
+      <tc:token ID="w2f2">‹</tc:token>
+      <tc:token ID="w2f3">dienen</tc:token>
+      <tc:token ID="w2f4">.</tc:token>
+      <tc:token ID="w2f5">246</tc:token>
+      <tc:token ID="w2f6">Vossantos</tc:token>
+      <tc:token ID="w2f7">blieben</tc:token>
+      <tc:token ID="w2f8">dabei</tc:token>
+      <tc:token ID="w2f9">übrig</tc:token>
+      <tc:token ID="w2fa">(</tc:token>
+      <tc:token ID="w2fb">Übersicht</tc:token>
+      <tc:token ID="w2fc">in</tc:token>
+      <tc:token ID="w2fd">unserem</tc:token>
+      <tc:token ID="w2fe">Arbeitsrepo</tc:token>
+      <tc:token ID="w2ff">,</tc:token>
+      <tc:token ID="w300">siehe</tc:token>
+      <tc:token ID="w301">Bibliografie</tc:token>
+      <tc:token ID="w302">)</tc:token>
+      <tc:token ID="w303">,</tc:token>
+      <tc:token ID="w304">die</tc:token>
+      <tc:token ID="w305">sich</tc:token>
+      <tc:token ID="w306">wie</tc:token>
+      <tc:token ID="w307">folgt</tc:token>
+      <tc:token ID="w308">über</tc:token>
+      <tc:token ID="w309">das</tc:token>
+      <tc:token ID="w30a">Korpus</tc:token>
+      <tc:token ID="w30b">verteilen</tc:token>
+      <tc:token ID="w30c">:</tc:token>
+      <tc:token ID="w30d">Am</tc:token>
+      <tc:token ID="w30e">häufigsten</tc:token>
+      <tc:token ID="w30f">als</tc:token>
+      <tc:token ID="w310">›</tc:token>
+      <tc:token ID="w311">source</tc:token>
+      <tc:token ID="w312">‹</tc:token>
+      <tc:token ID="w313">verwendet</tc:token>
+      <tc:token ID="w314">wurden</tc:token>
+      <tc:token ID="w315">folgende</tc:token>
+      <tc:token ID="w316">Namen</tc:token>
+      <tc:token ID="w317">:</tc:token>
+      <tc:token ID="w318">Als</tc:token>
+      <tc:token ID="w319">Beispiel</tc:token>
+      <tc:token ID="w31a">für</tc:token>
+      <tc:token ID="w31b">Treffer</tc:token>
+      <tc:token ID="w31c">seien</tc:token>
+      <tc:token ID="w31d">diejenigen</tc:token>
+      <tc:token ID="w31e">für</tc:token>
+      <tc:token ID="w31f">Michael</tc:token>
+      <tc:token ID="w320">Jordan</tc:token>
+      <tc:token ID="w321">genannt</tc:token>
+      <tc:token ID="w322">:</tc:token>
+      <tc:token ID="w323">Trotz</tc:token>
+      <tc:token ID="w324">der</tc:token>
+      <tc:token ID="w325">zeitlichen</tc:token>
+      <tc:token ID="w326">Einschränkung</tc:token>
+      <tc:token ID="w327">des</tc:token>
+      <tc:token ID="w328">Korpus</tc:token>
+      <tc:token ID="w329">lassen</tc:token>
+      <tc:token ID="w32a">sich</tc:token>
+      <tc:token ID="w32b">bereits</tc:token>
+      <tc:token ID="w32c">einige</tc:token>
+      <tc:token ID="w32d">vielversprechende</tc:token>
+      <tc:token ID="w32e">Beobachtungen</tc:token>
+      <tc:token ID="w32f">anstellen</tc:token>
+      <tc:token ID="w330">und</tc:token>
+      <tc:token ID="w331">Thesen</tc:token>
+      <tc:token ID="w332">bilden</tc:token>
+      <tc:token ID="w333">:</tc:token>
+      <tc:token ID="w334">1.</tc:token>
+      <tc:token ID="w335">Produktive</tc:token>
+      <tc:token ID="w336">Referenzgrößen</tc:token>
+      <tc:token ID="w337">einer</tc:token>
+      <tc:token ID="w338">Vossanto</tc:token>
+      <tc:token ID="w339">sind</tc:token>
+      <tc:token ID="w33a">sowohl</tc:token>
+      <tc:token ID="w33b">reale</tc:token>
+      <tc:token ID="w33c">als</tc:token>
+      <tc:token ID="w33d">auch</tc:token>
+      <tc:token ID="w33e">fiktionale</tc:token>
+      <tc:token ID="w33f">Figuren</tc:token>
+      <tc:token ID="w340">(</tc:token>
+      <tc:token ID="w341">Bsp.</tc:token>
+      <tc:token ID="w342">für</tc:token>
+      <tc:token ID="w343">letztere</tc:token>
+      <tc:token ID="w344">aus</tc:token>
+      <tc:token ID="w345">der</tc:token>
+      <tc:token ID="w346">obigen</tc:token>
+      <tc:token ID="w347">Liste</tc:token>
+      <tc:token ID="w348">:</tc:token>
+      <tc:token ID="w349">Woody</tc:token>
+      <tc:token ID="w34a">Allens</tc:token>
+      <tc:token ID="w34b">»</tc:token>
+      <tc:token ID="w34c">Zelig</tc:token>
+      <tc:token ID="w34d">«</tc:token>
+      <tc:token ID="w34e">,</tc:token>
+      <tc:token ID="w34f">Cervantes’</tc:token>
+      <tc:token ID="w350">»</tc:token>
+      <tc:token ID="w351">Don</tc:token>
+      <tc:token ID="w352">Quixote</tc:token>
+      <tc:token ID="w353">«</tc:token>
+      <tc:token ID="w354">)</tc:token>
+      <tc:token ID="w355">.</tc:token>
+      <tc:token ID="w356">2.</tc:token>
+      <tc:token ID="w357">Öffentliche</tc:token>
+      <tc:token ID="w358">Personen</tc:token>
+      <tc:token ID="w359">oder</tc:token>
+      <tc:token ID="w35a">bekannte</tc:token>
+      <tc:token ID="w35b">fiktionale</tc:token>
+      <tc:token ID="w35c">Charaktere</tc:token>
+      <tc:token ID="w35d">haben</tc:token>
+      <tc:token ID="w35e">bestimmte</tc:token>
+      <tc:token ID="w35f">Eigenschaften</tc:token>
+      <tc:token ID="w360">,</tc:token>
+      <tc:token ID="w361">die</tc:token>
+      <tc:token ID="w362">sie</tc:token>
+      <tc:token ID="w363">für</tc:token>
+      <tc:token ID="w364">die</tc:token>
+      <tc:token ID="w365">Verwendung</tc:token>
+      <tc:token ID="w366">als</tc:token>
+      <tc:token ID="w367">Referenzgröße</tc:token>
+      <tc:token ID="w368">einer</tc:token>
+      <tc:token ID="w369">Vossanto</tc:token>
+      <tc:token ID="w36a">prädestinieren</tc:token>
+      <tc:token ID="w36b">oder</tc:token>
+      <tc:token ID="w36c">nicht</tc:token>
+      <tc:token ID="w36d">(</tc:token>
+      <tc:token ID="w36e">es</tc:token>
+      <tc:token ID="w36f">bleibt</tc:token>
+      <tc:token ID="w370">etwa</tc:token>
+      <tc:token ID="w371">zu</tc:token>
+      <tc:token ID="w372">erforschen</tc:token>
+      <tc:token ID="w373">,</tc:token>
+      <tc:token ID="w374">warum</tc:token>
+      <tc:token ID="w375">gerade</tc:token>
+      <tc:token ID="w376">Michael</tc:token>
+      <tc:token ID="w377">Jordan</tc:token>
+      <tc:token ID="w378">und</tc:token>
+      <tc:token ID="w379">Michelangelo</tc:token>
+      <tc:token ID="w37a">sich</tc:token>
+      <tc:token ID="w37b">so</tc:token>
+      <tc:token ID="w37c">gut</tc:token>
+      <tc:token ID="w37d">eignen</tc:token>
+      <tc:token ID="w37e">und</tc:token>
+      <tc:token ID="w37f">nicht</tc:token>
+      <tc:token ID="w380">andere</tc:token>
+      <tc:token ID="w381">Sportler</tc:token>
+      <tc:token ID="w382">bzw.</tc:token>
+      <tc:token ID="w383">Künstler</tc:token>
+      <tc:token ID="w384">)</tc:token>
+      <tc:token ID="w385">.</tc:token>
+      <tc:token ID="w386">3.</tc:token>
+      <tc:token ID="w387">Es</tc:token>
+      <tc:token ID="w388">gibt</tc:token>
+      <tc:token ID="w389">historisch</tc:token>
+      <tc:token ID="w38a">stabile</tc:token>
+      <tc:token ID="w38b">Referenzgrößen</tc:token>
+      <tc:token ID="w38c">,</tc:token>
+      <tc:token ID="w38d">deren</tc:token>
+      <tc:token ID="w38e">Bekanntheit</tc:token>
+      <tc:token ID="w38f">vorausgesetzt</tc:token>
+      <tc:token ID="w390">werden</tc:token>
+      <tc:token ID="w391">kann</tc:token>
+      <tc:token ID="w392">(</tc:token>
+      <tc:token ID="w393">z.</tc:token>
+      <tc:token ID="w394">B.</tc:token>
+      <tc:token ID="w395">Michelangelo</tc:token>
+      <tc:token ID="w396">)</tc:token>
+      <tc:token ID="w397">,</tc:token>
+      <tc:token ID="w398">und</tc:token>
+      <tc:token ID="w399">es</tc:token>
+      <tc:token ID="w39a">gibt</tc:token>
+      <tc:token ID="w39b">ephemere</tc:token>
+      <tc:token ID="w39c">Referenzgrößen</tc:token>
+      <tc:token ID="w39d">,</tc:token>
+      <tc:token ID="w39e">die</tc:token>
+      <tc:token ID="w39f">ab</tc:token>
+      <tc:token ID="w3a0">irgendeinem</tc:token>
+      <tc:token ID="w3a1">Zeitpunkt</tc:token>
+      <tc:token ID="w3a2">nicht</tc:token>
+      <tc:token ID="w3a3">mehr</tc:token>
+      <tc:token ID="w3a4">als</tc:token>
+      <tc:token ID="w3a5">Bezugspunkt</tc:token>
+      <tc:token ID="w3a6">taugen</tc:token>
+      <tc:token ID="w3a7">(</tc:token>
+      <tc:token ID="w3a8">für</tc:token>
+      <tc:token ID="w3a9">das</tc:token>
+      <tc:token ID="w3aa">benutzte</tc:token>
+      <tc:token ID="w3ab">zeitgenössische</tc:token>
+      <tc:token ID="w3ac">Korpus</tc:token>
+      <tc:token ID="w3ad">eher</tc:token>
+      <tc:token ID="w3ae">noch</tc:token>
+      <tc:token ID="w3af">nicht</tc:token>
+      <tc:token ID="w3b0">relevant</tc:token>
+      <tc:token ID="w3b1">)</tc:token>
+      <tc:token ID="w3b2">.</tc:token>
+      <tc:token ID="w3b3">Das</tc:token>
+      <tc:token ID="w3b4">deutsche</tc:token>
+      <tc:token ID="w3b5">Datenset</tc:token>
+      <tc:token ID="w3b6">besteht</tc:token>
+      <tc:token ID="w3b7">aus</tc:token>
+      <tc:token ID="w3b8">einer</tc:token>
+      <tc:token ID="w3b9">Sammlung</tc:token>
+      <tc:token ID="w3ba">des</tc:token>
+      <tc:token ID="w3bb">Archivs</tc:token>
+      <tc:token ID="w3bc">der</tc:token>
+      <tc:token ID="w3bd">Wochenzeitung</tc:token>
+      <tc:token ID="w3be">Die</tc:token>
+      <tc:token ID="w3bf">Zeit</tc:token>
+      <tc:token ID="w3c0">und</tc:token>
+      <tc:token ID="w3c1">enthält</tc:token>
+      <tc:token ID="w3c2">die</tc:token>
+      <tc:token ID="w3c3">Artikel</tc:token>
+      <tc:token ID="w3c4">aus</tc:token>
+      <tc:token ID="w3c5">den</tc:token>
+      <tc:token ID="w3c6">Jahren</tc:token>
+      <tc:token ID="w3c7">1995</tc:token>
+      <tc:token ID="w3c8">bis</tc:token>
+      <tc:token ID="w3c9">2011</tc:token>
+      <tc:token ID="w3ca">.</tc:token>
+      <tc:token ID="w3cb">Insgesamt</tc:token>
+      <tc:token ID="w3cc">umfasst</tc:token>
+      <tc:token ID="w3cd">das</tc:token>
+      <tc:token ID="w3ce">Korpus</tc:token>
+      <tc:token ID="w3cf">126.702</tc:token>
+      <tc:token ID="w3d0">Dokumente</tc:token>
+      <tc:token ID="w3d1">.</tc:token>
+      <tc:token ID="w3d2">Zunächst</tc:token>
+      <tc:token ID="w3d3">wurden</tc:token>
+      <tc:token ID="w3d4">die</tc:token>
+      <tc:token ID="w3d5">Volltexte</tc:token>
+      <tc:token ID="w3d6">(</tc:token>
+      <tc:token ID="w3d7">inklusive</tc:token>
+      <tc:token ID="w3d8">Überschriften</tc:token>
+      <tc:token ID="w3d9">)</tc:token>
+      <tc:token ID="w3da">aller</tc:token>
+      <tc:token ID="w3db">Dokumente</tc:token>
+      <tc:token ID="w3dc">extrahiert</tc:token>
+      <tc:token ID="w3dd">.</tc:token>
+      <tc:token ID="w3de">Diese</tc:token>
+      <tc:token ID="w3df">wurden</tc:token>
+      <tc:token ID="w3e0">dann</tc:token>
+      <tc:token ID="w3e1">mit</tc:token>
+      <tc:token ID="w3e2">Hilfe</tc:token>
+      <tc:token ID="w3e3">des</tc:token>
+      <tc:token ID="w3e4">Part-of-Speech-Taggers</tc:token>
+      <tc:token ID="w3e5">und</tc:token>
+      <tc:token ID="w3e6">Named-Entity-Recognition-Tools</tc:token>
+      <tc:token ID="w3e7">des</tc:token>
+      <tc:token ID="w3e8">Stanford</tc:token>
+      <tc:token ID="w3e9">CoreNLP</tc:token>
+      <tc:token ID="w3ea">Package</tc:token>
+      <tc:token ID="w3eb">verarbeitet</tc:token>
+      <tc:token ID="w3ec">.</tc:token>
+      <tc:token ID="w3ed">Für</tc:token>
+      <tc:token ID="w3ee">die</tc:token>
+      <tc:token ID="w3ef">Analyse</tc:token>
+      <tc:token ID="w3f0">deutschsprachiger</tc:token>
+      <tc:token ID="w3f1">Texte</tc:token>
+      <tc:token ID="w3f2">enthält</tc:token>
+      <tc:token ID="w3f3">Stanford</tc:token>
+      <tc:token ID="w3f4">CoreNLP</tc:token>
+      <tc:token ID="w3f5">speziell</tc:token>
+      <tc:token ID="w3f6">für</tc:token>
+      <tc:token ID="w3f7">das</tc:token>
+      <tc:token ID="w3f8">Deutsche</tc:token>
+      <tc:token ID="w3f9">trainierte</tc:token>
+      <tc:token ID="w3fa">Modelle</tc:token>
+      <tc:token ID="w3fb">(</tc:token>
+      <tc:token ID="w3fc">Faruqui</tc:token>
+      <tc:token ID="w3fd">und</tc:token>
+      <tc:token ID="w3fe">Pado</tc:token>
+      <tc:token ID="w3ff">2010</tc:token>
+      <tc:token ID="w400">)</tc:token>
+      <tc:token ID="w401">.</tc:token>
+      <tc:token ID="w402">Somit</tc:token>
+      <tc:token ID="w403">können</tc:token>
+      <tc:token ID="w404">alle</tc:token>
+      <tc:token ID="w405">Texte</tc:token>
+      <tc:token ID="w406">auf</tc:token>
+      <tc:token ID="w407">drei</tc:token>
+      <tc:token ID="w408">Ebenen</tc:token>
+      <tc:token ID="w409">untersucht</tc:token>
+      <tc:token ID="w40a">werden</tc:token>
+      <tc:token ID="w40b">:</tc:token>
+      <tc:token ID="w40c">auf</tc:token>
+      <tc:token ID="w40d">der</tc:token>
+      <tc:token ID="w40e">Wortebene</tc:token>
+      <tc:token ID="w40f">,</tc:token>
+      <tc:token ID="w410">der</tc:token>
+      <tc:token ID="w411">Part-of-Speech-Ebene</tc:token>
+      <tc:token ID="w412">sowie</tc:token>
+      <tc:token ID="w413">der</tc:token>
+      <tc:token ID="w414">Named-Entity-Ebene</tc:token>
+      <tc:token ID="w415">.</tc:token>
+      <tc:token ID="w416">Mithilfe</tc:token>
+      <tc:token ID="w417">von</tc:token>
+      <tc:token ID="w418">regulären</tc:token>
+      <tc:token ID="w419">Ausdrücken</tc:token>
+      <tc:token ID="w41a">,</tc:token>
+      <tc:token ID="w41b">die</tc:token>
+      <tc:token ID="w41c">auf</tc:token>
+      <tc:token ID="w41d">den</tc:token>
+      <tc:token ID="w41e">verschiedenen</tc:token>
+      <tc:token ID="w41f">Ebenen</tc:token>
+      <tc:token ID="w420">angewandt</tc:token>
+      <tc:token ID="w421">werden</tc:token>
+      <tc:token ID="w422">können</tc:token>
+      <tc:token ID="w423">,</tc:token>
+      <tc:token ID="w424">wurde</tc:token>
+      <tc:token ID="w425">dann</tc:token>
+      <tc:token ID="w426">nach</tc:token>
+      <tc:token ID="w427">Vossanto-Mustern</tc:token>
+      <tc:token ID="w428">gesucht</tc:token>
+      <tc:token ID="w429">.</tc:token>
+      <tc:token ID="w42a">Im</tc:token>
+      <tc:token ID="w42b">Gegensatz</tc:token>
+      <tc:token ID="w42c">zur</tc:token>
+      <tc:token ID="w42d">Verarbeitung</tc:token>
+      <tc:token ID="w42e">des</tc:token>
+      <tc:token ID="w42f">englischsprachigen</tc:token>
+      <tc:token ID="w430">Korpus</tc:token>
+      <tc:token ID="w431">wurde</tc:token>
+      <tc:token ID="w432">jedoch</tc:token>
+      <tc:token ID="w433">noch</tc:token>
+      <tc:token ID="w434">nicht</tc:token>
+      <tc:token ID="w435">versucht</tc:token>
+      <tc:token ID="w436">,</tc:token>
+      <tc:token ID="w437">auch</tc:token>
+      <tc:token ID="w438">das</tc:token>
+      <tc:token ID="w439">›</tc:token>
+      <tc:token ID="w43a">target</tc:token>
+      <tc:token ID="w43b">‹</tc:token>
+      <tc:token ID="w43c">einer</tc:token>
+      <tc:token ID="w43d">Vossanto</tc:token>
+      <tc:token ID="w43e">zu</tc:token>
+      <tc:token ID="w43f">extrahieren</tc:token>
+      <tc:token ID="w440">.</tc:token>
+      <tc:token ID="w441">Stattdessen</tc:token>
+      <tc:token ID="w442">wurden</tc:token>
+      <tc:token ID="w443">Muster</tc:token>
+      <tc:token ID="w444">entworfen</tc:token>
+      <tc:token ID="w445">,</tc:token>
+      <tc:token ID="w446">die</tc:token>
+      <tc:token ID="w447">das</tc:token>
+      <tc:token ID="w448">›source‹-Objekt</tc:token>
+      <tc:token ID="w449">sowie</tc:token>
+      <tc:token ID="w44a">das</tc:token>
+      <tc:token ID="w44b">»</tc:token>
+      <tc:token ID="w44c">aktualisierende</tc:token>
+      <tc:token ID="w44d">Signal</tc:token>
+      <tc:token ID="w44e">«</tc:token>
+      <tc:token ID="w44f">matchen</tc:token>
+      <tc:token ID="w450">.</tc:token>
+      <tc:token ID="w451">Ausschlaggebend</tc:token>
+      <tc:token ID="w452">für</tc:token>
+      <tc:token ID="w453">diese</tc:token>
+      <tc:token ID="w454">Herangehensweise</tc:token>
+      <tc:token ID="w455">waren</tc:token>
+      <tc:token ID="w456">die</tc:token>
+      <tc:token ID="w457">in</tc:token>
+      <tc:token ID="w458">einem</tc:token>
+      <tc:token ID="w459">Testdurchlauf</tc:token>
+      <tc:token ID="w45a">beobachtete</tc:token>
+      <tc:token ID="w45b">hohe</tc:token>
+      <tc:token ID="w45c">Anzahl</tc:token>
+      <tc:token ID="w45d">an</tc:token>
+      <tc:token ID="w45e">Vossantos</tc:token>
+      <tc:token ID="w45f">ohne</tc:token>
+      <tc:token ID="w460">unmittelbaren</tc:token>
+      <tc:token ID="w461">Verweis</tc:token>
+      <tc:token ID="w462">auf</tc:token>
+      <tc:token ID="w463">das</tc:token>
+      <tc:token ID="w464">›</tc:token>
+      <tc:token ID="w465">target</tc:token>
+      <tc:token ID="w466">‹</tc:token>
+      <tc:token ID="w467">sowie</tc:token>
+      <tc:token ID="w468">eine</tc:token>
+      <tc:token ID="w469">große</tc:token>
+      <tc:token ID="w46a">Vielfalt</tc:token>
+      <tc:token ID="w46b">an</tc:token>
+      <tc:token ID="w46c">möglichen</tc:token>
+      <tc:token ID="w46d">Formulierungen</tc:token>
+      <tc:token ID="w46e">,</tc:token>
+      <tc:token ID="w46f">die</tc:token>
+      <tc:token ID="w470">auf</tc:token>
+      <tc:token ID="w471">die</tc:token>
+      <tc:token ID="w472">Relation</tc:token>
+      <tc:token ID="w473">zum</tc:token>
+      <tc:token ID="w474">›</tc:token>
+      <tc:token ID="w475">target</tc:token>
+      <tc:token ID="w476">‹</tc:token>
+      <tc:token ID="w477">hinweisen</tc:token>
+      <tc:token ID="w478">können</tc:token>
+      <tc:token ID="w479">.</tc:token>
+      <tc:token ID="w47a">Mithilfe</tc:token>
+      <tc:token ID="w47b">relativ</tc:token>
+      <tc:token ID="w47c">strikter</tc:token>
+      <tc:token ID="w47d">Regeln</tc:token>
+      <tc:token ID="w47e">konnte</tc:token>
+      <tc:token ID="w47f">die</tc:token>
+      <tc:token ID="w480">Anzahl</tc:token>
+      <tc:token ID="w481">an</tc:token>
+      <tc:token ID="w482">falschen</tc:token>
+      <tc:token ID="w483">Extraktionen</tc:token>
+      <tc:token ID="w484">im</tc:token>
+      <tc:token ID="w485">Rahmen</tc:token>
+      <tc:token ID="w486">gehalten</tc:token>
+      <tc:token ID="w487">werden</tc:token>
+      <tc:token ID="w488">.</tc:token>
+      <tc:token ID="w489">Ein</tc:token>
+      <tc:token ID="w48a">vereinfachtes</tc:token>
+      <tc:token ID="w48b">Beispiel</tc:token>
+      <tc:token ID="w48c">für</tc:token>
+      <tc:token ID="w48d">eine</tc:token>
+      <tc:token ID="w48e">Extraktionsregel</tc:token>
+      <tc:token ID="w48f">lautet</tc:token>
+      <tc:token ID="w490">etwa</tc:token>
+      <tc:token ID="w491">:</tc:token>
+      <tc:token ID="w492">»</tc:token>
+      <tc:token ID="w493">eine</tc:token>
+      <tc:token ID="w494">Art</tc:token>
+      <tc:token ID="w495">PERSON</tc:token>
+      <tc:token ID="w496">(</tc:token>
+      <tc:token ID="w497">der|</tc:token>
+      <tc:token ID="w498">des</tc:token>
+      <tc:token ID="w499">)</tc:token>
+      <tc:token ID="w49a">(</tc:token>
+      <tc:token ID="w49b">ADJECTIVE</tc:token>
+      <tc:token ID="w49c">)</tc:token>
+      <tc:token ID="w49d">?</tc:token>
+      <tc:token ID="w49e">NOUN</tc:token>
+      <tc:token ID="w49f">«</tc:token>
+      <tc:token ID="w4a0">.</tc:token>
+      <tc:token ID="w4a1">Die</tc:token>
+      <tc:token ID="w4a2">Produktivität</tc:token>
+      <tc:token ID="w4a3">der</tc:token>
+      <tc:token ID="w4a4">beiden</tc:token>
+      <tc:token ID="w4a5">häufigsten</tc:token>
+      <tc:token ID="w4a6">Referenznamen</tc:token>
+      <tc:token ID="w4a7">des</tc:token>
+      <tc:token ID="w4a8">NYT-Korpus</tc:token>
+      <tc:token ID="w4a9">bestätigt</tc:token>
+      <tc:token ID="w4aa">sich</tc:token>
+      <tc:token ID="w4ab">im</tc:token>
+      <tc:token ID="w4ac">verwendeten</tc:token>
+      <tc:token ID="w4ad">deutschen</tc:token>
+      <tc:token ID="w4ae">Korpus</tc:token>
+      <tc:token ID="w4af">,</tc:token>
+      <tc:token ID="w4b0">etwa</tc:token>
+      <tc:token ID="w4b1">wenn</tc:token>
+      <tc:token ID="w4b2">vom</tc:token>
+      <tc:token ID="w4b3">»</tc:token>
+      <tc:token ID="w4b4">Michael</tc:token>
+      <tc:token ID="w4b5">Jordan</tc:token>
+      <tc:token ID="w4b6">der</tc:token>
+      <tc:token ID="w4b7">analytischen</tc:token>
+      <tc:token ID="w4b8">Philosophie</tc:token>
+      <tc:token ID="w4b9">«</tc:token>
+      <tc:token ID="w4ba">die</tc:token>
+      <tc:token ID="w4bb">Rede</tc:token>
+      <tc:token ID="w4bc">ist</tc:token>
+      <tc:token ID="w4bd">(</tc:token>
+      <tc:token ID="w4be">Die</tc:token>
+      <tc:token ID="w4bf">Zeit</tc:token>
+      <tc:token ID="w4c0">44/1999</tc:token>
+      <tc:token ID="w4c1">)</tc:token>
+      <tc:token ID="w4c2">oder</tc:token>
+      <tc:token ID="w4c3">vom</tc:token>
+      <tc:token ID="w4c4">»</tc:token>
+      <tc:token ID="w4c5">bulgarischen</tc:token>
+      <tc:token ID="w4c6">Michelangelo</tc:token>
+      <tc:token ID="w4c7">«</tc:token>
+      <tc:token ID="w4c8">(</tc:token>
+      <tc:token ID="w4c9">Die</tc:token>
+      <tc:token ID="w4ca">Zeit</tc:token>
+      <tc:token ID="w4cb">14/2001</tc:token>
+      <tc:token ID="w4cc">)</tc:token>
+      <tc:token ID="w4cd">.</tc:token>
+      <tc:token ID="w4ce">Ansonsten</tc:token>
+      <tc:token ID="w4cf">scheint</tc:token>
+      <tc:token ID="w4d0">es</tc:token>
+      <tc:token ID="w4d1">sprachen-</tc:token>
+      <tc:token ID="w4d2">bzw.</tc:token>
+      <tc:token ID="w4d3">kulturspezifische</tc:token>
+      <tc:token ID="w4d4">Präferenzen</tc:token>
+      <tc:token ID="w4d5">zu</tc:token>
+      <tc:token ID="w4d6">geben</tc:token>
+      <tc:token ID="w4d7">.</tc:token>
+      <tc:token ID="w4d8">Die</tc:token>
+      <tc:token ID="w4d9">häufigsten</tc:token>
+      <tc:token ID="w4da">›</tc:token>
+      <tc:token ID="w4db">sources</tc:token>
+      <tc:token ID="w4dc">‹</tc:token>
+      <tc:token ID="w4dd">sind</tc:token>
+      <tc:token ID="w4de">:</tc:token>
+      <tc:token ID="w4df">Ähnlich</tc:token>
+      <tc:token ID="w4e0">wie</tc:token>
+      <tc:token ID="w4e1">im</tc:token>
+      <tc:token ID="w4e2">NYT-Korpus</tc:token>
+      <tc:token ID="w4e3">ist</tc:token>
+      <tc:token ID="w4e4">erkennbar</tc:token>
+      <tc:token ID="w4e5">,</tc:token>
+      <tc:token ID="w4e6">wie</tc:token>
+      <tc:token ID="w4e7">stark</tc:token>
+      <tc:token ID="w4e8">typisierend</tc:token>
+      <tc:token ID="w4e9">mythische</tc:token>
+      <tc:token ID="w4ea">bzw.</tc:token>
+      <tc:token ID="w4eb">fiktive</tc:token>
+      <tc:token ID="w4ec">Figuren</tc:token>
+      <tc:token ID="w4ed">sind</tc:token>
+      <tc:token ID="w4ee">(</tc:token>
+      <tc:token ID="w4ef">Robin</tc:token>
+      <tc:token ID="w4f0">Hood</tc:token>
+      <tc:token ID="w4f1">,</tc:token>
+      <tc:token ID="w4f2">Daniel</tc:token>
+      <tc:token ID="w4f3">Düsentrieb</tc:token>
+      <tc:token ID="w4f4">)</tc:token>
+      <tc:token ID="w4f5">.</tc:token>
+      <tc:token ID="w4f6">Daneben</tc:token>
+      <tc:token ID="w4f7">zeigt</tc:token>
+      <tc:token ID="w4f8">sich</tc:token>
+      <tc:token ID="w4f9">,</tc:token>
+      <tc:token ID="w4fa">dass</tc:token>
+      <tc:token ID="w4fb">»</tc:token>
+      <tc:token ID="w4fc">Bill</tc:token>
+      <tc:token ID="w4fd">Gates</tc:token>
+      <tc:token ID="w4fe">«</tc:token>
+      <tc:token ID="w4ff">,</tc:token>
+      <tc:token ID="w500">der</tc:token>
+      <tc:token ID="w501">im</tc:token>
+      <tc:token ID="w502">NYT-Korpus</tc:token>
+      <tc:token ID="w503">nur</tc:token>
+      <tc:token ID="w504">zweimal</tc:token>
+      <tc:token ID="w505">als</tc:token>
+      <tc:token ID="w506">›</tc:token>
+      <tc:token ID="w507">source</tc:token>
+      <tc:token ID="w508">‹</tc:token>
+      <tc:token ID="w509">einer</tc:token>
+      <tc:token ID="w50a">Vossanto</tc:token>
+      <tc:token ID="w50b">vorkommt</tc:token>
+      <tc:token ID="w50c">,</tc:token>
+      <tc:token ID="w50d">im</tc:token>
+      <tc:token ID="w50e">Zeit-Korpus</tc:token>
+      <tc:token ID="w50f">sechs</tc:token>
+      <tc:token ID="w510">Mal</tc:token>
+      <tc:token ID="w511">als</tc:token>
+      <tc:token ID="w512">Referenz</tc:token>
+      <tc:token ID="w513">vertreten</tc:token>
+      <tc:token ID="w514">ist</tc:token>
+      <tc:token ID="w515">:</tc:token>
+      <tc:token ID="w516">Die</tc:token>
+      <tc:token ID="w517">wiederholte</tc:token>
+      <tc:token ID="w518">Verwendung</tc:token>
+      <tc:token ID="w519">des</tc:token>
+      <tc:token ID="w51a">»</tc:token>
+      <tc:token ID="w51b">Bill</tc:token>
+      <tc:token ID="w51c">Gates</tc:token>
+      <tc:token ID="w51d">von</tc:token>
+      <tc:token ID="w51e">Aurich</tc:token>
+      <tc:token ID="w51f">«</tc:token>
+      <tc:token ID="w520">zeigt</tc:token>
+      <tc:token ID="w521">,</tc:token>
+      <tc:token ID="w522">wie</tc:token>
+      <tc:token ID="w523">stark</tc:token>
+      <tc:token ID="w524">ein</tc:token>
+      <tc:token ID="w525">›</tc:token>
+      <tc:token ID="w526">target</tc:token>
+      <tc:token ID="w527">‹</tc:token>
+      <tc:token ID="w528">mit</tc:token>
+      <tc:token ID="w529">einer</tc:token>
+      <tc:token ID="w52a">›</tc:token>
+      <tc:token ID="w52b">source</tc:token>
+      <tc:token ID="w52c">‹</tc:token>
+      <tc:token ID="w52d">verwachsen</tc:token>
+      <tc:token ID="w52e">kann</tc:token>
+      <tc:token ID="w52f">.</tc:token>
+      <tc:token ID="w530">(</tc:token>
+      <tc:token ID="w531">Paradebeispiel</tc:token>
+      <tc:token ID="w532">hierfür</tc:token>
+      <tc:token ID="w533">ist</tc:token>
+      <tc:token ID="w534">im</tc:token>
+      <tc:token ID="w535">Übrigen</tc:token>
+      <tc:token ID="w536">Vittorio</tc:token>
+      <tc:token ID="w537">Hösle</tc:token>
+      <tc:token ID="w538">,</tc:token>
+      <tc:token ID="w539">»</tc:token>
+      <tc:token ID="w53a">der</tc:token>
+      <tc:token ID="w53b">Boris</tc:token>
+      <tc:token ID="w53c">Becker</tc:token>
+      <tc:token ID="w53d">der</tc:token>
+      <tc:token ID="w53e">Philosophie</tc:token>
+      <tc:token ID="w53f">«</tc:token>
+      <tc:token ID="w540">,</tc:token>
+      <tc:token ID="w541">eine</tc:token>
+      <tc:token ID="w542">Bezeichnung</tc:token>
+      <tc:token ID="w543">,</tc:token>
+      <tc:token ID="w544">die</tc:token>
+      <tc:token ID="w545">es</tc:token>
+      <tc:token ID="w546">bis</tc:token>
+      <tc:token ID="w547">in</tc:token>
+      <tc:token ID="w548">den</tc:token>
+      <tc:token ID="w549">Wikipedia-Artikel</tc:token>
+      <tc:token ID="w54a">zu</tc:token>
+      <tc:token ID="w54b">Hösle</tc:token>
+      <tc:token ID="w54c">geschafft</tc:token>
+      <tc:token ID="w54d">hat</tc:token>
+      <tc:token ID="w54e">.</tc:token>
+      <tc:token ID="w54f">)</tc:token>
+      <tc:token ID="w550">Am</tc:token>
+      <tc:token ID="w551">Beispiel</tc:token>
+      <tc:token ID="w552">Bill</tc:token>
+      <tc:token ID="w553">Gates’</tc:token>
+      <tc:token ID="w554">lässt</tc:token>
+      <tc:token ID="w555">sich</tc:token>
+      <tc:token ID="w556">wie</tc:token>
+      <tc:token ID="w557">zuvor</tc:token>
+      <tc:token ID="w558">am</tc:token>
+      <tc:token ID="w559">Beispiel</tc:token>
+      <tc:token ID="w55a">Obama</tc:token>
+      <tc:token ID="w55b">demonstrieren</tc:token>
+      <tc:token ID="w55c">,</tc:token>
+      <tc:token ID="w55d">dass</tc:token>
+      <tc:token ID="w55e">ein</tc:token>
+      <tc:token ID="w55f">Name</tc:token>
+      <tc:token ID="w560">sowohl</tc:token>
+      <tc:token ID="w561">als</tc:token>
+      <tc:token ID="w562">›</tc:token>
+      <tc:token ID="w563">target</tc:token>
+      <tc:token ID="w564">‹</tc:token>
+      <tc:token ID="w565">als</tc:token>
+      <tc:token ID="w566">auch</tc:token>
+      <tc:token ID="w567">als</tc:token>
+      <tc:token ID="w568">›</tc:token>
+      <tc:token ID="w569">source</tc:token>
+      <tc:token ID="w56a">‹</tc:token>
+      <tc:token ID="w56b">vorkommen</tc:token>
+      <tc:token ID="w56c">kann</tc:token>
+      <tc:token ID="w56d">.</tc:token>
+      <tc:token ID="w56e">Bevor</tc:token>
+      <tc:token ID="w56f">Bill</tc:token>
+      <tc:token ID="w570">Gates</tc:token>
+      <tc:token ID="w571">selbst</tc:token>
+      <tc:token ID="w572">als</tc:token>
+      <tc:token ID="w573">Referenz</tc:token>
+      <tc:token ID="w574">verwendet</tc:token>
+      <tc:token ID="w575">wird</tc:token>
+      <tc:token ID="w576">,</tc:token>
+      <tc:token ID="w577">wird</tc:token>
+      <tc:token ID="w578">er</tc:token>
+      <tc:token ID="w579">in</tc:token>
+      <tc:token ID="w57a">einem</tc:token>
+      <tc:token ID="w57b">Artikel</tc:token>
+      <tc:token ID="w57c">von</tc:token>
+      <tc:token ID="w57d">1995</tc:token>
+      <tc:token ID="w57e">noch</tc:token>
+      <tc:token ID="w57f">durch</tc:token>
+      <tc:token ID="w580">eine</tc:token>
+      <tc:token ID="w581">andere</tc:token>
+      <tc:token ID="w582">Person</tc:token>
+      <tc:token ID="w583">beschrieben</tc:token>
+      <tc:token ID="w584">:</tc:token>
+      <tc:token ID="w585">»</tc:token>
+      <tc:token ID="w586">Bill</tc:token>
+      <tc:token ID="w587">Gates</tc:token>
+      <tc:token ID="w588">ist</tc:token>
+      <tc:token ID="w589">der</tc:token>
+      <tc:token ID="w58a">Henry</tc:token>
+      <tc:token ID="w58b">Ford</tc:token>
+      <tc:token ID="w58c">des</tc:token>
+      <tc:token ID="w58d">Computerzeitalters</tc:token>
+      <tc:token ID="w58e">«</tc:token>
+      <tc:token ID="w58f">.</tc:token>
+      <tc:token ID="w590">Insgesamt</tc:token>
+      <tc:token ID="w591">wurden</tc:token>
+      <tc:token ID="w592">aus</tc:token>
+      <tc:token ID="w593">1.456</tc:token>
+      <tc:token ID="w594">Vossanto-Kandidaten</tc:token>
+      <tc:token ID="w595">225</tc:token>
+      <tc:token ID="w596">manuell</tc:token>
+      <tc:token ID="w597">als</tc:token>
+      <tc:token ID="w598">Vossantos</tc:token>
+      <tc:token ID="w599">markiert</tc:token>
+      <tc:token ID="w59a">,</tc:token>
+      <tc:token ID="w59b">die</tc:token>
+      <tc:token ID="w59c">sich</tc:token>
+      <tc:token ID="w59d">wie</tc:token>
+      <tc:token ID="w59e">folgt</tc:token>
+      <tc:token ID="w59f">über</tc:token>
+      <tc:token ID="w5a0">die</tc:token>
+      <tc:token ID="w5a1">im</tc:token>
+      <tc:token ID="w5a2">Korpus</tc:token>
+      <tc:token ID="w5a3">vorhandenen</tc:token>
+      <tc:token ID="w5a4">Jahre</tc:token>
+      <tc:token ID="w5a5">verteilen</tc:token>
+      <tc:token ID="w5a6">:</tc:token>
+      <tc:token ID="w5a7">Zu</tc:token>
+      <tc:token ID="w5a8">den</tc:token>
+      <tc:token ID="w5a9">fälschlich</tc:token>
+      <tc:token ID="w5aa">extrahierten</tc:token>
+      <tc:token ID="w5ab">Named</tc:token>
+      <tc:token ID="w5ac">Entities</tc:token>
+      <tc:token ID="w5ad">gehören</tc:token>
+      <tc:token ID="w5ae">»</tc:token>
+      <tc:token ID="w5af">der</tc:token>
+      <tc:token ID="w5b0">Berliner</tc:token>
+      <tc:token ID="w5b1">Klaus</tc:token>
+      <tc:token ID="w5b2">Wowereit</tc:token>
+      <tc:token ID="w5b3">«</tc:token>
+      <tc:token ID="w5b4">,</tc:token>
+      <tc:token ID="w5b5">»</tc:token>
+      <tc:token ID="w5b6">der</tc:token>
+      <tc:token ID="w5b7">deutsche</tc:token>
+      <tc:token ID="w5b8">Michel</tc:token>
+      <tc:token ID="w5b9">«</tc:token>
+      <tc:token ID="w5ba">oder</tc:token>
+      <tc:token ID="w5bb">»</tc:token>
+      <tc:token ID="w5bc">der</tc:token>
+      <tc:token ID="w5bd">Anton</tc:token>
+      <tc:token ID="w5be">aus</tc:token>
+      <tc:token ID="w5bf">Tirol</tc:token>
+      <tc:token ID="w5c0">«</tc:token>
+      <tc:token ID="w5c1">,</tc:token>
+      <tc:token ID="w5c2">stehende</tc:token>
+      <tc:token ID="w5c3">Wendungen</tc:token>
+      <tc:token ID="w5c4">,</tc:token>
+      <tc:token ID="w5c5">die</tc:token>
+      <tc:token ID="w5c6">grammatisch</tc:token>
+      <tc:token ID="w5c7">unseren</tc:token>
+      <tc:token ID="w5c8">definierten</tc:token>
+      <tc:token ID="w5c9">Vossanto-Mustern</tc:token>
+      <tc:token ID="w5ca">entsprechen</tc:token>
+      <tc:token ID="w5cb">.</tc:token>
+      <tc:token ID="w5cc">Die</tc:token>
+      <tc:token ID="w5cd">Vossanto</tc:token>
+      <tc:token ID="w5ce">ist</tc:token>
+      <tc:token ID="w5cf">als</tc:token>
+      <tc:token ID="w5d0">Stilmittel</tc:token>
+      <tc:token ID="w5d1">nur</tc:token>
+      <tc:token ID="w5d2">scheinbar</tc:token>
+      <tc:token ID="w5d3">einfach</tc:token>
+      <tc:token ID="w5d4">strukturiert</tc:token>
+      <tc:token ID="w5d5">,</tc:token>
+      <tc:token ID="w5d6">das</tc:token>
+      <tc:token ID="w5d7">Erstellen</tc:token>
+      <tc:token ID="w5d8">von</tc:token>
+      <tc:token ID="w5d9">Extraktionsregeln</tc:token>
+      <tc:token ID="w5da">daher</tc:token>
+      <tc:token ID="w5db">alles</tc:token>
+      <tc:token ID="w5dc">andere</tc:token>
+      <tc:token ID="w5dd">als</tc:token>
+      <tc:token ID="w5de">trivial</tc:token>
+      <tc:token ID="w5df">.</tc:token>
+      <tc:token ID="w5e0">Die</tc:token>
+      <tc:token ID="w5e1">vorliegenden</tc:token>
+      <tc:token ID="w5e2">Skripte</tc:token>
+      <tc:token ID="w5e3">weisen</tc:token>
+      <tc:token ID="w5e4">bekannte</tc:token>
+      <tc:token ID="w5e5">Lücken</tc:token>
+      <tc:token ID="w5e6">auf</tc:token>
+      <tc:token ID="w5e7">,</tc:token>
+      <tc:token ID="w5e8">die</tc:token>
+      <tc:token ID="w5e9">Qualität</tc:token>
+      <tc:token ID="w5ea">hängt</tc:token>
+      <tc:token ID="w5eb">v.</tc:token>
+      <tc:token ID="w5ec">a.</tc:token>
+      <tc:token ID="w5ed">von</tc:token>
+      <tc:token ID="w5ee">der</tc:token>
+      <tc:token ID="w5ef">Verlässlichkeit</tc:token>
+      <tc:token ID="w5f0">der</tc:token>
+      <tc:token ID="w5f1">benutzten</tc:token>
+      <tc:token ID="w5f2">NER-Tools</tc:token>
+      <tc:token ID="w5f3">und</tc:token>
+      <tc:token ID="w5f4">der</tc:token>
+      <tc:token ID="w5f5">Präzision</tc:token>
+      <tc:token ID="w5f6">der</tc:token>
+      <tc:token ID="w5f7">definierten</tc:token>
+      <tc:token ID="w5f8">Muster</tc:token>
+      <tc:token ID="w5f9">ab</tc:token>
+      <tc:token ID="w5fa">.</tc:token>
+      <tc:token ID="w5fb">Fehlende</tc:token>
+      <tc:token ID="w5fc">Goldannotationen</tc:token>
+      <tc:token ID="w5fd">für</tc:token>
+      <tc:token ID="w5fe">dieses</tc:token>
+      <tc:token ID="w5ff">Phänomen</tc:token>
+      <tc:token ID="w600">erschweren</tc:token>
+      <tc:token ID="w601">zudem</tc:token>
+      <tc:token ID="w602">eine</tc:token>
+      <tc:token ID="w603">Evaluierung</tc:token>
+      <tc:token ID="w604">.</tc:token>
+      <tc:token ID="w605">Die</tc:token>
+      <tc:token ID="w606">vorliegende</tc:token>
+      <tc:token ID="w607">Arbeit</tc:token>
+      <tc:token ID="w608">hat</tc:token>
+      <tc:token ID="w609">daher</tc:token>
+      <tc:token ID="w60a">explorativen</tc:token>
+      <tc:token ID="w60b">Charakter</tc:token>
+      <tc:token ID="w60c">,</tc:token>
+      <tc:token ID="w60d">die</tc:token>
+      <tc:token ID="w60e">Optimierung</tc:token>
+      <tc:token ID="w60f">von</tc:token>
+      <tc:token ID="w610">Precision</tc:token>
+      <tc:token ID="w611">und</tc:token>
+      <tc:token ID="w612">Recall</tc:token>
+      <tc:token ID="w613">lag</tc:token>
+      <tc:token ID="w614">noch</tc:token>
+      <tc:token ID="w615">nicht</tc:token>
+      <tc:token ID="w616">in</tc:token>
+      <tc:token ID="w617">deren</tc:token>
+      <tc:token ID="w618">Fokus</tc:token>
+      <tc:token ID="w619">,</tc:token>
+      <tc:token ID="w61a">ist</tc:token>
+      <tc:token ID="w61b">aber</tc:token>
+      <tc:token ID="w61c">das</tc:token>
+      <tc:token ID="w61d">nächste</tc:token>
+      <tc:token ID="w61e">Ziel</tc:token>
+      <tc:token ID="w61f">dieses</tc:token>
+      <tc:token ID="w620">Projekts</tc:token>
+      <tc:token ID="w621">.</tc:token>
+      <tc:token ID="w622">Trotz</tc:token>
+      <tc:token ID="w623">der</tc:token>
+      <tc:token ID="w624">genannten</tc:token>
+      <tc:token ID="w625">Einschränkungen</tc:token>
+      <tc:token ID="w626">konnten</tc:token>
+      <tc:token ID="w627">durch</tc:token>
+      <tc:token ID="w628">diesen</tc:token>
+      <tc:token ID="w629">korpusbasierten</tc:token>
+      <tc:token ID="w62a">Ansatz</tc:token>
+      <tc:token ID="w62b">neue</tc:token>
+      <tc:token ID="w62c">Erkenntnisse</tc:token>
+      <tc:token ID="w62d">zur</tc:token>
+      <tc:token ID="w62e">Vielgestaltigkeit</tc:token>
+      <tc:token ID="w62f">des</tc:token>
+      <tc:token ID="w630">Phänomens</tc:token>
+      <tc:token ID="w631">›</tc:token>
+      <tc:token ID="w632">Vossianische</tc:token>
+      <tc:token ID="w633">Antonomasie</tc:token>
+      <tc:token ID="w634">‹</tc:token>
+      <tc:token ID="w635">gewonnen</tc:token>
+      <tc:token ID="w636">werden</tc:token>
+      <tc:token ID="w637">.</tc:token>
+      <tc:token ID="w638">So</tc:token>
+      <tc:token ID="w639">lassen</tc:token>
+      <tc:token ID="w63a">sich</tc:token>
+      <tc:token ID="w63b">zahlreiche</tc:token>
+      <tc:token ID="w63c">Spezialfälle</tc:token>
+      <tc:token ID="w63d">unterscheiden</tc:token>
+      <tc:token ID="w63e">und</tc:token>
+      <tc:token ID="w63f">systematisch</tc:token>
+      <tc:token ID="w640">untersuchen</tc:token>
+      <tc:token ID="w641">(</tc:token>
+      <tc:token ID="w642">vgl</tc:token>
+      <tc:token ID="w643">.</tc:token>
+      <tc:token ID="w644">auch</tc:token>
+      <tc:token ID="w645">Fischer</tc:token>
+      <tc:token ID="w646">/</tc:token>
+      <tc:token ID="w647">Wälzholz</tc:token>
+      <tc:token ID="w648">2014</tc:token>
+      <tc:token ID="w649">)</tc:token>
+      <tc:token ID="w64a">,</tc:token>
+      <tc:token ID="w64b">beispielhaft</tc:token>
+      <tc:token ID="w64c">genannt</tc:token>
+      <tc:token ID="w64d">seien</tc:token>
+      <tc:token ID="w64e">:</tc:token>
+      <tc:token ID="w64f">Zu</tc:token>
+      <tc:token ID="w650">letzteren</tc:token>
+      <tc:token ID="w651">Beispielen</tc:token>
+      <tc:token ID="w652">gehört</tc:token>
+      <tc:token ID="w653">nun</tc:token>
+      <tc:token ID="w654">endlich</tc:token>
+      <tc:token ID="w655">auch</tc:token>
+      <tc:token ID="w656">der</tc:token>
+      <tc:token ID="w657">titelgebende</tc:token>
+      <tc:token ID="w658">»</tc:token>
+      <tc:token ID="w659">Helmut</tc:token>
+      <tc:token ID="w65a">Kohl</tc:token>
+      <tc:token ID="w65b">unter</tc:token>
+      <tc:token ID="w65c">den</tc:token>
+      <tc:token ID="w65d">Brotaufstrichen</tc:token>
+      <tc:token ID="w65e">«</tc:token>
+      <tc:token ID="w65f">(</tc:token>
+      <tc:token ID="w660">der</tc:token>
+      <tc:token ID="w661">Freitag</tc:token>
+      <tc:token ID="w662">35/2011</tc:token>
+      <tc:token ID="w663">)</tc:token>
+      <tc:token ID="w664">.</tc:token>
+      <tc:token ID="w665">Auch</tc:token>
+      <tc:token ID="w666">zur</tc:token>
+      <tc:token ID="w667">Distribution</tc:token>
+      <tc:token ID="w668">der</tc:token>
+      <tc:token ID="w669">Vossantos</tc:token>
+      <tc:token ID="w66a">innerhalb</tc:token>
+      <tc:token ID="w66b">der</tc:token>
+      <tc:token ID="w66c">beiden</tc:token>
+      <tc:token ID="w66d">Zeitungskorpora</tc:token>
+      <tc:token ID="w66e">ließen</tc:token>
+      <tc:token ID="w66f">sich</tc:token>
+      <tc:token ID="w670">belastbare</tc:token>
+      <tc:token ID="w671">Ergebnisse</tc:token>
+      <tc:token ID="w672">gewinnen</tc:token>
+      <tc:token ID="w673">.</tc:token>
+      <tc:token ID="w674">Demnach</tc:token>
+      <tc:token ID="w675">sind</tc:token>
+      <tc:token ID="w676">Vossantos</tc:token>
+      <tc:token ID="w677">besonders</tc:token>
+      <tc:token ID="w678">im</tc:token>
+      <tc:token ID="w679">Kultur-</tc:token>
+      <tc:token ID="w67a">und</tc:token>
+      <tc:token ID="w67b">Sport-Ressort</tc:token>
+      <tc:token ID="w67c">beliebt</tc:token>
+      <tc:token ID="w67d">(</tc:token>
+      <tc:token ID="w67e">Vorkommen</tc:token>
+      <tc:token ID="w67f">in</tc:token>
+      <tc:token ID="w680">der</tc:token>
+      <tc:token ID="w681">Sektion</tc:token>
+      <tc:token ID="w682">»</tc:token>
+      <tc:token ID="w683">Arts</tc:token>
+      <tc:token ID="w684">«</tc:token>
+      <tc:token ID="w685">der</tc:token>
+      <tc:token ID="w686">NYT</tc:token>
+      <tc:token ID="w687">:</tc:token>
+      <tc:token ID="w688">78</tc:token>
+      <tc:token ID="w689">;</tc:token>
+      <tc:token ID="w68a">in</tc:token>
+      <tc:token ID="w68b">der</tc:token>
+      <tc:token ID="w68c">Sektion</tc:token>
+      <tc:token ID="w68d">»</tc:token>
+      <tc:token ID="w68e">Sports</tc:token>
+      <tc:token ID="w68f">«</tc:token>
+      <tc:token ID="w690">:</tc:token>
+      <tc:token ID="w691">57</tc:token>
+      <tc:token ID="w692">;</tc:token>
+      <tc:token ID="w693">auf</tc:token>
+      <tc:token ID="w694">dem</tc:token>
+      <tc:token ID="w695">nächsten</tc:token>
+      <tc:token ID="w696">Rang</tc:token>
+      <tc:token ID="w697">mit</tc:token>
+      <tc:token ID="w698">großem</tc:token>
+      <tc:token ID="w699">Abstand</tc:token>
+      <tc:token ID="w69a">»</tc:token>
+      <tc:token ID="w69b">New</tc:token>
+      <tc:token ID="w69c">York</tc:token>
+      <tc:token ID="w69d">and</tc:token>
+      <tc:token ID="w69e">Region</tc:token>
+      <tc:token ID="w69f">«</tc:token>
+      <tc:token ID="w6a0">:</tc:token>
+      <tc:token ID="w6a1">28</tc:token>
+      <tc:token ID="w6a2">–</tc:token>
+      <tc:token ID="w6a3">im</tc:token>
+      <tc:token ID="w6a4">»</tc:token>
+      <tc:token ID="w6a5">Feuilleton</tc:token>
+      <tc:token ID="w6a6">+</tc:token>
+      <tc:token ID="w6a7">Literatur</tc:token>
+      <tc:token ID="w6a8">«</tc:token>
+      <tc:token ID="w6a9">-Ressort</tc:token>
+      <tc:token ID="w6aa">der</tc:token>
+      <tc:token ID="w6ab">Zeit</tc:token>
+      <tc:token ID="w6ac">:</tc:token>
+      <tc:token ID="w6ad">76</tc:token>
+      <tc:token ID="w6ae">,</tc:token>
+      <tc:token ID="w6af">»</tc:token>
+      <tc:token ID="w6b0">Politik</tc:token>
+      <tc:token ID="w6b1">«</tc:token>
+      <tc:token ID="w6b2">:</tc:token>
+      <tc:token ID="w6b3">54</tc:token>
+      <tc:token ID="w6b4">,</tc:token>
+      <tc:token ID="w6b5">nächstrangig</tc:token>
+      <tc:token ID="w6b6">ist</tc:token>
+      <tc:token ID="w6b7">weit</tc:token>
+      <tc:token ID="w6b8">entfernt</tc:token>
+      <tc:token ID="w6b9">»</tc:token>
+      <tc:token ID="w6ba">Wirtschaft</tc:token>
+      <tc:token ID="w6bb">«</tc:token>
+      <tc:token ID="w6bc">mit</tc:token>
+      <tc:token ID="w6bd">23</tc:token>
+      <tc:token ID="w6be">Vorkommen</tc:token>
+      <tc:token ID="w6bf">;</tc:token>
+      <tc:token ID="w6c0">»</tc:token>
+      <tc:token ID="w6c1">Sport</tc:token>
+      <tc:token ID="w6c2">«</tc:token>
+      <tc:token ID="w6c3">hat</tc:token>
+      <tc:token ID="w6c4">hier</tc:token>
+      <tc:token ID="w6c5">keine</tc:token>
+      <tc:token ID="w6c6">Treffer</tc:token>
+      <tc:token ID="w6c7">,</tc:token>
+      <tc:token ID="w6c8">denn</tc:token>
+      <tc:token ID="w6c9">die</tc:token>
+      <tc:token ID="w6ca">gedruckte</tc:token>
+      <tc:token ID="w6cb">Zeit</tc:token>
+      <tc:token ID="w6cc">hat</tc:token>
+      <tc:token ID="w6cd">kein</tc:token>
+      <tc:token ID="w6ce">dediziertes</tc:token>
+      <tc:token ID="w6cf">Sport-Ressort</tc:token>
+      <tc:token ID="w6d0">)</tc:token>
+      <tc:token ID="w6d1">.</tc:token>
+      <tc:token ID="w6d2">Einführung</tc:token>
+      <tc:token ID="w6d3">und</tc:token>
+      <tc:token ID="w6d4">Forschungslage</tc:token>
+      <tc:token ID="w6d5">Englischsprachiges</tc:token>
+      <tc:token ID="w6d6">Korpus</tc:token>
+      <tc:token ID="w6d7">vossantos_nyt.png</tc:token>
+      <tc:token ID="w6d8">Anzahl</tc:token>
+      <tc:token ID="w6d9">source</tc:token>
+      <tc:token ID="w6da">6</tc:token>
+      <tc:token ID="w6db">Michael</tc:token>
+      <tc:token ID="w6dc">Jordan</tc:token>
+      <tc:token ID="w6dd">5</tc:token>
+      <tc:token ID="w6de">Michelangelo</tc:token>
+      <tc:token ID="w6df">4</tc:token>
+      <tc:token ID="w6e0">Babe</tc:token>
+      <tc:token ID="w6e1">Ruth</tc:token>
+      <tc:token ID="w6e2">3</tc:token>
+      <tc:token ID="w6e3">Zelig</tc:token>
+      <tc:token ID="w6e4">3</tc:token>
+      <tc:token ID="w6e5">Rodney</tc:token>
+      <tc:token ID="w6e6">Dangerfield</tc:token>
+      <tc:token ID="w6e7">3</tc:token>
+      <tc:token ID="w6e8">Neil</tc:token>
+      <tc:token ID="w6e9">Young</tc:token>
+      <tc:token ID="w6ea">3</tc:token>
+      <tc:token ID="w6eb">Elvis</tc:token>
+      <tc:token ID="w6ec">3</tc:token>
+      <tc:token ID="w6ed">Don</tc:token>
+      <tc:token ID="w6ee">Quixote</tc:token>
+      <tc:token ID="w6ef">Romario</tc:token>
+      <tc:token ID="w6f0">is</tc:token>
+      <tc:token ID="w6f1">the</tc:token>
+      <tc:token ID="w6f2">Michael</tc:token>
+      <tc:token ID="w6f3">Jordan</tc:token>
+      <tc:token ID="w6f4">of</tc:token>
+      <tc:token ID="w6f5">soccer</tc:token>
+      <tc:token ID="w6f6">and</tc:token>
+      <tc:token ID="w6f7">Bebeto</tc:token>
+      <tc:token ID="w6f8">is</tc:token>
+      <tc:token ID="w6f9">the</tc:token>
+      <tc:token ID="w6fa">Magic</tc:token>
+      <tc:token ID="w6fb">Johnson</tc:token>
+      <tc:token ID="w6fc">of</tc:token>
+      <tc:token ID="w6fd">soccer</tc:token>
+      <tc:token ID="w6fe">«</tc:token>
+      <tc:token ID="w6ff">(</tc:token>
+      <tc:token ID="w700">1994</tc:token>
+      <tc:token ID="w701">)</tc:token>
+      <tc:token ID="w702">Bonfire</tc:token>
+      <tc:token ID="w703">,</tc:token>
+      <tc:token ID="w704">the</tc:token>
+      <tc:token ID="w705">Michael</tc:token>
+      <tc:token ID="w706">Jordan</tc:token>
+      <tc:token ID="w707">of</tc:token>
+      <tc:token ID="w708">dressage</tc:token>
+      <tc:token ID="w709">horses</tc:token>
+      <tc:token ID="w70a">«</tc:token>
+      <tc:token ID="w70b">(</tc:token>
+      <tc:token ID="w70c">1998</tc:token>
+      <tc:token ID="w70d">)</tc:token>
+      <tc:token ID="w70e">Brian</tc:token>
+      <tc:token ID="w70f">Foster</tc:token>
+      <tc:token ID="w710">,</tc:token>
+      <tc:token ID="w711">the</tc:token>
+      <tc:token ID="w712">Michael</tc:token>
+      <tc:token ID="w713">Jordan</tc:token>
+      <tc:token ID="w714">of</tc:token>
+      <tc:token ID="w715">BMX</tc:token>
+      <tc:token ID="w716">racing</tc:token>
+      <tc:token ID="w717">«</tc:token>
+      <tc:token ID="w718">(</tc:token>
+      <tc:token ID="w719">1998</tc:token>
+      <tc:token ID="w71a">)</tc:token>
+      <tc:token ID="w71b">The</tc:token>
+      <tc:token ID="w71c">stunt</tc:token>
+      <tc:token ID="w71d">biker</tc:token>
+      <tc:token ID="w71e">Dave</tc:token>
+      <tc:token ID="w71f">Mirra</tc:token>
+      <tc:token ID="w720">,</tc:token>
+      <tc:token ID="w721">the</tc:token>
+      <tc:token ID="w722">Michael</tc:token>
+      <tc:token ID="w723">Jordan</tc:token>
+      <tc:token ID="w724">of</tc:token>
+      <tc:token ID="w725">the</tc:token>
+      <tc:token ID="w726">dirt</tc:token>
+      <tc:token ID="w727">set</tc:token>
+      <tc:token ID="w728">«</tc:token>
+      <tc:token ID="w729">(</tc:token>
+      <tc:token ID="w72a">2000</tc:token>
+      <tc:token ID="w72b">)</tc:token>
+      <tc:token ID="w72c">Cynthia</tc:token>
+      <tc:token ID="w72d">Cooper</tc:token>
+      <tc:token ID="w72e">is</tc:token>
+      <tc:token ID="w72f">the</tc:token>
+      <tc:token ID="w730">Michael</tc:token>
+      <tc:token ID="w731">Jordan</tc:token>
+      <tc:token ID="w732">,</tc:token>
+      <tc:token ID="w733">the</tc:token>
+      <tc:token ID="w734">Larry</tc:token>
+      <tc:token ID="w735">Bird</tc:token>
+      <tc:token ID="w736">,</tc:token>
+      <tc:token ID="w737">the</tc:token>
+      <tc:token ID="w738">Magic</tc:token>
+      <tc:token ID="w739">Johnson</tc:token>
+      <tc:token ID="w73a">of</tc:token>
+      <tc:token ID="w73b">this</tc:token>
+      <tc:token ID="w73c">league</tc:token>
+      <tc:token ID="w73d">«</tc:token>
+      <tc:token ID="w73e">(</tc:token>
+      <tc:token ID="w73f">2000</tc:token>
+      <tc:token ID="w740">)</tc:token>
+      <tc:token ID="w741">McNabb</tc:token>
+      <tc:token ID="w742">has</tc:token>
+      <tc:token ID="w743">been</tc:token>
+      <tc:token ID="w744">called</tc:token>
+      <tc:token ID="w745">the</tc:token>
+      <tc:token ID="w746">Michael</tc:token>
+      <tc:token ID="w747">Jordan</tc:token>
+      <tc:token ID="w748">of</tc:token>
+      <tc:token ID="w749">the</tc:token>
+      <tc:token ID="w74a">National</tc:token>
+      <tc:token ID="w74b">Football</tc:token>
+      <tc:token ID="w74c">League</tc:token>
+      <tc:token ID="w74d">«</tc:token>
+      <tc:token ID="w74e">(</tc:token>
+      <tc:token ID="w74f">2001</tc:token>
+      <tc:token ID="w750">)</tc:token>
+      <tc:token ID="w751">Deutschsprachiges</tc:token>
+      <tc:token ID="w752">Korpus</tc:token>
+      <tc:token ID="w753">Anzahl</tc:token>
+      <tc:token ID="w754">source</tc:token>
+      <tc:token ID="w755">9</tc:token>
+      <tc:token ID="w756">Robin</tc:token>
+      <tc:token ID="w757">Hood</tc:token>
+      <tc:token ID="w758">6</tc:token>
+      <tc:token ID="w759">Bill</tc:token>
+      <tc:token ID="w75a">Gates</tc:token>
+      <tc:token ID="w75b">4</tc:token>
+      <tc:token ID="w75c">Franz</tc:token>
+      <tc:token ID="w75d">Beckenbauer</tc:token>
+      <tc:token ID="w75e">3</tc:token>
+      <tc:token ID="w75f">Daniel</tc:token>
+      <tc:token ID="w760">Düsentrieb</tc:token>
+      <tc:token ID="w761">3</tc:token>
+      <tc:token ID="w762">Heinz</tc:token>
+      <tc:token ID="w763">Rühmann</tc:token>
+      <tc:token ID="w764">3</tc:token>
+      <tc:token ID="w765">James</tc:token>
+      <tc:token ID="w766">Dean</tc:token>
+      <tc:token ID="w767">3</tc:token>
+      <tc:token ID="w768">Jesus</tc:token>
+      <tc:token ID="w769">Christus</tc:token>
+      <tc:token ID="w76a">3</tc:token>
+      <tc:token ID="w76b">Norbert</tc:token>
+      <tc:token ID="w76c">Blüm</tc:token>
+      <tc:token ID="w76d">3</tc:token>
+      <tc:token ID="w76e">Willy</tc:token>
+      <tc:token ID="w76f">Brandt</tc:token>
+      <tc:token ID="w770">eine</tc:token>
+      <tc:token ID="w771">Art</tc:token>
+      <tc:token ID="w772">Bill</tc:token>
+      <tc:token ID="w773">Gates</tc:token>
+      <tc:token ID="w774">des</tc:token>
+      <tc:token ID="w775">Stolperns</tc:token>
+      <tc:token ID="w776">«</tc:token>
+      <tc:token ID="w777">(</tc:token>
+      <tc:token ID="w778">1998</tc:token>
+      <tc:token ID="w779">)</tc:token>
+      <tc:token ID="w77a">Der</tc:token>
+      <tc:token ID="w77b">Bill</tc:token>
+      <tc:token ID="w77c">Gates</tc:token>
+      <tc:token ID="w77d">von</tc:token>
+      <tc:token ID="w77e">Aurich</tc:token>
+      <tc:token ID="w77f">«</tc:token>
+      <tc:token ID="w780">(</tc:token>
+      <tc:token ID="w781">2001</tc:token>
+      <tc:token ID="w782">)</tc:token>
+      <tc:token ID="w783">der</tc:token>
+      <tc:token ID="w784">Bill</tc:token>
+      <tc:token ID="w785">Gates</tc:token>
+      <tc:token ID="w786">von</tc:token>
+      <tc:token ID="w787">Ostfriesland</tc:token>
+      <tc:token ID="w788">«</tc:token>
+      <tc:token ID="w789">(</tc:token>
+      <tc:token ID="w78a">2001</tc:token>
+      <tc:token ID="w78b">)</tc:token>
+      <tc:token ID="w78c">der</tc:token>
+      <tc:token ID="w78d">Bill</tc:token>
+      <tc:token ID="w78e">Gates</tc:token>
+      <tc:token ID="w78f">von</tc:token>
+      <tc:token ID="w790">Aurich</tc:token>
+      <tc:token ID="w791">«</tc:token>
+      <tc:token ID="w792">(</tc:token>
+      <tc:token ID="w793">2002</tc:token>
+      <tc:token ID="w794">)</tc:token>
+      <tc:token ID="w795">der</tc:token>
+      <tc:token ID="w796">britische</tc:token>
+      <tc:token ID="w797">Bill</tc:token>
+      <tc:token ID="w798">Gates</tc:token>
+      <tc:token ID="w799">«</tc:token>
+      <tc:token ID="w79a">(</tc:token>
+      <tc:token ID="w79b">2008</tc:token>
+      <tc:token ID="w79c">)</tc:token>
+      <tc:token ID="w79d">der</tc:token>
+      <tc:token ID="w79e">Bill</tc:token>
+      <tc:token ID="w79f">Gates</tc:token>
+      <tc:token ID="w7a0">von</tc:token>
+      <tc:token ID="w7a1">Estland</tc:token>
+      <tc:token ID="w7a2">«</tc:token>
+      <tc:token ID="w7a3">(</tc:token>
+      <tc:token ID="w7a4">2010</tc:token>
+      <tc:token ID="w7a5">)</tc:token>
+      <tc:token ID="w7a6">vossantos_zeit</tc:token>
+      <tc:token ID="w7a7">.</tc:token>
+      <tc:token ID="w7a8">png</tc:token>
+      <tc:token ID="w7a9">Erkenntnisse</tc:token>
+      <tc:token ID="w7aa">und</tc:token>
+      <tc:token ID="w7ab">Ausblick</tc:token>
+      <tc:token ID="w7ac">Tiere</tc:token>
+      <tc:token ID="w7ad">als</tc:token>
+      <tc:token ID="w7ae">›</tc:token>
+      <tc:token ID="w7af">target</tc:token>
+      <tc:token ID="w7b0">‹</tc:token>
+      <tc:token ID="w7b1">(</tc:token>
+      <tc:token ID="w7b2">»</tc:token>
+      <tc:token ID="w7b3">Sea</tc:token>
+      <tc:token ID="w7b4">Hero</tc:token>
+      <tc:token ID="w7b5">is</tc:token>
+      <tc:token ID="w7b6">the</tc:token>
+      <tc:token ID="w7b7">Bobo</tc:token>
+      <tc:token ID="w7b8">Holloman</tc:token>
+      <tc:token ID="w7b9">of</tc:token>
+      <tc:token ID="w7ba">racing</tc:token>
+      <tc:token ID="w7bb">«</tc:token>
+      <tc:token ID="w7bc">,</tc:token>
+      <tc:token ID="w7bd">NYT</tc:token>
+      <tc:token ID="w7be">,</tc:token>
+      <tc:token ID="w7bf">1993</tc:token>
+      <tc:token ID="w7c0">;</tc:token>
+      <tc:token ID="w7c1">»</tc:token>
+      <tc:token ID="w7c2">Bonfire</tc:token>
+      <tc:token ID="w7c3">,</tc:token>
+      <tc:token ID="w7c4">the</tc:token>
+      <tc:token ID="w7c5">Michael</tc:token>
+      <tc:token ID="w7c6">Jordan</tc:token>
+      <tc:token ID="w7c7">of</tc:token>
+      <tc:token ID="w7c8">dressage</tc:token>
+      <tc:token ID="w7c9">horses</tc:token>
+      <tc:token ID="w7ca">«</tc:token>
+      <tc:token ID="w7cb">,</tc:token>
+      <tc:token ID="w7cc">NYT</tc:token>
+      <tc:token ID="w7cd">,</tc:token>
+      <tc:token ID="w7ce">1998</tc:token>
+      <tc:token ID="w7cf">)</tc:token>
+      <tc:token ID="w7d0">,</tc:token>
+      <tc:token ID="w7d1">Feminisierungen</tc:token>
+      <tc:token ID="w7d2">(</tc:token>
+      <tc:token ID="w7d3">Adele</tc:token>
+      <tc:token ID="w7d4">Schopenhauer</tc:token>
+      <tc:token ID="w7d5">,</tc:token>
+      <tc:token ID="w7d6">»</tc:token>
+      <tc:token ID="w7d7">eine</tc:token>
+      <tc:token ID="w7d8">Art</tc:token>
+      <tc:token ID="w7d9">Donna</tc:token>
+      <tc:token ID="w7da">Quichotta</tc:token>
+      <tc:token ID="w7db">des</tc:token>
+      <tc:token ID="w7dc">Weimarer</tc:token>
+      <tc:token ID="w7dd">Musenvereins</tc:token>
+      <tc:token ID="w7de">«</tc:token>
+      <tc:token ID="w7df">,</tc:token>
+      <tc:token ID="w7e0">Die</tc:token>
+      <tc:token ID="w7e1">Zeit</tc:token>
+      <tc:token ID="w7e2">18/2002</tc:token>
+      <tc:token ID="w7e3">;</tc:token>
+      <tc:token ID="w7e4">»</tc:token>
+      <tc:token ID="w7e5">Tracey</tc:token>
+      <tc:token ID="w7e6">[</tc:token>
+      <tc:token ID="w7e7">Emin</tc:token>
+      <tc:token ID="w7e8">]</tc:token>
+      <tc:token ID="w7e9">,</tc:token>
+      <tc:token ID="w7ea">die</tc:token>
+      <tc:token ID="w7eb">Donna</tc:token>
+      <tc:token ID="w7ec">Giovanna</tc:token>
+      <tc:token ID="w7ed">der</tc:token>
+      <tc:token ID="w7ee">britischen</tc:token>
+      <tc:token ID="w7ef">Gegenwartskunst</tc:token>
+      <tc:token ID="w7f0">«</tc:token>
+      <tc:token ID="w7f1">,</tc:token>
+      <tc:token ID="w7f2">Die</tc:token>
+      <tc:token ID="w7f3">Zeit</tc:token>
+      <tc:token ID="w7f4">9/2006</tc:token>
+      <tc:token ID="w7f5">;</tc:token>
+      <tc:token ID="w7f6">»</tc:token>
+      <tc:token ID="w7f7">Kati</tc:token>
+      <tc:token ID="w7f8">Witt</tc:token>
+      <tc:token ID="w7f9">ist</tc:token>
+      <tc:token ID="w7fa">jetzt</tc:token>
+      <tc:token ID="w7fb">eine</tc:token>
+      <tc:token ID="w7fc">Franziska</tc:token>
+      <tc:token ID="w7fd">Beckenbauer</tc:token>
+      <tc:token ID="w7fe">der</tc:token>
+      <tc:token ID="w7ff">Münchner</tc:token>
+      <tc:token ID="w800">Olympiabewerbung</tc:token>
+      <tc:token ID="w801">.</tc:token>
+      <tc:token ID="w802">«</tc:token>
+      <tc:token ID="w803">,</tc:token>
+      <tc:token ID="w804">Die</tc:token>
+      <tc:token ID="w805">Zeit</tc:token>
+      <tc:token ID="w806">39/2010</tc:token>
+      <tc:token ID="w807">)</tc:token>
+      <tc:token ID="w808">,</tc:token>
+      <tc:token ID="w809">nicht</tc:token>
+      <tc:token ID="w80a">individualisierbare</tc:token>
+      <tc:token ID="w80b">›</tc:token>
+      <tc:token ID="w80c">sources</tc:token>
+      <tc:token ID="w80d">‹</tc:token>
+      <tc:token ID="w80e">:</tc:token>
+      <tc:token ID="w80f">»</tc:token>
+      <tc:token ID="w810">the</tc:token>
+      <tc:token ID="w811">[</tc:token>
+      <tc:token ID="w812">God</tc:token>
+      <tc:token ID="w813">,</tc:token>
+      <tc:token ID="w814">King</tc:token>
+      <tc:token ID="w815">,</tc:token>
+      <tc:token ID="w816">Queen</tc:token>
+      <tc:token ID="w817">,</tc:token>
+      <tc:token ID="w818">Satan</tc:token>
+      <tc:token ID="w819">,</tc:token>
+      <tc:token ID="w81a">Emperor</tc:token>
+      <tc:token ID="w81b">,</tc:token>
+      <tc:token ID="w81c">Oracle</tc:token>
+      <tc:token ID="w81d">,</tc:token>
+      <tc:token ID="w81e">Shogun</tc:token>
+      <tc:token ID="w81f">,</tc:token>
+      <tc:token ID="w820">Czar</tc:token>
+      <tc:token ID="w821">,</tc:token>
+      <tc:token ID="w822">Sultan</tc:token>
+      <tc:token ID="w823">,</tc:token>
+      <tc:token ID="w824">Buddha</tc:token>
+      <tc:token ID="w825">]</tc:token>
+      <tc:token ID="w826">of</tc:token>
+      <tc:token ID="w827">«</tc:token>
+      <tc:token ID="w828">,</tc:token>
+      <tc:token ID="w829">mythologische</tc:token>
+      <tc:token ID="w82a">und</tc:token>
+      <tc:token ID="w82b">fiktive</tc:token>
+      <tc:token ID="w82c">Figuren</tc:token>
+      <tc:token ID="w82d">als</tc:token>
+      <tc:token ID="w82e">›</tc:token>
+      <tc:token ID="w82f">sources</tc:token>
+      <tc:token ID="w830">‹</tc:token>
+      <tc:token ID="w831">:</tc:token>
+      <tc:token ID="w832">»</tc:token>
+      <tc:token ID="w833">the</tc:token>
+      <tc:token ID="w834">[</tc:token>
+      <tc:token ID="w835">Santa</tc:token>
+      <tc:token ID="w836">Claus</tc:token>
+      <tc:token ID="w837">,</tc:token>
+      <tc:token ID="w838">Midas</tc:token>
+      <tc:token ID="w839">,</tc:token>
+      <tc:token ID="w83a">Godzilla</tc:token>
+      <tc:token ID="w83b">,</tc:token>
+      <tc:token ID="w83c">Pied</tc:token>
+      <tc:token ID="w83d">Piper</tc:token>
+      <tc:token ID="w83e">,</tc:token>
+      <tc:token ID="w83f">Energizer</tc:token>
+      <tc:token ID="w840">Bunny</tc:token>
+      <tc:token ID="w841">,</tc:token>
+      <tc:token ID="w842">Jupiter</tc:token>
+      <tc:token ID="w843">,</tc:token>
+      <tc:token ID="w844">Icarus</tc:token>
+      <tc:token ID="w845">]</tc:token>
+      <tc:token ID="w846">of</tc:token>
+      <tc:token ID="w847">«</tc:token>
+      <tc:token ID="w848">,</tc:token>
+      <tc:token ID="w849">Personifizierungen</tc:token>
+      <tc:token ID="w84a">,</tc:token>
+      <tc:token ID="w84b">also</tc:token>
+      <tc:token ID="w84c">der</tc:token>
+      <tc:token ID="w84d">Einsatz</tc:token>
+      <tc:token ID="w84e">individueller</tc:token>
+      <tc:token ID="w84f">Personen/Figuren</tc:token>
+      <tc:token ID="w850">als</tc:token>
+      <tc:token ID="w851">›</tc:token>
+      <tc:token ID="w852">source</tc:token>
+      <tc:token ID="w853">‹</tc:token>
+      <tc:token ID="w854">für</tc:token>
+      <tc:token ID="w855">Firmen</tc:token>
+      <tc:token ID="w856">,</tc:token>
+      <tc:token ID="w857">Vereine</tc:token>
+      <tc:token ID="w858">,</tc:token>
+      <tc:token ID="w859">Bands</tc:token>
+      <tc:token ID="w85a">oder</tc:token>
+      <tc:token ID="w85b">Orte</tc:token>
+      <tc:token ID="w85c">als</tc:token>
+      <tc:token ID="w85d">›</tc:token>
+      <tc:token ID="w85e">target</tc:token>
+      <tc:token ID="w85f">‹</tc:token>
+      <tc:token ID="w860">(</tc:token>
+      <tc:token ID="w861">»</tc:token>
+      <tc:token ID="w862">Sturm</tc:token>
+      <tc:token ID="w863">,</tc:token>
+      <tc:token ID="w864">Ruger</tc:token>
+      <tc:token ID="w865">is</tc:token>
+      <tc:token ID="w866">the</tc:token>
+      <tc:token ID="w867">Benedict</tc:token>
+      <tc:token ID="w868">Arnold</tc:token>
+      <tc:token ID="w869">of</tc:token>
+      <tc:token ID="w86a">the</tc:token>
+      <tc:token ID="w86b">gun</tc:token>
+      <tc:token ID="w86c">industry</tc:token>
+      <tc:token ID="w86d">«</tc:token>
+      <tc:token ID="w86e">,</tc:token>
+      <tc:token ID="w86f">NYT</tc:token>
+      <tc:token ID="w870">,</tc:token>
+      <tc:token ID="w871">1989</tc:token>
+      <tc:token ID="w872">;</tc:token>
+      <tc:token ID="w873">»</tc:token>
+      <tc:token ID="w874">Aerosmith</tc:token>
+      <tc:token ID="w875">,</tc:token>
+      <tc:token ID="w876">the</tc:token>
+      <tc:token ID="w877">Dorian</tc:token>
+      <tc:token ID="w878">Gray</tc:token>
+      <tc:token ID="w879">of</tc:token>
+      <tc:token ID="w87a">rock</tc:token>
+      <tc:token ID="w87b">bands</tc:token>
+      <tc:token ID="w87c">«</tc:token>
+      <tc:token ID="w87d">,</tc:token>
+      <tc:token ID="w87e">NYT</tc:token>
+      <tc:token ID="w87f">,</tc:token>
+      <tc:token ID="w880">1993</tc:token>
+      <tc:token ID="w881">;</tc:token>
+      <tc:token ID="w882">»</tc:token>
+      <tc:token ID="w883">the</tc:token>
+      <tc:token ID="w884">Hudson</tc:token>
+      <tc:token ID="w885">has</tc:token>
+      <tc:token ID="w886">been</tc:token>
+      <tc:token ID="w887">the</tc:token>
+      <tc:token ID="w888">John</tc:token>
+      <tc:token ID="w889">Barrymore</tc:token>
+      <tc:token ID="w88a">of</tc:token>
+      <tc:token ID="w88b">rivers</tc:token>
+      <tc:token ID="w88c">,</tc:token>
+      <tc:token ID="w88d">noble</tc:token>
+      <tc:token ID="w88e">in</tc:token>
+      <tc:token ID="w88f">profile</tc:token>
+      <tc:token ID="w890">but</tc:token>
+      <tc:token ID="w891">a</tc:token>
+      <tc:token ID="w892">sorry</tc:token>
+      <tc:token ID="w893">wreck</tc:token>
+      <tc:token ID="w894">«</tc:token>
+      <tc:token ID="w895">,</tc:token>
+      <tc:token ID="w896">NYT</tc:token>
+      <tc:token ID="w897">,</tc:token>
+      <tc:token ID="w898">1996</tc:token>
+      <tc:token ID="w899">;</tc:token>
+      <tc:token ID="w89a">»</tc:token>
+      <tc:token ID="w89b">the</tc:token>
+      <tc:token ID="w89c">National</tc:token>
+      <tc:token ID="w89d">Collegiate</tc:token>
+      <tc:token ID="w89e">Athletic</tc:token>
+      <tc:token ID="w89f">Association</tc:token>
+      <tc:token ID="w8a0">,</tc:token>
+      <tc:token ID="w8a1">the</tc:token>
+      <tc:token ID="w8a2">Kenneth</tc:token>
+      <tc:token ID="w8a3">Starr</tc:token>
+      <tc:token ID="w8a4">of</tc:token>
+      <tc:token ID="w8a5">sports</tc:token>
+      <tc:token ID="w8a6">«</tc:token>
+      <tc:token ID="w8a7">,</tc:token>
+      <tc:token ID="w8a8">NYT</tc:token>
+      <tc:token ID="w8a9">,</tc:token>
+      <tc:token ID="w8aa">1998</tc:token>
+      <tc:token ID="w8ab">)</tc:token>
+      <tc:token ID="w8ac">.</tc:token>
+      <tc:token ID="w8ad">Bergien</tc:token>
+      <tc:token ID="w8ae">,</tc:token>
+      <tc:token ID="w8af">Angelika</tc:token>
+      <tc:token ID="w8b0">(</tc:token>
+      <tc:token ID="w8b1">2013</tc:token>
+      <tc:token ID="w8b2">)</tc:token>
+      <tc:token ID="w8b3">:</tc:token>
+      <tc:token ID="w8b4">„</tc:token>
+      <tc:token ID="w8b5">Names</tc:token>
+      <tc:token ID="w8b6">as</tc:token>
+      <tc:token ID="w8b7">frames</tc:token>
+      <tc:token ID="w8b8">in</tc:token>
+      <tc:token ID="w8b9">current-day</tc:token>
+      <tc:token ID="w8ba">media</tc:token>
+      <tc:token ID="w8bb">discourse</tc:token>
+      <tc:token ID="w8bc">“</tc:token>
+      <tc:token ID="w8bd">,</tc:token>
+      <tc:token ID="w8be">in</tc:token>
+      <tc:token ID="w8bf">:</tc:token>
+      <tc:token ID="w8c0">Felecan</tc:token>
+      <tc:token ID="w8c1">,</tc:token>
+      <tc:token ID="w8c2">Oliviu</tc:token>
+      <tc:token ID="w8c3">(</tc:token>
+      <tc:token ID="w8c4">ed.</tc:token>
+      <tc:token ID="w8c5">)</tc:token>
+      <tc:token ID="w8c6">:</tc:token>
+      <tc:token ID="w8c7">Name</tc:token>
+      <tc:token ID="w8c8">and</tc:token>
+      <tc:token ID="w8c9">Naming</tc:token>
+      <tc:token ID="w8ca">.</tc:token>
+      <tc:token ID="w8cb">Proceedings</tc:token>
+      <tc:token ID="w8cc">of</tc:token>
+      <tc:token ID="w8cd">the</tc:token>
+      <tc:token ID="w8ce">second</tc:token>
+      <tc:token ID="w8cf">international</tc:token>
+      <tc:token ID="w8d0">conference</tc:token>
+      <tc:token ID="w8d1">on</tc:token>
+      <tc:token ID="w8d2">onomastics</tc:token>
+      <tc:token ID="w8d3">.</tc:token>
+      <tc:token ID="w8d4">Cluj-Napoca</tc:token>
+      <tc:token ID="w8d5">:</tc:token>
+      <tc:token ID="w8d6">Editura</tc:token>
+      <tc:token ID="w8d7">Mega</tc:token>
+      <tc:token ID="w8d8">2013</tc:token>
+      <tc:token ID="w8d9">:</tc:token>
+      <tc:token ID="w8da">19–27</tc:token>
+      <tc:token ID="w8db">.</tc:token>
+      <tc:token ID="w8dc">Bird</tc:token>
+      <tc:token ID="w8dd">,</tc:token>
+      <tc:token ID="w8de">Steven</tc:token>
+      <tc:token ID="w8df">/</tc:token>
+      <tc:token ID="w8e0">Loper</tc:token>
+      <tc:token ID="w8e1">,</tc:token>
+      <tc:token ID="w8e2">Edward</tc:token>
+      <tc:token ID="w8e3">/</tc:token>
+      <tc:token ID="w8e4">Klein</tc:token>
+      <tc:token ID="w8e5">,</tc:token>
+      <tc:token ID="w8e6">Ewan</tc:token>
+      <tc:token ID="w8e7">(</tc:token>
+      <tc:token ID="w8e8">2009</tc:token>
+      <tc:token ID="w8e9">)</tc:token>
+      <tc:token ID="w8ea">:</tc:token>
+      <tc:token ID="w8eb">Natural</tc:token>
+      <tc:token ID="w8ec">Language</tc:token>
+      <tc:token ID="w8ed">Processing</tc:token>
+      <tc:token ID="w8ee">with</tc:token>
+      <tc:token ID="w8ef">Python</tc:token>
+      <tc:token ID="w8f0">.</tc:token>
+      <tc:token ID="w8f1">O’</tc:token>
+      <tc:token ID="w8f2">Reilly</tc:token>
+      <tc:token ID="w8f3">Media</tc:token>
+      <tc:token ID="w8f4">Inc.</tc:token>
+      <tc:token ID="w8f5">Faruqui</tc:token>
+      <tc:token ID="w8f6">,</tc:token>
+      <tc:token ID="w8f7">Manaal</tc:token>
+      <tc:token ID="w8f8">/</tc:token>
+      <tc:token ID="w8f9">Pado</tc:token>
+      <tc:token ID="w8fa">,</tc:token>
+      <tc:token ID="w8fb">Sebastian</tc:token>
+      <tc:token ID="w8fc">(</tc:token>
+      <tc:token ID="w8fd">2010</tc:token>
+      <tc:token ID="w8fe">)</tc:token>
+      <tc:token ID="w8ff">:</tc:token>
+      <tc:token ID="w900">„</tc:token>
+      <tc:token ID="w901">Training</tc:token>
+      <tc:token ID="w902">and</tc:token>
+      <tc:token ID="w903">Evaluating</tc:token>
+      <tc:token ID="w904">a</tc:token>
+      <tc:token ID="w905">German</tc:token>
+      <tc:token ID="w906">Named</tc:token>
+      <tc:token ID="w907">Entity</tc:token>
+      <tc:token ID="w908">Recognizer</tc:token>
+      <tc:token ID="w909">with</tc:token>
+      <tc:token ID="w90a">Semantic</tc:token>
+      <tc:token ID="w90b">Generalization</tc:token>
+      <tc:token ID="w90c">“</tc:token>
+      <tc:token ID="w90d">,</tc:token>
+      <tc:token ID="w90e">in</tc:token>
+      <tc:token ID="w90f">:</tc:token>
+      <tc:token ID="w910">Proceedings</tc:token>
+      <tc:token ID="w911">of</tc:token>
+      <tc:token ID="w912">Konvens</tc:token>
+      <tc:token ID="w913">2010</tc:token>
+      <tc:token ID="w914">.</tc:token>
+      <tc:token ID="w915">Fischer</tc:token>
+      <tc:token ID="w916">,</tc:token>
+      <tc:token ID="w917">Frank</tc:token>
+      <tc:token ID="w918">/</tc:token>
+      <tc:token ID="w919">Wälzholz</tc:token>
+      <tc:token ID="w91a">,</tc:token>
+      <tc:token ID="w91b">Joseph</tc:token>
+      <tc:token ID="w91c">(</tc:token>
+      <tc:token ID="w91d">2014</tc:token>
+      <tc:token ID="w91e">)</tc:token>
+      <tc:token ID="w91f">:</tc:token>
+      <tc:token ID="w920">„</tc:token>
+      <tc:token ID="w921">Jeder</tc:token>
+      <tc:token ID="w922">kann</tc:token>
+      <tc:token ID="w923">Napoleon</tc:token>
+      <tc:token ID="w924">sein</tc:token>
+      <tc:token ID="w925">:</tc:token>
+      <tc:token ID="w926">Vossianische</tc:token>
+      <tc:token ID="w927">Antonomasie</tc:token>
+      <tc:token ID="w928">:</tc:token>
+      <tc:token ID="w929">Eine</tc:token>
+      <tc:token ID="w92a">Stilkunde</tc:token>
+      <tc:token ID="w92b">“</tc:token>
+      <tc:token ID="w92c">,</tc:token>
+      <tc:token ID="w92d">in</tc:token>
+      <tc:token ID="w92e">:</tc:token>
+      <tc:token ID="w92f">Frankfurter</tc:token>
+      <tc:token ID="w930">Allgemeine</tc:token>
+      <tc:token ID="w931">Sonntagszeitung</tc:token>
+      <tc:token ID="w932">51</tc:token>
+      <tc:token ID="w933">(</tc:token>
+      <tc:token ID="w934">21.</tc:token>
+      <tc:token ID="w935">Dezember</tc:token>
+      <tc:token ID="w936">2014</tc:token>
+      <tc:token ID="w937">)</tc:token>
+      <tc:token ID="w938">:</tc:token>
+      <tc:token ID="w939">34</tc:token>
+      <tc:token ID="w93a">.</tc:token>
+      <tc:token ID="w93b">Holmqvist</tc:token>
+      <tc:token ID="w93c">Kenneth</tc:token>
+      <tc:token ID="w93d">/</tc:token>
+      <tc:token ID="w93e">Płuciennik</tc:token>
+      <tc:token ID="w93f">Jarosław</tc:token>
+      <tc:token ID="w940">(</tc:token>
+      <tc:token ID="w941">2010</tc:token>
+      <tc:token ID="w942">)</tc:token>
+      <tc:token ID="w943">:</tc:token>
+      <tc:token ID="w944">„</tc:token>
+      <tc:token ID="w945">Princess</tc:token>
+      <tc:token ID="w946">antonomasia</tc:token>
+      <tc:token ID="w947">and</tc:token>
+      <tc:token ID="w948">the</tc:token>
+      <tc:token ID="w949">truth</tc:token>
+      <tc:token ID="w94a">:</tc:token>
+      <tc:token ID="w94b">Two</tc:token>
+      <tc:token ID="w94c">types</tc:token>
+      <tc:token ID="w94d">of</tc:token>
+      <tc:token ID="w94e">metonymic</tc:token>
+      <tc:token ID="w94f">relations</tc:token>
+      <tc:token ID="w950">“</tc:token>
+      <tc:token ID="w951">,</tc:token>
+      <tc:token ID="w952">in</tc:token>
+      <tc:token ID="w953">:</tc:token>
+      <tc:token ID="w954">Burkhardt</tc:token>
+      <tc:token ID="w955">,</tc:token>
+      <tc:token ID="w956">Armin</tc:token>
+      <tc:token ID="w957">/</tc:token>
+      <tc:token ID="w958">Nerlich</tc:token>
+      <tc:token ID="w959">,</tc:token>
+      <tc:token ID="w95a">Brigitte</tc:token>
+      <tc:token ID="w95b">(</tc:token>
+      <tc:token ID="w95c">eds</tc:token>
+      <tc:token ID="w95d">.</tc:token>
+      <tc:token ID="w95e">)</tc:token>
+      <tc:token ID="w95f">:</tc:token>
+      <tc:token ID="w960">Tropical</tc:token>
+      <tc:token ID="w961">Truth(s</tc:token>
+      <tc:token ID="w962">)</tc:token>
+      <tc:token ID="w963">:</tc:token>
+      <tc:token ID="w964">The</tc:token>
+      <tc:token ID="w965">Epistemology</tc:token>
+      <tc:token ID="w966">of</tc:token>
+      <tc:token ID="w967">Metaphor</tc:token>
+      <tc:token ID="w968">and</tc:token>
+      <tc:token ID="w969">Other</tc:token>
+      <tc:token ID="w96a">Tropes</tc:token>
+      <tc:token ID="w96b">.</tc:token>
+      <tc:token ID="w96c">Berlin</tc:token>
+      <tc:token ID="w96d">/</tc:token>
+      <tc:token ID="w96e">New</tc:token>
+      <tc:token ID="w96f">York</tc:token>
+      <tc:token ID="w970">:</tc:token>
+      <tc:token ID="w971">De</tc:token>
+      <tc:token ID="w972">Gruyter</tc:token>
+      <tc:token ID="w973">373–381</tc:token>
+      <tc:token ID="w974">10.</tc:token>
+      <tc:token ID="w975">1515/9783110230215</tc:token>
+      <tc:token ID="w976">.</tc:token>
+      <tc:token ID="w977">Lakoff</tc:token>
+      <tc:token ID="w978">,</tc:token>
+      <tc:token ID="w979">George</tc:token>
+      <tc:token ID="w97a">(</tc:token>
+      <tc:token ID="w97b">1987</tc:token>
+      <tc:token ID="w97c">)</tc:token>
+      <tc:token ID="w97d">:</tc:token>
+      <tc:token ID="w97e">Women</tc:token>
+      <tc:token ID="w97f">,</tc:token>
+      <tc:token ID="w980">Fire</tc:token>
+      <tc:token ID="w981">,</tc:token>
+      <tc:token ID="w982">and</tc:token>
+      <tc:token ID="w983">Dangerous</tc:token>
+      <tc:token ID="w984">Things</tc:token>
+      <tc:token ID="w985">:</tc:token>
+      <tc:token ID="w986">What</tc:token>
+      <tc:token ID="w987">Categories</tc:token>
+      <tc:token ID="w988">Reveal</tc:token>
+      <tc:token ID="w989">about</tc:token>
+      <tc:token ID="w98a">the</tc:token>
+      <tc:token ID="w98b">Mind</tc:token>
+      <tc:token ID="w98c">.</tc:token>
+      <tc:token ID="w98d">Chicago</tc:token>
+      <tc:token ID="w98e">:</tc:token>
+      <tc:token ID="w98f">The</tc:token>
+      <tc:token ID="w990">University</tc:token>
+      <tc:token ID="w991">of</tc:token>
+      <tc:token ID="w992">Chicago</tc:token>
+      <tc:token ID="w993">Press</tc:token>
+      <tc:token ID="w994">.</tc:token>
+      <tc:token ID="w995">Lausberg</tc:token>
+      <tc:token ID="w996">,</tc:token>
+      <tc:token ID="w997">Heinrich</tc:token>
+      <tc:token ID="w998">(</tc:token>
+      <tc:token ID="w999">1960</tc:token>
+      <tc:token ID="w99a">)</tc:token>
+      <tc:token ID="w99b">:</tc:token>
+      <tc:token ID="w99c">Handbuch</tc:token>
+      <tc:token ID="w99d">der</tc:token>
+      <tc:token ID="w99e">literarischen</tc:token>
+      <tc:token ID="w99f">Rhetorik</tc:token>
+      <tc:token ID="w9a0">.</tc:token>
+      <tc:token ID="w9a1">Eine</tc:token>
+      <tc:token ID="w9a2">Grundlegung</tc:token>
+      <tc:token ID="w9a3">der</tc:token>
+      <tc:token ID="w9a4">Literaturwissenschaft</tc:token>
+      <tc:token ID="w9a5">2.</tc:token>
+      <tc:token ID="w9a6">München</tc:token>
+      <tc:token ID="w9a7">:</tc:token>
+      <tc:token ID="w9a8">Hueber</tc:token>
+      <tc:token ID="w9a9">.</tc:token>
+      <tc:token ID="w9aa">Sandhaus</tc:token>
+      <tc:token ID="w9ab">,</tc:token>
+      <tc:token ID="w9ac">Evan</tc:token>
+      <tc:token ID="w9ad">(</tc:token>
+      <tc:token ID="w9ae">2008</tc:token>
+      <tc:token ID="w9af">)</tc:token>
+      <tc:token ID="w9b0">:</tc:token>
+      <tc:token ID="w9b1">The</tc:token>
+      <tc:token ID="w9b2">New</tc:token>
+      <tc:token ID="w9b3">York</tc:token>
+      <tc:token ID="w9b4">Times</tc:token>
+      <tc:token ID="w9b5">Annotated</tc:token>
+      <tc:token ID="w9b6">Corpus</tc:token>
+      <tc:token ID="w9b7">LDC</tc:token>
+      <tc:token ID="w9b8">2008</tc:token>
+      <tc:token ID="w9b9">T</tc:token>
+      <tc:token ID="w9ba">19</tc:token>
+      <tc:token ID="w9bb">.</tc:token>
+      <tc:token ID="w9bc">DVD.</tc:token>
+      <tc:token ID="w9bd">Philadelphia</tc:token>
+      <tc:token ID="w9be">:</tc:token>
+      <tc:token ID="w9bf">Linguistic</tc:token>
+      <tc:token ID="w9c0">Data</tc:token>
+      <tc:token ID="w9c1">Consortium</tc:token>
+      <tc:token ID="w9c2">.</tc:token>
+      <tc:token ID="w9c3">Arbeitsrepositorium</tc:token>
+      <tc:token ID="w9c4">:</tc:token>
+      <tc:token ID="w9c5">Folien</tc:token>
+      <tc:token ID="w9c6">zum</tc:token>
+      <tc:token ID="w9c7">Vortrag</tc:token>
+      <tc:token ID="w9c8">:</tc:token>
+      <tc:token ID="w9c9">Bibliographie</tc:token>
+    </tc:tokens>
+    <tc:sentences xmlns:tc="http://www.dspin.de/data/textcorpus">
+      <tc:sentence tokenIDs="w1 w2 w3 w4 w5 w6 w7 w8 w9 wa wb wc wd we wf w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w1a w1b w1c w1d w1e w1f w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 w2a w2b w2c w2d" ID="s1"/>
+      <tc:sentence tokenIDs="w2e w2f w30 w31 w32 w33 w34 w35 w36 w37 w38 w39 w3a w3b w3c w3d w3e w3f w40 w41 w42 w43 w44 w45 w46 w47 w48 w49 w4a w4b w4c w4d w4e" ID="s2"/>
+      <tc:sentence tokenIDs="w4f w50 w51 w52 w53 w54 w55 w56 w57 w58 w59 w5a w5b w5c w5d w5e w5f w60 w61 w62 w63 w64 w65 w66 w67 w68 w69 w6a" ID="s3"/>
+      <tc:sentence tokenIDs="w6b w6c w6d w6e w6f w70 w71 w72 w73 w74 w75 w76 w77 w78 w79 w7a w7b w7c w7d w7e w7f w80 w81 w82 w83 w84 w85" ID="s4"/>
+      <tc:sentence tokenIDs="w86 w87 w88 w89 w8a w8b w8c w8d w8e w8f w90 w91 w92 w93 w94 w95 w96 w97 w98 w99 w9a w9b w9c w9d w9e w9f wa0 wa1 wa2 wa3 wa4" ID="s5"/>
+      <tc:sentence tokenIDs="wa5 wa6 wa7" ID="s6"/>
+      <tc:sentence tokenIDs="wa8 wa9 waa wab wac wad wae waf wb0 wb1 wb2 wb3 wb4 wb5 wb6 wb7 wb8 wb9 wba wbb wbc wbd wbe wbf" ID="s7"/>
+      <tc:sentence tokenIDs="wc0 wc1 wc2 wc3 wc4 wc5 wc6 wc7 wc8 wc9 wca wcb wcc wcd wce wcf wd0 wd1 wd2 wd3 wd4 wd5 wd6 wd7 wd8 wd9 wda wdb wdc wdd wde wdf we0 we1 we2 we3 we4 we5 we6 we7 we8 we9 wea web wec wed" ID="s8"/>
+      <tc:sentence tokenIDs="wee wef wf0 wf1 wf2 wf3 wf4 wf5 wf6 wf7 wf8 wf9 wfa wfb wfc wfd wfe wff w100 w101 w102 w103 w104 w105 w106 w107 w108 w109 w10a w10b w10c w10d w10e w10f w110" ID="s9"/>
+      <tc:sentence tokenIDs="w111 w112 w113 w114 w115 w116 w117 w118 w119 w11a w11b w11c w11d w11e w11f w120 w121 w122 w123 w124 w125 w126 w127 w128 w129 w12a w12b w12c w12d w12e w12f w130 w131 w132 w133 w134 w135 w136 w137 w138 w139" ID="sa"/>
+      <tc:sentence tokenIDs="w13a w13b w13c w13d w13e w13f w140 w141 w142 w143 w144 w145 w146 w147 w148 w149 w14a w14b w14c w14d w14e w14f w150 w151 w152 w153 w154 w155 w156 w157 w158 w159 w15a w15b w15c w15d w15e w15f w160 w161 w162 w163 w164 w165 w166 w167 w168 w169 w16a w16b w16c w16d w16e w16f" ID="sb"/>
+      <tc:sentence tokenIDs="w170 w171 w172 w173" ID="sc"/>
+      <tc:sentence tokenIDs="w174 w175 w176 w177 w178 w179 w17a w17b w17c w17d w17e w17f w180 w181 w182 w183 w184 w185" ID="sd"/>
+      <tc:sentence tokenIDs="w186 w187 w188 w189 w18a w18b w18c w18d w18e w18f w190 w191 w192 w193 w194 w195 w196 w197 w198 w199 w19a w19b w19c" ID="se"/>
+      <tc:sentence tokenIDs="w19d w19e w19f w1a0 w1a1 w1a2 w1a3 w1a4 w1a5 w1a6 w1a7 w1a8 w1a9 w1aa w1ab w1ac w1ad w1ae w1af w1b0 w1b1 w1b2 w1b3 w1b4 w1b5 w1b6 w1b7 w1b8 w1b9 w1ba" ID="sf"/>
+      <tc:sentence tokenIDs="w1bb w1bc w1bd w1be w1bf w1c0 w1c1 w1c2 w1c3 w1c4 w1c5 w1c6 w1c7 w1c8 w1c9 w1ca w1cb w1cc w1cd w1ce w1cf w1d0 w1d1 w1d2 w1d3 w1d4 w1d5 w1d6 w1d7" ID="s10"/>
+      <tc:sentence tokenIDs="w1d8 w1d9 w1da w1db w1dc w1dd w1de w1df w1e0 w1e1 w1e2 w1e3 w1e4" ID="s11"/>
+      <tc:sentence tokenIDs="w1e5 w1e6 w1e7 w1e8 w1e9 w1ea w1eb w1ec w1ed w1ee w1ef w1f0 w1f1 w1f2 w1f3 w1f4 w1f5 w1f6" ID="s12"/>
+      <tc:sentence tokenIDs="w1f7 w1f8 w1f9 w1fa w1fb w1fc w1fd w1fe w1ff w200 w201 w202 w203 w204 w205 w206 w207 w208 w209 w20a w20b w20c" ID="s13"/>
+      <tc:sentence tokenIDs="w20d w20e w20f w210 w211 w212 w213 w214 w215 w216 w217 w218 w219 w21a w21b w21c w21d w21e w21f w220 w221 w222 w223 w224 w225 w226 w227 w228 w229" ID="s14"/>
+      <tc:sentence tokenIDs="w22a w22b w22c w22d w22e w22f w230 w231 w232 w233 w234 w235 w236 w237 w238 w239 w23a" ID="s15"/>
+      <tc:sentence tokenIDs="w23b w23c w23d w23e w23f w240 w241 w242 w243 w244 w245 w246 w247 w248 w249 w24a w24b w24c w24d w24e" ID="s16"/>
+      <tc:sentence tokenIDs="w24f w250 w251 w252 w253 w254 w255 w256 w257 w258 w259 w25a w25b w25c w25d w25e w25f w260 w261 w262 w263 w264 w265 w266 w267 w268 w269" ID="s17"/>
+      <tc:sentence tokenIDs="w26a w26b w26c w26d" ID="s18"/>
+      <tc:sentence tokenIDs="w26e w26f w270 w271" ID="s19"/>
+      <tc:sentence tokenIDs="w272 w273 w274 w275 w276 w277 w278 w279 w27a w27b w27c" ID="s1a"/>
+      <tc:sentence tokenIDs="w27d w27e w27f w280 w281 w282 w283 w284 w285 w286 w287 w288 w289 w28a w28b" ID="s1b"/>
+      <tc:sentence tokenIDs="w28c w28d w28e w28f w290 w291 w292 w293 w294 w295 w296 w297 w298" ID="s1c"/>
+      <tc:sentence tokenIDs="w299 w29a w29b w29c w29d w29e w29f w2a0 w2a1 w2a2 w2a3 w2a4 w2a5 w2a6 w2a7 w2a8 w2a9 w2aa" ID="s1d"/>
+      <tc:sentence tokenIDs="w2ab w2ac w2ad w2ae w2af w2b0 w2b1 w2b2 w2b3" ID="s1e"/>
+      <tc:sentence tokenIDs="w2b4 w2b5 w2b6 w2b7 w2b8 w2b9 w2ba w2bb w2bc w2bd w2be w2bf w2c0 w2c1 w2c2 w2c3 w2c4 w2c5 w2c6 w2c7 w2c8 w2c9 w2ca w2cb w2cc w2cd w2ce w2cf w2d0 w2d1 w2d2 w2d3 w2d4 w2d5 w2d6 w2d7 w2d8 w2d9 w2da w2db w2dc w2dd w2de w2df w2e0 w2e1 w2e2 w2e3 w2e4 w2e5 w2e6 w2e7 w2e8 w2e9 w2ea w2eb w2ec w2ed w2ee w2ef w2f0 w2f1 w2f2 w2f3 w2f4" ID="s1f"/>
+      <tc:sentence tokenIDs="w2f5 w2f6 w2f7 w2f8 w2f9 w2fa w2fb w2fc w2fd w2fe w2ff w300 w301 w302 w303 w304 w305 w306 w307 w308 w309 w30a w30b w30c" ID="s20"/>
+      <tc:sentence tokenIDs="w30d w30e w30f w310 w311 w312 w313 w314 w315 w316 w317" ID="s21"/>
+      <tc:sentence tokenIDs="w318 w319 w31a w31b w31c w31d w31e w31f w320 w321 w322" ID="s22"/>
+      <tc:sentence tokenIDs="w323 w324 w325 w326 w327 w328 w329 w32a w32b w32c w32d w32e w32f w330 w331 w332 w333" ID="s23"/>
+      <tc:sentence tokenIDs="w334 w335 w336 w337 w338 w339 w33a w33b w33c w33d w33e w33f w340 w341 w342 w343 w344 w345 w346 w347 w348" ID="s24"/>
+      <tc:sentence tokenIDs="w349 w34a w34b w34c w34d w34e w34f w350 w351 w352 w353 w354 w355" ID="s25"/>
+      <tc:sentence tokenIDs="w356 w357 w358 w359 w35a w35b w35c w35d w35e w35f w360 w361 w362 w363 w364 w365 w366 w367 w368 w369 w36a w36b w36c w36d w36e w36f w370 w371 w372 w373 w374 w375 w376 w377 w378 w379 w37a w37b w37c w37d w37e w37f w380 w381 w382 w383 w384 w385" ID="s26"/>
+      <tc:sentence tokenIDs="w386 w387 w388 w389 w38a w38b w38c w38d w38e w38f w390 w391 w392 w393 w394 w395 w396 w397 w398 w399 w39a w39b w39c w39d w39e w39f w3a0 w3a1 w3a2 w3a3 w3a4 w3a5 w3a6 w3a7 w3a8 w3a9 w3aa w3ab w3ac w3ad w3ae w3af w3b0 w3b1 w3b2" ID="s27"/>
+      <tc:sentence tokenIDs="w3b3 w3b4 w3b5 w3b6 w3b7 w3b8 w3b9 w3ba w3bb w3bc w3bd w3be w3bf w3c0 w3c1 w3c2 w3c3 w3c4 w3c5 w3c6 w3c7 w3c8 w3c9 w3ca" ID="s28"/>
+      <tc:sentence tokenIDs="w3cb w3cc w3cd w3ce w3cf w3d0 w3d1" ID="s29"/>
+      <tc:sentence tokenIDs="w3d2 w3d3 w3d4 w3d5 w3d6 w3d7 w3d8 w3d9 w3da w3db w3dc w3dd" ID="s2a"/>
+      <tc:sentence tokenIDs="w3de w3df w3e0 w3e1 w3e2 w3e3 w3e4 w3e5 w3e6 w3e7 w3e8 w3e9 w3ea w3eb w3ec" ID="s2b"/>
+      <tc:sentence tokenIDs="w3ed w3ee w3ef w3f0 w3f1 w3f2 w3f3 w3f4 w3f5 w3f6 w3f7 w3f8 w3f9 w3fa w3fb w3fc w3fd w3fe w3ff w400 w401" ID="s2c"/>
+      <tc:sentence tokenIDs="w402 w403 w404 w405 w406 w407 w408 w409 w40a w40b w40c w40d w40e w40f w410 w411 w412 w413 w414 w415" ID="s2d"/>
+      <tc:sentence tokenIDs="w416 w417 w418 w419 w41a w41b w41c w41d w41e w41f w420 w421 w422 w423 w424 w425 w426 w427 w428 w429" ID="s2e"/>
+      <tc:sentence tokenIDs="w42a w42b w42c w42d w42e w42f w430 w431 w432 w433 w434 w435 w436 w437 w438 w439 w43a w43b w43c w43d w43e w43f w440" ID="s2f"/>
+      <tc:sentence tokenIDs="w441 w442 w443 w444 w445 w446 w447 w448 w449 w44a w44b w44c w44d w44e w44f w450" ID="s30"/>
+      <tc:sentence tokenIDs="w451 w452 w453 w454 w455 w456 w457 w458 w459 w45a w45b w45c w45d w45e w45f w460 w461 w462 w463 w464 w465 w466 w467 w468 w469 w46a w46b w46c w46d w46e w46f w470 w471 w472 w473 w474 w475 w476 w477 w478 w479" ID="s31"/>
+      <tc:sentence tokenIDs="w47a w47b w47c w47d w47e w47f w480 w481 w482 w483 w484 w485 w486 w487 w488" ID="s32"/>
+      <tc:sentence tokenIDs="w489 w48a w48b w48c w48d w48e w48f w490 w491 w492 w493 w494 w495 w496 w497 w498 w499 w49a w49b w49c w49d" ID="s33"/>
+      <tc:sentence tokenIDs="w49e w49f w4a0" ID="s34"/>
+      <tc:sentence tokenIDs="w4a1 w4a2 w4a3 w4a4 w4a5 w4a6 w4a7 w4a8 w4a9 w4aa w4ab w4ac w4ad w4ae w4af w4b0 w4b1 w4b2 w4b3 w4b4 w4b5 w4b6 w4b7 w4b8 w4b9 w4ba w4bb w4bc w4bd w4be w4bf w4c0 w4c1 w4c2 w4c3 w4c4 w4c5 w4c6 w4c7 w4c8 w4c9 w4ca w4cb w4cc w4cd" ID="s35"/>
+      <tc:sentence tokenIDs="w4ce w4cf w4d0 w4d1 w4d2 w4d3 w4d4 w4d5 w4d6 w4d7" ID="s36"/>
+      <tc:sentence tokenIDs="w4d8 w4d9 w4da w4db w4dc w4dd w4de" ID="s37"/>
+      <tc:sentence tokenIDs="w4df w4e0 w4e1 w4e2 w4e3 w4e4 w4e5 w4e6 w4e7 w4e8 w4e9 w4ea w4eb w4ec w4ed w4ee w4ef w4f0 w4f1 w4f2 w4f3 w4f4 w4f5" ID="s38"/>
+      <tc:sentence tokenIDs="w4f6 w4f7 w4f8 w4f9 w4fa w4fb w4fc w4fd w4fe w4ff w500 w501 w502 w503 w504 w505 w506 w507 w508 w509 w50a w50b w50c w50d w50e w50f w510 w511 w512 w513 w514 w515" ID="s39"/>
+      <tc:sentence tokenIDs="w516 w517 w518 w519 w51a w51b w51c w51d w51e w51f w520 w521 w522 w523 w524 w525 w526 w527 w528 w529 w52a w52b w52c w52d w52e w52f" ID="s3a"/>
+      <tc:sentence tokenIDs="w530 w531 w532 w533 w534 w535 w536 w537 w538 w539 w53a w53b w53c w53d w53e w53f w540 w541 w542 w543 w544 w545 w546 w547 w548 w549 w54a w54b w54c w54d w54e w54f" ID="s3b"/>
+      <tc:sentence tokenIDs="w550 w551 w552 w553 w554 w555 w556 w557 w558 w559 w55a w55b w55c w55d w55e w55f w560 w561 w562 w563 w564 w565 w566 w567 w568 w569 w56a w56b w56c w56d" ID="s3c"/>
+      <tc:sentence tokenIDs="w56e w56f w570 w571 w572 w573 w574 w575 w576 w577 w578 w579 w57a w57b w57c w57d w57e w57f w580 w581 w582 w583 w584 w585 w586 w587 w588 w589 w58a w58b w58c w58d w58e w58f" ID="s3d"/>
+      <tc:sentence tokenIDs="w590 w591 w592 w593 w594 w595 w596 w597 w598 w599 w59a w59b w59c w59d w59e w59f w5a0 w5a1 w5a2 w5a3 w5a4 w5a5 w5a6" ID="s3e"/>
+      <tc:sentence tokenIDs="w5a7 w5a8 w5a9 w5aa w5ab w5ac w5ad w5ae w5af w5b0 w5b1 w5b2 w5b3 w5b4 w5b5 w5b6 w5b7 w5b8 w5b9 w5ba w5bb w5bc w5bd w5be w5bf w5c0 w5c1 w5c2 w5c3 w5c4 w5c5 w5c6 w5c7 w5c8 w5c9 w5ca w5cb" ID="s3f"/>
+      <tc:sentence tokenIDs="w5cc w5cd w5ce w5cf w5d0 w5d1 w5d2 w5d3 w5d4 w5d5 w5d6 w5d7 w5d8 w5d9 w5da w5db w5dc w5dd w5de w5df" ID="s40"/>
+      <tc:sentence tokenIDs="w5e0 w5e1 w5e2 w5e3 w5e4 w5e5 w5e6 w5e7 w5e8 w5e9 w5ea w5eb w5ec w5ed w5ee w5ef w5f0 w5f1 w5f2 w5f3 w5f4 w5f5 w5f6 w5f7 w5f8 w5f9 w5fa" ID="s41"/>
+      <tc:sentence tokenIDs="w5fb w5fc w5fd w5fe w5ff w600 w601 w602 w603 w604" ID="s42"/>
+      <tc:sentence tokenIDs="w605 w606 w607 w608 w609 w60a w60b w60c w60d w60e w60f w610 w611 w612 w613 w614 w615 w616 w617 w618 w619 w61a w61b w61c w61d w61e w61f w620 w621" ID="s43"/>
+      <tc:sentence tokenIDs="w622 w623 w624 w625 w626 w627 w628 w629 w62a w62b w62c w62d w62e w62f w630 w631 w632 w633 w634 w635 w636 w637" ID="s44"/>
+      <tc:sentence tokenIDs="w638 w639 w63a w63b w63c w63d w63e w63f w640 w641 w642 w643 w644 w645 w646 w647 w648 w649 w64a w64b w64c w64d w64e" ID="s45"/>
+      <tc:sentence tokenIDs="w64f w650 w651 w652 w653 w654 w655 w656 w657 w658 w659 w65a w65b w65c w65d w65e w65f w660 w661 w662 w663 w664" ID="s46"/>
+      <tc:sentence tokenIDs="w665 w666 w667 w668 w669 w66a w66b w66c w66d w66e w66f w670 w671 w672 w673" ID="s47"/>
+      <tc:sentence tokenIDs="w674 w675 w676 w677 w678 w679 w67a w67b w67c w67d w67e w67f w680 w681 w682 w683 w684 w685 w686 w687 w688 w689 w68a w68b w68c w68d w68e w68f w690 w691 w692 w693 w694 w695 w696 w697 w698 w699 w69a w69b w69c w69d w69e w69f w6a0 w6a1 w6a2 w6a3 w6a4 w6a5 w6a6 w6a7 w6a8 w6a9 w6aa w6ab w6ac w6ad w6ae w6af w6b0 w6b1 w6b2 w6b3 w6b4 w6b5 w6b6 w6b7 w6b8 w6b9 w6ba w6bb w6bc w6bd w6be w6bf w6c0 w6c1 w6c2 w6c3 w6c4 w6c5 w6c6 w6c7 w6c8 w6c9 w6ca w6cb w6cc w6cd w6ce w6cf w6d0 w6d1" ID="s48"/>
+      <tc:sentence tokenIDs="w6d2 w6d3 w6d4 w6d5 w6d6 w6d7 w6d8 w6d9 w6da w6db w6dc w6dd w6de w6df w6e0 w6e1 w6e2 w6e3 w6e4 w6e5 w6e6 w6e7 w6e8 w6e9 w6ea w6eb w6ec w6ed w6ee w6ef w6f0 w6f1 w6f2 w6f3 w6f4 w6f5 w6f6 w6f7 w6f8 w6f9 w6fa w6fb w6fc w6fd w6fe w6ff w700 w701 w702 w703 w704 w705 w706 w707 w708 w709 w70a w70b w70c w70d w70e w70f w710 w711 w712 w713 w714 w715 w716 w717 w718 w719 w71a w71b w71c w71d w71e w71f w720 w721 w722 w723 w724 w725 w726 w727 w728 w729 w72a w72b w72c w72d w72e w72f w730 w731 w732 w733 w734 w735 w736 w737 w738 w739 w73a w73b w73c w73d w73e w73f w740 w741 w742 w743 w744 w745 w746 w747 w748 w749 w74a w74b w74c w74d w74e w74f w750 w751 w752 w753 w754 w755 w756 w757 w758 w759 w75a w75b w75c w75d w75e w75f w760 w761 w762 w763 w764 w765 w766 w767 w768 w769 w76a w76b w76c w76d w76e w76f w770 w771 w772 w773 w774 w775 w776 w777 w778 w779 w77a w77b w77c w77d w77e w77f w780 w781 w782 w783 w784 w785 w786 w787 w788 w789 w78a w78b w78c w78d w78e w78f w790 w791 w792 w793 w794 w795 w796 w797 w798 w799 w79a w79b w79c w79d w79e w79f w7a0 w7a1 w7a2 w7a3 w7a4 w7a5 w7a6 w7a7 w7a8 w7a9 w7aa w7ab w7ac w7ad w7ae w7af w7b0 w7b1 w7b2 w7b3 w7b4 w7b5 w7b6 w7b7 w7b8 w7b9 w7ba w7bb w7bc w7bd w7be w7bf w7c0 w7c1 w7c2 w7c3 w7c4 w7c5 w7c6 w7c7 w7c8 w7c9 w7ca w7cb w7cc w7cd w7ce w7cf w7d0 w7d1 w7d2 w7d3 w7d4 w7d5 w7d6 w7d7 w7d8 w7d9 w7da w7db w7dc w7dd w7de w7df w7e0 w7e1 w7e2 w7e3 w7e4 w7e5 w7e6 w7e7 w7e8 w7e9 w7ea w7eb w7ec w7ed w7ee w7ef w7f0 w7f1 w7f2 w7f3 w7f4 w7f5 w7f6 w7f7 w7f8 w7f9 w7fa w7fb w7fc w7fd w7fe w7ff w800 w801 w802 w803 w804 w805 w806 w807 w808 w809 w80a w80b w80c w80d w80e" ID="s49"/>
+      <tc:sentence tokenIDs="w80f w810 w811 w812 w813 w814 w815 w816 w817 w818 w819 w81a w81b w81c w81d w81e w81f w820 w821 w822 w823 w824 w825 w826 w827 w828 w829 w82a w82b w82c w82d w82e w82f w830 w831" ID="s4a"/>
+      <tc:sentence tokenIDs="w832 w833 w834 w835 w836 w837 w838 w839 w83a w83b w83c w83d w83e w83f w840 w841 w842 w843 w844 w845 w846 w847 w848 w849 w84a w84b w84c w84d w84e w84f w850 w851 w852 w853 w854 w855 w856 w857 w858 w859 w85a w85b w85c w85d w85e w85f w860 w861 w862 w863 w864 w865 w866 w867 w868 w869 w86a w86b w86c w86d w86e w86f w870 w871 w872 w873 w874 w875 w876 w877 w878 w879 w87a w87b w87c w87d w87e w87f w880 w881 w882 w883 w884 w885 w886 w887 w888 w889 w88a w88b w88c w88d w88e w88f w890 w891 w892 w893 w894 w895 w896 w897 w898 w899 w89a w89b w89c w89d w89e w89f w8a0 w8a1 w8a2 w8a3 w8a4 w8a5 w8a6 w8a7 w8a8 w8a9 w8aa w8ab w8ac" ID="s4b"/>
+      <tc:sentence tokenIDs="w8ad w8ae w8af w8b0 w8b1 w8b2 w8b3" ID="s4c"/>
+      <tc:sentence tokenIDs="w8b4 w8b5 w8b6 w8b7 w8b8 w8b9 w8ba w8bb w8bc w8bd w8be w8bf w8c0 w8c1 w8c2 w8c3 w8c4 w8c5 w8c6 w8c7 w8c8 w8c9 w8ca" ID="s4d"/>
+      <tc:sentence tokenIDs="w8cb w8cc w8cd w8ce w8cf w8d0 w8d1 w8d2 w8d3" ID="s4e"/>
+      <tc:sentence tokenIDs="w8d4 w8d5 w8d6 w8d7 w8d8 w8d9" ID="s4f"/>
+      <tc:sentence tokenIDs="w8da w8db" ID="s50"/>
+      <tc:sentence tokenIDs="w8dc w8dd w8de w8df w8e0 w8e1 w8e2 w8e3 w8e4 w8e5 w8e6 w8e7 w8e8 w8e9 w8ea w8eb w8ec w8ed w8ee w8ef w8f0" ID="s51"/>
+      <tc:sentence tokenIDs="w8f1 w8f2 w8f3 w8f4 w8f5 w8f6 w8f7 w8f8 w8f9 w8fa w8fb w8fc w8fd w8fe w8ff w900 w901 w902 w903 w904 w905 w906 w907 w908 w909 w90a w90b w90c w90d w90e w90f w910 w911 w912 w913 w914" ID="s52"/>
+      <tc:sentence tokenIDs="w915 w916 w917 w918 w919 w91a w91b w91c w91d w91e w91f" ID="s53"/>
+      <tc:sentence tokenIDs="w920 w921 w922 w923 w924 w925" ID="s54"/>
+      <tc:sentence tokenIDs="w926 w927 w928 w929 w92a w92b w92c w92d w92e w92f w930 w931 w932 w933 w934 w935 w936 w937 w938 w939 w93a w93b w93c w93d w93e w93f w940 w941 w942 w943" ID="s55"/>
+      <tc:sentence tokenIDs="w944 w945 w946 w947 w948 w949 w94a w94b w94c w94d w94e w94f w950 w951 w952 w953 w954 w955 w956 w957 w958 w959 w95a w95b w95c w95d w95e w95f w960 w961 w962 w963" ID="s56"/>
+      <tc:sentence tokenIDs="w964 w965 w966 w967 w968 w969 w96a w96b" ID="s57"/>
+      <tc:sentence tokenIDs="w96c w96d w96e w96f w970 w971 w972 w973 w974 w975 w976" ID="s58"/>
+      <tc:sentence tokenIDs="w977 w978 w979 w97a w97b w97c w97d w97e w97f w980 w981 w982 w983 w984 w985 w986 w987 w988 w989 w98a w98b w98c" ID="s59"/>
+      <tc:sentence tokenIDs="w98d w98e w98f w990 w991 w992 w993 w994" ID="s5a"/>
+      <tc:sentence tokenIDs="w995 w996 w997 w998 w999 w99a w99b w99c w99d w99e w99f w9a0" ID="s5b"/>
+      <tc:sentence tokenIDs="w9a1 w9a2 w9a3 w9a4 w9a5 w9a6 w9a7 w9a8 w9a9" ID="s5c"/>
+      <tc:sentence tokenIDs="w9aa w9ab w9ac w9ad w9ae w9af w9b0 w9b1 w9b2 w9b3 w9b4 w9b5 w9b6 w9b7 w9b8 w9b9 w9ba w9bb" ID="s5d"/>
+      <tc:sentence tokenIDs="w9bc w9bd w9be" ID="s5e"/>
+      <tc:sentence tokenIDs="w9bf w9c0 w9c1 w9c2" ID="s5f"/>
+      <tc:sentence tokenIDs="w9c3 w9c4 w9c5 w9c6 w9c7 w9c8 w9c9" ID="s60"/>
+    </tc:sentences>
+    <tc:namedEntities xmlns:tc="http://www.dspin.de/data/textcorpus" type="tuebadz8">
+      <tc:entity class="PER" tokenIDs="w2 w3 w4"/>
+      <tc:entity class="PER" tokenIDs="w7"/>
+      <tc:entity class="ORG" tokenIDs="wf"/>
+      <tc:entity class="PER" tokenIDs="w14 w15"/>
+      <tc:entity class="PER" tokenIDs="w19 w1a"/>
+      <tc:entity class="PER" tokenIDs="w20"/>
+      <tc:entity class="PER" tokenIDs="w37"/>
+      <tc:entity class="PER" tokenIDs="w40"/>
+      <tc:entity class="PER" tokenIDs="w4b"/>
+      <tc:entity class="PER" tokenIDs="w53"/>
+      <tc:entity class="PER" tokenIDs="w67 w68"/>
+      <tc:entity class="PER" tokenIDs="w6e"/>
+      <tc:entity class="PER" tokenIDs="w90"/>
+      <tc:entity class="PER" tokenIDs="wa9"/>
+      <tc:entity class="PER" tokenIDs="wd3"/>
+      <tc:entity class="PER" tokenIDs="wdb"/>
+      <tc:entity class="PER" tokenIDs="wf6"/>
+      <tc:entity class="OTH" tokenIDs="w121 w122"/>
+      <tc:entity class="OTH" tokenIDs="w126 w127"/>
+      <tc:entity class="PER" tokenIDs="w135"/>
+      <tc:entity class="PER" tokenIDs="w13f"/>
+      <tc:entity class="PER" tokenIDs="w159"/>
+      <tc:entity class="PER" tokenIDs="w160"/>
+      <tc:entity class="PER" tokenIDs="w163"/>
+      <tc:entity class="PER" tokenIDs="w1c5"/>
+      <tc:entity class="ORG" tokenIDs="w1c9 w1ca w1cb"/>
+      <tc:entity class="ORG" tokenIDs="w1d2 w1d3"/>
+      <tc:entity class="ORG" tokenIDs="w1fb w1fc"/>
+      <tc:entity class="ORG" tokenIDs="w1ff w200"/>
+      <tc:entity class="OTH" tokenIDs="w216 w217 w218 w219"/>
+      <tc:entity class="OTH" tokenIDs="w22c w22d"/>
+      <tc:entity class="ORG" tokenIDs="w283"/>
+      <tc:entity class="PER" tokenIDs="w2b6"/>
+      <tc:entity class="GPE" tokenIDs="w2c7"/>
+      <tc:entity class="PER" tokenIDs="w2dd"/>
+      <tc:entity class="PER" tokenIDs="w2f6"/>
+      <tc:entity class="PER" tokenIDs="w31f w320"/>
+      <tc:entity class="PER" tokenIDs="w349 w34a"/>
+      <tc:entity class="OTH" tokenIDs="w34c"/>
+      <tc:entity class="PER" tokenIDs="w34f"/>
+      <tc:entity class="OTH" tokenIDs="w351 w352"/>
+      <tc:entity class="PER" tokenIDs="w369"/>
+      <tc:entity class="PER" tokenIDs="w376 w377"/>
+      <tc:entity class="PER" tokenIDs="w379"/>
+      <tc:entity class="PER" tokenIDs="w395"/>
+      <tc:entity class="ORG" tokenIDs="w3be w3bf"/>
+      <tc:entity class="ORG" tokenIDs="w3e8 w3e9 w3ea"/>
+      <tc:entity class="ORG" tokenIDs="w3f3 w3f4"/>
+      <tc:entity class="PER" tokenIDs="w3fc"/>
+      <tc:entity class="PER" tokenIDs="w3fe"/>
+      <tc:entity class="PER" tokenIDs="w43d"/>
+      <tc:entity class="PER" tokenIDs="w45e"/>
+      <tc:entity class="PER" tokenIDs="w4b4 w4b5"/>
+      <tc:entity class="OTH" tokenIDs="w4be w4bf w4c0"/>
+      <tc:entity class="OTH" tokenIDs="w4c6"/>
+      <tc:entity class="OTH" tokenIDs="w4c9 w4ca w4cb"/>
+      <tc:entity class="PER" tokenIDs="w4ef w4f0"/>
+      <tc:entity class="PER" tokenIDs="w4f2 w4f3"/>
+      <tc:entity class="PER" tokenIDs="w4fc w4fd"/>
+      <tc:entity class="PER" tokenIDs="w50a"/>
+      <tc:entity class="PER" tokenIDs="w51b w51c"/>
+      <tc:entity class="GPE" tokenIDs="w51e"/>
+      <tc:entity class="PER" tokenIDs="w536 w537"/>
+      <tc:entity class="PER" tokenIDs="w53b w53c"/>
+      <tc:entity class="PER" tokenIDs="w54b"/>
+      <tc:entity class="PER" tokenIDs="w552 w553"/>
+      <tc:entity class="PER" tokenIDs="w55a"/>
+      <tc:entity class="PER" tokenIDs="w56f w570"/>
+      <tc:entity class="PER" tokenIDs="w586 w587"/>
+      <tc:entity class="PER" tokenIDs="w58a w58b"/>
+      <tc:entity class="PER" tokenIDs="w598"/>
+      <tc:entity class="PER" tokenIDs="w5b1 w5b2"/>
+      <tc:entity class="PER" tokenIDs="w5b8"/>
+      <tc:entity class="PER" tokenIDs="w5bd"/>
+      <tc:entity class="GPE" tokenIDs="w5bf"/>
+      <tc:entity class="PER" tokenIDs="w5cd"/>
+      <tc:entity class="PER" tokenIDs="w645"/>
+      <tc:entity class="ORG" tokenIDs="w647 w648"/>
+      <tc:entity class="PER" tokenIDs="w659 w65a"/>
+      <tc:entity class="PER" tokenIDs="w676"/>
+      <tc:entity class="ORG" tokenIDs="w686"/>
+      <tc:entity class="GPE" tokenIDs="w69b w69c"/>
+      <tc:entity class="PER" tokenIDs="w6db w6dc"/>
+      <tc:entity class="OTH" tokenIDs="w6de w6df w6e0 w6e1 w6e2 w6e3 w6e4 w6e5 w6e6 w6e7 w6e8 w6e9 w6ea w6eb w6ec w6ed w6ee w6ef w6f0 w6f1 w6f2 w6f3 w6f4 w6f5 w6f6 w6f7 w6f8 w6f9 w6fa w6fb w6fc w6fd"/>
+      <tc:entity class="PER" tokenIDs="w705 w706"/>
+      <tc:entity class="PER" tokenIDs="w70e w70f"/>
+      <tc:entity class="PER" tokenIDs="w712 w713"/>
+      <tc:entity class="PER" tokenIDs="w71e w71f"/>
+      <tc:entity class="PER" tokenIDs="w722 w723"/>
+      <tc:entity class="PER" tokenIDs="w72c w72d"/>
+      <tc:entity class="PER" tokenIDs="w730 w731"/>
+      <tc:entity class="PER" tokenIDs="w734 w735"/>
+      <tc:entity class="PER" tokenIDs="w739"/>
+      <tc:entity class="PER" tokenIDs="w741"/>
+      <tc:entity class="OTH" tokenIDs="w746 w747 w748 w749 w74a w74b w74c"/>
+      <tc:entity class="PER" tokenIDs="w756 w757"/>
+      <tc:entity class="PER" tokenIDs="w759 w75a"/>
+      <tc:entity class="PER" tokenIDs="w75c w75d"/>
+      <tc:entity class="PER" tokenIDs="w75f w760"/>
+      <tc:entity class="PER" tokenIDs="w762 w763"/>
+      <tc:entity class="PER" tokenIDs="w765 w766"/>
+      <tc:entity class="PER" tokenIDs="w768 w769"/>
+      <tc:entity class="PER" tokenIDs="w76b w76c"/>
+      <tc:entity class="PER" tokenIDs="w76e w76f"/>
+      <tc:entity class="PER" tokenIDs="w772 w773"/>
+      <tc:entity class="PER" tokenIDs="w77b w77c"/>
+      <tc:entity class="GPE" tokenIDs="w77e"/>
+      <tc:entity class="OTH" tokenIDs="w784 w785 w786 w787"/>
+      <tc:entity class="PER" tokenIDs="w78d w78e"/>
+      <tc:entity class="GPE" tokenIDs="w790"/>
+      <tc:entity class="PER" tokenIDs="w797 w798"/>
+      <tc:entity class="PER" tokenIDs="w79e w79f"/>
+      <tc:entity class="GPE" tokenIDs="w7a1"/>
+      <tc:entity class="OTH" tokenIDs="w7b3 w7b4 w7b5 w7b6 w7b7 w7b8 w7b9 w7ba"/>
+      <tc:entity class="ORG" tokenIDs="w7bd"/>
+      <tc:entity class="PER" tokenIDs="w7c5 w7c6"/>
+      <tc:entity class="ORG" tokenIDs="w7cc"/>
+      <tc:entity class="PER" tokenIDs="w7d3 w7d4"/>
+      <tc:entity class="PER" tokenIDs="w7d9 w7da"/>
+      <tc:entity class="ORG" tokenIDs="w7dc w7dd"/>
+      <tc:entity class="PER" tokenIDs="w7e5"/>
+      <tc:entity class="PER" tokenIDs="w7e7"/>
+      <tc:entity class="PER" tokenIDs="w7eb w7ec"/>
+      <tc:entity class="PER" tokenIDs="w7f7 w7f8"/>
+      <tc:entity class="PER" tokenIDs="w7fc w7fd"/>
+      <tc:entity class="PER" tokenIDs="w814"/>
+      <tc:entity class="PER" tokenIDs="w816"/>
+      <tc:entity class="OTH" tokenIDs="w818"/>
+      <tc:entity class="PER" tokenIDs="w81a"/>
+      <tc:entity class="ORG" tokenIDs="w81c"/>
+      <tc:entity class="PER" tokenIDs="w81e"/>
+      <tc:entity class="PER" tokenIDs="w820"/>
+      <tc:entity class="PER" tokenIDs="w822"/>
+      <tc:entity class="PER" tokenIDs="w824"/>
+      <tc:entity class="ORG" tokenIDs="w835 w836"/>
+      <tc:entity class="PER" tokenIDs="w838"/>
+      <tc:entity class="OTH" tokenIDs="w83a"/>
+      <tc:entity class="ORG" tokenIDs="w83c w83d"/>
+      <tc:entity class="ORG" tokenIDs="w83f w840"/>
+      <tc:entity class="LOC" tokenIDs="w842"/>
+      <tc:entity class="ORG" tokenIDs="w844"/>
+      <tc:entity class="PER" tokenIDs="w867 w868"/>
+      <tc:entity class="ORG" tokenIDs="w86f"/>
+      <tc:entity class="PER" tokenIDs="w877 w878"/>
+      <tc:entity class="ORG" tokenIDs="w87e"/>
+      <tc:entity class="PER" tokenIDs="w888 w889"/>
+      <tc:entity class="ORG" tokenIDs="w896"/>
+      <tc:entity class="PER" tokenIDs="w8a2 w8a3"/>
+      <tc:entity class="ORG" tokenIDs="w8a8"/>
+      <tc:entity class="PER" tokenIDs="w8ad w8ae w8af"/>
+      <tc:entity class="ORG" tokenIDs="w8c0"/>
+      <tc:entity class="PER" tokenIDs="w8c2"/>
+      <tc:entity class="GPE" tokenIDs="w8d4"/>
+      <tc:entity class="PER" tokenIDs="w8dc"/>
+      <tc:entity class="PER" tokenIDs="w8de"/>
+      <tc:entity class="PER" tokenIDs="w8e0"/>
+      <tc:entity class="PER" tokenIDs="w8e2"/>
+      <tc:entity class="PER" tokenIDs="w8e4"/>
+      <tc:entity class="PER" tokenIDs="w8e6"/>
+      <tc:entity class="OTH" tokenIDs="w8eb w8ec w8ed w8ee w8ef"/>
+      <tc:entity class="ORG" tokenIDs="w8f1 w8f2 w8f3 w8f4 w8f5"/>
+      <tc:entity class="LOC" tokenIDs="w8f7"/>
+      <tc:entity class="PER" tokenIDs="w8f9"/>
+      <tc:entity class="PER" tokenIDs="w8fb"/>
+      <tc:entity class="OTH" tokenIDs="w910 w911 w912"/>
+      <tc:entity class="PER" tokenIDs="w915"/>
+      <tc:entity class="PER" tokenIDs="w917"/>
+      <tc:entity class="PER" tokenIDs="w919"/>
+      <tc:entity class="PER" tokenIDs="w91b"/>
+      <tc:entity class="PER" tokenIDs="w923"/>
+      <tc:entity class="PER" tokenIDs="w93b w93c"/>
+      <tc:entity class="ORG" tokenIDs="w93e w93f"/>
+      <tc:entity class="OTH" tokenIDs="w94b w94c w94d w94e w94f"/>
+      <tc:entity class="PER" tokenIDs="w954"/>
+      <tc:entity class="PER" tokenIDs="w956"/>
+      <tc:entity class="PER" tokenIDs="w958"/>
+      <tc:entity class="PER" tokenIDs="w95a"/>
+      <tc:entity class="OTH" tokenIDs="w964 w965 w966 w967 w968 w969 w96a"/>
+      <tc:entity class="GPE" tokenIDs="w96c"/>
+      <tc:entity class="GPE" tokenIDs="w96e w96f"/>
+      <tc:entity class="PER" tokenIDs="w971 w972"/>
+      <tc:entity class="OTH" tokenIDs="w977 w978 w979"/>
+      <tc:entity class="OTH" tokenIDs="w97e w97f w980 w981 w982 w983 w984"/>
+      <tc:entity class="OTH" tokenIDs="w986 w987 w988 w989 w98a w98b"/>
+      <tc:entity class="GPE" tokenIDs="w98d"/>
+      <tc:entity class="ORG" tokenIDs="w98f w990 w991 w992 w993"/>
+      <tc:entity class="PER" tokenIDs="w995 w996 w997"/>
+      <tc:entity class="OTH" tokenIDs="w99c w99d w99e w99f"/>
+      <tc:entity class="GPE" tokenIDs="w9a6"/>
+      <tc:entity class="PER" tokenIDs="w9a8"/>
+      <tc:entity class="OTH" tokenIDs="w9aa w9ab w9ac"/>
+      <tc:entity class="ORG" tokenIDs="w9b1 w9b2 w9b3 w9b4 w9b5 w9b6 w9b7"/>
+      <tc:entity class="GPE" tokenIDs="w9bd"/>
+      <tc:entity class="ORG" tokenIDs="w9bf w9c0 w9c1"/>
+    </tc:namedEntities>
+  </TextCorpus>
+</D-Spin>

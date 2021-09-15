@@ -1,0 +1,1356 @@
+<?xml version='1.0' encoding='UTF-8'?><D-Spin xmlns="http://www.dspin.de/data" version="5">
+  <MetaData xmlns="http://www.dspin.de/data/metadata"><Services><cmd:CMD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cmd="http://www.clarin.eu/cmd/1" CMDVersion="1.2" xsi:schemaLocation="http://www.clarin.eu/cmd/1 http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_1320657629623/xsd"><cmd:Resources><cmd:ResourceProxyList/><cmd:JournalFileProxyList/><cmd:ResourceRelationList/></cmd:Resources><cmd:Components><cmd:WebServiceToolChain><cmd:GeneralInfo><cmd:Descriptions><cmd:Description/></cmd:Descriptions><cmd:ResourceName>Custom chain</cmd:ResourceName><cmd:ResourceClass>Toolchain</cmd:ResourceClass></cmd:GeneralInfo><cmd:Toolchain><cmd:ToolInChain><cmd:PID>https://hdl.handle.net/21.11120/0000-0008-319A-3</cmd:PID><cmd:Parameter value="de" name="lang"/></cmd:ToolInChain><cmd:ToolInChain><cmd:PID>https://hdl.handle.net/21.11120/0000-0008-3183-C</cmd:PID><cmd:Parameter value="5" name="version"/></cmd:ToolInChain><cmd:ToolInChain><cmd:PID>http://hdl.handle.net/11022/0000-0007-DA29-6</cmd:PID><cmd:Parameter value="de" name="lang"/><cmd:Parameter value="5" name="version"/></cmd:ToolInChain></cmd:Toolchain></cmd:WebServiceToolChain></cmd:Components></cmd:CMD></Services></MetaData>
+  <TextCorpus xmlns="http://www.dspin.de/data/textcorpus" lang="de">
+    <textSource type="application/tei+xml;format-variant=tei-dta;tokenized=0">&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="DUMONT_Stefan_Ein_Brief___zwei_Perspektiven__Stellenkommenta">
+&lt;teiHeader>
+&lt;fileDesc>
+&lt;titleStmt>
+&lt;title>Ein Brief – zwei Perspektiven. Stellenkommentare in digitalen Briefeditionen über APIs austauschen&lt;/title>
+&lt;author>
+&lt;persName>
+&lt;surname>Dumont&lt;/surname>
+&lt;forename>Stefan&lt;/forename>
+&lt;/persName>
+&lt;affiliation>Berlin-Brandenburgische Akademie der Wissenschaften, Deutschland&lt;/affiliation>
+&lt;email>dumont@bbaw.de&lt;/email>
+&lt;/author>
+&lt;/titleStmt>
+&lt;editionStmt>
+&lt;edition>
+&lt;date>2018-01-15T11:26:00Z&lt;/date>
+&lt;/edition>
+&lt;/editionStmt>
+&lt;publicationStmt>
+&lt;t:publisher xmlns:t="http://www.tei-c.org/ns/1.0">Georg Vogeler, im Auftrag des Verbands Digital Humanities im deutschaprachigen Raum e.V.&lt;/t:publisher>
+&lt;t:address xmlns:t="http://www.tei-c.org/ns/1.0">
+&lt;t:addrLine>Universität Graz&lt;/t:addrLine>
+&lt;t:addrLine>Zentrum für Informationsmodellierung - Austrian Centre for Digital Humanities&lt;/t:addrLine>
+&lt;t:addrLine>Elisabethstraße 59/III&lt;/t:addrLine>
+&lt;t:addrLine>8010 Graz&lt;/t:addrLine>
+&lt;/t:address>
+&lt;/publicationStmt>
+&lt;sourceDesc>
+&lt;p>Converted from a Word document &lt;/p>
+&lt;/sourceDesc>
+&lt;/fileDesc>
+&lt;encodingDesc>
+&lt;appInfo>
+&lt;application ident="DHCONVALIDATOR" version="1.17">
+&lt;label>DHConvalidator&lt;/label>
+&lt;/application>
+&lt;/appInfo>
+&lt;/encodingDesc>
+&lt;profileDesc>
+&lt;textClass>
+&lt;keywords scheme="ConfTool" n="category">
+&lt;term>Paper&lt;/term>
+&lt;/keywords>
+&lt;keywords scheme="ConfTool" n="subcategory">
+&lt;term>Poster&lt;/term>
+&lt;/keywords>
+&lt;keywords scheme="ConfTool" n="keywords">
+&lt;term>Brief&lt;/term>
+&lt;term>Editon&lt;/term>
+&lt;term>Einzelstellenkommentar&lt;/term>
+&lt;term>API&lt;/term>
+&lt;term>Annotation&lt;/term>
+&lt;/keywords>
+&lt;keywords scheme="ConfTool" n="topics">
+&lt;term>Annotieren&lt;/term>
+&lt;term>Kommentierung&lt;/term>
+&lt;term>Infrastruktur&lt;/term>
+&lt;term>Link&lt;/term>
+&lt;term>Standards&lt;/term>
+&lt;term>Text&lt;/term>
+&lt;/keywords>
+&lt;/textClass>
+&lt;settingDesc>
+&lt;ab n="conference">DHd2018 - "Kritik der Digitalen Vernunft", Köln&lt;/ab>
+&lt;ab n="paperID">277&lt;/ab>
+&lt;ab n="session_ID">60&lt;/ab>
+&lt;ab n="session_numberInSession">1&lt;/ab>
+&lt;ab n="session_short">Poster_1&lt;/ab>
+&lt;ab n="session_title">Postersession&lt;/ab>
+&lt;ab n="session_start">2018-03-01 17:45&lt;/ab>
+&lt;ab n="session_end">2018-03-01 23:00&lt;/ab>
+&lt;/settingDesc>
+&lt;/profileDesc>
+&lt;/teiHeader>
+&lt;text>
+&lt;body>
+&lt;p>Vernetzung von Texten und anderen Ressourcen war und ist ein großes Versprechen des digitalen Zeitalters im Allgemeinen, aber auch der digitalen Editionsphilologie im Besonderen. Während man um 2000 darunter noch vorwiegend das manuelle Setzen von einzelnen Links verstand, wurde spätestens seit Beginn dieses Jahrzehnts die automatisierte Verknüpfung in den Blick genommen. So wurde in Portalen, Websites und auch digitalen Editionen (vornehmlich des deutschsprachigen Raums) die automatisierte Verlinkung von Personenregistereinträgen eingeführt, die mit Hilfe der Gemeinsamen Normdatei und von BEACON-Schnittstellen ermöglicht wird. Diese Vernetzung auf Basis von BEACON-Schnittstellen gehört heute zum Standard digitaler Editionen und ist nicht mehr wegzudenken (Stadler 2012). &lt;/p>
+&lt;p>Mit den Fortschritten im Internet allgemein wuchs aber seit einigen Jahren der Wunsch, digitale Editionen über solche basalen Verlinkungen hinaus zu verknüpfen. Im Bereich der Briefeditionen z.B. wurde schon recht früh der Wunsch geäußert, Briefe editionsübergreifend durchsuchbar zu machen und zu vernetzen. Basis dafür sollten die in TEI-XML kodierten Briefmetadaten, also die wichtigsten Kopfdaten eines Briefes, sein. Mit Entwicklung des Correspondence Metadata Interchange Format (TEI Correspondence SIG 2015) und des da-rauf aufbauenden Webservices correspSearch (
+                &lt;ref target="http://correspSearch.net">http://correspSearch.net&lt;/ref>) konnte dies realisiert werden. Nicht nur können Briefeditionen jetzt digitale Briefverzeichnisse bereitstellen, die durch correspSearch zentral recherchierbar gemacht werden. Digitalen Briefeditionen ist es hier nun möglich, über die API von correspSearch Briefmetadaten zu beziehen und passend zu einem – in der eigenen Edition vorliegenden – Brief zu präsentieren (Dumont 2018). Damit werden schon einige methodische Probleme der Briefedition überwunden, andere bleiben hingegen noch offen.
+            &lt;/p>
+&lt;p>So kann es vorkommen, dass ein Brief mehrfach ediert vorliegt. Diese Situation kann dadurch entstanden sein, dass ältere Editionen (etwa des 19. Jahrhunderts) durch zeitgemäße abgelöst werden. Sie kann aber auch dadurch aufgekommen sein, dass der Brief nicht in einer Briefwechselausgabe, sondern in zwei Gesamtausgaben erschienen ist: Einerseits in derjenigen Gesamtausgabe, die die Korrespondenz des Autors ediert, andererseits in derjenigen, die die Korrespondenz des Empfängers ediert. In so einem Fall entstehen zum einen Kommentierungen, die in beiden Editionen ähnlich vorgenommen werden (z.B. Identifizierung von Personen etc.). Zum anderen werden aber auch Kommentierungen vorgenommen, die aus der spezifischen Perspektive der Edition entstehen – d.h. mit Fokus auf diejenige Person, deren Korrespondenz ediert wird. Dadurch entstehen zwei Annotationslayer, die sich im Idealfall ergänzen. Die Einzelstellen(-kommentierung) aus der jeweils anderen Edition kann also u.U. äußerst wertvoll für einen Nutzer sein. &lt;/p>
+&lt;p>In digitalen Briefeditionen besteht nun prinzipiell die Möglichkeit, Daten aus anderen digitalen Editionen bzw. Portalen zu integrieren. Anstelle eines einmaligen, manuellen Importes bzw. Übernahme dieser Daten, ist heutzutage deren automatisierter Abruf über ein Application Programming Interface (API) zu favorisieren. Daten aus externen Quellen können so schneller aggregiert, aktualisiert und zusammen mit den eigenen Forschungsdaten – hier: edierte Briefe – angeboten werden. Daher erscheint die Nutzung von APIs und standardisierten Datenformaten angeraten. Im Regelfall liegen Einzelstellenkommentare in digitalen Briefeditionen heutzutage als Bestandteil der TEI-XML-Dokumente vor (etwa im Element &amp;lt;note&amp;gt;). Sollen diese Kommentare allerdings über eine Schnittstelle zur freien Nachnutzung durch externe Editionen angeboten werden, müssen sie deutlich mehr Informationen tragen, als im Kontext der Edition – nämlich Metadaten (Autor des Kommentars, Bezugstext etc.). Auch eine Übermittlung des ganzen Briefes mitsamt seinen Einzelstellenerläuterungen ist nicht gewünscht, liegt der Text doch gerade im hier geschilderten Fall bereits vor. &lt;/p>
+&lt;p>In Betracht kommt daher ein Datenformat, dass dediziert für den Austausch und die Aggregation von Kommentaren, also vorwiegend textuell vorliegender Annotation, konzipiert ist. Zwar wäre es möglich ein solches Format in TEI-XML neu zu definieren, allerdings gibt es für diesen Bereich bereits einen Standard, der auch schon breite Anwendung findet: das Web Annotation Data Model (Sanderson, Ciccarese, und Young 2017). Es ist für genau dieses Nutzungsszenario – Austausch von Kommentaren – konzipiert und durch das W3C standardisiert. Es wird daher auch von DARIAH-DE empfohlen (Lordick u. a. 2016). &lt;/p>
+&lt;p>Das Poster stellt nun anhand eines Beispiels diesen Ansatz exemplarisch vor und demonstriert seinen Nutzen. Als Beispiel ist der überlieferte Briefwechsel zwischen Alexander von Humboldt und Samuel Thomas Soemmerring gewählt, der zum einen in 
+                &lt;hi rend="italic">edition humboldt digital&lt;/hi> (
+                &lt;ref target="http://edition-humboldt.de">http://edition-humboldt.de&lt;/ref>) vorliegt, zum anderen in einer (derzeit noch unveröffentlichten) digitalen Edition zu Soemmerrings Biographica. Konkret sieht die Implementierung so aus: Einzelstellenerläuterungen aus der Soemmerring-Edition, die ursprünglich als TEI-XML vorliegen, werden über eine API im Web Annotation Data Model angeboten. Diese API wird von correspSearch abgefragt und die Daten aggregiert. Andere digitale Editionen, hier beispielhaft die 
+                &lt;hi rend="italic">edition humboldt digital&lt;/hi>, können anhand einer Kalliope-URI, also der eindeutigen und maschinenlesbaren Archivkennung, den Webservice correspSearch auf Annotationen zu einem bestimmten Brief hin abfragen. Im Erfolgsfall werden die Annotationen ausgeliefert und in der 
+                &lt;hi rend="italic">edition humboldt digital&lt;/hi> am Brief angezeigt (mit Quelle, Autor etc.). 
+            &lt;/p>
+&lt;p>Das Poster stellt nicht nur Konzept und Implementierung vor, sondern diskutiert auch die noch offenen Probleme einer solchen API, wie z.B. die korrekte und stabile Referenzierung des Bezugstextes (d.h. der kommentierten Textstelle).&lt;/p>
+&lt;figure>
+&lt;graphic n="1001"
+                     width="16.002cm"
+                     height="12.1285cm"
+                     rend="inline"
+                     url="DUMONT_Stefan_Ein_Brief___zwei_Perspektiven__Stellenkommenta-image1.png"/>
+&lt;head>Beispielhafte Implementierung in der Entwicklungsversion von edition humboldt digital
+                &lt;/head>
+&lt;/figure>
+&lt;/body>
+&lt;back>
+&lt;div type="bibliogr">
+&lt;listBibl>
+&lt;head>Bibliographie&lt;/head>
+&lt;bibl>
+&lt;hi rend="bold">Dumont, Stefan.&lt;/hi> 2018. „CorrespSearch – Connecting Scholarly Editions of Letters“. Journal of the Text Encoding Initiative 10. [Im Erscheinen].
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Lordick, Harald, Rainer Becker, Michael Bender, Luise Borek, Canan Hastik, Thomas Kollatz, Beata Mache, Andrea Rapp, Ruth Reiche, und Niels-Oliver Walkowski.&lt;/hi> 2016. „Digitale Annotationen in der geisteswissenschaftlichen Praxis“. Bibliothek Forschung und Praxis 40 (2): 186–199. doi:10.1515/bfp-2016-0042.
+                    &lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Sanderson, Robert, Paolo Ciccarese, und Benjamin Young&lt;/hi>. 2017. „Web Annotation Data Model. W3C Recommendation“. W3C. https://www.w3.org/TR/annotation-model/.
+                    &lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Stadler, Peter.&lt;/hi> 2012. „Normdateien in der Edition“. editio 26: 174–83.
+                    &lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">TEI Correspondence SIG.&lt;/hi> 2015. „Correspondence Metadata Interchange Format (CMIF)“. https://github.com/TEI-Correspondence-SIG/CMIF.
+                    &lt;/bibl>
+&lt;/listBibl>
+&lt;/div>
+&lt;/back>
+&lt;/text>
+&lt;/TEI>
+    </textSource>
+    <text>
+
+    
+
+
+
+
+
+Vernetzung von Texten und anderen Ressourcen war und ist ein großes Versprechen des digitalen Zeitalters im Allgemeinen, aber auch der digitalen Editionsphilologie im Besonderen. Während man um 2000 darunter noch vorwiegend das manuelle Setzen von einzelnen Links verstand, wurde spätestens seit Beginn dieses Jahrzehnts die automatisierte Verknüpfung in den Blick genommen. So wurde in Portalen, Websites und auch digitalen Editionen (vornehmlich des deutschsprachigen Raums) die automatisierte Verlinkung von Personenregistereinträgen eingeführt, die mit Hilfe der Gemeinsamen Normdatei und von BEACON-Schnittstellen ermöglicht wird. Diese Vernetzung auf Basis von BEACON-Schnittstellen gehört heute zum Standard digitaler Editionen und ist nicht mehr wegzudenken (Stadler 2012). 
+
+  
+
+Mit den Fortschritten im Internet allgemein wuchs aber seit einigen Jahren der Wunsch, digitale Editionen über solche basalen Verlinkungen hinaus zu verknüpfen. Im Bereich der Briefeditionen z.B. wurde schon recht früh der Wunsch geäußert, Briefe editionsübergreifend durchsuchbar zu machen und zu vernetzen. Basis dafür sollten die in TEI-XML kodierten Briefmetadaten, also die wichtigsten Kopfdaten eines Briefes, sein. Mit Entwicklung des Correspondence Metadata Interchange Format (TEI Correspondence SIG 2015) und des da-rauf aufbauenden Webservices correspSearch (  
+http://correspSearch.net
+) konnte dies realisiert werden. Nicht nur können Briefeditionen jetzt digitale Briefverzeichnisse bereitstellen, die durch correspSearch zentral recherchierbar gemacht werden. Digitalen Briefeditionen ist es hier nun möglich, über die API von correspSearch Briefmetadaten zu beziehen und passend zu einem – in der eigenen Edition vorliegenden – Brief zu präsentieren (Dumont 2018). Damit werden schon einige methodische Probleme der Briefedition überwunden, andere bleiben hingegen noch offen.  
+
+  
+
+So kann es vorkommen, dass ein Brief mehrfach ediert vorliegt. Diese Situation kann dadurch entstanden sein, dass ältere Editionen (etwa des 19. Jahrhunderts) durch zeitgemäße abgelöst werden. Sie kann aber auch dadurch aufgekommen sein, dass der Brief nicht in einer Briefwechselausgabe, sondern in zwei Gesamtausgaben erschienen ist: Einerseits in derjenigen Gesamtausgabe, die die Korrespondenz des Autors ediert, andererseits in derjenigen, die die Korrespondenz des Empfängers ediert. In so einem Fall entstehen zum einen Kommentierungen, die in beiden Editionen ähnlich vorgenommen werden (z.B. Identifizierung von Personen etc.). Zum anderen werden aber auch Kommentierungen vorgenommen, die aus der spezifischen Perspektive der Edition entstehen – d.h. mit Fokus auf diejenige Person, deren Korrespondenz ediert wird. Dadurch entstehen zwei Annotationslayer, die sich im Idealfall ergänzen. Die Einzelstellen(-kommentierung) aus der jeweils anderen Edition kann also u.U. äußerst wertvoll für einen Nutzer sein. 
+
+  
+
+In digitalen Briefeditionen besteht nun prinzipiell die Möglichkeit, Daten aus anderen digitalen Editionen bzw. Portalen zu integrieren. Anstelle eines einmaligen, manuellen Importes bzw. Übernahme dieser Daten, ist heutzutage deren automatisierter Abruf über ein Application Programming Interface (API) zu favorisieren. Daten aus externen Quellen können so schneller aggregiert, aktualisiert und zusammen mit den eigenen Forschungsdaten – hier: edierte Briefe – angeboten werden. Daher erscheint die Nutzung von APIs und standardisierten Datenformaten angeraten. Im Regelfall liegen Einzelstellenkommentare in digitalen Briefeditionen heutzutage als Bestandteil der TEI-XML-Dokumente vor (etwa im Element &lt;note>). Sollen diese Kommentare allerdings über eine Schnittstelle zur freien Nachnutzung durch externe Editionen angeboten werden, müssen sie deutlich mehr Informationen tragen, als im Kontext der Edition – nämlich Metadaten (Autor des Kommentars, Bezugstext etc.). Auch eine Übermittlung des ganzen Briefes mitsamt seinen Einzelstellenerläuterungen ist nicht gewünscht, liegt der Text doch gerade im hier geschilderten Fall bereits vor. 
+
+  
+
+In Betracht kommt daher ein Datenformat, dass dediziert für den Austausch und die Aggregation von Kommentaren, also vorwiegend textuell vorliegender Annotation, konzipiert ist. Zwar wäre es möglich ein solches Format in TEI-XML neu zu definieren, allerdings gibt es für diesen Bereich bereits einen Standard, der auch schon breite Anwendung findet: das Web Annotation Data Model (Sanderson, Ciccarese, und Young 2017). Es ist für genau dieses Nutzungsszenario – Austausch von Kommentaren – konzipiert und durch das W3C standardisiert. Es wird daher auch von DARIAH-DE empfohlen (Lordick u. a. 2016). 
+
+  
+
+Das Poster stellt nun anhand eines Beispiels diesen Ansatz exemplarisch vor und demonstriert seinen Nutzen. Als Beispiel ist der überlieferte Briefwechsel zwischen Alexander von Humboldt und Samuel Thomas Soemmerring gewählt, der zum einen in   edition humboldt digital (  
+http://edition-humboldt.de
+) vorliegt, zum anderen in einer (derzeit noch unveröffentlichten) digitalen Edition zu Soemmerrings Biographica. Konkret sieht die Implementierung so aus: Einzelstellenerläuterungen aus der Soemmerring-Edition, die ursprünglich als TEI-XML vorliegen, werden über eine API im Web Annotation Data Model angeboten. Diese API wird von correspSearch abgefragt und die Daten aggregiert. Andere digitale Editionen, hier beispielhaft die   edition humboldt digital, können anhand einer Kalliope-URI, also der eindeutigen und maschinenlesbaren Archivkennung, den Webservice correspSearch auf Annotationen zu einem bestimmten Brief hin abfragen. Im Erfolgsfall werden die Annotationen ausgeliefert und in der   edition humboldt digital am Brief angezeigt (mit Quelle, Autor etc.).   
+
+  
+
+Das Poster stellt nicht nur Konzept und Implementierung vor, sondern diskutiert auch die noch offenen Probleme einer solchen API, wie z.B. die korrekte und stabile Referenzierung des Bezugstextes (d.h. der kommentierten Textstelle).
+
+    
+
+
+
+      
+
+
+
+Beispielhafte Implementierung in der Entwicklungsversion von edition humboldt digital  
+
+
+
+  
+
+        Dumont, Stefan. 2018. „CorrespSearch – Connecting Scholarly Editions of Letters“. Journal of the Text Encoding Initiative 10. [Im Erscheinen].      Lordick, Harald, Rainer Becker, Michael Bender, Luise Borek, Canan Hastik, Thomas Kollatz, Beata Mache, Andrea Rapp, Ruth Reiche, und Niels-Oliver Walkowski. 2016. „Digitale Annotationen in der geisteswissenschaftlichen Praxis“. Bibliothek Forschung und Praxis 40 (2): 186–199. doi:10.1515/bfp-2016-0042.      Sanderson, Robert, Paolo Ciccarese, und Benjamin Young. 2017. „Web Annotation Data Model. W3C Recommendation“. W3C. https://www.w3.org/TR/annotation-model/.      Stadler, Peter. 2012. „Normdateien in der Edition“. editio 26: 174–83.      TEI Correspondence SIG. 2015. „Correspondence Metadata Interchange Format (CMIF)“. https://github.com/TEI-Correspondence-SIG/CMIF.      
+
+  
+
+
+
+Bibliographie
+
+</text>
+    <tc:tokens xmlns:tc="http://www.dspin.de/data/textcorpus">
+      <tc:token ID="w1">Vernetzung</tc:token>
+      <tc:token ID="w2">von</tc:token>
+      <tc:token ID="w3">Texten</tc:token>
+      <tc:token ID="w4">und</tc:token>
+      <tc:token ID="w5">anderen</tc:token>
+      <tc:token ID="w6">Ressourcen</tc:token>
+      <tc:token ID="w7">war</tc:token>
+      <tc:token ID="w8">und</tc:token>
+      <tc:token ID="w9">ist</tc:token>
+      <tc:token ID="wa">ein</tc:token>
+      <tc:token ID="wb">großes</tc:token>
+      <tc:token ID="wc">Versprechen</tc:token>
+      <tc:token ID="wd">des</tc:token>
+      <tc:token ID="we">digitalen</tc:token>
+      <tc:token ID="wf">Zeitalters</tc:token>
+      <tc:token ID="w10">im</tc:token>
+      <tc:token ID="w11">Allgemeinen</tc:token>
+      <tc:token ID="w12">,</tc:token>
+      <tc:token ID="w13">aber</tc:token>
+      <tc:token ID="w14">auch</tc:token>
+      <tc:token ID="w15">der</tc:token>
+      <tc:token ID="w16">digitalen</tc:token>
+      <tc:token ID="w17">Editionsphilologie</tc:token>
+      <tc:token ID="w18">im</tc:token>
+      <tc:token ID="w19">Besonderen</tc:token>
+      <tc:token ID="w1a">.</tc:token>
+      <tc:token ID="w1b">Während</tc:token>
+      <tc:token ID="w1c">man</tc:token>
+      <tc:token ID="w1d">um</tc:token>
+      <tc:token ID="w1e">2000</tc:token>
+      <tc:token ID="w1f">darunter</tc:token>
+      <tc:token ID="w20">noch</tc:token>
+      <tc:token ID="w21">vorwiegend</tc:token>
+      <tc:token ID="w22">das</tc:token>
+      <tc:token ID="w23">manuelle</tc:token>
+      <tc:token ID="w24">Setzen</tc:token>
+      <tc:token ID="w25">von</tc:token>
+      <tc:token ID="w26">einzelnen</tc:token>
+      <tc:token ID="w27">Links</tc:token>
+      <tc:token ID="w28">verstand</tc:token>
+      <tc:token ID="w29">,</tc:token>
+      <tc:token ID="w2a">wurde</tc:token>
+      <tc:token ID="w2b">spätestens</tc:token>
+      <tc:token ID="w2c">seit</tc:token>
+      <tc:token ID="w2d">Beginn</tc:token>
+      <tc:token ID="w2e">dieses</tc:token>
+      <tc:token ID="w2f">Jahrzehnts</tc:token>
+      <tc:token ID="w30">die</tc:token>
+      <tc:token ID="w31">automatisierte</tc:token>
+      <tc:token ID="w32">Verknüpfung</tc:token>
+      <tc:token ID="w33">in</tc:token>
+      <tc:token ID="w34">den</tc:token>
+      <tc:token ID="w35">Blick</tc:token>
+      <tc:token ID="w36">genommen</tc:token>
+      <tc:token ID="w37">.</tc:token>
+      <tc:token ID="w38">So</tc:token>
+      <tc:token ID="w39">wurde</tc:token>
+      <tc:token ID="w3a">in</tc:token>
+      <tc:token ID="w3b">Portalen</tc:token>
+      <tc:token ID="w3c">,</tc:token>
+      <tc:token ID="w3d">Websites</tc:token>
+      <tc:token ID="w3e">und</tc:token>
+      <tc:token ID="w3f">auch</tc:token>
+      <tc:token ID="w40">digitalen</tc:token>
+      <tc:token ID="w41">Editionen</tc:token>
+      <tc:token ID="w42">(</tc:token>
+      <tc:token ID="w43">vornehmlich</tc:token>
+      <tc:token ID="w44">des</tc:token>
+      <tc:token ID="w45">deutschsprachigen</tc:token>
+      <tc:token ID="w46">Raums</tc:token>
+      <tc:token ID="w47">)</tc:token>
+      <tc:token ID="w48">die</tc:token>
+      <tc:token ID="w49">automatisierte</tc:token>
+      <tc:token ID="w4a">Verlinkung</tc:token>
+      <tc:token ID="w4b">von</tc:token>
+      <tc:token ID="w4c">Personenregistereinträgen</tc:token>
+      <tc:token ID="w4d">eingeführt</tc:token>
+      <tc:token ID="w4e">,</tc:token>
+      <tc:token ID="w4f">die</tc:token>
+      <tc:token ID="w50">mit</tc:token>
+      <tc:token ID="w51">Hilfe</tc:token>
+      <tc:token ID="w52">der</tc:token>
+      <tc:token ID="w53">Gemeinsamen</tc:token>
+      <tc:token ID="w54">Normdatei</tc:token>
+      <tc:token ID="w55">und</tc:token>
+      <tc:token ID="w56">von</tc:token>
+      <tc:token ID="w57">BEACON-Schnittstellen</tc:token>
+      <tc:token ID="w58">ermöglicht</tc:token>
+      <tc:token ID="w59">wird</tc:token>
+      <tc:token ID="w5a">.</tc:token>
+      <tc:token ID="w5b">Diese</tc:token>
+      <tc:token ID="w5c">Vernetzung</tc:token>
+      <tc:token ID="w5d">auf</tc:token>
+      <tc:token ID="w5e">Basis</tc:token>
+      <tc:token ID="w5f">von</tc:token>
+      <tc:token ID="w60">BEACON-Schnittstellen</tc:token>
+      <tc:token ID="w61">gehört</tc:token>
+      <tc:token ID="w62">heute</tc:token>
+      <tc:token ID="w63">zum</tc:token>
+      <tc:token ID="w64">Standard</tc:token>
+      <tc:token ID="w65">digitaler</tc:token>
+      <tc:token ID="w66">Editionen</tc:token>
+      <tc:token ID="w67">und</tc:token>
+      <tc:token ID="w68">ist</tc:token>
+      <tc:token ID="w69">nicht</tc:token>
+      <tc:token ID="w6a">mehr</tc:token>
+      <tc:token ID="w6b">wegzudenken</tc:token>
+      <tc:token ID="w6c">(</tc:token>
+      <tc:token ID="w6d">Stadler</tc:token>
+      <tc:token ID="w6e">2012</tc:token>
+      <tc:token ID="w6f">)</tc:token>
+      <tc:token ID="w70">.</tc:token>
+      <tc:token ID="w71">Mit</tc:token>
+      <tc:token ID="w72">den</tc:token>
+      <tc:token ID="w73">Fortschritten</tc:token>
+      <tc:token ID="w74">im</tc:token>
+      <tc:token ID="w75">Internet</tc:token>
+      <tc:token ID="w76">allgemein</tc:token>
+      <tc:token ID="w77">wuchs</tc:token>
+      <tc:token ID="w78">aber</tc:token>
+      <tc:token ID="w79">seit</tc:token>
+      <tc:token ID="w7a">einigen</tc:token>
+      <tc:token ID="w7b">Jahren</tc:token>
+      <tc:token ID="w7c">der</tc:token>
+      <tc:token ID="w7d">Wunsch</tc:token>
+      <tc:token ID="w7e">,</tc:token>
+      <tc:token ID="w7f">digitale</tc:token>
+      <tc:token ID="w80">Editionen</tc:token>
+      <tc:token ID="w81">über</tc:token>
+      <tc:token ID="w82">solche</tc:token>
+      <tc:token ID="w83">basalen</tc:token>
+      <tc:token ID="w84">Verlinkungen</tc:token>
+      <tc:token ID="w85">hinaus</tc:token>
+      <tc:token ID="w86">zu</tc:token>
+      <tc:token ID="w87">verknüpfen</tc:token>
+      <tc:token ID="w88">.</tc:token>
+      <tc:token ID="w89">Im</tc:token>
+      <tc:token ID="w8a">Bereich</tc:token>
+      <tc:token ID="w8b">der</tc:token>
+      <tc:token ID="w8c">Briefeditionen</tc:token>
+      <tc:token ID="w8d">z.B.</tc:token>
+      <tc:token ID="w8e">wurde</tc:token>
+      <tc:token ID="w8f">schon</tc:token>
+      <tc:token ID="w90">recht</tc:token>
+      <tc:token ID="w91">früh</tc:token>
+      <tc:token ID="w92">der</tc:token>
+      <tc:token ID="w93">Wunsch</tc:token>
+      <tc:token ID="w94">geäußert</tc:token>
+      <tc:token ID="w95">,</tc:token>
+      <tc:token ID="w96">Briefe</tc:token>
+      <tc:token ID="w97">editionsübergreifend</tc:token>
+      <tc:token ID="w98">durchsuchbar</tc:token>
+      <tc:token ID="w99">zu</tc:token>
+      <tc:token ID="w9a">machen</tc:token>
+      <tc:token ID="w9b">und</tc:token>
+      <tc:token ID="w9c">zu</tc:token>
+      <tc:token ID="w9d">vernetzen</tc:token>
+      <tc:token ID="w9e">.</tc:token>
+      <tc:token ID="w9f">Basis</tc:token>
+      <tc:token ID="wa0">dafür</tc:token>
+      <tc:token ID="wa1">sollten</tc:token>
+      <tc:token ID="wa2">die</tc:token>
+      <tc:token ID="wa3">in</tc:token>
+      <tc:token ID="wa4">TEI-XML</tc:token>
+      <tc:token ID="wa5">kodierten</tc:token>
+      <tc:token ID="wa6">Briefmetadaten</tc:token>
+      <tc:token ID="wa7">,</tc:token>
+      <tc:token ID="wa8">also</tc:token>
+      <tc:token ID="wa9">die</tc:token>
+      <tc:token ID="waa">wichtigsten</tc:token>
+      <tc:token ID="wab">Kopfdaten</tc:token>
+      <tc:token ID="wac">eines</tc:token>
+      <tc:token ID="wad">Briefes</tc:token>
+      <tc:token ID="wae">,</tc:token>
+      <tc:token ID="waf">sein</tc:token>
+      <tc:token ID="wb0">.</tc:token>
+      <tc:token ID="wb1">Mit</tc:token>
+      <tc:token ID="wb2">Entwicklung</tc:token>
+      <tc:token ID="wb3">des</tc:token>
+      <tc:token ID="wb4">Correspondence</tc:token>
+      <tc:token ID="wb5">Metadata</tc:token>
+      <tc:token ID="wb6">Interchange</tc:token>
+      <tc:token ID="wb7">Format</tc:token>
+      <tc:token ID="wb8">(</tc:token>
+      <tc:token ID="wb9">TEI</tc:token>
+      <tc:token ID="wba">Correspondence</tc:token>
+      <tc:token ID="wbb">SIG</tc:token>
+      <tc:token ID="wbc">2015</tc:token>
+      <tc:token ID="wbd">)</tc:token>
+      <tc:token ID="wbe">und</tc:token>
+      <tc:token ID="wbf">des</tc:token>
+      <tc:token ID="wc0">da-rauf</tc:token>
+      <tc:token ID="wc1">aufbauenden</tc:token>
+      <tc:token ID="wc2">Webservices</tc:token>
+      <tc:token ID="wc3">correspSearch</tc:token>
+      <tc:token ID="wc4">(</tc:token>
+      <tc:token ID="wc5">http://correspSearch.net</tc:token>
+      <tc:token ID="wc6">)</tc:token>
+      <tc:token ID="wc7">konnte</tc:token>
+      <tc:token ID="wc8">dies</tc:token>
+      <tc:token ID="wc9">realisiert</tc:token>
+      <tc:token ID="wca">werden</tc:token>
+      <tc:token ID="wcb">.</tc:token>
+      <tc:token ID="wcc">Nicht</tc:token>
+      <tc:token ID="wcd">nur</tc:token>
+      <tc:token ID="wce">können</tc:token>
+      <tc:token ID="wcf">Briefeditionen</tc:token>
+      <tc:token ID="wd0">jetzt</tc:token>
+      <tc:token ID="wd1">digitale</tc:token>
+      <tc:token ID="wd2">Briefverzeichnisse</tc:token>
+      <tc:token ID="wd3">bereitstellen</tc:token>
+      <tc:token ID="wd4">,</tc:token>
+      <tc:token ID="wd5">die</tc:token>
+      <tc:token ID="wd6">durch</tc:token>
+      <tc:token ID="wd7">correspSearch</tc:token>
+      <tc:token ID="wd8">zentral</tc:token>
+      <tc:token ID="wd9">recherchierbar</tc:token>
+      <tc:token ID="wda">gemacht</tc:token>
+      <tc:token ID="wdb">werden</tc:token>
+      <tc:token ID="wdc">.</tc:token>
+      <tc:token ID="wdd">Digitalen</tc:token>
+      <tc:token ID="wde">Briefeditionen</tc:token>
+      <tc:token ID="wdf">ist</tc:token>
+      <tc:token ID="we0">es</tc:token>
+      <tc:token ID="we1">hier</tc:token>
+      <tc:token ID="we2">nun</tc:token>
+      <tc:token ID="we3">möglich</tc:token>
+      <tc:token ID="we4">,</tc:token>
+      <tc:token ID="we5">über</tc:token>
+      <tc:token ID="we6">die</tc:token>
+      <tc:token ID="we7">API</tc:token>
+      <tc:token ID="we8">von</tc:token>
+      <tc:token ID="we9">correspSearch</tc:token>
+      <tc:token ID="wea">Briefmetadaten</tc:token>
+      <tc:token ID="web">zu</tc:token>
+      <tc:token ID="wec">beziehen</tc:token>
+      <tc:token ID="wed">und</tc:token>
+      <tc:token ID="wee">passend</tc:token>
+      <tc:token ID="wef">zu</tc:token>
+      <tc:token ID="wf0">einem</tc:token>
+      <tc:token ID="wf1">–</tc:token>
+      <tc:token ID="wf2">in</tc:token>
+      <tc:token ID="wf3">der</tc:token>
+      <tc:token ID="wf4">eigenen</tc:token>
+      <tc:token ID="wf5">Edition</tc:token>
+      <tc:token ID="wf6">vorliegenden</tc:token>
+      <tc:token ID="wf7">–</tc:token>
+      <tc:token ID="wf8">Brief</tc:token>
+      <tc:token ID="wf9">zu</tc:token>
+      <tc:token ID="wfa">präsentieren</tc:token>
+      <tc:token ID="wfb">(</tc:token>
+      <tc:token ID="wfc">Dumont</tc:token>
+      <tc:token ID="wfd">2018</tc:token>
+      <tc:token ID="wfe">)</tc:token>
+      <tc:token ID="wff">.</tc:token>
+      <tc:token ID="w100">Damit</tc:token>
+      <tc:token ID="w101">werden</tc:token>
+      <tc:token ID="w102">schon</tc:token>
+      <tc:token ID="w103">einige</tc:token>
+      <tc:token ID="w104">methodische</tc:token>
+      <tc:token ID="w105">Probleme</tc:token>
+      <tc:token ID="w106">der</tc:token>
+      <tc:token ID="w107">Briefedition</tc:token>
+      <tc:token ID="w108">überwunden</tc:token>
+      <tc:token ID="w109">,</tc:token>
+      <tc:token ID="w10a">andere</tc:token>
+      <tc:token ID="w10b">bleiben</tc:token>
+      <tc:token ID="w10c">hingegen</tc:token>
+      <tc:token ID="w10d">noch</tc:token>
+      <tc:token ID="w10e">offen</tc:token>
+      <tc:token ID="w10f">.</tc:token>
+      <tc:token ID="w110">So</tc:token>
+      <tc:token ID="w111">kann</tc:token>
+      <tc:token ID="w112">es</tc:token>
+      <tc:token ID="w113">vorkommen</tc:token>
+      <tc:token ID="w114">,</tc:token>
+      <tc:token ID="w115">dass</tc:token>
+      <tc:token ID="w116">ein</tc:token>
+      <tc:token ID="w117">Brief</tc:token>
+      <tc:token ID="w118">mehrfach</tc:token>
+      <tc:token ID="w119">ediert</tc:token>
+      <tc:token ID="w11a">vorliegt</tc:token>
+      <tc:token ID="w11b">.</tc:token>
+      <tc:token ID="w11c">Diese</tc:token>
+      <tc:token ID="w11d">Situation</tc:token>
+      <tc:token ID="w11e">kann</tc:token>
+      <tc:token ID="w11f">dadurch</tc:token>
+      <tc:token ID="w120">entstanden</tc:token>
+      <tc:token ID="w121">sein</tc:token>
+      <tc:token ID="w122">,</tc:token>
+      <tc:token ID="w123">dass</tc:token>
+      <tc:token ID="w124">ältere</tc:token>
+      <tc:token ID="w125">Editionen</tc:token>
+      <tc:token ID="w126">(</tc:token>
+      <tc:token ID="w127">etwa</tc:token>
+      <tc:token ID="w128">des</tc:token>
+      <tc:token ID="w129">19.</tc:token>
+      <tc:token ID="w12a">Jahrhunderts</tc:token>
+      <tc:token ID="w12b">)</tc:token>
+      <tc:token ID="w12c">durch</tc:token>
+      <tc:token ID="w12d">zeitgemäße</tc:token>
+      <tc:token ID="w12e">abgelöst</tc:token>
+      <tc:token ID="w12f">werden</tc:token>
+      <tc:token ID="w130">.</tc:token>
+      <tc:token ID="w131">Sie</tc:token>
+      <tc:token ID="w132">kann</tc:token>
+      <tc:token ID="w133">aber</tc:token>
+      <tc:token ID="w134">auch</tc:token>
+      <tc:token ID="w135">dadurch</tc:token>
+      <tc:token ID="w136">aufgekommen</tc:token>
+      <tc:token ID="w137">sein</tc:token>
+      <tc:token ID="w138">,</tc:token>
+      <tc:token ID="w139">dass</tc:token>
+      <tc:token ID="w13a">der</tc:token>
+      <tc:token ID="w13b">Brief</tc:token>
+      <tc:token ID="w13c">nicht</tc:token>
+      <tc:token ID="w13d">in</tc:token>
+      <tc:token ID="w13e">einer</tc:token>
+      <tc:token ID="w13f">Briefwechselausgabe</tc:token>
+      <tc:token ID="w140">,</tc:token>
+      <tc:token ID="w141">sondern</tc:token>
+      <tc:token ID="w142">in</tc:token>
+      <tc:token ID="w143">zwei</tc:token>
+      <tc:token ID="w144">Gesamtausgaben</tc:token>
+      <tc:token ID="w145">erschienen</tc:token>
+      <tc:token ID="w146">ist</tc:token>
+      <tc:token ID="w147">:</tc:token>
+      <tc:token ID="w148">Einerseits</tc:token>
+      <tc:token ID="w149">in</tc:token>
+      <tc:token ID="w14a">derjenigen</tc:token>
+      <tc:token ID="w14b">Gesamtausgabe</tc:token>
+      <tc:token ID="w14c">,</tc:token>
+      <tc:token ID="w14d">die</tc:token>
+      <tc:token ID="w14e">die</tc:token>
+      <tc:token ID="w14f">Korrespondenz</tc:token>
+      <tc:token ID="w150">des</tc:token>
+      <tc:token ID="w151">Autors</tc:token>
+      <tc:token ID="w152">ediert</tc:token>
+      <tc:token ID="w153">,</tc:token>
+      <tc:token ID="w154">andererseits</tc:token>
+      <tc:token ID="w155">in</tc:token>
+      <tc:token ID="w156">derjenigen</tc:token>
+      <tc:token ID="w157">,</tc:token>
+      <tc:token ID="w158">die</tc:token>
+      <tc:token ID="w159">die</tc:token>
+      <tc:token ID="w15a">Korrespondenz</tc:token>
+      <tc:token ID="w15b">des</tc:token>
+      <tc:token ID="w15c">Empfängers</tc:token>
+      <tc:token ID="w15d">ediert</tc:token>
+      <tc:token ID="w15e">.</tc:token>
+      <tc:token ID="w15f">In</tc:token>
+      <tc:token ID="w160">so</tc:token>
+      <tc:token ID="w161">einem</tc:token>
+      <tc:token ID="w162">Fall</tc:token>
+      <tc:token ID="w163">entstehen</tc:token>
+      <tc:token ID="w164">zum</tc:token>
+      <tc:token ID="w165">einen</tc:token>
+      <tc:token ID="w166">Kommentierungen</tc:token>
+      <tc:token ID="w167">,</tc:token>
+      <tc:token ID="w168">die</tc:token>
+      <tc:token ID="w169">in</tc:token>
+      <tc:token ID="w16a">beiden</tc:token>
+      <tc:token ID="w16b">Editionen</tc:token>
+      <tc:token ID="w16c">ähnlich</tc:token>
+      <tc:token ID="w16d">vorgenommen</tc:token>
+      <tc:token ID="w16e">werden</tc:token>
+      <tc:token ID="w16f">(</tc:token>
+      <tc:token ID="w170">z.B.</tc:token>
+      <tc:token ID="w171">Identifizierung</tc:token>
+      <tc:token ID="w172">von</tc:token>
+      <tc:token ID="w173">Personen</tc:token>
+      <tc:token ID="w174">etc.</tc:token>
+      <tc:token ID="w175">)</tc:token>
+      <tc:token ID="w176">.</tc:token>
+      <tc:token ID="w177">Zum</tc:token>
+      <tc:token ID="w178">anderen</tc:token>
+      <tc:token ID="w179">werden</tc:token>
+      <tc:token ID="w17a">aber</tc:token>
+      <tc:token ID="w17b">auch</tc:token>
+      <tc:token ID="w17c">Kommentierungen</tc:token>
+      <tc:token ID="w17d">vorgenommen</tc:token>
+      <tc:token ID="w17e">,</tc:token>
+      <tc:token ID="w17f">die</tc:token>
+      <tc:token ID="w180">aus</tc:token>
+      <tc:token ID="w181">der</tc:token>
+      <tc:token ID="w182">spezifischen</tc:token>
+      <tc:token ID="w183">Perspektive</tc:token>
+      <tc:token ID="w184">der</tc:token>
+      <tc:token ID="w185">Edition</tc:token>
+      <tc:token ID="w186">entstehen</tc:token>
+      <tc:token ID="w187">–</tc:token>
+      <tc:token ID="w188">d.h.</tc:token>
+      <tc:token ID="w189">mit</tc:token>
+      <tc:token ID="w18a">Fokus</tc:token>
+      <tc:token ID="w18b">auf</tc:token>
+      <tc:token ID="w18c">diejenige</tc:token>
+      <tc:token ID="w18d">Person</tc:token>
+      <tc:token ID="w18e">,</tc:token>
+      <tc:token ID="w18f">deren</tc:token>
+      <tc:token ID="w190">Korrespondenz</tc:token>
+      <tc:token ID="w191">ediert</tc:token>
+      <tc:token ID="w192">wird</tc:token>
+      <tc:token ID="w193">.</tc:token>
+      <tc:token ID="w194">Dadurch</tc:token>
+      <tc:token ID="w195">entstehen</tc:token>
+      <tc:token ID="w196">zwei</tc:token>
+      <tc:token ID="w197">Annotationslayer</tc:token>
+      <tc:token ID="w198">,</tc:token>
+      <tc:token ID="w199">die</tc:token>
+      <tc:token ID="w19a">sich</tc:token>
+      <tc:token ID="w19b">im</tc:token>
+      <tc:token ID="w19c">Idealfall</tc:token>
+      <tc:token ID="w19d">ergänzen</tc:token>
+      <tc:token ID="w19e">.</tc:token>
+      <tc:token ID="w19f">Die</tc:token>
+      <tc:token ID="w1a0">Einzelstellen(-kommentierung</tc:token>
+      <tc:token ID="w1a1">)</tc:token>
+      <tc:token ID="w1a2">aus</tc:token>
+      <tc:token ID="w1a3">der</tc:token>
+      <tc:token ID="w1a4">jeweils</tc:token>
+      <tc:token ID="w1a5">anderen</tc:token>
+      <tc:token ID="w1a6">Edition</tc:token>
+      <tc:token ID="w1a7">kann</tc:token>
+      <tc:token ID="w1a8">also</tc:token>
+      <tc:token ID="w1a9">u.U.</tc:token>
+      <tc:token ID="w1aa">äußerst</tc:token>
+      <tc:token ID="w1ab">wertvoll</tc:token>
+      <tc:token ID="w1ac">für</tc:token>
+      <tc:token ID="w1ad">einen</tc:token>
+      <tc:token ID="w1ae">Nutzer</tc:token>
+      <tc:token ID="w1af">sein</tc:token>
+      <tc:token ID="w1b0">.</tc:token>
+      <tc:token ID="w1b1">In</tc:token>
+      <tc:token ID="w1b2">digitalen</tc:token>
+      <tc:token ID="w1b3">Briefeditionen</tc:token>
+      <tc:token ID="w1b4">besteht</tc:token>
+      <tc:token ID="w1b5">nun</tc:token>
+      <tc:token ID="w1b6">prinzipiell</tc:token>
+      <tc:token ID="w1b7">die</tc:token>
+      <tc:token ID="w1b8">Möglichkeit</tc:token>
+      <tc:token ID="w1b9">,</tc:token>
+      <tc:token ID="w1ba">Daten</tc:token>
+      <tc:token ID="w1bb">aus</tc:token>
+      <tc:token ID="w1bc">anderen</tc:token>
+      <tc:token ID="w1bd">digitalen</tc:token>
+      <tc:token ID="w1be">Editionen</tc:token>
+      <tc:token ID="w1bf">bzw</tc:token>
+      <tc:token ID="w1c0">.</tc:token>
+      <tc:token ID="w1c1">Portalen</tc:token>
+      <tc:token ID="w1c2">zu</tc:token>
+      <tc:token ID="w1c3">integrieren</tc:token>
+      <tc:token ID="w1c4">.</tc:token>
+      <tc:token ID="w1c5">Anstelle</tc:token>
+      <tc:token ID="w1c6">eines</tc:token>
+      <tc:token ID="w1c7">einmaligen</tc:token>
+      <tc:token ID="w1c8">,</tc:token>
+      <tc:token ID="w1c9">manuellen</tc:token>
+      <tc:token ID="w1ca">Importes</tc:token>
+      <tc:token ID="w1cb">bzw</tc:token>
+      <tc:token ID="w1cc">.</tc:token>
+      <tc:token ID="w1cd">Übernahme</tc:token>
+      <tc:token ID="w1ce">dieser</tc:token>
+      <tc:token ID="w1cf">Daten</tc:token>
+      <tc:token ID="w1d0">,</tc:token>
+      <tc:token ID="w1d1">ist</tc:token>
+      <tc:token ID="w1d2">heutzutage</tc:token>
+      <tc:token ID="w1d3">deren</tc:token>
+      <tc:token ID="w1d4">automatisierter</tc:token>
+      <tc:token ID="w1d5">Abruf</tc:token>
+      <tc:token ID="w1d6">über</tc:token>
+      <tc:token ID="w1d7">ein</tc:token>
+      <tc:token ID="w1d8">Application</tc:token>
+      <tc:token ID="w1d9">Programming</tc:token>
+      <tc:token ID="w1da">Interface</tc:token>
+      <tc:token ID="w1db">(</tc:token>
+      <tc:token ID="w1dc">API</tc:token>
+      <tc:token ID="w1dd">)</tc:token>
+      <tc:token ID="w1de">zu</tc:token>
+      <tc:token ID="w1df">favorisieren</tc:token>
+      <tc:token ID="w1e0">.</tc:token>
+      <tc:token ID="w1e1">Daten</tc:token>
+      <tc:token ID="w1e2">aus</tc:token>
+      <tc:token ID="w1e3">externen</tc:token>
+      <tc:token ID="w1e4">Quellen</tc:token>
+      <tc:token ID="w1e5">können</tc:token>
+      <tc:token ID="w1e6">so</tc:token>
+      <tc:token ID="w1e7">schneller</tc:token>
+      <tc:token ID="w1e8">aggregiert</tc:token>
+      <tc:token ID="w1e9">,</tc:token>
+      <tc:token ID="w1ea">aktualisiert</tc:token>
+      <tc:token ID="w1eb">und</tc:token>
+      <tc:token ID="w1ec">zusammen</tc:token>
+      <tc:token ID="w1ed">mit</tc:token>
+      <tc:token ID="w1ee">den</tc:token>
+      <tc:token ID="w1ef">eigenen</tc:token>
+      <tc:token ID="w1f0">Forschungsdaten</tc:token>
+      <tc:token ID="w1f1">–</tc:token>
+      <tc:token ID="w1f2">hier</tc:token>
+      <tc:token ID="w1f3">:</tc:token>
+      <tc:token ID="w1f4">edierte</tc:token>
+      <tc:token ID="w1f5">Briefe</tc:token>
+      <tc:token ID="w1f6">–</tc:token>
+      <tc:token ID="w1f7">angeboten</tc:token>
+      <tc:token ID="w1f8">werden</tc:token>
+      <tc:token ID="w1f9">.</tc:token>
+      <tc:token ID="w1fa">Daher</tc:token>
+      <tc:token ID="w1fb">erscheint</tc:token>
+      <tc:token ID="w1fc">die</tc:token>
+      <tc:token ID="w1fd">Nutzung</tc:token>
+      <tc:token ID="w1fe">von</tc:token>
+      <tc:token ID="w1ff">APIs</tc:token>
+      <tc:token ID="w200">und</tc:token>
+      <tc:token ID="w201">standardisierten</tc:token>
+      <tc:token ID="w202">Datenformaten</tc:token>
+      <tc:token ID="w203">angeraten</tc:token>
+      <tc:token ID="w204">.</tc:token>
+      <tc:token ID="w205">Im</tc:token>
+      <tc:token ID="w206">Regelfall</tc:token>
+      <tc:token ID="w207">liegen</tc:token>
+      <tc:token ID="w208">Einzelstellenkommentare</tc:token>
+      <tc:token ID="w209">in</tc:token>
+      <tc:token ID="w20a">digitalen</tc:token>
+      <tc:token ID="w20b">Briefeditionen</tc:token>
+      <tc:token ID="w20c">heutzutage</tc:token>
+      <tc:token ID="w20d">als</tc:token>
+      <tc:token ID="w20e">Bestandteil</tc:token>
+      <tc:token ID="w20f">der</tc:token>
+      <tc:token ID="w210">TEI-XML-Dokumente</tc:token>
+      <tc:token ID="w211">vor</tc:token>
+      <tc:token ID="w212">(</tc:token>
+      <tc:token ID="w213">etwa</tc:token>
+      <tc:token ID="w214">im</tc:token>
+      <tc:token ID="w215">Element</tc:token>
+      <tc:token ID="w216">&lt;</tc:token>
+      <tc:token ID="w217">note</tc:token>
+      <tc:token ID="w218">&gt;</tc:token>
+      <tc:token ID="w219">)</tc:token>
+      <tc:token ID="w21a">.</tc:token>
+      <tc:token ID="w21b">Sollen</tc:token>
+      <tc:token ID="w21c">diese</tc:token>
+      <tc:token ID="w21d">Kommentare</tc:token>
+      <tc:token ID="w21e">allerdings</tc:token>
+      <tc:token ID="w21f">über</tc:token>
+      <tc:token ID="w220">eine</tc:token>
+      <tc:token ID="w221">Schnittstelle</tc:token>
+      <tc:token ID="w222">zur</tc:token>
+      <tc:token ID="w223">freien</tc:token>
+      <tc:token ID="w224">Nachnutzung</tc:token>
+      <tc:token ID="w225">durch</tc:token>
+      <tc:token ID="w226">externe</tc:token>
+      <tc:token ID="w227">Editionen</tc:token>
+      <tc:token ID="w228">angeboten</tc:token>
+      <tc:token ID="w229">werden</tc:token>
+      <tc:token ID="w22a">,</tc:token>
+      <tc:token ID="w22b">müssen</tc:token>
+      <tc:token ID="w22c">sie</tc:token>
+      <tc:token ID="w22d">deutlich</tc:token>
+      <tc:token ID="w22e">mehr</tc:token>
+      <tc:token ID="w22f">Informationen</tc:token>
+      <tc:token ID="w230">tragen</tc:token>
+      <tc:token ID="w231">,</tc:token>
+      <tc:token ID="w232">als</tc:token>
+      <tc:token ID="w233">im</tc:token>
+      <tc:token ID="w234">Kontext</tc:token>
+      <tc:token ID="w235">der</tc:token>
+      <tc:token ID="w236">Edition</tc:token>
+      <tc:token ID="w237">–</tc:token>
+      <tc:token ID="w238">nämlich</tc:token>
+      <tc:token ID="w239">Metadaten</tc:token>
+      <tc:token ID="w23a">(</tc:token>
+      <tc:token ID="w23b">Autor</tc:token>
+      <tc:token ID="w23c">des</tc:token>
+      <tc:token ID="w23d">Kommentars</tc:token>
+      <tc:token ID="w23e">,</tc:token>
+      <tc:token ID="w23f">Bezugstext</tc:token>
+      <tc:token ID="w240">etc.</tc:token>
+      <tc:token ID="w241">)</tc:token>
+      <tc:token ID="w242">.</tc:token>
+      <tc:token ID="w243">Auch</tc:token>
+      <tc:token ID="w244">eine</tc:token>
+      <tc:token ID="w245">Übermittlung</tc:token>
+      <tc:token ID="w246">des</tc:token>
+      <tc:token ID="w247">ganzen</tc:token>
+      <tc:token ID="w248">Briefes</tc:token>
+      <tc:token ID="w249">mitsamt</tc:token>
+      <tc:token ID="w24a">seinen</tc:token>
+      <tc:token ID="w24b">Einzelstellenerläuterungen</tc:token>
+      <tc:token ID="w24c">ist</tc:token>
+      <tc:token ID="w24d">nicht</tc:token>
+      <tc:token ID="w24e">gewünscht</tc:token>
+      <tc:token ID="w24f">,</tc:token>
+      <tc:token ID="w250">liegt</tc:token>
+      <tc:token ID="w251">der</tc:token>
+      <tc:token ID="w252">Text</tc:token>
+      <tc:token ID="w253">doch</tc:token>
+      <tc:token ID="w254">gerade</tc:token>
+      <tc:token ID="w255">im</tc:token>
+      <tc:token ID="w256">hier</tc:token>
+      <tc:token ID="w257">geschilderten</tc:token>
+      <tc:token ID="w258">Fall</tc:token>
+      <tc:token ID="w259">bereits</tc:token>
+      <tc:token ID="w25a">vor</tc:token>
+      <tc:token ID="w25b">.</tc:token>
+      <tc:token ID="w25c">In</tc:token>
+      <tc:token ID="w25d">Betracht</tc:token>
+      <tc:token ID="w25e">kommt</tc:token>
+      <tc:token ID="w25f">daher</tc:token>
+      <tc:token ID="w260">ein</tc:token>
+      <tc:token ID="w261">Datenformat</tc:token>
+      <tc:token ID="w262">,</tc:token>
+      <tc:token ID="w263">dass</tc:token>
+      <tc:token ID="w264">dediziert</tc:token>
+      <tc:token ID="w265">für</tc:token>
+      <tc:token ID="w266">den</tc:token>
+      <tc:token ID="w267">Austausch</tc:token>
+      <tc:token ID="w268">und</tc:token>
+      <tc:token ID="w269">die</tc:token>
+      <tc:token ID="w26a">Aggregation</tc:token>
+      <tc:token ID="w26b">von</tc:token>
+      <tc:token ID="w26c">Kommentaren</tc:token>
+      <tc:token ID="w26d">,</tc:token>
+      <tc:token ID="w26e">also</tc:token>
+      <tc:token ID="w26f">vorwiegend</tc:token>
+      <tc:token ID="w270">textuell</tc:token>
+      <tc:token ID="w271">vorliegender</tc:token>
+      <tc:token ID="w272">Annotation</tc:token>
+      <tc:token ID="w273">,</tc:token>
+      <tc:token ID="w274">konzipiert</tc:token>
+      <tc:token ID="w275">ist</tc:token>
+      <tc:token ID="w276">.</tc:token>
+      <tc:token ID="w277">Zwar</tc:token>
+      <tc:token ID="w278">wäre</tc:token>
+      <tc:token ID="w279">es</tc:token>
+      <tc:token ID="w27a">möglich</tc:token>
+      <tc:token ID="w27b">ein</tc:token>
+      <tc:token ID="w27c">solches</tc:token>
+      <tc:token ID="w27d">Format</tc:token>
+      <tc:token ID="w27e">in</tc:token>
+      <tc:token ID="w27f">TEI-XML</tc:token>
+      <tc:token ID="w280">neu</tc:token>
+      <tc:token ID="w281">zu</tc:token>
+      <tc:token ID="w282">definieren</tc:token>
+      <tc:token ID="w283">,</tc:token>
+      <tc:token ID="w284">allerdings</tc:token>
+      <tc:token ID="w285">gibt</tc:token>
+      <tc:token ID="w286">es</tc:token>
+      <tc:token ID="w287">für</tc:token>
+      <tc:token ID="w288">diesen</tc:token>
+      <tc:token ID="w289">Bereich</tc:token>
+      <tc:token ID="w28a">bereits</tc:token>
+      <tc:token ID="w28b">einen</tc:token>
+      <tc:token ID="w28c">Standard</tc:token>
+      <tc:token ID="w28d">,</tc:token>
+      <tc:token ID="w28e">der</tc:token>
+      <tc:token ID="w28f">auch</tc:token>
+      <tc:token ID="w290">schon</tc:token>
+      <tc:token ID="w291">breite</tc:token>
+      <tc:token ID="w292">Anwendung</tc:token>
+      <tc:token ID="w293">findet</tc:token>
+      <tc:token ID="w294">:</tc:token>
+      <tc:token ID="w295">das</tc:token>
+      <tc:token ID="w296">Web</tc:token>
+      <tc:token ID="w297">Annotation</tc:token>
+      <tc:token ID="w298">Data</tc:token>
+      <tc:token ID="w299">Model</tc:token>
+      <tc:token ID="w29a">(</tc:token>
+      <tc:token ID="w29b">Sanderson</tc:token>
+      <tc:token ID="w29c">,</tc:token>
+      <tc:token ID="w29d">Ciccarese</tc:token>
+      <tc:token ID="w29e">,</tc:token>
+      <tc:token ID="w29f">und</tc:token>
+      <tc:token ID="w2a0">Young</tc:token>
+      <tc:token ID="w2a1">2017</tc:token>
+      <tc:token ID="w2a2">)</tc:token>
+      <tc:token ID="w2a3">.</tc:token>
+      <tc:token ID="w2a4">Es</tc:token>
+      <tc:token ID="w2a5">ist</tc:token>
+      <tc:token ID="w2a6">für</tc:token>
+      <tc:token ID="w2a7">genau</tc:token>
+      <tc:token ID="w2a8">dieses</tc:token>
+      <tc:token ID="w2a9">Nutzungsszenario</tc:token>
+      <tc:token ID="w2aa">–</tc:token>
+      <tc:token ID="w2ab">Austausch</tc:token>
+      <tc:token ID="w2ac">von</tc:token>
+      <tc:token ID="w2ad">Kommentaren</tc:token>
+      <tc:token ID="w2ae">–</tc:token>
+      <tc:token ID="w2af">konzipiert</tc:token>
+      <tc:token ID="w2b0">und</tc:token>
+      <tc:token ID="w2b1">durch</tc:token>
+      <tc:token ID="w2b2">das</tc:token>
+      <tc:token ID="w2b3">W3C</tc:token>
+      <tc:token ID="w2b4">standardisiert</tc:token>
+      <tc:token ID="w2b5">.</tc:token>
+      <tc:token ID="w2b6">Es</tc:token>
+      <tc:token ID="w2b7">wird</tc:token>
+      <tc:token ID="w2b8">daher</tc:token>
+      <tc:token ID="w2b9">auch</tc:token>
+      <tc:token ID="w2ba">von</tc:token>
+      <tc:token ID="w2bb">DARIAH-DE</tc:token>
+      <tc:token ID="w2bc">empfohlen</tc:token>
+      <tc:token ID="w2bd">(</tc:token>
+      <tc:token ID="w2be">Lordick</tc:token>
+      <tc:token ID="w2bf">u.</tc:token>
+      <tc:token ID="w2c0">a.</tc:token>
+      <tc:token ID="w2c1">2016</tc:token>
+      <tc:token ID="w2c2">)</tc:token>
+      <tc:token ID="w2c3">.</tc:token>
+      <tc:token ID="w2c4">Das</tc:token>
+      <tc:token ID="w2c5">Poster</tc:token>
+      <tc:token ID="w2c6">stellt</tc:token>
+      <tc:token ID="w2c7">nun</tc:token>
+      <tc:token ID="w2c8">anhand</tc:token>
+      <tc:token ID="w2c9">eines</tc:token>
+      <tc:token ID="w2ca">Beispiels</tc:token>
+      <tc:token ID="w2cb">diesen</tc:token>
+      <tc:token ID="w2cc">Ansatz</tc:token>
+      <tc:token ID="w2cd">exemplarisch</tc:token>
+      <tc:token ID="w2ce">vor</tc:token>
+      <tc:token ID="w2cf">und</tc:token>
+      <tc:token ID="w2d0">demonstriert</tc:token>
+      <tc:token ID="w2d1">seinen</tc:token>
+      <tc:token ID="w2d2">Nutzen</tc:token>
+      <tc:token ID="w2d3">.</tc:token>
+      <tc:token ID="w2d4">Als</tc:token>
+      <tc:token ID="w2d5">Beispiel</tc:token>
+      <tc:token ID="w2d6">ist</tc:token>
+      <tc:token ID="w2d7">der</tc:token>
+      <tc:token ID="w2d8">überlieferte</tc:token>
+      <tc:token ID="w2d9">Briefwechsel</tc:token>
+      <tc:token ID="w2da">zwischen</tc:token>
+      <tc:token ID="w2db">Alexander</tc:token>
+      <tc:token ID="w2dc">von</tc:token>
+      <tc:token ID="w2dd">Humboldt</tc:token>
+      <tc:token ID="w2de">und</tc:token>
+      <tc:token ID="w2df">Samuel</tc:token>
+      <tc:token ID="w2e0">Thomas</tc:token>
+      <tc:token ID="w2e1">Soemmerring</tc:token>
+      <tc:token ID="w2e2">gewählt</tc:token>
+      <tc:token ID="w2e3">,</tc:token>
+      <tc:token ID="w2e4">der</tc:token>
+      <tc:token ID="w2e5">zum</tc:token>
+      <tc:token ID="w2e6">einen</tc:token>
+      <tc:token ID="w2e7">in</tc:token>
+      <tc:token ID="w2e8">edition</tc:token>
+      <tc:token ID="w2e9">humboldt</tc:token>
+      <tc:token ID="w2ea">digital</tc:token>
+      <tc:token ID="w2eb">(</tc:token>
+      <tc:token ID="w2ec">http://edition-humboldt.de</tc:token>
+      <tc:token ID="w2ed">)</tc:token>
+      <tc:token ID="w2ee">vorliegt</tc:token>
+      <tc:token ID="w2ef">,</tc:token>
+      <tc:token ID="w2f0">zum</tc:token>
+      <tc:token ID="w2f1">anderen</tc:token>
+      <tc:token ID="w2f2">in</tc:token>
+      <tc:token ID="w2f3">einer</tc:token>
+      <tc:token ID="w2f4">(</tc:token>
+      <tc:token ID="w2f5">derzeit</tc:token>
+      <tc:token ID="w2f6">noch</tc:token>
+      <tc:token ID="w2f7">unveröffentlichten</tc:token>
+      <tc:token ID="w2f8">)</tc:token>
+      <tc:token ID="w2f9">digitalen</tc:token>
+      <tc:token ID="w2fa">Edition</tc:token>
+      <tc:token ID="w2fb">zu</tc:token>
+      <tc:token ID="w2fc">Soemmerrings</tc:token>
+      <tc:token ID="w2fd">Biographica</tc:token>
+      <tc:token ID="w2fe">.</tc:token>
+      <tc:token ID="w2ff">Konkret</tc:token>
+      <tc:token ID="w300">sieht</tc:token>
+      <tc:token ID="w301">die</tc:token>
+      <tc:token ID="w302">Implementierung</tc:token>
+      <tc:token ID="w303">so</tc:token>
+      <tc:token ID="w304">aus</tc:token>
+      <tc:token ID="w305">:</tc:token>
+      <tc:token ID="w306">Einzelstellenerläuterungen</tc:token>
+      <tc:token ID="w307">aus</tc:token>
+      <tc:token ID="w308">der</tc:token>
+      <tc:token ID="w309">Soemmerring-Edition</tc:token>
+      <tc:token ID="w30a">,</tc:token>
+      <tc:token ID="w30b">die</tc:token>
+      <tc:token ID="w30c">ursprünglich</tc:token>
+      <tc:token ID="w30d">als</tc:token>
+      <tc:token ID="w30e">TEI-XML</tc:token>
+      <tc:token ID="w30f">vorliegen</tc:token>
+      <tc:token ID="w310">,</tc:token>
+      <tc:token ID="w311">werden</tc:token>
+      <tc:token ID="w312">über</tc:token>
+      <tc:token ID="w313">eine</tc:token>
+      <tc:token ID="w314">API</tc:token>
+      <tc:token ID="w315">im</tc:token>
+      <tc:token ID="w316">Web</tc:token>
+      <tc:token ID="w317">Annotation</tc:token>
+      <tc:token ID="w318">Data</tc:token>
+      <tc:token ID="w319">Model</tc:token>
+      <tc:token ID="w31a">angeboten</tc:token>
+      <tc:token ID="w31b">.</tc:token>
+      <tc:token ID="w31c">Diese</tc:token>
+      <tc:token ID="w31d">API</tc:token>
+      <tc:token ID="w31e">wird</tc:token>
+      <tc:token ID="w31f">von</tc:token>
+      <tc:token ID="w320">correspSearch</tc:token>
+      <tc:token ID="w321">abgefragt</tc:token>
+      <tc:token ID="w322">und</tc:token>
+      <tc:token ID="w323">die</tc:token>
+      <tc:token ID="w324">Daten</tc:token>
+      <tc:token ID="w325">aggregiert</tc:token>
+      <tc:token ID="w326">.</tc:token>
+      <tc:token ID="w327">Andere</tc:token>
+      <tc:token ID="w328">digitale</tc:token>
+      <tc:token ID="w329">Editionen</tc:token>
+      <tc:token ID="w32a">,</tc:token>
+      <tc:token ID="w32b">hier</tc:token>
+      <tc:token ID="w32c">beispielhaft</tc:token>
+      <tc:token ID="w32d">die</tc:token>
+      <tc:token ID="w32e">edition</tc:token>
+      <tc:token ID="w32f">humboldt</tc:token>
+      <tc:token ID="w330">digital</tc:token>
+      <tc:token ID="w331">,</tc:token>
+      <tc:token ID="w332">können</tc:token>
+      <tc:token ID="w333">anhand</tc:token>
+      <tc:token ID="w334">einer</tc:token>
+      <tc:token ID="w335">Kalliope-URI</tc:token>
+      <tc:token ID="w336">,</tc:token>
+      <tc:token ID="w337">also</tc:token>
+      <tc:token ID="w338">der</tc:token>
+      <tc:token ID="w339">eindeutigen</tc:token>
+      <tc:token ID="w33a">und</tc:token>
+      <tc:token ID="w33b">maschinenlesbaren</tc:token>
+      <tc:token ID="w33c">Archivkennung</tc:token>
+      <tc:token ID="w33d">,</tc:token>
+      <tc:token ID="w33e">den</tc:token>
+      <tc:token ID="w33f">Webservice</tc:token>
+      <tc:token ID="w340">correspSearch</tc:token>
+      <tc:token ID="w341">auf</tc:token>
+      <tc:token ID="w342">Annotationen</tc:token>
+      <tc:token ID="w343">zu</tc:token>
+      <tc:token ID="w344">einem</tc:token>
+      <tc:token ID="w345">bestimmten</tc:token>
+      <tc:token ID="w346">Brief</tc:token>
+      <tc:token ID="w347">hin</tc:token>
+      <tc:token ID="w348">abfragen</tc:token>
+      <tc:token ID="w349">.</tc:token>
+      <tc:token ID="w34a">Im</tc:token>
+      <tc:token ID="w34b">Erfolgsfall</tc:token>
+      <tc:token ID="w34c">werden</tc:token>
+      <tc:token ID="w34d">die</tc:token>
+      <tc:token ID="w34e">Annotationen</tc:token>
+      <tc:token ID="w34f">ausgeliefert</tc:token>
+      <tc:token ID="w350">und</tc:token>
+      <tc:token ID="w351">in</tc:token>
+      <tc:token ID="w352">der</tc:token>
+      <tc:token ID="w353">edition</tc:token>
+      <tc:token ID="w354">humboldt</tc:token>
+      <tc:token ID="w355">digital</tc:token>
+      <tc:token ID="w356">am</tc:token>
+      <tc:token ID="w357">Brief</tc:token>
+      <tc:token ID="w358">angezeigt</tc:token>
+      <tc:token ID="w359">(</tc:token>
+      <tc:token ID="w35a">mit</tc:token>
+      <tc:token ID="w35b">Quelle</tc:token>
+      <tc:token ID="w35c">,</tc:token>
+      <tc:token ID="w35d">Autor</tc:token>
+      <tc:token ID="w35e">etc.</tc:token>
+      <tc:token ID="w35f">)</tc:token>
+      <tc:token ID="w360">.</tc:token>
+      <tc:token ID="w361">Das</tc:token>
+      <tc:token ID="w362">Poster</tc:token>
+      <tc:token ID="w363">stellt</tc:token>
+      <tc:token ID="w364">nicht</tc:token>
+      <tc:token ID="w365">nur</tc:token>
+      <tc:token ID="w366">Konzept</tc:token>
+      <tc:token ID="w367">und</tc:token>
+      <tc:token ID="w368">Implementierung</tc:token>
+      <tc:token ID="w369">vor</tc:token>
+      <tc:token ID="w36a">,</tc:token>
+      <tc:token ID="w36b">sondern</tc:token>
+      <tc:token ID="w36c">diskutiert</tc:token>
+      <tc:token ID="w36d">auch</tc:token>
+      <tc:token ID="w36e">die</tc:token>
+      <tc:token ID="w36f">noch</tc:token>
+      <tc:token ID="w370">offenen</tc:token>
+      <tc:token ID="w371">Probleme</tc:token>
+      <tc:token ID="w372">einer</tc:token>
+      <tc:token ID="w373">solchen</tc:token>
+      <tc:token ID="w374">API</tc:token>
+      <tc:token ID="w375">,</tc:token>
+      <tc:token ID="w376">wie</tc:token>
+      <tc:token ID="w377">z.B.</tc:token>
+      <tc:token ID="w378">die</tc:token>
+      <tc:token ID="w379">korrekte</tc:token>
+      <tc:token ID="w37a">und</tc:token>
+      <tc:token ID="w37b">stabile</tc:token>
+      <tc:token ID="w37c">Referenzierung</tc:token>
+      <tc:token ID="w37d">des</tc:token>
+      <tc:token ID="w37e">Bezugstextes</tc:token>
+      <tc:token ID="w37f">(</tc:token>
+      <tc:token ID="w380">d.h.</tc:token>
+      <tc:token ID="w381">der</tc:token>
+      <tc:token ID="w382">kommentierten</tc:token>
+      <tc:token ID="w383">Textstelle</tc:token>
+      <tc:token ID="w384">)</tc:token>
+      <tc:token ID="w385">.</tc:token>
+      <tc:token ID="w386">Beispielhafte</tc:token>
+      <tc:token ID="w387">Implementierung</tc:token>
+      <tc:token ID="w388">in</tc:token>
+      <tc:token ID="w389">der</tc:token>
+      <tc:token ID="w38a">Entwicklungsversion</tc:token>
+      <tc:token ID="w38b">von</tc:token>
+      <tc:token ID="w38c">edition</tc:token>
+      <tc:token ID="w38d">humboldt</tc:token>
+      <tc:token ID="w38e">digital</tc:token>
+      <tc:token ID="w38f">Dumont</tc:token>
+      <tc:token ID="w390">,</tc:token>
+      <tc:token ID="w391">Stefan</tc:token>
+      <tc:token ID="w392">.</tc:token>
+      <tc:token ID="w393">2018</tc:token>
+      <tc:token ID="w394">.</tc:token>
+      <tc:token ID="w395">„</tc:token>
+      <tc:token ID="w396">CorrespSearch</tc:token>
+      <tc:token ID="w397">–</tc:token>
+      <tc:token ID="w398">Connecting</tc:token>
+      <tc:token ID="w399">Scholarly</tc:token>
+      <tc:token ID="w39a">Editions</tc:token>
+      <tc:token ID="w39b">of</tc:token>
+      <tc:token ID="w39c">Letters</tc:token>
+      <tc:token ID="w39d">“</tc:token>
+      <tc:token ID="w39e">.</tc:token>
+      <tc:token ID="w39f">Journal</tc:token>
+      <tc:token ID="w3a0">of</tc:token>
+      <tc:token ID="w3a1">the</tc:token>
+      <tc:token ID="w3a2">Text</tc:token>
+      <tc:token ID="w3a3">Encoding</tc:token>
+      <tc:token ID="w3a4">Initiative</tc:token>
+      <tc:token ID="w3a5">10</tc:token>
+      <tc:token ID="w3a6">.</tc:token>
+      <tc:token ID="w3a7">[</tc:token>
+      <tc:token ID="w3a8">Im</tc:token>
+      <tc:token ID="w3a9">Erscheinen</tc:token>
+      <tc:token ID="w3aa">]</tc:token>
+      <tc:token ID="w3ab">.</tc:token>
+      <tc:token ID="w3ac">Lordick</tc:token>
+      <tc:token ID="w3ad">,</tc:token>
+      <tc:token ID="w3ae">Harald</tc:token>
+      <tc:token ID="w3af">,</tc:token>
+      <tc:token ID="w3b0">Rainer</tc:token>
+      <tc:token ID="w3b1">Becker</tc:token>
+      <tc:token ID="w3b2">,</tc:token>
+      <tc:token ID="w3b3">Michael</tc:token>
+      <tc:token ID="w3b4">Bender</tc:token>
+      <tc:token ID="w3b5">,</tc:token>
+      <tc:token ID="w3b6">Luise</tc:token>
+      <tc:token ID="w3b7">Borek</tc:token>
+      <tc:token ID="w3b8">,</tc:token>
+      <tc:token ID="w3b9">Canan</tc:token>
+      <tc:token ID="w3ba">Hastik</tc:token>
+      <tc:token ID="w3bb">,</tc:token>
+      <tc:token ID="w3bc">Thomas</tc:token>
+      <tc:token ID="w3bd">Kollatz</tc:token>
+      <tc:token ID="w3be">,</tc:token>
+      <tc:token ID="w3bf">Beata</tc:token>
+      <tc:token ID="w3c0">Mache</tc:token>
+      <tc:token ID="w3c1">,</tc:token>
+      <tc:token ID="w3c2">Andrea</tc:token>
+      <tc:token ID="w3c3">Rapp</tc:token>
+      <tc:token ID="w3c4">,</tc:token>
+      <tc:token ID="w3c5">Ruth</tc:token>
+      <tc:token ID="w3c6">Reiche</tc:token>
+      <tc:token ID="w3c7">,</tc:token>
+      <tc:token ID="w3c8">und</tc:token>
+      <tc:token ID="w3c9">Niels-Oliver</tc:token>
+      <tc:token ID="w3ca">Walkowski</tc:token>
+      <tc:token ID="w3cb">.</tc:token>
+      <tc:token ID="w3cc">2016</tc:token>
+      <tc:token ID="w3cd">.</tc:token>
+      <tc:token ID="w3ce">„</tc:token>
+      <tc:token ID="w3cf">Digitale</tc:token>
+      <tc:token ID="w3d0">Annotationen</tc:token>
+      <tc:token ID="w3d1">in</tc:token>
+      <tc:token ID="w3d2">der</tc:token>
+      <tc:token ID="w3d3">geisteswissenschaftlichen</tc:token>
+      <tc:token ID="w3d4">Praxis</tc:token>
+      <tc:token ID="w3d5">“</tc:token>
+      <tc:token ID="w3d6">.</tc:token>
+      <tc:token ID="w3d7">Bibliothek</tc:token>
+      <tc:token ID="w3d8">Forschung</tc:token>
+      <tc:token ID="w3d9">und</tc:token>
+      <tc:token ID="w3da">Praxis</tc:token>
+      <tc:token ID="w3db">40</tc:token>
+      <tc:token ID="w3dc">(</tc:token>
+      <tc:token ID="w3dd">2</tc:token>
+      <tc:token ID="w3de">)</tc:token>
+      <tc:token ID="w3df">:</tc:token>
+      <tc:token ID="w3e0">186–199</tc:token>
+      <tc:token ID="w3e1">.</tc:token>
+      <tc:token ID="w3e2">doi</tc:token>
+      <tc:token ID="w3e3">:</tc:token>
+      <tc:token ID="w3e4">10.</tc:token>
+      <tc:token ID="w3e5">1515/bfp-</tc:token>
+      <tc:token ID="w3e6">2016-0042</tc:token>
+      <tc:token ID="w3e7">.</tc:token>
+      <tc:token ID="w3e8">Sanderson</tc:token>
+      <tc:token ID="w3e9">,</tc:token>
+      <tc:token ID="w3ea">Robert</tc:token>
+      <tc:token ID="w3eb">,</tc:token>
+      <tc:token ID="w3ec">Paolo</tc:token>
+      <tc:token ID="w3ed">Ciccarese</tc:token>
+      <tc:token ID="w3ee">,</tc:token>
+      <tc:token ID="w3ef">und</tc:token>
+      <tc:token ID="w3f0">Benjamin</tc:token>
+      <tc:token ID="w3f1">Young</tc:token>
+      <tc:token ID="w3f2">.</tc:token>
+      <tc:token ID="w3f3">2017</tc:token>
+      <tc:token ID="w3f4">.</tc:token>
+      <tc:token ID="w3f5">„</tc:token>
+      <tc:token ID="w3f6">Web</tc:token>
+      <tc:token ID="w3f7">Annotation</tc:token>
+      <tc:token ID="w3f8">Data</tc:token>
+      <tc:token ID="w3f9">Model.</tc:token>
+      <tc:token ID="w3fa">W3C</tc:token>
+      <tc:token ID="w3fb">Recommendation</tc:token>
+      <tc:token ID="w3fc">“</tc:token>
+      <tc:token ID="w3fd">.</tc:token>
+      <tc:token ID="w3fe">W3</tc:token>
+      <tc:token ID="w3ff">C.</tc:token>
+      <tc:token ID="w400">https://www.w3.org/TR/annotation-model/</tc:token>
+      <tc:token ID="w401">.</tc:token>
+      <tc:token ID="w402">Stadler</tc:token>
+      <tc:token ID="w403">,</tc:token>
+      <tc:token ID="w404">Peter</tc:token>
+      <tc:token ID="w405">.</tc:token>
+      <tc:token ID="w406">2012</tc:token>
+      <tc:token ID="w407">.</tc:token>
+      <tc:token ID="w408">„</tc:token>
+      <tc:token ID="w409">Normdateien</tc:token>
+      <tc:token ID="w40a">in</tc:token>
+      <tc:token ID="w40b">der</tc:token>
+      <tc:token ID="w40c">Edition</tc:token>
+      <tc:token ID="w40d">“</tc:token>
+      <tc:token ID="w40e">.</tc:token>
+      <tc:token ID="w40f">editio</tc:token>
+      <tc:token ID="w410">26</tc:token>
+      <tc:token ID="w411">:</tc:token>
+      <tc:token ID="w412">174–83</tc:token>
+      <tc:token ID="w413">.</tc:token>
+      <tc:token ID="w414">TEI</tc:token>
+      <tc:token ID="w415">Correspondence</tc:token>
+      <tc:token ID="w416">SIG</tc:token>
+      <tc:token ID="w417">.</tc:token>
+      <tc:token ID="w418">2015</tc:token>
+      <tc:token ID="w419">.</tc:token>
+      <tc:token ID="w41a">„</tc:token>
+      <tc:token ID="w41b">Correspondence</tc:token>
+      <tc:token ID="w41c">Metadata</tc:token>
+      <tc:token ID="w41d">Interchange</tc:token>
+      <tc:token ID="w41e">Format</tc:token>
+      <tc:token ID="w41f">(</tc:token>
+      <tc:token ID="w420">CMIF</tc:token>
+      <tc:token ID="w421">)</tc:token>
+      <tc:token ID="w422">“</tc:token>
+      <tc:token ID="w423">.</tc:token>
+      <tc:token ID="w424">https://github.com/TEI-Correspondence-SIG/CMIF</tc:token>
+      <tc:token ID="w425">.</tc:token>
+      <tc:token ID="w426">Bibliographie</tc:token>
+    </tc:tokens>
+    <tc:sentences xmlns:tc="http://www.dspin.de/data/textcorpus">
+      <tc:sentence tokenIDs="w1 w2 w3 w4 w5 w6 w7 w8 w9 wa wb wc wd we wf w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w1a" ID="s1"/>
+      <tc:sentence tokenIDs="w1b w1c w1d w1e w1f w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 w2a w2b w2c w2d w2e w2f w30 w31 w32 w33 w34 w35 w36 w37" ID="s2"/>
+      <tc:sentence tokenIDs="w38 w39 w3a w3b w3c w3d w3e w3f w40 w41 w42 w43 w44 w45 w46 w47 w48 w49 w4a w4b w4c w4d w4e w4f w50 w51 w52 w53 w54 w55 w56 w57 w58 w59 w5a" ID="s3"/>
+      <tc:sentence tokenIDs="w5b w5c w5d w5e w5f w60 w61 w62 w63 w64 w65 w66 w67 w68 w69 w6a w6b w6c w6d w6e w6f w70" ID="s4"/>
+      <tc:sentence tokenIDs="w71 w72 w73 w74 w75 w76 w77 w78 w79 w7a w7b w7c w7d w7e w7f w80 w81 w82 w83 w84 w85 w86 w87 w88" ID="s5"/>
+      <tc:sentence tokenIDs="w89 w8a w8b w8c w8d w8e w8f w90 w91 w92 w93 w94 w95 w96 w97 w98 w99 w9a w9b w9c w9d w9e" ID="s6"/>
+      <tc:sentence tokenIDs="w9f wa0 wa1 wa2 wa3 wa4 wa5 wa6 wa7 wa8 wa9 waa wab wac wad wae waf wb0" ID="s7"/>
+      <tc:sentence tokenIDs="wb1 wb2 wb3 wb4 wb5 wb6 wb7 wb8 wb9 wba wbb wbc wbd wbe wbf wc0 wc1 wc2 wc3 wc4 wc5 wc6 wc7 wc8 wc9 wca wcb" ID="s8"/>
+      <tc:sentence tokenIDs="wcc wcd wce wcf wd0 wd1 wd2 wd3 wd4 wd5 wd6 wd7 wd8 wd9 wda wdb wdc" ID="s9"/>
+      <tc:sentence tokenIDs="wdd wde wdf we0 we1 we2 we3 we4 we5 we6 we7 we8 we9 wea web wec wed wee wef wf0 wf1 wf2 wf3 wf4 wf5 wf6 wf7 wf8 wf9 wfa wfb wfc wfd wfe wff" ID="sa"/>
+      <tc:sentence tokenIDs="w100 w101 w102 w103 w104 w105 w106 w107 w108 w109 w10a w10b w10c w10d w10e w10f" ID="sb"/>
+      <tc:sentence tokenIDs="w110 w111 w112 w113 w114 w115 w116 w117 w118 w119 w11a w11b" ID="sc"/>
+      <tc:sentence tokenIDs="w11c w11d w11e w11f w120 w121 w122 w123 w124 w125 w126 w127 w128 w129 w12a w12b w12c w12d w12e w12f w130" ID="sd"/>
+      <tc:sentence tokenIDs="w131 w132 w133 w134 w135 w136 w137 w138 w139 w13a w13b w13c w13d w13e w13f w140 w141 w142 w143 w144 w145 w146 w147 w148 w149 w14a w14b w14c w14d w14e w14f w150 w151 w152 w153 w154 w155 w156 w157 w158 w159 w15a w15b w15c w15d w15e" ID="se"/>
+      <tc:sentence tokenIDs="w15f w160 w161 w162 w163 w164 w165 w166 w167 w168 w169 w16a w16b w16c w16d w16e w16f w170 w171 w172 w173 w174 w175 w176" ID="sf"/>
+      <tc:sentence tokenIDs="w177 w178 w179 w17a w17b w17c w17d w17e w17f w180 w181 w182 w183 w184 w185 w186 w187 w188 w189 w18a w18b w18c w18d w18e w18f w190 w191 w192 w193" ID="s10"/>
+      <tc:sentence tokenIDs="w194 w195 w196 w197 w198 w199 w19a w19b w19c w19d w19e" ID="s11"/>
+      <tc:sentence tokenIDs="w19f w1a0 w1a1 w1a2 w1a3 w1a4 w1a5 w1a6 w1a7 w1a8 w1a9 w1aa w1ab w1ac w1ad w1ae w1af w1b0" ID="s12"/>
+      <tc:sentence tokenIDs="w1b1 w1b2 w1b3 w1b4 w1b5 w1b6 w1b7 w1b8 w1b9 w1ba w1bb w1bc w1bd w1be w1bf w1c0" ID="s13"/>
+      <tc:sentence tokenIDs="w1c1 w1c2 w1c3 w1c4" ID="s14"/>
+      <tc:sentence tokenIDs="w1c5 w1c6 w1c7 w1c8 w1c9 w1ca w1cb w1cc" ID="s15"/>
+      <tc:sentence tokenIDs="w1cd w1ce w1cf w1d0 w1d1 w1d2 w1d3 w1d4 w1d5 w1d6 w1d7 w1d8 w1d9 w1da w1db w1dc w1dd w1de w1df w1e0" ID="s16"/>
+      <tc:sentence tokenIDs="w1e1 w1e2 w1e3 w1e4 w1e5 w1e6 w1e7 w1e8 w1e9 w1ea w1eb w1ec w1ed w1ee w1ef w1f0 w1f1 w1f2 w1f3 w1f4 w1f5 w1f6 w1f7 w1f8 w1f9" ID="s17"/>
+      <tc:sentence tokenIDs="w1fa w1fb w1fc w1fd w1fe w1ff w200 w201 w202 w203 w204" ID="s18"/>
+      <tc:sentence tokenIDs="w205 w206 w207 w208 w209 w20a w20b w20c w20d w20e w20f w210 w211 w212 w213 w214 w215 w216 w217 w218 w219 w21a" ID="s19"/>
+      <tc:sentence tokenIDs="w21b w21c w21d w21e w21f w220 w221 w222 w223 w224 w225 w226 w227 w228 w229 w22a w22b w22c w22d w22e w22f w230 w231 w232 w233 w234 w235 w236 w237 w238 w239 w23a w23b w23c w23d w23e w23f w240 w241 w242" ID="s1a"/>
+      <tc:sentence tokenIDs="w243 w244 w245 w246 w247 w248 w249 w24a w24b w24c w24d w24e w24f w250 w251 w252 w253 w254 w255 w256 w257 w258 w259 w25a w25b" ID="s1b"/>
+      <tc:sentence tokenIDs="w25c w25d w25e w25f w260 w261 w262 w263 w264 w265 w266 w267 w268 w269 w26a w26b w26c w26d w26e w26f w270 w271 w272 w273 w274 w275 w276" ID="s1c"/>
+      <tc:sentence tokenIDs="w277 w278 w279 w27a w27b w27c w27d w27e w27f w280 w281 w282 w283 w284 w285 w286 w287 w288 w289 w28a w28b w28c w28d w28e w28f w290 w291 w292 w293 w294 w295 w296 w297 w298 w299 w29a w29b w29c w29d w29e w29f w2a0 w2a1 w2a2 w2a3" ID="s1d"/>
+      <tc:sentence tokenIDs="w2a4 w2a5 w2a6 w2a7 w2a8 w2a9 w2aa w2ab w2ac w2ad w2ae w2af w2b0 w2b1 w2b2 w2b3 w2b4 w2b5" ID="s1e"/>
+      <tc:sentence tokenIDs="w2b6 w2b7 w2b8 w2b9 w2ba w2bb w2bc w2bd w2be w2bf w2c0 w2c1 w2c2 w2c3" ID="s1f"/>
+      <tc:sentence tokenIDs="w2c4 w2c5 w2c6 w2c7 w2c8 w2c9 w2ca w2cb w2cc w2cd w2ce w2cf w2d0 w2d1 w2d2 w2d3" ID="s20"/>
+      <tc:sentence tokenIDs="w2d4 w2d5 w2d6 w2d7 w2d8 w2d9 w2da w2db w2dc w2dd w2de w2df w2e0 w2e1 w2e2 w2e3 w2e4 w2e5 w2e6 w2e7 w2e8 w2e9 w2ea w2eb w2ec w2ed w2ee w2ef w2f0 w2f1 w2f2 w2f3 w2f4 w2f5 w2f6 w2f7 w2f8 w2f9 w2fa w2fb w2fc w2fd w2fe" ID="s21"/>
+      <tc:sentence tokenIDs="w2ff w300 w301 w302 w303 w304 w305 w306 w307 w308 w309 w30a w30b w30c w30d w30e w30f w310 w311 w312 w313 w314 w315 w316 w317 w318 w319 w31a w31b" ID="s22"/>
+      <tc:sentence tokenIDs="w31c w31d w31e w31f w320 w321 w322 w323 w324 w325 w326" ID="s23"/>
+      <tc:sentence tokenIDs="w327 w328 w329 w32a w32b w32c w32d w32e w32f w330 w331 w332 w333 w334 w335 w336 w337 w338 w339 w33a w33b w33c w33d w33e w33f w340 w341 w342 w343 w344 w345 w346 w347 w348 w349" ID="s24"/>
+      <tc:sentence tokenIDs="w34a w34b w34c w34d w34e w34f w350 w351 w352 w353 w354 w355 w356 w357 w358 w359 w35a w35b w35c w35d w35e w35f w360" ID="s25"/>
+      <tc:sentence tokenIDs="w361 w362 w363 w364 w365 w366 w367 w368 w369 w36a w36b w36c w36d w36e w36f w370 w371 w372 w373 w374 w375 w376 w377 w378 w379 w37a w37b w37c w37d w37e w37f w380 w381 w382 w383 w384 w385" ID="s26"/>
+      <tc:sentence tokenIDs="w386 w387 w388 w389 w38a w38b w38c w38d w38e w38f w390 w391 w392" ID="s27"/>
+      <tc:sentence tokenIDs="w393 w394" ID="s28"/>
+      <tc:sentence tokenIDs="w395 w396 w397 w398 w399 w39a w39b w39c w39d w39e" ID="s29"/>
+      <tc:sentence tokenIDs="w39f w3a0 w3a1 w3a2 w3a3 w3a4 w3a5 w3a6" ID="s2a"/>
+      <tc:sentence tokenIDs="w3a7 w3a8 w3a9 w3aa w3ab" ID="s2b"/>
+      <tc:sentence tokenIDs="w3ac w3ad w3ae w3af w3b0 w3b1 w3b2 w3b3 w3b4 w3b5 w3b6 w3b7 w3b8 w3b9 w3ba w3bb w3bc w3bd w3be w3bf w3c0 w3c1 w3c2 w3c3 w3c4 w3c5 w3c6 w3c7 w3c8 w3c9 w3ca w3cb" ID="s2c"/>
+      <tc:sentence tokenIDs="w3cc w3cd" ID="s2d"/>
+      <tc:sentence tokenIDs="w3ce w3cf w3d0 w3d1 w3d2 w3d3 w3d4 w3d5 w3d6" ID="s2e"/>
+      <tc:sentence tokenIDs="w3d7 w3d8 w3d9 w3da w3db w3dc w3dd w3de w3df w3e0 w3e1 w3e2 w3e3 w3e4 w3e5 w3e6 w3e7" ID="s2f"/>
+      <tc:sentence tokenIDs="w3e8 w3e9 w3ea w3eb w3ec w3ed w3ee w3ef w3f0 w3f1 w3f2 w3f3 w3f4" ID="s30"/>
+      <tc:sentence tokenIDs="w3f5 w3f6 w3f7 w3f8 w3f9 w3fa w3fb w3fc w3fd w3fe w3ff w400 w401" ID="s31"/>
+      <tc:sentence tokenIDs="w402 w403 w404 w405 w406 w407" ID="s32"/>
+      <tc:sentence tokenIDs="w408 w409 w40a w40b w40c w40d w40e w40f w410 w411 w412 w413" ID="s33"/>
+      <tc:sentence tokenIDs="w414 w415 w416 w417" ID="s34"/>
+      <tc:sentence tokenIDs="w418 w419" ID="s35"/>
+      <tc:sentence tokenIDs="w41a w41b w41c w41d w41e w41f w420 w421 w422 w423 w424 w425" ID="s36"/>
+      <tc:sentence tokenIDs="w426" ID="s37"/>
+    </tc:sentences>
+    <tc:namedEntities xmlns:tc="http://www.dspin.de/data/textcorpus" type="tuebadz8">
+      <tc:entity class="PER" tokenIDs="w6d"/>
+      <tc:entity class="ORG" tokenIDs="wb4 wb5 wb6 wb7"/>
+      <tc:entity class="ORG" tokenIDs="wb9 wba wbb"/>
+      <tc:entity class="OTH" tokenIDs="we7"/>
+      <tc:entity class="ORG" tokenIDs="wfc wfd"/>
+      <tc:entity class="PER" tokenIDs="w29b"/>
+      <tc:entity class="PER" tokenIDs="w29d"/>
+      <tc:entity class="ORG" tokenIDs="w2b3"/>
+      <tc:entity class="ORG" tokenIDs="w2bb"/>
+      <tc:entity class="PER" tokenIDs="w2be"/>
+      <tc:entity class="PER" tokenIDs="w2db w2dc w2dd"/>
+      <tc:entity class="PER" tokenIDs="w2df w2e0 w2e1"/>
+      <tc:entity class="ORG" tokenIDs="w2fc w2fd"/>
+      <tc:entity class="ORG" tokenIDs="w32e"/>
+      <tc:entity class="ORG" tokenIDs="w38c w38d"/>
+      <tc:entity class="PER" tokenIDs="w38f"/>
+      <tc:entity class="PER" tokenIDs="w391"/>
+      <tc:entity class="OTH" tokenIDs="w396 w397 w398 w399 w39a w39b w39c"/>
+      <tc:entity class="ORG" tokenIDs="w39f w3a0 w3a1 w3a2 w3a3 w3a4"/>
+      <tc:entity class="PER" tokenIDs="w3ac"/>
+      <tc:entity class="PER" tokenIDs="w3ae"/>
+      <tc:entity class="PER" tokenIDs="w3b0 w3b1"/>
+      <tc:entity class="PER" tokenIDs="w3b3 w3b4"/>
+      <tc:entity class="PER" tokenIDs="w3b6 w3b7"/>
+      <tc:entity class="PER" tokenIDs="w3b9 w3ba"/>
+      <tc:entity class="PER" tokenIDs="w3bc w3bd"/>
+      <tc:entity class="PER" tokenIDs="w3bf w3c0"/>
+      <tc:entity class="PER" tokenIDs="w3c2 w3c3"/>
+      <tc:entity class="PER" tokenIDs="w3c5 w3c6"/>
+      <tc:entity class="PER" tokenIDs="w3c9 w3ca"/>
+      <tc:entity class="PER" tokenIDs="w3e8"/>
+      <tc:entity class="PER" tokenIDs="w3ea"/>
+      <tc:entity class="PER" tokenIDs="w3ec w3ed"/>
+      <tc:entity class="PER" tokenIDs="w3f0 w3f1"/>
+      <tc:entity class="PER" tokenIDs="w402"/>
+      <tc:entity class="PER" tokenIDs="w404"/>
+      <tc:entity class="ORG" tokenIDs="w414 w415 w416"/>
+      <tc:entity class="ORG" tokenIDs="w41b w41c w41d w41e"/>
+      <tc:entity class="ORG" tokenIDs="w420"/>
+    </tc:namedEntities>
+  </TextCorpus>
+</D-Spin>

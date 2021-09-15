@@ -1,0 +1,3476 @@
+<?xml version='1.0' encoding='UTF-8'?><D-Spin xmlns="http://www.dspin.de/data" version="5">
+  <MetaData xmlns="http://www.dspin.de/data/metadata"><Services><cmd:CMD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cmd="http://www.clarin.eu/cmd/1" CMDVersion="1.2" xsi:schemaLocation="http://www.clarin.eu/cmd/1 http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_1320657629623/xsd"><cmd:Resources><cmd:ResourceProxyList/><cmd:JournalFileProxyList/><cmd:ResourceRelationList/></cmd:Resources><cmd:Components><cmd:WebServiceToolChain><cmd:GeneralInfo><cmd:Descriptions><cmd:Description/></cmd:Descriptions><cmd:ResourceName>Custom chain</cmd:ResourceName><cmd:ResourceClass>Toolchain</cmd:ResourceClass></cmd:GeneralInfo><cmd:Toolchain><cmd:ToolInChain><cmd:PID>https://hdl.handle.net/21.11120/0000-0008-319A-3</cmd:PID><cmd:Parameter value="de" name="lang"/></cmd:ToolInChain><cmd:ToolInChain><cmd:PID>https://hdl.handle.net/21.11120/0000-0008-3183-C</cmd:PID><cmd:Parameter value="5" name="version"/></cmd:ToolInChain><cmd:ToolInChain><cmd:PID>http://hdl.handle.net/11022/0000-0007-DA29-6</cmd:PID><cmd:Parameter value="de" name="lang"/><cmd:Parameter value="5" name="version"/></cmd:ToolInChain></cmd:Toolchain></cmd:WebServiceToolChain></cmd:Components></cmd:CMD></Services></MetaData>
+  <TextCorpus xmlns="http://www.dspin.de/data/textcorpus" lang="de">
+    <textSource type="application/tei+xml;format-variant=tei-dta;tokenized=0">&lt;?xml version="1.0" encoding="utf-8"?>
+&lt;TEI xml:id="153_final-WIEDMER_Nathalie_Romeo__Freund_des_Mercutio__Semi_Automatisc" xmlns="http://www.tei-c.org/ns/1.0">
+&lt;teiHeader>
+&lt;fileDesc>
+&lt;titleStmt>
+&lt;title type="full">
+&lt;title type="main">Romeo, Freund des Mercutio: Semi-Automatische Extraktion von Beziehungen zwischen dramatischen Figuren&lt;/title>
+&lt;title type="sub"/>
+&lt;/title>
+&lt;author>
+&lt;persName>
+&lt;surname>Wiedmer&lt;/surname>
+&lt;forename>Nathalie&lt;/forename>
+&lt;/persName>
+&lt;affiliation>Universität Stuttgart, Deutschland&lt;/affiliation>
+&lt;email>nathalie.wiedmer@ims.uni-stuttgart.de&lt;/email>
+&lt;/author>
+&lt;author>
+&lt;persName>
+&lt;surname>Pagel&lt;/surname>
+&lt;forename>Janis&lt;/forename>
+&lt;/persName>
+&lt;affiliation>Universität Stuttgart, Deutschland&lt;/affiliation>
+&lt;email>janis.pagel@ims.uni-stuttgart.de&lt;/email>
+&lt;/author>
+&lt;author>
+&lt;persName>
+&lt;surname>Reiter&lt;/surname>
+&lt;forename>Nils&lt;/forename>
+&lt;/persName>
+&lt;affiliation>Universität Stuttgart, Deutschland; Universität Köln, Deutschland&lt;/affiliation>
+&lt;email>nils.reiter@uni-koeln.de&lt;/email>
+&lt;/author>
+&lt;/titleStmt>
+&lt;editionStmt>
+&lt;edition>
+&lt;date>2019-12-20T12:24:07.696000000&lt;/date>
+&lt;/edition>
+&lt;/editionStmt>
+&lt;publicationStmt>
+&lt;publisher>Universität Paderborn&lt;/publisher>
+&lt;address>
+&lt;addrLine>Warburger Str. 100&lt;/addrLine>
+&lt;addrLine>33098 Paderborn&lt;/addrLine>
+&lt;addrLine>Deutschland&lt;/addrLine>
+&lt;/address>
+&lt;/publicationStmt>
+&lt;sourceDesc>
+&lt;p>Converted from an OASIS Open Document&lt;/p>
+&lt;/sourceDesc>
+&lt;/fileDesc>
+&lt;encodingDesc>
+&lt;appInfo>
+&lt;application ident="DHCONVALIDATOR" version="1.22">
+&lt;label>DHConvalidator&lt;/label>
+&lt;/application>
+&lt;/appInfo>
+&lt;/encodingDesc>
+&lt;profileDesc>
+&lt;textClass>
+&lt;keywords n="category" scheme="ConfTool">
+&lt;term>Paper&lt;/term>
+&lt;/keywords>
+&lt;keywords n="subcategory" scheme="ConfTool">
+&lt;term>Vortrag&lt;/term>
+&lt;/keywords>
+&lt;keywords n="keywords" scheme="ConfTool">
+&lt;term>Figurenbeziehungen&lt;/term>
+&lt;term>Figurenverzeichnis&lt;/term>
+&lt;term>Dramen&lt;/term>
+&lt;term>Dramenanalyse&lt;/term>
+&lt;term>GerDraCor&lt;/term>
+&lt;/keywords>
+&lt;keywords n="topics" scheme="ConfTool">
+&lt;term>Beziehungsanalyse&lt;/term>
+&lt;term>Annotieren&lt;/term>
+&lt;term>Literatur&lt;/term>
+&lt;term>Text&lt;/term>
+&lt;/keywords>
+&lt;/textClass>
+&lt;/profileDesc>
+&lt;/teiHeader>
+&lt;text>
+&lt;body>
+&lt;div rend="DH-Heading" type="div1">
+&lt;head>Einleitung&lt;/head>
+&lt;!-- &lt;p>Abbildung 1: Figurenverzeichnis in Die Räuber (Friedrich Schiller, 1781)&lt;/p> -->
+&lt;p>In diesem Beitrag stellen wir eine Methode vor, um Informationen über Figurenrelationen in dramatischen Texten, die innerhalb der 
+&lt;hi rend="italic">dramatis personae&lt;/hi> (Figurenverzeichnis) sprachlich kodiert sind, zu extrahieren und maschinenlesbar im TEI/XML vorzuhalten. Das Figurenverzeichnis kann als Paratext (Genette 1993) dem Nebentext zugerechnet werden, ist jedoch literaturwissenschaftlich, von Einführungswerken abgesehen, noch so gut wie nicht erschlossen.&lt;ref n="1" target="ftn1"/> Das Figurenverzeichnis steht zwar unabhängig vom eigentlichen Text am Anfang, kann jedoch bereits Figuren- bzw. Textwissen vermitteln, indem die Figuren nach sozial-politischem Stand, Familienzugehörigkeit oder nach anderen Gruppierungen geordnet sind (vgl. Abbildung 1). Häufig lässt sich an der Positionierung eines Names im Figurenverzeichnis auch die Wichtigkeit der betreffenden Figur im Drama ablesen (Pangallo 2015, 91). Durch diese Strukturierung ist es teilweise möglich, schon vorab auf zentrale Konfliktpotentiale des Textes zu schließen (Jeßing 2015, 79–80). Darüberhinaus kann das Figurenverzeichnis laut Pfister und Asmuth auch der Ort erster auktorialer Bewertungen oder Hinweise sein und dient somit nicht nur der reinen Vorstellung der Figuren und ihrer Strukturen untereinander (Pfister 2001, 95; Asmuth 2016, 85).
+&lt;/p>
+&lt;p>
+&lt;figure>
+&lt;graphic url="153_final-11dc397dbb70bbc07d01aca6df55a328.jpg"/>
+&lt;head> Abbildung 1: Figurenverzeichnis in Die Räuber (Friedrich Schiller, 1781)&lt;/head>
+&lt;/figure>
+&lt;/p>
+&lt;p>Das Verfahren – und dessen Implementierung in einem Python-Skript – ist auch für in Zukunft digitalisierte Dramen anwendbar, und wird von uns als quelloffene Software zur Verfügung gestellt. Es ist vergleichsweise einfach auf neue Sprachstufen oder Genres anpassbar und liefert – auch bei nicht-perfekten Ergebnissen – eine gute Vorlage. Eine Evaluation des Verfahrens erfolgt auf ungesehenen Testdaten. Außerdem veröffentlichen wir einen Datensatz mit extrahierten Figurenrelationen aus deutschsprachigen Dramen, die manuell validiert und korrigiert wurden. Diese Daten werden zur einfachen und breiten Nutzung im TEI-Format in das GerDraCor&lt;ref n="2" target="ftn2"/> eingespeist. Schlussendlich beschreiben wir beispielhaft zwei Analyseszenarien in denen die Daten neue Einblicke bieten (können).
+&lt;/p>
+&lt;/div>
+&lt;div rend="DH-Heading" type="div1">
+&lt;head>Automatische Extraktion von Figurenrelationen&lt;/head>
+&lt;p>Unsere Methode unterscheidet zwischen sieben Kategorien von Figurenrelationen (Tabelle 1). Ausschlaggebend für die Zuordnung zu einer der Kategorien sind Signalwörter wie “Vater”, “Kammerdiener”, “Geschwister” etc. Diese Signalwörter werden in einer kontextfreien Grammatik der entsprechenden Kategorie zugeordnet.&lt;/p>
+&lt;!-- &lt;p>Tabelle 1: Figurenrelationen&lt;/p> -->
+&lt;table rend="frame" xml:id="Tabelle1">
+&lt;head> Tabelle 1: Figurenrelationen&lt;/head>
+&lt;row>
+&lt;cell>Relationen Label&lt;/cell>
+&lt;cell>gerichtet/ungerichtet&lt;/cell>
+&lt;cell>Beschreibung&lt;/cell>
+&lt;/row>
+&lt;row>
+&lt;cell>parent_of&lt;/cell>
+&lt;cell>directed&lt;/cell>
+&lt;cell>Eine Figur ist Elternteil einer anderen&lt;/cell>
+&lt;/row>
+&lt;row>
+&lt;cell>lover_of&lt;/cell>
+&lt;cell>directed&lt;/cell>
+&lt;cell>Liebesbeziehungen (unverheiratet)&lt;/cell>
+&lt;/row>
+&lt;row>
+&lt;cell>related_with&lt;/cell>
+&lt;cell>directed&lt;/cell>
+&lt;cell>Familienbeziehungen (außer Eheleute)&lt;/cell>
+&lt;/row>
+&lt;row>
+&lt;cell>associated_with&lt;/cell>
+&lt;cell>directed&lt;/cell>
+&lt;cell>Figuren, die miteinander anderweitig verbunden sind (z.B. Diener, Kindermädchen etc.)&lt;/cell>
+&lt;/row>
+&lt;row>
+&lt;cell>siblings&lt;/cell>
+&lt;cell>undirected&lt;/cell>
+&lt;cell>Figuren, die mindestens ein gemeinsames Elternteil haben&lt;/cell>
+&lt;/row>
+&lt;row>
+&lt;cell>spouses&lt;/cell>
+&lt;cell>undirected&lt;/cell>
+&lt;cell>verheiratete oder verlobte Figuren&lt;/cell>
+&lt;/row>
+&lt;row>
+&lt;cell>friends&lt;/cell>
+&lt;cell>undirected&lt;/cell>
+&lt;cell>Freundschaftsbeziehungen&lt;/cell>
+&lt;/row>
+&lt;/table>
+&lt;!-- Text vor Tabelle geschoben. -->
+&lt;p>Kontextfreie Grammatiken bezeichnen in der Informatik eine Sammlung aller syntaktisch korrekten Programme einer Programmiersprache (Böckenhauer und Hromkovič 2013, 177). Die formalisierte Art, in der die Grammatik alle Regeln einer Programmiersprache enthält, erlaubt es, automatisierte Syntaxanalysen von Programmen durchzuführen (Böckenhauer und Hromkovič 2013, 177). Die Regeln werden mit Hilfe zweier Alphabete beschrieben: Das Terminalalphabet enthält alle Wörter einer Sprache, wohingegen das Nichtterminalalphabet Variablen enthält, die vorgeben, auf welche Art und Weise die Wörter kombiniert werden können (Böckenhauer und Hromkovič 2013, 178).&lt;/p>
+&lt;p>Wir nutzen eine solche Grammatik, um drei verschiedene Zeilenarten im Figurenverzeichnis zu unterscheiden, bei denen es sich um Nichtterminale handelt. Alle in den Sätzen vorkommenden Tokens sind Terminale, deren Kombination und Anzahl Aufschluss darüber gibt, um was für eine Art von Zeile es sich jeweils handelt. Auf diese Weise können auch zeilenübergreifende Relationen erkannt werden.&lt;/p>
+&lt;p>Zu Beginn des Programmablaufs werden die in GerDraCor vorhandenen Figuren-IDs zusammen mit dem Figurenverzeichnis ausgelesen und gespeichert. Da wir die Beziehungen zwischen den Figuren ausschließlich anhand der Angaben im Figurenverzeichnis konstruieren, muss der Dramentext nicht extra eingelesen werden. Daraus ergibt sich die Beschränkung, dass jegliche Beziehungen, die nicht im Figureverzeichnis explizit gemacht werden, vom Programm auch nicht erkannt werden können. Es geht demnach ausschließlich darum, das Personenverzeichnis maschinenlesbar und -interpretierbar zu machen. So ignoriert das Programm beispielsweise auch alle Zeilen, die eine Gruppe von Figuren als Kollektiv einführt, da diese als “Nummern oder als anonyme Angehörige von Untergruppen” (Schlaffer 1972, 11) meistens keine eigenen Namen haben und auch keine explizit gemachten Beziehungen.&lt;ref n="3" target="ftn3"/>
+&lt;/p>
+&lt;p>Anschließend werden alle Tokens jeder Zeile des Figurenverzeichnisses daraufhin untersucht, ob es sich dabei um Figurennennungen oder Signalwörter handelt und die Grammatik einem Parser übergeben, der die Zeilen des Figurenverzeichnisses in Baumstrukturen überführt (Abbildung 2).&lt;/p>
+&lt;p>
+&lt;figure>
+&lt;graphic url="153_final-71525d75afbb511e51085062cfc0b2ba.jpg"/>
+&lt;head>Abbildung 2: Zwei reduzierte Baumstrukturen für Figuren aus Nathan der Weise. &lt;/head>
+&lt;/figure>
+&lt;/p>
+&lt;!-- &lt;p>Abbildung 2: Zwei reduzierte Baumstrukturen für Figuren aus Nathan der Weise.&lt;/p> -->
+&lt;p>Aus den erstellten Baumstrukturen werden einzelne Informationen ausgelesen, die grundlegend für die Erkennung der Figurenrelationen sind. Zuerst wird überprüft, wie viele IDs sich in einer Zeile befinden. Die erste oder einzige wird zur Erstellung späterer Relationen abgespeichert. Befindet sich in einer Zeile zusätzlich zu einer ID noch ein Signalwort für eine Figurenrelation, bezieht sich die Zeile in der Regel auf die vorangegangene, wie beispielsweise in 
+                    &lt;hi rend="italic">Nathan der Weise&lt;/hi>:
+                &lt;/p>
+&lt;p>&amp;lt;castItem corresp="#saladin"&amp;gt;Sultan Saladin.&amp;lt;/castItem&amp;gt;&lt;/p>
+&lt;p>&amp;lt;castItem corresp="#sittah"&amp;gt;Sittah, seine Schwester.&amp;lt;/castItem&amp;gt;&lt;/p>
+&lt;p>Die zweite Zeile enthält neben dem Namen noch das Signalwort “Schwester”, das auf die Beziehungsart siblings hinweist, eine ungerichtete Relation. Da keine zweite Figurenbezeichnung in der Zeile vorkommt, entnimmt das Programm als zweiten Part für die Geschwisterbeziehung den Namen bzw. die daraus abgeleitete ID saladin aus der vorherigen Zeile:&lt;/p>
+&lt;p>&amp;lt;relation name="siblings" mutual="#sittah #saladin" /&amp;gt;&lt;/p>
+&lt;p>Wenn die beiden benötigten IDs für das Erstellen der Figurenrelation feststehen, wird die Art der Relation durch das Auslesen des Signalworts aus der Baumstruktur festgestellt. Danach werden daraus die Zeilen mit den Figurenrelationen erstellt und diese anschließend in die jeweilige TEI-Version des Textes geschrieben.&lt;/p>
+&lt;p>Befindet sich in einer Zeile eine zweite Figuren-ID, bezieht sich die Zeile nicht auf eine vorangegangene, sondern stellt selbst den zweite Bezugspunkt der Relation. Das ist beispielsweise bei der Figur “Camillo Rota” in 
+                    &lt;hi rend="italic">Emilia Galotti&lt;/hi> der Fall:
+                &lt;/p>
+&lt;p>&amp;lt;castItem corresp="#camillo_rota"&amp;gt;Camillo Rota, einer von des Prinzen Räten.&amp;lt;/castItem&amp;gt;&lt;/p>
+&lt;p>Die erste erkannte ID ist camillo_rota, die zweite der_prinz, abgeleitet aus “des Prinzen”. Die IDs werden in gerichtete Relationen mit aktivem und passivem Part überführt:&lt;/p>
+&lt;p>&amp;lt;relation name="associated_with" active="#camillo_rota" passive="#der_prinz" /&amp;gt;&lt;/p>
+&lt;p>Das Programm arbeitet dabei ausschließlich mit den IDs. Dafür ist es nicht nötig, dass Figurennamen explizit als Namen oder Adelstitel als Titel erkannt werden. Es geht ausschließlich darum aus den einzelnen Wörtern einer Zeile im Figurenverzeichnis Namen bzw. Namensteile und Titelangaben herauszufiltern, die den IDs entsprechen, um die Zeilen einer oder mehreren Figuren zuordnen zu können.&lt;/p>
+&lt;p>Um auch IDs zu erkennen, die sich geringfügig von den Namensnennungen im Figurenverzeichnis unterscheiden, überprüft das Programm pro Wort eine Reihe an Varianten. So trennt es beispielsweise vom oben gennannten Wort “Prinzen” das Suffix ab und überprüft, ob ein Artikel Teil der ID ist. So kann “des Prinzen” der ID “der_prinz” zugeordnet werden. In manchen Fällen funktioniert diese Abwandlung aber nicht so reibungslos. In 
+                    &lt;hi rend="italic">Der Eheteufel auf Reisen&lt;/hi> wird eine Figur im Figurenverzeichnis mit dem Namen “Gustel” eingeführt, wohingegen die ID „gustchen“ lautet. Die ID orientiert sich hier an der Namensform, die im Stück tatsächlich verwendet wird und nicht an der Bezeichnung im Figurenverzeichnis. Das führt dazu, dass das Programm die ID “gustchen” nicht dem Wort “Gustel” zuordnen kann, da sie sich zu stark unterscheiden.
+                &lt;/p>
+&lt;/div>
+&lt;div rend="DH-Heading" type="div1">
+&lt;head>Evaluation&lt;/head>
+&lt;p>Um die Methode zu evaluieren, wurden die automatisch erzeugten Relationen manuell nachkorrigiert und so ein Goldstandart erzeugt. Im Schnitt bearbeiteten die Korrektoren 12 Texte pro Stunde. Beim Abgleich der automatisch erzeugten Ergebnisse mit dem Goldstandart lag der Macro-Average-Recall Wert bei 0,3 (Standardabweichung: 0,3) und der Wert von Macro-Average-Precision bei 0,55 (Standardabweichung: 0,4), was einen Macro-Average-F-Score von 0,49 (Standardabweichung: 0,25) ergibt.&lt;/p>
+&lt;/div>
+&lt;div rend="DH-Heading" type="div1">
+&lt;head>Korpus&lt;/head>
+&lt;p>GerDraCor ist ein deutsches Dramenkorpus, das nach TEI-P5 Standarts kodiert ist und im Dezember 2019 474 Dramen enthält, die im Zeitraum von 1730 bis 1940 veröffentlicht wurden (Fischer u. a. 2019). Es ist Teil des größeren DraCor (Fischer u. a. 2019), das als 
+                    &lt;hi rend="italic">Programmable Corpus&lt;/hi> darauf ausgelegt ist, durch Community-Anstrengungen korrigiert und verbessert werden zu können (Fischer u. a. 2019, 195). Da auf einem Fork von GerDraCor gearbeitet wurde, können die automatisch erzeugten Figurenrelationen dem Korpus unproblematisch hinzugefügt werden. Zusätzlich wurden die Relationen, wie bereits beschrieben, manuell nachkorrigiert, um eine erhöhte Qualität für die Nachnutzung zu gewährleisten.
+                &lt;/p>
+&lt;p>Im Rahmen der manuellen Nachkorrektur wurden außerdem interessante Fälle identifiziert. So wird etwa eine Gruppe von Figuren in dem oben abgebildeten Figurenverzeichnis von Schillers 
+                    &lt;hi rend="italic">Die Räuber&lt;/hi> als “Libertiner,
+		    nachher Banditen” bezeichnet, wodurch
+		    Informationen aus der späteren Handlung des
+		    Stückes vorweggenommen werden. Diese Art der
+		    Vorwegnahme findet sich außerdem in Stücken von
+		    Grabbe
+		    (&lt;hi rend="italic">Herzog Theodor von
+		    Gothland&lt;/hi>, Panizza
+		    (&lt;hi rend="italic">Das Liebeskonzil&lt;/hi>) und
+		    Uhland
+		    (&lt;hi rend="italic">Ludwig der Bayer&lt;/hi>). In Kaisers 
+                    &lt;hi rend="italic">Stadt und Land&lt;/hi> hingegen wird mit der Zeile “Erster Bergmann, später Michael” keine Entwicklung in der Handlung, sondern eine Veränderung der Sprecherbezeichnung markiert. Vorwegnahmen mit Bezug auf veränderliche Beziehungen zwischen Figuren konnten nicht festgestellt werden.
+                &lt;/p>
+&lt;/div>
+&lt;div rend="DH-Heading" type="div1">
+&lt;head>Analyseszenarien&lt;/head>
+&lt;p>Wir stellen im folgenden zwei Analysen vor, in denen von den automatisch extrahierten Relationen Gebrauch gemacht wird, sowohl eine Einzeltext- als auch eine Korpusanalyse. Diese illustrieren Möglichkeiten, die Relationen in der Textanalyse zu berücksichtigen.&lt;/p>
+&lt;p>Im ersten Beispiel betrachten wir Shakespeares 
+                    &lt;hi rend="italic">Romeo and Juliet&lt;/hi> in der derzeit auf dracor.org verfügbaren Fassung.&lt;ref n="4" target="ftn4"/> Zunächst können die Relationen visualisiert werden. Abbildung 3 zeigt das Figurennetzwerk nach Kopräsenz auf der linken und das Netzwerk, das sich aus den sozialen Beziehungen ergibt auf der rechten Seite. Zur besseren Lesbarkeit wurde ein geeigneter Layout-Algorithmus angewendet. Dabei ist zunächst interessant, dass die beiden Familien keineswegs unverbunden sind: Über Mercutio (Freund von Romeo) und Paris (Verlobter von Julia) sind beide mit dem Prinzen verbunden.
+                &lt;/p>
+&lt;p>
+&lt;figure>
+&lt;graphic url="153_final-d70fe97d295fea2ed5e791d5e2c39034.png"/>
+&lt;head>Abbildung 3: Figurennetzwerke nach Kopräsenz (oben) und Relationen (unten). Zur besseren Übersichtlichkeit wurden die Figuren auf feste Positionen gesetzt, die oben und unten gleich sind. Bezeichnungen werden nur gezeigt wenn der Grad groß genug ist (oben) oder sie an einer Beziehung beteiligt sind (unten). &lt;/head>
+&lt;/figure>
+&lt;/p>
+&lt;!-- &lt;p>Abbildung 3: Figurennetzwerke nach Kopräsenz (oben) und Relationen (unten). Zur besseren Übersichtlichkeit wurden die Figuren auf feste Positionen gesetzt, die oben und unten gleich sind. Bezeichnungen werden nur gezeigt wenn der Grad groß genug ist (oben) oder sie an einer Beziehung beteiligt sind (unten).&lt;/p> -->
+&lt;p>Auch wenn Abbildung 3 eine gewisse Symmetrie suggeriert, ist diese keineswegs gegeben wenn wir die Redeanteile nach Familien aufschlüsseln, wie es aus den Annotationen ebenfalls direkt möglich ist. Abbildung 4 zeigt die aggregierten Redeanteile der Figuren, wobei Figuren, die durch Verwandtschaft oder Arbeitsverhältnis zu einer der Familien gehören, zusammengefasst wurden (mit Ausnahme von Mercutio und Paris, die beide mit dem Prinzen verwandt sind). Es zeigt sich, dass Angehörige der Familie Capulet etwas weniger als doppelt so viele Wörter äußern als Angehörige der Familie Montague.&lt;/p>
+&lt;p>
+&lt;figure>
+&lt;graphic url="153_final-607eb2e782c265e4776a513f48c3ed4f.jpg"/>
+&lt;head>Abbildung 4:  Redeanteile nach Familie &lt;/head>
+&lt;/figure>
+&lt;/p>
+&lt;!-- &lt;p>Abbildung 4: Redeanteile nach Familie&lt;/p> -->
+&lt;p>
+&lt;figure>
+&lt;graphic url="153_final-d10d83ab61296d9578cd75456c1fa087.jpg"/>
+&lt;head>Abbildung 5: Verteilung der Relationen im Gesamtkorpus&lt;/head>
+&lt;/figure>
+&lt;/p>
+&lt;!-- &lt;p>Abbildung 5: Verteilung der Relationen im Gesamtkorpus&lt;/p> -->
+&lt;p>Betrachtet man das annotierte Gesamtkorpus stellt man fest, dass die Relationen ungleich verteilt sind. Während Ehen/Verlobungen, Elternschaft und sonstige Assoziationen relativ häufig vorkommen, spielen Geliebte, sonstige Verwandtschaften, Freundschaften und Geschwister eine vergleichsweise kleine Rolle.&lt;ref n="5" target="ftn5"/>
+&lt;/p>
+&lt;p>In Abbildung 6 sehen wir die Anzahl der Relationen bestimmter Typen
+ins Verhältnis gesetzt zur Großgattung (Komödie/Tragödie). Dabei
+wurden die Angaben auf den Titeln der Dramen übernommen und leicht
+vereinheitlicht (z.B. Bürgerliches Trauerspiel &lt;hi rend="math">→&lt;/hi> Tragödie oder Zauberlustspiel &lt;hi rend="math">→&lt;/hi> Komödie). Dabei ist zu konstatieren, dass Median und erstes Quartil bei 0 für alle Dramen bei 0 liegen: Viele Dramen weisen keine Beziehungsdefinition auf (oder sie konnten nicht automatisch identifiziert werden, siehe Fußnote ). Größere oder signifikante Abweichungen zwischen den Gattungen gibt es nicht, egal welche Relation betrachtet wird. Lediglich die Relation spouses scheint im Figurenverzeichnis von Komödien häufiger genannt zu werden.&lt;/p>
+&lt;p>
+&lt;figure>
+&lt;graphic url="153_final-4a1128c14a9f21d613a3039e495d24a0.png"/>
+&lt;head>Abbildung 6:  Anzahl typisierter Relationen nach Gattung &lt;/head>
+&lt;/figure>
+&lt;/p>
+&lt;!-- &lt;p>Abbildung 6: Anzahl typisierter Relationen nach Gattung&lt;/p> -->
+&lt;p>
+&lt;figure>
+&lt;graphic url="153_final-b60d151aa656159ec80dfd80ce35709d.png"/>
+&lt;head>Abbildung 7: Anzahl typisierter Relationen nach Autor. Zur besseren Übersicht wurden nur Autoren berücksichtigt, die mindestens durch fünf Dramen vertreten sind&lt;/head>
+&lt;/figure>
+&lt;/p>
+&lt;!-- &lt;p>Abbildung 7: Anzahl typisierter Relationen nach Autor. Zur besseren Übersicht wurden nur Autoren berücksichtigt, die mindestens durch fünf Dramen vertreten sind&lt;/p> -->
+&lt;p>Eine Verteilung der genannten Relationen nach Autor zeichnet jedoch ein anderes Bild (Abbildung 7). Bestimmte Autoren, vor allem Ludwig Anzengruber (1839-1889) und Johann Nestroy (1801-1862), haben klare Tendenzen dazu, mehr Relationen im Figurenverzeichnis zu nennen. Beide verfassen tendenziell Possen und Komödien.&lt;/p>
+&lt;/div>
+&lt;div rend="DH-Heading" type="div1">
+&lt;head>Fazit&lt;/head>
+&lt;p>Mit den von uns bereitgestellten maschinenlesbaren Informationen ermöglichen wir Analysen dramatischer Figuren, die die als bekannt vorausgesetzten Informationen im Figurenverzeichnis mit berücksichtigen können. Neben den oben skizzierten Analysen können die Informationen auch in inhaltliche Analysen einfließen und etwa die soziale Nähe mit der Bühnennähe korrelieren o.ä.&lt;/p>
+&lt;p>Kontextfreie Grammatiken haben sich hier – trotz der bekannten Schwächen im Bezug auf natürliche Sprache – als effizienter Formalismus herausgestellt, um die Figurenverzeichnisse maschinenlesbar zu machen. Wir halten dieses Verfahren für geeignet, um auch in anderen Kontexten mit semi-strukturierten Textdaten zu arbeiten, wo aufgrund der begrenzten Menge ein maschinelles Lernverfahren nur bedingt zum Einsatz kommen kann.&lt;/p>
+&lt;/div>
+&lt;/body>
+&lt;back>
+&lt;div type="notes">
+&lt;note n="1" rend="footnote text" xml:id="ftn1">
+      Beispielsweise  spielt das Figurenverzeichnis im kürzlich erschienenen
+      (Tonger-Erk, Werber, und Baum 2018), aber auch in (Genette 1993)
+      quasi keine Rolle.
+    &lt;/note>
+&lt;note n="2" rend="footnote text" xml:id="ftn2">
+&lt;ref target="https://dracor.org/">https://dracor.org&lt;/ref>
+&lt;/note>
+&lt;note n="3" rend="footnote text" xml:id="ftn3">
+      Für mehr     Informationen vergleiche (Schlaffer 1972, 11)
+    &lt;/note>
+&lt;note n="4" rend="footnote text" xml:id="ftn4">
+&lt;ptr target="https://github.com/dracor-org/shakedracor/blob/d569dc9886b3d1951f23b0454a3d7103e4cdf1bb/tei/romeo-and-juliet.xml"/>
+&lt;/note>
+&lt;note n="5" rend="footnote text" xml:id="ftn5">
+      Die konkreten Ergebnisse wurden auf den &lt;hi rend="italic">vollautomatisch erzeugten Relationen&lt;/hi> erzielt.
+   
+&lt;/note>
+&lt;/div>
+&lt;div type="bibliogr">
+&lt;listBibl>
+&lt;head>Bibliographie&lt;/head>
+&lt;bibl>
+&lt;hi rend="bold"> Asmuth, Bernhard. &lt;/hi> (2016). 
+  &lt;hi rend="italic">Einführung in die Dramenanalyse&lt;/hi>. Stuttgart: J.B. Metzler Verlag.
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold"> Böckenhauer, Hans-Joachim /  Juraj Hromkovič &lt;/hi> (2013): 
+  &lt;hi rend="italic">Formale Sprachen: Endliche Automaten, Grammatiken, lexikalische und syntaktische Analyse&lt;/hi>. Zürich: Springer.
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold"> Fischer, Frank / Ingo Börner / Mathias Göbel /
+  Angelika Hechtl  / Christopher Kittel / Carsten Milling /  Peer
+  Trilcke&lt;/hi>
+  (2019):  „Programmable Corpora – Die digitale Literaturwissenschaft zwischen Forschung und Infrastruktur am Beispiel von DraCor“. In 
+  &lt;hi rend="italic">Proceedings of DHd&lt;/hi>. 
+  &lt;ptr target="https://doi.org/10.5281/zenodo.2596095"/>.
+&lt;/bibl>
+&lt;bibl&gt;
+&lt;hi rend="bold"> Genette, Gérard &lt;/hi> (1993): 
+  &lt;hi rend="italic">Palimpseste. Die Literatur auf zweiter Stufe&lt;/hi>. Frankfurt am Main: Suhrkamp.
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold"> Jeßing, Benedikt&lt;/hi> (2015): 
+  &lt;hi rend="italic">Dramenanalyse. Eine Einführung&lt;/hi>. Berlin: Erich Schmidt Verlag.
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold"> Pangallo, Matteo&lt;/hi> (2015):  „‚I will keep and character that name‘: Dramatis Personae Lists in Early Modern Manuscript Plays“. 
+  &lt;hi rend="italic">Early Theatre&lt;/hi> 18 (2): 87–118. &lt;ptr target="https://doi.org/10.12745/et.18.2.1166"/>.
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold"> Pfister, Manfred&lt;/hi> (2001): 
+  &lt;hi rend="italic">Das Drama&lt;/hi>. München: Wilhelm Fink.
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold"> Schlaffer, Hannelore&lt;/hi> (1972):
+  &lt;hi rend="italic">Dramenform und Klassenstruktur. Eine Analyse der dramatis persona "Volk"&lt;/hi>. Stuttgart: J.B. Metzler Verlag.
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold"> Tonger-Erk, Lily  /  Nils Werber /  Constanze Baum (Hrsg.)&lt;/hi> (2018):  „Hauptsache Nebentext. Regiebemerkungen im Drama“. 
+  &lt;hi rend="italic">Zeitschrift für Literaturwissenschaft und Linguistik&lt;/hi> 48 (3).
+&lt;/bibl>
+&lt;/listBibl>
+&lt;/div>
+&lt;/back>
+&lt;/text>
+&lt;/TEI>
+    </textSource>
+    <text>
+
+
+In diesem Beitrag stellen wir eine Methode vor, um Informationen über Figurenrelationen in dramatischen Texten, die innerhalb der  dramatis personae (Figurenverzeichnis) sprachlich kodiert sind, zu extrahieren und maschinenlesbar im TEI/XML vorzuhalten. Das Figurenverzeichnis kann als Paratext (Genette 1993) dem Nebentext zugerechnet werden, ist jedoch literaturwissenschaftlich, von Einführungswerken abgesehen, noch so gut wie nicht erschlossen.
+
+ Das Figurenverzeichnis steht zwar unabhängig vom eigentlichen Text am Anfang, kann jedoch bereits Figuren- bzw. Textwissen vermitteln, indem die Figuren nach sozial-politischem Stand, Familienzugehörigkeit oder nach anderen Gruppierungen geordnet sind (vgl. Abbildung 1). Häufig lässt sich an der Positionierung eines Names im Figurenverzeichnis auch die Wichtigkeit der betreffenden Figur im Drama ablesen (Pangallo 2015, 91). Durch diese Strukturierung ist es teilweise möglich, schon vorab auf zentrale Konfliktpotentiale des Textes zu schließen (Jeßing 2015, 79–80). Darüberhinaus kann das Figurenverzeichnis laut Pfister und Asmuth auch der Ort erster auktorialer Bewertungen oder Hinweise sein und dient somit nicht nur der reinen Vorstellung der Figuren und ihrer Strukturen untereinander (Pfister 2001, 95; Asmuth 2016, 85). 
+
+
+ 
+
+Das Verfahren – und dessen Implementierung in einem Python-Skript – ist auch für in Zukunft digitalisierte Dramen anwendbar, und wird von uns als quelloffene Software zur Verfügung gestellt. Es ist vergleichsweise einfach auf neue Sprachstufen oder Genres anpassbar und liefert – auch bei nicht-perfekten Ergebnissen – eine gute Vorlage. Eine Evaluation des Verfahrens erfolgt auf ungesehenen Testdaten. Außerdem veröffentlichen wir einen Datensatz mit extrahierten Figurenrelationen aus deutschsprachigen Dramen, die manuell validiert und korrigiert wurden. Diese Daten werden zur einfachen und breiten Nutzung im TEI-Format in das GerDraCor
+
+ eingespeist. Schlussendlich beschreiben wir beispielhaft zwei Analyseszenarien in denen die Daten neue Einblicke bieten (können). 
+
+ 
+
+
+Unsere Methode unterscheidet zwischen sieben Kategorien von Figurenrelationen (Tabelle 1). Ausschlaggebend für die Zuordnung zu einer der Kategorien sind Signalwörter wie “Vater”, “Kammerdiener”, “Geschwister” etc. Diese Signalwörter werden in einer kontextfreien Grammatik der entsprechenden Kategorie zugeordnet.
+
+    
+
+Kontextfreie Grammatiken bezeichnen in der Informatik eine Sammlung aller syntaktisch korrekten Programme einer Programmiersprache (Böckenhauer und Hromkovič 2013, 177). Die formalisierte Art, in der die Grammatik alle Regeln einer Programmiersprache enthält, erlaubt es, automatisierte Syntaxanalysen von Programmen durchzuführen (Böckenhauer und Hromkovič 2013, 177). Die Regeln werden mit Hilfe zweier Alphabete beschrieben: Das Terminalalphabet enthält alle Wörter einer Sprache, wohingegen das Nichtterminalalphabet Variablen enthält, die vorgeben, auf welche Art und Weise die Wörter kombiniert werden können (Böckenhauer und Hromkovič 2013, 178).
+
+ 
+
+Wir nutzen eine solche Grammatik, um drei verschiedene Zeilenarten im Figurenverzeichnis zu unterscheiden, bei denen es sich um Nichtterminale handelt. Alle in den Sätzen vorkommenden Tokens sind Terminale, deren Kombination und Anzahl Aufschluss darüber gibt, um was für eine Art von Zeile es sich jeweils handelt. Auf diese Weise können auch zeilenübergreifende Relationen erkannt werden.
+
+ 
+
+Zu Beginn des Programmablaufs werden die in GerDraCor vorhandenen Figuren-IDs zusammen mit dem Figurenverzeichnis ausgelesen und gespeichert. Da wir die Beziehungen zwischen den Figuren ausschließlich anhand der Angaben im Figurenverzeichnis konstruieren, muss der Dramentext nicht extra eingelesen werden. Daraus ergibt sich die Beschränkung, dass jegliche Beziehungen, die nicht im Figureverzeichnis explizit gemacht werden, vom Programm auch nicht erkannt werden können. Es geht demnach ausschließlich darum, das Personenverzeichnis maschinenlesbar und -interpretierbar zu machen. So ignoriert das Programm beispielsweise auch alle Zeilen, die eine Gruppe von Figuren als Kollektiv einführt, da diese als “Nummern oder als anonyme Angehörige von Untergruppen” (Schlaffer 1972, 11) meistens keine eigenen Namen haben und auch keine explizit gemachten Beziehungen.
+
+ 
+
+ 
+
+Anschließend werden alle Tokens jeder Zeile des Figurenverzeichnisses daraufhin untersucht, ob es sich dabei um Figurennennungen oder Signalwörter handelt und die Grammatik einem Parser übergeben, der die Zeilen des Figurenverzeichnisses in Baumstrukturen überführt (Abbildung 2).
+
+
+  
+
+Aus den erstellten Baumstrukturen werden einzelne Informationen ausgelesen, die grundlegend für die Erkennung der Figurenrelationen sind. Zuerst wird überprüft, wie viele IDs sich in einer Zeile befinden. Die erste oder einzige wird zur Erstellung späterer Relationen abgespeichert. Befindet sich in einer Zeile zusätzlich zu einer ID noch ein Signalwort für eine Figurenrelation, bezieht sich die Zeile in der Regel auf die vorangegangene, wie beispielsweise in   Nathan der Weise:  
+&lt;castItem corresp="#saladin">Sultan Saladin.&lt;/castItem>
+&lt;castItem corresp="#sittah">Sittah, seine Schwester.&lt;/castItem>
+
+ 
+
+Die zweite Zeile enthält neben dem Namen noch das Signalwort “Schwester”, das auf die Beziehungsart siblings hinweist, eine ungerichtete Relation. Da keine zweite Figurenbezeichnung in der Zeile vorkommt, entnimmt das Programm als zweiten Part für die Geschwisterbeziehung den Namen bzw. die daraus abgeleitete ID saladin aus der vorherigen Zeile:
+
+ 
+&lt;relation name="siblings" mutual="#sittah #saladin" />
+
+ 
+
+Wenn die beiden benötigten IDs für das Erstellen der Figurenrelation feststehen, wird die Art der Relation durch das Auslesen des Signalworts aus der Baumstruktur festgestellt. Danach werden daraus die Zeilen mit den Figurenrelationen erstellt und diese anschließend in die jeweilige TEI-Version des Textes geschrieben.
+
+ 
+
+Befindet sich in einer Zeile eine zweite Figuren-ID, bezieht sich die Zeile nicht auf eine vorangegangene, sondern stellt selbst den zweite Bezugspunkt der Relation. Das ist beispielsweise bei der Figur “Camillo Rota” in   Emilia Galotti der Fall:  
+&lt;castItem corresp="#camillo_rota">Camillo Rota, einer von des Prinzen Räten.&lt;/castItem>
+
+ 
+
+Die erste erkannte ID ist camillo_rota, die zweite der_prinz, abgeleitet aus “des Prinzen”. Die IDs werden in gerichtete Relationen mit aktivem und passivem Part überführt:
+&lt;relation name="associated_with" active="#camillo_rota" passive="#der_prinz" />
+
+ 
+
+Das Programm arbeitet dabei ausschließlich mit den IDs. Dafür ist es nicht nötig, dass Figurennamen explizit als Namen oder Adelstitel als Titel erkannt werden. Es geht ausschließlich darum aus den einzelnen Wörtern einer Zeile im Figurenverzeichnis Namen bzw. Namensteile und Titelangaben herauszufiltern, die den IDs entsprechen, um die Zeilen einer oder mehreren Figuren zuordnen zu können.
+
+ 
+
+Um auch IDs zu erkennen, die sich geringfügig von den Namensnennungen im Figurenverzeichnis unterscheiden, überprüft das Programm pro Wort eine Reihe an Varianten. So trennt es beispielsweise vom oben gennannten Wort “Prinzen” das Suffix ab und überprüft, ob ein Artikel Teil der ID ist. So kann “des Prinzen” der ID “der_prinz” zugeordnet werden. In manchen Fällen funktioniert diese Abwandlung aber nicht so reibungslos. In   Der Eheteufel auf Reisen wird eine Figur im Figurenverzeichnis mit dem Namen “Gustel” eingeführt, wohingegen die ID „gustchen“ lautet. Die ID orientiert sich hier an der Namensform, die im Stück tatsächlich verwendet wird und nicht an der Bezeichnung im Figurenverzeichnis. Das führt dazu, dass das Programm die ID “gustchen” nicht dem Wort “Gustel” zuordnen kann, da sie sich zu stark unterscheiden.  
+
+
+  
+
+Um die Methode zu evaluieren, wurden die automatisch erzeugten Relationen manuell nachkorrigiert und so ein Goldstandart erzeugt. Im Schnitt bearbeiteten die Korrektoren 12 Texte pro Stunde. Beim Abgleich der automatisch erzeugten Ergebnisse mit dem Goldstandart lag der Macro-Average-Recall Wert bei 0,3 (Standardabweichung: 0,3) und der Wert von Macro-Average-Precision bei 0,55 (Standardabweichung: 0,4), was einen Macro-Average-F-Score von 0,49 (Standardabweichung: 0,25) ergibt.
+
+
+  
+
+GerDraCor ist ein deutsches Dramenkorpus, das nach TEI-P5 Standarts kodiert ist und im Dezember 2019 474 Dramen enthält, die im Zeitraum von 1730 bis 1940 veröffentlicht wurden (Fischer u. a. 2019). Es ist Teil des größeren DraCor (Fischer u. a. 2019), das als   Programmable Corpus darauf ausgelegt ist, durch Community-Anstrengungen korrigiert und verbessert werden zu können (Fischer u. a. 2019, 195). Da auf einem Fork von GerDraCor gearbeitet wurde, können die automatisch erzeugten Figurenrelationen dem Korpus unproblematisch hinzugefügt werden. Zusätzlich wurden die Relationen, wie bereits beschrieben, manuell nachkorrigiert, um eine erhöhte Qualität für die Nachnutzung zu gewährleisten.  
+
+ 
+
+Im Rahmen der manuellen Nachkorrektur wurden außerdem interessante Fälle identifiziert. So wird etwa eine Gruppe von Figuren in dem oben abgebildeten Figurenverzeichnis von Schillers   Die Räuber als “Libertiner, 		    nachher Banditen” bezeichnet, wodurch 		    Informationen aus der späteren Handlung des 		    Stückes vorweggenommen werden. Diese Art der 		    Vorwegnahme findet sich außerdem in Stücken von 		    Grabbe 		    (Herzog Theodor von 		    Gothland, Panizza 		    (Das Liebeskonzil) und 		    Uhland 		    (Ludwig der Bayer). In Kaisers   Stadt und Land hingegen wird mit der Zeile “Erster Bergmann, später Michael” keine Entwicklung in der Handlung, sondern eine Veränderung der Sprecherbezeichnung markiert. Vorwegnahmen mit Bezug auf veränderliche Beziehungen zwischen Figuren konnten nicht festgestellt werden.  
+
+
+  
+
+Wir stellen im folgenden zwei Analysen vor, in denen von den automatisch extrahierten Relationen Gebrauch gemacht wird, sowohl eine Einzeltext- als auch eine Korpusanalyse. Diese illustrieren Möglichkeiten, die Relationen in der Textanalyse zu berücksichtigen.
+
+ 
+
+Im ersten Beispiel betrachten wir Shakespeares   Romeo and Juliet in der derzeit auf dracor.org verfügbaren Fassung.
+
+ Zunächst können die Relationen visualisiert werden. Abbildung 3 zeigt das Figurennetzwerk nach Kopräsenz auf der linken und das Netzwerk, das sich aus den sozialen Beziehungen ergibt auf der rechten Seite. Zur besseren Lesbarkeit wurde ein geeigneter Layout-Algorithmus angewendet. Dabei ist zunächst interessant, dass die beiden Familien keineswegs unverbunden sind: Über Mercutio (Freund von Romeo) und Paris (Verlobter von Julia) sind beide mit dem Prinzen verbunden.  
+
+ 
+
+
+Auch wenn Abbildung 3 eine gewisse Symmetrie suggeriert, ist diese keineswegs gegeben wenn wir die Redeanteile nach Familien aufschlüsseln, wie es aus den Annotationen ebenfalls direkt möglich ist. Abbildung 4 zeigt die aggregierten Redeanteile der Figuren, wobei Figuren, die durch Verwandtschaft oder Arbeitsverhältnis zu einer der Familien gehören, zusammengefasst wurden (mit Ausnahme von Mercutio und Paris, die beide mit dem Prinzen verwandt sind). Es zeigt sich, dass Angehörige der Familie Capulet etwas weniger als doppelt so viele Wörter äußern als Angehörige der Familie Montague.
+
+ 
+
+
+Betrachtet man das annotierte Gesamtkorpus stellt man fest, dass die Relationen ungleich verteilt sind. Während Ehen/Verlobungen, Elternschaft und sonstige Assoziationen relativ häufig vorkommen, spielen Geliebte, sonstige Verwandtschaften, Freundschaften und Geschwister eine vergleichsweise kleine Rolle.
+
+ 
+
+ 
+
+In Abbildung 6 sehen wir die Anzahl der Relationen bestimmter Typen ins Verhältnis gesetzt zur Großgattung (Komödie/Tragödie). Dabei wurden die Angaben auf den Titeln der Dramen übernommen und leicht vereinheitlicht (z.B. Bürgerliches Trauerspiel → Tragödie oder Zauberlustspiel → Komödie). Dabei ist zu konstatieren, dass Median und erstes Quartil bei 0 für alle Dramen bei 0 liegen: Viele Dramen weisen keine Beziehungsdefinition auf (oder sie konnten nicht automatisch identifiziert werden, siehe Fußnote ). Größere oder signifikante Abweichungen zwischen den Gattungen gibt es nicht, egal welche Relation betrachtet wird. Lediglich die Relation spouses scheint im Figurenverzeichnis von Komödien häufiger genannt zu werden.
+
+
+  
+
+Eine Verteilung der genannten Relationen nach Autor zeichnet jedoch ein anderes Bild (Abbildung 7). Bestimmte Autoren, vor allem Ludwig Anzengruber (1839-1889) und Johann Nestroy (1801-1862), haben klare Tendenzen dazu, mehr Relationen im Figurenverzeichnis zu nennen. Beide verfassen tendenziell Possen und Komödien.
+
+
+  
+
+Mit den von uns bereitgestellten maschinenlesbaren Informationen ermöglichen wir Analysen dramatischer Figuren, die die als bekannt vorausgesetzten Informationen im Figurenverzeichnis mit berücksichtigen können. Neben den oben skizzierten Analysen können die Informationen auch in inhaltliche Analysen einfließen und etwa die soziale Nähe mit der Bühnennähe korrelieren o.ä.
+
+ 
+
+Kontextfreie Grammatiken haben sich hier – trotz der bekannten Schwächen im Bezug auf natürliche Sprache – als effizienter Formalismus herausgestellt, um die Figurenverzeichnisse maschinenlesbar zu machen. Wir halten dieses Verfahren für geeignet, um auch in anderen Kontexten mit semi-strukturierten Textdaten zu arbeiten, wo aufgrund der begrenzten Menge ein maschinelles Lernverfahren nur bedingt zum Einsatz kommen kann.
+
+
+
+
+Einleitung
+
+
+
+     
+
+
+
+ Abbildung 1: Figurenverzeichnis in Die Räuber (Friedrich Schiller, 1781)
+
+
+
+Automatische Extraktion von Figurenrelationen
+
+
+
+   
+ 
+Relationen Label
+ 
+gerichtet/ungerichtet
+ 
+Beschreibung
+
+ 
+parent_of
+ 
+directed
+ 
+Eine Figur ist Elternteil einer anderen
+
+ 
+lover_of
+ 
+directed
+ 
+Liebesbeziehungen (unverheiratet)
+
+ 
+related_with
+ 
+directed
+ 
+Familienbeziehungen (außer Eheleute)
+
+ 
+associated_with
+ 
+directed
+ 
+Figuren, die miteinander anderweitig verbunden sind (z.B. Diener, Kindermädchen etc.)
+
+ 
+siblings
+ 
+undirected
+ 
+Figuren, die mindestens ein gemeinsames Elternteil haben
+
+ 
+spouses
+ 
+undirected
+ 
+verheiratete oder verlobte Figuren
+
+ 
+friends
+ 
+undirected
+ 
+Freundschaftsbeziehungen
+
+
+
+
+ Tabelle 1: Figurenrelationen
+
+
+
+     
+
+
+
+Abbildung 2: Zwei reduzierte Baumstrukturen für Figuren aus Nathan der Weise. 
+
+
+
+Evaluation
+
+
+
+Korpus
+
+
+
+Analyseszenarien
+
+
+
+    
+
+
+
+Abbildung 3: Figurennetzwerke nach Kopräsenz (oben) und Relationen (unten). Zur besseren Übersichtlichkeit wurden die Figuren auf feste Positionen gesetzt, die oben und unten gleich sind. Bezeichnungen werden nur gezeigt wenn der Grad groß genug ist (oben) oder sie an einer Beziehung beteiligt sind (unten). 
+
+
+
+    
+
+
+
+Abbildung 4:  Redeanteile nach Familie 
+
+
+
+    
+
+
+
+Abbildung 5: Verteilung der Relationen im Gesamtkorpus
+
+
+
+     
+
+
+
+Abbildung 6:  Anzahl typisierter Relationen nach Gattung 
+
+
+
+    
+
+
+
+Abbildung 7: Anzahl typisierter Relationen nach Autor. Zur besseren Übersicht wurden nur Autoren berücksichtigt, die mindestens durch fünf Dramen vertreten sind
+
+
+
+Fazit
+
+
+
+  
+
+
+      Asmuth, Bernhard.  (2016).   Einführung in die Dramenanalyse. Stuttgart: J.B. Metzler Verlag.     Böckenhauer, Hans-Joachim /  Juraj Hromkovič  (2013):   Formale Sprachen: Endliche Automaten, Grammatiken, lexikalische und syntaktische Analyse. Zürich: Springer.     Fischer, Frank / Ingo Börner / Mathias Göbel /   Angelika Hechtl  / Christopher Kittel / Carsten Milling /  Peer   Trilcke   (2019):  „Programmable Corpora – Die digitale Literaturwissenschaft zwischen Forschung und Infrastruktur am Beispiel von DraCor“. In   Proceedings of DHd.   .     Genette, Gérard  (1993):   Palimpseste. Die Literatur auf zweiter Stufe. Frankfurt am Main: Suhrkamp.     Jeßing, Benedikt (2015):   Dramenanalyse. Eine Einführung. Berlin: Erich Schmidt Verlag.     Pangallo, Matteo (2015):  „‚I will keep and character that name‘: Dramatis Personae Lists in Early Modern Manuscript Plays“.   Early Theatre 18 (2): 87–118. .     Pfister, Manfred (2001):   Das Drama. München: Wilhelm Fink.     Schlaffer, Hannelore (1972):  Dramenform und Klassenstruktur. Eine Analyse der dramatis persona "Volk". Stuttgart: J.B. Metzler Verlag.     Tonger-Erk, Lily  /  Nils Werber /  Constanze Baum (Hrsg.) (2018):  „Hauptsache Nebentext. Regiebemerkungen im Drama“.   Zeitschrift für Literaturwissenschaft und Linguistik 48 (3).   
+
+ 
+
+
+
+       Beispielsweise  spielt das Figurenverzeichnis im kürzlich erschienenen       (Tonger-Erk, Werber, und Baum 2018), aber auch in (Genette 1993)       quasi keine Rolle.  
+
+
+
+  
+https://dracor.org
+  
+
+
+
+       Für mehr     Informationen vergleiche (Schlaffer 1972, 11)  
+
+
+
+    
+
+
+
+       Die konkreten Ergebnisse wurden auf den vollautomatisch erzeugten Relationen erzielt.  
+
+
+
+Bibliographie
+    </text>
+    <tc:tokens xmlns:tc="http://www.dspin.de/data/textcorpus">
+      <tc:token ID="w1">In</tc:token>
+      <tc:token ID="w2">diesem</tc:token>
+      <tc:token ID="w3">Beitrag</tc:token>
+      <tc:token ID="w4">stellen</tc:token>
+      <tc:token ID="w5">wir</tc:token>
+      <tc:token ID="w6">eine</tc:token>
+      <tc:token ID="w7">Methode</tc:token>
+      <tc:token ID="w8">vor</tc:token>
+      <tc:token ID="w9">,</tc:token>
+      <tc:token ID="wa">um</tc:token>
+      <tc:token ID="wb">Informationen</tc:token>
+      <tc:token ID="wc">über</tc:token>
+      <tc:token ID="wd">Figurenrelationen</tc:token>
+      <tc:token ID="we">in</tc:token>
+      <tc:token ID="wf">dramatischen</tc:token>
+      <tc:token ID="w10">Texten</tc:token>
+      <tc:token ID="w11">,</tc:token>
+      <tc:token ID="w12">die</tc:token>
+      <tc:token ID="w13">innerhalb</tc:token>
+      <tc:token ID="w14">der</tc:token>
+      <tc:token ID="w15">dramatis</tc:token>
+      <tc:token ID="w16">personae</tc:token>
+      <tc:token ID="w17">(</tc:token>
+      <tc:token ID="w18">Figurenverzeichnis</tc:token>
+      <tc:token ID="w19">)</tc:token>
+      <tc:token ID="w1a">sprachlich</tc:token>
+      <tc:token ID="w1b">kodiert</tc:token>
+      <tc:token ID="w1c">sind</tc:token>
+      <tc:token ID="w1d">,</tc:token>
+      <tc:token ID="w1e">zu</tc:token>
+      <tc:token ID="w1f">extrahieren</tc:token>
+      <tc:token ID="w20">und</tc:token>
+      <tc:token ID="w21">maschinenlesbar</tc:token>
+      <tc:token ID="w22">im</tc:token>
+      <tc:token ID="w23">TEI/</tc:token>
+      <tc:token ID="w24">XML</tc:token>
+      <tc:token ID="w25">vorzuhalten</tc:token>
+      <tc:token ID="w26">.</tc:token>
+      <tc:token ID="w27">Das</tc:token>
+      <tc:token ID="w28">Figurenverzeichnis</tc:token>
+      <tc:token ID="w29">kann</tc:token>
+      <tc:token ID="w2a">als</tc:token>
+      <tc:token ID="w2b">Paratext</tc:token>
+      <tc:token ID="w2c">(</tc:token>
+      <tc:token ID="w2d">Genette</tc:token>
+      <tc:token ID="w2e">1993</tc:token>
+      <tc:token ID="w2f">)</tc:token>
+      <tc:token ID="w30">dem</tc:token>
+      <tc:token ID="w31">Nebentext</tc:token>
+      <tc:token ID="w32">zugerechnet</tc:token>
+      <tc:token ID="w33">werden</tc:token>
+      <tc:token ID="w34">,</tc:token>
+      <tc:token ID="w35">ist</tc:token>
+      <tc:token ID="w36">jedoch</tc:token>
+      <tc:token ID="w37">literaturwissenschaftlich</tc:token>
+      <tc:token ID="w38">,</tc:token>
+      <tc:token ID="w39">von</tc:token>
+      <tc:token ID="w3a">Einführungswerken</tc:token>
+      <tc:token ID="w3b">abgesehen</tc:token>
+      <tc:token ID="w3c">,</tc:token>
+      <tc:token ID="w3d">noch</tc:token>
+      <tc:token ID="w3e">so</tc:token>
+      <tc:token ID="w3f">gut</tc:token>
+      <tc:token ID="w40">wie</tc:token>
+      <tc:token ID="w41">nicht</tc:token>
+      <tc:token ID="w42">erschlossen</tc:token>
+      <tc:token ID="w43">.</tc:token>
+      <tc:token ID="w44">Das</tc:token>
+      <tc:token ID="w45">Figurenverzeichnis</tc:token>
+      <tc:token ID="w46">steht</tc:token>
+      <tc:token ID="w47">zwar</tc:token>
+      <tc:token ID="w48">unabhängig</tc:token>
+      <tc:token ID="w49">vom</tc:token>
+      <tc:token ID="w4a">eigentlichen</tc:token>
+      <tc:token ID="w4b">Text</tc:token>
+      <tc:token ID="w4c">am</tc:token>
+      <tc:token ID="w4d">Anfang</tc:token>
+      <tc:token ID="w4e">,</tc:token>
+      <tc:token ID="w4f">kann</tc:token>
+      <tc:token ID="w50">jedoch</tc:token>
+      <tc:token ID="w51">bereits</tc:token>
+      <tc:token ID="w52">Figuren-</tc:token>
+      <tc:token ID="w53">bzw.</tc:token>
+      <tc:token ID="w54">Textwissen</tc:token>
+      <tc:token ID="w55">vermitteln</tc:token>
+      <tc:token ID="w56">,</tc:token>
+      <tc:token ID="w57">indem</tc:token>
+      <tc:token ID="w58">die</tc:token>
+      <tc:token ID="w59">Figuren</tc:token>
+      <tc:token ID="w5a">nach</tc:token>
+      <tc:token ID="w5b">sozial-politischem</tc:token>
+      <tc:token ID="w5c">Stand</tc:token>
+      <tc:token ID="w5d">,</tc:token>
+      <tc:token ID="w5e">Familienzugehörigkeit</tc:token>
+      <tc:token ID="w5f">oder</tc:token>
+      <tc:token ID="w60">nach</tc:token>
+      <tc:token ID="w61">anderen</tc:token>
+      <tc:token ID="w62">Gruppierungen</tc:token>
+      <tc:token ID="w63">geordnet</tc:token>
+      <tc:token ID="w64">sind</tc:token>
+      <tc:token ID="w65">(</tc:token>
+      <tc:token ID="w66">vgl.</tc:token>
+      <tc:token ID="w67">Abbildung</tc:token>
+      <tc:token ID="w68">1</tc:token>
+      <tc:token ID="w69">)</tc:token>
+      <tc:token ID="w6a">.</tc:token>
+      <tc:token ID="w6b">Häufig</tc:token>
+      <tc:token ID="w6c">lässt</tc:token>
+      <tc:token ID="w6d">sich</tc:token>
+      <tc:token ID="w6e">an</tc:token>
+      <tc:token ID="w6f">der</tc:token>
+      <tc:token ID="w70">Positionierung</tc:token>
+      <tc:token ID="w71">eines</tc:token>
+      <tc:token ID="w72">Names</tc:token>
+      <tc:token ID="w73">im</tc:token>
+      <tc:token ID="w74">Figurenverzeichnis</tc:token>
+      <tc:token ID="w75">auch</tc:token>
+      <tc:token ID="w76">die</tc:token>
+      <tc:token ID="w77">Wichtigkeit</tc:token>
+      <tc:token ID="w78">der</tc:token>
+      <tc:token ID="w79">betreffenden</tc:token>
+      <tc:token ID="w7a">Figur</tc:token>
+      <tc:token ID="w7b">im</tc:token>
+      <tc:token ID="w7c">Drama</tc:token>
+      <tc:token ID="w7d">ablesen</tc:token>
+      <tc:token ID="w7e">(</tc:token>
+      <tc:token ID="w7f">Pangallo</tc:token>
+      <tc:token ID="w80">2015</tc:token>
+      <tc:token ID="w81">,</tc:token>
+      <tc:token ID="w82">91</tc:token>
+      <tc:token ID="w83">)</tc:token>
+      <tc:token ID="w84">.</tc:token>
+      <tc:token ID="w85">Durch</tc:token>
+      <tc:token ID="w86">diese</tc:token>
+      <tc:token ID="w87">Strukturierung</tc:token>
+      <tc:token ID="w88">ist</tc:token>
+      <tc:token ID="w89">es</tc:token>
+      <tc:token ID="w8a">teilweise</tc:token>
+      <tc:token ID="w8b">möglich</tc:token>
+      <tc:token ID="w8c">,</tc:token>
+      <tc:token ID="w8d">schon</tc:token>
+      <tc:token ID="w8e">vorab</tc:token>
+      <tc:token ID="w8f">auf</tc:token>
+      <tc:token ID="w90">zentrale</tc:token>
+      <tc:token ID="w91">Konfliktpotentiale</tc:token>
+      <tc:token ID="w92">des</tc:token>
+      <tc:token ID="w93">Textes</tc:token>
+      <tc:token ID="w94">zu</tc:token>
+      <tc:token ID="w95">schließen</tc:token>
+      <tc:token ID="w96">(</tc:token>
+      <tc:token ID="w97">Jeßing</tc:token>
+      <tc:token ID="w98">2015</tc:token>
+      <tc:token ID="w99">,</tc:token>
+      <tc:token ID="w9a">79–80</tc:token>
+      <tc:token ID="w9b">)</tc:token>
+      <tc:token ID="w9c">.</tc:token>
+      <tc:token ID="w9d">Darüberhinaus</tc:token>
+      <tc:token ID="w9e">kann</tc:token>
+      <tc:token ID="w9f">das</tc:token>
+      <tc:token ID="wa0">Figurenverzeichnis</tc:token>
+      <tc:token ID="wa1">laut</tc:token>
+      <tc:token ID="wa2">Pfister</tc:token>
+      <tc:token ID="wa3">und</tc:token>
+      <tc:token ID="wa4">Asmuth</tc:token>
+      <tc:token ID="wa5">auch</tc:token>
+      <tc:token ID="wa6">der</tc:token>
+      <tc:token ID="wa7">Ort</tc:token>
+      <tc:token ID="wa8">erster</tc:token>
+      <tc:token ID="wa9">auktorialer</tc:token>
+      <tc:token ID="waa">Bewertungen</tc:token>
+      <tc:token ID="wab">oder</tc:token>
+      <tc:token ID="wac">Hinweise</tc:token>
+      <tc:token ID="wad">sein</tc:token>
+      <tc:token ID="wae">und</tc:token>
+      <tc:token ID="waf">dient</tc:token>
+      <tc:token ID="wb0">somit</tc:token>
+      <tc:token ID="wb1">nicht</tc:token>
+      <tc:token ID="wb2">nur</tc:token>
+      <tc:token ID="wb3">der</tc:token>
+      <tc:token ID="wb4">reinen</tc:token>
+      <tc:token ID="wb5">Vorstellung</tc:token>
+      <tc:token ID="wb6">der</tc:token>
+      <tc:token ID="wb7">Figuren</tc:token>
+      <tc:token ID="wb8">und</tc:token>
+      <tc:token ID="wb9">ihrer</tc:token>
+      <tc:token ID="wba">Strukturen</tc:token>
+      <tc:token ID="wbb">untereinander</tc:token>
+      <tc:token ID="wbc">(</tc:token>
+      <tc:token ID="wbd">Pfister</tc:token>
+      <tc:token ID="wbe">2001</tc:token>
+      <tc:token ID="wbf">,</tc:token>
+      <tc:token ID="wc0">95</tc:token>
+      <tc:token ID="wc1">;</tc:token>
+      <tc:token ID="wc2">Asmuth</tc:token>
+      <tc:token ID="wc3">2016</tc:token>
+      <tc:token ID="wc4">,</tc:token>
+      <tc:token ID="wc5">85</tc:token>
+      <tc:token ID="wc6">)</tc:token>
+      <tc:token ID="wc7">.</tc:token>
+      <tc:token ID="wc8">Das</tc:token>
+      <tc:token ID="wc9">Verfahren</tc:token>
+      <tc:token ID="wca">–</tc:token>
+      <tc:token ID="wcb">und</tc:token>
+      <tc:token ID="wcc">dessen</tc:token>
+      <tc:token ID="wcd">Implementierung</tc:token>
+      <tc:token ID="wce">in</tc:token>
+      <tc:token ID="wcf">einem</tc:token>
+      <tc:token ID="wd0">Python-Skript</tc:token>
+      <tc:token ID="wd1">–</tc:token>
+      <tc:token ID="wd2">ist</tc:token>
+      <tc:token ID="wd3">auch</tc:token>
+      <tc:token ID="wd4">für</tc:token>
+      <tc:token ID="wd5">in</tc:token>
+      <tc:token ID="wd6">Zukunft</tc:token>
+      <tc:token ID="wd7">digitalisierte</tc:token>
+      <tc:token ID="wd8">Dramen</tc:token>
+      <tc:token ID="wd9">anwendbar</tc:token>
+      <tc:token ID="wda">,</tc:token>
+      <tc:token ID="wdb">und</tc:token>
+      <tc:token ID="wdc">wird</tc:token>
+      <tc:token ID="wdd">von</tc:token>
+      <tc:token ID="wde">uns</tc:token>
+      <tc:token ID="wdf">als</tc:token>
+      <tc:token ID="we0">quelloffene</tc:token>
+      <tc:token ID="we1">Software</tc:token>
+      <tc:token ID="we2">zur</tc:token>
+      <tc:token ID="we3">Verfügung</tc:token>
+      <tc:token ID="we4">gestellt</tc:token>
+      <tc:token ID="we5">.</tc:token>
+      <tc:token ID="we6">Es</tc:token>
+      <tc:token ID="we7">ist</tc:token>
+      <tc:token ID="we8">vergleichsweise</tc:token>
+      <tc:token ID="we9">einfach</tc:token>
+      <tc:token ID="wea">auf</tc:token>
+      <tc:token ID="web">neue</tc:token>
+      <tc:token ID="wec">Sprachstufen</tc:token>
+      <tc:token ID="wed">oder</tc:token>
+      <tc:token ID="wee">Genres</tc:token>
+      <tc:token ID="wef">anpassbar</tc:token>
+      <tc:token ID="wf0">und</tc:token>
+      <tc:token ID="wf1">liefert</tc:token>
+      <tc:token ID="wf2">–</tc:token>
+      <tc:token ID="wf3">auch</tc:token>
+      <tc:token ID="wf4">bei</tc:token>
+      <tc:token ID="wf5">nicht-perfekten</tc:token>
+      <tc:token ID="wf6">Ergebnissen</tc:token>
+      <tc:token ID="wf7">–</tc:token>
+      <tc:token ID="wf8">eine</tc:token>
+      <tc:token ID="wf9">gute</tc:token>
+      <tc:token ID="wfa">Vorlage</tc:token>
+      <tc:token ID="wfb">.</tc:token>
+      <tc:token ID="wfc">Eine</tc:token>
+      <tc:token ID="wfd">Evaluation</tc:token>
+      <tc:token ID="wfe">des</tc:token>
+      <tc:token ID="wff">Verfahrens</tc:token>
+      <tc:token ID="w100">erfolgt</tc:token>
+      <tc:token ID="w101">auf</tc:token>
+      <tc:token ID="w102">ungesehenen</tc:token>
+      <tc:token ID="w103">Testdaten</tc:token>
+      <tc:token ID="w104">.</tc:token>
+      <tc:token ID="w105">Außerdem</tc:token>
+      <tc:token ID="w106">veröffentlichen</tc:token>
+      <tc:token ID="w107">wir</tc:token>
+      <tc:token ID="w108">einen</tc:token>
+      <tc:token ID="w109">Datensatz</tc:token>
+      <tc:token ID="w10a">mit</tc:token>
+      <tc:token ID="w10b">extrahierten</tc:token>
+      <tc:token ID="w10c">Figurenrelationen</tc:token>
+      <tc:token ID="w10d">aus</tc:token>
+      <tc:token ID="w10e">deutschsprachigen</tc:token>
+      <tc:token ID="w10f">Dramen</tc:token>
+      <tc:token ID="w110">,</tc:token>
+      <tc:token ID="w111">die</tc:token>
+      <tc:token ID="w112">manuell</tc:token>
+      <tc:token ID="w113">validiert</tc:token>
+      <tc:token ID="w114">und</tc:token>
+      <tc:token ID="w115">korrigiert</tc:token>
+      <tc:token ID="w116">wurden</tc:token>
+      <tc:token ID="w117">.</tc:token>
+      <tc:token ID="w118">Diese</tc:token>
+      <tc:token ID="w119">Daten</tc:token>
+      <tc:token ID="w11a">werden</tc:token>
+      <tc:token ID="w11b">zur</tc:token>
+      <tc:token ID="w11c">einfachen</tc:token>
+      <tc:token ID="w11d">und</tc:token>
+      <tc:token ID="w11e">breiten</tc:token>
+      <tc:token ID="w11f">Nutzung</tc:token>
+      <tc:token ID="w120">im</tc:token>
+      <tc:token ID="w121">TEI-Format</tc:token>
+      <tc:token ID="w122">in</tc:token>
+      <tc:token ID="w123">das</tc:token>
+      <tc:token ID="w124">GerDraCor</tc:token>
+      <tc:token ID="w125">eingespeist</tc:token>
+      <tc:token ID="w126">.</tc:token>
+      <tc:token ID="w127">Schlussendlich</tc:token>
+      <tc:token ID="w128">beschreiben</tc:token>
+      <tc:token ID="w129">wir</tc:token>
+      <tc:token ID="w12a">beispielhaft</tc:token>
+      <tc:token ID="w12b">zwei</tc:token>
+      <tc:token ID="w12c">Analyseszenarien</tc:token>
+      <tc:token ID="w12d">in</tc:token>
+      <tc:token ID="w12e">denen</tc:token>
+      <tc:token ID="w12f">die</tc:token>
+      <tc:token ID="w130">Daten</tc:token>
+      <tc:token ID="w131">neue</tc:token>
+      <tc:token ID="w132">Einblicke</tc:token>
+      <tc:token ID="w133">bieten</tc:token>
+      <tc:token ID="w134">(</tc:token>
+      <tc:token ID="w135">können</tc:token>
+      <tc:token ID="w136">)</tc:token>
+      <tc:token ID="w137">.</tc:token>
+      <tc:token ID="w138">Unsere</tc:token>
+      <tc:token ID="w139">Methode</tc:token>
+      <tc:token ID="w13a">unterscheidet</tc:token>
+      <tc:token ID="w13b">zwischen</tc:token>
+      <tc:token ID="w13c">sieben</tc:token>
+      <tc:token ID="w13d">Kategorien</tc:token>
+      <tc:token ID="w13e">von</tc:token>
+      <tc:token ID="w13f">Figurenrelationen</tc:token>
+      <tc:token ID="w140">(</tc:token>
+      <tc:token ID="w141">Tabelle</tc:token>
+      <tc:token ID="w142">1</tc:token>
+      <tc:token ID="w143">)</tc:token>
+      <tc:token ID="w144">.</tc:token>
+      <tc:token ID="w145">Ausschlaggebend</tc:token>
+      <tc:token ID="w146">für</tc:token>
+      <tc:token ID="w147">die</tc:token>
+      <tc:token ID="w148">Zuordnung</tc:token>
+      <tc:token ID="w149">zu</tc:token>
+      <tc:token ID="w14a">einer</tc:token>
+      <tc:token ID="w14b">der</tc:token>
+      <tc:token ID="w14c">Kategorien</tc:token>
+      <tc:token ID="w14d">sind</tc:token>
+      <tc:token ID="w14e">Signalwörter</tc:token>
+      <tc:token ID="w14f">wie</tc:token>
+      <tc:token ID="w150">“</tc:token>
+      <tc:token ID="w151">Vater</tc:token>
+      <tc:token ID="w152">”</tc:token>
+      <tc:token ID="w153">,</tc:token>
+      <tc:token ID="w154">“</tc:token>
+      <tc:token ID="w155">Kammerdiener</tc:token>
+      <tc:token ID="w156">”</tc:token>
+      <tc:token ID="w157">,</tc:token>
+      <tc:token ID="w158">“</tc:token>
+      <tc:token ID="w159">Geschwister</tc:token>
+      <tc:token ID="w15a">”</tc:token>
+      <tc:token ID="w15b">etc</tc:token>
+      <tc:token ID="w15c">.</tc:token>
+      <tc:token ID="w15d">Diese</tc:token>
+      <tc:token ID="w15e">Signalwörter</tc:token>
+      <tc:token ID="w15f">werden</tc:token>
+      <tc:token ID="w160">in</tc:token>
+      <tc:token ID="w161">einer</tc:token>
+      <tc:token ID="w162">kontextfreien</tc:token>
+      <tc:token ID="w163">Grammatik</tc:token>
+      <tc:token ID="w164">der</tc:token>
+      <tc:token ID="w165">entsprechenden</tc:token>
+      <tc:token ID="w166">Kategorie</tc:token>
+      <tc:token ID="w167">zugeordnet</tc:token>
+      <tc:token ID="w168">.</tc:token>
+      <tc:token ID="w169">Kontextfreie</tc:token>
+      <tc:token ID="w16a">Grammatiken</tc:token>
+      <tc:token ID="w16b">bezeichnen</tc:token>
+      <tc:token ID="w16c">in</tc:token>
+      <tc:token ID="w16d">der</tc:token>
+      <tc:token ID="w16e">Informatik</tc:token>
+      <tc:token ID="w16f">eine</tc:token>
+      <tc:token ID="w170">Sammlung</tc:token>
+      <tc:token ID="w171">aller</tc:token>
+      <tc:token ID="w172">syntaktisch</tc:token>
+      <tc:token ID="w173">korrekten</tc:token>
+      <tc:token ID="w174">Programme</tc:token>
+      <tc:token ID="w175">einer</tc:token>
+      <tc:token ID="w176">Programmiersprache</tc:token>
+      <tc:token ID="w177">(</tc:token>
+      <tc:token ID="w178">Böckenhauer</tc:token>
+      <tc:token ID="w179">und</tc:token>
+      <tc:token ID="w17a">Hromkovič</tc:token>
+      <tc:token ID="w17b">2013</tc:token>
+      <tc:token ID="w17c">,</tc:token>
+      <tc:token ID="w17d">177</tc:token>
+      <tc:token ID="w17e">)</tc:token>
+      <tc:token ID="w17f">.</tc:token>
+      <tc:token ID="w180">Die</tc:token>
+      <tc:token ID="w181">formalisierte</tc:token>
+      <tc:token ID="w182">Art</tc:token>
+      <tc:token ID="w183">,</tc:token>
+      <tc:token ID="w184">in</tc:token>
+      <tc:token ID="w185">der</tc:token>
+      <tc:token ID="w186">die</tc:token>
+      <tc:token ID="w187">Grammatik</tc:token>
+      <tc:token ID="w188">alle</tc:token>
+      <tc:token ID="w189">Regeln</tc:token>
+      <tc:token ID="w18a">einer</tc:token>
+      <tc:token ID="w18b">Programmiersprache</tc:token>
+      <tc:token ID="w18c">enthält</tc:token>
+      <tc:token ID="w18d">,</tc:token>
+      <tc:token ID="w18e">erlaubt</tc:token>
+      <tc:token ID="w18f">es</tc:token>
+      <tc:token ID="w190">,</tc:token>
+      <tc:token ID="w191">automatisierte</tc:token>
+      <tc:token ID="w192">Syntaxanalysen</tc:token>
+      <tc:token ID="w193">von</tc:token>
+      <tc:token ID="w194">Programmen</tc:token>
+      <tc:token ID="w195">durchzuführen</tc:token>
+      <tc:token ID="w196">(</tc:token>
+      <tc:token ID="w197">Böckenhauer</tc:token>
+      <tc:token ID="w198">und</tc:token>
+      <tc:token ID="w199">Hromkovič</tc:token>
+      <tc:token ID="w19a">2013</tc:token>
+      <tc:token ID="w19b">,</tc:token>
+      <tc:token ID="w19c">177</tc:token>
+      <tc:token ID="w19d">)</tc:token>
+      <tc:token ID="w19e">.</tc:token>
+      <tc:token ID="w19f">Die</tc:token>
+      <tc:token ID="w1a0">Regeln</tc:token>
+      <tc:token ID="w1a1">werden</tc:token>
+      <tc:token ID="w1a2">mit</tc:token>
+      <tc:token ID="w1a3">Hilfe</tc:token>
+      <tc:token ID="w1a4">zweier</tc:token>
+      <tc:token ID="w1a5">Alphabete</tc:token>
+      <tc:token ID="w1a6">beschrieben</tc:token>
+      <tc:token ID="w1a7">:</tc:token>
+      <tc:token ID="w1a8">Das</tc:token>
+      <tc:token ID="w1a9">Terminalalphabet</tc:token>
+      <tc:token ID="w1aa">enthält</tc:token>
+      <tc:token ID="w1ab">alle</tc:token>
+      <tc:token ID="w1ac">Wörter</tc:token>
+      <tc:token ID="w1ad">einer</tc:token>
+      <tc:token ID="w1ae">Sprache</tc:token>
+      <tc:token ID="w1af">,</tc:token>
+      <tc:token ID="w1b0">wohingegen</tc:token>
+      <tc:token ID="w1b1">das</tc:token>
+      <tc:token ID="w1b2">Nichtterminalalphabet</tc:token>
+      <tc:token ID="w1b3">Variablen</tc:token>
+      <tc:token ID="w1b4">enthält</tc:token>
+      <tc:token ID="w1b5">,</tc:token>
+      <tc:token ID="w1b6">die</tc:token>
+      <tc:token ID="w1b7">vorgeben</tc:token>
+      <tc:token ID="w1b8">,</tc:token>
+      <tc:token ID="w1b9">auf</tc:token>
+      <tc:token ID="w1ba">welche</tc:token>
+      <tc:token ID="w1bb">Art</tc:token>
+      <tc:token ID="w1bc">und</tc:token>
+      <tc:token ID="w1bd">Weise</tc:token>
+      <tc:token ID="w1be">die</tc:token>
+      <tc:token ID="w1bf">Wörter</tc:token>
+      <tc:token ID="w1c0">kombiniert</tc:token>
+      <tc:token ID="w1c1">werden</tc:token>
+      <tc:token ID="w1c2">können</tc:token>
+      <tc:token ID="w1c3">(</tc:token>
+      <tc:token ID="w1c4">Böckenhauer</tc:token>
+      <tc:token ID="w1c5">und</tc:token>
+      <tc:token ID="w1c6">Hromkovič</tc:token>
+      <tc:token ID="w1c7">2013</tc:token>
+      <tc:token ID="w1c8">,</tc:token>
+      <tc:token ID="w1c9">178</tc:token>
+      <tc:token ID="w1ca">)</tc:token>
+      <tc:token ID="w1cb">.</tc:token>
+      <tc:token ID="w1cc">Wir</tc:token>
+      <tc:token ID="w1cd">nutzen</tc:token>
+      <tc:token ID="w1ce">eine</tc:token>
+      <tc:token ID="w1cf">solche</tc:token>
+      <tc:token ID="w1d0">Grammatik</tc:token>
+      <tc:token ID="w1d1">,</tc:token>
+      <tc:token ID="w1d2">um</tc:token>
+      <tc:token ID="w1d3">drei</tc:token>
+      <tc:token ID="w1d4">verschiedene</tc:token>
+      <tc:token ID="w1d5">Zeilenarten</tc:token>
+      <tc:token ID="w1d6">im</tc:token>
+      <tc:token ID="w1d7">Figurenverzeichnis</tc:token>
+      <tc:token ID="w1d8">zu</tc:token>
+      <tc:token ID="w1d9">unterscheiden</tc:token>
+      <tc:token ID="w1da">,</tc:token>
+      <tc:token ID="w1db">bei</tc:token>
+      <tc:token ID="w1dc">denen</tc:token>
+      <tc:token ID="w1dd">es</tc:token>
+      <tc:token ID="w1de">sich</tc:token>
+      <tc:token ID="w1df">um</tc:token>
+      <tc:token ID="w1e0">Nichtterminale</tc:token>
+      <tc:token ID="w1e1">handelt</tc:token>
+      <tc:token ID="w1e2">.</tc:token>
+      <tc:token ID="w1e3">Alle</tc:token>
+      <tc:token ID="w1e4">in</tc:token>
+      <tc:token ID="w1e5">den</tc:token>
+      <tc:token ID="w1e6">Sätzen</tc:token>
+      <tc:token ID="w1e7">vorkommenden</tc:token>
+      <tc:token ID="w1e8">Tokens</tc:token>
+      <tc:token ID="w1e9">sind</tc:token>
+      <tc:token ID="w1ea">Terminale</tc:token>
+      <tc:token ID="w1eb">,</tc:token>
+      <tc:token ID="w1ec">deren</tc:token>
+      <tc:token ID="w1ed">Kombination</tc:token>
+      <tc:token ID="w1ee">und</tc:token>
+      <tc:token ID="w1ef">Anzahl</tc:token>
+      <tc:token ID="w1f0">Aufschluss</tc:token>
+      <tc:token ID="w1f1">darüber</tc:token>
+      <tc:token ID="w1f2">gibt</tc:token>
+      <tc:token ID="w1f3">,</tc:token>
+      <tc:token ID="w1f4">um</tc:token>
+      <tc:token ID="w1f5">was</tc:token>
+      <tc:token ID="w1f6">für</tc:token>
+      <tc:token ID="w1f7">eine</tc:token>
+      <tc:token ID="w1f8">Art</tc:token>
+      <tc:token ID="w1f9">von</tc:token>
+      <tc:token ID="w1fa">Zeile</tc:token>
+      <tc:token ID="w1fb">es</tc:token>
+      <tc:token ID="w1fc">sich</tc:token>
+      <tc:token ID="w1fd">jeweils</tc:token>
+      <tc:token ID="w1fe">handelt</tc:token>
+      <tc:token ID="w1ff">.</tc:token>
+      <tc:token ID="w200">Auf</tc:token>
+      <tc:token ID="w201">diese</tc:token>
+      <tc:token ID="w202">Weise</tc:token>
+      <tc:token ID="w203">können</tc:token>
+      <tc:token ID="w204">auch</tc:token>
+      <tc:token ID="w205">zeilenübergreifende</tc:token>
+      <tc:token ID="w206">Relationen</tc:token>
+      <tc:token ID="w207">erkannt</tc:token>
+      <tc:token ID="w208">werden</tc:token>
+      <tc:token ID="w209">.</tc:token>
+      <tc:token ID="w20a">Zu</tc:token>
+      <tc:token ID="w20b">Beginn</tc:token>
+      <tc:token ID="w20c">des</tc:token>
+      <tc:token ID="w20d">Programmablaufs</tc:token>
+      <tc:token ID="w20e">werden</tc:token>
+      <tc:token ID="w20f">die</tc:token>
+      <tc:token ID="w210">in</tc:token>
+      <tc:token ID="w211">GerDraCor</tc:token>
+      <tc:token ID="w212">vorhandenen</tc:token>
+      <tc:token ID="w213">Figuren-IDs</tc:token>
+      <tc:token ID="w214">zusammen</tc:token>
+      <tc:token ID="w215">mit</tc:token>
+      <tc:token ID="w216">dem</tc:token>
+      <tc:token ID="w217">Figurenverzeichnis</tc:token>
+      <tc:token ID="w218">ausgelesen</tc:token>
+      <tc:token ID="w219">und</tc:token>
+      <tc:token ID="w21a">gespeichert</tc:token>
+      <tc:token ID="w21b">.</tc:token>
+      <tc:token ID="w21c">Da</tc:token>
+      <tc:token ID="w21d">wir</tc:token>
+      <tc:token ID="w21e">die</tc:token>
+      <tc:token ID="w21f">Beziehungen</tc:token>
+      <tc:token ID="w220">zwischen</tc:token>
+      <tc:token ID="w221">den</tc:token>
+      <tc:token ID="w222">Figuren</tc:token>
+      <tc:token ID="w223">ausschließlich</tc:token>
+      <tc:token ID="w224">anhand</tc:token>
+      <tc:token ID="w225">der</tc:token>
+      <tc:token ID="w226">Angaben</tc:token>
+      <tc:token ID="w227">im</tc:token>
+      <tc:token ID="w228">Figurenverzeichnis</tc:token>
+      <tc:token ID="w229">konstruieren</tc:token>
+      <tc:token ID="w22a">,</tc:token>
+      <tc:token ID="w22b">muss</tc:token>
+      <tc:token ID="w22c">der</tc:token>
+      <tc:token ID="w22d">Dramentext</tc:token>
+      <tc:token ID="w22e">nicht</tc:token>
+      <tc:token ID="w22f">extra</tc:token>
+      <tc:token ID="w230">eingelesen</tc:token>
+      <tc:token ID="w231">werden</tc:token>
+      <tc:token ID="w232">.</tc:token>
+      <tc:token ID="w233">Daraus</tc:token>
+      <tc:token ID="w234">ergibt</tc:token>
+      <tc:token ID="w235">sich</tc:token>
+      <tc:token ID="w236">die</tc:token>
+      <tc:token ID="w237">Beschränkung</tc:token>
+      <tc:token ID="w238">,</tc:token>
+      <tc:token ID="w239">dass</tc:token>
+      <tc:token ID="w23a">jegliche</tc:token>
+      <tc:token ID="w23b">Beziehungen</tc:token>
+      <tc:token ID="w23c">,</tc:token>
+      <tc:token ID="w23d">die</tc:token>
+      <tc:token ID="w23e">nicht</tc:token>
+      <tc:token ID="w23f">im</tc:token>
+      <tc:token ID="w240">Figureverzeichnis</tc:token>
+      <tc:token ID="w241">explizit</tc:token>
+      <tc:token ID="w242">gemacht</tc:token>
+      <tc:token ID="w243">werden</tc:token>
+      <tc:token ID="w244">,</tc:token>
+      <tc:token ID="w245">vom</tc:token>
+      <tc:token ID="w246">Programm</tc:token>
+      <tc:token ID="w247">auch</tc:token>
+      <tc:token ID="w248">nicht</tc:token>
+      <tc:token ID="w249">erkannt</tc:token>
+      <tc:token ID="w24a">werden</tc:token>
+      <tc:token ID="w24b">können</tc:token>
+      <tc:token ID="w24c">.</tc:token>
+      <tc:token ID="w24d">Es</tc:token>
+      <tc:token ID="w24e">geht</tc:token>
+      <tc:token ID="w24f">demnach</tc:token>
+      <tc:token ID="w250">ausschließlich</tc:token>
+      <tc:token ID="w251">darum</tc:token>
+      <tc:token ID="w252">,</tc:token>
+      <tc:token ID="w253">das</tc:token>
+      <tc:token ID="w254">Personenverzeichnis</tc:token>
+      <tc:token ID="w255">maschinenlesbar</tc:token>
+      <tc:token ID="w256">und</tc:token>
+      <tc:token ID="w257">-interpretierbar</tc:token>
+      <tc:token ID="w258">zu</tc:token>
+      <tc:token ID="w259">machen</tc:token>
+      <tc:token ID="w25a">.</tc:token>
+      <tc:token ID="w25b">So</tc:token>
+      <tc:token ID="w25c">ignoriert</tc:token>
+      <tc:token ID="w25d">das</tc:token>
+      <tc:token ID="w25e">Programm</tc:token>
+      <tc:token ID="w25f">beispielsweise</tc:token>
+      <tc:token ID="w260">auch</tc:token>
+      <tc:token ID="w261">alle</tc:token>
+      <tc:token ID="w262">Zeilen</tc:token>
+      <tc:token ID="w263">,</tc:token>
+      <tc:token ID="w264">die</tc:token>
+      <tc:token ID="w265">eine</tc:token>
+      <tc:token ID="w266">Gruppe</tc:token>
+      <tc:token ID="w267">von</tc:token>
+      <tc:token ID="w268">Figuren</tc:token>
+      <tc:token ID="w269">als</tc:token>
+      <tc:token ID="w26a">Kollektiv</tc:token>
+      <tc:token ID="w26b">einführt</tc:token>
+      <tc:token ID="w26c">,</tc:token>
+      <tc:token ID="w26d">da</tc:token>
+      <tc:token ID="w26e">diese</tc:token>
+      <tc:token ID="w26f">als</tc:token>
+      <tc:token ID="w270">“</tc:token>
+      <tc:token ID="w271">Nummern</tc:token>
+      <tc:token ID="w272">oder</tc:token>
+      <tc:token ID="w273">als</tc:token>
+      <tc:token ID="w274">anonyme</tc:token>
+      <tc:token ID="w275">Angehörige</tc:token>
+      <tc:token ID="w276">von</tc:token>
+      <tc:token ID="w277">Untergruppen</tc:token>
+      <tc:token ID="w278">”</tc:token>
+      <tc:token ID="w279">(</tc:token>
+      <tc:token ID="w27a">Schlaffer</tc:token>
+      <tc:token ID="w27b">1972</tc:token>
+      <tc:token ID="w27c">,</tc:token>
+      <tc:token ID="w27d">11</tc:token>
+      <tc:token ID="w27e">)</tc:token>
+      <tc:token ID="w27f">meistens</tc:token>
+      <tc:token ID="w280">keine</tc:token>
+      <tc:token ID="w281">eigenen</tc:token>
+      <tc:token ID="w282">Namen</tc:token>
+      <tc:token ID="w283">haben</tc:token>
+      <tc:token ID="w284">und</tc:token>
+      <tc:token ID="w285">auch</tc:token>
+      <tc:token ID="w286">keine</tc:token>
+      <tc:token ID="w287">explizit</tc:token>
+      <tc:token ID="w288">gemachten</tc:token>
+      <tc:token ID="w289">Beziehungen</tc:token>
+      <tc:token ID="w28a">.</tc:token>
+      <tc:token ID="w28b">Anschließend</tc:token>
+      <tc:token ID="w28c">werden</tc:token>
+      <tc:token ID="w28d">alle</tc:token>
+      <tc:token ID="w28e">Tokens</tc:token>
+      <tc:token ID="w28f">jeder</tc:token>
+      <tc:token ID="w290">Zeile</tc:token>
+      <tc:token ID="w291">des</tc:token>
+      <tc:token ID="w292">Figurenverzeichnisses</tc:token>
+      <tc:token ID="w293">daraufhin</tc:token>
+      <tc:token ID="w294">untersucht</tc:token>
+      <tc:token ID="w295">,</tc:token>
+      <tc:token ID="w296">ob</tc:token>
+      <tc:token ID="w297">es</tc:token>
+      <tc:token ID="w298">sich</tc:token>
+      <tc:token ID="w299">dabei</tc:token>
+      <tc:token ID="w29a">um</tc:token>
+      <tc:token ID="w29b">Figurennennungen</tc:token>
+      <tc:token ID="w29c">oder</tc:token>
+      <tc:token ID="w29d">Signalwörter</tc:token>
+      <tc:token ID="w29e">handelt</tc:token>
+      <tc:token ID="w29f">und</tc:token>
+      <tc:token ID="w2a0">die</tc:token>
+      <tc:token ID="w2a1">Grammatik</tc:token>
+      <tc:token ID="w2a2">einem</tc:token>
+      <tc:token ID="w2a3">Parser</tc:token>
+      <tc:token ID="w2a4">übergeben</tc:token>
+      <tc:token ID="w2a5">,</tc:token>
+      <tc:token ID="w2a6">der</tc:token>
+      <tc:token ID="w2a7">die</tc:token>
+      <tc:token ID="w2a8">Zeilen</tc:token>
+      <tc:token ID="w2a9">des</tc:token>
+      <tc:token ID="w2aa">Figurenverzeichnisses</tc:token>
+      <tc:token ID="w2ab">in</tc:token>
+      <tc:token ID="w2ac">Baumstrukturen</tc:token>
+      <tc:token ID="w2ad">überführt</tc:token>
+      <tc:token ID="w2ae">(</tc:token>
+      <tc:token ID="w2af">Abbildung</tc:token>
+      <tc:token ID="w2b0">2</tc:token>
+      <tc:token ID="w2b1">)</tc:token>
+      <tc:token ID="w2b2">.</tc:token>
+      <tc:token ID="w2b3">Aus</tc:token>
+      <tc:token ID="w2b4">den</tc:token>
+      <tc:token ID="w2b5">erstellten</tc:token>
+      <tc:token ID="w2b6">Baumstrukturen</tc:token>
+      <tc:token ID="w2b7">werden</tc:token>
+      <tc:token ID="w2b8">einzelne</tc:token>
+      <tc:token ID="w2b9">Informationen</tc:token>
+      <tc:token ID="w2ba">ausgelesen</tc:token>
+      <tc:token ID="w2bb">,</tc:token>
+      <tc:token ID="w2bc">die</tc:token>
+      <tc:token ID="w2bd">grundlegend</tc:token>
+      <tc:token ID="w2be">für</tc:token>
+      <tc:token ID="w2bf">die</tc:token>
+      <tc:token ID="w2c0">Erkennung</tc:token>
+      <tc:token ID="w2c1">der</tc:token>
+      <tc:token ID="w2c2">Figurenrelationen</tc:token>
+      <tc:token ID="w2c3">sind</tc:token>
+      <tc:token ID="w2c4">.</tc:token>
+      <tc:token ID="w2c5">Zuerst</tc:token>
+      <tc:token ID="w2c6">wird</tc:token>
+      <tc:token ID="w2c7">überprüft</tc:token>
+      <tc:token ID="w2c8">,</tc:token>
+      <tc:token ID="w2c9">wie</tc:token>
+      <tc:token ID="w2ca">viele</tc:token>
+      <tc:token ID="w2cb">IDs</tc:token>
+      <tc:token ID="w2cc">sich</tc:token>
+      <tc:token ID="w2cd">in</tc:token>
+      <tc:token ID="w2ce">einer</tc:token>
+      <tc:token ID="w2cf">Zeile</tc:token>
+      <tc:token ID="w2d0">befinden</tc:token>
+      <tc:token ID="w2d1">.</tc:token>
+      <tc:token ID="w2d2">Die</tc:token>
+      <tc:token ID="w2d3">erste</tc:token>
+      <tc:token ID="w2d4">oder</tc:token>
+      <tc:token ID="w2d5">einzige</tc:token>
+      <tc:token ID="w2d6">wird</tc:token>
+      <tc:token ID="w2d7">zur</tc:token>
+      <tc:token ID="w2d8">Erstellung</tc:token>
+      <tc:token ID="w2d9">späterer</tc:token>
+      <tc:token ID="w2da">Relationen</tc:token>
+      <tc:token ID="w2db">abgespeichert</tc:token>
+      <tc:token ID="w2dc">.</tc:token>
+      <tc:token ID="w2dd">Befindet</tc:token>
+      <tc:token ID="w2de">sich</tc:token>
+      <tc:token ID="w2df">in</tc:token>
+      <tc:token ID="w2e0">einer</tc:token>
+      <tc:token ID="w2e1">Zeile</tc:token>
+      <tc:token ID="w2e2">zusätzlich</tc:token>
+      <tc:token ID="w2e3">zu</tc:token>
+      <tc:token ID="w2e4">einer</tc:token>
+      <tc:token ID="w2e5">ID</tc:token>
+      <tc:token ID="w2e6">noch</tc:token>
+      <tc:token ID="w2e7">ein</tc:token>
+      <tc:token ID="w2e8">Signalwort</tc:token>
+      <tc:token ID="w2e9">für</tc:token>
+      <tc:token ID="w2ea">eine</tc:token>
+      <tc:token ID="w2eb">Figurenrelation</tc:token>
+      <tc:token ID="w2ec">,</tc:token>
+      <tc:token ID="w2ed">bezieht</tc:token>
+      <tc:token ID="w2ee">sich</tc:token>
+      <tc:token ID="w2ef">die</tc:token>
+      <tc:token ID="w2f0">Zeile</tc:token>
+      <tc:token ID="w2f1">in</tc:token>
+      <tc:token ID="w2f2">der</tc:token>
+      <tc:token ID="w2f3">Regel</tc:token>
+      <tc:token ID="w2f4">auf</tc:token>
+      <tc:token ID="w2f5">die</tc:token>
+      <tc:token ID="w2f6">vorangegangene</tc:token>
+      <tc:token ID="w2f7">,</tc:token>
+      <tc:token ID="w2f8">wie</tc:token>
+      <tc:token ID="w2f9">beispielsweise</tc:token>
+      <tc:token ID="w2fa">in</tc:token>
+      <tc:token ID="w2fb">Nathan</tc:token>
+      <tc:token ID="w2fc">der</tc:token>
+      <tc:token ID="w2fd">Weise</tc:token>
+      <tc:token ID="w2fe">:</tc:token>
+      <tc:token ID="w2ff">&lt;</tc:token>
+      <tc:token ID="w300">castItem</tc:token>
+      <tc:token ID="w301">corresp=</tc:token>
+      <tc:token ID="w302">"#</tc:token>
+      <tc:token ID="w303">saladin</tc:token>
+      <tc:token ID="w304">">Sultan</tc:token>
+      <tc:token ID="w305">Saladin</tc:token>
+      <tc:token ID="w306">.</tc:token>
+      <tc:token ID="w307">&lt;</tc:token>
+      <tc:token ID="w308">/</tc:token>
+      <tc:token ID="w309">castItem></tc:token>
+      <tc:token ID="w30a">&lt;</tc:token>
+      <tc:token ID="w30b">castItem</tc:token>
+      <tc:token ID="w30c">corresp=</tc:token>
+      <tc:token ID="w30d">"#</tc:token>
+      <tc:token ID="w30e">sittah</tc:token>
+      <tc:token ID="w30f">">Sittah</tc:token>
+      <tc:token ID="w310">,</tc:token>
+      <tc:token ID="w311">seine</tc:token>
+      <tc:token ID="w312">Schwester</tc:token>
+      <tc:token ID="w313">.</tc:token>
+      <tc:token ID="w314">&lt;</tc:token>
+      <tc:token ID="w315">/</tc:token>
+      <tc:token ID="w316">castItem></tc:token>
+      <tc:token ID="w317">Die</tc:token>
+      <tc:token ID="w318">zweite</tc:token>
+      <tc:token ID="w319">Zeile</tc:token>
+      <tc:token ID="w31a">enthält</tc:token>
+      <tc:token ID="w31b">neben</tc:token>
+      <tc:token ID="w31c">dem</tc:token>
+      <tc:token ID="w31d">Namen</tc:token>
+      <tc:token ID="w31e">noch</tc:token>
+      <tc:token ID="w31f">das</tc:token>
+      <tc:token ID="w320">Signalwort</tc:token>
+      <tc:token ID="w321">“</tc:token>
+      <tc:token ID="w322">Schwester</tc:token>
+      <tc:token ID="w323">”</tc:token>
+      <tc:token ID="w324">,</tc:token>
+      <tc:token ID="w325">das</tc:token>
+      <tc:token ID="w326">auf</tc:token>
+      <tc:token ID="w327">die</tc:token>
+      <tc:token ID="w328">Beziehungsart</tc:token>
+      <tc:token ID="w329">siblings</tc:token>
+      <tc:token ID="w32a">hinweist</tc:token>
+      <tc:token ID="w32b">,</tc:token>
+      <tc:token ID="w32c">eine</tc:token>
+      <tc:token ID="w32d">ungerichtete</tc:token>
+      <tc:token ID="w32e">Relation</tc:token>
+      <tc:token ID="w32f">.</tc:token>
+      <tc:token ID="w330">Da</tc:token>
+      <tc:token ID="w331">keine</tc:token>
+      <tc:token ID="w332">zweite</tc:token>
+      <tc:token ID="w333">Figurenbezeichnung</tc:token>
+      <tc:token ID="w334">in</tc:token>
+      <tc:token ID="w335">der</tc:token>
+      <tc:token ID="w336">Zeile</tc:token>
+      <tc:token ID="w337">vorkommt</tc:token>
+      <tc:token ID="w338">,</tc:token>
+      <tc:token ID="w339">entnimmt</tc:token>
+      <tc:token ID="w33a">das</tc:token>
+      <tc:token ID="w33b">Programm</tc:token>
+      <tc:token ID="w33c">als</tc:token>
+      <tc:token ID="w33d">zweiten</tc:token>
+      <tc:token ID="w33e">Part</tc:token>
+      <tc:token ID="w33f">für</tc:token>
+      <tc:token ID="w340">die</tc:token>
+      <tc:token ID="w341">Geschwisterbeziehung</tc:token>
+      <tc:token ID="w342">den</tc:token>
+      <tc:token ID="w343">Namen</tc:token>
+      <tc:token ID="w344">bzw</tc:token>
+      <tc:token ID="w345">.</tc:token>
+      <tc:token ID="w346">die</tc:token>
+      <tc:token ID="w347">daraus</tc:token>
+      <tc:token ID="w348">abgeleitete</tc:token>
+      <tc:token ID="w349">ID</tc:token>
+      <tc:token ID="w34a">saladin</tc:token>
+      <tc:token ID="w34b">aus</tc:token>
+      <tc:token ID="w34c">der</tc:token>
+      <tc:token ID="w34d">vorherigen</tc:token>
+      <tc:token ID="w34e">Zeile</tc:token>
+      <tc:token ID="w34f">:</tc:token>
+      <tc:token ID="w350">&lt;</tc:token>
+      <tc:token ID="w351">relation</tc:token>
+      <tc:token ID="w352">name=</tc:token>
+      <tc:token ID="w353">"</tc:token>
+      <tc:token ID="w354">siblings</tc:token>
+      <tc:token ID="w355">"</tc:token>
+      <tc:token ID="w356">mutual=</tc:token>
+      <tc:token ID="w357">"#</tc:token>
+      <tc:token ID="w358">sittah</tc:token>
+      <tc:token ID="w359">#</tc:token>
+      <tc:token ID="w35a">saladin</tc:token>
+      <tc:token ID="w35b">"</tc:token>
+      <tc:token ID="w35c">/></tc:token>
+      <tc:token ID="w35d">Wenn</tc:token>
+      <tc:token ID="w35e">die</tc:token>
+      <tc:token ID="w35f">beiden</tc:token>
+      <tc:token ID="w360">benötigten</tc:token>
+      <tc:token ID="w361">IDs</tc:token>
+      <tc:token ID="w362">für</tc:token>
+      <tc:token ID="w363">das</tc:token>
+      <tc:token ID="w364">Erstellen</tc:token>
+      <tc:token ID="w365">der</tc:token>
+      <tc:token ID="w366">Figurenrelation</tc:token>
+      <tc:token ID="w367">feststehen</tc:token>
+      <tc:token ID="w368">,</tc:token>
+      <tc:token ID="w369">wird</tc:token>
+      <tc:token ID="w36a">die</tc:token>
+      <tc:token ID="w36b">Art</tc:token>
+      <tc:token ID="w36c">der</tc:token>
+      <tc:token ID="w36d">Relation</tc:token>
+      <tc:token ID="w36e">durch</tc:token>
+      <tc:token ID="w36f">das</tc:token>
+      <tc:token ID="w370">Auslesen</tc:token>
+      <tc:token ID="w371">des</tc:token>
+      <tc:token ID="w372">Signalworts</tc:token>
+      <tc:token ID="w373">aus</tc:token>
+      <tc:token ID="w374">der</tc:token>
+      <tc:token ID="w375">Baumstruktur</tc:token>
+      <tc:token ID="w376">festgestellt</tc:token>
+      <tc:token ID="w377">.</tc:token>
+      <tc:token ID="w378">Danach</tc:token>
+      <tc:token ID="w379">werden</tc:token>
+      <tc:token ID="w37a">daraus</tc:token>
+      <tc:token ID="w37b">die</tc:token>
+      <tc:token ID="w37c">Zeilen</tc:token>
+      <tc:token ID="w37d">mit</tc:token>
+      <tc:token ID="w37e">den</tc:token>
+      <tc:token ID="w37f">Figurenrelationen</tc:token>
+      <tc:token ID="w380">erstellt</tc:token>
+      <tc:token ID="w381">und</tc:token>
+      <tc:token ID="w382">diese</tc:token>
+      <tc:token ID="w383">anschließend</tc:token>
+      <tc:token ID="w384">in</tc:token>
+      <tc:token ID="w385">die</tc:token>
+      <tc:token ID="w386">jeweilige</tc:token>
+      <tc:token ID="w387">TEI-Version</tc:token>
+      <tc:token ID="w388">des</tc:token>
+      <tc:token ID="w389">Textes</tc:token>
+      <tc:token ID="w38a">geschrieben</tc:token>
+      <tc:token ID="w38b">.</tc:token>
+      <tc:token ID="w38c">Befindet</tc:token>
+      <tc:token ID="w38d">sich</tc:token>
+      <tc:token ID="w38e">in</tc:token>
+      <tc:token ID="w38f">einer</tc:token>
+      <tc:token ID="w390">Zeile</tc:token>
+      <tc:token ID="w391">eine</tc:token>
+      <tc:token ID="w392">zweite</tc:token>
+      <tc:token ID="w393">Figuren-ID</tc:token>
+      <tc:token ID="w394">,</tc:token>
+      <tc:token ID="w395">bezieht</tc:token>
+      <tc:token ID="w396">sich</tc:token>
+      <tc:token ID="w397">die</tc:token>
+      <tc:token ID="w398">Zeile</tc:token>
+      <tc:token ID="w399">nicht</tc:token>
+      <tc:token ID="w39a">auf</tc:token>
+      <tc:token ID="w39b">eine</tc:token>
+      <tc:token ID="w39c">vorangegangene</tc:token>
+      <tc:token ID="w39d">,</tc:token>
+      <tc:token ID="w39e">sondern</tc:token>
+      <tc:token ID="w39f">stellt</tc:token>
+      <tc:token ID="w3a0">selbst</tc:token>
+      <tc:token ID="w3a1">den</tc:token>
+      <tc:token ID="w3a2">zweite</tc:token>
+      <tc:token ID="w3a3">Bezugspunkt</tc:token>
+      <tc:token ID="w3a4">der</tc:token>
+      <tc:token ID="w3a5">Relation</tc:token>
+      <tc:token ID="w3a6">.</tc:token>
+      <tc:token ID="w3a7">Das</tc:token>
+      <tc:token ID="w3a8">ist</tc:token>
+      <tc:token ID="w3a9">beispielsweise</tc:token>
+      <tc:token ID="w3aa">bei</tc:token>
+      <tc:token ID="w3ab">der</tc:token>
+      <tc:token ID="w3ac">Figur</tc:token>
+      <tc:token ID="w3ad">“</tc:token>
+      <tc:token ID="w3ae">Camillo</tc:token>
+      <tc:token ID="w3af">Rota</tc:token>
+      <tc:token ID="w3b0">”</tc:token>
+      <tc:token ID="w3b1">in</tc:token>
+      <tc:token ID="w3b2">Emilia</tc:token>
+      <tc:token ID="w3b3">Galotti</tc:token>
+      <tc:token ID="w3b4">der</tc:token>
+      <tc:token ID="w3b5">Fall</tc:token>
+      <tc:token ID="w3b6">:</tc:token>
+      <tc:token ID="w3b7">&lt;</tc:token>
+      <tc:token ID="w3b8">castItem</tc:token>
+      <tc:token ID="w3b9">corresp=</tc:token>
+      <tc:token ID="w3ba">"#</tc:token>
+      <tc:token ID="w3bb">camillo_</tc:token>
+      <tc:token ID="w3bc">rota</tc:token>
+      <tc:token ID="w3bd">">Camillo</tc:token>
+      <tc:token ID="w3be">Rota</tc:token>
+      <tc:token ID="w3bf">,</tc:token>
+      <tc:token ID="w3c0">einer</tc:token>
+      <tc:token ID="w3c1">von</tc:token>
+      <tc:token ID="w3c2">des</tc:token>
+      <tc:token ID="w3c3">Prinzen</tc:token>
+      <tc:token ID="w3c4">Räten</tc:token>
+      <tc:token ID="w3c5">.</tc:token>
+      <tc:token ID="w3c6">&lt;</tc:token>
+      <tc:token ID="w3c7">/</tc:token>
+      <tc:token ID="w3c8">castItem></tc:token>
+      <tc:token ID="w3c9">Die</tc:token>
+      <tc:token ID="w3ca">erste</tc:token>
+      <tc:token ID="w3cb">erkannte</tc:token>
+      <tc:token ID="w3cc">ID</tc:token>
+      <tc:token ID="w3cd">ist</tc:token>
+      <tc:token ID="w3ce">camillo_rota</tc:token>
+      <tc:token ID="w3cf">,</tc:token>
+      <tc:token ID="w3d0">die</tc:token>
+      <tc:token ID="w3d1">zweite</tc:token>
+      <tc:token ID="w3d2">der_</tc:token>
+      <tc:token ID="w3d3">prinz</tc:token>
+      <tc:token ID="w3d4">,</tc:token>
+      <tc:token ID="w3d5">abgeleitet</tc:token>
+      <tc:token ID="w3d6">aus</tc:token>
+      <tc:token ID="w3d7">“</tc:token>
+      <tc:token ID="w3d8">des</tc:token>
+      <tc:token ID="w3d9">Prinzen</tc:token>
+      <tc:token ID="w3da">”</tc:token>
+      <tc:token ID="w3db">.</tc:token>
+      <tc:token ID="w3dc">Die</tc:token>
+      <tc:token ID="w3dd">IDs</tc:token>
+      <tc:token ID="w3de">werden</tc:token>
+      <tc:token ID="w3df">in</tc:token>
+      <tc:token ID="w3e0">gerichtete</tc:token>
+      <tc:token ID="w3e1">Relationen</tc:token>
+      <tc:token ID="w3e2">mit</tc:token>
+      <tc:token ID="w3e3">aktivem</tc:token>
+      <tc:token ID="w3e4">und</tc:token>
+      <tc:token ID="w3e5">passivem</tc:token>
+      <tc:token ID="w3e6">Part</tc:token>
+      <tc:token ID="w3e7">überführt</tc:token>
+      <tc:token ID="w3e8">:</tc:token>
+      <tc:token ID="w3e9">&lt;</tc:token>
+      <tc:token ID="w3ea">relation</tc:token>
+      <tc:token ID="w3eb">name=</tc:token>
+      <tc:token ID="w3ec">"</tc:token>
+      <tc:token ID="w3ed">associated_</tc:token>
+      <tc:token ID="w3ee">with</tc:token>
+      <tc:token ID="w3ef">"</tc:token>
+      <tc:token ID="w3f0">active=</tc:token>
+      <tc:token ID="w3f1">"#</tc:token>
+      <tc:token ID="w3f2">camillo_</tc:token>
+      <tc:token ID="w3f3">rota</tc:token>
+      <tc:token ID="w3f4">"</tc:token>
+      <tc:token ID="w3f5">passive=</tc:token>
+      <tc:token ID="w3f6">"#der_</tc:token>
+      <tc:token ID="w3f7">prinz</tc:token>
+      <tc:token ID="w3f8">"</tc:token>
+      <tc:token ID="w3f9">/></tc:token>
+      <tc:token ID="w3fa">Das</tc:token>
+      <tc:token ID="w3fb">Programm</tc:token>
+      <tc:token ID="w3fc">arbeitet</tc:token>
+      <tc:token ID="w3fd">dabei</tc:token>
+      <tc:token ID="w3fe">ausschließlich</tc:token>
+      <tc:token ID="w3ff">mit</tc:token>
+      <tc:token ID="w400">den</tc:token>
+      <tc:token ID="w401">IDs</tc:token>
+      <tc:token ID="w402">.</tc:token>
+      <tc:token ID="w403">Dafür</tc:token>
+      <tc:token ID="w404">ist</tc:token>
+      <tc:token ID="w405">es</tc:token>
+      <tc:token ID="w406">nicht</tc:token>
+      <tc:token ID="w407">nötig</tc:token>
+      <tc:token ID="w408">,</tc:token>
+      <tc:token ID="w409">dass</tc:token>
+      <tc:token ID="w40a">Figurennamen</tc:token>
+      <tc:token ID="w40b">explizit</tc:token>
+      <tc:token ID="w40c">als</tc:token>
+      <tc:token ID="w40d">Namen</tc:token>
+      <tc:token ID="w40e">oder</tc:token>
+      <tc:token ID="w40f">Adelstitel</tc:token>
+      <tc:token ID="w410">als</tc:token>
+      <tc:token ID="w411">Titel</tc:token>
+      <tc:token ID="w412">erkannt</tc:token>
+      <tc:token ID="w413">werden</tc:token>
+      <tc:token ID="w414">.</tc:token>
+      <tc:token ID="w415">Es</tc:token>
+      <tc:token ID="w416">geht</tc:token>
+      <tc:token ID="w417">ausschließlich</tc:token>
+      <tc:token ID="w418">darum</tc:token>
+      <tc:token ID="w419">aus</tc:token>
+      <tc:token ID="w41a">den</tc:token>
+      <tc:token ID="w41b">einzelnen</tc:token>
+      <tc:token ID="w41c">Wörtern</tc:token>
+      <tc:token ID="w41d">einer</tc:token>
+      <tc:token ID="w41e">Zeile</tc:token>
+      <tc:token ID="w41f">im</tc:token>
+      <tc:token ID="w420">Figurenverzeichnis</tc:token>
+      <tc:token ID="w421">Namen</tc:token>
+      <tc:token ID="w422">bzw</tc:token>
+      <tc:token ID="w423">.</tc:token>
+      <tc:token ID="w424">Namensteile</tc:token>
+      <tc:token ID="w425">und</tc:token>
+      <tc:token ID="w426">Titelangaben</tc:token>
+      <tc:token ID="w427">herauszufiltern</tc:token>
+      <tc:token ID="w428">,</tc:token>
+      <tc:token ID="w429">die</tc:token>
+      <tc:token ID="w42a">den</tc:token>
+      <tc:token ID="w42b">IDs</tc:token>
+      <tc:token ID="w42c">entsprechen</tc:token>
+      <tc:token ID="w42d">,</tc:token>
+      <tc:token ID="w42e">um</tc:token>
+      <tc:token ID="w42f">die</tc:token>
+      <tc:token ID="w430">Zeilen</tc:token>
+      <tc:token ID="w431">einer</tc:token>
+      <tc:token ID="w432">oder</tc:token>
+      <tc:token ID="w433">mehreren</tc:token>
+      <tc:token ID="w434">Figuren</tc:token>
+      <tc:token ID="w435">zuordnen</tc:token>
+      <tc:token ID="w436">zu</tc:token>
+      <tc:token ID="w437">können</tc:token>
+      <tc:token ID="w438">.</tc:token>
+      <tc:token ID="w439">Um</tc:token>
+      <tc:token ID="w43a">auch</tc:token>
+      <tc:token ID="w43b">IDs</tc:token>
+      <tc:token ID="w43c">zu</tc:token>
+      <tc:token ID="w43d">erkennen</tc:token>
+      <tc:token ID="w43e">,</tc:token>
+      <tc:token ID="w43f">die</tc:token>
+      <tc:token ID="w440">sich</tc:token>
+      <tc:token ID="w441">geringfügig</tc:token>
+      <tc:token ID="w442">von</tc:token>
+      <tc:token ID="w443">den</tc:token>
+      <tc:token ID="w444">Namensnennungen</tc:token>
+      <tc:token ID="w445">im</tc:token>
+      <tc:token ID="w446">Figurenverzeichnis</tc:token>
+      <tc:token ID="w447">unterscheiden</tc:token>
+      <tc:token ID="w448">,</tc:token>
+      <tc:token ID="w449">überprüft</tc:token>
+      <tc:token ID="w44a">das</tc:token>
+      <tc:token ID="w44b">Programm</tc:token>
+      <tc:token ID="w44c">pro</tc:token>
+      <tc:token ID="w44d">Wort</tc:token>
+      <tc:token ID="w44e">eine</tc:token>
+      <tc:token ID="w44f">Reihe</tc:token>
+      <tc:token ID="w450">an</tc:token>
+      <tc:token ID="w451">Varianten</tc:token>
+      <tc:token ID="w452">.</tc:token>
+      <tc:token ID="w453">So</tc:token>
+      <tc:token ID="w454">trennt</tc:token>
+      <tc:token ID="w455">es</tc:token>
+      <tc:token ID="w456">beispielsweise</tc:token>
+      <tc:token ID="w457">vom</tc:token>
+      <tc:token ID="w458">oben</tc:token>
+      <tc:token ID="w459">gennannten</tc:token>
+      <tc:token ID="w45a">Wort</tc:token>
+      <tc:token ID="w45b">“</tc:token>
+      <tc:token ID="w45c">Prinzen</tc:token>
+      <tc:token ID="w45d">”</tc:token>
+      <tc:token ID="w45e">das</tc:token>
+      <tc:token ID="w45f">Suffix</tc:token>
+      <tc:token ID="w460">ab</tc:token>
+      <tc:token ID="w461">und</tc:token>
+      <tc:token ID="w462">überprüft</tc:token>
+      <tc:token ID="w463">,</tc:token>
+      <tc:token ID="w464">ob</tc:token>
+      <tc:token ID="w465">ein</tc:token>
+      <tc:token ID="w466">Artikel</tc:token>
+      <tc:token ID="w467">Teil</tc:token>
+      <tc:token ID="w468">der</tc:token>
+      <tc:token ID="w469">ID</tc:token>
+      <tc:token ID="w46a">ist</tc:token>
+      <tc:token ID="w46b">.</tc:token>
+      <tc:token ID="w46c">So</tc:token>
+      <tc:token ID="w46d">kann</tc:token>
+      <tc:token ID="w46e">“</tc:token>
+      <tc:token ID="w46f">des</tc:token>
+      <tc:token ID="w470">Prinzen</tc:token>
+      <tc:token ID="w471">”</tc:token>
+      <tc:token ID="w472">der</tc:token>
+      <tc:token ID="w473">ID</tc:token>
+      <tc:token ID="w474">“</tc:token>
+      <tc:token ID="w475">der_</tc:token>
+      <tc:token ID="w476">prinz</tc:token>
+      <tc:token ID="w477">”</tc:token>
+      <tc:token ID="w478">zugeordnet</tc:token>
+      <tc:token ID="w479">werden</tc:token>
+      <tc:token ID="w47a">.</tc:token>
+      <tc:token ID="w47b">In</tc:token>
+      <tc:token ID="w47c">manchen</tc:token>
+      <tc:token ID="w47d">Fällen</tc:token>
+      <tc:token ID="w47e">funktioniert</tc:token>
+      <tc:token ID="w47f">diese</tc:token>
+      <tc:token ID="w480">Abwandlung</tc:token>
+      <tc:token ID="w481">aber</tc:token>
+      <tc:token ID="w482">nicht</tc:token>
+      <tc:token ID="w483">so</tc:token>
+      <tc:token ID="w484">reibungslos</tc:token>
+      <tc:token ID="w485">.</tc:token>
+      <tc:token ID="w486">In</tc:token>
+      <tc:token ID="w487">Der</tc:token>
+      <tc:token ID="w488">Eheteufel</tc:token>
+      <tc:token ID="w489">auf</tc:token>
+      <tc:token ID="w48a">Reisen</tc:token>
+      <tc:token ID="w48b">wird</tc:token>
+      <tc:token ID="w48c">eine</tc:token>
+      <tc:token ID="w48d">Figur</tc:token>
+      <tc:token ID="w48e">im</tc:token>
+      <tc:token ID="w48f">Figurenverzeichnis</tc:token>
+      <tc:token ID="w490">mit</tc:token>
+      <tc:token ID="w491">dem</tc:token>
+      <tc:token ID="w492">Namen</tc:token>
+      <tc:token ID="w493">“</tc:token>
+      <tc:token ID="w494">Gustel</tc:token>
+      <tc:token ID="w495">”</tc:token>
+      <tc:token ID="w496">eingeführt</tc:token>
+      <tc:token ID="w497">,</tc:token>
+      <tc:token ID="w498">wohingegen</tc:token>
+      <tc:token ID="w499">die</tc:token>
+      <tc:token ID="w49a">ID</tc:token>
+      <tc:token ID="w49b">„</tc:token>
+      <tc:token ID="w49c">gustchen</tc:token>
+      <tc:token ID="w49d">“</tc:token>
+      <tc:token ID="w49e">lautet</tc:token>
+      <tc:token ID="w49f">.</tc:token>
+      <tc:token ID="w4a0">Die</tc:token>
+      <tc:token ID="w4a1">ID</tc:token>
+      <tc:token ID="w4a2">orientiert</tc:token>
+      <tc:token ID="w4a3">sich</tc:token>
+      <tc:token ID="w4a4">hier</tc:token>
+      <tc:token ID="w4a5">an</tc:token>
+      <tc:token ID="w4a6">der</tc:token>
+      <tc:token ID="w4a7">Namensform</tc:token>
+      <tc:token ID="w4a8">,</tc:token>
+      <tc:token ID="w4a9">die</tc:token>
+      <tc:token ID="w4aa">im</tc:token>
+      <tc:token ID="w4ab">Stück</tc:token>
+      <tc:token ID="w4ac">tatsächlich</tc:token>
+      <tc:token ID="w4ad">verwendet</tc:token>
+      <tc:token ID="w4ae">wird</tc:token>
+      <tc:token ID="w4af">und</tc:token>
+      <tc:token ID="w4b0">nicht</tc:token>
+      <tc:token ID="w4b1">an</tc:token>
+      <tc:token ID="w4b2">der</tc:token>
+      <tc:token ID="w4b3">Bezeichnung</tc:token>
+      <tc:token ID="w4b4">im</tc:token>
+      <tc:token ID="w4b5">Figurenverzeichnis</tc:token>
+      <tc:token ID="w4b6">.</tc:token>
+      <tc:token ID="w4b7">Das</tc:token>
+      <tc:token ID="w4b8">führt</tc:token>
+      <tc:token ID="w4b9">dazu</tc:token>
+      <tc:token ID="w4ba">,</tc:token>
+      <tc:token ID="w4bb">dass</tc:token>
+      <tc:token ID="w4bc">das</tc:token>
+      <tc:token ID="w4bd">Programm</tc:token>
+      <tc:token ID="w4be">die</tc:token>
+      <tc:token ID="w4bf">ID</tc:token>
+      <tc:token ID="w4c0">“</tc:token>
+      <tc:token ID="w4c1">gustchen</tc:token>
+      <tc:token ID="w4c2">”</tc:token>
+      <tc:token ID="w4c3">nicht</tc:token>
+      <tc:token ID="w4c4">dem</tc:token>
+      <tc:token ID="w4c5">Wort</tc:token>
+      <tc:token ID="w4c6">“</tc:token>
+      <tc:token ID="w4c7">Gustel</tc:token>
+      <tc:token ID="w4c8">”</tc:token>
+      <tc:token ID="w4c9">zuordnen</tc:token>
+      <tc:token ID="w4ca">kann</tc:token>
+      <tc:token ID="w4cb">,</tc:token>
+      <tc:token ID="w4cc">da</tc:token>
+      <tc:token ID="w4cd">sie</tc:token>
+      <tc:token ID="w4ce">sich</tc:token>
+      <tc:token ID="w4cf">zu</tc:token>
+      <tc:token ID="w4d0">stark</tc:token>
+      <tc:token ID="w4d1">unterscheiden</tc:token>
+      <tc:token ID="w4d2">.</tc:token>
+      <tc:token ID="w4d3">Um</tc:token>
+      <tc:token ID="w4d4">die</tc:token>
+      <tc:token ID="w4d5">Methode</tc:token>
+      <tc:token ID="w4d6">zu</tc:token>
+      <tc:token ID="w4d7">evaluieren</tc:token>
+      <tc:token ID="w4d8">,</tc:token>
+      <tc:token ID="w4d9">wurden</tc:token>
+      <tc:token ID="w4da">die</tc:token>
+      <tc:token ID="w4db">automatisch</tc:token>
+      <tc:token ID="w4dc">erzeugten</tc:token>
+      <tc:token ID="w4dd">Relationen</tc:token>
+      <tc:token ID="w4de">manuell</tc:token>
+      <tc:token ID="w4df">nachkorrigiert</tc:token>
+      <tc:token ID="w4e0">und</tc:token>
+      <tc:token ID="w4e1">so</tc:token>
+      <tc:token ID="w4e2">ein</tc:token>
+      <tc:token ID="w4e3">Goldstandart</tc:token>
+      <tc:token ID="w4e4">erzeugt</tc:token>
+      <tc:token ID="w4e5">.</tc:token>
+      <tc:token ID="w4e6">Im</tc:token>
+      <tc:token ID="w4e7">Schnitt</tc:token>
+      <tc:token ID="w4e8">bearbeiteten</tc:token>
+      <tc:token ID="w4e9">die</tc:token>
+      <tc:token ID="w4ea">Korrektoren</tc:token>
+      <tc:token ID="w4eb">12</tc:token>
+      <tc:token ID="w4ec">Texte</tc:token>
+      <tc:token ID="w4ed">pro</tc:token>
+      <tc:token ID="w4ee">Stunde</tc:token>
+      <tc:token ID="w4ef">.</tc:token>
+      <tc:token ID="w4f0">Beim</tc:token>
+      <tc:token ID="w4f1">Abgleich</tc:token>
+      <tc:token ID="w4f2">der</tc:token>
+      <tc:token ID="w4f3">automatisch</tc:token>
+      <tc:token ID="w4f4">erzeugten</tc:token>
+      <tc:token ID="w4f5">Ergebnisse</tc:token>
+      <tc:token ID="w4f6">mit</tc:token>
+      <tc:token ID="w4f7">dem</tc:token>
+      <tc:token ID="w4f8">Goldstandart</tc:token>
+      <tc:token ID="w4f9">lag</tc:token>
+      <tc:token ID="w4fa">der</tc:token>
+      <tc:token ID="w4fb">Macro-Average-Recall</tc:token>
+      <tc:token ID="w4fc">Wert</tc:token>
+      <tc:token ID="w4fd">bei</tc:token>
+      <tc:token ID="w4fe">0,3</tc:token>
+      <tc:token ID="w4ff">(</tc:token>
+      <tc:token ID="w500">Standardabweichung</tc:token>
+      <tc:token ID="w501">:</tc:token>
+      <tc:token ID="w502">0,3</tc:token>
+      <tc:token ID="w503">)</tc:token>
+      <tc:token ID="w504">und</tc:token>
+      <tc:token ID="w505">der</tc:token>
+      <tc:token ID="w506">Wert</tc:token>
+      <tc:token ID="w507">von</tc:token>
+      <tc:token ID="w508">Macro-Average-Precision</tc:token>
+      <tc:token ID="w509">bei</tc:token>
+      <tc:token ID="w50a">0,55</tc:token>
+      <tc:token ID="w50b">(</tc:token>
+      <tc:token ID="w50c">Standardabweichung</tc:token>
+      <tc:token ID="w50d">:</tc:token>
+      <tc:token ID="w50e">0,4</tc:token>
+      <tc:token ID="w50f">)</tc:token>
+      <tc:token ID="w510">,</tc:token>
+      <tc:token ID="w511">was</tc:token>
+      <tc:token ID="w512">einen</tc:token>
+      <tc:token ID="w513">Macro-Average-F-Score</tc:token>
+      <tc:token ID="w514">von</tc:token>
+      <tc:token ID="w515">0,49</tc:token>
+      <tc:token ID="w516">(</tc:token>
+      <tc:token ID="w517">Standardabweichung</tc:token>
+      <tc:token ID="w518">:</tc:token>
+      <tc:token ID="w519">0,25</tc:token>
+      <tc:token ID="w51a">)</tc:token>
+      <tc:token ID="w51b">ergibt</tc:token>
+      <tc:token ID="w51c">.</tc:token>
+      <tc:token ID="w51d">GerDraCor</tc:token>
+      <tc:token ID="w51e">ist</tc:token>
+      <tc:token ID="w51f">ein</tc:token>
+      <tc:token ID="w520">deutsches</tc:token>
+      <tc:token ID="w521">Dramenkorpus</tc:token>
+      <tc:token ID="w522">,</tc:token>
+      <tc:token ID="w523">das</tc:token>
+      <tc:token ID="w524">nach</tc:token>
+      <tc:token ID="w525">TEI-</tc:token>
+      <tc:token ID="w526">P5</tc:token>
+      <tc:token ID="w527">Standarts</tc:token>
+      <tc:token ID="w528">kodiert</tc:token>
+      <tc:token ID="w529">ist</tc:token>
+      <tc:token ID="w52a">und</tc:token>
+      <tc:token ID="w52b">im</tc:token>
+      <tc:token ID="w52c">Dezember</tc:token>
+      <tc:token ID="w52d">2019</tc:token>
+      <tc:token ID="w52e">474</tc:token>
+      <tc:token ID="w52f">Dramen</tc:token>
+      <tc:token ID="w530">enthält</tc:token>
+      <tc:token ID="w531">,</tc:token>
+      <tc:token ID="w532">die</tc:token>
+      <tc:token ID="w533">im</tc:token>
+      <tc:token ID="w534">Zeitraum</tc:token>
+      <tc:token ID="w535">von</tc:token>
+      <tc:token ID="w536">1730</tc:token>
+      <tc:token ID="w537">bis</tc:token>
+      <tc:token ID="w538">1940</tc:token>
+      <tc:token ID="w539">veröffentlicht</tc:token>
+      <tc:token ID="w53a">wurden</tc:token>
+      <tc:token ID="w53b">(</tc:token>
+      <tc:token ID="w53c">Fischer</tc:token>
+      <tc:token ID="w53d">u.</tc:token>
+      <tc:token ID="w53e">a.</tc:token>
+      <tc:token ID="w53f">2019</tc:token>
+      <tc:token ID="w540">)</tc:token>
+      <tc:token ID="w541">.</tc:token>
+      <tc:token ID="w542">Es</tc:token>
+      <tc:token ID="w543">ist</tc:token>
+      <tc:token ID="w544">Teil</tc:token>
+      <tc:token ID="w545">des</tc:token>
+      <tc:token ID="w546">größeren</tc:token>
+      <tc:token ID="w547">DraCor</tc:token>
+      <tc:token ID="w548">(</tc:token>
+      <tc:token ID="w549">Fischer</tc:token>
+      <tc:token ID="w54a">u.</tc:token>
+      <tc:token ID="w54b">a.</tc:token>
+      <tc:token ID="w54c">2019</tc:token>
+      <tc:token ID="w54d">)</tc:token>
+      <tc:token ID="w54e">,</tc:token>
+      <tc:token ID="w54f">das</tc:token>
+      <tc:token ID="w550">als</tc:token>
+      <tc:token ID="w551">Programmable</tc:token>
+      <tc:token ID="w552">Corpus</tc:token>
+      <tc:token ID="w553">darauf</tc:token>
+      <tc:token ID="w554">ausgelegt</tc:token>
+      <tc:token ID="w555">ist</tc:token>
+      <tc:token ID="w556">,</tc:token>
+      <tc:token ID="w557">durch</tc:token>
+      <tc:token ID="w558">Community-Anstrengungen</tc:token>
+      <tc:token ID="w559">korrigiert</tc:token>
+      <tc:token ID="w55a">und</tc:token>
+      <tc:token ID="w55b">verbessert</tc:token>
+      <tc:token ID="w55c">werden</tc:token>
+      <tc:token ID="w55d">zu</tc:token>
+      <tc:token ID="w55e">können</tc:token>
+      <tc:token ID="w55f">(</tc:token>
+      <tc:token ID="w560">Fischer</tc:token>
+      <tc:token ID="w561">u.</tc:token>
+      <tc:token ID="w562">a.</tc:token>
+      <tc:token ID="w563">2019</tc:token>
+      <tc:token ID="w564">,</tc:token>
+      <tc:token ID="w565">195</tc:token>
+      <tc:token ID="w566">)</tc:token>
+      <tc:token ID="w567">.</tc:token>
+      <tc:token ID="w568">Da</tc:token>
+      <tc:token ID="w569">auf</tc:token>
+      <tc:token ID="w56a">einem</tc:token>
+      <tc:token ID="w56b">Fork</tc:token>
+      <tc:token ID="w56c">von</tc:token>
+      <tc:token ID="w56d">GerDraCor</tc:token>
+      <tc:token ID="w56e">gearbeitet</tc:token>
+      <tc:token ID="w56f">wurde</tc:token>
+      <tc:token ID="w570">,</tc:token>
+      <tc:token ID="w571">können</tc:token>
+      <tc:token ID="w572">die</tc:token>
+      <tc:token ID="w573">automatisch</tc:token>
+      <tc:token ID="w574">erzeugten</tc:token>
+      <tc:token ID="w575">Figurenrelationen</tc:token>
+      <tc:token ID="w576">dem</tc:token>
+      <tc:token ID="w577">Korpus</tc:token>
+      <tc:token ID="w578">unproblematisch</tc:token>
+      <tc:token ID="w579">hinzugefügt</tc:token>
+      <tc:token ID="w57a">werden</tc:token>
+      <tc:token ID="w57b">.</tc:token>
+      <tc:token ID="w57c">Zusätzlich</tc:token>
+      <tc:token ID="w57d">wurden</tc:token>
+      <tc:token ID="w57e">die</tc:token>
+      <tc:token ID="w57f">Relationen</tc:token>
+      <tc:token ID="w580">,</tc:token>
+      <tc:token ID="w581">wie</tc:token>
+      <tc:token ID="w582">bereits</tc:token>
+      <tc:token ID="w583">beschrieben</tc:token>
+      <tc:token ID="w584">,</tc:token>
+      <tc:token ID="w585">manuell</tc:token>
+      <tc:token ID="w586">nachkorrigiert</tc:token>
+      <tc:token ID="w587">,</tc:token>
+      <tc:token ID="w588">um</tc:token>
+      <tc:token ID="w589">eine</tc:token>
+      <tc:token ID="w58a">erhöhte</tc:token>
+      <tc:token ID="w58b">Qualität</tc:token>
+      <tc:token ID="w58c">für</tc:token>
+      <tc:token ID="w58d">die</tc:token>
+      <tc:token ID="w58e">Nachnutzung</tc:token>
+      <tc:token ID="w58f">zu</tc:token>
+      <tc:token ID="w590">gewährleisten</tc:token>
+      <tc:token ID="w591">.</tc:token>
+      <tc:token ID="w592">Im</tc:token>
+      <tc:token ID="w593">Rahmen</tc:token>
+      <tc:token ID="w594">der</tc:token>
+      <tc:token ID="w595">manuellen</tc:token>
+      <tc:token ID="w596">Nachkorrektur</tc:token>
+      <tc:token ID="w597">wurden</tc:token>
+      <tc:token ID="w598">außerdem</tc:token>
+      <tc:token ID="w599">interessante</tc:token>
+      <tc:token ID="w59a">Fälle</tc:token>
+      <tc:token ID="w59b">identifiziert</tc:token>
+      <tc:token ID="w59c">.</tc:token>
+      <tc:token ID="w59d">So</tc:token>
+      <tc:token ID="w59e">wird</tc:token>
+      <tc:token ID="w59f">etwa</tc:token>
+      <tc:token ID="w5a0">eine</tc:token>
+      <tc:token ID="w5a1">Gruppe</tc:token>
+      <tc:token ID="w5a2">von</tc:token>
+      <tc:token ID="w5a3">Figuren</tc:token>
+      <tc:token ID="w5a4">in</tc:token>
+      <tc:token ID="w5a5">dem</tc:token>
+      <tc:token ID="w5a6">oben</tc:token>
+      <tc:token ID="w5a7">abgebildeten</tc:token>
+      <tc:token ID="w5a8">Figurenverzeichnis</tc:token>
+      <tc:token ID="w5a9">von</tc:token>
+      <tc:token ID="w5aa">Schillers</tc:token>
+      <tc:token ID="w5ab">Die</tc:token>
+      <tc:token ID="w5ac">Räuber</tc:token>
+      <tc:token ID="w5ad">als</tc:token>
+      <tc:token ID="w5ae">“</tc:token>
+      <tc:token ID="w5af">Libertiner</tc:token>
+      <tc:token ID="w5b0">,</tc:token>
+      <tc:token ID="w5b1">nachher</tc:token>
+      <tc:token ID="w5b2">Banditen</tc:token>
+      <tc:token ID="w5b3">”</tc:token>
+      <tc:token ID="w5b4">bezeichnet</tc:token>
+      <tc:token ID="w5b5">,</tc:token>
+      <tc:token ID="w5b6">wodurch</tc:token>
+      <tc:token ID="w5b7">Informationen</tc:token>
+      <tc:token ID="w5b8">aus</tc:token>
+      <tc:token ID="w5b9">der</tc:token>
+      <tc:token ID="w5ba">späteren</tc:token>
+      <tc:token ID="w5bb">Handlung</tc:token>
+      <tc:token ID="w5bc">des</tc:token>
+      <tc:token ID="w5bd">Stückes</tc:token>
+      <tc:token ID="w5be">vorweggenommen</tc:token>
+      <tc:token ID="w5bf">werden</tc:token>
+      <tc:token ID="w5c0">.</tc:token>
+      <tc:token ID="w5c1">Diese</tc:token>
+      <tc:token ID="w5c2">Art</tc:token>
+      <tc:token ID="w5c3">der</tc:token>
+      <tc:token ID="w5c4">Vorwegnahme</tc:token>
+      <tc:token ID="w5c5">findet</tc:token>
+      <tc:token ID="w5c6">sich</tc:token>
+      <tc:token ID="w5c7">außerdem</tc:token>
+      <tc:token ID="w5c8">in</tc:token>
+      <tc:token ID="w5c9">Stücken</tc:token>
+      <tc:token ID="w5ca">von</tc:token>
+      <tc:token ID="w5cb">Grabbe</tc:token>
+      <tc:token ID="w5cc">(</tc:token>
+      <tc:token ID="w5cd">Herzog</tc:token>
+      <tc:token ID="w5ce">Theodor</tc:token>
+      <tc:token ID="w5cf">von</tc:token>
+      <tc:token ID="w5d0">Gothland</tc:token>
+      <tc:token ID="w5d1">,</tc:token>
+      <tc:token ID="w5d2">Panizza</tc:token>
+      <tc:token ID="w5d3">(</tc:token>
+      <tc:token ID="w5d4">Das</tc:token>
+      <tc:token ID="w5d5">Liebeskonzil</tc:token>
+      <tc:token ID="w5d6">)</tc:token>
+      <tc:token ID="w5d7">und</tc:token>
+      <tc:token ID="w5d8">Uhland</tc:token>
+      <tc:token ID="w5d9">(</tc:token>
+      <tc:token ID="w5da">Ludwig</tc:token>
+      <tc:token ID="w5db">der</tc:token>
+      <tc:token ID="w5dc">Bayer</tc:token>
+      <tc:token ID="w5dd">)</tc:token>
+      <tc:token ID="w5de">.</tc:token>
+      <tc:token ID="w5df">In</tc:token>
+      <tc:token ID="w5e0">Kaisers</tc:token>
+      <tc:token ID="w5e1">Stadt</tc:token>
+      <tc:token ID="w5e2">und</tc:token>
+      <tc:token ID="w5e3">Land</tc:token>
+      <tc:token ID="w5e4">hingegen</tc:token>
+      <tc:token ID="w5e5">wird</tc:token>
+      <tc:token ID="w5e6">mit</tc:token>
+      <tc:token ID="w5e7">der</tc:token>
+      <tc:token ID="w5e8">Zeile</tc:token>
+      <tc:token ID="w5e9">“</tc:token>
+      <tc:token ID="w5ea">Erster</tc:token>
+      <tc:token ID="w5eb">Bergmann</tc:token>
+      <tc:token ID="w5ec">,</tc:token>
+      <tc:token ID="w5ed">später</tc:token>
+      <tc:token ID="w5ee">Michael</tc:token>
+      <tc:token ID="w5ef">”</tc:token>
+      <tc:token ID="w5f0">keine</tc:token>
+      <tc:token ID="w5f1">Entwicklung</tc:token>
+      <tc:token ID="w5f2">in</tc:token>
+      <tc:token ID="w5f3">der</tc:token>
+      <tc:token ID="w5f4">Handlung</tc:token>
+      <tc:token ID="w5f5">,</tc:token>
+      <tc:token ID="w5f6">sondern</tc:token>
+      <tc:token ID="w5f7">eine</tc:token>
+      <tc:token ID="w5f8">Veränderung</tc:token>
+      <tc:token ID="w5f9">der</tc:token>
+      <tc:token ID="w5fa">Sprecherbezeichnung</tc:token>
+      <tc:token ID="w5fb">markiert</tc:token>
+      <tc:token ID="w5fc">.</tc:token>
+      <tc:token ID="w5fd">Vorwegnahmen</tc:token>
+      <tc:token ID="w5fe">mit</tc:token>
+      <tc:token ID="w5ff">Bezug</tc:token>
+      <tc:token ID="w600">auf</tc:token>
+      <tc:token ID="w601">veränderliche</tc:token>
+      <tc:token ID="w602">Beziehungen</tc:token>
+      <tc:token ID="w603">zwischen</tc:token>
+      <tc:token ID="w604">Figuren</tc:token>
+      <tc:token ID="w605">konnten</tc:token>
+      <tc:token ID="w606">nicht</tc:token>
+      <tc:token ID="w607">festgestellt</tc:token>
+      <tc:token ID="w608">werden</tc:token>
+      <tc:token ID="w609">.</tc:token>
+      <tc:token ID="w60a">Wir</tc:token>
+      <tc:token ID="w60b">stellen</tc:token>
+      <tc:token ID="w60c">im</tc:token>
+      <tc:token ID="w60d">folgenden</tc:token>
+      <tc:token ID="w60e">zwei</tc:token>
+      <tc:token ID="w60f">Analysen</tc:token>
+      <tc:token ID="w610">vor</tc:token>
+      <tc:token ID="w611">,</tc:token>
+      <tc:token ID="w612">in</tc:token>
+      <tc:token ID="w613">denen</tc:token>
+      <tc:token ID="w614">von</tc:token>
+      <tc:token ID="w615">den</tc:token>
+      <tc:token ID="w616">automatisch</tc:token>
+      <tc:token ID="w617">extrahierten</tc:token>
+      <tc:token ID="w618">Relationen</tc:token>
+      <tc:token ID="w619">Gebrauch</tc:token>
+      <tc:token ID="w61a">gemacht</tc:token>
+      <tc:token ID="w61b">wird</tc:token>
+      <tc:token ID="w61c">,</tc:token>
+      <tc:token ID="w61d">sowohl</tc:token>
+      <tc:token ID="w61e">eine</tc:token>
+      <tc:token ID="w61f">Einzeltext-</tc:token>
+      <tc:token ID="w620">als</tc:token>
+      <tc:token ID="w621">auch</tc:token>
+      <tc:token ID="w622">eine</tc:token>
+      <tc:token ID="w623">Korpusanalyse</tc:token>
+      <tc:token ID="w624">.</tc:token>
+      <tc:token ID="w625">Diese</tc:token>
+      <tc:token ID="w626">illustrieren</tc:token>
+      <tc:token ID="w627">Möglichkeiten</tc:token>
+      <tc:token ID="w628">,</tc:token>
+      <tc:token ID="w629">die</tc:token>
+      <tc:token ID="w62a">Relationen</tc:token>
+      <tc:token ID="w62b">in</tc:token>
+      <tc:token ID="w62c">der</tc:token>
+      <tc:token ID="w62d">Textanalyse</tc:token>
+      <tc:token ID="w62e">zu</tc:token>
+      <tc:token ID="w62f">berücksichtigen</tc:token>
+      <tc:token ID="w630">.</tc:token>
+      <tc:token ID="w631">Im</tc:token>
+      <tc:token ID="w632">ersten</tc:token>
+      <tc:token ID="w633">Beispiel</tc:token>
+      <tc:token ID="w634">betrachten</tc:token>
+      <tc:token ID="w635">wir</tc:token>
+      <tc:token ID="w636">Shakespeares</tc:token>
+      <tc:token ID="w637">Romeo</tc:token>
+      <tc:token ID="w638">and</tc:token>
+      <tc:token ID="w639">Juliet</tc:token>
+      <tc:token ID="w63a">in</tc:token>
+      <tc:token ID="w63b">der</tc:token>
+      <tc:token ID="w63c">derzeit</tc:token>
+      <tc:token ID="w63d">auf</tc:token>
+      <tc:token ID="w63e">dracor</tc:token>
+      <tc:token ID="w63f">.</tc:token>
+      <tc:token ID="w640">org</tc:token>
+      <tc:token ID="w641">verfügbaren</tc:token>
+      <tc:token ID="w642">Fassung</tc:token>
+      <tc:token ID="w643">.</tc:token>
+      <tc:token ID="w644">Zunächst</tc:token>
+      <tc:token ID="w645">können</tc:token>
+      <tc:token ID="w646">die</tc:token>
+      <tc:token ID="w647">Relationen</tc:token>
+      <tc:token ID="w648">visualisiert</tc:token>
+      <tc:token ID="w649">werden</tc:token>
+      <tc:token ID="w64a">.</tc:token>
+      <tc:token ID="w64b">Abbildung</tc:token>
+      <tc:token ID="w64c">3</tc:token>
+      <tc:token ID="w64d">zeigt</tc:token>
+      <tc:token ID="w64e">das</tc:token>
+      <tc:token ID="w64f">Figurennetzwerk</tc:token>
+      <tc:token ID="w650">nach</tc:token>
+      <tc:token ID="w651">Kopräsenz</tc:token>
+      <tc:token ID="w652">auf</tc:token>
+      <tc:token ID="w653">der</tc:token>
+      <tc:token ID="w654">linken</tc:token>
+      <tc:token ID="w655">und</tc:token>
+      <tc:token ID="w656">das</tc:token>
+      <tc:token ID="w657">Netzwerk</tc:token>
+      <tc:token ID="w658">,</tc:token>
+      <tc:token ID="w659">das</tc:token>
+      <tc:token ID="w65a">sich</tc:token>
+      <tc:token ID="w65b">aus</tc:token>
+      <tc:token ID="w65c">den</tc:token>
+      <tc:token ID="w65d">sozialen</tc:token>
+      <tc:token ID="w65e">Beziehungen</tc:token>
+      <tc:token ID="w65f">ergibt</tc:token>
+      <tc:token ID="w660">auf</tc:token>
+      <tc:token ID="w661">der</tc:token>
+      <tc:token ID="w662">rechten</tc:token>
+      <tc:token ID="w663">Seite</tc:token>
+      <tc:token ID="w664">.</tc:token>
+      <tc:token ID="w665">Zur</tc:token>
+      <tc:token ID="w666">besseren</tc:token>
+      <tc:token ID="w667">Lesbarkeit</tc:token>
+      <tc:token ID="w668">wurde</tc:token>
+      <tc:token ID="w669">ein</tc:token>
+      <tc:token ID="w66a">geeigneter</tc:token>
+      <tc:token ID="w66b">Layout-Algorithmus</tc:token>
+      <tc:token ID="w66c">angewendet</tc:token>
+      <tc:token ID="w66d">.</tc:token>
+      <tc:token ID="w66e">Dabei</tc:token>
+      <tc:token ID="w66f">ist</tc:token>
+      <tc:token ID="w670">zunächst</tc:token>
+      <tc:token ID="w671">interessant</tc:token>
+      <tc:token ID="w672">,</tc:token>
+      <tc:token ID="w673">dass</tc:token>
+      <tc:token ID="w674">die</tc:token>
+      <tc:token ID="w675">beiden</tc:token>
+      <tc:token ID="w676">Familien</tc:token>
+      <tc:token ID="w677">keineswegs</tc:token>
+      <tc:token ID="w678">unverbunden</tc:token>
+      <tc:token ID="w679">sind</tc:token>
+      <tc:token ID="w67a">:</tc:token>
+      <tc:token ID="w67b">Über</tc:token>
+      <tc:token ID="w67c">Mercutio</tc:token>
+      <tc:token ID="w67d">(</tc:token>
+      <tc:token ID="w67e">Freund</tc:token>
+      <tc:token ID="w67f">von</tc:token>
+      <tc:token ID="w680">Romeo</tc:token>
+      <tc:token ID="w681">)</tc:token>
+      <tc:token ID="w682">und</tc:token>
+      <tc:token ID="w683">Paris</tc:token>
+      <tc:token ID="w684">(</tc:token>
+      <tc:token ID="w685">Verlobter</tc:token>
+      <tc:token ID="w686">von</tc:token>
+      <tc:token ID="w687">Julia</tc:token>
+      <tc:token ID="w688">)</tc:token>
+      <tc:token ID="w689">sind</tc:token>
+      <tc:token ID="w68a">beide</tc:token>
+      <tc:token ID="w68b">mit</tc:token>
+      <tc:token ID="w68c">dem</tc:token>
+      <tc:token ID="w68d">Prinzen</tc:token>
+      <tc:token ID="w68e">verbunden</tc:token>
+      <tc:token ID="w68f">.</tc:token>
+      <tc:token ID="w690">Auch</tc:token>
+      <tc:token ID="w691">wenn</tc:token>
+      <tc:token ID="w692">Abbildung</tc:token>
+      <tc:token ID="w693">3</tc:token>
+      <tc:token ID="w694">eine</tc:token>
+      <tc:token ID="w695">gewisse</tc:token>
+      <tc:token ID="w696">Symmetrie</tc:token>
+      <tc:token ID="w697">suggeriert</tc:token>
+      <tc:token ID="w698">,</tc:token>
+      <tc:token ID="w699">ist</tc:token>
+      <tc:token ID="w69a">diese</tc:token>
+      <tc:token ID="w69b">keineswegs</tc:token>
+      <tc:token ID="w69c">gegeben</tc:token>
+      <tc:token ID="w69d">wenn</tc:token>
+      <tc:token ID="w69e">wir</tc:token>
+      <tc:token ID="w69f">die</tc:token>
+      <tc:token ID="w6a0">Redeanteile</tc:token>
+      <tc:token ID="w6a1">nach</tc:token>
+      <tc:token ID="w6a2">Familien</tc:token>
+      <tc:token ID="w6a3">aufschlüsseln</tc:token>
+      <tc:token ID="w6a4">,</tc:token>
+      <tc:token ID="w6a5">wie</tc:token>
+      <tc:token ID="w6a6">es</tc:token>
+      <tc:token ID="w6a7">aus</tc:token>
+      <tc:token ID="w6a8">den</tc:token>
+      <tc:token ID="w6a9">Annotationen</tc:token>
+      <tc:token ID="w6aa">ebenfalls</tc:token>
+      <tc:token ID="w6ab">direkt</tc:token>
+      <tc:token ID="w6ac">möglich</tc:token>
+      <tc:token ID="w6ad">ist</tc:token>
+      <tc:token ID="w6ae">.</tc:token>
+      <tc:token ID="w6af">Abbildung</tc:token>
+      <tc:token ID="w6b0">4</tc:token>
+      <tc:token ID="w6b1">zeigt</tc:token>
+      <tc:token ID="w6b2">die</tc:token>
+      <tc:token ID="w6b3">aggregierten</tc:token>
+      <tc:token ID="w6b4">Redeanteile</tc:token>
+      <tc:token ID="w6b5">der</tc:token>
+      <tc:token ID="w6b6">Figuren</tc:token>
+      <tc:token ID="w6b7">,</tc:token>
+      <tc:token ID="w6b8">wobei</tc:token>
+      <tc:token ID="w6b9">Figuren</tc:token>
+      <tc:token ID="w6ba">,</tc:token>
+      <tc:token ID="w6bb">die</tc:token>
+      <tc:token ID="w6bc">durch</tc:token>
+      <tc:token ID="w6bd">Verwandtschaft</tc:token>
+      <tc:token ID="w6be">oder</tc:token>
+      <tc:token ID="w6bf">Arbeitsverhältnis</tc:token>
+      <tc:token ID="w6c0">zu</tc:token>
+      <tc:token ID="w6c1">einer</tc:token>
+      <tc:token ID="w6c2">der</tc:token>
+      <tc:token ID="w6c3">Familien</tc:token>
+      <tc:token ID="w6c4">gehören</tc:token>
+      <tc:token ID="w6c5">,</tc:token>
+      <tc:token ID="w6c6">zusammengefasst</tc:token>
+      <tc:token ID="w6c7">wurden</tc:token>
+      <tc:token ID="w6c8">(</tc:token>
+      <tc:token ID="w6c9">mit</tc:token>
+      <tc:token ID="w6ca">Ausnahme</tc:token>
+      <tc:token ID="w6cb">von</tc:token>
+      <tc:token ID="w6cc">Mercutio</tc:token>
+      <tc:token ID="w6cd">und</tc:token>
+      <tc:token ID="w6ce">Paris</tc:token>
+      <tc:token ID="w6cf">,</tc:token>
+      <tc:token ID="w6d0">die</tc:token>
+      <tc:token ID="w6d1">beide</tc:token>
+      <tc:token ID="w6d2">mit</tc:token>
+      <tc:token ID="w6d3">dem</tc:token>
+      <tc:token ID="w6d4">Prinzen</tc:token>
+      <tc:token ID="w6d5">verwandt</tc:token>
+      <tc:token ID="w6d6">sind</tc:token>
+      <tc:token ID="w6d7">)</tc:token>
+      <tc:token ID="w6d8">.</tc:token>
+      <tc:token ID="w6d9">Es</tc:token>
+      <tc:token ID="w6da">zeigt</tc:token>
+      <tc:token ID="w6db">sich</tc:token>
+      <tc:token ID="w6dc">,</tc:token>
+      <tc:token ID="w6dd">dass</tc:token>
+      <tc:token ID="w6de">Angehörige</tc:token>
+      <tc:token ID="w6df">der</tc:token>
+      <tc:token ID="w6e0">Familie</tc:token>
+      <tc:token ID="w6e1">Capulet</tc:token>
+      <tc:token ID="w6e2">etwas</tc:token>
+      <tc:token ID="w6e3">weniger</tc:token>
+      <tc:token ID="w6e4">als</tc:token>
+      <tc:token ID="w6e5">doppelt</tc:token>
+      <tc:token ID="w6e6">so</tc:token>
+      <tc:token ID="w6e7">viele</tc:token>
+      <tc:token ID="w6e8">Wörter</tc:token>
+      <tc:token ID="w6e9">äußern</tc:token>
+      <tc:token ID="w6ea">als</tc:token>
+      <tc:token ID="w6eb">Angehörige</tc:token>
+      <tc:token ID="w6ec">der</tc:token>
+      <tc:token ID="w6ed">Familie</tc:token>
+      <tc:token ID="w6ee">Montague</tc:token>
+      <tc:token ID="w6ef">.</tc:token>
+      <tc:token ID="w6f0">Betrachtet</tc:token>
+      <tc:token ID="w6f1">man</tc:token>
+      <tc:token ID="w6f2">das</tc:token>
+      <tc:token ID="w6f3">annotierte</tc:token>
+      <tc:token ID="w6f4">Gesamtkorpus</tc:token>
+      <tc:token ID="w6f5">stellt</tc:token>
+      <tc:token ID="w6f6">man</tc:token>
+      <tc:token ID="w6f7">fest</tc:token>
+      <tc:token ID="w6f8">,</tc:token>
+      <tc:token ID="w6f9">dass</tc:token>
+      <tc:token ID="w6fa">die</tc:token>
+      <tc:token ID="w6fb">Relationen</tc:token>
+      <tc:token ID="w6fc">ungleich</tc:token>
+      <tc:token ID="w6fd">verteilt</tc:token>
+      <tc:token ID="w6fe">sind</tc:token>
+      <tc:token ID="w6ff">.</tc:token>
+      <tc:token ID="w700">Während</tc:token>
+      <tc:token ID="w701">Ehen</tc:token>
+      <tc:token ID="w702">/Verlobungen</tc:token>
+      <tc:token ID="w703">,</tc:token>
+      <tc:token ID="w704">Elternschaft</tc:token>
+      <tc:token ID="w705">und</tc:token>
+      <tc:token ID="w706">sonstige</tc:token>
+      <tc:token ID="w707">Assoziationen</tc:token>
+      <tc:token ID="w708">relativ</tc:token>
+      <tc:token ID="w709">häufig</tc:token>
+      <tc:token ID="w70a">vorkommen</tc:token>
+      <tc:token ID="w70b">,</tc:token>
+      <tc:token ID="w70c">spielen</tc:token>
+      <tc:token ID="w70d">Geliebte</tc:token>
+      <tc:token ID="w70e">,</tc:token>
+      <tc:token ID="w70f">sonstige</tc:token>
+      <tc:token ID="w710">Verwandtschaften</tc:token>
+      <tc:token ID="w711">,</tc:token>
+      <tc:token ID="w712">Freundschaften</tc:token>
+      <tc:token ID="w713">und</tc:token>
+      <tc:token ID="w714">Geschwister</tc:token>
+      <tc:token ID="w715">eine</tc:token>
+      <tc:token ID="w716">vergleichsweise</tc:token>
+      <tc:token ID="w717">kleine</tc:token>
+      <tc:token ID="w718">Rolle</tc:token>
+      <tc:token ID="w719">.</tc:token>
+      <tc:token ID="w71a">In</tc:token>
+      <tc:token ID="w71b">Abbildung</tc:token>
+      <tc:token ID="w71c">6</tc:token>
+      <tc:token ID="w71d">sehen</tc:token>
+      <tc:token ID="w71e">wir</tc:token>
+      <tc:token ID="w71f">die</tc:token>
+      <tc:token ID="w720">Anzahl</tc:token>
+      <tc:token ID="w721">der</tc:token>
+      <tc:token ID="w722">Relationen</tc:token>
+      <tc:token ID="w723">bestimmter</tc:token>
+      <tc:token ID="w724">Typen</tc:token>
+      <tc:token ID="w725">ins</tc:token>
+      <tc:token ID="w726">Verhältnis</tc:token>
+      <tc:token ID="w727">gesetzt</tc:token>
+      <tc:token ID="w728">zur</tc:token>
+      <tc:token ID="w729">Großgattung</tc:token>
+      <tc:token ID="w72a">(</tc:token>
+      <tc:token ID="w72b">Komödie/</tc:token>
+      <tc:token ID="w72c">Tragödie</tc:token>
+      <tc:token ID="w72d">)</tc:token>
+      <tc:token ID="w72e">.</tc:token>
+      <tc:token ID="w72f">Dabei</tc:token>
+      <tc:token ID="w730">wurden</tc:token>
+      <tc:token ID="w731">die</tc:token>
+      <tc:token ID="w732">Angaben</tc:token>
+      <tc:token ID="w733">auf</tc:token>
+      <tc:token ID="w734">den</tc:token>
+      <tc:token ID="w735">Titeln</tc:token>
+      <tc:token ID="w736">der</tc:token>
+      <tc:token ID="w737">Dramen</tc:token>
+      <tc:token ID="w738">übernommen</tc:token>
+      <tc:token ID="w739">und</tc:token>
+      <tc:token ID="w73a">leicht</tc:token>
+      <tc:token ID="w73b">vereinheitlicht</tc:token>
+      <tc:token ID="w73c">(</tc:token>
+      <tc:token ID="w73d">z.B.</tc:token>
+      <tc:token ID="w73e">Bürgerliches</tc:token>
+      <tc:token ID="w73f">Trauerspiel</tc:token>
+      <tc:token ID="w740">→</tc:token>
+      <tc:token ID="w741">Tragödie</tc:token>
+      <tc:token ID="w742">oder</tc:token>
+      <tc:token ID="w743">Zauberlustspiel</tc:token>
+      <tc:token ID="w744">→</tc:token>
+      <tc:token ID="w745">Komödie</tc:token>
+      <tc:token ID="w746">)</tc:token>
+      <tc:token ID="w747">.</tc:token>
+      <tc:token ID="w748">Dabei</tc:token>
+      <tc:token ID="w749">ist</tc:token>
+      <tc:token ID="w74a">zu</tc:token>
+      <tc:token ID="w74b">konstatieren</tc:token>
+      <tc:token ID="w74c">,</tc:token>
+      <tc:token ID="w74d">dass</tc:token>
+      <tc:token ID="w74e">Median</tc:token>
+      <tc:token ID="w74f">und</tc:token>
+      <tc:token ID="w750">erstes</tc:token>
+      <tc:token ID="w751">Quartil</tc:token>
+      <tc:token ID="w752">bei</tc:token>
+      <tc:token ID="w753">0</tc:token>
+      <tc:token ID="w754">für</tc:token>
+      <tc:token ID="w755">alle</tc:token>
+      <tc:token ID="w756">Dramen</tc:token>
+      <tc:token ID="w757">bei</tc:token>
+      <tc:token ID="w758">0</tc:token>
+      <tc:token ID="w759">liegen</tc:token>
+      <tc:token ID="w75a">:</tc:token>
+      <tc:token ID="w75b">Viele</tc:token>
+      <tc:token ID="w75c">Dramen</tc:token>
+      <tc:token ID="w75d">weisen</tc:token>
+      <tc:token ID="w75e">keine</tc:token>
+      <tc:token ID="w75f">Beziehungsdefinition</tc:token>
+      <tc:token ID="w760">auf</tc:token>
+      <tc:token ID="w761">(</tc:token>
+      <tc:token ID="w762">oder</tc:token>
+      <tc:token ID="w763">sie</tc:token>
+      <tc:token ID="w764">konnten</tc:token>
+      <tc:token ID="w765">nicht</tc:token>
+      <tc:token ID="w766">automatisch</tc:token>
+      <tc:token ID="w767">identifiziert</tc:token>
+      <tc:token ID="w768">werden</tc:token>
+      <tc:token ID="w769">,</tc:token>
+      <tc:token ID="w76a">siehe</tc:token>
+      <tc:token ID="w76b">Fußnote</tc:token>
+      <tc:token ID="w76c">)</tc:token>
+      <tc:token ID="w76d">.</tc:token>
+      <tc:token ID="w76e">Größere</tc:token>
+      <tc:token ID="w76f">oder</tc:token>
+      <tc:token ID="w770">signifikante</tc:token>
+      <tc:token ID="w771">Abweichungen</tc:token>
+      <tc:token ID="w772">zwischen</tc:token>
+      <tc:token ID="w773">den</tc:token>
+      <tc:token ID="w774">Gattungen</tc:token>
+      <tc:token ID="w775">gibt</tc:token>
+      <tc:token ID="w776">es</tc:token>
+      <tc:token ID="w777">nicht</tc:token>
+      <tc:token ID="w778">,</tc:token>
+      <tc:token ID="w779">egal</tc:token>
+      <tc:token ID="w77a">welche</tc:token>
+      <tc:token ID="w77b">Relation</tc:token>
+      <tc:token ID="w77c">betrachtet</tc:token>
+      <tc:token ID="w77d">wird</tc:token>
+      <tc:token ID="w77e">.</tc:token>
+      <tc:token ID="w77f">Lediglich</tc:token>
+      <tc:token ID="w780">die</tc:token>
+      <tc:token ID="w781">Relation</tc:token>
+      <tc:token ID="w782">spouses</tc:token>
+      <tc:token ID="w783">scheint</tc:token>
+      <tc:token ID="w784">im</tc:token>
+      <tc:token ID="w785">Figurenverzeichnis</tc:token>
+      <tc:token ID="w786">von</tc:token>
+      <tc:token ID="w787">Komödien</tc:token>
+      <tc:token ID="w788">häufiger</tc:token>
+      <tc:token ID="w789">genannt</tc:token>
+      <tc:token ID="w78a">zu</tc:token>
+      <tc:token ID="w78b">werden</tc:token>
+      <tc:token ID="w78c">.</tc:token>
+      <tc:token ID="w78d">Eine</tc:token>
+      <tc:token ID="w78e">Verteilung</tc:token>
+      <tc:token ID="w78f">der</tc:token>
+      <tc:token ID="w790">genannten</tc:token>
+      <tc:token ID="w791">Relationen</tc:token>
+      <tc:token ID="w792">nach</tc:token>
+      <tc:token ID="w793">Autor</tc:token>
+      <tc:token ID="w794">zeichnet</tc:token>
+      <tc:token ID="w795">jedoch</tc:token>
+      <tc:token ID="w796">ein</tc:token>
+      <tc:token ID="w797">anderes</tc:token>
+      <tc:token ID="w798">Bild</tc:token>
+      <tc:token ID="w799">(</tc:token>
+      <tc:token ID="w79a">Abbildung</tc:token>
+      <tc:token ID="w79b">7</tc:token>
+      <tc:token ID="w79c">)</tc:token>
+      <tc:token ID="w79d">.</tc:token>
+      <tc:token ID="w79e">Bestimmte</tc:token>
+      <tc:token ID="w79f">Autoren</tc:token>
+      <tc:token ID="w7a0">,</tc:token>
+      <tc:token ID="w7a1">vor</tc:token>
+      <tc:token ID="w7a2">allem</tc:token>
+      <tc:token ID="w7a3">Ludwig</tc:token>
+      <tc:token ID="w7a4">Anzengruber</tc:token>
+      <tc:token ID="w7a5">(</tc:token>
+      <tc:token ID="w7a6">1839-1889</tc:token>
+      <tc:token ID="w7a7">)</tc:token>
+      <tc:token ID="w7a8">und</tc:token>
+      <tc:token ID="w7a9">Johann</tc:token>
+      <tc:token ID="w7aa">Nestroy</tc:token>
+      <tc:token ID="w7ab">(</tc:token>
+      <tc:token ID="w7ac">1801-1862</tc:token>
+      <tc:token ID="w7ad">)</tc:token>
+      <tc:token ID="w7ae">,</tc:token>
+      <tc:token ID="w7af">haben</tc:token>
+      <tc:token ID="w7b0">klare</tc:token>
+      <tc:token ID="w7b1">Tendenzen</tc:token>
+      <tc:token ID="w7b2">dazu</tc:token>
+      <tc:token ID="w7b3">,</tc:token>
+      <tc:token ID="w7b4">mehr</tc:token>
+      <tc:token ID="w7b5">Relationen</tc:token>
+      <tc:token ID="w7b6">im</tc:token>
+      <tc:token ID="w7b7">Figurenverzeichnis</tc:token>
+      <tc:token ID="w7b8">zu</tc:token>
+      <tc:token ID="w7b9">nennen</tc:token>
+      <tc:token ID="w7ba">.</tc:token>
+      <tc:token ID="w7bb">Beide</tc:token>
+      <tc:token ID="w7bc">verfassen</tc:token>
+      <tc:token ID="w7bd">tendenziell</tc:token>
+      <tc:token ID="w7be">Possen</tc:token>
+      <tc:token ID="w7bf">und</tc:token>
+      <tc:token ID="w7c0">Komödien</tc:token>
+      <tc:token ID="w7c1">.</tc:token>
+      <tc:token ID="w7c2">Mit</tc:token>
+      <tc:token ID="w7c3">den</tc:token>
+      <tc:token ID="w7c4">von</tc:token>
+      <tc:token ID="w7c5">uns</tc:token>
+      <tc:token ID="w7c6">bereitgestellten</tc:token>
+      <tc:token ID="w7c7">maschinenlesbaren</tc:token>
+      <tc:token ID="w7c8">Informationen</tc:token>
+      <tc:token ID="w7c9">ermöglichen</tc:token>
+      <tc:token ID="w7ca">wir</tc:token>
+      <tc:token ID="w7cb">Analysen</tc:token>
+      <tc:token ID="w7cc">dramatischer</tc:token>
+      <tc:token ID="w7cd">Figuren</tc:token>
+      <tc:token ID="w7ce">,</tc:token>
+      <tc:token ID="w7cf">die</tc:token>
+      <tc:token ID="w7d0">die</tc:token>
+      <tc:token ID="w7d1">als</tc:token>
+      <tc:token ID="w7d2">bekannt</tc:token>
+      <tc:token ID="w7d3">vorausgesetzten</tc:token>
+      <tc:token ID="w7d4">Informationen</tc:token>
+      <tc:token ID="w7d5">im</tc:token>
+      <tc:token ID="w7d6">Figurenverzeichnis</tc:token>
+      <tc:token ID="w7d7">mit</tc:token>
+      <tc:token ID="w7d8">berücksichtigen</tc:token>
+      <tc:token ID="w7d9">können</tc:token>
+      <tc:token ID="w7da">.</tc:token>
+      <tc:token ID="w7db">Neben</tc:token>
+      <tc:token ID="w7dc">den</tc:token>
+      <tc:token ID="w7dd">oben</tc:token>
+      <tc:token ID="w7de">skizzierten</tc:token>
+      <tc:token ID="w7df">Analysen</tc:token>
+      <tc:token ID="w7e0">können</tc:token>
+      <tc:token ID="w7e1">die</tc:token>
+      <tc:token ID="w7e2">Informationen</tc:token>
+      <tc:token ID="w7e3">auch</tc:token>
+      <tc:token ID="w7e4">in</tc:token>
+      <tc:token ID="w7e5">inhaltliche</tc:token>
+      <tc:token ID="w7e6">Analysen</tc:token>
+      <tc:token ID="w7e7">einfließen</tc:token>
+      <tc:token ID="w7e8">und</tc:token>
+      <tc:token ID="w7e9">etwa</tc:token>
+      <tc:token ID="w7ea">die</tc:token>
+      <tc:token ID="w7eb">soziale</tc:token>
+      <tc:token ID="w7ec">Nähe</tc:token>
+      <tc:token ID="w7ed">mit</tc:token>
+      <tc:token ID="w7ee">der</tc:token>
+      <tc:token ID="w7ef">Bühnennähe</tc:token>
+      <tc:token ID="w7f0">korrelieren</tc:token>
+      <tc:token ID="w7f1">o.</tc:token>
+      <tc:token ID="w7f2">ä.</tc:token>
+      <tc:token ID="w7f3">Kontextfreie</tc:token>
+      <tc:token ID="w7f4">Grammatiken</tc:token>
+      <tc:token ID="w7f5">haben</tc:token>
+      <tc:token ID="w7f6">sich</tc:token>
+      <tc:token ID="w7f7">hier</tc:token>
+      <tc:token ID="w7f8">–</tc:token>
+      <tc:token ID="w7f9">trotz</tc:token>
+      <tc:token ID="w7fa">der</tc:token>
+      <tc:token ID="w7fb">bekannten</tc:token>
+      <tc:token ID="w7fc">Schwächen</tc:token>
+      <tc:token ID="w7fd">im</tc:token>
+      <tc:token ID="w7fe">Bezug</tc:token>
+      <tc:token ID="w7ff">auf</tc:token>
+      <tc:token ID="w800">natürliche</tc:token>
+      <tc:token ID="w801">Sprache</tc:token>
+      <tc:token ID="w802">–</tc:token>
+      <tc:token ID="w803">als</tc:token>
+      <tc:token ID="w804">effizienter</tc:token>
+      <tc:token ID="w805">Formalismus</tc:token>
+      <tc:token ID="w806">herausgestellt</tc:token>
+      <tc:token ID="w807">,</tc:token>
+      <tc:token ID="w808">um</tc:token>
+      <tc:token ID="w809">die</tc:token>
+      <tc:token ID="w80a">Figurenverzeichnisse</tc:token>
+      <tc:token ID="w80b">maschinenlesbar</tc:token>
+      <tc:token ID="w80c">zu</tc:token>
+      <tc:token ID="w80d">machen</tc:token>
+      <tc:token ID="w80e">.</tc:token>
+      <tc:token ID="w80f">Wir</tc:token>
+      <tc:token ID="w810">halten</tc:token>
+      <tc:token ID="w811">dieses</tc:token>
+      <tc:token ID="w812">Verfahren</tc:token>
+      <tc:token ID="w813">für</tc:token>
+      <tc:token ID="w814">geeignet</tc:token>
+      <tc:token ID="w815">,</tc:token>
+      <tc:token ID="w816">um</tc:token>
+      <tc:token ID="w817">auch</tc:token>
+      <tc:token ID="w818">in</tc:token>
+      <tc:token ID="w819">anderen</tc:token>
+      <tc:token ID="w81a">Kontexten</tc:token>
+      <tc:token ID="w81b">mit</tc:token>
+      <tc:token ID="w81c">semi-strukturierten</tc:token>
+      <tc:token ID="w81d">Textdaten</tc:token>
+      <tc:token ID="w81e">zu</tc:token>
+      <tc:token ID="w81f">arbeiten</tc:token>
+      <tc:token ID="w820">,</tc:token>
+      <tc:token ID="w821">wo</tc:token>
+      <tc:token ID="w822">aufgrund</tc:token>
+      <tc:token ID="w823">der</tc:token>
+      <tc:token ID="w824">begrenzten</tc:token>
+      <tc:token ID="w825">Menge</tc:token>
+      <tc:token ID="w826">ein</tc:token>
+      <tc:token ID="w827">maschinelles</tc:token>
+      <tc:token ID="w828">Lernverfahren</tc:token>
+      <tc:token ID="w829">nur</tc:token>
+      <tc:token ID="w82a">bedingt</tc:token>
+      <tc:token ID="w82b">zum</tc:token>
+      <tc:token ID="w82c">Einsatz</tc:token>
+      <tc:token ID="w82d">kommen</tc:token>
+      <tc:token ID="w82e">kann</tc:token>
+      <tc:token ID="w82f">.</tc:token>
+      <tc:token ID="w830">Einleitung</tc:token>
+      <tc:token ID="w831">Abbildung</tc:token>
+      <tc:token ID="w832">1:</tc:token>
+      <tc:token ID="w833">Figurenverzeichnis</tc:token>
+      <tc:token ID="w834">in</tc:token>
+      <tc:token ID="w835">Die</tc:token>
+      <tc:token ID="w836">Räuber</tc:token>
+      <tc:token ID="w837">(</tc:token>
+      <tc:token ID="w838">Friedrich</tc:token>
+      <tc:token ID="w839">Schiller</tc:token>
+      <tc:token ID="w83a">,</tc:token>
+      <tc:token ID="w83b">1781</tc:token>
+      <tc:token ID="w83c">)</tc:token>
+      <tc:token ID="w83d">Automatische</tc:token>
+      <tc:token ID="w83e">Extraktion</tc:token>
+      <tc:token ID="w83f">von</tc:token>
+      <tc:token ID="w840">Figurenrelationen</tc:token>
+      <tc:token ID="w841">Relationen</tc:token>
+      <tc:token ID="w842">Label</tc:token>
+      <tc:token ID="w843">gerichtet</tc:token>
+      <tc:token ID="w844">/</tc:token>
+      <tc:token ID="w845">ungerichtet</tc:token>
+      <tc:token ID="w846">Beschreibung</tc:token>
+      <tc:token ID="w847">parent_of</tc:token>
+      <tc:token ID="w848">directed</tc:token>
+      <tc:token ID="w849">Eine</tc:token>
+      <tc:token ID="w84a">Figur</tc:token>
+      <tc:token ID="w84b">ist</tc:token>
+      <tc:token ID="w84c">Elternteil</tc:token>
+      <tc:token ID="w84d">einer</tc:token>
+      <tc:token ID="w84e">anderen</tc:token>
+      <tc:token ID="w84f">lover_of</tc:token>
+      <tc:token ID="w850">directed</tc:token>
+      <tc:token ID="w851">Liebesbeziehungen</tc:token>
+      <tc:token ID="w852">(</tc:token>
+      <tc:token ID="w853">unverheiratet</tc:token>
+      <tc:token ID="w854">)</tc:token>
+      <tc:token ID="w855">related_</tc:token>
+      <tc:token ID="w856">with</tc:token>
+      <tc:token ID="w857">directed</tc:token>
+      <tc:token ID="w858">Familienbeziehungen</tc:token>
+      <tc:token ID="w859">(</tc:token>
+      <tc:token ID="w85a">außer</tc:token>
+      <tc:token ID="w85b">Eheleute</tc:token>
+      <tc:token ID="w85c">)</tc:token>
+      <tc:token ID="w85d">associated_</tc:token>
+      <tc:token ID="w85e">with</tc:token>
+      <tc:token ID="w85f">directed</tc:token>
+      <tc:token ID="w860">Figuren</tc:token>
+      <tc:token ID="w861">,</tc:token>
+      <tc:token ID="w862">die</tc:token>
+      <tc:token ID="w863">miteinander</tc:token>
+      <tc:token ID="w864">anderweitig</tc:token>
+      <tc:token ID="w865">verbunden</tc:token>
+      <tc:token ID="w866">sind</tc:token>
+      <tc:token ID="w867">(</tc:token>
+      <tc:token ID="w868">z.B.</tc:token>
+      <tc:token ID="w869">Diener</tc:token>
+      <tc:token ID="w86a">,</tc:token>
+      <tc:token ID="w86b">Kindermädchen</tc:token>
+      <tc:token ID="w86c">etc.</tc:token>
+      <tc:token ID="w86d">)</tc:token>
+      <tc:token ID="w86e">siblings</tc:token>
+      <tc:token ID="w86f">undirected</tc:token>
+      <tc:token ID="w870">Figuren</tc:token>
+      <tc:token ID="w871">,</tc:token>
+      <tc:token ID="w872">die</tc:token>
+      <tc:token ID="w873">mindestens</tc:token>
+      <tc:token ID="w874">ein</tc:token>
+      <tc:token ID="w875">gemeinsames</tc:token>
+      <tc:token ID="w876">Elternteil</tc:token>
+      <tc:token ID="w877">haben</tc:token>
+      <tc:token ID="w878">spouses</tc:token>
+      <tc:token ID="w879">undirected</tc:token>
+      <tc:token ID="w87a">verheiratete</tc:token>
+      <tc:token ID="w87b">oder</tc:token>
+      <tc:token ID="w87c">verlobte</tc:token>
+      <tc:token ID="w87d">Figuren</tc:token>
+      <tc:token ID="w87e">friends</tc:token>
+      <tc:token ID="w87f">undirected</tc:token>
+      <tc:token ID="w880">Freundschaftsbeziehungen</tc:token>
+      <tc:token ID="w881">Tabelle</tc:token>
+      <tc:token ID="w882">1</tc:token>
+      <tc:token ID="w883">:</tc:token>
+      <tc:token ID="w884">Figurenrelationen</tc:token>
+      <tc:token ID="w885">Abbildung</tc:token>
+      <tc:token ID="w886">2</tc:token>
+      <tc:token ID="w887">:</tc:token>
+      <tc:token ID="w888">Zwei</tc:token>
+      <tc:token ID="w889">reduzierte</tc:token>
+      <tc:token ID="w88a">Baumstrukturen</tc:token>
+      <tc:token ID="w88b">für</tc:token>
+      <tc:token ID="w88c">Figuren</tc:token>
+      <tc:token ID="w88d">aus</tc:token>
+      <tc:token ID="w88e">Nathan</tc:token>
+      <tc:token ID="w88f">der</tc:token>
+      <tc:token ID="w890">Weise</tc:token>
+      <tc:token ID="w891">.</tc:token>
+      <tc:token ID="w892">Evaluation</tc:token>
+      <tc:token ID="w893">Korpus</tc:token>
+      <tc:token ID="w894">Analyseszenarien</tc:token>
+      <tc:token ID="w895">Abbildung</tc:token>
+      <tc:token ID="w896">3</tc:token>
+      <tc:token ID="w897">:</tc:token>
+      <tc:token ID="w898">Figurennetzwerke</tc:token>
+      <tc:token ID="w899">nach</tc:token>
+      <tc:token ID="w89a">Kopräsenz</tc:token>
+      <tc:token ID="w89b">(</tc:token>
+      <tc:token ID="w89c">oben</tc:token>
+      <tc:token ID="w89d">)</tc:token>
+      <tc:token ID="w89e">und</tc:token>
+      <tc:token ID="w89f">Relationen</tc:token>
+      <tc:token ID="w8a0">(</tc:token>
+      <tc:token ID="w8a1">unten</tc:token>
+      <tc:token ID="w8a2">)</tc:token>
+      <tc:token ID="w8a3">.</tc:token>
+      <tc:token ID="w8a4">Zur</tc:token>
+      <tc:token ID="w8a5">besseren</tc:token>
+      <tc:token ID="w8a6">Übersichtlichkeit</tc:token>
+      <tc:token ID="w8a7">wurden</tc:token>
+      <tc:token ID="w8a8">die</tc:token>
+      <tc:token ID="w8a9">Figuren</tc:token>
+      <tc:token ID="w8aa">auf</tc:token>
+      <tc:token ID="w8ab">feste</tc:token>
+      <tc:token ID="w8ac">Positionen</tc:token>
+      <tc:token ID="w8ad">gesetzt</tc:token>
+      <tc:token ID="w8ae">,</tc:token>
+      <tc:token ID="w8af">die</tc:token>
+      <tc:token ID="w8b0">oben</tc:token>
+      <tc:token ID="w8b1">und</tc:token>
+      <tc:token ID="w8b2">unten</tc:token>
+      <tc:token ID="w8b3">gleich</tc:token>
+      <tc:token ID="w8b4">sind</tc:token>
+      <tc:token ID="w8b5">.</tc:token>
+      <tc:token ID="w8b6">Bezeichnungen</tc:token>
+      <tc:token ID="w8b7">werden</tc:token>
+      <tc:token ID="w8b8">nur</tc:token>
+      <tc:token ID="w8b9">gezeigt</tc:token>
+      <tc:token ID="w8ba">wenn</tc:token>
+      <tc:token ID="w8bb">der</tc:token>
+      <tc:token ID="w8bc">Grad</tc:token>
+      <tc:token ID="w8bd">groß</tc:token>
+      <tc:token ID="w8be">genug</tc:token>
+      <tc:token ID="w8bf">ist</tc:token>
+      <tc:token ID="w8c0">(</tc:token>
+      <tc:token ID="w8c1">oben</tc:token>
+      <tc:token ID="w8c2">)</tc:token>
+      <tc:token ID="w8c3">oder</tc:token>
+      <tc:token ID="w8c4">sie</tc:token>
+      <tc:token ID="w8c5">an</tc:token>
+      <tc:token ID="w8c6">einer</tc:token>
+      <tc:token ID="w8c7">Beziehung</tc:token>
+      <tc:token ID="w8c8">beteiligt</tc:token>
+      <tc:token ID="w8c9">sind</tc:token>
+      <tc:token ID="w8ca">(</tc:token>
+      <tc:token ID="w8cb">unten</tc:token>
+      <tc:token ID="w8cc">)</tc:token>
+      <tc:token ID="w8cd">.</tc:token>
+      <tc:token ID="w8ce">Abbildung</tc:token>
+      <tc:token ID="w8cf">4</tc:token>
+      <tc:token ID="w8d0">:</tc:token>
+      <tc:token ID="w8d1">Redeanteile</tc:token>
+      <tc:token ID="w8d2">nach</tc:token>
+      <tc:token ID="w8d3">Familie</tc:token>
+      <tc:token ID="w8d4">Abbildung</tc:token>
+      <tc:token ID="w8d5">5</tc:token>
+      <tc:token ID="w8d6">:</tc:token>
+      <tc:token ID="w8d7">Verteilung</tc:token>
+      <tc:token ID="w8d8">der</tc:token>
+      <tc:token ID="w8d9">Relationen</tc:token>
+      <tc:token ID="w8da">im</tc:token>
+      <tc:token ID="w8db">Gesamtkorpus</tc:token>
+      <tc:token ID="w8dc">Abbildung</tc:token>
+      <tc:token ID="w8dd">6</tc:token>
+      <tc:token ID="w8de">:</tc:token>
+      <tc:token ID="w8df">Anzahl</tc:token>
+      <tc:token ID="w8e0">typisierter</tc:token>
+      <tc:token ID="w8e1">Relationen</tc:token>
+      <tc:token ID="w8e2">nach</tc:token>
+      <tc:token ID="w8e3">Gattung</tc:token>
+      <tc:token ID="w8e4">Abbildung</tc:token>
+      <tc:token ID="w8e5">7</tc:token>
+      <tc:token ID="w8e6">:</tc:token>
+      <tc:token ID="w8e7">Anzahl</tc:token>
+      <tc:token ID="w8e8">typisierter</tc:token>
+      <tc:token ID="w8e9">Relationen</tc:token>
+      <tc:token ID="w8ea">nach</tc:token>
+      <tc:token ID="w8eb">Autor</tc:token>
+      <tc:token ID="w8ec">.</tc:token>
+      <tc:token ID="w8ed">Zur</tc:token>
+      <tc:token ID="w8ee">besseren</tc:token>
+      <tc:token ID="w8ef">Übersicht</tc:token>
+      <tc:token ID="w8f0">wurden</tc:token>
+      <tc:token ID="w8f1">nur</tc:token>
+      <tc:token ID="w8f2">Autoren</tc:token>
+      <tc:token ID="w8f3">berücksichtigt</tc:token>
+      <tc:token ID="w8f4">,</tc:token>
+      <tc:token ID="w8f5">die</tc:token>
+      <tc:token ID="w8f6">mindestens</tc:token>
+      <tc:token ID="w8f7">durch</tc:token>
+      <tc:token ID="w8f8">fünf</tc:token>
+      <tc:token ID="w8f9">Dramen</tc:token>
+      <tc:token ID="w8fa">vertreten</tc:token>
+      <tc:token ID="w8fb">sind</tc:token>
+      <tc:token ID="w8fc">Fazit</tc:token>
+      <tc:token ID="w8fd">Asmuth</tc:token>
+      <tc:token ID="w8fe">,</tc:token>
+      <tc:token ID="w8ff">Bernhard</tc:token>
+      <tc:token ID="w900">.</tc:token>
+      <tc:token ID="w901">(</tc:token>
+      <tc:token ID="w902">2016</tc:token>
+      <tc:token ID="w903">)</tc:token>
+      <tc:token ID="w904">.</tc:token>
+      <tc:token ID="w905">Einführung</tc:token>
+      <tc:token ID="w906">in</tc:token>
+      <tc:token ID="w907">die</tc:token>
+      <tc:token ID="w908">Dramenanalyse</tc:token>
+      <tc:token ID="w909">.</tc:token>
+      <tc:token ID="w90a">Stuttgart</tc:token>
+      <tc:token ID="w90b">:</tc:token>
+      <tc:token ID="w90c">J.B.</tc:token>
+      <tc:token ID="w90d">Metzler</tc:token>
+      <tc:token ID="w90e">Verlag</tc:token>
+      <tc:token ID="w90f">.</tc:token>
+      <tc:token ID="w910">Böckenhauer</tc:token>
+      <tc:token ID="w911">,</tc:token>
+      <tc:token ID="w912">Hans-Joachim</tc:token>
+      <tc:token ID="w913">/</tc:token>
+      <tc:token ID="w914">Juraj</tc:token>
+      <tc:token ID="w915">Hromkovič</tc:token>
+      <tc:token ID="w916">(</tc:token>
+      <tc:token ID="w917">2013</tc:token>
+      <tc:token ID="w918">)</tc:token>
+      <tc:token ID="w919">:</tc:token>
+      <tc:token ID="w91a">Formale</tc:token>
+      <tc:token ID="w91b">Sprachen</tc:token>
+      <tc:token ID="w91c">:</tc:token>
+      <tc:token ID="w91d">Endliche</tc:token>
+      <tc:token ID="w91e">Automaten</tc:token>
+      <tc:token ID="w91f">,</tc:token>
+      <tc:token ID="w920">Grammatiken</tc:token>
+      <tc:token ID="w921">,</tc:token>
+      <tc:token ID="w922">lexikalische</tc:token>
+      <tc:token ID="w923">und</tc:token>
+      <tc:token ID="w924">syntaktische</tc:token>
+      <tc:token ID="w925">Analyse</tc:token>
+      <tc:token ID="w926">.</tc:token>
+      <tc:token ID="w927">Zürich</tc:token>
+      <tc:token ID="w928">:</tc:token>
+      <tc:token ID="w929">Springer</tc:token>
+      <tc:token ID="w92a">.</tc:token>
+      <tc:token ID="w92b">Fischer</tc:token>
+      <tc:token ID="w92c">,</tc:token>
+      <tc:token ID="w92d">Frank</tc:token>
+      <tc:token ID="w92e">/</tc:token>
+      <tc:token ID="w92f">Ingo</tc:token>
+      <tc:token ID="w930">Börner</tc:token>
+      <tc:token ID="w931">/</tc:token>
+      <tc:token ID="w932">Mathias</tc:token>
+      <tc:token ID="w933">Göbel</tc:token>
+      <tc:token ID="w934">/</tc:token>
+      <tc:token ID="w935">Angelika</tc:token>
+      <tc:token ID="w936">Hechtl</tc:token>
+      <tc:token ID="w937">/</tc:token>
+      <tc:token ID="w938">Christopher</tc:token>
+      <tc:token ID="w939">Kittel</tc:token>
+      <tc:token ID="w93a">/</tc:token>
+      <tc:token ID="w93b">Carsten</tc:token>
+      <tc:token ID="w93c">Milling</tc:token>
+      <tc:token ID="w93d">/</tc:token>
+      <tc:token ID="w93e">Peer</tc:token>
+      <tc:token ID="w93f">Trilcke</tc:token>
+      <tc:token ID="w940">(</tc:token>
+      <tc:token ID="w941">2019</tc:token>
+      <tc:token ID="w942">)</tc:token>
+      <tc:token ID="w943">:</tc:token>
+      <tc:token ID="w944">„</tc:token>
+      <tc:token ID="w945">Programmable</tc:token>
+      <tc:token ID="w946">Corpora</tc:token>
+      <tc:token ID="w947">–</tc:token>
+      <tc:token ID="w948">Die</tc:token>
+      <tc:token ID="w949">digitale</tc:token>
+      <tc:token ID="w94a">Literaturwissenschaft</tc:token>
+      <tc:token ID="w94b">zwischen</tc:token>
+      <tc:token ID="w94c">Forschung</tc:token>
+      <tc:token ID="w94d">und</tc:token>
+      <tc:token ID="w94e">Infrastruktur</tc:token>
+      <tc:token ID="w94f">am</tc:token>
+      <tc:token ID="w950">Beispiel</tc:token>
+      <tc:token ID="w951">von</tc:token>
+      <tc:token ID="w952">DraCor</tc:token>
+      <tc:token ID="w953">“</tc:token>
+      <tc:token ID="w954">.</tc:token>
+      <tc:token ID="w955">In</tc:token>
+      <tc:token ID="w956">Proceedings</tc:token>
+      <tc:token ID="w957">of</tc:token>
+      <tc:token ID="w958">DHd</tc:token>
+      <tc:token ID="w959">.</tc:token>
+      <tc:token ID="w95a">.</tc:token>
+      <tc:token ID="w95b">Genette</tc:token>
+      <tc:token ID="w95c">,</tc:token>
+      <tc:token ID="w95d">Gérard</tc:token>
+      <tc:token ID="w95e">(</tc:token>
+      <tc:token ID="w95f">1993</tc:token>
+      <tc:token ID="w960">)</tc:token>
+      <tc:token ID="w961">:</tc:token>
+      <tc:token ID="w962">Palimpseste</tc:token>
+      <tc:token ID="w963">.</tc:token>
+      <tc:token ID="w964">Die</tc:token>
+      <tc:token ID="w965">Literatur</tc:token>
+      <tc:token ID="w966">auf</tc:token>
+      <tc:token ID="w967">zweiter</tc:token>
+      <tc:token ID="w968">Stufe</tc:token>
+      <tc:token ID="w969">.</tc:token>
+      <tc:token ID="w96a">Frankfurt</tc:token>
+      <tc:token ID="w96b">am</tc:token>
+      <tc:token ID="w96c">Main</tc:token>
+      <tc:token ID="w96d">:</tc:token>
+      <tc:token ID="w96e">Suhrkamp</tc:token>
+      <tc:token ID="w96f">.</tc:token>
+      <tc:token ID="w970">Jeßing</tc:token>
+      <tc:token ID="w971">,</tc:token>
+      <tc:token ID="w972">Benedikt</tc:token>
+      <tc:token ID="w973">(</tc:token>
+      <tc:token ID="w974">2015</tc:token>
+      <tc:token ID="w975">)</tc:token>
+      <tc:token ID="w976">:</tc:token>
+      <tc:token ID="w977">Dramenanalyse</tc:token>
+      <tc:token ID="w978">.</tc:token>
+      <tc:token ID="w979">Eine</tc:token>
+      <tc:token ID="w97a">Einführung</tc:token>
+      <tc:token ID="w97b">.</tc:token>
+      <tc:token ID="w97c">Berlin</tc:token>
+      <tc:token ID="w97d">:</tc:token>
+      <tc:token ID="w97e">Erich</tc:token>
+      <tc:token ID="w97f">Schmidt</tc:token>
+      <tc:token ID="w980">Verlag</tc:token>
+      <tc:token ID="w981">.</tc:token>
+      <tc:token ID="w982">Pangallo</tc:token>
+      <tc:token ID="w983">,</tc:token>
+      <tc:token ID="w984">Matteo</tc:token>
+      <tc:token ID="w985">(</tc:token>
+      <tc:token ID="w986">2015</tc:token>
+      <tc:token ID="w987">)</tc:token>
+      <tc:token ID="w988">:</tc:token>
+      <tc:token ID="w989">„</tc:token>
+      <tc:token ID="w98a">‚</tc:token>
+      <tc:token ID="w98b">I</tc:token>
+      <tc:token ID="w98c">will</tc:token>
+      <tc:token ID="w98d">keep</tc:token>
+      <tc:token ID="w98e">and</tc:token>
+      <tc:token ID="w98f">character</tc:token>
+      <tc:token ID="w990">that</tc:token>
+      <tc:token ID="w991">name‘</tc:token>
+      <tc:token ID="w992">:</tc:token>
+      <tc:token ID="w993">Dramatis</tc:token>
+      <tc:token ID="w994">Personae</tc:token>
+      <tc:token ID="w995">Lists</tc:token>
+      <tc:token ID="w996">in</tc:token>
+      <tc:token ID="w997">Early</tc:token>
+      <tc:token ID="w998">Modern</tc:token>
+      <tc:token ID="w999">Manuscript</tc:token>
+      <tc:token ID="w99a">Plays</tc:token>
+      <tc:token ID="w99b">“</tc:token>
+      <tc:token ID="w99c">.</tc:token>
+      <tc:token ID="w99d">Early</tc:token>
+      <tc:token ID="w99e">Theatre</tc:token>
+      <tc:token ID="w99f">18</tc:token>
+      <tc:token ID="w9a0">(</tc:token>
+      <tc:token ID="w9a1">2</tc:token>
+      <tc:token ID="w9a2">)</tc:token>
+      <tc:token ID="w9a3">:</tc:token>
+      <tc:token ID="w9a4">87–118</tc:token>
+      <tc:token ID="w9a5">.</tc:token>
+      <tc:token ID="w9a6">.</tc:token>
+      <tc:token ID="w9a7">Pfister</tc:token>
+      <tc:token ID="w9a8">,</tc:token>
+      <tc:token ID="w9a9">Manfred</tc:token>
+      <tc:token ID="w9aa">(</tc:token>
+      <tc:token ID="w9ab">2001</tc:token>
+      <tc:token ID="w9ac">)</tc:token>
+      <tc:token ID="w9ad">:</tc:token>
+      <tc:token ID="w9ae">Das</tc:token>
+      <tc:token ID="w9af">Drama</tc:token>
+      <tc:token ID="w9b0">.</tc:token>
+      <tc:token ID="w9b1">München</tc:token>
+      <tc:token ID="w9b2">:</tc:token>
+      <tc:token ID="w9b3">Wilhelm</tc:token>
+      <tc:token ID="w9b4">Fink</tc:token>
+      <tc:token ID="w9b5">.</tc:token>
+      <tc:token ID="w9b6">Schlaffer</tc:token>
+      <tc:token ID="w9b7">,</tc:token>
+      <tc:token ID="w9b8">Hannelore</tc:token>
+      <tc:token ID="w9b9">(</tc:token>
+      <tc:token ID="w9ba">1972</tc:token>
+      <tc:token ID="w9bb">)</tc:token>
+      <tc:token ID="w9bc">:</tc:token>
+      <tc:token ID="w9bd">Dramenform</tc:token>
+      <tc:token ID="w9be">und</tc:token>
+      <tc:token ID="w9bf">Klassenstruktur</tc:token>
+      <tc:token ID="w9c0">.</tc:token>
+      <tc:token ID="w9c1">Eine</tc:token>
+      <tc:token ID="w9c2">Analyse</tc:token>
+      <tc:token ID="w9c3">der</tc:token>
+      <tc:token ID="w9c4">dramatis</tc:token>
+      <tc:token ID="w9c5">persona</tc:token>
+      <tc:token ID="w9c6">"</tc:token>
+      <tc:token ID="w9c7">Volk</tc:token>
+      <tc:token ID="w9c8">"</tc:token>
+      <tc:token ID="w9c9">.</tc:token>
+      <tc:token ID="w9ca">Stuttgart</tc:token>
+      <tc:token ID="w9cb">:</tc:token>
+      <tc:token ID="w9cc">J.B.</tc:token>
+      <tc:token ID="w9cd">Metzler</tc:token>
+      <tc:token ID="w9ce">Verlag</tc:token>
+      <tc:token ID="w9cf">.</tc:token>
+      <tc:token ID="w9d0">Tonger-Erk</tc:token>
+      <tc:token ID="w9d1">,</tc:token>
+      <tc:token ID="w9d2">Lily</tc:token>
+      <tc:token ID="w9d3">/</tc:token>
+      <tc:token ID="w9d4">Nils</tc:token>
+      <tc:token ID="w9d5">Werber</tc:token>
+      <tc:token ID="w9d6">/</tc:token>
+      <tc:token ID="w9d7">Constanze</tc:token>
+      <tc:token ID="w9d8">Baum</tc:token>
+      <tc:token ID="w9d9">(</tc:token>
+      <tc:token ID="w9da">Hrsg.</tc:token>
+      <tc:token ID="w9db">)</tc:token>
+      <tc:token ID="w9dc">(</tc:token>
+      <tc:token ID="w9dd">2018</tc:token>
+      <tc:token ID="w9de">)</tc:token>
+      <tc:token ID="w9df">:</tc:token>
+      <tc:token ID="w9e0">„</tc:token>
+      <tc:token ID="w9e1">Hauptsache</tc:token>
+      <tc:token ID="w9e2">Nebentext</tc:token>
+      <tc:token ID="w9e3">.</tc:token>
+      <tc:token ID="w9e4">Regiebemerkungen</tc:token>
+      <tc:token ID="w9e5">im</tc:token>
+      <tc:token ID="w9e6">Drama</tc:token>
+      <tc:token ID="w9e7">“</tc:token>
+      <tc:token ID="w9e8">.</tc:token>
+      <tc:token ID="w9e9">Zeitschrift</tc:token>
+      <tc:token ID="w9ea">für</tc:token>
+      <tc:token ID="w9eb">Literaturwissenschaft</tc:token>
+      <tc:token ID="w9ec">und</tc:token>
+      <tc:token ID="w9ed">Linguistik</tc:token>
+      <tc:token ID="w9ee">48</tc:token>
+      <tc:token ID="w9ef">(</tc:token>
+      <tc:token ID="w9f0">3</tc:token>
+      <tc:token ID="w9f1">)</tc:token>
+      <tc:token ID="w9f2">.</tc:token>
+      <tc:token ID="w9f3">Beispielsweise</tc:token>
+      <tc:token ID="w9f4">spielt</tc:token>
+      <tc:token ID="w9f5">das</tc:token>
+      <tc:token ID="w9f6">Figurenverzeichnis</tc:token>
+      <tc:token ID="w9f7">im</tc:token>
+      <tc:token ID="w9f8">kürzlich</tc:token>
+      <tc:token ID="w9f9">erschienenen</tc:token>
+      <tc:token ID="w9fa">(</tc:token>
+      <tc:token ID="w9fb">Tonger-Erk</tc:token>
+      <tc:token ID="w9fc">,</tc:token>
+      <tc:token ID="w9fd">Werber</tc:token>
+      <tc:token ID="w9fe">,</tc:token>
+      <tc:token ID="w9ff">und</tc:token>
+      <tc:token ID="wa00">Baum</tc:token>
+      <tc:token ID="wa01">2018</tc:token>
+      <tc:token ID="wa02">)</tc:token>
+      <tc:token ID="wa03">,</tc:token>
+      <tc:token ID="wa04">aber</tc:token>
+      <tc:token ID="wa05">auch</tc:token>
+      <tc:token ID="wa06">in</tc:token>
+      <tc:token ID="wa07">(</tc:token>
+      <tc:token ID="wa08">Genette</tc:token>
+      <tc:token ID="wa09">1993</tc:token>
+      <tc:token ID="wa0a">)</tc:token>
+      <tc:token ID="wa0b">quasi</tc:token>
+      <tc:token ID="wa0c">keine</tc:token>
+      <tc:token ID="wa0d">Rolle</tc:token>
+      <tc:token ID="wa0e">.</tc:token>
+      <tc:token ID="wa0f">https://dracor.org</tc:token>
+      <tc:token ID="wa10">Für</tc:token>
+      <tc:token ID="wa11">mehr</tc:token>
+      <tc:token ID="wa12">Informationen</tc:token>
+      <tc:token ID="wa13">vergleiche</tc:token>
+      <tc:token ID="wa14">(</tc:token>
+      <tc:token ID="wa15">Schlaffer</tc:token>
+      <tc:token ID="wa16">1972</tc:token>
+      <tc:token ID="wa17">,</tc:token>
+      <tc:token ID="wa18">11</tc:token>
+      <tc:token ID="wa19">)</tc:token>
+      <tc:token ID="wa1a">Die</tc:token>
+      <tc:token ID="wa1b">konkreten</tc:token>
+      <tc:token ID="wa1c">Ergebnisse</tc:token>
+      <tc:token ID="wa1d">wurden</tc:token>
+      <tc:token ID="wa1e">auf</tc:token>
+      <tc:token ID="wa1f">den</tc:token>
+      <tc:token ID="wa20">vollautomatisch</tc:token>
+      <tc:token ID="wa21">erzeugten</tc:token>
+      <tc:token ID="wa22">Relationen</tc:token>
+      <tc:token ID="wa23">erzielt</tc:token>
+      <tc:token ID="wa24">.</tc:token>
+      <tc:token ID="wa25">Bibliographie</tc:token>
+    </tc:tokens>
+    <tc:sentences xmlns:tc="http://www.dspin.de/data/textcorpus">
+      <tc:sentence tokenIDs="w1 w2 w3 w4 w5 w6 w7 w8 w9 wa wb wc wd we wf w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w1a w1b w1c w1d w1e w1f w20 w21 w22 w23 w24 w25 w26" ID="s1"/>
+      <tc:sentence tokenIDs="w27 w28 w29 w2a w2b w2c w2d w2e w2f w30 w31 w32 w33 w34 w35 w36 w37 w38 w39 w3a w3b w3c w3d w3e w3f w40 w41 w42 w43" ID="s2"/>
+      <tc:sentence tokenIDs="w44 w45 w46 w47 w48 w49 w4a w4b w4c w4d w4e w4f w50 w51 w52 w53 w54 w55 w56 w57 w58 w59 w5a w5b w5c w5d w5e w5f w60 w61 w62 w63 w64 w65 w66 w67 w68 w69 w6a" ID="s3"/>
+      <tc:sentence tokenIDs="w6b w6c w6d w6e w6f w70 w71 w72 w73 w74 w75 w76 w77 w78 w79 w7a w7b w7c w7d w7e w7f w80 w81 w82 w83 w84" ID="s4"/>
+      <tc:sentence tokenIDs="w85 w86 w87 w88 w89 w8a w8b w8c w8d w8e w8f w90 w91 w92 w93 w94 w95 w96 w97 w98 w99 w9a w9b w9c" ID="s5"/>
+      <tc:sentence tokenIDs="w9d w9e w9f wa0 wa1 wa2 wa3 wa4 wa5 wa6 wa7 wa8 wa9 waa wab wac wad wae waf wb0 wb1 wb2 wb3 wb4 wb5 wb6 wb7 wb8 wb9 wba wbb wbc wbd wbe wbf wc0 wc1 wc2 wc3 wc4 wc5 wc6 wc7" ID="s6"/>
+      <tc:sentence tokenIDs="wc8 wc9 wca wcb wcc wcd wce wcf wd0 wd1 wd2 wd3 wd4 wd5 wd6 wd7 wd8 wd9 wda wdb wdc wdd wde wdf we0 we1 we2 we3 we4 we5" ID="s7"/>
+      <tc:sentence tokenIDs="we6 we7 we8 we9 wea web wec wed wee wef wf0 wf1 wf2 wf3 wf4 wf5 wf6 wf7 wf8 wf9 wfa wfb" ID="s8"/>
+      <tc:sentence tokenIDs="wfc wfd wfe wff w100 w101 w102 w103 w104" ID="s9"/>
+      <tc:sentence tokenIDs="w105 w106 w107 w108 w109 w10a w10b w10c w10d w10e w10f w110 w111 w112 w113 w114 w115 w116 w117" ID="sa"/>
+      <tc:sentence tokenIDs="w118 w119 w11a w11b w11c w11d w11e w11f w120 w121 w122 w123 w124 w125 w126" ID="sb"/>
+      <tc:sentence tokenIDs="w127 w128 w129 w12a w12b w12c w12d w12e w12f w130 w131 w132 w133 w134 w135 w136 w137" ID="sc"/>
+      <tc:sentence tokenIDs="w138 w139 w13a w13b w13c w13d w13e w13f w140 w141 w142 w143 w144" ID="sd"/>
+      <tc:sentence tokenIDs="w145 w146 w147 w148 w149 w14a w14b w14c w14d w14e w14f w150 w151 w152 w153 w154 w155 w156 w157 w158 w159 w15a w15b w15c" ID="se"/>
+      <tc:sentence tokenIDs="w15d w15e w15f w160 w161 w162 w163 w164 w165 w166 w167 w168" ID="sf"/>
+      <tc:sentence tokenIDs="w169 w16a w16b w16c w16d w16e w16f w170 w171 w172 w173 w174 w175 w176 w177 w178 w179 w17a w17b w17c w17d w17e w17f" ID="s10"/>
+      <tc:sentence tokenIDs="w180 w181 w182 w183 w184 w185 w186 w187 w188 w189 w18a w18b w18c w18d w18e w18f w190 w191 w192 w193 w194 w195 w196 w197 w198 w199 w19a w19b w19c w19d w19e" ID="s11"/>
+      <tc:sentence tokenIDs="w19f w1a0 w1a1 w1a2 w1a3 w1a4 w1a5 w1a6 w1a7" ID="s12"/>
+      <tc:sentence tokenIDs="w1a8 w1a9 w1aa w1ab w1ac w1ad w1ae w1af w1b0 w1b1 w1b2 w1b3 w1b4 w1b5 w1b6 w1b7 w1b8 w1b9 w1ba w1bb w1bc w1bd w1be w1bf w1c0 w1c1 w1c2 w1c3 w1c4 w1c5 w1c6 w1c7 w1c8 w1c9 w1ca w1cb" ID="s13"/>
+      <tc:sentence tokenIDs="w1cc w1cd w1ce w1cf w1d0 w1d1 w1d2 w1d3 w1d4 w1d5 w1d6 w1d7 w1d8 w1d9 w1da w1db w1dc w1dd w1de w1df w1e0 w1e1 w1e2" ID="s14"/>
+      <tc:sentence tokenIDs="w1e3 w1e4 w1e5 w1e6 w1e7 w1e8 w1e9 w1ea w1eb w1ec w1ed w1ee w1ef w1f0 w1f1 w1f2 w1f3 w1f4 w1f5 w1f6 w1f7 w1f8 w1f9 w1fa w1fb w1fc w1fd w1fe w1ff" ID="s15"/>
+      <tc:sentence tokenIDs="w200 w201 w202 w203 w204 w205 w206 w207 w208 w209" ID="s16"/>
+      <tc:sentence tokenIDs="w20a w20b w20c w20d w20e w20f w210 w211 w212 w213 w214 w215 w216 w217 w218 w219 w21a w21b" ID="s17"/>
+      <tc:sentence tokenIDs="w21c w21d w21e w21f w220 w221 w222 w223 w224 w225 w226 w227 w228 w229 w22a w22b w22c w22d w22e w22f w230 w231 w232" ID="s18"/>
+      <tc:sentence tokenIDs="w233 w234 w235 w236 w237 w238 w239 w23a w23b w23c w23d w23e w23f w240 w241 w242 w243 w244 w245 w246 w247 w248 w249 w24a w24b w24c" ID="s19"/>
+      <tc:sentence tokenIDs="w24d w24e w24f w250 w251 w252 w253 w254 w255 w256 w257 w258 w259 w25a" ID="s1a"/>
+      <tc:sentence tokenIDs="w25b w25c w25d w25e w25f w260 w261 w262 w263 w264 w265 w266 w267 w268 w269 w26a w26b w26c w26d w26e w26f w270 w271 w272 w273 w274 w275 w276 w277 w278 w279 w27a w27b w27c w27d w27e w27f w280 w281 w282 w283 w284 w285 w286 w287 w288 w289 w28a" ID="s1b"/>
+      <tc:sentence tokenIDs="w28b w28c w28d w28e w28f w290 w291 w292 w293 w294 w295 w296 w297 w298 w299 w29a w29b w29c w29d w29e w29f w2a0 w2a1 w2a2 w2a3 w2a4 w2a5 w2a6 w2a7 w2a8 w2a9 w2aa w2ab w2ac w2ad w2ae w2af w2b0 w2b1 w2b2" ID="s1c"/>
+      <tc:sentence tokenIDs="w2b3 w2b4 w2b5 w2b6 w2b7 w2b8 w2b9 w2ba w2bb w2bc w2bd w2be w2bf w2c0 w2c1 w2c2 w2c3 w2c4" ID="s1d"/>
+      <tc:sentence tokenIDs="w2c5 w2c6 w2c7 w2c8 w2c9 w2ca w2cb w2cc w2cd w2ce w2cf w2d0 w2d1" ID="s1e"/>
+      <tc:sentence tokenIDs="w2d2 w2d3 w2d4 w2d5 w2d6 w2d7 w2d8 w2d9 w2da w2db w2dc" ID="s1f"/>
+      <tc:sentence tokenIDs="w2dd w2de w2df w2e0 w2e1 w2e2 w2e3 w2e4 w2e5 w2e6 w2e7 w2e8 w2e9 w2ea w2eb w2ec w2ed w2ee w2ef w2f0 w2f1 w2f2 w2f3 w2f4 w2f5 w2f6 w2f7 w2f8 w2f9 w2fa w2fb w2fc w2fd w2fe" ID="s20"/>
+      <tc:sentence tokenIDs="w2ff w300 w301 w302 w303 w304 w305 w306 w307 w308 w309 w30a w30b w30c w30d w30e w30f w310 w311 w312 w313 w314 w315 w316 w317 w318 w319 w31a w31b w31c w31d w31e w31f w320 w321 w322 w323 w324 w325 w326 w327 w328 w329 w32a w32b w32c w32d w32e w32f" ID="s21"/>
+      <tc:sentence tokenIDs="w330 w331 w332 w333 w334 w335 w336 w337 w338 w339 w33a w33b w33c w33d w33e w33f w340 w341 w342 w343 w344 w345 w346 w347 w348 w349 w34a w34b w34c w34d w34e w34f" ID="s22"/>
+      <tc:sentence tokenIDs="w350 w351 w352 w353 w354 w355 w356 w357 w358 w359 w35a w35b w35c w35d w35e w35f w360 w361 w362 w363 w364 w365 w366 w367 w368 w369 w36a w36b w36c w36d w36e w36f w370 w371 w372 w373 w374 w375 w376 w377" ID="s23"/>
+      <tc:sentence tokenIDs="w378 w379 w37a w37b w37c w37d w37e w37f w380 w381 w382 w383 w384 w385 w386 w387 w388 w389 w38a w38b" ID="s24"/>
+      <tc:sentence tokenIDs="w38c w38d w38e w38f w390 w391 w392 w393 w394 w395 w396 w397 w398 w399 w39a w39b w39c w39d w39e w39f w3a0 w3a1 w3a2 w3a3 w3a4 w3a5 w3a6" ID="s25"/>
+      <tc:sentence tokenIDs="w3a7 w3a8 w3a9 w3aa w3ab w3ac w3ad w3ae w3af w3b0 w3b1 w3b2 w3b3 w3b4 w3b5 w3b6" ID="s26"/>
+      <tc:sentence tokenIDs="w3b7 w3b8 w3b9 w3ba w3bb w3bc w3bd w3be w3bf w3c0 w3c1 w3c2 w3c3 w3c4 w3c5 w3c6 w3c7 w3c8 w3c9 w3ca w3cb w3cc w3cd w3ce w3cf w3d0 w3d1 w3d2 w3d3 w3d4 w3d5 w3d6 w3d7 w3d8 w3d9 w3da w3db" ID="s27"/>
+      <tc:sentence tokenIDs="w3dc w3dd w3de w3df w3e0 w3e1 w3e2 w3e3 w3e4 w3e5 w3e6 w3e7 w3e8" ID="s28"/>
+      <tc:sentence tokenIDs="w3e9 w3ea w3eb w3ec w3ed w3ee w3ef w3f0 w3f1 w3f2 w3f3 w3f4 w3f5 w3f6 w3f7 w3f8 w3f9 w3fa w3fb w3fc w3fd w3fe w3ff w400 w401 w402" ID="s29"/>
+      <tc:sentence tokenIDs="w403 w404 w405 w406 w407 w408 w409 w40a w40b w40c w40d w40e w40f w410 w411 w412 w413 w414" ID="s2a"/>
+      <tc:sentence tokenIDs="w415 w416 w417 w418 w419 w41a w41b w41c w41d w41e w41f w420 w421 w422 w423" ID="s2b"/>
+      <tc:sentence tokenIDs="w424 w425 w426 w427 w428 w429 w42a w42b w42c w42d w42e w42f w430 w431 w432 w433 w434 w435 w436 w437 w438" ID="s2c"/>
+      <tc:sentence tokenIDs="w439 w43a w43b w43c w43d w43e w43f w440 w441 w442 w443 w444 w445 w446 w447 w448 w449 w44a w44b w44c w44d w44e w44f w450 w451 w452" ID="s2d"/>
+      <tc:sentence tokenIDs="w453 w454 w455 w456 w457 w458 w459 w45a w45b w45c w45d w45e w45f w460 w461 w462 w463 w464 w465 w466 w467 w468 w469 w46a w46b" ID="s2e"/>
+      <tc:sentence tokenIDs="w46c w46d w46e w46f w470 w471 w472 w473 w474 w475 w476 w477 w478 w479 w47a" ID="s2f"/>
+      <tc:sentence tokenIDs="w47b w47c w47d w47e w47f w480 w481 w482 w483 w484 w485" ID="s30"/>
+      <tc:sentence tokenIDs="w486 w487 w488 w489 w48a w48b w48c w48d w48e w48f w490 w491 w492 w493 w494 w495 w496 w497 w498 w499 w49a w49b w49c w49d w49e w49f" ID="s31"/>
+      <tc:sentence tokenIDs="w4a0 w4a1 w4a2 w4a3 w4a4 w4a5 w4a6 w4a7 w4a8 w4a9 w4aa w4ab w4ac w4ad w4ae w4af w4b0 w4b1 w4b2 w4b3 w4b4 w4b5 w4b6" ID="s32"/>
+      <tc:sentence tokenIDs="w4b7 w4b8 w4b9 w4ba w4bb w4bc w4bd w4be w4bf w4c0 w4c1 w4c2 w4c3 w4c4 w4c5 w4c6 w4c7 w4c8 w4c9 w4ca w4cb w4cc w4cd w4ce w4cf w4d0 w4d1 w4d2" ID="s33"/>
+      <tc:sentence tokenIDs="w4d3 w4d4 w4d5 w4d6 w4d7 w4d8 w4d9 w4da w4db w4dc w4dd w4de w4df w4e0 w4e1 w4e2 w4e3 w4e4 w4e5" ID="s34"/>
+      <tc:sentence tokenIDs="w4e6 w4e7 w4e8 w4e9 w4ea w4eb w4ec w4ed w4ee w4ef" ID="s35"/>
+      <tc:sentence tokenIDs="w4f0 w4f1 w4f2 w4f3 w4f4 w4f5 w4f6 w4f7 w4f8 w4f9 w4fa w4fb w4fc w4fd w4fe w4ff w500 w501 w502 w503 w504 w505 w506 w507 w508 w509 w50a w50b w50c w50d w50e w50f w510 w511 w512 w513 w514 w515 w516 w517 w518 w519 w51a w51b w51c" ID="s36"/>
+      <tc:sentence tokenIDs="w51d w51e w51f w520 w521 w522 w523 w524 w525 w526 w527 w528 w529 w52a w52b w52c w52d w52e w52f w530 w531 w532 w533 w534 w535 w536 w537 w538 w539 w53a w53b w53c w53d w53e w53f w540 w541" ID="s37"/>
+      <tc:sentence tokenIDs="w542 w543 w544 w545 w546 w547 w548 w549 w54a w54b w54c w54d w54e w54f w550 w551 w552 w553 w554 w555 w556 w557 w558 w559 w55a w55b w55c w55d w55e w55f w560 w561 w562 w563 w564 w565 w566 w567" ID="s38"/>
+      <tc:sentence tokenIDs="w568 w569 w56a w56b w56c w56d w56e w56f w570 w571 w572 w573 w574 w575 w576 w577 w578 w579 w57a w57b" ID="s39"/>
+      <tc:sentence tokenIDs="w57c w57d w57e w57f w580 w581 w582 w583 w584 w585 w586 w587 w588 w589 w58a w58b w58c w58d w58e w58f w590 w591" ID="s3a"/>
+      <tc:sentence tokenIDs="w592 w593 w594 w595 w596 w597 w598 w599 w59a w59b w59c" ID="s3b"/>
+      <tc:sentence tokenIDs="w59d w59e w59f w5a0 w5a1 w5a2 w5a3 w5a4 w5a5 w5a6 w5a7 w5a8 w5a9 w5aa w5ab w5ac w5ad w5ae w5af w5b0 w5b1 w5b2 w5b3 w5b4 w5b5 w5b6 w5b7 w5b8 w5b9 w5ba w5bb w5bc w5bd w5be w5bf w5c0" ID="s3c"/>
+      <tc:sentence tokenIDs="w5c1 w5c2 w5c3 w5c4 w5c5 w5c6 w5c7 w5c8 w5c9 w5ca w5cb w5cc w5cd w5ce w5cf w5d0 w5d1 w5d2 w5d3 w5d4 w5d5 w5d6 w5d7 w5d8 w5d9 w5da w5db w5dc w5dd w5de" ID="s3d"/>
+      <tc:sentence tokenIDs="w5df w5e0 w5e1 w5e2 w5e3 w5e4 w5e5 w5e6 w5e7 w5e8 w5e9 w5ea w5eb w5ec w5ed w5ee w5ef w5f0 w5f1 w5f2 w5f3 w5f4 w5f5 w5f6 w5f7 w5f8 w5f9 w5fa w5fb w5fc" ID="s3e"/>
+      <tc:sentence tokenIDs="w5fd w5fe w5ff w600 w601 w602 w603 w604 w605 w606 w607 w608 w609" ID="s3f"/>
+      <tc:sentence tokenIDs="w60a w60b w60c w60d w60e w60f w610 w611 w612 w613 w614 w615 w616 w617 w618 w619 w61a w61b w61c w61d w61e w61f w620 w621 w622 w623 w624" ID="s40"/>
+      <tc:sentence tokenIDs="w625 w626 w627 w628 w629 w62a w62b w62c w62d w62e w62f w630" ID="s41"/>
+      <tc:sentence tokenIDs="w631 w632 w633 w634 w635 w636 w637 w638 w639 w63a w63b w63c w63d w63e w63f w640 w641 w642 w643" ID="s42"/>
+      <tc:sentence tokenIDs="w644 w645 w646 w647 w648 w649 w64a" ID="s43"/>
+      <tc:sentence tokenIDs="w64b w64c w64d w64e w64f w650 w651 w652 w653 w654 w655 w656 w657 w658 w659 w65a w65b w65c w65d w65e w65f w660 w661 w662 w663 w664" ID="s44"/>
+      <tc:sentence tokenIDs="w665 w666 w667 w668 w669 w66a w66b w66c w66d" ID="s45"/>
+      <tc:sentence tokenIDs="w66e w66f w670 w671 w672 w673 w674 w675 w676 w677 w678 w679 w67a" ID="s46"/>
+      <tc:sentence tokenIDs="w67b w67c w67d w67e w67f w680 w681 w682 w683 w684 w685 w686 w687 w688 w689 w68a w68b w68c w68d w68e w68f" ID="s47"/>
+      <tc:sentence tokenIDs="w690 w691 w692 w693 w694 w695 w696 w697 w698 w699 w69a w69b w69c w69d w69e w69f w6a0 w6a1 w6a2 w6a3 w6a4 w6a5 w6a6 w6a7 w6a8 w6a9 w6aa w6ab w6ac w6ad w6ae" ID="s48"/>
+      <tc:sentence tokenIDs="w6af w6b0 w6b1 w6b2 w6b3 w6b4 w6b5 w6b6 w6b7 w6b8 w6b9 w6ba w6bb w6bc w6bd w6be w6bf w6c0 w6c1 w6c2 w6c3 w6c4 w6c5 w6c6 w6c7 w6c8 w6c9 w6ca w6cb w6cc w6cd w6ce w6cf w6d0 w6d1 w6d2 w6d3 w6d4 w6d5 w6d6 w6d7 w6d8" ID="s49"/>
+      <tc:sentence tokenIDs="w6d9 w6da w6db w6dc w6dd w6de w6df w6e0 w6e1 w6e2 w6e3 w6e4 w6e5 w6e6 w6e7 w6e8 w6e9 w6ea w6eb w6ec w6ed w6ee w6ef" ID="s4a"/>
+      <tc:sentence tokenIDs="w6f0 w6f1 w6f2 w6f3 w6f4 w6f5 w6f6 w6f7 w6f8 w6f9 w6fa w6fb w6fc w6fd w6fe w6ff" ID="s4b"/>
+      <tc:sentence tokenIDs="w700 w701 w702 w703 w704 w705 w706 w707 w708 w709 w70a w70b w70c w70d w70e w70f w710 w711 w712 w713 w714 w715 w716 w717 w718 w719" ID="s4c"/>
+      <tc:sentence tokenIDs="w71a w71b w71c w71d w71e w71f w720 w721 w722 w723 w724 w725 w726 w727 w728 w729 w72a w72b w72c w72d w72e" ID="s4d"/>
+      <tc:sentence tokenIDs="w72f w730 w731 w732 w733 w734 w735 w736 w737 w738 w739 w73a w73b w73c w73d w73e w73f w740 w741 w742 w743 w744 w745 w746 w747" ID="s4e"/>
+      <tc:sentence tokenIDs="w748 w749 w74a w74b w74c w74d w74e w74f w750 w751 w752 w753 w754 w755 w756 w757 w758 w759 w75a" ID="s4f"/>
+      <tc:sentence tokenIDs="w75b w75c w75d w75e w75f w760 w761 w762 w763 w764 w765 w766 w767 w768 w769 w76a w76b w76c w76d" ID="s50"/>
+      <tc:sentence tokenIDs="w76e w76f w770 w771 w772 w773 w774 w775 w776 w777 w778 w779 w77a w77b w77c w77d w77e" ID="s51"/>
+      <tc:sentence tokenIDs="w77f w780 w781 w782 w783 w784 w785 w786 w787 w788 w789 w78a w78b w78c" ID="s52"/>
+      <tc:sentence tokenIDs="w78d w78e w78f w790 w791 w792 w793 w794 w795 w796 w797 w798 w799 w79a w79b w79c w79d" ID="s53"/>
+      <tc:sentence tokenIDs="w79e w79f w7a0 w7a1 w7a2 w7a3 w7a4 w7a5 w7a6 w7a7 w7a8 w7a9 w7aa w7ab w7ac w7ad w7ae w7af w7b0 w7b1 w7b2 w7b3 w7b4 w7b5 w7b6 w7b7 w7b8 w7b9 w7ba" ID="s54"/>
+      <tc:sentence tokenIDs="w7bb w7bc w7bd w7be w7bf w7c0 w7c1" ID="s55"/>
+      <tc:sentence tokenIDs="w7c2 w7c3 w7c4 w7c5 w7c6 w7c7 w7c8 w7c9 w7ca w7cb w7cc w7cd w7ce w7cf w7d0 w7d1 w7d2 w7d3 w7d4 w7d5 w7d6 w7d7 w7d8 w7d9 w7da" ID="s56"/>
+      <tc:sentence tokenIDs="w7db w7dc w7dd w7de w7df w7e0 w7e1 w7e2 w7e3 w7e4 w7e5 w7e6 w7e7 w7e8 w7e9 w7ea w7eb w7ec w7ed w7ee w7ef w7f0 w7f1 w7f2 w7f3 w7f4 w7f5 w7f6 w7f7 w7f8 w7f9 w7fa w7fb w7fc w7fd w7fe w7ff w800 w801 w802 w803 w804 w805 w806 w807 w808 w809 w80a w80b w80c w80d w80e" ID="s57"/>
+      <tc:sentence tokenIDs="w80f w810 w811 w812 w813 w814 w815 w816 w817 w818 w819 w81a w81b w81c w81d w81e w81f w820 w821 w822 w823 w824 w825 w826 w827 w828 w829 w82a w82b w82c w82d w82e w82f" ID="s58"/>
+      <tc:sentence tokenIDs="w830 w831 w832 w833 w834 w835 w836 w837 w838 w839 w83a w83b w83c w83d w83e w83f w840 w841 w842 w843 w844 w845 w846 w847 w848 w849 w84a w84b w84c w84d w84e w84f w850 w851 w852 w853 w854 w855 w856 w857 w858 w859 w85a w85b w85c w85d w85e w85f w860 w861 w862 w863 w864 w865 w866 w867 w868 w869 w86a w86b w86c w86d w86e w86f w870 w871 w872 w873 w874 w875 w876 w877 w878 w879 w87a w87b w87c w87d w87e w87f w880 w881 w882 w883" ID="s59"/>
+      <tc:sentence tokenIDs="w884 w885 w886 w887" ID="s5a"/>
+      <tc:sentence tokenIDs="w888 w889 w88a w88b w88c w88d w88e w88f w890 w891" ID="s5b"/>
+      <tc:sentence tokenIDs="w892 w893 w894 w895 w896 w897" ID="s5c"/>
+      <tc:sentence tokenIDs="w898 w899 w89a w89b w89c w89d w89e w89f w8a0 w8a1 w8a2 w8a3" ID="s5d"/>
+      <tc:sentence tokenIDs="w8a4 w8a5 w8a6 w8a7 w8a8 w8a9 w8aa w8ab w8ac w8ad w8ae w8af w8b0 w8b1 w8b2 w8b3 w8b4 w8b5" ID="s5e"/>
+      <tc:sentence tokenIDs="w8b6 w8b7 w8b8 w8b9 w8ba w8bb w8bc w8bd w8be w8bf w8c0 w8c1 w8c2 w8c3 w8c4 w8c5 w8c6 w8c7 w8c8 w8c9 w8ca w8cb w8cc w8cd" ID="s5f"/>
+      <tc:sentence tokenIDs="w8ce w8cf w8d0 w8d1 w8d2 w8d3 w8d4 w8d5 w8d6" ID="s60"/>
+      <tc:sentence tokenIDs="w8d7 w8d8 w8d9 w8da w8db w8dc w8dd w8de" ID="s61"/>
+      <tc:sentence tokenIDs="w8df w8e0 w8e1 w8e2 w8e3 w8e4 w8e5 w8e6" ID="s62"/>
+      <tc:sentence tokenIDs="w8e7 w8e8 w8e9 w8ea w8eb w8ec" ID="s63"/>
+      <tc:sentence tokenIDs="w8ed w8ee w8ef w8f0 w8f1 w8f2 w8f3 w8f4 w8f5 w8f6 w8f7 w8f8 w8f9 w8fa w8fb w8fc w8fd w8fe w8ff w900" ID="s64"/>
+      <tc:sentence tokenIDs="w901 w902 w903 w904" ID="s65"/>
+      <tc:sentence tokenIDs="w905 w906 w907 w908 w909" ID="s66"/>
+      <tc:sentence tokenIDs="w90a w90b w90c w90d w90e w90f" ID="s67"/>
+      <tc:sentence tokenIDs="w910 w911 w912 w913 w914 w915 w916 w917 w918 w919 w91a w91b w91c w91d w91e w91f w920 w921 w922 w923 w924 w925 w926" ID="s68"/>
+      <tc:sentence tokenIDs="w927 w928 w929 w92a" ID="s69"/>
+      <tc:sentence tokenIDs="w92b w92c w92d w92e w92f w930 w931 w932 w933 w934 w935 w936 w937 w938 w939 w93a w93b w93c w93d w93e w93f w940 w941 w942 w943" ID="s6a"/>
+      <tc:sentence tokenIDs="w944 w945 w946 w947 w948 w949 w94a w94b w94c w94d w94e w94f w950 w951 w952 w953 w954" ID="s6b"/>
+      <tc:sentence tokenIDs="w955 w956 w957 w958 w959 w95a w95b w95c w95d w95e w95f w960 w961 w962 w963" ID="s6c"/>
+      <tc:sentence tokenIDs="w964 w965 w966 w967 w968 w969" ID="s6d"/>
+      <tc:sentence tokenIDs="w96a w96b w96c w96d w96e w96f" ID="s6e"/>
+      <tc:sentence tokenIDs="w970 w971 w972 w973 w974 w975 w976 w977 w978" ID="s6f"/>
+      <tc:sentence tokenIDs="w979 w97a w97b" ID="s70"/>
+      <tc:sentence tokenIDs="w97c w97d w97e w97f w980 w981" ID="s71"/>
+      <tc:sentence tokenIDs="w982 w983 w984 w985 w986 w987 w988" ID="s72"/>
+      <tc:sentence tokenIDs="w989 w98a w98b w98c w98d w98e w98f w990 w991 w992 w993 w994 w995 w996 w997 w998 w999 w99a w99b w99c" ID="s73"/>
+      <tc:sentence tokenIDs="w99d w99e w99f w9a0 w9a1 w9a2 w9a3 w9a4 w9a5 w9a6 w9a7 w9a8 w9a9 w9aa w9ab w9ac w9ad" ID="s74"/>
+      <tc:sentence tokenIDs="w9ae w9af w9b0" ID="s75"/>
+      <tc:sentence tokenIDs="w9b1 w9b2 w9b3 w9b4 w9b5" ID="s76"/>
+      <tc:sentence tokenIDs="w9b6 w9b7 w9b8 w9b9 w9ba w9bb w9bc w9bd w9be w9bf w9c0" ID="s77"/>
+      <tc:sentence tokenIDs="w9c1 w9c2 w9c3 w9c4 w9c5 w9c6 w9c7 w9c8 w9c9" ID="s78"/>
+      <tc:sentence tokenIDs="w9ca w9cb w9cc w9cd w9ce w9cf" ID="s79"/>
+      <tc:sentence tokenIDs="w9d0 w9d1 w9d2 w9d3 w9d4 w9d5 w9d6 w9d7 w9d8 w9d9 w9da w9db w9dc w9dd w9de w9df" ID="s7a"/>
+      <tc:sentence tokenIDs="w9e0 w9e1 w9e2 w9e3" ID="s7b"/>
+      <tc:sentence tokenIDs="w9e4 w9e5 w9e6 w9e7 w9e8" ID="s7c"/>
+      <tc:sentence tokenIDs="w9e9 w9ea w9eb w9ec w9ed w9ee w9ef w9f0 w9f1 w9f2" ID="s7d"/>
+      <tc:sentence tokenIDs="w9f3 w9f4 w9f5 w9f6 w9f7 w9f8 w9f9 w9fa w9fb w9fc w9fd w9fe w9ff wa00 wa01 wa02 wa03 wa04 wa05 wa06 wa07 wa08 wa09 wa0a wa0b wa0c wa0d wa0e wa0f wa10 wa11 wa12 wa13 wa14 wa15 wa16 wa17 wa18 wa19" ID="s7e"/>
+      <tc:sentence tokenIDs="wa1a wa1b wa1c wa1d wa1e wa1f wa20 wa21 wa22 wa23 wa24" ID="s7f"/>
+      <tc:sentence tokenIDs="wa25" ID="s80"/>
+    </tc:sentences>
+    <tc:namedEntities xmlns:tc="http://www.dspin.de/data/textcorpus" type="tuebadz8">
+      <tc:entity class="PER" tokenIDs="w2d"/>
+      <tc:entity class="PER" tokenIDs="w7f"/>
+      <tc:entity class="LOC" tokenIDs="w97"/>
+      <tc:entity class="PER" tokenIDs="wa2"/>
+      <tc:entity class="PER" tokenIDs="wa4"/>
+      <tc:entity class="PER" tokenIDs="wbd"/>
+      <tc:entity class="PER" tokenIDs="wc2"/>
+      <tc:entity class="PER" tokenIDs="w178"/>
+      <tc:entity class="PER" tokenIDs="w17a"/>
+      <tc:entity class="PER" tokenIDs="w197"/>
+      <tc:entity class="PER" tokenIDs="w199"/>
+      <tc:entity class="PER" tokenIDs="w1c4"/>
+      <tc:entity class="PER" tokenIDs="w1c6"/>
+      <tc:entity class="PER" tokenIDs="w27a"/>
+      <tc:entity class="PER" tokenIDs="w2fb"/>
+      <tc:entity class="PER" tokenIDs="w305"/>
+      <tc:entity class="PER" tokenIDs="w3ae w3af"/>
+      <tc:entity class="PER" tokenIDs="w3b2 w3b3"/>
+      <tc:entity class="PER" tokenIDs="w3bd w3be"/>
+      <tc:entity class="PER" tokenIDs="w3c4"/>
+      <tc:entity class="ORG" tokenIDs="w473"/>
+      <tc:entity class="OTH" tokenIDs="w487 w488"/>
+      <tc:entity class="PER" tokenIDs="w494"/>
+      <tc:entity class="ORG" tokenIDs="w49a"/>
+      <tc:entity class="ORG" tokenIDs="w4a1"/>
+      <tc:entity class="ORG" tokenIDs="w4bf"/>
+      <tc:entity class="PER" tokenIDs="w4c7"/>
+      <tc:entity class="OTH" tokenIDs="w51d"/>
+      <tc:entity class="PER" tokenIDs="w53c"/>
+      <tc:entity class="PER" tokenIDs="w549"/>
+      <tc:entity class="PER" tokenIDs="w560"/>
+      <tc:entity class="PER" tokenIDs="w5aa"/>
+      <tc:entity class="OTH" tokenIDs="w5ab w5ac"/>
+      <tc:entity class="PER" tokenIDs="w5cb"/>
+      <tc:entity class="OTH" tokenIDs="w5cd w5ce w5cf w5d0"/>
+      <tc:entity class="PER" tokenIDs="w5d2"/>
+      <tc:entity class="OTH" tokenIDs="w5d4 w5d5"/>
+      <tc:entity class="PER" tokenIDs="w5d8"/>
+      <tc:entity class="PER" tokenIDs="w5da w5db w5dc"/>
+      <tc:entity class="PER" tokenIDs="w5e0"/>
+      <tc:entity class="PER" tokenIDs="w5eb"/>
+      <tc:entity class="PER" tokenIDs="w5ee"/>
+      <tc:entity class="PER" tokenIDs="w636"/>
+      <tc:entity class="OTH" tokenIDs="w637 w638 w639"/>
+      <tc:entity class="ORG" tokenIDs="w64b w64c"/>
+      <tc:entity class="PER" tokenIDs="w67c"/>
+      <tc:entity class="OTH" tokenIDs="w67e w67f w680"/>
+      <tc:entity class="PER" tokenIDs="w683"/>
+      <tc:entity class="PER" tokenIDs="w687"/>
+      <tc:entity class="PER" tokenIDs="w6cc"/>
+      <tc:entity class="GPE" tokenIDs="w6ce"/>
+      <tc:entity class="PER" tokenIDs="w6e1"/>
+      <tc:entity class="PER" tokenIDs="w6ee"/>
+      <tc:entity class="OTH" tokenIDs="w72c"/>
+      <tc:entity class="OTH" tokenIDs="w745"/>
+      <tc:entity class="PER" tokenIDs="w7a3 w7a4"/>
+      <tc:entity class="PER" tokenIDs="w7a9 w7aa"/>
+      <tc:entity class="OTH" tokenIDs="w835 w836"/>
+      <tc:entity class="PER" tokenIDs="w838 w839"/>
+      <tc:entity class="PER" tokenIDs="w88e"/>
+      <tc:entity class="PER" tokenIDs="w8fd"/>
+      <tc:entity class="PER" tokenIDs="w8ff"/>
+      <tc:entity class="GPE" tokenIDs="w90a"/>
+      <tc:entity class="ORG" tokenIDs="w90c w90d w90e"/>
+      <tc:entity class="PER" tokenIDs="w910"/>
+      <tc:entity class="PER" tokenIDs="w912"/>
+      <tc:entity class="PER" tokenIDs="w914 w915"/>
+      <tc:entity class="GPE" tokenIDs="w927"/>
+      <tc:entity class="ORG" tokenIDs="w929"/>
+      <tc:entity class="PER" tokenIDs="w92b"/>
+      <tc:entity class="PER" tokenIDs="w92d"/>
+      <tc:entity class="PER" tokenIDs="w92f w930"/>
+      <tc:entity class="PER" tokenIDs="w932 w933"/>
+      <tc:entity class="PER" tokenIDs="w935 w936"/>
+      <tc:entity class="PER" tokenIDs="w938 w939"/>
+      <tc:entity class="PER" tokenIDs="w93b w93c"/>
+      <tc:entity class="PER" tokenIDs="w93e w93f"/>
+      <tc:entity class="OTH" tokenIDs="w956 w957 w958 w959 w95a w95b w95c w95d"/>
+      <tc:entity class="GPE" tokenIDs="w96a"/>
+      <tc:entity class="LOC" tokenIDs="w96c"/>
+      <tc:entity class="ORG" tokenIDs="w96e"/>
+      <tc:entity class="PER" tokenIDs="w970 w971 w972"/>
+      <tc:entity class="GPE" tokenIDs="w97c"/>
+      <tc:entity class="ORG" tokenIDs="w97e w97f w980"/>
+      <tc:entity class="PER" tokenIDs="w982"/>
+      <tc:entity class="PER" tokenIDs="w984"/>
+      <tc:entity class="OTH" tokenIDs="w997 w998 w999 w99a"/>
+      <tc:entity class="OTH" tokenIDs="w99d w99e"/>
+      <tc:entity class="PER" tokenIDs="w9a9"/>
+      <tc:entity class="GPE" tokenIDs="w9b1"/>
+      <tc:entity class="PER" tokenIDs="w9b3 w9b4"/>
+      <tc:entity class="PER" tokenIDs="w9b6"/>
+      <tc:entity class="PER" tokenIDs="w9b8"/>
+      <tc:entity class="OTH" tokenIDs="w9bd w9be w9bf"/>
+      <tc:entity class="GPE" tokenIDs="w9ca"/>
+      <tc:entity class="ORG" tokenIDs="w9cc w9cd w9ce"/>
+      <tc:entity class="PER" tokenIDs="w9d0"/>
+      <tc:entity class="PER" tokenIDs="w9d2"/>
+      <tc:entity class="PER" tokenIDs="w9d4 w9d5"/>
+      <tc:entity class="PER" tokenIDs="w9d7 w9d8"/>
+      <tc:entity class="ORG" tokenIDs="w9e9 w9ea w9eb w9ec w9ed"/>
+      <tc:entity class="OTH" tokenIDs="w9fd w9fe w9ff wa00 wa01"/>
+      <tc:entity class="PER" tokenIDs="wa08"/>
+      <tc:entity class="PER" tokenIDs="wa15"/>
+    </tc:namedEntities>
+  </TextCorpus>
+</D-Spin>

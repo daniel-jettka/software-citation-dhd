@@ -1,0 +1,1522 @@
+<?xml version='1.0' encoding='UTF-8'?><D-Spin xmlns="http://www.dspin.de/data" version="5">
+  <MetaData xmlns="http://www.dspin.de/data/metadata"><Services><cmd:CMD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cmd="http://www.clarin.eu/cmd/1" CMDVersion="1.2" xsi:schemaLocation="http://www.clarin.eu/cmd/1 http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_1320657629623/xsd"><cmd:Resources><cmd:ResourceProxyList/><cmd:JournalFileProxyList/><cmd:ResourceRelationList/></cmd:Resources><cmd:Components><cmd:WebServiceToolChain><cmd:GeneralInfo><cmd:Descriptions><cmd:Description/></cmd:Descriptions><cmd:ResourceName>Custom chain</cmd:ResourceName><cmd:ResourceClass>Toolchain</cmd:ResourceClass></cmd:GeneralInfo><cmd:Toolchain><cmd:ToolInChain><cmd:PID>https://hdl.handle.net/21.11120/0000-0008-319A-3</cmd:PID><cmd:Parameter value="de" name="lang"/></cmd:ToolInChain><cmd:ToolInChain><cmd:PID>https://hdl.handle.net/21.11120/0000-0008-3183-C</cmd:PID><cmd:Parameter value="5" name="version"/></cmd:ToolInChain><cmd:ToolInChain><cmd:PID>http://hdl.handle.net/11022/0000-0007-DA29-6</cmd:PID><cmd:Parameter value="de" name="lang"/><cmd:Parameter value="5" name="version"/></cmd:ToolInChain></cmd:Toolchain></cmd:WebServiceToolChain></cmd:Components></cmd:CMD></Services></MetaData>
+  <TextCorpus xmlns="http://www.dspin.de/data/textcorpus" lang="de">
+    <textSource type="application/tei+xml;format-variant=tei-dta;tokenized=0">&lt;?xml version="1.0" encoding="utf-8"?>
+&lt;TEI xml:id="poster-DOEHL" xmlns="http://www.tei-c.org/ns/1.0">
+&lt;teiHeader>
+&lt;fileDesc>
+&lt;titleStmt>
+&lt;title>PaLaFra – Entwicklung einer Annotationsumgebung für ein diachrones Korpus spätlateinischer und altfranzösischer Texte&lt;/title>
+&lt;author>
+&lt;persName>
+&lt;surname>Döhling&lt;/surname>
+&lt;forename>Lars&lt;/forename>
+&lt;/persName>
+&lt;affiliation>Universität Regensburg, Deutschland&lt;/affiliation>
+&lt;email>lars.doehling@ur.de&lt;/email>
+&lt;/author>
+&lt;author>
+&lt;persName>
+&lt;surname>Burghardt&lt;/surname>
+&lt;forename>Manuel&lt;/forename>
+&lt;/persName>
+&lt;affiliation>Universität Regensburg, Deutschland&lt;/affiliation>
+&lt;email>manuel.burghardt@ur.de&lt;/email>
+&lt;/author>
+&lt;author>
+&lt;persName>
+&lt;surname>Wolff&lt;/surname>
+&lt;forename>Christian&lt;/forename>
+&lt;/persName>
+&lt;affiliation>Universität Regensburg, Deutschland&lt;/affiliation>
+&lt;email>christian.wolff@ur.de&lt;/email>
+&lt;/author>
+&lt;/titleStmt>
+&lt;editionStmt>
+&lt;edition>
+&lt;date>2015-10-04T22:02:00Z&lt;/date>
+&lt;/edition>
+&lt;/editionStmt>
+&lt;publicationStmt>
+&lt;publisher>Prof. Dr. Michael Stolz&lt;/publisher>
+&lt;address>
+&lt;addrLine>UniversitÃ¤t Bern&lt;/addrLine>
+&lt;addrLine>Institut fÃ¼r Germanistik&lt;/addrLine>
+&lt;addrLine>Laenggass-Str. 49&lt;/addrLine>
+&lt;addrLine>CH-3000 Bern 9&lt;/addrLine>
+&lt;/address>
+&lt;/publicationStmt>
+&lt;sourceDesc>
+&lt;p>Converted from a Word document &lt;/p>
+&lt;/sourceDesc>
+&lt;/fileDesc>
+&lt;encodingDesc>
+&lt;appInfo>
+&lt;application ident="DHCONVALIDATOR" version="1.17">
+&lt;label>DHConvalidator&lt;/label>
+&lt;/application>
+&lt;/appInfo>
+&lt;/encodingDesc>
+&lt;profileDesc>
+&lt;textClass>
+&lt;keywords n="category" scheme="ConfTool">
+&lt;term>Poster&lt;/term>
+&lt;/keywords>
+&lt;keywords n="subcategory" scheme="ConfTool">
+&lt;term/>
+&lt;/keywords>
+&lt;keywords n="keywords" scheme="ConfTool">
+&lt;term>Tagset&lt;/term>
+&lt;term>Splätlatein&lt;/term>
+&lt;term>Altfranzösisch&lt;/term>
+&lt;/keywords>
+&lt;keywords n="topics" scheme="ConfTool">
+&lt;term>Programmierung&lt;/term>
+&lt;term>Annotieren&lt;/term>
+&lt;term>Bereinigung&lt;/term>
+&lt;term>Bearbeitung&lt;/term>
+&lt;term>Einführung&lt;/term>
+&lt;term>Metadaten&lt;/term>
+&lt;term>Text&lt;/term>
+&lt;term>Werkzeuge&lt;/term>
+&lt;term>Visualisierung&lt;/term>
+&lt;/keywords>
+&lt;/textClass>
+&lt;/profileDesc>
+&lt;/teiHeader>
+&lt;text>
+&lt;body>
+&lt;p>Ziel von 
+                &lt;hi rend="italic">PaLaFra&lt;/hi>
+&lt;ref n="1" target="poster-DOEHLftn1" type="note">1&lt;/ref> („Le passage du latin au français“) ist der Aufbau eines digitalen Korpus spätlateinischer und altfranzösischer Texte, das durch die Kombination von Lemmatisierung, syntaktischer und morphologischer Annotation sowie diskurspragmatischen und texttypologischen Deskriptoren komplexe Abfragestrategien ermöglicht und so eine qualitativ neuartige Nutzung der Texte bei der Rekonstruktion des lateinisch-romanischen Sprachwandels erreichen soll. Daran arbeitet ein deutsch-französisches Team der Universität Regensburg, der Universität Tübingen, der 
+                &lt;hi rend="italic">École Normale Supérieure&lt;/hi> in Lyon und der Universität Lille, das seit Sommer 2015 von der Deutschen Forschungsgemeinschaft (DFG) und der 
+                &lt;hi rend="italic">Agence Nationale de Recherche&lt;/hi> (ANR) gefördert wird. Das Projektteam ist interdisziplinär ausgerichtet und besteht aus romanischen Sprachwissenschaftlern, Computerlinguisten und Medieninformatikern. Während für den Bereich des Altfranzösischen auf das bestehende 
+                &lt;hi rend="italic">Base de Français Médiéval&lt;/hi>-Korpus
+                &lt;ref n="2" target="poster-DOEHLftn2" type="note">2&lt;/ref> zurückgegriffen werden kann, so ist die Erstellung eines — was die Annotation angeht — kompatiblen Korpus spätlateinischer Texte ein wichtiges Teilziel des 
+                &lt;hi rend="italic">PaLaFra&lt;/hi>-Projekts.
+            &lt;/p>
+&lt;p>In diesem Posterbeitrag berichten wir über Herausforderungen und Lösungsansätze bei der Erstellung einer Annotationsumgebung und eines diachronen Tagsets, das gleichermaßen in der Lage ist, die Idiosynkrasien der beiden Sprachstufen adäquat abzubilden, aber auch die diachronen Elemente im Sprachwandel einheitlich zu markieren.&lt;/p>
+&lt;p>Bereits für das spätlateinische Teilkorpus zeigt sich, dass es an einem standardisierten Tagset fehlt. Mindestens drei Varianten wurden in der Vergangenheit für die Annotation (spät-)lateinischer Texte entwickelt: 
+                &lt;hi rend="italic">CoLaMer&lt;/hi> (Selig et al. 2015), 
+                &lt;hi rend="italic">CompHistSem&lt;/hi> (Eger et al. 2015) und 
+                &lt;hi rend="italic">LASLA&lt;/hi> (Denooz 1978). Diese unterscheiden sich sowohl in den zugrunde liegenden linguistischen Konzepten als auch in ihrer Granularität. Demzufolge existiert auch kein einfaches Mapping zwischen ihnen. Für die Entwicklung eines sprachübergreifenden Tagsets in 
+                &lt;hi rend="italic">PaLaFra&lt;/hi> kommt erschwerend hinzu, dass die beiden Zielsprachen — Spätlatein und Altfranzösisch — trotz ihrer Verwandtschaft klare strukturellen Unterschiede aufweisen.
+            &lt;/p>
+&lt;p>Zumindest für die Ebene der Wortarten (PoS, Part-of-Speech) liefert beispielsweise das Projekt 
+                &lt;hi rend="italic">Universal Dependencies&lt;/hi>
+&lt;ref n="3" target="poster-DOEHLftn3" type="note">3&lt;/ref> wichtige Anhaltspunkte für ein sprachübergreifendes Tagset. Dieses Projekt hat sich die Entwicklung sprachübergreifend-kompatibler Baumbanken als Ziel gesetzt hat, die auf universellen Wortartkategorien basieren. Trotzdem bedingt die Entwicklung eines übergreifenden Tagsets oft den manuellen Vergleich von Annotationen, z.B. durch visuelle Gegenüberstellung annotierter Parallelkorpora. Unsere Recherche ergab, dass es an einem adäquaten Werkzeug für diese Aufgabe mangelt. Einerseits gibt es unzählige Annotationswerkzeuge, welche auf die Darstellung nur eines Textes samt Annotationen fokussieren (Burghardt 2014, Neves and Leser 2014). Auf der anderen Seite gibt es Alignierwerkzeuge, die auf die parallele Darstellung von Texten spezialisiert sind, aber dabei Annotation meist ignorieren, z.B. 
+                &lt;hi rend="italic">LF Aligner&lt;/hi>
+&lt;ref n="4" target="poster-DOEHLftn4" type="note">4&lt;/ref>, 
+                &lt;hi rend="italic">Moses&lt;/hi>
+&lt;ref n="5" target="poster-DOEHLftn5" type="note">5&lt;/ref> oder 
+                &lt;hi rend="italic">ParaVoz&lt;/hi>
+&lt;ref n="6" target="poster-DOEHLftn6" type="note">6&lt;/ref>. Um diese Lücke zu schließen, haben wir auf der Basis von 
+                &lt;hi rend="italic">InterText&lt;/hi>
+&lt;ref n="7" target="poster-DOEHLftn7" type="note">7&lt;/ref> — einem im Webbrowser zu bedienenden Alignierwerkzeug (Vondricka 2014) — ein Vergleichswerkzeug für annotierte Parallelkorpora entwickelt. Unsere Erweiterung unterstützt sowohl die Hervorhebung zueinander kompatibler (PoS-)Tags als auch die flexible Darstellung von Lemmata und morpho-syntaktischen Annotationen (
+&lt;ref rend="fldSimple mergeformat" target="#Ref459211164">Abbildung 1&lt;/ref>). Die dafür nötigen Informationen werden beim Import aus den TEI-XML-Daten extrahiert und mit Hilfe von JavaScript dynamisch visualisiert.
+            &lt;/p>
+&lt;figure>
+&lt;graphic height="3.887611111111111cm" n="1001" rend="inline" url="poster-DOEHL-image1.png" width="15.989652777777778cm"/>
+&lt;head>
+&lt;hi rend="italic">Abbildung &lt;/hi>
+&lt;hi rend="italic">: Das Bildschirmfoto zeigt die modifizierte InterText-Ansicht, erkennbar oben an der zusätzlichen Schalterleiste. Links ist die lateinische „Vita Benedicti“ (Vogüe und Antin 1979) zu sehen, annotiert mit dem LASLA Tagset (Denooz 1978), rechts das französische Gegenstück „Vie de saint Benoit“ (Foerster 1876), annotiert mit dem Cattex Tagset (Guillot et al. 2010). Aktuell ist sowohl die Hervorhebung kompatibler PoS-Tags („Toogle color“) als auch die Anzeige der vollständigen PoS-Annotation („Toogle POS (full)“) aktiviert.&lt;/hi>
+&lt;/head>
+&lt;/figure>
+&lt;p>Neben der eigentlichen Datenaufbereitung ist auch die Optimierung des Annotationsworkflows mit geeigneten Werkzeugen im Sinne verbesserter 
+                &lt;hi rend="italic">User Experience &lt;/hi>ein wesentliches Projektziel (
+                &lt;hi rend="italic">tool science&lt;/hi>, Wolff 2015). 
+            &lt;/p>
+&lt;p>Die Entwicklung des spätlateinisch-altfranzösischen Tagsets wird im Projekt — auch mit Hilfe unseres modifizierten 
+                &lt;hi rend="italic">InterText&lt;/hi>-Tools — vorangetrieben. In unserem Posterbeitrag erläutern wir das Vorgehen und präsentieren erste Ergebnisse.
+            &lt;/p>
+&lt;/body>
+&lt;back>&lt;div type="Notes">&lt;note n="1" rend="footnote text" xml:id="poster-DOEHLftn1">
+&lt;ref target="http://www.palafra.org/">http://www.palafra.org/&lt;/ref>
+&lt;/note>&lt;note n="2" rend="footnote text" xml:id="poster-DOEHLftn2">
+&lt;ref target="http://bfm.ens-lyon.fr/">http://bfm.ens-lyon.fr/&lt;/ref>
+&lt;/note>&lt;note n="3" rend="footnote text" xml:id="poster-DOEHLftn3">
+&lt;ref target="http://universaldependencies.org/">http://universaldependencies.org/&lt;/ref>
+&lt;/note>&lt;note n="4" xml:id="poster-DOEHLftn4">
+&lt;ref target="http://sourceforge.net/projects/aligner/">http://sourceforge.net/projects/aligner/&lt;/ref>
+&lt;/note>&lt;note n="5" rend="footnote text" xml:id="poster-DOEHLftn5">
+&lt;ref target="http://www.statmt.org/moses/">http://www.statmt.org/moses/&lt;/ref>
+&lt;/note>&lt;note n="6" rend="footnote text" xml:id="poster-DOEHLftn6">
+&lt;ref target="https://bitbucket.org/rvwfels/paravoz2">https://bitbucket.org/rvwfels/paravoz2&lt;/ref>
+&lt;/note>&lt;note n="7" rend="footnote text" xml:id="poster-DOEHLftn7">
+&lt;ref target="http://wanthalf.saga.cz/intertext">http://wanthalf.saga.cz/intertext&lt;/ref>
+&lt;/note>&lt;/div>
+&lt;div type="bibliogr">
+&lt;listBibl>
+&lt;head>Bibliographie&lt;/head>
+&lt;bibl>
+&lt;hi rend="bold">Burghardt, Manuel&lt;/hi> (2014):
+                        „Engineering annotation usability - Toward usability patterns for linguistic annotation tools“.
+                        Diss. Phil., Universität Regensburg, Institut für Information und Medien, Sprache und Kultur, urn:nbn:de:bvb:355-epub-307682.
+                    &lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Denooz, Joseph&lt;/hi> (1978):
+                        „L’ordinateur et le latin, techniques et methods“,
+                        in:
+                        &lt;hi rend="italic">Revue de l’Organisation Internationale pour l’Etude des Langues Anciennes par Ordinateur&lt;/hi> 4.
+                    &lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Eger, Steffen / vor der Brück, Tim / Mehler, Alexander&lt;/hi> (2015):
+                        „Lexicon-assisted tagging and lemmatization in latin: A comparison of six taggers and two lemmatization methods“,
+                        in: 
+                        &lt;hi rend="italic">LaTeCH 2015&lt;/hi> 105.
+                    &lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Guillot, Céline / Prévost, Sophie / Lavrentiev, Alexei&lt;/hi> (2010): 
+                        &lt;hi rend="italic">Manuel de référence du jeu cattex09&lt;/hi>. technical manual, UMR ICAR, CNRS/ENS-LSH. 
+                        &lt;ref target="http://bfm.ens-lyon.fr/IMG/pdf/Cattex2009_manuel_2.0.pdf">http://bfm.ens-lyon.fr/IMG/pdf/Cattex2009_manuel_2.0.pdf&lt;/ref>
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Neves, Mariana / Leser, Ulf&lt;/hi> (2014):
+                        „A survey on annotation tools for the biomedical literature“,
+                        in:
+                        &lt;hi rend="italic">Briefings in bioinformatics&lt;/hi> 15 (2): 327–340.
+                    &lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Selig, Maria / Eufe, Rembert / Linzmeier, Laura&lt;/hi> (2015): 
+                        &lt;hi rend="italic">CoLaMer&lt;/hi> (corpus du latin mérovingien). (im Erscheinen).
+                    &lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Vondricka, Pavel&lt;/hi> (2014):
+                        „Aligning parallel texts with intertext“,
+                        in:
+                        &lt;hi rend="italic">Proceedings of LREC 2014&lt;/hi>.
+                    &lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Vogüé, Adalbert de / Antin, Paul&lt;/hi> (1979): 
+                        &lt;hi rend="italic">GREGOIRE LE GRAND, Dialogues&lt;/hi> II. 
+                        Cambridge University Press.
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Von Foerster, Wendelin&lt;/hi> (1876): 
+                        &lt;hi rend="italic">Li Dialoge Gregoire lo Pape. Altfranzösische Uebersetzung des XII. Jahrhunderts der Dialogen des Papstes Gregor, mit dem lateinischen Original, einem Anhang: Sermo de Sapientia und Moralium in Iob Fragmenta, einer grammatischen Einleitung, erklärenden Anmerkungen und einem Glossar&lt;/hi>, première partie: Textes. 
+                        Paris: Champion.
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Wolff, Christian&lt;/hi> (2015):
+                        „The case for teaching ‚tool science‘. Taking software engineering and software engineering education beyond the confinements of traditional software development contexts“,
+                        in: 
+                        &lt;hi rend="italic">Global Engineering Education Conference (EDUCON), 2015 IEEE&lt;/hi> 932–938 10.1109/EDUCON.2015.7096085
+                    &lt;/bibl>
+&lt;/listBibl>
+&lt;/div>
+&lt;/back>
+&lt;/text>
+&lt;/TEI></textSource>
+    <text>
+
+  
+
+
+
+
+
+Ziel von   PaLaFra 
+1
+ („Le passage du latin au français“) ist der Aufbau eines digitalen Korpus spätlateinischer und altfranzösischer Texte, das durch die Kombination von Lemmatisierung, syntaktischer und morphologischer Annotation sowie diskurspragmatischen und texttypologischen Deskriptoren komplexe Abfragestrategien ermöglicht und so eine qualitativ neuartige Nutzung der Texte bei der Rekonstruktion des lateinisch-romanischen Sprachwandels erreichen soll. Daran arbeitet ein deutsch-französisches Team der Universität Regensburg, der Universität Tübingen, der   École Normale Supérieure in Lyon und der Universität Lille, das seit Sommer 2015 von der Deutschen Forschungsgemeinschaft (DFG) und der   Agence Nationale de Recherche (ANR) gefördert wird. Das Projektteam ist interdisziplinär ausgerichtet und besteht aus romanischen Sprachwissenschaftlern, Computerlinguisten und Medieninformatikern. Während für den Bereich des Altfranzösischen auf das bestehende   Base de Français Médiéval-Korpus  
+2
+ zurückgegriffen werden kann, so ist die Erstellung eines — was die Annotation angeht — kompatiblen Korpus spätlateinischer Texte ein wichtiges Teilziel des   PaLaFra-Projekts.  
+
+ 
+
+In diesem Posterbeitrag berichten wir über Herausforderungen und Lösungsansätze bei der Erstellung einer Annotationsumgebung und eines diachronen Tagsets, das gleichermaßen in der Lage ist, die Idiosynkrasien der beiden Sprachstufen adäquat abzubilden, aber auch die diachronen Elemente im Sprachwandel einheitlich zu markieren.
+
+ 
+
+Bereits für das spätlateinische Teilkorpus zeigt sich, dass es an einem standardisierten Tagset fehlt. Mindestens drei Varianten wurden in der Vergangenheit für die Annotation (spät-)lateinischer Texte entwickelt:   CoLaMer (Selig et al. 2015),   CompHistSem (Eger et al. 2015) und   LASLA (Denooz 1978). Diese unterscheiden sich sowohl in den zugrunde liegenden linguistischen Konzepten als auch in ihrer Granularität. Demzufolge existiert auch kein einfaches Mapping zwischen ihnen. Für die Entwicklung eines sprachübergreifenden Tagsets in   PaLaFra kommt erschwerend hinzu, dass die beiden Zielsprachen — Spätlatein und Altfranzösisch — trotz ihrer Verwandtschaft klare strukturellen Unterschiede aufweisen.  
+
+ 
+
+Zumindest für die Ebene der Wortarten (PoS, Part-of-Speech) liefert beispielsweise das Projekt   Universal Dependencies 
+3
+ wichtige Anhaltspunkte für ein sprachübergreifendes Tagset. Dieses Projekt hat sich die Entwicklung sprachübergreifend-kompatibler Baumbanken als Ziel gesetzt hat, die auf universellen Wortartkategorien basieren. Trotzdem bedingt die Entwicklung eines übergreifenden Tagsets oft den manuellen Vergleich von Annotationen, z.B. durch visuelle Gegenüberstellung annotierter Parallelkorpora. Unsere Recherche ergab, dass es an einem adäquaten Werkzeug für diese Aufgabe mangelt. Einerseits gibt es unzählige Annotationswerkzeuge, welche auf die Darstellung nur eines Textes samt Annotationen fokussieren (Burghardt 2014, Neves and Leser 2014). Auf der anderen Seite gibt es Alignierwerkzeuge, die auf die parallele Darstellung von Texten spezialisiert sind, aber dabei Annotation meist ignorieren, z.B.   LF Aligner 
+4
+,   Moses 
+5
+ oder   ParaVoz 
+6
+. Um diese Lücke zu schließen, haben wir auf der Basis von   InterText 
+7
+ — einem im Webbrowser zu bedienenden Alignierwerkzeug (Vondricka 2014) — ein Vergleichswerkzeug für annotierte Parallelkorpora entwickelt. Unsere Erweiterung unterstützt sowohl die Hervorhebung zueinander kompatibler (PoS-)Tags als auch die flexible Darstellung von Lemmata und morpho-syntaktischen Annotationen (  
+Abbildung 1
+). Die dafür nötigen Informationen werden beim Import aus den TEI-XML-Daten extrahiert und mit Hilfe von JavaScript dynamisch visualisiert.  
+
+  
+
+Neben der eigentlichen Datenaufbereitung ist auch die Optimierung des Annotationsworkflows mit geeigneten Werkzeugen im Sinne verbesserter   User Experience ein wesentliches Projektziel (  tool science, Wolff 2015).   
+
+ 
+
+Die Entwicklung des spätlateinisch-altfranzösischen Tagsets wird im Projekt — auch mit Hilfe unseres modifizierten   InterText-Tools — vorangetrieben. In unserem Posterbeitrag erläutern wir das Vorgehen und präsentieren erste Ergebnisse.  
+
+ 
+
+
+
+   
+
+
+
+ Abbildung  : Das Bildschirmfoto zeigt die modifizierte InterText-Ansicht, erkennbar oben an der zusätzlichen Schalterleiste. Links ist die lateinische „Vita Benedicti“ (Vogüe und Antin 1979) zu sehen, annotiert mit dem LASLA Tagset (Denooz 1978), rechts das französische Gegenstück „Vie de saint Benoit“ (Foerster 1876), annotiert mit dem Cattex Tagset (Guillot et al. 2010). Aktuell ist sowohl die Hervorhebung kompatibler PoS-Tags („Toogle color“) als auch die Anzeige der vollständigen PoS-Annotation („Toogle POS (full)“) aktiviert. 
+
+
+
+
+
+
+
+ 
+
+    Burghardt, Manuel (2014):                         „Engineering annotation usability - Toward usability patterns for linguistic annotation tools“.                         Diss. Phil., Universität Regensburg, Institut für Information und Medien, Sprache und Kultur, urn:nbn:de:bvb:355-epub-307682.    Denooz, Joseph (1978):                         „L’ordinateur et le latin, techniques et methods“,                         in:  Revue de l’Organisation Internationale pour l’Etude des Langues Anciennes par Ordinateur 4.    Eger, Steffen / vor der Brück, Tim / Mehler, Alexander (2015):                         „Lexicon-assisted tagging and lemmatization in latin: A comparison of six taggers and two lemmatization methods“,                         in:   LaTeCH 2015 105.    Guillot, Céline / Prévost, Sophie / Lavrentiev, Alexei (2010):   Manuel de référence du jeu cattex09. technical manual, UMR ICAR, CNRS/ENS-LSH.   
+http://bfm.ens-lyon.fr/IMG/pdf/Cattex2009_manuel_2.0.pdf
+   Neves, Mariana / Leser, Ulf (2014):                         „A survey on annotation tools for the biomedical literature“,                         in:  Briefings in bioinformatics 15 (2): 327–340.    Selig, Maria / Eufe, Rembert / Linzmeier, Laura (2015):   CoLaMer (corpus du latin mérovingien). (im Erscheinen).    Vondricka, Pavel (2014):                         „Aligning parallel texts with intertext“,                         in:  Proceedings of LREC 2014.    Vogüé, Adalbert de / Antin, Paul (1979):   GREGOIRE LE GRAND, Dialogues II.                          Cambridge University Press.    Von Foerster, Wendelin (1876):   Li Dialoge Gregoire lo Pape. Altfranzösische Uebersetzung des XII. Jahrhunderts der Dialogen des Papstes Gregor, mit dem lateinischen Original, einem Anhang: Sermo de Sapientia und Moralium in Iob Fragmenta, einer grammatischen Einleitung, erklärenden Anmerkungen und einem Glossar, première partie: Textes.                          Paris: Champion.    Wolff, Christian (2015):                         „The case for teaching ‚tool science‘. Taking software engineering and software engineering education beyond the confinements of traditional software development contexts“,                         in:   Global Engineering Education Conference (EDUCON), 2015 IEEE 932–938 10.1109/EDUCON.2015.7096085    
+
+http://www.palafra.org/
+ 
+
+
+
+ 
+http://bfm.ens-lyon.fr/
+
+http://universaldependencies.org/
+ 
+
+
+
+ 
+http://sourceforge.net/projects/aligner/
+
+http://www.statmt.org/moses/
+ 
+
+
+
+ 
+https://bitbucket.org/rvwfels/paravoz2
+
+http://wanthalf.saga.cz/intertext
+ 
+
+
+
+Bibliographie
+
+</text>
+    <tc:tokens xmlns:tc="http://www.dspin.de/data/textcorpus">
+      <tc:token ID="w1">Ziel</tc:token>
+      <tc:token ID="w2">von</tc:token>
+      <tc:token ID="w3">PaLaFra</tc:token>
+      <tc:token ID="w4">1</tc:token>
+      <tc:token ID="w5">(</tc:token>
+      <tc:token ID="w6">„</tc:token>
+      <tc:token ID="w7">Le</tc:token>
+      <tc:token ID="w8">passage</tc:token>
+      <tc:token ID="w9">du</tc:token>
+      <tc:token ID="wa">latin</tc:token>
+      <tc:token ID="wb">au</tc:token>
+      <tc:token ID="wc">français</tc:token>
+      <tc:token ID="wd">“</tc:token>
+      <tc:token ID="we">)</tc:token>
+      <tc:token ID="wf">ist</tc:token>
+      <tc:token ID="w10">der</tc:token>
+      <tc:token ID="w11">Aufbau</tc:token>
+      <tc:token ID="w12">eines</tc:token>
+      <tc:token ID="w13">digitalen</tc:token>
+      <tc:token ID="w14">Korpus</tc:token>
+      <tc:token ID="w15">spätlateinischer</tc:token>
+      <tc:token ID="w16">und</tc:token>
+      <tc:token ID="w17">altfranzösischer</tc:token>
+      <tc:token ID="w18">Texte</tc:token>
+      <tc:token ID="w19">,</tc:token>
+      <tc:token ID="w1a">das</tc:token>
+      <tc:token ID="w1b">durch</tc:token>
+      <tc:token ID="w1c">die</tc:token>
+      <tc:token ID="w1d">Kombination</tc:token>
+      <tc:token ID="w1e">von</tc:token>
+      <tc:token ID="w1f">Lemmatisierung</tc:token>
+      <tc:token ID="w20">,</tc:token>
+      <tc:token ID="w21">syntaktischer</tc:token>
+      <tc:token ID="w22">und</tc:token>
+      <tc:token ID="w23">morphologischer</tc:token>
+      <tc:token ID="w24">Annotation</tc:token>
+      <tc:token ID="w25">sowie</tc:token>
+      <tc:token ID="w26">diskurspragmatischen</tc:token>
+      <tc:token ID="w27">und</tc:token>
+      <tc:token ID="w28">texttypologischen</tc:token>
+      <tc:token ID="w29">Deskriptoren</tc:token>
+      <tc:token ID="w2a">komplexe</tc:token>
+      <tc:token ID="w2b">Abfragestrategien</tc:token>
+      <tc:token ID="w2c">ermöglicht</tc:token>
+      <tc:token ID="w2d">und</tc:token>
+      <tc:token ID="w2e">so</tc:token>
+      <tc:token ID="w2f">eine</tc:token>
+      <tc:token ID="w30">qualitativ</tc:token>
+      <tc:token ID="w31">neuartige</tc:token>
+      <tc:token ID="w32">Nutzung</tc:token>
+      <tc:token ID="w33">der</tc:token>
+      <tc:token ID="w34">Texte</tc:token>
+      <tc:token ID="w35">bei</tc:token>
+      <tc:token ID="w36">der</tc:token>
+      <tc:token ID="w37">Rekonstruktion</tc:token>
+      <tc:token ID="w38">des</tc:token>
+      <tc:token ID="w39">lateinisch-romanischen</tc:token>
+      <tc:token ID="w3a">Sprachwandels</tc:token>
+      <tc:token ID="w3b">erreichen</tc:token>
+      <tc:token ID="w3c">soll</tc:token>
+      <tc:token ID="w3d">.</tc:token>
+      <tc:token ID="w3e">Daran</tc:token>
+      <tc:token ID="w3f">arbeitet</tc:token>
+      <tc:token ID="w40">ein</tc:token>
+      <tc:token ID="w41">deutsch-französisches</tc:token>
+      <tc:token ID="w42">Team</tc:token>
+      <tc:token ID="w43">der</tc:token>
+      <tc:token ID="w44">Universität</tc:token>
+      <tc:token ID="w45">Regensburg</tc:token>
+      <tc:token ID="w46">,</tc:token>
+      <tc:token ID="w47">der</tc:token>
+      <tc:token ID="w48">Universität</tc:token>
+      <tc:token ID="w49">Tübingen</tc:token>
+      <tc:token ID="w4a">,</tc:token>
+      <tc:token ID="w4b">der</tc:token>
+      <tc:token ID="w4c">École</tc:token>
+      <tc:token ID="w4d">Normale</tc:token>
+      <tc:token ID="w4e">Supérieure</tc:token>
+      <tc:token ID="w4f">in</tc:token>
+      <tc:token ID="w50">Lyon</tc:token>
+      <tc:token ID="w51">und</tc:token>
+      <tc:token ID="w52">der</tc:token>
+      <tc:token ID="w53">Universität</tc:token>
+      <tc:token ID="w54">Lille</tc:token>
+      <tc:token ID="w55">,</tc:token>
+      <tc:token ID="w56">das</tc:token>
+      <tc:token ID="w57">seit</tc:token>
+      <tc:token ID="w58">Sommer</tc:token>
+      <tc:token ID="w59">2015</tc:token>
+      <tc:token ID="w5a">von</tc:token>
+      <tc:token ID="w5b">der</tc:token>
+      <tc:token ID="w5c">Deutschen</tc:token>
+      <tc:token ID="w5d">Forschungsgemeinschaft</tc:token>
+      <tc:token ID="w5e">(</tc:token>
+      <tc:token ID="w5f">DFG</tc:token>
+      <tc:token ID="w60">)</tc:token>
+      <tc:token ID="w61">und</tc:token>
+      <tc:token ID="w62">der</tc:token>
+      <tc:token ID="w63">Agence</tc:token>
+      <tc:token ID="w64">Nationale</tc:token>
+      <tc:token ID="w65">de</tc:token>
+      <tc:token ID="w66">Recherche</tc:token>
+      <tc:token ID="w67">(</tc:token>
+      <tc:token ID="w68">ANR</tc:token>
+      <tc:token ID="w69">)</tc:token>
+      <tc:token ID="w6a">gefördert</tc:token>
+      <tc:token ID="w6b">wird</tc:token>
+      <tc:token ID="w6c">.</tc:token>
+      <tc:token ID="w6d">Das</tc:token>
+      <tc:token ID="w6e">Projektteam</tc:token>
+      <tc:token ID="w6f">ist</tc:token>
+      <tc:token ID="w70">interdisziplinär</tc:token>
+      <tc:token ID="w71">ausgerichtet</tc:token>
+      <tc:token ID="w72">und</tc:token>
+      <tc:token ID="w73">besteht</tc:token>
+      <tc:token ID="w74">aus</tc:token>
+      <tc:token ID="w75">romanischen</tc:token>
+      <tc:token ID="w76">Sprachwissenschaftlern</tc:token>
+      <tc:token ID="w77">,</tc:token>
+      <tc:token ID="w78">Computerlinguisten</tc:token>
+      <tc:token ID="w79">und</tc:token>
+      <tc:token ID="w7a">Medieninformatikern</tc:token>
+      <tc:token ID="w7b">.</tc:token>
+      <tc:token ID="w7c">Während</tc:token>
+      <tc:token ID="w7d">für</tc:token>
+      <tc:token ID="w7e">den</tc:token>
+      <tc:token ID="w7f">Bereich</tc:token>
+      <tc:token ID="w80">des</tc:token>
+      <tc:token ID="w81">Altfranzösischen</tc:token>
+      <tc:token ID="w82">auf</tc:token>
+      <tc:token ID="w83">das</tc:token>
+      <tc:token ID="w84">bestehende</tc:token>
+      <tc:token ID="w85">Base</tc:token>
+      <tc:token ID="w86">de</tc:token>
+      <tc:token ID="w87">Français</tc:token>
+      <tc:token ID="w88">Médiéval-Korpus</tc:token>
+      <tc:token ID="w89">2</tc:token>
+      <tc:token ID="w8a">zurückgegriffen</tc:token>
+      <tc:token ID="w8b">werden</tc:token>
+      <tc:token ID="w8c">kann</tc:token>
+      <tc:token ID="w8d">,</tc:token>
+      <tc:token ID="w8e">so</tc:token>
+      <tc:token ID="w8f">ist</tc:token>
+      <tc:token ID="w90">die</tc:token>
+      <tc:token ID="w91">Erstellung</tc:token>
+      <tc:token ID="w92">eines</tc:token>
+      <tc:token ID="w93">—</tc:token>
+      <tc:token ID="w94">was</tc:token>
+      <tc:token ID="w95">die</tc:token>
+      <tc:token ID="w96">Annotation</tc:token>
+      <tc:token ID="w97">angeht</tc:token>
+      <tc:token ID="w98">—</tc:token>
+      <tc:token ID="w99">kompatiblen</tc:token>
+      <tc:token ID="w9a">Korpus</tc:token>
+      <tc:token ID="w9b">spätlateinischer</tc:token>
+      <tc:token ID="w9c">Texte</tc:token>
+      <tc:token ID="w9d">ein</tc:token>
+      <tc:token ID="w9e">wichtiges</tc:token>
+      <tc:token ID="w9f">Teilziel</tc:token>
+      <tc:token ID="wa0">des</tc:token>
+      <tc:token ID="wa1">PaLaFra-Projekts</tc:token>
+      <tc:token ID="wa2">.</tc:token>
+      <tc:token ID="wa3">In</tc:token>
+      <tc:token ID="wa4">diesem</tc:token>
+      <tc:token ID="wa5">Posterbeitrag</tc:token>
+      <tc:token ID="wa6">berichten</tc:token>
+      <tc:token ID="wa7">wir</tc:token>
+      <tc:token ID="wa8">über</tc:token>
+      <tc:token ID="wa9">Herausforderungen</tc:token>
+      <tc:token ID="waa">und</tc:token>
+      <tc:token ID="wab">Lösungsansätze</tc:token>
+      <tc:token ID="wac">bei</tc:token>
+      <tc:token ID="wad">der</tc:token>
+      <tc:token ID="wae">Erstellung</tc:token>
+      <tc:token ID="waf">einer</tc:token>
+      <tc:token ID="wb0">Annotationsumgebung</tc:token>
+      <tc:token ID="wb1">und</tc:token>
+      <tc:token ID="wb2">eines</tc:token>
+      <tc:token ID="wb3">diachronen</tc:token>
+      <tc:token ID="wb4">Tagsets</tc:token>
+      <tc:token ID="wb5">,</tc:token>
+      <tc:token ID="wb6">das</tc:token>
+      <tc:token ID="wb7">gleichermaßen</tc:token>
+      <tc:token ID="wb8">in</tc:token>
+      <tc:token ID="wb9">der</tc:token>
+      <tc:token ID="wba">Lage</tc:token>
+      <tc:token ID="wbb">ist</tc:token>
+      <tc:token ID="wbc">,</tc:token>
+      <tc:token ID="wbd">die</tc:token>
+      <tc:token ID="wbe">Idiosynkrasien</tc:token>
+      <tc:token ID="wbf">der</tc:token>
+      <tc:token ID="wc0">beiden</tc:token>
+      <tc:token ID="wc1">Sprachstufen</tc:token>
+      <tc:token ID="wc2">adäquat</tc:token>
+      <tc:token ID="wc3">abzubilden</tc:token>
+      <tc:token ID="wc4">,</tc:token>
+      <tc:token ID="wc5">aber</tc:token>
+      <tc:token ID="wc6">auch</tc:token>
+      <tc:token ID="wc7">die</tc:token>
+      <tc:token ID="wc8">diachronen</tc:token>
+      <tc:token ID="wc9">Elemente</tc:token>
+      <tc:token ID="wca">im</tc:token>
+      <tc:token ID="wcb">Sprachwandel</tc:token>
+      <tc:token ID="wcc">einheitlich</tc:token>
+      <tc:token ID="wcd">zu</tc:token>
+      <tc:token ID="wce">markieren</tc:token>
+      <tc:token ID="wcf">.</tc:token>
+      <tc:token ID="wd0">Bereits</tc:token>
+      <tc:token ID="wd1">für</tc:token>
+      <tc:token ID="wd2">das</tc:token>
+      <tc:token ID="wd3">spätlateinische</tc:token>
+      <tc:token ID="wd4">Teilkorpus</tc:token>
+      <tc:token ID="wd5">zeigt</tc:token>
+      <tc:token ID="wd6">sich</tc:token>
+      <tc:token ID="wd7">,</tc:token>
+      <tc:token ID="wd8">dass</tc:token>
+      <tc:token ID="wd9">es</tc:token>
+      <tc:token ID="wda">an</tc:token>
+      <tc:token ID="wdb">einem</tc:token>
+      <tc:token ID="wdc">standardisierten</tc:token>
+      <tc:token ID="wdd">Tagset</tc:token>
+      <tc:token ID="wde">fehlt</tc:token>
+      <tc:token ID="wdf">.</tc:token>
+      <tc:token ID="we0">Mindestens</tc:token>
+      <tc:token ID="we1">drei</tc:token>
+      <tc:token ID="we2">Varianten</tc:token>
+      <tc:token ID="we3">wurden</tc:token>
+      <tc:token ID="we4">in</tc:token>
+      <tc:token ID="we5">der</tc:token>
+      <tc:token ID="we6">Vergangenheit</tc:token>
+      <tc:token ID="we7">für</tc:token>
+      <tc:token ID="we8">die</tc:token>
+      <tc:token ID="we9">Annotation</tc:token>
+      <tc:token ID="wea">(</tc:token>
+      <tc:token ID="web">spät-)lateinischer</tc:token>
+      <tc:token ID="wec">Texte</tc:token>
+      <tc:token ID="wed">entwickelt</tc:token>
+      <tc:token ID="wee">:</tc:token>
+      <tc:token ID="wef">CoLaMer</tc:token>
+      <tc:token ID="wf0">(</tc:token>
+      <tc:token ID="wf1">Selig</tc:token>
+      <tc:token ID="wf2">et</tc:token>
+      <tc:token ID="wf3">al.</tc:token>
+      <tc:token ID="wf4">2015</tc:token>
+      <tc:token ID="wf5">)</tc:token>
+      <tc:token ID="wf6">,</tc:token>
+      <tc:token ID="wf7">CompHistSem</tc:token>
+      <tc:token ID="wf8">(</tc:token>
+      <tc:token ID="wf9">Eger</tc:token>
+      <tc:token ID="wfa">et</tc:token>
+      <tc:token ID="wfb">al.</tc:token>
+      <tc:token ID="wfc">2015</tc:token>
+      <tc:token ID="wfd">)</tc:token>
+      <tc:token ID="wfe">und</tc:token>
+      <tc:token ID="wff">LASLA</tc:token>
+      <tc:token ID="w100">(</tc:token>
+      <tc:token ID="w101">Denooz</tc:token>
+      <tc:token ID="w102">1978</tc:token>
+      <tc:token ID="w103">)</tc:token>
+      <tc:token ID="w104">.</tc:token>
+      <tc:token ID="w105">Diese</tc:token>
+      <tc:token ID="w106">unterscheiden</tc:token>
+      <tc:token ID="w107">sich</tc:token>
+      <tc:token ID="w108">sowohl</tc:token>
+      <tc:token ID="w109">in</tc:token>
+      <tc:token ID="w10a">den</tc:token>
+      <tc:token ID="w10b">zugrunde</tc:token>
+      <tc:token ID="w10c">liegenden</tc:token>
+      <tc:token ID="w10d">linguistischen</tc:token>
+      <tc:token ID="w10e">Konzepten</tc:token>
+      <tc:token ID="w10f">als</tc:token>
+      <tc:token ID="w110">auch</tc:token>
+      <tc:token ID="w111">in</tc:token>
+      <tc:token ID="w112">ihrer</tc:token>
+      <tc:token ID="w113">Granularität</tc:token>
+      <tc:token ID="w114">.</tc:token>
+      <tc:token ID="w115">Demzufolge</tc:token>
+      <tc:token ID="w116">existiert</tc:token>
+      <tc:token ID="w117">auch</tc:token>
+      <tc:token ID="w118">kein</tc:token>
+      <tc:token ID="w119">einfaches</tc:token>
+      <tc:token ID="w11a">Mapping</tc:token>
+      <tc:token ID="w11b">zwischen</tc:token>
+      <tc:token ID="w11c">ihnen</tc:token>
+      <tc:token ID="w11d">.</tc:token>
+      <tc:token ID="w11e">Für</tc:token>
+      <tc:token ID="w11f">die</tc:token>
+      <tc:token ID="w120">Entwicklung</tc:token>
+      <tc:token ID="w121">eines</tc:token>
+      <tc:token ID="w122">sprachübergreifenden</tc:token>
+      <tc:token ID="w123">Tagsets</tc:token>
+      <tc:token ID="w124">in</tc:token>
+      <tc:token ID="w125">PaLaFra</tc:token>
+      <tc:token ID="w126">kommt</tc:token>
+      <tc:token ID="w127">erschwerend</tc:token>
+      <tc:token ID="w128">hinzu</tc:token>
+      <tc:token ID="w129">,</tc:token>
+      <tc:token ID="w12a">dass</tc:token>
+      <tc:token ID="w12b">die</tc:token>
+      <tc:token ID="w12c">beiden</tc:token>
+      <tc:token ID="w12d">Zielsprachen</tc:token>
+      <tc:token ID="w12e">—</tc:token>
+      <tc:token ID="w12f">Spätlatein</tc:token>
+      <tc:token ID="w130">und</tc:token>
+      <tc:token ID="w131">Altfranzösisch</tc:token>
+      <tc:token ID="w132">—</tc:token>
+      <tc:token ID="w133">trotz</tc:token>
+      <tc:token ID="w134">ihrer</tc:token>
+      <tc:token ID="w135">Verwandtschaft</tc:token>
+      <tc:token ID="w136">klare</tc:token>
+      <tc:token ID="w137">strukturellen</tc:token>
+      <tc:token ID="w138">Unterschiede</tc:token>
+      <tc:token ID="w139">aufweisen</tc:token>
+      <tc:token ID="w13a">.</tc:token>
+      <tc:token ID="w13b">Zumindest</tc:token>
+      <tc:token ID="w13c">für</tc:token>
+      <tc:token ID="w13d">die</tc:token>
+      <tc:token ID="w13e">Ebene</tc:token>
+      <tc:token ID="w13f">der</tc:token>
+      <tc:token ID="w140">Wortarten</tc:token>
+      <tc:token ID="w141">(</tc:token>
+      <tc:token ID="w142">PoS</tc:token>
+      <tc:token ID="w143">,</tc:token>
+      <tc:token ID="w144">Part-of-Speech</tc:token>
+      <tc:token ID="w145">)</tc:token>
+      <tc:token ID="w146">liefert</tc:token>
+      <tc:token ID="w147">beispielsweise</tc:token>
+      <tc:token ID="w148">das</tc:token>
+      <tc:token ID="w149">Projekt</tc:token>
+      <tc:token ID="w14a">Universal</tc:token>
+      <tc:token ID="w14b">Dependencies</tc:token>
+      <tc:token ID="w14c">3</tc:token>
+      <tc:token ID="w14d">wichtige</tc:token>
+      <tc:token ID="w14e">Anhaltspunkte</tc:token>
+      <tc:token ID="w14f">für</tc:token>
+      <tc:token ID="w150">ein</tc:token>
+      <tc:token ID="w151">sprachübergreifendes</tc:token>
+      <tc:token ID="w152">Tagset</tc:token>
+      <tc:token ID="w153">.</tc:token>
+      <tc:token ID="w154">Dieses</tc:token>
+      <tc:token ID="w155">Projekt</tc:token>
+      <tc:token ID="w156">hat</tc:token>
+      <tc:token ID="w157">sich</tc:token>
+      <tc:token ID="w158">die</tc:token>
+      <tc:token ID="w159">Entwicklung</tc:token>
+      <tc:token ID="w15a">sprachübergreifend-kompatibler</tc:token>
+      <tc:token ID="w15b">Baumbanken</tc:token>
+      <tc:token ID="w15c">als</tc:token>
+      <tc:token ID="w15d">Ziel</tc:token>
+      <tc:token ID="w15e">gesetzt</tc:token>
+      <tc:token ID="w15f">hat</tc:token>
+      <tc:token ID="w160">,</tc:token>
+      <tc:token ID="w161">die</tc:token>
+      <tc:token ID="w162">auf</tc:token>
+      <tc:token ID="w163">universellen</tc:token>
+      <tc:token ID="w164">Wortartkategorien</tc:token>
+      <tc:token ID="w165">basieren</tc:token>
+      <tc:token ID="w166">.</tc:token>
+      <tc:token ID="w167">Trotzdem</tc:token>
+      <tc:token ID="w168">bedingt</tc:token>
+      <tc:token ID="w169">die</tc:token>
+      <tc:token ID="w16a">Entwicklung</tc:token>
+      <tc:token ID="w16b">eines</tc:token>
+      <tc:token ID="w16c">übergreifenden</tc:token>
+      <tc:token ID="w16d">Tagsets</tc:token>
+      <tc:token ID="w16e">oft</tc:token>
+      <tc:token ID="w16f">den</tc:token>
+      <tc:token ID="w170">manuellen</tc:token>
+      <tc:token ID="w171">Vergleich</tc:token>
+      <tc:token ID="w172">von</tc:token>
+      <tc:token ID="w173">Annotationen</tc:token>
+      <tc:token ID="w174">,</tc:token>
+      <tc:token ID="w175">z.B.</tc:token>
+      <tc:token ID="w176">durch</tc:token>
+      <tc:token ID="w177">visuelle</tc:token>
+      <tc:token ID="w178">Gegenüberstellung</tc:token>
+      <tc:token ID="w179">annotierter</tc:token>
+      <tc:token ID="w17a">Parallelkorpora</tc:token>
+      <tc:token ID="w17b">.</tc:token>
+      <tc:token ID="w17c">Unsere</tc:token>
+      <tc:token ID="w17d">Recherche</tc:token>
+      <tc:token ID="w17e">ergab</tc:token>
+      <tc:token ID="w17f">,</tc:token>
+      <tc:token ID="w180">dass</tc:token>
+      <tc:token ID="w181">es</tc:token>
+      <tc:token ID="w182">an</tc:token>
+      <tc:token ID="w183">einem</tc:token>
+      <tc:token ID="w184">adäquaten</tc:token>
+      <tc:token ID="w185">Werkzeug</tc:token>
+      <tc:token ID="w186">für</tc:token>
+      <tc:token ID="w187">diese</tc:token>
+      <tc:token ID="w188">Aufgabe</tc:token>
+      <tc:token ID="w189">mangelt</tc:token>
+      <tc:token ID="w18a">.</tc:token>
+      <tc:token ID="w18b">Einerseits</tc:token>
+      <tc:token ID="w18c">gibt</tc:token>
+      <tc:token ID="w18d">es</tc:token>
+      <tc:token ID="w18e">unzählige</tc:token>
+      <tc:token ID="w18f">Annotationswerkzeuge</tc:token>
+      <tc:token ID="w190">,</tc:token>
+      <tc:token ID="w191">welche</tc:token>
+      <tc:token ID="w192">auf</tc:token>
+      <tc:token ID="w193">die</tc:token>
+      <tc:token ID="w194">Darstellung</tc:token>
+      <tc:token ID="w195">nur</tc:token>
+      <tc:token ID="w196">eines</tc:token>
+      <tc:token ID="w197">Textes</tc:token>
+      <tc:token ID="w198">samt</tc:token>
+      <tc:token ID="w199">Annotationen</tc:token>
+      <tc:token ID="w19a">fokussieren</tc:token>
+      <tc:token ID="w19b">(</tc:token>
+      <tc:token ID="w19c">Burghardt</tc:token>
+      <tc:token ID="w19d">2014</tc:token>
+      <tc:token ID="w19e">,</tc:token>
+      <tc:token ID="w19f">Neves</tc:token>
+      <tc:token ID="w1a0">and</tc:token>
+      <tc:token ID="w1a1">Leser</tc:token>
+      <tc:token ID="w1a2">2014</tc:token>
+      <tc:token ID="w1a3">)</tc:token>
+      <tc:token ID="w1a4">.</tc:token>
+      <tc:token ID="w1a5">Auf</tc:token>
+      <tc:token ID="w1a6">der</tc:token>
+      <tc:token ID="w1a7">anderen</tc:token>
+      <tc:token ID="w1a8">Seite</tc:token>
+      <tc:token ID="w1a9">gibt</tc:token>
+      <tc:token ID="w1aa">es</tc:token>
+      <tc:token ID="w1ab">Alignierwerkzeuge</tc:token>
+      <tc:token ID="w1ac">,</tc:token>
+      <tc:token ID="w1ad">die</tc:token>
+      <tc:token ID="w1ae">auf</tc:token>
+      <tc:token ID="w1af">die</tc:token>
+      <tc:token ID="w1b0">parallele</tc:token>
+      <tc:token ID="w1b1">Darstellung</tc:token>
+      <tc:token ID="w1b2">von</tc:token>
+      <tc:token ID="w1b3">Texten</tc:token>
+      <tc:token ID="w1b4">spezialisiert</tc:token>
+      <tc:token ID="w1b5">sind</tc:token>
+      <tc:token ID="w1b6">,</tc:token>
+      <tc:token ID="w1b7">aber</tc:token>
+      <tc:token ID="w1b8">dabei</tc:token>
+      <tc:token ID="w1b9">Annotation</tc:token>
+      <tc:token ID="w1ba">meist</tc:token>
+      <tc:token ID="w1bb">ignorieren</tc:token>
+      <tc:token ID="w1bc">,</tc:token>
+      <tc:token ID="w1bd">z.B.</tc:token>
+      <tc:token ID="w1be">LF</tc:token>
+      <tc:token ID="w1bf">Aligner</tc:token>
+      <tc:token ID="w1c0">4</tc:token>
+      <tc:token ID="w1c1">,</tc:token>
+      <tc:token ID="w1c2">Moses</tc:token>
+      <tc:token ID="w1c3">5</tc:token>
+      <tc:token ID="w1c4">oder</tc:token>
+      <tc:token ID="w1c5">ParaVoz</tc:token>
+      <tc:token ID="w1c6">6</tc:token>
+      <tc:token ID="w1c7">.</tc:token>
+      <tc:token ID="w1c8">Um</tc:token>
+      <tc:token ID="w1c9">diese</tc:token>
+      <tc:token ID="w1ca">Lücke</tc:token>
+      <tc:token ID="w1cb">zu</tc:token>
+      <tc:token ID="w1cc">schließen</tc:token>
+      <tc:token ID="w1cd">,</tc:token>
+      <tc:token ID="w1ce">haben</tc:token>
+      <tc:token ID="w1cf">wir</tc:token>
+      <tc:token ID="w1d0">auf</tc:token>
+      <tc:token ID="w1d1">der</tc:token>
+      <tc:token ID="w1d2">Basis</tc:token>
+      <tc:token ID="w1d3">von</tc:token>
+      <tc:token ID="w1d4">InterText</tc:token>
+      <tc:token ID="w1d5">7</tc:token>
+      <tc:token ID="w1d6">—</tc:token>
+      <tc:token ID="w1d7">einem</tc:token>
+      <tc:token ID="w1d8">im</tc:token>
+      <tc:token ID="w1d9">Webbrowser</tc:token>
+      <tc:token ID="w1da">zu</tc:token>
+      <tc:token ID="w1db">bedienenden</tc:token>
+      <tc:token ID="w1dc">Alignierwerkzeug</tc:token>
+      <tc:token ID="w1dd">(</tc:token>
+      <tc:token ID="w1de">Vondricka</tc:token>
+      <tc:token ID="w1df">2014</tc:token>
+      <tc:token ID="w1e0">)</tc:token>
+      <tc:token ID="w1e1">—</tc:token>
+      <tc:token ID="w1e2">ein</tc:token>
+      <tc:token ID="w1e3">Vergleichswerkzeug</tc:token>
+      <tc:token ID="w1e4">für</tc:token>
+      <tc:token ID="w1e5">annotierte</tc:token>
+      <tc:token ID="w1e6">Parallelkorpora</tc:token>
+      <tc:token ID="w1e7">entwickelt</tc:token>
+      <tc:token ID="w1e8">.</tc:token>
+      <tc:token ID="w1e9">Unsere</tc:token>
+      <tc:token ID="w1ea">Erweiterung</tc:token>
+      <tc:token ID="w1eb">unterstützt</tc:token>
+      <tc:token ID="w1ec">sowohl</tc:token>
+      <tc:token ID="w1ed">die</tc:token>
+      <tc:token ID="w1ee">Hervorhebung</tc:token>
+      <tc:token ID="w1ef">zueinander</tc:token>
+      <tc:token ID="w1f0">kompatibler</tc:token>
+      <tc:token ID="w1f1">(</tc:token>
+      <tc:token ID="w1f2">PoS-)Tags</tc:token>
+      <tc:token ID="w1f3">als</tc:token>
+      <tc:token ID="w1f4">auch</tc:token>
+      <tc:token ID="w1f5">die</tc:token>
+      <tc:token ID="w1f6">flexible</tc:token>
+      <tc:token ID="w1f7">Darstellung</tc:token>
+      <tc:token ID="w1f8">von</tc:token>
+      <tc:token ID="w1f9">Lemmata</tc:token>
+      <tc:token ID="w1fa">und</tc:token>
+      <tc:token ID="w1fb">morpho-syntaktischen</tc:token>
+      <tc:token ID="w1fc">Annotationen</tc:token>
+      <tc:token ID="w1fd">(</tc:token>
+      <tc:token ID="w1fe">Abbildung</tc:token>
+      <tc:token ID="w1ff">1</tc:token>
+      <tc:token ID="w200">)</tc:token>
+      <tc:token ID="w201">.</tc:token>
+      <tc:token ID="w202">Die</tc:token>
+      <tc:token ID="w203">dafür</tc:token>
+      <tc:token ID="w204">nötigen</tc:token>
+      <tc:token ID="w205">Informationen</tc:token>
+      <tc:token ID="w206">werden</tc:token>
+      <tc:token ID="w207">beim</tc:token>
+      <tc:token ID="w208">Import</tc:token>
+      <tc:token ID="w209">aus</tc:token>
+      <tc:token ID="w20a">den</tc:token>
+      <tc:token ID="w20b">TEI-XML-Daten</tc:token>
+      <tc:token ID="w20c">extrahiert</tc:token>
+      <tc:token ID="w20d">und</tc:token>
+      <tc:token ID="w20e">mit</tc:token>
+      <tc:token ID="w20f">Hilfe</tc:token>
+      <tc:token ID="w210">von</tc:token>
+      <tc:token ID="w211">JavaScript</tc:token>
+      <tc:token ID="w212">dynamisch</tc:token>
+      <tc:token ID="w213">visualisiert</tc:token>
+      <tc:token ID="w214">.</tc:token>
+      <tc:token ID="w215">Neben</tc:token>
+      <tc:token ID="w216">der</tc:token>
+      <tc:token ID="w217">eigentlichen</tc:token>
+      <tc:token ID="w218">Datenaufbereitung</tc:token>
+      <tc:token ID="w219">ist</tc:token>
+      <tc:token ID="w21a">auch</tc:token>
+      <tc:token ID="w21b">die</tc:token>
+      <tc:token ID="w21c">Optimierung</tc:token>
+      <tc:token ID="w21d">des</tc:token>
+      <tc:token ID="w21e">Annotationsworkflows</tc:token>
+      <tc:token ID="w21f">mit</tc:token>
+      <tc:token ID="w220">geeigneten</tc:token>
+      <tc:token ID="w221">Werkzeugen</tc:token>
+      <tc:token ID="w222">im</tc:token>
+      <tc:token ID="w223">Sinne</tc:token>
+      <tc:token ID="w224">verbesserter</tc:token>
+      <tc:token ID="w225">User</tc:token>
+      <tc:token ID="w226">Experience</tc:token>
+      <tc:token ID="w227">ein</tc:token>
+      <tc:token ID="w228">wesentliches</tc:token>
+      <tc:token ID="w229">Projektziel</tc:token>
+      <tc:token ID="w22a">(</tc:token>
+      <tc:token ID="w22b">tool</tc:token>
+      <tc:token ID="w22c">science</tc:token>
+      <tc:token ID="w22d">,</tc:token>
+      <tc:token ID="w22e">Wolff</tc:token>
+      <tc:token ID="w22f">2015</tc:token>
+      <tc:token ID="w230">)</tc:token>
+      <tc:token ID="w231">.</tc:token>
+      <tc:token ID="w232">Die</tc:token>
+      <tc:token ID="w233">Entwicklung</tc:token>
+      <tc:token ID="w234">des</tc:token>
+      <tc:token ID="w235">spätlateinisch-altfranzösischen</tc:token>
+      <tc:token ID="w236">Tagsets</tc:token>
+      <tc:token ID="w237">wird</tc:token>
+      <tc:token ID="w238">im</tc:token>
+      <tc:token ID="w239">Projekt</tc:token>
+      <tc:token ID="w23a">—</tc:token>
+      <tc:token ID="w23b">auch</tc:token>
+      <tc:token ID="w23c">mit</tc:token>
+      <tc:token ID="w23d">Hilfe</tc:token>
+      <tc:token ID="w23e">unseres</tc:token>
+      <tc:token ID="w23f">modifizierten</tc:token>
+      <tc:token ID="w240">InterText-Tools</tc:token>
+      <tc:token ID="w241">—</tc:token>
+      <tc:token ID="w242">vorangetrieben</tc:token>
+      <tc:token ID="w243">.</tc:token>
+      <tc:token ID="w244">In</tc:token>
+      <tc:token ID="w245">unserem</tc:token>
+      <tc:token ID="w246">Posterbeitrag</tc:token>
+      <tc:token ID="w247">erläutern</tc:token>
+      <tc:token ID="w248">wir</tc:token>
+      <tc:token ID="w249">das</tc:token>
+      <tc:token ID="w24a">Vorgehen</tc:token>
+      <tc:token ID="w24b">und</tc:token>
+      <tc:token ID="w24c">präsentieren</tc:token>
+      <tc:token ID="w24d">erste</tc:token>
+      <tc:token ID="w24e">Ergebnisse</tc:token>
+      <tc:token ID="w24f">.</tc:token>
+      <tc:token ID="w250">Abbildung</tc:token>
+      <tc:token ID="w251">:</tc:token>
+      <tc:token ID="w252">Das</tc:token>
+      <tc:token ID="w253">Bildschirmfoto</tc:token>
+      <tc:token ID="w254">zeigt</tc:token>
+      <tc:token ID="w255">die</tc:token>
+      <tc:token ID="w256">modifizierte</tc:token>
+      <tc:token ID="w257">InterText-Ansicht</tc:token>
+      <tc:token ID="w258">,</tc:token>
+      <tc:token ID="w259">erkennbar</tc:token>
+      <tc:token ID="w25a">oben</tc:token>
+      <tc:token ID="w25b">an</tc:token>
+      <tc:token ID="w25c">der</tc:token>
+      <tc:token ID="w25d">zusätzlichen</tc:token>
+      <tc:token ID="w25e">Schalterleiste</tc:token>
+      <tc:token ID="w25f">.</tc:token>
+      <tc:token ID="w260">Links</tc:token>
+      <tc:token ID="w261">ist</tc:token>
+      <tc:token ID="w262">die</tc:token>
+      <tc:token ID="w263">lateinische</tc:token>
+      <tc:token ID="w264">„</tc:token>
+      <tc:token ID="w265">Vita</tc:token>
+      <tc:token ID="w266">Benedicti</tc:token>
+      <tc:token ID="w267">“</tc:token>
+      <tc:token ID="w268">(</tc:token>
+      <tc:token ID="w269">Vogüe</tc:token>
+      <tc:token ID="w26a">und</tc:token>
+      <tc:token ID="w26b">Antin</tc:token>
+      <tc:token ID="w26c">1979</tc:token>
+      <tc:token ID="w26d">)</tc:token>
+      <tc:token ID="w26e">zu</tc:token>
+      <tc:token ID="w26f">sehen</tc:token>
+      <tc:token ID="w270">,</tc:token>
+      <tc:token ID="w271">annotiert</tc:token>
+      <tc:token ID="w272">mit</tc:token>
+      <tc:token ID="w273">dem</tc:token>
+      <tc:token ID="w274">LASLA</tc:token>
+      <tc:token ID="w275">Tagset</tc:token>
+      <tc:token ID="w276">(</tc:token>
+      <tc:token ID="w277">Denooz</tc:token>
+      <tc:token ID="w278">1978</tc:token>
+      <tc:token ID="w279">)</tc:token>
+      <tc:token ID="w27a">,</tc:token>
+      <tc:token ID="w27b">rechts</tc:token>
+      <tc:token ID="w27c">das</tc:token>
+      <tc:token ID="w27d">französische</tc:token>
+      <tc:token ID="w27e">Gegenstück</tc:token>
+      <tc:token ID="w27f">„</tc:token>
+      <tc:token ID="w280">Vie</tc:token>
+      <tc:token ID="w281">de</tc:token>
+      <tc:token ID="w282">saint</tc:token>
+      <tc:token ID="w283">Benoit</tc:token>
+      <tc:token ID="w284">“</tc:token>
+      <tc:token ID="w285">(</tc:token>
+      <tc:token ID="w286">Foerster</tc:token>
+      <tc:token ID="w287">1876</tc:token>
+      <tc:token ID="w288">)</tc:token>
+      <tc:token ID="w289">,</tc:token>
+      <tc:token ID="w28a">annotiert</tc:token>
+      <tc:token ID="w28b">mit</tc:token>
+      <tc:token ID="w28c">dem</tc:token>
+      <tc:token ID="w28d">Cattex</tc:token>
+      <tc:token ID="w28e">Tagset</tc:token>
+      <tc:token ID="w28f">(</tc:token>
+      <tc:token ID="w290">Guillot</tc:token>
+      <tc:token ID="w291">et</tc:token>
+      <tc:token ID="w292">al.</tc:token>
+      <tc:token ID="w293">2010</tc:token>
+      <tc:token ID="w294">)</tc:token>
+      <tc:token ID="w295">.</tc:token>
+      <tc:token ID="w296">Aktuell</tc:token>
+      <tc:token ID="w297">ist</tc:token>
+      <tc:token ID="w298">sowohl</tc:token>
+      <tc:token ID="w299">die</tc:token>
+      <tc:token ID="w29a">Hervorhebung</tc:token>
+      <tc:token ID="w29b">kompatibler</tc:token>
+      <tc:token ID="w29c">PoS-Tags</tc:token>
+      <tc:token ID="w29d">(</tc:token>
+      <tc:token ID="w29e">„</tc:token>
+      <tc:token ID="w29f">Toogle</tc:token>
+      <tc:token ID="w2a0">color</tc:token>
+      <tc:token ID="w2a1">“</tc:token>
+      <tc:token ID="w2a2">)</tc:token>
+      <tc:token ID="w2a3">als</tc:token>
+      <tc:token ID="w2a4">auch</tc:token>
+      <tc:token ID="w2a5">die</tc:token>
+      <tc:token ID="w2a6">Anzeige</tc:token>
+      <tc:token ID="w2a7">der</tc:token>
+      <tc:token ID="w2a8">vollständigen</tc:token>
+      <tc:token ID="w2a9">PoS-Annotation</tc:token>
+      <tc:token ID="w2aa">(</tc:token>
+      <tc:token ID="w2ab">„</tc:token>
+      <tc:token ID="w2ac">Toogle</tc:token>
+      <tc:token ID="w2ad">POS</tc:token>
+      <tc:token ID="w2ae">(</tc:token>
+      <tc:token ID="w2af">full</tc:token>
+      <tc:token ID="w2b0">)</tc:token>
+      <tc:token ID="w2b1">“</tc:token>
+      <tc:token ID="w2b2">)</tc:token>
+      <tc:token ID="w2b3">aktiviert</tc:token>
+      <tc:token ID="w2b4">.</tc:token>
+      <tc:token ID="w2b5">Burghardt</tc:token>
+      <tc:token ID="w2b6">,</tc:token>
+      <tc:token ID="w2b7">Manuel</tc:token>
+      <tc:token ID="w2b8">(</tc:token>
+      <tc:token ID="w2b9">2014</tc:token>
+      <tc:token ID="w2ba">)</tc:token>
+      <tc:token ID="w2bb">:</tc:token>
+      <tc:token ID="w2bc">„</tc:token>
+      <tc:token ID="w2bd">Engineering</tc:token>
+      <tc:token ID="w2be">annotation</tc:token>
+      <tc:token ID="w2bf">usability</tc:token>
+      <tc:token ID="w2c0">-</tc:token>
+      <tc:token ID="w2c1">Toward</tc:token>
+      <tc:token ID="w2c2">usability</tc:token>
+      <tc:token ID="w2c3">patterns</tc:token>
+      <tc:token ID="w2c4">for</tc:token>
+      <tc:token ID="w2c5">linguistic</tc:token>
+      <tc:token ID="w2c6">annotation</tc:token>
+      <tc:token ID="w2c7">tools</tc:token>
+      <tc:token ID="w2c8">“</tc:token>
+      <tc:token ID="w2c9">.</tc:token>
+      <tc:token ID="w2ca">Diss.</tc:token>
+      <tc:token ID="w2cb">Phil.</tc:token>
+      <tc:token ID="w2cc">,</tc:token>
+      <tc:token ID="w2cd">Universität</tc:token>
+      <tc:token ID="w2ce">Regensburg</tc:token>
+      <tc:token ID="w2cf">,</tc:token>
+      <tc:token ID="w2d0">Institut</tc:token>
+      <tc:token ID="w2d1">für</tc:token>
+      <tc:token ID="w2d2">Information</tc:token>
+      <tc:token ID="w2d3">und</tc:token>
+      <tc:token ID="w2d4">Medien</tc:token>
+      <tc:token ID="w2d5">,</tc:token>
+      <tc:token ID="w2d6">Sprache</tc:token>
+      <tc:token ID="w2d7">und</tc:token>
+      <tc:token ID="w2d8">Kultur</tc:token>
+      <tc:token ID="w2d9">,</tc:token>
+      <tc:token ID="w2da">urn</tc:token>
+      <tc:token ID="w2db">:</tc:token>
+      <tc:token ID="w2dc">nbn</tc:token>
+      <tc:token ID="w2dd">:</tc:token>
+      <tc:token ID="w2de">de</tc:token>
+      <tc:token ID="w2df">:</tc:token>
+      <tc:token ID="w2e0">bvb:355-epub-</tc:token>
+      <tc:token ID="w2e1">307682</tc:token>
+      <tc:token ID="w2e2">.</tc:token>
+      <tc:token ID="w2e3">Denooz</tc:token>
+      <tc:token ID="w2e4">,</tc:token>
+      <tc:token ID="w2e5">Joseph</tc:token>
+      <tc:token ID="w2e6">(</tc:token>
+      <tc:token ID="w2e7">1978</tc:token>
+      <tc:token ID="w2e8">)</tc:token>
+      <tc:token ID="w2e9">:</tc:token>
+      <tc:token ID="w2ea">„</tc:token>
+      <tc:token ID="w2eb">L’ordinateur</tc:token>
+      <tc:token ID="w2ec">et</tc:token>
+      <tc:token ID="w2ed">le</tc:token>
+      <tc:token ID="w2ee">latin</tc:token>
+      <tc:token ID="w2ef">,</tc:token>
+      <tc:token ID="w2f0">techniques</tc:token>
+      <tc:token ID="w2f1">et</tc:token>
+      <tc:token ID="w2f2">methods</tc:token>
+      <tc:token ID="w2f3">“</tc:token>
+      <tc:token ID="w2f4">,</tc:token>
+      <tc:token ID="w2f5">in</tc:token>
+      <tc:token ID="w2f6">:</tc:token>
+      <tc:token ID="w2f7">Revue</tc:token>
+      <tc:token ID="w2f8">de</tc:token>
+      <tc:token ID="w2f9">l’</tc:token>
+      <tc:token ID="w2fa">Organisation</tc:token>
+      <tc:token ID="w2fb">Internationale</tc:token>
+      <tc:token ID="w2fc">pour</tc:token>
+      <tc:token ID="w2fd">l’</tc:token>
+      <tc:token ID="w2fe">Etude</tc:token>
+      <tc:token ID="w2ff">des</tc:token>
+      <tc:token ID="w300">Langues</tc:token>
+      <tc:token ID="w301">Anciennes</tc:token>
+      <tc:token ID="w302">par</tc:token>
+      <tc:token ID="w303">Ordinateur</tc:token>
+      <tc:token ID="w304">4.</tc:token>
+      <tc:token ID="w305">Eger</tc:token>
+      <tc:token ID="w306">,</tc:token>
+      <tc:token ID="w307">Steffen</tc:token>
+      <tc:token ID="w308">/</tc:token>
+      <tc:token ID="w309">vor</tc:token>
+      <tc:token ID="w30a">der</tc:token>
+      <tc:token ID="w30b">Brück</tc:token>
+      <tc:token ID="w30c">,</tc:token>
+      <tc:token ID="w30d">Tim</tc:token>
+      <tc:token ID="w30e">/</tc:token>
+      <tc:token ID="w30f">Mehler</tc:token>
+      <tc:token ID="w310">,</tc:token>
+      <tc:token ID="w311">Alexander</tc:token>
+      <tc:token ID="w312">(</tc:token>
+      <tc:token ID="w313">2015</tc:token>
+      <tc:token ID="w314">)</tc:token>
+      <tc:token ID="w315">:</tc:token>
+      <tc:token ID="w316">„</tc:token>
+      <tc:token ID="w317">Lexicon-assisted</tc:token>
+      <tc:token ID="w318">tagging</tc:token>
+      <tc:token ID="w319">and</tc:token>
+      <tc:token ID="w31a">lemmatization</tc:token>
+      <tc:token ID="w31b">in</tc:token>
+      <tc:token ID="w31c">latin</tc:token>
+      <tc:token ID="w31d">:</tc:token>
+      <tc:token ID="w31e">A</tc:token>
+      <tc:token ID="w31f">comparison</tc:token>
+      <tc:token ID="w320">of</tc:token>
+      <tc:token ID="w321">six</tc:token>
+      <tc:token ID="w322">taggers</tc:token>
+      <tc:token ID="w323">and</tc:token>
+      <tc:token ID="w324">two</tc:token>
+      <tc:token ID="w325">lemmatization</tc:token>
+      <tc:token ID="w326">methods</tc:token>
+      <tc:token ID="w327">“</tc:token>
+      <tc:token ID="w328">,</tc:token>
+      <tc:token ID="w329">in</tc:token>
+      <tc:token ID="w32a">:</tc:token>
+      <tc:token ID="w32b">LaTeCH</tc:token>
+      <tc:token ID="w32c">2015</tc:token>
+      <tc:token ID="w32d">105.</tc:token>
+      <tc:token ID="w32e">Guillot</tc:token>
+      <tc:token ID="w32f">,</tc:token>
+      <tc:token ID="w330">Céline</tc:token>
+      <tc:token ID="w331">/</tc:token>
+      <tc:token ID="w332">Prévost</tc:token>
+      <tc:token ID="w333">,</tc:token>
+      <tc:token ID="w334">Sophie</tc:token>
+      <tc:token ID="w335">/</tc:token>
+      <tc:token ID="w336">Lavrentiev</tc:token>
+      <tc:token ID="w337">,</tc:token>
+      <tc:token ID="w338">Alexei</tc:token>
+      <tc:token ID="w339">(</tc:token>
+      <tc:token ID="w33a">2010</tc:token>
+      <tc:token ID="w33b">)</tc:token>
+      <tc:token ID="w33c">:</tc:token>
+      <tc:token ID="w33d">Manuel</tc:token>
+      <tc:token ID="w33e">de</tc:token>
+      <tc:token ID="w33f">référence</tc:token>
+      <tc:token ID="w340">du</tc:token>
+      <tc:token ID="w341">jeu</tc:token>
+      <tc:token ID="w342">cattex</tc:token>
+      <tc:token ID="w343">09.</tc:token>
+      <tc:token ID="w344">technical</tc:token>
+      <tc:token ID="w345">manual</tc:token>
+      <tc:token ID="w346">,</tc:token>
+      <tc:token ID="w347">UMR</tc:token>
+      <tc:token ID="w348">ICAR</tc:token>
+      <tc:token ID="w349">,</tc:token>
+      <tc:token ID="w34a">CNRS/ENS-LSH</tc:token>
+      <tc:token ID="w34b">.</tc:token>
+      <tc:token ID="w34c">http://bfm.ens-lyon.fr/IMG/pdf/Cattex2009_manuel_2.0.pdf</tc:token>
+      <tc:token ID="w34d">Neves</tc:token>
+      <tc:token ID="w34e">,</tc:token>
+      <tc:token ID="w34f">Mariana</tc:token>
+      <tc:token ID="w350">/</tc:token>
+      <tc:token ID="w351">Leser</tc:token>
+      <tc:token ID="w352">,</tc:token>
+      <tc:token ID="w353">Ulf</tc:token>
+      <tc:token ID="w354">(</tc:token>
+      <tc:token ID="w355">2014</tc:token>
+      <tc:token ID="w356">)</tc:token>
+      <tc:token ID="w357">:</tc:token>
+      <tc:token ID="w358">„</tc:token>
+      <tc:token ID="w359">A</tc:token>
+      <tc:token ID="w35a">survey</tc:token>
+      <tc:token ID="w35b">on</tc:token>
+      <tc:token ID="w35c">annotation</tc:token>
+      <tc:token ID="w35d">tools</tc:token>
+      <tc:token ID="w35e">for</tc:token>
+      <tc:token ID="w35f">the</tc:token>
+      <tc:token ID="w360">biomedical</tc:token>
+      <tc:token ID="w361">literature</tc:token>
+      <tc:token ID="w362">“</tc:token>
+      <tc:token ID="w363">,</tc:token>
+      <tc:token ID="w364">in</tc:token>
+      <tc:token ID="w365">:</tc:token>
+      <tc:token ID="w366">Briefings</tc:token>
+      <tc:token ID="w367">in</tc:token>
+      <tc:token ID="w368">bioinformatics</tc:token>
+      <tc:token ID="w369">15</tc:token>
+      <tc:token ID="w36a">(</tc:token>
+      <tc:token ID="w36b">2</tc:token>
+      <tc:token ID="w36c">)</tc:token>
+      <tc:token ID="w36d">:</tc:token>
+      <tc:token ID="w36e">327–340</tc:token>
+      <tc:token ID="w36f">.</tc:token>
+      <tc:token ID="w370">Selig</tc:token>
+      <tc:token ID="w371">,</tc:token>
+      <tc:token ID="w372">Maria</tc:token>
+      <tc:token ID="w373">/</tc:token>
+      <tc:token ID="w374">Eufe</tc:token>
+      <tc:token ID="w375">,</tc:token>
+      <tc:token ID="w376">Rembert</tc:token>
+      <tc:token ID="w377">/</tc:token>
+      <tc:token ID="w378">Linzmeier</tc:token>
+      <tc:token ID="w379">,</tc:token>
+      <tc:token ID="w37a">Laura</tc:token>
+      <tc:token ID="w37b">(</tc:token>
+      <tc:token ID="w37c">2015</tc:token>
+      <tc:token ID="w37d">)</tc:token>
+      <tc:token ID="w37e">:</tc:token>
+      <tc:token ID="w37f">CoLaMer</tc:token>
+      <tc:token ID="w380">(</tc:token>
+      <tc:token ID="w381">corpus</tc:token>
+      <tc:token ID="w382">du</tc:token>
+      <tc:token ID="w383">latin</tc:token>
+      <tc:token ID="w384">mérovingien</tc:token>
+      <tc:token ID="w385">)</tc:token>
+      <tc:token ID="w386">.</tc:token>
+      <tc:token ID="w387">(</tc:token>
+      <tc:token ID="w388">im</tc:token>
+      <tc:token ID="w389">Erscheinen</tc:token>
+      <tc:token ID="w38a">)</tc:token>
+      <tc:token ID="w38b">.</tc:token>
+      <tc:token ID="w38c">Vondricka</tc:token>
+      <tc:token ID="w38d">,</tc:token>
+      <tc:token ID="w38e">Pavel</tc:token>
+      <tc:token ID="w38f">(</tc:token>
+      <tc:token ID="w390">2014</tc:token>
+      <tc:token ID="w391">)</tc:token>
+      <tc:token ID="w392">:</tc:token>
+      <tc:token ID="w393">„</tc:token>
+      <tc:token ID="w394">Aligning</tc:token>
+      <tc:token ID="w395">parallel</tc:token>
+      <tc:token ID="w396">texts</tc:token>
+      <tc:token ID="w397">with</tc:token>
+      <tc:token ID="w398">intertext</tc:token>
+      <tc:token ID="w399">“</tc:token>
+      <tc:token ID="w39a">,</tc:token>
+      <tc:token ID="w39b">in</tc:token>
+      <tc:token ID="w39c">:</tc:token>
+      <tc:token ID="w39d">Proceedings</tc:token>
+      <tc:token ID="w39e">of</tc:token>
+      <tc:token ID="w39f">LREC</tc:token>
+      <tc:token ID="w3a0">2014</tc:token>
+      <tc:token ID="w3a1">.</tc:token>
+      <tc:token ID="w3a2">Vogüé</tc:token>
+      <tc:token ID="w3a3">,</tc:token>
+      <tc:token ID="w3a4">Adalbert</tc:token>
+      <tc:token ID="w3a5">de</tc:token>
+      <tc:token ID="w3a6">/</tc:token>
+      <tc:token ID="w3a7">Antin</tc:token>
+      <tc:token ID="w3a8">,</tc:token>
+      <tc:token ID="w3a9">Paul</tc:token>
+      <tc:token ID="w3aa">(</tc:token>
+      <tc:token ID="w3ab">1979</tc:token>
+      <tc:token ID="w3ac">)</tc:token>
+      <tc:token ID="w3ad">:</tc:token>
+      <tc:token ID="w3ae">GREGOIRE</tc:token>
+      <tc:token ID="w3af">LE</tc:token>
+      <tc:token ID="w3b0">GRAND</tc:token>
+      <tc:token ID="w3b1">,</tc:token>
+      <tc:token ID="w3b2">Dialogues</tc:token>
+      <tc:token ID="w3b3">II.</tc:token>
+      <tc:token ID="w3b4">Cambridge</tc:token>
+      <tc:token ID="w3b5">University</tc:token>
+      <tc:token ID="w3b6">Press</tc:token>
+      <tc:token ID="w3b7">.</tc:token>
+      <tc:token ID="w3b8">Von</tc:token>
+      <tc:token ID="w3b9">Foerster</tc:token>
+      <tc:token ID="w3ba">,</tc:token>
+      <tc:token ID="w3bb">Wendelin</tc:token>
+      <tc:token ID="w3bc">(</tc:token>
+      <tc:token ID="w3bd">1876</tc:token>
+      <tc:token ID="w3be">)</tc:token>
+      <tc:token ID="w3bf">:</tc:token>
+      <tc:token ID="w3c0">Li</tc:token>
+      <tc:token ID="w3c1">Dialoge</tc:token>
+      <tc:token ID="w3c2">Gregoire</tc:token>
+      <tc:token ID="w3c3">lo</tc:token>
+      <tc:token ID="w3c4">Pape</tc:token>
+      <tc:token ID="w3c5">.</tc:token>
+      <tc:token ID="w3c6">Altfranzösische</tc:token>
+      <tc:token ID="w3c7">Uebersetzung</tc:token>
+      <tc:token ID="w3c8">des</tc:token>
+      <tc:token ID="w3c9">XII.</tc:token>
+      <tc:token ID="w3ca">Jahrhunderts</tc:token>
+      <tc:token ID="w3cb">der</tc:token>
+      <tc:token ID="w3cc">Dialogen</tc:token>
+      <tc:token ID="w3cd">des</tc:token>
+      <tc:token ID="w3ce">Papstes</tc:token>
+      <tc:token ID="w3cf">Gregor</tc:token>
+      <tc:token ID="w3d0">,</tc:token>
+      <tc:token ID="w3d1">mit</tc:token>
+      <tc:token ID="w3d2">dem</tc:token>
+      <tc:token ID="w3d3">lateinischen</tc:token>
+      <tc:token ID="w3d4">Original</tc:token>
+      <tc:token ID="w3d5">,</tc:token>
+      <tc:token ID="w3d6">einem</tc:token>
+      <tc:token ID="w3d7">Anhang</tc:token>
+      <tc:token ID="w3d8">:</tc:token>
+      <tc:token ID="w3d9">Sermo</tc:token>
+      <tc:token ID="w3da">de</tc:token>
+      <tc:token ID="w3db">Sapientia</tc:token>
+      <tc:token ID="w3dc">und</tc:token>
+      <tc:token ID="w3dd">Moralium</tc:token>
+      <tc:token ID="w3de">in</tc:token>
+      <tc:token ID="w3df">Iob</tc:token>
+      <tc:token ID="w3e0">Fragmenta</tc:token>
+      <tc:token ID="w3e1">,</tc:token>
+      <tc:token ID="w3e2">einer</tc:token>
+      <tc:token ID="w3e3">grammatischen</tc:token>
+      <tc:token ID="w3e4">Einleitung</tc:token>
+      <tc:token ID="w3e5">,</tc:token>
+      <tc:token ID="w3e6">erklärenden</tc:token>
+      <tc:token ID="w3e7">Anmerkungen</tc:token>
+      <tc:token ID="w3e8">und</tc:token>
+      <tc:token ID="w3e9">einem</tc:token>
+      <tc:token ID="w3ea">Glossar</tc:token>
+      <tc:token ID="w3eb">,</tc:token>
+      <tc:token ID="w3ec">première</tc:token>
+      <tc:token ID="w3ed">partie</tc:token>
+      <tc:token ID="w3ee">:</tc:token>
+      <tc:token ID="w3ef">Textes</tc:token>
+      <tc:token ID="w3f0">.</tc:token>
+      <tc:token ID="w3f1">Paris</tc:token>
+      <tc:token ID="w3f2">:</tc:token>
+      <tc:token ID="w3f3">Champion</tc:token>
+      <tc:token ID="w3f4">.</tc:token>
+      <tc:token ID="w3f5">Wolff</tc:token>
+      <tc:token ID="w3f6">,</tc:token>
+      <tc:token ID="w3f7">Christian</tc:token>
+      <tc:token ID="w3f8">(</tc:token>
+      <tc:token ID="w3f9">2015</tc:token>
+      <tc:token ID="w3fa">)</tc:token>
+      <tc:token ID="w3fb">:</tc:token>
+      <tc:token ID="w3fc">„</tc:token>
+      <tc:token ID="w3fd">The</tc:token>
+      <tc:token ID="w3fe">case</tc:token>
+      <tc:token ID="w3ff">for</tc:token>
+      <tc:token ID="w400">teaching</tc:token>
+      <tc:token ID="w401">‚</tc:token>
+      <tc:token ID="w402">tool</tc:token>
+      <tc:token ID="w403">science</tc:token>
+      <tc:token ID="w404">‘</tc:token>
+      <tc:token ID="w405">.</tc:token>
+      <tc:token ID="w406">Taking</tc:token>
+      <tc:token ID="w407">software</tc:token>
+      <tc:token ID="w408">engineering</tc:token>
+      <tc:token ID="w409">and</tc:token>
+      <tc:token ID="w40a">software</tc:token>
+      <tc:token ID="w40b">engineering</tc:token>
+      <tc:token ID="w40c">education</tc:token>
+      <tc:token ID="w40d">beyond</tc:token>
+      <tc:token ID="w40e">the</tc:token>
+      <tc:token ID="w40f">confinements</tc:token>
+      <tc:token ID="w410">of</tc:token>
+      <tc:token ID="w411">traditional</tc:token>
+      <tc:token ID="w412">software</tc:token>
+      <tc:token ID="w413">development</tc:token>
+      <tc:token ID="w414">contexts</tc:token>
+      <tc:token ID="w415">“</tc:token>
+      <tc:token ID="w416">,</tc:token>
+      <tc:token ID="w417">in</tc:token>
+      <tc:token ID="w418">:</tc:token>
+      <tc:token ID="w419">Global</tc:token>
+      <tc:token ID="w41a">Engineering</tc:token>
+      <tc:token ID="w41b">Education</tc:token>
+      <tc:token ID="w41c">Conference</tc:token>
+      <tc:token ID="w41d">(</tc:token>
+      <tc:token ID="w41e">EDUCON</tc:token>
+      <tc:token ID="w41f">)</tc:token>
+      <tc:token ID="w420">,</tc:token>
+      <tc:token ID="w421">2015</tc:token>
+      <tc:token ID="w422">IEEE</tc:token>
+      <tc:token ID="w423">932–938</tc:token>
+      <tc:token ID="w424">10.</tc:token>
+      <tc:token ID="w425">1109/</tc:token>
+      <tc:token ID="w426">EDUCON</tc:token>
+      <tc:token ID="w427">.</tc:token>
+      <tc:token ID="w428">2015</tc:token>
+      <tc:token ID="w429">.</tc:token>
+      <tc:token ID="w42a">7096085</tc:token>
+      <tc:token ID="w42b">http://www.palafra.org/</tc:token>
+      <tc:token ID="w42c">http://bfm.ens-lyon.fr/</tc:token>
+      <tc:token ID="w42d">http://universaldependencies.org/</tc:token>
+      <tc:token ID="w42e">http://sourceforge.net/projects/aligner/</tc:token>
+      <tc:token ID="w42f">http://www.statmt.org/moses/</tc:token>
+      <tc:token ID="w430">https://bitbucket.org/rvwfels/paravoz2</tc:token>
+      <tc:token ID="w431">http://wanthalf.saga.cz/intertext</tc:token>
+      <tc:token ID="w432">Bibliographie</tc:token>
+    </tc:tokens>
+    <tc:sentences xmlns:tc="http://www.dspin.de/data/textcorpus">
+      <tc:sentence tokenIDs="w1 w2 w3 w4 w5 w6 w7 w8 w9 wa wb wc wd we wf w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w1a w1b w1c w1d w1e w1f w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 w2a w2b w2c w2d w2e w2f w30 w31 w32 w33 w34 w35 w36 w37 w38 w39 w3a w3b w3c w3d" ID="s1"/>
+      <tc:sentence tokenIDs="w3e w3f w40 w41 w42 w43 w44 w45 w46 w47 w48 w49 w4a w4b w4c w4d w4e w4f w50 w51 w52 w53 w54 w55 w56 w57 w58 w59 w5a w5b w5c w5d w5e w5f w60 w61 w62 w63 w64 w65 w66 w67 w68 w69 w6a w6b w6c" ID="s2"/>
+      <tc:sentence tokenIDs="w6d w6e w6f w70 w71 w72 w73 w74 w75 w76 w77 w78 w79 w7a w7b" ID="s3"/>
+      <tc:sentence tokenIDs="w7c w7d w7e w7f w80 w81 w82 w83 w84 w85 w86 w87 w88 w89 w8a w8b w8c w8d w8e w8f w90 w91 w92 w93 w94 w95 w96 w97 w98 w99 w9a w9b w9c w9d w9e w9f wa0 wa1 wa2" ID="s4"/>
+      <tc:sentence tokenIDs="wa3 wa4 wa5 wa6 wa7 wa8 wa9 waa wab wac wad wae waf wb0 wb1 wb2 wb3 wb4 wb5 wb6 wb7 wb8 wb9 wba wbb wbc wbd wbe wbf wc0 wc1 wc2 wc3 wc4 wc5 wc6 wc7 wc8 wc9 wca wcb wcc wcd wce wcf" ID="s5"/>
+      <tc:sentence tokenIDs="wd0 wd1 wd2 wd3 wd4 wd5 wd6 wd7 wd8 wd9 wda wdb wdc wdd wde wdf" ID="s6"/>
+      <tc:sentence tokenIDs="we0 we1 we2 we3 we4 we5 we6 we7 we8 we9 wea web wec wed wee wef wf0 wf1 wf2 wf3 wf4 wf5 wf6 wf7 wf8 wf9 wfa wfb wfc wfd wfe wff w100 w101 w102 w103 w104" ID="s7"/>
+      <tc:sentence tokenIDs="w105 w106 w107 w108 w109 w10a w10b w10c w10d w10e w10f w110 w111 w112 w113 w114" ID="s8"/>
+      <tc:sentence tokenIDs="w115 w116 w117 w118 w119 w11a w11b w11c w11d" ID="s9"/>
+      <tc:sentence tokenIDs="w11e w11f w120 w121 w122 w123 w124 w125 w126 w127 w128 w129 w12a w12b w12c w12d w12e w12f w130 w131 w132 w133 w134 w135 w136 w137 w138 w139 w13a" ID="sa"/>
+      <tc:sentence tokenIDs="w13b w13c w13d w13e w13f w140 w141 w142 w143 w144 w145 w146 w147 w148 w149 w14a w14b w14c w14d w14e w14f w150 w151 w152 w153" ID="sb"/>
+      <tc:sentence tokenIDs="w154 w155 w156 w157 w158 w159 w15a w15b w15c w15d w15e w15f w160 w161 w162 w163 w164 w165 w166" ID="sc"/>
+      <tc:sentence tokenIDs="w167 w168 w169 w16a w16b w16c w16d w16e w16f w170 w171 w172 w173 w174 w175 w176 w177 w178 w179 w17a w17b" ID="sd"/>
+      <tc:sentence tokenIDs="w17c w17d w17e w17f w180 w181 w182 w183 w184 w185 w186 w187 w188 w189 w18a" ID="se"/>
+      <tc:sentence tokenIDs="w18b w18c w18d w18e w18f w190 w191 w192 w193 w194 w195 w196 w197 w198 w199 w19a w19b w19c w19d w19e w19f w1a0 w1a1 w1a2 w1a3 w1a4" ID="sf"/>
+      <tc:sentence tokenIDs="w1a5 w1a6 w1a7 w1a8 w1a9 w1aa w1ab w1ac w1ad w1ae w1af w1b0 w1b1 w1b2 w1b3 w1b4 w1b5 w1b6 w1b7 w1b8 w1b9 w1ba w1bb w1bc w1bd w1be w1bf w1c0 w1c1 w1c2 w1c3 w1c4 w1c5 w1c6 w1c7 w1c8 w1c9 w1ca w1cb w1cc w1cd w1ce w1cf w1d0 w1d1 w1d2 w1d3 w1d4 w1d5 w1d6 w1d7 w1d8 w1d9 w1da w1db w1dc w1dd w1de w1df w1e0 w1e1 w1e2 w1e3 w1e4 w1e5 w1e6 w1e7 w1e8" ID="s10"/>
+      <tc:sentence tokenIDs="w1e9 w1ea w1eb w1ec w1ed w1ee w1ef w1f0 w1f1 w1f2 w1f3 w1f4 w1f5 w1f6 w1f7 w1f8 w1f9 w1fa w1fb w1fc w1fd w1fe w1ff w200 w201" ID="s11"/>
+      <tc:sentence tokenIDs="w202 w203 w204 w205 w206 w207 w208 w209 w20a w20b w20c w20d w20e w20f w210 w211 w212 w213 w214" ID="s12"/>
+      <tc:sentence tokenIDs="w215 w216 w217 w218 w219 w21a w21b w21c w21d w21e w21f w220 w221 w222 w223 w224 w225 w226 w227 w228 w229 w22a w22b w22c w22d w22e w22f w230 w231" ID="s13"/>
+      <tc:sentence tokenIDs="w232 w233 w234 w235 w236 w237 w238 w239 w23a w23b w23c w23d w23e w23f w240 w241 w242 w243" ID="s14"/>
+      <tc:sentence tokenIDs="w244 w245 w246 w247 w248 w249 w24a w24b w24c w24d w24e w24f" ID="s15"/>
+      <tc:sentence tokenIDs="w250 w251 w252 w253 w254 w255 w256 w257 w258 w259 w25a w25b w25c w25d w25e w25f" ID="s16"/>
+      <tc:sentence tokenIDs="w260 w261 w262 w263 w264 w265 w266 w267 w268 w269 w26a w26b w26c w26d w26e w26f w270 w271 w272 w273 w274 w275 w276 w277 w278 w279 w27a w27b w27c w27d w27e w27f w280 w281 w282 w283 w284 w285 w286 w287 w288 w289 w28a w28b w28c w28d w28e w28f w290 w291 w292 w293 w294 w295" ID="s17"/>
+      <tc:sentence tokenIDs="w296 w297 w298 w299 w29a w29b w29c w29d w29e w29f w2a0 w2a1 w2a2 w2a3 w2a4 w2a5 w2a6 w2a7 w2a8 w2a9 w2aa w2ab w2ac w2ad w2ae w2af w2b0 w2b1 w2b2 w2b3 w2b4" ID="s18"/>
+      <tc:sentence tokenIDs="w2b5 w2b6 w2b7 w2b8 w2b9 w2ba w2bb" ID="s19"/>
+      <tc:sentence tokenIDs="w2bc w2bd w2be w2bf w2c0 w2c1 w2c2 w2c3 w2c4 w2c5 w2c6 w2c7 w2c8 w2c9" ID="s1a"/>
+      <tc:sentence tokenIDs="w2ca w2cb w2cc w2cd w2ce w2cf w2d0 w2d1 w2d2 w2d3 w2d4 w2d5 w2d6 w2d7 w2d8 w2d9 w2da w2db w2dc w2dd w2de w2df w2e0 w2e1 w2e2" ID="s1b"/>
+      <tc:sentence tokenIDs="w2e3 w2e4 w2e5 w2e6 w2e7 w2e8 w2e9" ID="s1c"/>
+      <tc:sentence tokenIDs="w2ea w2eb w2ec w2ed w2ee w2ef w2f0 w2f1 w2f2 w2f3 w2f4 w2f5 w2f6 w2f7 w2f8 w2f9 w2fa w2fb w2fc w2fd w2fe w2ff w300 w301 w302 w303 w304 w305 w306 w307 w308 w309 w30a w30b w30c w30d w30e w30f w310 w311 w312 w313 w314 w315" ID="s1d"/>
+      <tc:sentence tokenIDs="w316 w317 w318 w319 w31a w31b w31c w31d" ID="s1e"/>
+      <tc:sentence tokenIDs="w31e w31f w320 w321 w322 w323 w324 w325 w326 w327 w328 w329 w32a w32b w32c w32d w32e w32f w330 w331 w332 w333 w334 w335 w336 w337 w338 w339 w33a w33b w33c" ID="s1f"/>
+      <tc:sentence tokenIDs="w33d w33e w33f w340 w341 w342 w343 w344 w345 w346 w347 w348 w349 w34a w34b w34c w34d w34e w34f w350 w351 w352 w353 w354 w355 w356 w357" ID="s20"/>
+      <tc:sentence tokenIDs="w358 w359 w35a w35b w35c w35d w35e w35f w360 w361 w362 w363 w364 w365 w366 w367 w368 w369 w36a w36b w36c w36d w36e w36f" ID="s21"/>
+      <tc:sentence tokenIDs="w370 w371 w372 w373 w374 w375 w376 w377 w378 w379 w37a w37b w37c w37d w37e w37f w380 w381 w382 w383 w384 w385 w386" ID="s22"/>
+      <tc:sentence tokenIDs="w387 w388 w389 w38a w38b" ID="s23"/>
+      <tc:sentence tokenIDs="w38c w38d w38e w38f w390 w391 w392" ID="s24"/>
+      <tc:sentence tokenIDs="w393 w394 w395 w396 w397 w398 w399 w39a w39b w39c w39d w39e w39f w3a0 w3a1" ID="s25"/>
+      <tc:sentence tokenIDs="w3a2 w3a3 w3a4 w3a5 w3a6 w3a7 w3a8 w3a9 w3aa w3ab w3ac w3ad w3ae w3af w3b0 w3b1 w3b2 w3b3 w3b4 w3b5 w3b6 w3b7" ID="s26"/>
+      <tc:sentence tokenIDs="w3b8 w3b9 w3ba w3bb w3bc w3bd w3be w3bf" ID="s27"/>
+      <tc:sentence tokenIDs="w3c0 w3c1 w3c2 w3c3 w3c4 w3c5" ID="s28"/>
+      <tc:sentence tokenIDs="w3c6 w3c7 w3c8 w3c9 w3ca w3cb w3cc w3cd w3ce w3cf w3d0 w3d1 w3d2 w3d3 w3d4 w3d5 w3d6 w3d7 w3d8" ID="s29"/>
+      <tc:sentence tokenIDs="w3d9 w3da w3db w3dc w3dd w3de w3df w3e0 w3e1 w3e2 w3e3 w3e4 w3e5 w3e6 w3e7 w3e8 w3e9 w3ea w3eb w3ec w3ed w3ee w3ef w3f0" ID="s2a"/>
+      <tc:sentence tokenIDs="w3f1 w3f2 w3f3 w3f4" ID="s2b"/>
+      <tc:sentence tokenIDs="w3f5 w3f6 w3f7 w3f8 w3f9 w3fa w3fb" ID="s2c"/>
+      <tc:sentence tokenIDs="w3fc w3fd w3fe w3ff w400 w401 w402 w403 w404 w405" ID="s2d"/>
+      <tc:sentence tokenIDs="w406 w407 w408 w409 w40a w40b w40c w40d w40e w40f w410 w411 w412 w413 w414 w415 w416 w417 w418 w419 w41a w41b w41c w41d w41e w41f w420 w421 w422 w423 w424 w425 w426 w427 w428 w429 w42a w42b w42c w42d w42e w42f w430 w431 w432" ID="s2e"/>
+    </tc:sentences>
+    <tc:namedEntities xmlns:tc="http://www.dspin.de/data/textcorpus" type="tuebadz8">
+      <tc:entity class="ORG" tokenIDs="w3 w4"/>
+      <tc:entity class="OTH" tokenIDs="w7 w8 w9 wa wb wc"/>
+      <tc:entity class="ORG" tokenIDs="w44"/>
+      <tc:entity class="GPE" tokenIDs="w45"/>
+      <tc:entity class="ORG" tokenIDs="w48"/>
+      <tc:entity class="GPE" tokenIDs="w49"/>
+      <tc:entity class="ORG" tokenIDs="w4c w4d w4e"/>
+      <tc:entity class="GPE" tokenIDs="w50"/>
+      <tc:entity class="GPE" tokenIDs="w54"/>
+      <tc:entity class="ORG" tokenIDs="w5c w5d"/>
+      <tc:entity class="ORG" tokenIDs="w5f"/>
+      <tc:entity class="ORG" tokenIDs="w63 w64 w65 w66"/>
+      <tc:entity class="ORG" tokenIDs="w68"/>
+      <tc:entity class="LOC" tokenIDs="w85 w86 w87 w88"/>
+      <tc:entity class="OTH" tokenIDs="wef"/>
+      <tc:entity class="OTH" tokenIDs="wf1 wf2 wf3 wf4"/>
+      <tc:entity class="OTH" tokenIDs="wf7"/>
+      <tc:entity class="OTH" tokenIDs="wf9 wfa wfb wfc"/>
+      <tc:entity class="ORG" tokenIDs="wff"/>
+      <tc:entity class="PER" tokenIDs="w101"/>
+      <tc:entity class="ORG" tokenIDs="w14a w14b"/>
+      <tc:entity class="PER" tokenIDs="w19c"/>
+      <tc:entity class="PER" tokenIDs="w19f"/>
+      <tc:entity class="OTH" tokenIDs="w1c2 w1c3"/>
+      <tc:entity class="OTH" tokenIDs="w1c5 w1c6"/>
+      <tc:entity class="OTH" tokenIDs="w1d4"/>
+      <tc:entity class="PER" tokenIDs="w1de"/>
+      <tc:entity class="PER" tokenIDs="w22e"/>
+      <tc:entity class="OTH" tokenIDs="w265 w266"/>
+      <tc:entity class="PER" tokenIDs="w269"/>
+      <tc:entity class="PER" tokenIDs="w26b"/>
+      <tc:entity class="OTH" tokenIDs="w274 w275"/>
+      <tc:entity class="OTH" tokenIDs="w280 w281 w282 w283"/>
+      <tc:entity class="PER" tokenIDs="w286"/>
+      <tc:entity class="ORG" tokenIDs="w28d w28e"/>
+      <tc:entity class="OTH" tokenIDs="w290 w291 w292 w293"/>
+      <tc:entity class="PER" tokenIDs="w2b5"/>
+      <tc:entity class="PER" tokenIDs="w2b7"/>
+      <tc:entity class="PER" tokenIDs="w2cb"/>
+      <tc:entity class="GPE" tokenIDs="w2ce"/>
+      <tc:entity class="ORG" tokenIDs="w2d0 w2d1 w2d2 w2d3 w2d4"/>
+      <tc:entity class="PER" tokenIDs="w2e3 w2e4 w2e5"/>
+      <tc:entity class="ORG" tokenIDs="w2fb w2fc w2fd w2fe w2ff w300 w301 w302 w303 w304 w305"/>
+      <tc:entity class="PER" tokenIDs="w307"/>
+      <tc:entity class="PER" tokenIDs="w30b"/>
+      <tc:entity class="PER" tokenIDs="w30d"/>
+      <tc:entity class="PER" tokenIDs="w30f"/>
+      <tc:entity class="PER" tokenIDs="w311"/>
+      <tc:entity class="OTH" tokenIDs="w31e w31f w320 w321 w322 w323 w324 w325 w326"/>
+      <tc:entity class="PER" tokenIDs="w32b"/>
+      <tc:entity class="PER" tokenIDs="w32e"/>
+      <tc:entity class="PER" tokenIDs="w330"/>
+      <tc:entity class="PER" tokenIDs="w332"/>
+      <tc:entity class="PER" tokenIDs="w334"/>
+      <tc:entity class="PER" tokenIDs="w336"/>
+      <tc:entity class="PER" tokenIDs="w338"/>
+      <tc:entity class="PER" tokenIDs="w33d w33e w33f w340"/>
+      <tc:entity class="PER" tokenIDs="w347 w348"/>
+      <tc:entity class="PER" tokenIDs="w34d"/>
+      <tc:entity class="PER" tokenIDs="w34f"/>
+      <tc:entity class="PER" tokenIDs="w353"/>
+      <tc:entity class="OTH" tokenIDs="w366 w367 w368 w369"/>
+      <tc:entity class="PER" tokenIDs="w370"/>
+      <tc:entity class="PER" tokenIDs="w372"/>
+      <tc:entity class="PER" tokenIDs="w374"/>
+      <tc:entity class="PER" tokenIDs="w376"/>
+      <tc:entity class="PER" tokenIDs="w378"/>
+      <tc:entity class="PER" tokenIDs="w37a"/>
+      <tc:entity class="PER" tokenIDs="w38c"/>
+      <tc:entity class="PER" tokenIDs="w38e"/>
+      <tc:entity class="OTH" tokenIDs="w394 w395 w396 w397 w398"/>
+      <tc:entity class="OTH" tokenIDs="w39d w39e w39f"/>
+      <tc:entity class="OTH" tokenIDs="w3a2 w3a3 w3a4 w3a5 w3a6 w3a7 w3a8 w3a9"/>
+      <tc:entity class="ORG" tokenIDs="w3ae w3af w3b0"/>
+      <tc:entity class="ORG" tokenIDs="w3b2 w3b3 w3b4 w3b5 w3b6"/>
+      <tc:entity class="PER" tokenIDs="w3b9"/>
+      <tc:entity class="PER" tokenIDs="w3bb"/>
+      <tc:entity class="PER" tokenIDs="w3c0 w3c1 w3c2 w3c3 w3c4"/>
+      <tc:entity class="PER" tokenIDs="w3cf"/>
+      <tc:entity class="OTH" tokenIDs="w3d9 w3da w3db w3dc w3dd w3de w3df w3e0"/>
+      <tc:entity class="GPE" tokenIDs="w3f1"/>
+      <tc:entity class="PER" tokenIDs="w3f5 w3f6 w3f7"/>
+      <tc:entity class="OTH" tokenIDs="w419 w41a w41b w41c"/>
+      <tc:entity class="ORG" tokenIDs="w41e"/>
+      <tc:entity class="ORG" tokenIDs="w422"/>
+    </tc:namedEntities>
+  </TextCorpus>
+</D-Spin>

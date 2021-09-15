@@ -1,0 +1,2457 @@
+<?xml version='1.0' encoding='UTF-8'?><D-Spin xmlns="http://www.dspin.de/data" version="5">
+  <MetaData xmlns="http://www.dspin.de/data/metadata"><Services><cmd:CMD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cmd="http://www.clarin.eu/cmd/1" CMDVersion="1.2" xsi:schemaLocation="http://www.clarin.eu/cmd/1 http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_1320657629623/xsd"><cmd:Resources><cmd:ResourceProxyList/><cmd:JournalFileProxyList/><cmd:ResourceRelationList/></cmd:Resources><cmd:Components><cmd:WebServiceToolChain><cmd:GeneralInfo><cmd:Descriptions><cmd:Description/></cmd:Descriptions><cmd:ResourceName>Custom chain</cmd:ResourceName><cmd:ResourceClass>Toolchain</cmd:ResourceClass></cmd:GeneralInfo><cmd:Toolchain><cmd:ToolInChain><cmd:PID>https://hdl.handle.net/21.11120/0000-0008-319A-3</cmd:PID><cmd:Parameter value="de" name="lang"/></cmd:ToolInChain><cmd:ToolInChain><cmd:PID>https://hdl.handle.net/21.11120/0000-0008-3183-C</cmd:PID><cmd:Parameter value="5" name="version"/></cmd:ToolInChain><cmd:ToolInChain><cmd:PID>http://hdl.handle.net/11022/0000-0007-DA29-6</cmd:PID><cmd:Parameter value="de" name="lang"/><cmd:Parameter value="5" name="version"/></cmd:ToolInChain></cmd:Toolchain></cmd:WebServiceToolChain></cmd:Components></cmd:CMD></Services></MetaData>
+  <TextCorpus xmlns="http://www.dspin.de/data/textcorpus" lang="de">
+    <textSource type="application/tei+xml;format-variant=tei-dta;tokenized=0">&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="vortraege-058">
+&lt;teiHeader>
+&lt;fileDesc>
+&lt;titleStmt>
+&lt;title>Usability in den Digital Humanities am Beispiel des LAUDATIO-Repositoriums&lt;/title>
+&lt;author>
+&lt;name>
+&lt;surname>Stiller&lt;/surname>
+&lt;forename>Juliane&lt;/forename>
+&lt;/name>
+&lt;affiliation>Max-Planck-Institut für Wissenschaftsgeschichte, Deutschland&lt;/affiliation>
+&lt;email>jstiller@mpiwg-berlin.mpg.de&lt;/email>
+&lt;/author>
+&lt;author>
+&lt;name>
+&lt;surname>Thoden&lt;/surname>
+&lt;forename>Klaus&lt;/forename>
+&lt;/name>
+&lt;affiliation>Max-Planck-Institut für Wissenschaftsgeschichte, Deutschland&lt;/affiliation>
+&lt;email>kthoden@mpiwg-berlin.mpg.de&lt;/email>
+&lt;/author>
+&lt;author>
+&lt;name>
+&lt;surname>Zielke&lt;/surname>
+&lt;forename>Dennis&lt;/forename>
+&lt;/name>
+&lt;affiliation>Humboldt-Universität zu Berlin&lt;/affiliation>
+&lt;email>zielkede@cms.hu-berlin.de&lt;/email>
+&lt;/author>
+&lt;/titleStmt>
+&lt;editionStmt>
+&lt;edition>
+&lt;date>2015-10-15T11:04:06.449241000&lt;/date>
+&lt;/edition>
+&lt;/editionStmt>
+&lt;publicationStmt>
+&lt;publisher>Elisabeth Burr, Universität Leipzig&lt;/publisher>
+&lt;address>
+&lt;addrLine>Beethovenstr. 15&lt;/addrLine>
+&lt;addrLine>04107 Leipzig&lt;/addrLine>
+&lt;addrLine>Deutschland&lt;/addrLine>
+&lt;addrLine>Elisabeth Burr&lt;/addrLine>
+&lt;/address>
+&lt;/publicationStmt>
+&lt;sourceDesc>
+&lt;p>Converted from an OASIS Open Document&lt;/p>
+&lt;/sourceDesc>
+&lt;/fileDesc>
+&lt;encodingDesc>
+&lt;appInfo>
+&lt;application ident="DHCONVALIDATOR" version="1.14">
+&lt;label>DHConvalidator&lt;/label>
+&lt;/application>
+&lt;/appInfo>
+&lt;/encodingDesc>
+&lt;profileDesc>
+&lt;textClass>
+&lt;keywords scheme="ConfTool" n="category">
+&lt;term>Vortrag&lt;/term>
+&lt;/keywords>
+&lt;keywords scheme="ConfTool" n="subcategory">
+&lt;term>&lt;/term>
+&lt;/keywords>
+&lt;keywords scheme="ConfTool" n="keywords">
+&lt;term>Linguistik&lt;/term>
+&lt;term>Usability&lt;/term>
+&lt;term>Gebrauchstauglichkeit&lt;/term>
+&lt;/keywords>
+&lt;keywords scheme="ConfTool" n="topics">
+&lt;term>Programmierung&lt;/term>
+&lt;term>Bewertung&lt;/term>
+&lt;term>Webentwicklung&lt;/term>
+&lt;/keywords>
+&lt;/textClass>
+&lt;/profileDesc>
+&lt;/teiHeader>
+&lt;text>
+&lt;body>
+&lt;div type="div1" rend="DH-Heading">
+&lt;head>Einleitung&lt;/head>
+&lt;p>Unter Usability verstehen wir die Gebrauchstauglichkeit einer Software, die ein
+          Qualitätsmerkmal der Benutzeroberfläche darstellt und als Teilaspekt der
+          gesamten User Experience anzusehen ist. Sie bildet die Grundlage positiver
+          Interaktionen und ist ein wichtiger Faktor für den Erfolg eines Tools. Es spielt
+          dabei eine entscheidende Rolle, inwieweit sich Nutzer_innen innerhalb der
+          Anwendung durch die verständliche Bedienbarkeit und den zu erwartenden Workflow
+          der einzelnen Funktionen zurechtfinden. Dabei ist es hilfreich, sie von Anfang
+          an mit in den Entwicklungsprozess einzubinden und ihre Arbeitsmethoden
+          kennenzulernen. Dazu dienen auch Mockups wie das Beispiel in Abbildung 1
+          illustriert. In diesem Vortrag wollen wir darstellen, wie Usability in den
+          Digital Humanities evaluiert werden kann und welche Probleme sich generell bei
+          der Softwareentwicklung in der Forschung auftun. Dafür werden wir grundlegende
+          Überlegungen zur Usability-Problematik anstellen. Anhand von Nutzungsszenarien
+          am Beispiel des im Projekt &lt;ref target="http://www.laudatio-repository.org"
+          >LAUDATIO&lt;/ref>
+&lt;ref type="note" target="n01" n="1">1&lt;/ref> (weiter-)entwickelten
+          Forschungsdatenrepositoriums für historische Textdaten demonstrieren wir, wie
+          eine kostengünstige und einfache Usability-Evaluierung stattfinden kann. Als
+          Verfahren wurden hierfür der Thinking-Aloud Test (Lewis / Rieman 1994), eine der
+          wichtigsten Methoden für die nutzerorientierte Evaluation, sowie eine
+          heuristische Evaluation angewandt. &lt;/p>
+&lt;figure>
+&lt;graphic url="058-1000020100000488000004B0EF2DB0DB.png"/>
+&lt;p>
+&lt;hi rend="bold">Abb. 1&lt;/hi>: Mockup der facettierten Suche mit
+              Suchergebnissen&lt;/p>
+&lt;/figure>
+&lt;/div>
+&lt;div type="div1" rend="DH-Heading">
+&lt;head>
+&lt;hi rend="bold">Motivation und Hintergrund&lt;/hi>
+&lt;/head>
+&lt;p>Die Usability von Tools und deren grafischen Benutzeroberflächen ist essentiell, um Nutzer_innen ein effektives
+              Arbeiten zu ermöglichen und Bedienfehler zu minimieren. Dabei muss man sich in
+              der großen Auswahl bereits existierender, einschlägiger DH-Tools &lt;ref type="note" target="n02" n="2">2&lt;/ref> entscheiden, welche Anwendung für ein jeweiliges Szenario geeignet ist. &lt;/p>
+&lt;p>Was in großen Teilen der Software-Entwicklung Standard ist, findet nur langsam
+                Einzug in die Entwicklung von Tools für die geisteswissenschaftliche Forschung.
+                So stellt Burghardt (2012) eine Kluft zwischen den Tool-Entwickler_innen und den
+                die Tools nutzenden Fachwissenschaftler_innen heraus, die sich beispielsweise in
+                fehlendem Usability-Engineering für linguistische Annotationswerkzeuge
+                niederschlägt. Anhand eines Heuristic Walkthroughs &lt;ref type="note" target="n03" n="3">3&lt;/ref> erstellt er Design-Empfehlungen für
+                Annotationswerkzeuge. Er unterscheidet allgemeine und domainspezifische
+                Usability-Probleme. Der Grund für nutzerunfreundliche Funktionen sind häufig
+                mangelnde Ressourcen, aber auch fehlende Expertise auf dem Gebiet – dadurch
+                können entwickelte Tools fehleranfälliger sein, besonders wenn sie nicht
+                ausreichend getestet wurden. Gibbs und Brown (2012) sehen die fehlende
+                Investition in Nutzeroberflächen als Grund für die Ablehnung von Tools durch
+                frustrierte Nutzer_innen. Oftmals sind Software oder Tools von enthusiastischen
+                EntwicklerInnen nur für ein Nischenpublikum gebaut, und die Usability hat bei
+                der Entwicklung keinen hohen Stellenwert. &lt;/p>
+&lt;p>Bisher wurde der Bedienbarkeit und Benutzbarkeit von digitalen Tools und Anwendungen im Bereich der Digital Humanities wenig Beachtung geschenkt. Aber gerade hier kann eine größere Akzeptanz und Nutzung des Tools/Services erreicht werden. Dabei muss eine Balance gefunden werden zwischen dem finanziellen Mehraufwand durch Umsetzung von Usability-Kriterien und der Spezifität des Tools, die eventuell nur einer kleinen Nutzergruppe zu Gute kommt. &lt;/p>
+&lt;p>Die Kriterien nach Nielsen (1995) sollten auch bei der Entwicklung geisteswissenschaftlicher Tools/Services Anwendung finden, da sie enorm wichtig sind, um die Validität und die Nachprüfbarkeit der Ergebnisse, die durch ein solches Tool zustande kommen, zu fördern. Ein gut nutzbares Tool hilft dabei, Fehler zu vermeiden und Daten nachnutzbar zu machen – somit wird auch das Vertrauen gefördert.&lt;/p>
+&lt;/div>
+&lt;div type="div1" rend="DH-Heading">
+&lt;head>
+&lt;hi rend="bold">Usability am Beispiel des LAUDATIO Repositoriums&lt;/hi>
+&lt;/head>
+&lt;p>Das evaluierte Repositorium, in dem die Daten gespeichert werden, basiert auf Open-Source-Technologien
+                  &lt;ref type="note" target="n04" n="4">4&lt;/ref>. Dessen Software-Module entsprechen allgemein den Anwendungsfunktionen Präsentation, Speicherung, Importieren und Suche. Basierend darauf wurde zuerst eine heuristische Evaluation
+                  &lt;ref type="note" target="n05" n="5">5&lt;/ref> durchgeführt, bei der zwei Experten anhand der Usability-Heuristiken von Nielsen das Repositorium begutachteten. Dabei lag der Fokus auf diesen näher spezifizierten Funktionen von LAUDATIO:
+                &lt;/p>
+&lt;list type="unordered">
+&lt;item>Präsentation von Korpora,&lt;/item>
+&lt;item>Suche nach Korpora und in deren Dokumenten und Annotationen,&lt;/item>
+&lt;item>Herunterladen von Korpora,&lt;/item>
+&lt;item>Importieren von neuen und erweiterten Korpora,&lt;/item>
+&lt;item>Auseinandersetzung mit den verschiedenen Beschreibungen der einzelnen Korpora.&lt;/item>
+&lt;/list>
+&lt;p>Hierbei wurden folgende Problematiken ausgemacht, die einer Nutzbarkeit des Systems abträglich sind :&lt;/p>
+&lt;p>1. Inkonsistenz in der Benennung und Verwendung von mehrdeutigem Vokabular und Missachtung graphischer Konventionen&lt;/p>
+&lt;p>2. Intransparenz des Systemstatus&lt;/p>
+&lt;p>3. Fehlende oder schwer auffindbare Dokumentation&lt;/p>
+&lt;p>4. Fehlende Strategien zur Fehlerverhütung&lt;/p>
+&lt;p>5. Missachtung von Konventionen in der Suche&lt;/p>
+&lt;p>Im nachfolgenden Schritt wurden von Seiten der EntwicklerInnen 10 Aufgaben für einen Usability-Test erstellt, die sich aus Nutzeranfragen und dem alltäglichen Arbeiten mit dem Repositorium ergaben. Diese Aufgaben wurden mit einer Testperson durchgeführt, wobei zwei Personen die Aktionen und die Kommentare der Probandin protokollierten, sowie Screencasts der einzelnen Sessions aufzeichneten.
+                  Hierfür wurde seitens der Betreiber ein Testkorpus mit Metadaten zur Verfügung gestellt, wofür XML-Kenntnisse vorausgesetzt wurden. Die Testperson führte den Test zum einen als nicht eingeloggte Nutzerin und zum anderen als eingeloggte Nutzerin mit erweiterten Rechten durch. Im zweiten Fall konnte sie über den Importprozess ein selbständig verändertes Korpus hochladen und anzeigen lassen. Obwohl die Testerin nicht aus dem Bereich der Linguistik kam und sich deswegen auch erst in die Begrifflichkeiten und Funktionen des Portal einarbeiten musste, wurden erhebliche Usability-Probleme eminent. In einem gemeinsamen Gespräch mit den Betreibern des LAUDATIO Repositoriums wurden die Problematiken benannt und eine Priorisierung der Usability-Probleme vorgenommen. Dabei wurden folgende Punkte als Kriterium für die Priorisierung herangezogen:
+&lt;/p>
+&lt;list type="unordered">
+&lt;item>Schwere der Problems / Störfaktor bei der Benutzung des Repositoriums&lt;/item>
+&lt;item>Häufigkeit, mit der die Nutzer mit dem Problem konfrontiert sind&lt;/item>
+&lt;item>Menge der Ressourcen, die für die Behebung des Problems nötig wären&lt;/item>
+&lt;/list>
+&lt;p>Anhand der Priorisierungsliste wurden Verbesserungen in einem noch unveröffentlichten Prototypen vorgenommen und Massnahmen zur verbesserten Nutzerführung ergriffen. Diese sollen auch vorgestellt werden. &lt;/p>
+&lt;/div>
+&lt;div type="div1" rend="DH-Heading">
+&lt;head>Schlussfolgerung&lt;/head>
+&lt;p>Damit digitale Tools in den Geisteswissenschaften kontinuierlich Verwendung finden, müssen sie auch einfach und effizient zu bedienen sein. Eine einfache Methode um die Usability kostengünstig und schnell testen zu können, bieten die von Nielsen (2012) aufgestellten Merkmale für eine nutzerfreundliche Software: Erlernbarkeit, Einprägsamkeit, Effizienz, Fehlertoleranz und Nutzerzufriedenheit. Spezifische Tools in den Geisteswissenschaften haben jedoch oft nicht die Möglichkeiten, eine grafische Benutzungsoberfläche anzubieten, die all diesen Kriterien vollends gerecht werden. Durch unsere Erfahrungen mit dem LAUDATIO Repositorium schlagen wir deshalb folgende Interpretation der Merkmale vor:&lt;/p>
+&lt;p>
+&lt;hi rend="underline">Erlernbarkeit:&lt;/hi> Die meisten geisteswissenschaftlichen Tools sind sehr speziell und setzen eine fachspezifische Grundausbildung voraus, die sich oft auch schon in dem verwendeten Vokabular niederschlägt. Die Erlernbarkeit sollte also darauf zielen, den NutzerInnen erklärende Tutorials und Dokumentationen anzubieten, die eine Einarbeitung verkürzen. Der Aufwand des Erlernens der Software sollte im Einklang mit dem Nutzen der Software stehen.
+                &lt;/p>
+&lt;p>
+&lt;hi rend="underline">Einprägsamkeit:&lt;/hi> Hier geht es darum, dass NutzerInnen sich auch nach längerer Pause wieder in die Funktionalitäten des Tools einarbeiten können. Wie in Punkt 1 ist hier Dokumentation wichtig, aber auch eindeutiges Vokabular und prägnantes Design. Wenn es viele Parameter zur Einstellung gibt, sollten Möglichkeiten vorhanden sein, diese zu speichern oder zu exportieren, um sie später nachnutzen zu können.
+                &lt;/p>
+&lt;p>
+&lt;hi rend="underline">Effizienz:&lt;/hi> Hier geht es um die Schnelligkeit, mit der NutzerInnen zum Ziel kommen. Dies beinhaltet neben schnellen Ladezeiten auch das Liefern von Systemfeedback für Nutzerinteraktionen.
+                &lt;/p>
+&lt;p>
+&lt;hi rend="underline">Fehler:&lt;/hi> In diesem Punkt geht es um die Toleranz, mit der das System auch fehlerhafte Eingaben von NutzerInnen verarbeitet und zurückmelden kann und dieser trotzdem sein Ziel erreicht. Dies hat aber für geisteswissenschaftliche Tools noch eine andere Dimension: Verfahren und algorithmische Berechnungen müssen so transparent sein, dass NutzerInnen nicht durch falsche Bedienung Resultate, die einen Einfluss auf die Beantwortung der Forschungsfrage haben, zurückgeliefert bekommen. Es sollte immer klar sein, was das Tool mit welchen Daten macht und wie die Resultate zu interpretieren sind und warum welche Ergebnisse erzielt wurden. Es ist natürlich immer die Aufgabe der WissenschaftlerInnen, die sich des Tools bedienen, auf die Verlässlichkeit und Nachvollziehbarkeit ihrer Daten zu achten. Doch spielen hier die graphischen Benutzeroberflächen eine unterstützende Rolle und sollten gerade im wissenschaftlichen Bereich nicht in die Irre führen.
+&lt;/p>
+&lt;p>
+&lt;hi rend="underline">Nutzerzufriedenheit:&lt;/hi> Natürlich spielt auch die Nutzerzufriedenheit eine Rolle, die sich meist aus dem Vorhandensein der vorangegangen Qualitätsmerkmale ergibt.
+                &lt;/p>
+&lt;p>In diesem Vortrag wollen wir unsere Erfahrung aus dem Usability-Test mit dem LAUDATIO Repositorium schildern und auf die daraufhin eingeleiteten Massnahmen zur Verbesserung der Nutzerführung eingehen. &lt;/p>
+&lt;/div>
+&lt;/body&gt;
+&lt;back>
+&lt;div type="Notes">
+&lt;note xml:id="n01" n="1">Long-term Access and Usage of Deeply Annotated Information&lt;/note>
+&lt;note xml:id="n02" n="2">Digital Research Tools (DiRT) Wiki mit umfangreicher Sammlung digitaler Tools für Geisteswissenschaftler_innen: &lt;ref target="http://dirtdirectory.org/">http://dirtdirectory.org&lt;/ref>&lt;/note>
+&lt;note xml:id="n03" n="3">Eine von Sears (1997) entwickelte Technik, die eine Kombination aus heuristic evaluations, cognitive walkthroughs und usability walkthroughs ist.&lt;/note>
+&lt;note xml:id="n04" n="4">Die Software ist unter Apache Licence 2.0 frei verfügbar und kann unter &lt;ref target="https://github.com/DZielke/laudatio">https://github.com/DZielke/laudatio&lt;/ref> aufgerufen werden.&lt;/note>
+&lt;note xml:id="n05" n="5">Sears (1997) beschreibt die Vor- und Nachteile verschiedener Evaluationstechniken – auch der heuristischen Evaluation. Er stellt heraus, dass nicht jeder Verstoß gegen eine Heuristik auch immer ein Usability-Problem darstellt. Gerade ungeübte GutachterInnen laufen Gefahr, die Heuristiken auf jeder einzelnen Seite starr umgesetzt sehen zu wollen und verlieren dabei aus dem Blick, ob Verletzungen der Heuristiken wirklich einen Einfluss auf NutzerInnen haben.&lt;/note>
+&lt;/div>
+&lt;div type="bibliogr">
+&lt;listBibl>
+&lt;head>Bibliographie&lt;/head>
+&lt;bibl>
+&lt;hi rend="bold">Burghardt, Manuel&lt;/hi> (2012): “Annotationsergonomie:
+                    Design-Empfehlungen Für Linguistische Annotationswerkzeuge”, in: &lt;hi
+                    rend="italic">Information - Wissenschaft &amp;amp; Praxis&lt;/hi> 63, 5:
+                    300-304. &lt;/bibl>
+&lt;bibl>&lt;hi rend="bold">Department of Corpus Linguistics (Humboldt-University
+                      Berlin) / Department of Historical Linguistics (Humboldt-University
+                      Berlin) / Computer and Media Service (CMS) (Humboldt-University Berlin)
+                      / National Institute for Research in Computer Science and Control (INRIA
+                      France) / Berlin School of Library and Information Science (BSLIS)&lt;/hi>
+                      (2011-): &lt;hi rend="italic">LAUDATIO&lt;/hi>. Long-term Access and Usage of
+                      Deeply Annotated Information &lt;ref
+                      target="http://www.laudatio-repository.org/repository/"
+>http://www.laudatio-repository.org/repository/&lt;/ref> [letzter Zugriff
+                      13. Oktober 2015].&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Gibbs, Fred / &lt;/hi>
+&lt;hi rend="bold">Owens, Trevor&lt;/hi> (2012): “Building Better Digital
+                        Humanities Tools: Toward Broader Audiences and User-Centered Designs”, in:
+&lt;hi rend="italic">Digital Humanities Quarterly&lt;/hi> 6, 2 &lt;ref
+                        target="http://www.digitalhumanities.org/dhq/vol/6/2/000136/000136.html"
+>http://www.digitalhumanities.org/dhq/vol/6/2/000136/000136.html&lt;/ref>
+                        [letzter Zugriff 10. Februar 2016]. &lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Nielsen, Jakob&lt;/hi> (1995): "10 Usability Heuristics for
+                          User Interface Design", in: &lt;hi rend="italic">Nielson Norman Group&lt;/hi>.
+                          Evidence-Based User Experience Research, Training, and Consulting&lt;ref
+                          target="http://www.nngroup.com/articles/ten-usability-heuristics/"
+>http://www.nngroup.com/articles/ten-usability-heuristics/&lt;/ref>
+                          [letzter Zugriff 14. Oktober 2015].
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bild">&lt;hi rend="bold">Nielsen, Jakob&lt;/hi>&lt;/hi> (2012): "Usability
+                          101: Introduction to Usability", in: &lt;hi rend="italic">Nielson Norman
+                          Group&lt;/hi>. Evidence-Based User Experience Research, Training, and
+                          Consulting &lt;ref
+                          target="http://www.nngroup.com/articles/usability-101-introduction-to-usability/"
+>https://www.nngroup.com/articles/usability-101-introduction-to-usability/&lt;/ref>
+                          [letzter Zugriff 14. Oktober 2015]. &lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Schreibman, Susan / Siemens, Ray / Unsworth, John&lt;/hi>
+                            (2004): &lt;hi rend="italic">Companion to Digital Humanities &lt;/hi>(= Blackwell
+                            Companions to Literature and Culture). Oxford: Blackwell Publishing
+                            Professional. &lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Sears, Andrew&lt;/hi> (1997): “Heuristic Walkthroughs: Finding
+                              the Problems Without the Noise”, in: &lt;hi rend="italic">International Journal
+                              of Human-Computer Interaction&lt;/hi> 9, 3: 213-234. &lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Lewis, Clayton / Rieman, John&lt;/hi> (1994): &lt;hi rend="italic"
+                                >Task-Centered User Interface Design&lt;/hi>. A Practical Introduction.
+                                &lt;ref
+                                  target="http://grouplab.cpsc.ucalgary.ca/saul/hci_topics/tcsd-book/contents.html"
+>http://grouplab.cpsc.ucalgary.ca/saul/hci_topics/tcsd-book/contents.html&lt;/ref>
+                                  [letzter Zugriff 14. Oktober 2015].&lt;/bibl>
+&lt;/listBibl>
+&lt;/div>
+&lt;/back>
+&lt;/text>
+&lt;/TEI>
+    </textSource>
+    <text>
+
+
+Unter Usability verstehen wir die Gebrauchstauglichkeit einer Software, die ein           Qualitätsmerkmal der Benutzeroberfläche darstellt und als Teilaspekt der           gesamten User Experience anzusehen ist. Sie bildet die Grundlage positiver           Interaktionen und ist ein wichtiger Faktor für den Erfolg eines Tools. Es spielt           dabei eine entscheidende Rolle, inwieweit sich Nutzer_innen innerhalb der           Anwendung durch die verständliche Bedienbarkeit und den zu erwartenden Workflow           der einzelnen Funktionen zurechtfinden. Dabei ist es hilfreich, sie von Anfang           an mit in den Entwicklungsprozess einzubinden und ihre Arbeitsmethoden           kennenzulernen. Dazu dienen auch Mockups wie das Beispiel in Abbildung 1           illustriert. In diesem Vortrag wollen wir darstellen, wie Usability in den           Digital Humanities evaluiert werden kann und welche Probleme sich generell bei           der Softwareentwicklung in der Forschung auftun. Dafür werden wir grundlegende           Überlegungen zur Usability-Problematik anstellen. Anhand von Nutzungsszenarien           am Beispiel des im Projekt 
+LAUDATIO
+  
+1
+ (weiter-)entwickelten           Forschungsdatenrepositoriums für historische Textdaten demonstrieren wir, wie           eine kostengünstige und einfache Usability-Evaluierung stattfinden kann. Als           Verfahren wurden hierfür der Thinking-Aloud Test (Lewis / Rieman 1994), eine der           wichtigsten Methoden für die nutzerorientierte Evaluation, sowie eine           heuristische Evaluation angewandt. 
+
+
+    
+
+Die Usability von Tools und deren grafischen Benutzeroberflächen ist essentiell, um Nutzer_innen ein effektives               Arbeiten zu ermöglichen und Bedienfehler zu minimieren. Dabei muss man sich in               der großen Auswahl bereits existierender, einschlägiger DH-Tools 
+2
+ entscheiden, welche Anwendung für ein jeweiliges Szenario geeignet ist. 
+
+  
+
+Was in großen Teilen der Software-Entwicklung Standard ist, findet nur langsam                 Einzug in die Entwicklung von Tools für die geisteswissenschaftliche Forschung.                 So stellt Burghardt (2012) eine Kluft zwischen den Tool-Entwickler_innen und den                 die Tools nutzenden Fachwissenschaftler_innen heraus, die sich beispielsweise in                 fehlendem Usability-Engineering für linguistische Annotationswerkzeuge                 niederschlägt. Anhand eines Heuristic Walkthroughs 
+3
+ erstellt er Design-Empfehlungen für                 Annotationswerkzeuge. Er unterscheidet allgemeine und domainspezifische                 Usability-Probleme. Der Grund für nutzerunfreundliche Funktionen sind häufig                 mangelnde Ressourcen, aber auch fehlende Expertise auf dem Gebiet – dadurch                 können entwickelte Tools fehleranfälliger sein, besonders wenn sie nicht                 ausreichend getestet wurden. Gibbs und Brown (2012) sehen die fehlende                 Investition in Nutzeroberflächen als Grund für die Ablehnung von Tools durch                 frustrierte Nutzer_innen. Oftmals sind Software oder Tools von enthusiastischen                 EntwicklerInnen nur für ein Nischenpublikum gebaut, und die Usability hat bei                 der Entwicklung keinen hohen Stellenwert. 
+
+  
+
+Bisher wurde der Bedienbarkeit und Benutzbarkeit von digitalen Tools und Anwendungen im Bereich der Digital Humanities wenig Beachtung geschenkt. Aber gerade hier kann eine größere Akzeptanz und Nutzung des Tools/Services erreicht werden. Dabei muss eine Balance gefunden werden zwischen dem finanziellen Mehraufwand durch Umsetzung von Usability-Kriterien und der Spezifität des Tools, die eventuell nur einer kleinen Nutzergruppe zu Gute kommt. 
+
+  
+
+Die Kriterien nach Nielsen (1995) sollten auch bei der Entwicklung geisteswissenschaftlicher Tools/Services Anwendung finden, da sie enorm wichtig sind, um die Validität und die Nachprüfbarkeit der Ergebnisse, die durch ein solches Tool zustande kommen, zu fördern. Ein gut nutzbares Tool hilft dabei, Fehler zu vermeiden und Daten nachnutzbar zu machen – somit wird auch das Vertrauen gefördert.
+
+
+    
+
+Das evaluierte Repositorium, in dem die Daten gespeichert werden, basiert auf Open-Source-Technologien  
+4
+. Dessen Software-Module entsprechen allgemein den Anwendungsfunktionen Präsentation, Speicherung, Importieren und Suche. Basierend darauf wurde zuerst eine heuristische Evaluation  
+5
+ durchgeführt, bei der zwei Experten anhand der Usability-Heuristiken von Nielsen das Repositorium begutachteten. Dabei lag der Fokus auf diesen näher spezifizierten Funktionen von LAUDATIO:  
+
+    
+
+Hierbei wurden folgende Problematiken ausgemacht, die einer Nutzbarkeit des Systems abträglich sind :
+
+  
+
+1. Inkonsistenz in der Benennung und Verwendung von mehrdeutigem Vokabular und Missachtung graphischer Konventionen
+
+  
+
+2. Intransparenz des Systemstatus
+
+  
+
+3. Fehlende oder schwer auffindbare Dokumentation
+
+  
+
+4. Fehlende Strategien zur Fehlerverhütung
+
+  
+
+5. Missachtung von Konventionen in der Suche
+
+  
+
+Im nachfolgenden Schritt wurden von Seiten der EntwicklerInnen 10 Aufgaben für einen Usability-Test erstellt, die sich aus Nutzeranfragen und dem alltäglichen Arbeiten mit dem Repositorium ergaben. Diese Aufgaben wurden mit einer Testperson durchgeführt, wobei zwei Personen die Aktionen und die Kommentare der Probandin protokollierten, sowie Screencasts der einzelnen Sessions aufzeichneten.                   Hierfür wurde seitens der Betreiber ein Testkorpus mit Metadaten zur Verfügung gestellt, wofür XML-Kenntnisse vorausgesetzt wurden. Die Testperson führte den Test zum einen als nicht eingeloggte Nutzerin und zum anderen als eingeloggte Nutzerin mit erweiterten Rechten durch. Im zweiten Fall konnte sie über den Importprozess ein selbständig verändertes Korpus hochladen und anzeigen lassen. Obwohl die Testerin nicht aus dem Bereich der Linguistik kam und sich deswegen auch erst in die Begrifflichkeiten und Funktionen des Portal einarbeiten musste, wurden erhebliche Usability-Probleme eminent. In einem gemeinsamen Gespräch mit den Betreibern des LAUDATIO Repositoriums wurden die Problematiken benannt und eine Priorisierung der Usability-Probleme vorgenommen. Dabei wurden folgende Punkte als Kriterium für die Priorisierung herangezogen:  
+
+    
+
+Anhand der Priorisierungsliste wurden Verbesserungen in einem noch unveröffentlichten Prototypen vorgenommen und Massnahmen zur verbesserten Nutzerführung ergriffen. Diese sollen auch vorgestellt werden. 
+
+
+    
+
+Damit digitale Tools in den Geisteswissenschaften kontinuierlich Verwendung finden, müssen sie auch einfach und effizient zu bedienen sein. Eine einfache Methode um die Usability kostengünstig und schnell testen zu können, bieten die von Nielsen (2012) aufgestellten Merkmale für eine nutzerfreundliche Software: Erlernbarkeit, Einprägsamkeit, Effizienz, Fehlertoleranz und Nutzerzufriedenheit. Spezifische Tools in den Geisteswissenschaften haben jedoch oft nicht die Möglichkeiten, eine grafische Benutzungsoberfläche anzubieten, die all diesen Kriterien vollends gerecht werden. Durch unsere Erfahrungen mit dem LAUDATIO Repositorium schlagen wir deshalb folgende Interpretation der Merkmale vor:
+
+  
+
+  Erlernbarkeit: Die meisten geisteswissenschaftlichen Tools sind sehr speziell und setzen eine fachspezifische Grundausbildung voraus, die sich oft auch schon in dem verwendeten Vokabular niederschlägt. Die Erlernbarkeit sollte also darauf zielen, den NutzerInnen erklärende Tutorials und Dokumentationen anzubieten, die eine Einarbeitung verkürzen. Der Aufwand des Erlernens der Software sollte im Einklang mit dem Nutzen der Software stehen.  
+
+  
+
+  Einprägsamkeit: Hier geht es darum, dass NutzerInnen sich auch nach längerer Pause wieder in die Funktionalitäten des Tools einarbeiten können. Wie in Punkt 1 ist hier Dokumentation wichtig, aber auch eindeutiges Vokabular und prägnantes Design. Wenn es viele Parameter zur Einstellung gibt, sollten Möglichkeiten vorhanden sein, diese zu speichern oder zu exportieren, um sie später nachnutzen zu können.  
+
+  
+
+  Effizienz: Hier geht es um die Schnelligkeit, mit der NutzerInnen zum Ziel kommen. Dies beinhaltet neben schnellen Ladezeiten auch das Liefern von Systemfeedback für Nutzerinteraktionen.  
+
+  
+
+  Fehler: In diesem Punkt geht es um die Toleranz, mit der das System auch fehlerhafte Eingaben von NutzerInnen verarbeitet und zurückmelden kann und dieser trotzdem sein Ziel erreicht. Dies hat aber für geisteswissenschaftliche Tools noch eine andere Dimension: Verfahren und algorithmische Berechnungen müssen so transparent sein, dass NutzerInnen nicht durch falsche Bedienung Resultate, die einen Einfluss auf die Beantwortung der Forschungsfrage haben, zurückgeliefert bekommen. Es sollte immer klar sein, was das Tool mit welchen Daten macht und wie die Resultate zu interpretieren sind und warum welche Ergebnisse erzielt wurden. Es ist natürlich immer die Aufgabe der WissenschaftlerInnen, die sich des Tools bedienen, auf die Verlässlichkeit und Nachvollziehbarkeit ihrer Daten zu achten. Doch spielen hier die graphischen Benutzeroberflächen eine unterstützende Rolle und sollten gerade im wissenschaftlichen Bereich nicht in die Irre führen.  
+
+  
+
+  Nutzerzufriedenheit: Natürlich spielt auch die Nutzerzufriedenheit eine Rolle, die sich meist aus dem Vorhandensein der vorangegangen Qualitätsmerkmale ergibt.  
+
+  
+
+In diesem Vortrag wollen wir unsere Erfahrung aus dem Usability-Test mit dem LAUDATIO Repositorium schildern und auf die daraufhin eingeleiteten Massnahmen zur Verbesserung der Nutzerführung eingehen. 
+
+  
+
+  
+
+
+
+Einleitung
+
+
+
+    
+
+  Abb. 1: Mockup der facettierten Suche mit               Suchergebnissen
+
+  
+
+
+
+  Motivation und Hintergrund  
+
+
+
+  Usability am Beispiel des LAUDATIO Repositoriums  
+
+
+
+  
+
+Präsentation von Korpora,
+
+  
+
+Suche nach Korpora und in deren Dokumenten und Annotationen,
+
+  
+
+Herunterladen von Korpora,
+
+  
+
+Importieren von neuen und erweiterten Korpora,
+
+  
+
+Auseinandersetzung mit den verschiedenen Beschreibungen der einzelnen Korpora.
+
+  
+
+
+
+  
+
+Schwere der Problems / Störfaktor bei der Benutzung des Repositoriums
+
+  
+
+Häufigkeit, mit der die Nutzer mit dem Problem konfrontiert sind
+
+  
+
+Menge der Ressourcen, die für die Behebung des Problems nötig wären
+
+  
+
+
+
+Schlussfolgerung
+
+
+  
+
+        Burghardt, Manuel (2012): “Annotationsergonomie:                     Design-Empfehlungen Für Linguistische Annotationswerkzeuge”, in: Information - Wissenschaft &amp; Praxis 63, 5:                     300-304.   Department of Corpus Linguistics (Humboldt-University                       Berlin) / Department of Historical Linguistics (Humboldt-University                       Berlin) / Computer and Media Service (CMS) (Humboldt-University Berlin)                       / National Institute for Research in Computer Science and Control (INRIA                       France) / Berlin School of Library and Information Science (BSLIS)                       (2011-): LAUDATIO. Long-term Access and Usage of                       Deeply Annotated Information 
+http://www.laudatio-repository.org/repository/
+ [letzter Zugriff                       13. Oktober 2015].    Gibbs, Fred /   Owens, Trevor (2012): “Building Better Digital                         Humanities Tools: Toward Broader Audiences and User-Centered Designs”, in:  Digital Humanities Quarterly 6, 2 
+http://www.digitalhumanities.org/dhq/vol/6/2/000136/000136.html
+                         [letzter Zugriff 10. Februar 2016].     Nielsen, Jakob (1995): "10 Usability Heuristics for                           User Interface Design", in: Nielson Norman Group.                           Evidence-Based User Experience Research, Training, and Consulting
+http://www.nngroup.com/articles/ten-usability-heuristics/
+                           [letzter Zugriff 14. Oktober 2015].      Nielsen, Jakob (2012): "Usability                           101: Introduction to Usability", in: Nielson Norman                           Group. Evidence-Based User Experience Research, Training, and                           Consulting 
+https://www.nngroup.com/articles/usability-101-introduction-to-usability/
+                           [letzter Zugriff 14. Oktober 2015].     Schreibman, Susan / Siemens, Ray / Unsworth, John                             (2004): Companion to Digital Humanities (= Blackwell                             Companions to Literature and Culture). Oxford: Blackwell Publishing                             Professional.     Sears, Andrew (1997): “Heuristic Walkthroughs: Finding                               the Problems Without the Noise”, in: International Journal                               of Human-Computer Interaction 9, 3: 213-234.     Lewis, Clayton / Rieman, John (1994): Task-Centered User Interface Design. A Practical Introduction.  
+http://grouplab.cpsc.ucalgary.ca/saul/hci_topics/tcsd-book/contents.html
+                                   [letzter Zugriff 14. Oktober 2015].    
+
+  
+
+
+
+Long-term Access and Usage of Deeply Annotated Information
+
+
+
+Digital Research Tools (DiRT) Wiki mit umfangreicher Sammlung digitaler Tools für Geisteswissenschaftler_innen: 
+http://dirtdirectory.org
+
+
+
+
+Eine von Sears (1997) entwickelte Technik, die eine Kombination aus heuristic evaluations, cognitive walkthroughs und usability walkthroughs ist.
+
+
+
+Die Software ist unter Apache Licence 2.0 frei verfügbar und kann unter 
+https://github.com/DZielke/laudatio
+ aufgerufen werden.
+
+
+
+Sears (1997) beschreibt die Vor- und Nachteile verschiedener Evaluationstechniken – auch der heuristischen Evaluation. Er stellt heraus, dass nicht jeder Verstoß gegen eine Heuristik auch immer ein Usability-Problem darstellt. Gerade ungeübte GutachterInnen laufen Gefahr, die Heuristiken auf jeder einzelnen Seite starr umgesetzt sehen zu wollen und verlieren dabei aus dem Blick, ob Verletzungen der Heuristiken wirklich einen Einfluss auf NutzerInnen haben.
+
+
+
+Bibliographie
+    </text>
+    <tc:tokens xmlns:tc="http://www.dspin.de/data/textcorpus">
+      <tc:token ID="w1">Unter</tc:token>
+      <tc:token ID="w2">Usability</tc:token>
+      <tc:token ID="w3">verstehen</tc:token>
+      <tc:token ID="w4">wir</tc:token>
+      <tc:token ID="w5">die</tc:token>
+      <tc:token ID="w6">Gebrauchstauglichkeit</tc:token>
+      <tc:token ID="w7">einer</tc:token>
+      <tc:token ID="w8">Software</tc:token>
+      <tc:token ID="w9">,</tc:token>
+      <tc:token ID="wa">die</tc:token>
+      <tc:token ID="wb">ein</tc:token>
+      <tc:token ID="wc">Qualitätsmerkmal</tc:token>
+      <tc:token ID="wd">der</tc:token>
+      <tc:token ID="we">Benutzeroberfläche</tc:token>
+      <tc:token ID="wf">darstellt</tc:token>
+      <tc:token ID="w10">und</tc:token>
+      <tc:token ID="w11">als</tc:token>
+      <tc:token ID="w12">Teilaspekt</tc:token>
+      <tc:token ID="w13">der</tc:token>
+      <tc:token ID="w14">gesamten</tc:token>
+      <tc:token ID="w15">User</tc:token>
+      <tc:token ID="w16">Experience</tc:token>
+      <tc:token ID="w17">anzusehen</tc:token>
+      <tc:token ID="w18">ist</tc:token>
+      <tc:token ID="w19">.</tc:token>
+      <tc:token ID="w1a">Sie</tc:token>
+      <tc:token ID="w1b">bildet</tc:token>
+      <tc:token ID="w1c">die</tc:token>
+      <tc:token ID="w1d">Grundlage</tc:token>
+      <tc:token ID="w1e">positiver</tc:token>
+      <tc:token ID="w1f">Interaktionen</tc:token>
+      <tc:token ID="w20">und</tc:token>
+      <tc:token ID="w21">ist</tc:token>
+      <tc:token ID="w22">ein</tc:token>
+      <tc:token ID="w23">wichtiger</tc:token>
+      <tc:token ID="w24">Faktor</tc:token>
+      <tc:token ID="w25">für</tc:token>
+      <tc:token ID="w26">den</tc:token>
+      <tc:token ID="w27">Erfolg</tc:token>
+      <tc:token ID="w28">eines</tc:token>
+      <tc:token ID="w29">Tools</tc:token>
+      <tc:token ID="w2a">.</tc:token>
+      <tc:token ID="w2b">Es</tc:token>
+      <tc:token ID="w2c">spielt</tc:token>
+      <tc:token ID="w2d">dabei</tc:token>
+      <tc:token ID="w2e">eine</tc:token>
+      <tc:token ID="w2f">entscheidende</tc:token>
+      <tc:token ID="w30">Rolle</tc:token>
+      <tc:token ID="w31">,</tc:token>
+      <tc:token ID="w32">inwieweit</tc:token>
+      <tc:token ID="w33">sich</tc:token>
+      <tc:token ID="w34">Nutzer_innen</tc:token>
+      <tc:token ID="w35">innerhalb</tc:token>
+      <tc:token ID="w36">der</tc:token>
+      <tc:token ID="w37">Anwendung</tc:token>
+      <tc:token ID="w38">durch</tc:token>
+      <tc:token ID="w39">die</tc:token>
+      <tc:token ID="w3a">verständliche</tc:token>
+      <tc:token ID="w3b">Bedienbarkeit</tc:token>
+      <tc:token ID="w3c">und</tc:token>
+      <tc:token ID="w3d">den</tc:token>
+      <tc:token ID="w3e">zu</tc:token>
+      <tc:token ID="w3f">erwartenden</tc:token>
+      <tc:token ID="w40">Workflow</tc:token>
+      <tc:token ID="w41">der</tc:token>
+      <tc:token ID="w42">einzelnen</tc:token>
+      <tc:token ID="w43">Funktionen</tc:token>
+      <tc:token ID="w44">zurechtfinden</tc:token>
+      <tc:token ID="w45">.</tc:token>
+      <tc:token ID="w46">Dabei</tc:token>
+      <tc:token ID="w47">ist</tc:token>
+      <tc:token ID="w48">es</tc:token>
+      <tc:token ID="w49">hilfreich</tc:token>
+      <tc:token ID="w4a">,</tc:token>
+      <tc:token ID="w4b">sie</tc:token>
+      <tc:token ID="w4c">von</tc:token>
+      <tc:token ID="w4d">Anfang</tc:token>
+      <tc:token ID="w4e">an</tc:token>
+      <tc:token ID="w4f">mit</tc:token>
+      <tc:token ID="w50">in</tc:token>
+      <tc:token ID="w51">den</tc:token>
+      <tc:token ID="w52">Entwicklungsprozess</tc:token>
+      <tc:token ID="w53">einzubinden</tc:token>
+      <tc:token ID="w54">und</tc:token>
+      <tc:token ID="w55">ihre</tc:token>
+      <tc:token ID="w56">Arbeitsmethoden</tc:token>
+      <tc:token ID="w57">kennenzulernen</tc:token>
+      <tc:token ID="w58">.</tc:token>
+      <tc:token ID="w59">Dazu</tc:token>
+      <tc:token ID="w5a">dienen</tc:token>
+      <tc:token ID="w5b">auch</tc:token>
+      <tc:token ID="w5c">Mockups</tc:token>
+      <tc:token ID="w5d">wie</tc:token>
+      <tc:token ID="w5e">das</tc:token>
+      <tc:token ID="w5f">Beispiel</tc:token>
+      <tc:token ID="w60">in</tc:token>
+      <tc:token ID="w61">Abbildung</tc:token>
+      <tc:token ID="w62">1</tc:token>
+      <tc:token ID="w63">illustriert</tc:token>
+      <tc:token ID="w64">.</tc:token>
+      <tc:token ID="w65">In</tc:token>
+      <tc:token ID="w66">diesem</tc:token>
+      <tc:token ID="w67">Vortrag</tc:token>
+      <tc:token ID="w68">wollen</tc:token>
+      <tc:token ID="w69">wir</tc:token>
+      <tc:token ID="w6a">darstellen</tc:token>
+      <tc:token ID="w6b">,</tc:token>
+      <tc:token ID="w6c">wie</tc:token>
+      <tc:token ID="w6d">Usability</tc:token>
+      <tc:token ID="w6e">in</tc:token>
+      <tc:token ID="w6f">den</tc:token>
+      <tc:token ID="w70">Digital</tc:token>
+      <tc:token ID="w71">Humanities</tc:token>
+      <tc:token ID="w72">evaluiert</tc:token>
+      <tc:token ID="w73">werden</tc:token>
+      <tc:token ID="w74">kann</tc:token>
+      <tc:token ID="w75">und</tc:token>
+      <tc:token ID="w76">welche</tc:token>
+      <tc:token ID="w77">Probleme</tc:token>
+      <tc:token ID="w78">sich</tc:token>
+      <tc:token ID="w79">generell</tc:token>
+      <tc:token ID="w7a">bei</tc:token>
+      <tc:token ID="w7b">der</tc:token>
+      <tc:token ID="w7c">Softwareentwicklung</tc:token>
+      <tc:token ID="w7d">in</tc:token>
+      <tc:token ID="w7e">der</tc:token>
+      <tc:token ID="w7f">Forschung</tc:token>
+      <tc:token ID="w80">auftun</tc:token>
+      <tc:token ID="w81">.</tc:token>
+      <tc:token ID="w82">Dafür</tc:token>
+      <tc:token ID="w83">werden</tc:token>
+      <tc:token ID="w84">wir</tc:token>
+      <tc:token ID="w85">grundlegende</tc:token>
+      <tc:token ID="w86">Überlegungen</tc:token>
+      <tc:token ID="w87">zur</tc:token>
+      <tc:token ID="w88">Usability-Problematik</tc:token>
+      <tc:token ID="w89">anstellen</tc:token>
+      <tc:token ID="w8a">.</tc:token>
+      <tc:token ID="w8b">Anhand</tc:token>
+      <tc:token ID="w8c">von</tc:token>
+      <tc:token ID="w8d">Nutzungsszenarien</tc:token>
+      <tc:token ID="w8e">am</tc:token>
+      <tc:token ID="w8f">Beispiel</tc:token>
+      <tc:token ID="w90">des</tc:token>
+      <tc:token ID="w91">im</tc:token>
+      <tc:token ID="w92">Projekt</tc:token>
+      <tc:token ID="w93">LAUDATIO</tc:token>
+      <tc:token ID="w94">1</tc:token>
+      <tc:token ID="w95">(weiter-)entwickelten</tc:token>
+      <tc:token ID="w96">Forschungsdatenrepositoriums</tc:token>
+      <tc:token ID="w97">für</tc:token>
+      <tc:token ID="w98">historische</tc:token>
+      <tc:token ID="w99">Textdaten</tc:token>
+      <tc:token ID="w9a">demonstrieren</tc:token>
+      <tc:token ID="w9b">wir</tc:token>
+      <tc:token ID="w9c">,</tc:token>
+      <tc:token ID="w9d">wie</tc:token>
+      <tc:token ID="w9e">eine</tc:token>
+      <tc:token ID="w9f">kostengünstige</tc:token>
+      <tc:token ID="wa0">und</tc:token>
+      <tc:token ID="wa1">einfache</tc:token>
+      <tc:token ID="wa2">Usability-Evaluierung</tc:token>
+      <tc:token ID="wa3">stattfinden</tc:token>
+      <tc:token ID="wa4">kann</tc:token>
+      <tc:token ID="wa5">.</tc:token>
+      <tc:token ID="wa6">Als</tc:token>
+      <tc:token ID="wa7">Verfahren</tc:token>
+      <tc:token ID="wa8">wurden</tc:token>
+      <tc:token ID="wa9">hierfür</tc:token>
+      <tc:token ID="waa">der</tc:token>
+      <tc:token ID="wab">Thinking-Aloud</tc:token>
+      <tc:token ID="wac">Test</tc:token>
+      <tc:token ID="wad">(</tc:token>
+      <tc:token ID="wae">Lewis</tc:token>
+      <tc:token ID="waf">/</tc:token>
+      <tc:token ID="wb0">Rieman</tc:token>
+      <tc:token ID="wb1">1994</tc:token>
+      <tc:token ID="wb2">)</tc:token>
+      <tc:token ID="wb3">,</tc:token>
+      <tc:token ID="wb4">eine</tc:token>
+      <tc:token ID="wb5">der</tc:token>
+      <tc:token ID="wb6">wichtigsten</tc:token>
+      <tc:token ID="wb7">Methoden</tc:token>
+      <tc:token ID="wb8">für</tc:token>
+      <tc:token ID="wb9">die</tc:token>
+      <tc:token ID="wba">nutzerorientierte</tc:token>
+      <tc:token ID="wbb">Evaluation</tc:token>
+      <tc:token ID="wbc">,</tc:token>
+      <tc:token ID="wbd">sowie</tc:token>
+      <tc:token ID="wbe">eine</tc:token>
+      <tc:token ID="wbf">heuristische</tc:token>
+      <tc:token ID="wc0">Evaluation</tc:token>
+      <tc:token ID="wc1">angewandt</tc:token>
+      <tc:token ID="wc2">.</tc:token>
+      <tc:token ID="wc3">Die</tc:token>
+      <tc:token ID="wc4">Usability</tc:token>
+      <tc:token ID="wc5">von</tc:token>
+      <tc:token ID="wc6">Tools</tc:token>
+      <tc:token ID="wc7">und</tc:token>
+      <tc:token ID="wc8">deren</tc:token>
+      <tc:token ID="wc9">grafischen</tc:token>
+      <tc:token ID="wca">Benutzeroberflächen</tc:token>
+      <tc:token ID="wcb">ist</tc:token>
+      <tc:token ID="wcc">essentiell</tc:token>
+      <tc:token ID="wcd">,</tc:token>
+      <tc:token ID="wce">um</tc:token>
+      <tc:token ID="wcf">Nutzer_innen</tc:token>
+      <tc:token ID="wd0">ein</tc:token>
+      <tc:token ID="wd1">effektives</tc:token>
+      <tc:token ID="wd2">Arbeiten</tc:token>
+      <tc:token ID="wd3">zu</tc:token>
+      <tc:token ID="wd4">ermöglichen</tc:token>
+      <tc:token ID="wd5">und</tc:token>
+      <tc:token ID="wd6">Bedienfehler</tc:token>
+      <tc:token ID="wd7">zu</tc:token>
+      <tc:token ID="wd8">minimieren</tc:token>
+      <tc:token ID="wd9">.</tc:token>
+      <tc:token ID="wda">Dabei</tc:token>
+      <tc:token ID="wdb">muss</tc:token>
+      <tc:token ID="wdc">man</tc:token>
+      <tc:token ID="wdd">sich</tc:token>
+      <tc:token ID="wde">in</tc:token>
+      <tc:token ID="wdf">der</tc:token>
+      <tc:token ID="we0">großen</tc:token>
+      <tc:token ID="we1">Auswahl</tc:token>
+      <tc:token ID="we2">bereits</tc:token>
+      <tc:token ID="we3">existierender</tc:token>
+      <tc:token ID="we4">,</tc:token>
+      <tc:token ID="we5">einschlägiger</tc:token>
+      <tc:token ID="we6">DH-Tools</tc:token>
+      <tc:token ID="we7">2</tc:token>
+      <tc:token ID="we8">entscheiden</tc:token>
+      <tc:token ID="we9">,</tc:token>
+      <tc:token ID="wea">welche</tc:token>
+      <tc:token ID="web">Anwendung</tc:token>
+      <tc:token ID="wec">für</tc:token>
+      <tc:token ID="wed">ein</tc:token>
+      <tc:token ID="wee">jeweiliges</tc:token>
+      <tc:token ID="wef">Szenario</tc:token>
+      <tc:token ID="wf0">geeignet</tc:token>
+      <tc:token ID="wf1">ist</tc:token>
+      <tc:token ID="wf2">.</tc:token>
+      <tc:token ID="wf3">Was</tc:token>
+      <tc:token ID="wf4">in</tc:token>
+      <tc:token ID="wf5">großen</tc:token>
+      <tc:token ID="wf6">Teilen</tc:token>
+      <tc:token ID="wf7">der</tc:token>
+      <tc:token ID="wf8">Software-Entwicklung</tc:token>
+      <tc:token ID="wf9">Standard</tc:token>
+      <tc:token ID="wfa">ist</tc:token>
+      <tc:token ID="wfb">,</tc:token>
+      <tc:token ID="wfc">findet</tc:token>
+      <tc:token ID="wfd">nur</tc:token>
+      <tc:token ID="wfe">langsam</tc:token>
+      <tc:token ID="wff">Einzug</tc:token>
+      <tc:token ID="w100">in</tc:token>
+      <tc:token ID="w101">die</tc:token>
+      <tc:token ID="w102">Entwicklung</tc:token>
+      <tc:token ID="w103">von</tc:token>
+      <tc:token ID="w104">Tools</tc:token>
+      <tc:token ID="w105">für</tc:token>
+      <tc:token ID="w106">die</tc:token>
+      <tc:token ID="w107">geisteswissenschaftliche</tc:token>
+      <tc:token ID="w108">Forschung</tc:token>
+      <tc:token ID="w109">.</tc:token>
+      <tc:token ID="w10a">So</tc:token>
+      <tc:token ID="w10b">stellt</tc:token>
+      <tc:token ID="w10c">Burghardt</tc:token>
+      <tc:token ID="w10d">(</tc:token>
+      <tc:token ID="w10e">2012</tc:token>
+      <tc:token ID="w10f">)</tc:token>
+      <tc:token ID="w110">eine</tc:token>
+      <tc:token ID="w111">Kluft</tc:token>
+      <tc:token ID="w112">zwischen</tc:token>
+      <tc:token ID="w113">den</tc:token>
+      <tc:token ID="w114">Tool-Entwickler_innen</tc:token>
+      <tc:token ID="w115">und</tc:token>
+      <tc:token ID="w116">den</tc:token>
+      <tc:token ID="w117">die</tc:token>
+      <tc:token ID="w118">Tools</tc:token>
+      <tc:token ID="w119">nutzenden</tc:token>
+      <tc:token ID="w11a">Fachwissenschaftler_innen</tc:token>
+      <tc:token ID="w11b">heraus</tc:token>
+      <tc:token ID="w11c">,</tc:token>
+      <tc:token ID="w11d">die</tc:token>
+      <tc:token ID="w11e">sich</tc:token>
+      <tc:token ID="w11f">beispielsweise</tc:token>
+      <tc:token ID="w120">in</tc:token>
+      <tc:token ID="w121">fehlendem</tc:token>
+      <tc:token ID="w122">Usability-Engineering</tc:token>
+      <tc:token ID="w123">für</tc:token>
+      <tc:token ID="w124">linguistische</tc:token>
+      <tc:token ID="w125">Annotationswerkzeuge</tc:token>
+      <tc:token ID="w126">niederschlägt</tc:token>
+      <tc:token ID="w127">.</tc:token>
+      <tc:token ID="w128">Anhand</tc:token>
+      <tc:token ID="w129">eines</tc:token>
+      <tc:token ID="w12a">Heuristic</tc:token>
+      <tc:token ID="w12b">Walkthroughs</tc:token>
+      <tc:token ID="w12c">3</tc:token>
+      <tc:token ID="w12d">erstellt</tc:token>
+      <tc:token ID="w12e">er</tc:token>
+      <tc:token ID="w12f">Design-Empfehlungen</tc:token>
+      <tc:token ID="w130">für</tc:token>
+      <tc:token ID="w131">Annotationswerkzeuge</tc:token>
+      <tc:token ID="w132">.</tc:token>
+      <tc:token ID="w133">Er</tc:token>
+      <tc:token ID="w134">unterscheidet</tc:token>
+      <tc:token ID="w135">allgemeine</tc:token>
+      <tc:token ID="w136">und</tc:token>
+      <tc:token ID="w137">domainspezifische</tc:token>
+      <tc:token ID="w138">Usability-Probleme</tc:token>
+      <tc:token ID="w139">.</tc:token>
+      <tc:token ID="w13a">Der</tc:token>
+      <tc:token ID="w13b">Grund</tc:token>
+      <tc:token ID="w13c">für</tc:token>
+      <tc:token ID="w13d">nutzerunfreundliche</tc:token>
+      <tc:token ID="w13e">Funktionen</tc:token>
+      <tc:token ID="w13f">sind</tc:token>
+      <tc:token ID="w140">häufig</tc:token>
+      <tc:token ID="w141">mangelnde</tc:token>
+      <tc:token ID="w142">Ressourcen</tc:token>
+      <tc:token ID="w143">,</tc:token>
+      <tc:token ID="w144">aber</tc:token>
+      <tc:token ID="w145">auch</tc:token>
+      <tc:token ID="w146">fehlende</tc:token>
+      <tc:token ID="w147">Expertise</tc:token>
+      <tc:token ID="w148">auf</tc:token>
+      <tc:token ID="w149">dem</tc:token>
+      <tc:token ID="w14a">Gebiet</tc:token>
+      <tc:token ID="w14b">–</tc:token>
+      <tc:token ID="w14c">dadurch</tc:token>
+      <tc:token ID="w14d">können</tc:token>
+      <tc:token ID="w14e">entwickelte</tc:token>
+      <tc:token ID="w14f">Tools</tc:token>
+      <tc:token ID="w150">fehleranfälliger</tc:token>
+      <tc:token ID="w151">sein</tc:token>
+      <tc:token ID="w152">,</tc:token>
+      <tc:token ID="w153">besonders</tc:token>
+      <tc:token ID="w154">wenn</tc:token>
+      <tc:token ID="w155">sie</tc:token>
+      <tc:token ID="w156">nicht</tc:token>
+      <tc:token ID="w157">ausreichend</tc:token>
+      <tc:token ID="w158">getestet</tc:token>
+      <tc:token ID="w159">wurden</tc:token>
+      <tc:token ID="w15a">.</tc:token>
+      <tc:token ID="w15b">Gibbs</tc:token>
+      <tc:token ID="w15c">und</tc:token>
+      <tc:token ID="w15d">Brown</tc:token>
+      <tc:token ID="w15e">(</tc:token>
+      <tc:token ID="w15f">2012</tc:token>
+      <tc:token ID="w160">)</tc:token>
+      <tc:token ID="w161">sehen</tc:token>
+      <tc:token ID="w162">die</tc:token>
+      <tc:token ID="w163">fehlende</tc:token>
+      <tc:token ID="w164">Investition</tc:token>
+      <tc:token ID="w165">in</tc:token>
+      <tc:token ID="w166">Nutzeroberflächen</tc:token>
+      <tc:token ID="w167">als</tc:token>
+      <tc:token ID="w168">Grund</tc:token>
+      <tc:token ID="w169">für</tc:token>
+      <tc:token ID="w16a">die</tc:token>
+      <tc:token ID="w16b">Ablehnung</tc:token>
+      <tc:token ID="w16c">von</tc:token>
+      <tc:token ID="w16d">Tools</tc:token>
+      <tc:token ID="w16e">durch</tc:token>
+      <tc:token ID="w16f">frustrierte</tc:token>
+      <tc:token ID="w170">Nutzer_innen</tc:token>
+      <tc:token ID="w171">.</tc:token>
+      <tc:token ID="w172">Oftmals</tc:token>
+      <tc:token ID="w173">sind</tc:token>
+      <tc:token ID="w174">Software</tc:token>
+      <tc:token ID="w175">oder</tc:token>
+      <tc:token ID="w176">Tools</tc:token>
+      <tc:token ID="w177">von</tc:token>
+      <tc:token ID="w178">enthusiastischen</tc:token>
+      <tc:token ID="w179">EntwicklerInnen</tc:token>
+      <tc:token ID="w17a">nur</tc:token>
+      <tc:token ID="w17b">für</tc:token>
+      <tc:token ID="w17c">ein</tc:token>
+      <tc:token ID="w17d">Nischenpublikum</tc:token>
+      <tc:token ID="w17e">gebaut</tc:token>
+      <tc:token ID="w17f">,</tc:token>
+      <tc:token ID="w180">und</tc:token>
+      <tc:token ID="w181">die</tc:token>
+      <tc:token ID="w182">Usability</tc:token>
+      <tc:token ID="w183">hat</tc:token>
+      <tc:token ID="w184">bei</tc:token>
+      <tc:token ID="w185">der</tc:token>
+      <tc:token ID="w186">Entwicklung</tc:token>
+      <tc:token ID="w187">keinen</tc:token>
+      <tc:token ID="w188">hohen</tc:token>
+      <tc:token ID="w189">Stellenwert</tc:token>
+      <tc:token ID="w18a">.</tc:token>
+      <tc:token ID="w18b">Bisher</tc:token>
+      <tc:token ID="w18c">wurde</tc:token>
+      <tc:token ID="w18d">der</tc:token>
+      <tc:token ID="w18e">Bedienbarkeit</tc:token>
+      <tc:token ID="w18f">und</tc:token>
+      <tc:token ID="w190">Benutzbarkeit</tc:token>
+      <tc:token ID="w191">von</tc:token>
+      <tc:token ID="w192">digitalen</tc:token>
+      <tc:token ID="w193">Tools</tc:token>
+      <tc:token ID="w194">und</tc:token>
+      <tc:token ID="w195">Anwendungen</tc:token>
+      <tc:token ID="w196">im</tc:token>
+      <tc:token ID="w197">Bereich</tc:token>
+      <tc:token ID="w198">der</tc:token>
+      <tc:token ID="w199">Digital</tc:token>
+      <tc:token ID="w19a">Humanities</tc:token>
+      <tc:token ID="w19b">wenig</tc:token>
+      <tc:token ID="w19c">Beachtung</tc:token>
+      <tc:token ID="w19d">geschenkt</tc:token>
+      <tc:token ID="w19e">.</tc:token>
+      <tc:token ID="w19f">Aber</tc:token>
+      <tc:token ID="w1a0">gerade</tc:token>
+      <tc:token ID="w1a1">hier</tc:token>
+      <tc:token ID="w1a2">kann</tc:token>
+      <tc:token ID="w1a3">eine</tc:token>
+      <tc:token ID="w1a4">größere</tc:token>
+      <tc:token ID="w1a5">Akzeptanz</tc:token>
+      <tc:token ID="w1a6">und</tc:token>
+      <tc:token ID="w1a7">Nutzung</tc:token>
+      <tc:token ID="w1a8">des</tc:token>
+      <tc:token ID="w1a9">Tools</tc:token>
+      <tc:token ID="w1aa">/Services</tc:token>
+      <tc:token ID="w1ab">erreicht</tc:token>
+      <tc:token ID="w1ac">werden</tc:token>
+      <tc:token ID="w1ad">.</tc:token>
+      <tc:token ID="w1ae">Dabei</tc:token>
+      <tc:token ID="w1af">muss</tc:token>
+      <tc:token ID="w1b0">eine</tc:token>
+      <tc:token ID="w1b1">Balance</tc:token>
+      <tc:token ID="w1b2">gefunden</tc:token>
+      <tc:token ID="w1b3">werden</tc:token>
+      <tc:token ID="w1b4">zwischen</tc:token>
+      <tc:token ID="w1b5">dem</tc:token>
+      <tc:token ID="w1b6">finanziellen</tc:token>
+      <tc:token ID="w1b7">Mehraufwand</tc:token>
+      <tc:token ID="w1b8">durch</tc:token>
+      <tc:token ID="w1b9">Umsetzung</tc:token>
+      <tc:token ID="w1ba">von</tc:token>
+      <tc:token ID="w1bb">Usability-Kriterien</tc:token>
+      <tc:token ID="w1bc">und</tc:token>
+      <tc:token ID="w1bd">der</tc:token>
+      <tc:token ID="w1be">Spezifität</tc:token>
+      <tc:token ID="w1bf">des</tc:token>
+      <tc:token ID="w1c0">Tools</tc:token>
+      <tc:token ID="w1c1">,</tc:token>
+      <tc:token ID="w1c2">die</tc:token>
+      <tc:token ID="w1c3">eventuell</tc:token>
+      <tc:token ID="w1c4">nur</tc:token>
+      <tc:token ID="w1c5">einer</tc:token>
+      <tc:token ID="w1c6">kleinen</tc:token>
+      <tc:token ID="w1c7">Nutzergruppe</tc:token>
+      <tc:token ID="w1c8">zu</tc:token>
+      <tc:token ID="w1c9">Gute</tc:token>
+      <tc:token ID="w1ca">kommt</tc:token>
+      <tc:token ID="w1cb">.</tc:token>
+      <tc:token ID="w1cc">Die</tc:token>
+      <tc:token ID="w1cd">Kriterien</tc:token>
+      <tc:token ID="w1ce">nach</tc:token>
+      <tc:token ID="w1cf">Nielsen</tc:token>
+      <tc:token ID="w1d0">(</tc:token>
+      <tc:token ID="w1d1">1995</tc:token>
+      <tc:token ID="w1d2">)</tc:token>
+      <tc:token ID="w1d3">sollten</tc:token>
+      <tc:token ID="w1d4">auch</tc:token>
+      <tc:token ID="w1d5">bei</tc:token>
+      <tc:token ID="w1d6">der</tc:token>
+      <tc:token ID="w1d7">Entwicklung</tc:token>
+      <tc:token ID="w1d8">geisteswissenschaftlicher</tc:token>
+      <tc:token ID="w1d9">Tools</tc:token>
+      <tc:token ID="w1da">/Services</tc:token>
+      <tc:token ID="w1db">Anwendung</tc:token>
+      <tc:token ID="w1dc">finden</tc:token>
+      <tc:token ID="w1dd">,</tc:token>
+      <tc:token ID="w1de">da</tc:token>
+      <tc:token ID="w1df">sie</tc:token>
+      <tc:token ID="w1e0">enorm</tc:token>
+      <tc:token ID="w1e1">wichtig</tc:token>
+      <tc:token ID="w1e2">sind</tc:token>
+      <tc:token ID="w1e3">,</tc:token>
+      <tc:token ID="w1e4">um</tc:token>
+      <tc:token ID="w1e5">die</tc:token>
+      <tc:token ID="w1e6">Validität</tc:token>
+      <tc:token ID="w1e7">und</tc:token>
+      <tc:token ID="w1e8">die</tc:token>
+      <tc:token ID="w1e9">Nachprüfbarkeit</tc:token>
+      <tc:token ID="w1ea">der</tc:token>
+      <tc:token ID="w1eb">Ergebnisse</tc:token>
+      <tc:token ID="w1ec">,</tc:token>
+      <tc:token ID="w1ed">die</tc:token>
+      <tc:token ID="w1ee">durch</tc:token>
+      <tc:token ID="w1ef">ein</tc:token>
+      <tc:token ID="w1f0">solches</tc:token>
+      <tc:token ID="w1f1">Tool</tc:token>
+      <tc:token ID="w1f2">zustande</tc:token>
+      <tc:token ID="w1f3">kommen</tc:token>
+      <tc:token ID="w1f4">,</tc:token>
+      <tc:token ID="w1f5">zu</tc:token>
+      <tc:token ID="w1f6">fördern</tc:token>
+      <tc:token ID="w1f7">.</tc:token>
+      <tc:token ID="w1f8">Ein</tc:token>
+      <tc:token ID="w1f9">gut</tc:token>
+      <tc:token ID="w1fa">nutzbares</tc:token>
+      <tc:token ID="w1fb">Tool</tc:token>
+      <tc:token ID="w1fc">hilft</tc:token>
+      <tc:token ID="w1fd">dabei</tc:token>
+      <tc:token ID="w1fe">,</tc:token>
+      <tc:token ID="w1ff">Fehler</tc:token>
+      <tc:token ID="w200">zu</tc:token>
+      <tc:token ID="w201">vermeiden</tc:token>
+      <tc:token ID="w202">und</tc:token>
+      <tc:token ID="w203">Daten</tc:token>
+      <tc:token ID="w204">nachnutzbar</tc:token>
+      <tc:token ID="w205">zu</tc:token>
+      <tc:token ID="w206">machen</tc:token>
+      <tc:token ID="w207">–</tc:token>
+      <tc:token ID="w208">somit</tc:token>
+      <tc:token ID="w209">wird</tc:token>
+      <tc:token ID="w20a">auch</tc:token>
+      <tc:token ID="w20b">das</tc:token>
+      <tc:token ID="w20c">Vertrauen</tc:token>
+      <tc:token ID="w20d">gefördert</tc:token>
+      <tc:token ID="w20e">.</tc:token>
+      <tc:token ID="w20f">Das</tc:token>
+      <tc:token ID="w210">evaluierte</tc:token>
+      <tc:token ID="w211">Repositorium</tc:token>
+      <tc:token ID="w212">,</tc:token>
+      <tc:token ID="w213">in</tc:token>
+      <tc:token ID="w214">dem</tc:token>
+      <tc:token ID="w215">die</tc:token>
+      <tc:token ID="w216">Daten</tc:token>
+      <tc:token ID="w217">gespeichert</tc:token>
+      <tc:token ID="w218">werden</tc:token>
+      <tc:token ID="w219">,</tc:token>
+      <tc:token ID="w21a">basiert</tc:token>
+      <tc:token ID="w21b">auf</tc:token>
+      <tc:token ID="w21c">Open-Source-Technologien</tc:token>
+      <tc:token ID="w21d">4</tc:token>
+      <tc:token ID="w21e">.</tc:token>
+      <tc:token ID="w21f">Dessen</tc:token>
+      <tc:token ID="w220">Software-Module</tc:token>
+      <tc:token ID="w221">entsprechen</tc:token>
+      <tc:token ID="w222">allgemein</tc:token>
+      <tc:token ID="w223">den</tc:token>
+      <tc:token ID="w224">Anwendungsfunktionen</tc:token>
+      <tc:token ID="w225">Präsentation</tc:token>
+      <tc:token ID="w226">,</tc:token>
+      <tc:token ID="w227">Speicherung</tc:token>
+      <tc:token ID="w228">,</tc:token>
+      <tc:token ID="w229">Importieren</tc:token>
+      <tc:token ID="w22a">und</tc:token>
+      <tc:token ID="w22b">Suche</tc:token>
+      <tc:token ID="w22c">.</tc:token>
+      <tc:token ID="w22d">Basierend</tc:token>
+      <tc:token ID="w22e">darauf</tc:token>
+      <tc:token ID="w22f">wurde</tc:token>
+      <tc:token ID="w230">zuerst</tc:token>
+      <tc:token ID="w231">eine</tc:token>
+      <tc:token ID="w232">heuristische</tc:token>
+      <tc:token ID="w233">Evaluation</tc:token>
+      <tc:token ID="w234">5</tc:token>
+      <tc:token ID="w235">durchgeführt</tc:token>
+      <tc:token ID="w236">,</tc:token>
+      <tc:token ID="w237">bei</tc:token>
+      <tc:token ID="w238">der</tc:token>
+      <tc:token ID="w239">zwei</tc:token>
+      <tc:token ID="w23a">Experten</tc:token>
+      <tc:token ID="w23b">anhand</tc:token>
+      <tc:token ID="w23c">der</tc:token>
+      <tc:token ID="w23d">Usability-Heuristiken</tc:token>
+      <tc:token ID="w23e">von</tc:token>
+      <tc:token ID="w23f">Nielsen</tc:token>
+      <tc:token ID="w240">das</tc:token>
+      <tc:token ID="w241">Repositorium</tc:token>
+      <tc:token ID="w242">begutachteten</tc:token>
+      <tc:token ID="w243">.</tc:token>
+      <tc:token ID="w244">Dabei</tc:token>
+      <tc:token ID="w245">lag</tc:token>
+      <tc:token ID="w246">der</tc:token>
+      <tc:token ID="w247">Fokus</tc:token>
+      <tc:token ID="w248">auf</tc:token>
+      <tc:token ID="w249">diesen</tc:token>
+      <tc:token ID="w24a">näher</tc:token>
+      <tc:token ID="w24b">spezifizierten</tc:token>
+      <tc:token ID="w24c">Funktionen</tc:token>
+      <tc:token ID="w24d">von</tc:token>
+      <tc:token ID="w24e">LAUDATIO</tc:token>
+      <tc:token ID="w24f">:</tc:token>
+      <tc:token ID="w250">Hierbei</tc:token>
+      <tc:token ID="w251">wurden</tc:token>
+      <tc:token ID="w252">folgende</tc:token>
+      <tc:token ID="w253">Problematiken</tc:token>
+      <tc:token ID="w254">ausgemacht</tc:token>
+      <tc:token ID="w255">,</tc:token>
+      <tc:token ID="w256">die</tc:token>
+      <tc:token ID="w257">einer</tc:token>
+      <tc:token ID="w258">Nutzbarkeit</tc:token>
+      <tc:token ID="w259">des</tc:token>
+      <tc:token ID="w25a">Systems</tc:token>
+      <tc:token ID="w25b">abträglich</tc:token>
+      <tc:token ID="w25c">sind</tc:token>
+      <tc:token ID="w25d">:</tc:token>
+      <tc:token ID="w25e">1.</tc:token>
+      <tc:token ID="w25f">Inkonsistenz</tc:token>
+      <tc:token ID="w260">in</tc:token>
+      <tc:token ID="w261">der</tc:token>
+      <tc:token ID="w262">Benennung</tc:token>
+      <tc:token ID="w263">und</tc:token>
+      <tc:token ID="w264">Verwendung</tc:token>
+      <tc:token ID="w265">von</tc:token>
+      <tc:token ID="w266">mehrdeutigem</tc:token>
+      <tc:token ID="w267">Vokabular</tc:token>
+      <tc:token ID="w268">und</tc:token>
+      <tc:token ID="w269">Missachtung</tc:token>
+      <tc:token ID="w26a">graphischer</tc:token>
+      <tc:token ID="w26b">Konventionen</tc:token>
+      <tc:token ID="w26c">2.</tc:token>
+      <tc:token ID="w26d">Intransparenz</tc:token>
+      <tc:token ID="w26e">des</tc:token>
+      <tc:token ID="w26f">Systemstatus</tc:token>
+      <tc:token ID="w270">3.</tc:token>
+      <tc:token ID="w271">Fehlende</tc:token>
+      <tc:token ID="w272">oder</tc:token>
+      <tc:token ID="w273">schwer</tc:token>
+      <tc:token ID="w274">auffindbare</tc:token>
+      <tc:token ID="w275">Dokumentation</tc:token>
+      <tc:token ID="w276">4.</tc:token>
+      <tc:token ID="w277">Fehlende</tc:token>
+      <tc:token ID="w278">Strategien</tc:token>
+      <tc:token ID="w279">zur</tc:token>
+      <tc:token ID="w27a">Fehlerverhütung</tc:token>
+      <tc:token ID="w27b">5.</tc:token>
+      <tc:token ID="w27c">Missachtung</tc:token>
+      <tc:token ID="w27d">von</tc:token>
+      <tc:token ID="w27e">Konventionen</tc:token>
+      <tc:token ID="w27f">in</tc:token>
+      <tc:token ID="w280">der</tc:token>
+      <tc:token ID="w281">Suche</tc:token>
+      <tc:token ID="w282">Im</tc:token>
+      <tc:token ID="w283">nachfolgenden</tc:token>
+      <tc:token ID="w284">Schritt</tc:token>
+      <tc:token ID="w285">wurden</tc:token>
+      <tc:token ID="w286">von</tc:token>
+      <tc:token ID="w287">Seiten</tc:token>
+      <tc:token ID="w288">der</tc:token>
+      <tc:token ID="w289">EntwicklerInnen</tc:token>
+      <tc:token ID="w28a">10</tc:token>
+      <tc:token ID="w28b">Aufgaben</tc:token>
+      <tc:token ID="w28c">für</tc:token>
+      <tc:token ID="w28d">einen</tc:token>
+      <tc:token ID="w28e">Usability-Test</tc:token>
+      <tc:token ID="w28f">erstellt</tc:token>
+      <tc:token ID="w290">,</tc:token>
+      <tc:token ID="w291">die</tc:token>
+      <tc:token ID="w292">sich</tc:token>
+      <tc:token ID="w293">aus</tc:token>
+      <tc:token ID="w294">Nutzeranfragen</tc:token>
+      <tc:token ID="w295">und</tc:token>
+      <tc:token ID="w296">dem</tc:token>
+      <tc:token ID="w297">alltäglichen</tc:token>
+      <tc:token ID="w298">Arbeiten</tc:token>
+      <tc:token ID="w299">mit</tc:token>
+      <tc:token ID="w29a">dem</tc:token>
+      <tc:token ID="w29b">Repositorium</tc:token>
+      <tc:token ID="w29c">ergaben</tc:token>
+      <tc:token ID="w29d">.</tc:token>
+      <tc:token ID="w29e">Diese</tc:token>
+      <tc:token ID="w29f">Aufgaben</tc:token>
+      <tc:token ID="w2a0">wurden</tc:token>
+      <tc:token ID="w2a1">mit</tc:token>
+      <tc:token ID="w2a2">einer</tc:token>
+      <tc:token ID="w2a3">Testperson</tc:token>
+      <tc:token ID="w2a4">durchgeführt</tc:token>
+      <tc:token ID="w2a5">,</tc:token>
+      <tc:token ID="w2a6">wobei</tc:token>
+      <tc:token ID="w2a7">zwei</tc:token>
+      <tc:token ID="w2a8">Personen</tc:token>
+      <tc:token ID="w2a9">die</tc:token>
+      <tc:token ID="w2aa">Aktionen</tc:token>
+      <tc:token ID="w2ab">und</tc:token>
+      <tc:token ID="w2ac">die</tc:token>
+      <tc:token ID="w2ad">Kommentare</tc:token>
+      <tc:token ID="w2ae">der</tc:token>
+      <tc:token ID="w2af">Probandin</tc:token>
+      <tc:token ID="w2b0">protokollierten</tc:token>
+      <tc:token ID="w2b1">,</tc:token>
+      <tc:token ID="w2b2">sowie</tc:token>
+      <tc:token ID="w2b3">Screencasts</tc:token>
+      <tc:token ID="w2b4">der</tc:token>
+      <tc:token ID="w2b5">einzelnen</tc:token>
+      <tc:token ID="w2b6">Sessions</tc:token>
+      <tc:token ID="w2b7">aufzeichneten</tc:token>
+      <tc:token ID="w2b8">.</tc:token>
+      <tc:token ID="w2b9">Hierfür</tc:token>
+      <tc:token ID="w2ba">wurde</tc:token>
+      <tc:token ID="w2bb">seitens</tc:token>
+      <tc:token ID="w2bc">der</tc:token>
+      <tc:token ID="w2bd">Betreiber</tc:token>
+      <tc:token ID="w2be">ein</tc:token>
+      <tc:token ID="w2bf">Testkorpus</tc:token>
+      <tc:token ID="w2c0">mit</tc:token>
+      <tc:token ID="w2c1">Metadaten</tc:token>
+      <tc:token ID="w2c2">zur</tc:token>
+      <tc:token ID="w2c3">Verfügung</tc:token>
+      <tc:token ID="w2c4">gestellt</tc:token>
+      <tc:token ID="w2c5">,</tc:token>
+      <tc:token ID="w2c6">wofür</tc:token>
+      <tc:token ID="w2c7">XML-Kenntnisse</tc:token>
+      <tc:token ID="w2c8">vorausgesetzt</tc:token>
+      <tc:token ID="w2c9">wurden</tc:token>
+      <tc:token ID="w2ca">.</tc:token>
+      <tc:token ID="w2cb">Die</tc:token>
+      <tc:token ID="w2cc">Testperson</tc:token>
+      <tc:token ID="w2cd">führte</tc:token>
+      <tc:token ID="w2ce">den</tc:token>
+      <tc:token ID="w2cf">Test</tc:token>
+      <tc:token ID="w2d0">zum</tc:token>
+      <tc:token ID="w2d1">einen</tc:token>
+      <tc:token ID="w2d2">als</tc:token>
+      <tc:token ID="w2d3">nicht</tc:token>
+      <tc:token ID="w2d4">eingeloggte</tc:token>
+      <tc:token ID="w2d5">Nutzerin</tc:token>
+      <tc:token ID="w2d6">und</tc:token>
+      <tc:token ID="w2d7">zum</tc:token>
+      <tc:token ID="w2d8">anderen</tc:token>
+      <tc:token ID="w2d9">als</tc:token>
+      <tc:token ID="w2da">eingeloggte</tc:token>
+      <tc:token ID="w2db">Nutzerin</tc:token>
+      <tc:token ID="w2dc">mit</tc:token>
+      <tc:token ID="w2dd">erweiterten</tc:token>
+      <tc:token ID="w2de">Rechten</tc:token>
+      <tc:token ID="w2df">durch</tc:token>
+      <tc:token ID="w2e0">.</tc:token>
+      <tc:token ID="w2e1">Im</tc:token>
+      <tc:token ID="w2e2">zweiten</tc:token>
+      <tc:token ID="w2e3">Fall</tc:token>
+      <tc:token ID="w2e4">konnte</tc:token>
+      <tc:token ID="w2e5">sie</tc:token>
+      <tc:token ID="w2e6">über</tc:token>
+      <tc:token ID="w2e7">den</tc:token>
+      <tc:token ID="w2e8">Importprozess</tc:token>
+      <tc:token ID="w2e9">ein</tc:token>
+      <tc:token ID="w2ea">selbständig</tc:token>
+      <tc:token ID="w2eb">verändertes</tc:token>
+      <tc:token ID="w2ec">Korpus</tc:token>
+      <tc:token ID="w2ed">hochladen</tc:token>
+      <tc:token ID="w2ee">und</tc:token>
+      <tc:token ID="w2ef">anzeigen</tc:token>
+      <tc:token ID="w2f0">lassen</tc:token>
+      <tc:token ID="w2f1">.</tc:token>
+      <tc:token ID="w2f2">Obwohl</tc:token>
+      <tc:token ID="w2f3">die</tc:token>
+      <tc:token ID="w2f4">Testerin</tc:token>
+      <tc:token ID="w2f5">nicht</tc:token>
+      <tc:token ID="w2f6">aus</tc:token>
+      <tc:token ID="w2f7">dem</tc:token>
+      <tc:token ID="w2f8">Bereich</tc:token>
+      <tc:token ID="w2f9">der</tc:token>
+      <tc:token ID="w2fa">Linguistik</tc:token>
+      <tc:token ID="w2fb">kam</tc:token>
+      <tc:token ID="w2fc">und</tc:token>
+      <tc:token ID="w2fd">sich</tc:token>
+      <tc:token ID="w2fe">deswegen</tc:token>
+      <tc:token ID="w2ff">auch</tc:token>
+      <tc:token ID="w300">erst</tc:token>
+      <tc:token ID="w301">in</tc:token>
+      <tc:token ID="w302">die</tc:token>
+      <tc:token ID="w303">Begrifflichkeiten</tc:token>
+      <tc:token ID="w304">und</tc:token>
+      <tc:token ID="w305">Funktionen</tc:token>
+      <tc:token ID="w306">des</tc:token>
+      <tc:token ID="w307">Portal</tc:token>
+      <tc:token ID="w308">einarbeiten</tc:token>
+      <tc:token ID="w309">musste</tc:token>
+      <tc:token ID="w30a">,</tc:token>
+      <tc:token ID="w30b">wurden</tc:token>
+      <tc:token ID="w30c">erhebliche</tc:token>
+      <tc:token ID="w30d">Usability-Probleme</tc:token>
+      <tc:token ID="w30e">eminent</tc:token>
+      <tc:token ID="w30f">.</tc:token>
+      <tc:token ID="w310">In</tc:token>
+      <tc:token ID="w311">einem</tc:token>
+      <tc:token ID="w312">gemeinsamen</tc:token>
+      <tc:token ID="w313">Gespräch</tc:token>
+      <tc:token ID="w314">mit</tc:token>
+      <tc:token ID="w315">den</tc:token>
+      <tc:token ID="w316">Betreibern</tc:token>
+      <tc:token ID="w317">des</tc:token>
+      <tc:token ID="w318">LAUDATIO</tc:token>
+      <tc:token ID="w319">Repositoriums</tc:token>
+      <tc:token ID="w31a">wurden</tc:token>
+      <tc:token ID="w31b">die</tc:token>
+      <tc:token ID="w31c">Problematiken</tc:token>
+      <tc:token ID="w31d">benannt</tc:token>
+      <tc:token ID="w31e">und</tc:token>
+      <tc:token ID="w31f">eine</tc:token>
+      <tc:token ID="w320">Priorisierung</tc:token>
+      <tc:token ID="w321">der</tc:token>
+      <tc:token ID="w322">Usability-Probleme</tc:token>
+      <tc:token ID="w323">vorgenommen</tc:token>
+      <tc:token ID="w324">.</tc:token>
+      <tc:token ID="w325">Dabei</tc:token>
+      <tc:token ID="w326">wurden</tc:token>
+      <tc:token ID="w327">folgende</tc:token>
+      <tc:token ID="w328">Punkte</tc:token>
+      <tc:token ID="w329">als</tc:token>
+      <tc:token ID="w32a">Kriterium</tc:token>
+      <tc:token ID="w32b">für</tc:token>
+      <tc:token ID="w32c">die</tc:token>
+      <tc:token ID="w32d">Priorisierung</tc:token>
+      <tc:token ID="w32e">herangezogen</tc:token>
+      <tc:token ID="w32f">:</tc:token>
+      <tc:token ID="w330">Anhand</tc:token>
+      <tc:token ID="w331">der</tc:token>
+      <tc:token ID="w332">Priorisierungsliste</tc:token>
+      <tc:token ID="w333">wurden</tc:token>
+      <tc:token ID="w334">Verbesserungen</tc:token>
+      <tc:token ID="w335">in</tc:token>
+      <tc:token ID="w336">einem</tc:token>
+      <tc:token ID="w337">noch</tc:token>
+      <tc:token ID="w338">unveröffentlichten</tc:token>
+      <tc:token ID="w339">Prototypen</tc:token>
+      <tc:token ID="w33a">vorgenommen</tc:token>
+      <tc:token ID="w33b">und</tc:token>
+      <tc:token ID="w33c">Massnahmen</tc:token>
+      <tc:token ID="w33d">zur</tc:token>
+      <tc:token ID="w33e">verbesserten</tc:token>
+      <tc:token ID="w33f">Nutzerführung</tc:token>
+      <tc:token ID="w340">ergriffen</tc:token>
+      <tc:token ID="w341">.</tc:token>
+      <tc:token ID="w342">Diese</tc:token>
+      <tc:token ID="w343">sollen</tc:token>
+      <tc:token ID="w344">auch</tc:token>
+      <tc:token ID="w345">vorgestellt</tc:token>
+      <tc:token ID="w346">werden</tc:token>
+      <tc:token ID="w347">.</tc:token>
+      <tc:token ID="w348">Damit</tc:token>
+      <tc:token ID="w349">digitale</tc:token>
+      <tc:token ID="w34a">Tools</tc:token>
+      <tc:token ID="w34b">in</tc:token>
+      <tc:token ID="w34c">den</tc:token>
+      <tc:token ID="w34d">Geisteswissenschaften</tc:token>
+      <tc:token ID="w34e">kontinuierlich</tc:token>
+      <tc:token ID="w34f">Verwendung</tc:token>
+      <tc:token ID="w350">finden</tc:token>
+      <tc:token ID="w351">,</tc:token>
+      <tc:token ID="w352">müssen</tc:token>
+      <tc:token ID="w353">sie</tc:token>
+      <tc:token ID="w354">auch</tc:token>
+      <tc:token ID="w355">einfach</tc:token>
+      <tc:token ID="w356">und</tc:token>
+      <tc:token ID="w357">effizient</tc:token>
+      <tc:token ID="w358">zu</tc:token>
+      <tc:token ID="w359">bedienen</tc:token>
+      <tc:token ID="w35a">sein</tc:token>
+      <tc:token ID="w35b">.</tc:token>
+      <tc:token ID="w35c">Eine</tc:token>
+      <tc:token ID="w35d">einfache</tc:token>
+      <tc:token ID="w35e">Methode</tc:token>
+      <tc:token ID="w35f">um</tc:token>
+      <tc:token ID="w360">die</tc:token>
+      <tc:token ID="w361">Usability</tc:token>
+      <tc:token ID="w362">kostengünstig</tc:token>
+      <tc:token ID="w363">und</tc:token>
+      <tc:token ID="w364">schnell</tc:token>
+      <tc:token ID="w365">testen</tc:token>
+      <tc:token ID="w366">zu</tc:token>
+      <tc:token ID="w367">können</tc:token>
+      <tc:token ID="w368">,</tc:token>
+      <tc:token ID="w369">bieten</tc:token>
+      <tc:token ID="w36a">die</tc:token>
+      <tc:token ID="w36b">von</tc:token>
+      <tc:token ID="w36c">Nielsen</tc:token>
+      <tc:token ID="w36d">(</tc:token>
+      <tc:token ID="w36e">2012</tc:token>
+      <tc:token ID="w36f">)</tc:token>
+      <tc:token ID="w370">aufgestellten</tc:token>
+      <tc:token ID="w371">Merkmale</tc:token>
+      <tc:token ID="w372">für</tc:token>
+      <tc:token ID="w373">eine</tc:token>
+      <tc:token ID="w374">nutzerfreundliche</tc:token>
+      <tc:token ID="w375">Software</tc:token>
+      <tc:token ID="w376">:</tc:token>
+      <tc:token ID="w377">Erlernbarkeit</tc:token>
+      <tc:token ID="w378">,</tc:token>
+      <tc:token ID="w379">Einprägsamkeit</tc:token>
+      <tc:token ID="w37a">,</tc:token>
+      <tc:token ID="w37b">Effizienz</tc:token>
+      <tc:token ID="w37c">,</tc:token>
+      <tc:token ID="w37d">Fehlertoleranz</tc:token>
+      <tc:token ID="w37e">und</tc:token>
+      <tc:token ID="w37f">Nutzerzufriedenheit</tc:token>
+      <tc:token ID="w380">.</tc:token>
+      <tc:token ID="w381">Spezifische</tc:token>
+      <tc:token ID="w382">Tools</tc:token>
+      <tc:token ID="w383">in</tc:token>
+      <tc:token ID="w384">den</tc:token>
+      <tc:token ID="w385">Geisteswissenschaften</tc:token>
+      <tc:token ID="w386">haben</tc:token>
+      <tc:token ID="w387">jedoch</tc:token>
+      <tc:token ID="w388">oft</tc:token>
+      <tc:token ID="w389">nicht</tc:token>
+      <tc:token ID="w38a">die</tc:token>
+      <tc:token ID="w38b">Möglichkeiten</tc:token>
+      <tc:token ID="w38c">,</tc:token>
+      <tc:token ID="w38d">eine</tc:token>
+      <tc:token ID="w38e">grafische</tc:token>
+      <tc:token ID="w38f">Benutzungsoberfläche</tc:token>
+      <tc:token ID="w390">anzubieten</tc:token>
+      <tc:token ID="w391">,</tc:token>
+      <tc:token ID="w392">die</tc:token>
+      <tc:token ID="w393">all</tc:token>
+      <tc:token ID="w394">diesen</tc:token>
+      <tc:token ID="w395">Kriterien</tc:token>
+      <tc:token ID="w396">vollends</tc:token>
+      <tc:token ID="w397">gerecht</tc:token>
+      <tc:token ID="w398">werden</tc:token>
+      <tc:token ID="w399">.</tc:token>
+      <tc:token ID="w39a">Durch</tc:token>
+      <tc:token ID="w39b">unsere</tc:token>
+      <tc:token ID="w39c">Erfahrungen</tc:token>
+      <tc:token ID="w39d">mit</tc:token>
+      <tc:token ID="w39e">dem</tc:token>
+      <tc:token ID="w39f">LAUDATIO</tc:token>
+      <tc:token ID="w3a0">Repositorium</tc:token>
+      <tc:token ID="w3a1">schlagen</tc:token>
+      <tc:token ID="w3a2">wir</tc:token>
+      <tc:token ID="w3a3">deshalb</tc:token>
+      <tc:token ID="w3a4">folgende</tc:token>
+      <tc:token ID="w3a5">Interpretation</tc:token>
+      <tc:token ID="w3a6">der</tc:token>
+      <tc:token ID="w3a7">Merkmale</tc:token>
+      <tc:token ID="w3a8">vor</tc:token>
+      <tc:token ID="w3a9">:</tc:token>
+      <tc:token ID="w3aa">Erlernbarkeit</tc:token>
+      <tc:token ID="w3ab">:</tc:token>
+      <tc:token ID="w3ac">Die</tc:token>
+      <tc:token ID="w3ad">meisten</tc:token>
+      <tc:token ID="w3ae">geisteswissenschaftlichen</tc:token>
+      <tc:token ID="w3af">Tools</tc:token>
+      <tc:token ID="w3b0">sind</tc:token>
+      <tc:token ID="w3b1">sehr</tc:token>
+      <tc:token ID="w3b2">speziell</tc:token>
+      <tc:token ID="w3b3">und</tc:token>
+      <tc:token ID="w3b4">setzen</tc:token>
+      <tc:token ID="w3b5">eine</tc:token>
+      <tc:token ID="w3b6">fachspezifische</tc:token>
+      <tc:token ID="w3b7">Grundausbildung</tc:token>
+      <tc:token ID="w3b8">voraus</tc:token>
+      <tc:token ID="w3b9">,</tc:token>
+      <tc:token ID="w3ba">die</tc:token>
+      <tc:token ID="w3bb">sich</tc:token>
+      <tc:token ID="w3bc">oft</tc:token>
+      <tc:token ID="w3bd">auch</tc:token>
+      <tc:token ID="w3be">schon</tc:token>
+      <tc:token ID="w3bf">in</tc:token>
+      <tc:token ID="w3c0">dem</tc:token>
+      <tc:token ID="w3c1">verwendeten</tc:token>
+      <tc:token ID="w3c2">Vokabular</tc:token>
+      <tc:token ID="w3c3">niederschlägt</tc:token>
+      <tc:token ID="w3c4">.</tc:token>
+      <tc:token ID="w3c5">Die</tc:token>
+      <tc:token ID="w3c6">Erlernbarkeit</tc:token>
+      <tc:token ID="w3c7">sollte</tc:token>
+      <tc:token ID="w3c8">also</tc:token>
+      <tc:token ID="w3c9">darauf</tc:token>
+      <tc:token ID="w3ca">zielen</tc:token>
+      <tc:token ID="w3cb">,</tc:token>
+      <tc:token ID="w3cc">den</tc:token>
+      <tc:token ID="w3cd">NutzerInnen</tc:token>
+      <tc:token ID="w3ce">erklärende</tc:token>
+      <tc:token ID="w3cf">Tutorials</tc:token>
+      <tc:token ID="w3d0">und</tc:token>
+      <tc:token ID="w3d1">Dokumentationen</tc:token>
+      <tc:token ID="w3d2">anzubieten</tc:token>
+      <tc:token ID="w3d3">,</tc:token>
+      <tc:token ID="w3d4">die</tc:token>
+      <tc:token ID="w3d5">eine</tc:token>
+      <tc:token ID="w3d6">Einarbeitung</tc:token>
+      <tc:token ID="w3d7">verkürzen</tc:token>
+      <tc:token ID="w3d8">.</tc:token>
+      <tc:token ID="w3d9">Der</tc:token>
+      <tc:token ID="w3da">Aufwand</tc:token>
+      <tc:token ID="w3db">des</tc:token>
+      <tc:token ID="w3dc">Erlernens</tc:token>
+      <tc:token ID="w3dd">der</tc:token>
+      <tc:token ID="w3de">Software</tc:token>
+      <tc:token ID="w3df">sollte</tc:token>
+      <tc:token ID="w3e0">im</tc:token>
+      <tc:token ID="w3e1">Einklang</tc:token>
+      <tc:token ID="w3e2">mit</tc:token>
+      <tc:token ID="w3e3">dem</tc:token>
+      <tc:token ID="w3e4">Nutzen</tc:token>
+      <tc:token ID="w3e5">der</tc:token>
+      <tc:token ID="w3e6">Software</tc:token>
+      <tc:token ID="w3e7">stehen</tc:token>
+      <tc:token ID="w3e8">.</tc:token>
+      <tc:token ID="w3e9">Einprägsamkeit</tc:token>
+      <tc:token ID="w3ea">:</tc:token>
+      <tc:token ID="w3eb">Hier</tc:token>
+      <tc:token ID="w3ec">geht</tc:token>
+      <tc:token ID="w3ed">es</tc:token>
+      <tc:token ID="w3ee">darum</tc:token>
+      <tc:token ID="w3ef">,</tc:token>
+      <tc:token ID="w3f0">dass</tc:token>
+      <tc:token ID="w3f1">NutzerInnen</tc:token>
+      <tc:token ID="w3f2">sich</tc:token>
+      <tc:token ID="w3f3">auch</tc:token>
+      <tc:token ID="w3f4">nach</tc:token>
+      <tc:token ID="w3f5">längerer</tc:token>
+      <tc:token ID="w3f6">Pause</tc:token>
+      <tc:token ID="w3f7">wieder</tc:token>
+      <tc:token ID="w3f8">in</tc:token>
+      <tc:token ID="w3f9">die</tc:token>
+      <tc:token ID="w3fa">Funktionalitäten</tc:token>
+      <tc:token ID="w3fb">des</tc:token>
+      <tc:token ID="w3fc">Tools</tc:token>
+      <tc:token ID="w3fd">einarbeiten</tc:token>
+      <tc:token ID="w3fe">können</tc:token>
+      <tc:token ID="w3ff">.</tc:token>
+      <tc:token ID="w400">Wie</tc:token>
+      <tc:token ID="w401">in</tc:token>
+      <tc:token ID="w402">Punkt</tc:token>
+      <tc:token ID="w403">1</tc:token>
+      <tc:token ID="w404">ist</tc:token>
+      <tc:token ID="w405">hier</tc:token>
+      <tc:token ID="w406">Dokumentation</tc:token>
+      <tc:token ID="w407">wichtig</tc:token>
+      <tc:token ID="w408">,</tc:token>
+      <tc:token ID="w409">aber</tc:token>
+      <tc:token ID="w40a">auch</tc:token>
+      <tc:token ID="w40b">eindeutiges</tc:token>
+      <tc:token ID="w40c">Vokabular</tc:token>
+      <tc:token ID="w40d">und</tc:token>
+      <tc:token ID="w40e">prägnantes</tc:token>
+      <tc:token ID="w40f">Design</tc:token>
+      <tc:token ID="w410">.</tc:token>
+      <tc:token ID="w411">Wenn</tc:token>
+      <tc:token ID="w412">es</tc:token>
+      <tc:token ID="w413">viele</tc:token>
+      <tc:token ID="w414">Parameter</tc:token>
+      <tc:token ID="w415">zur</tc:token>
+      <tc:token ID="w416">Einstellung</tc:token>
+      <tc:token ID="w417">gibt</tc:token>
+      <tc:token ID="w418">,</tc:token>
+      <tc:token ID="w419">sollten</tc:token>
+      <tc:token ID="w41a">Möglichkeiten</tc:token>
+      <tc:token ID="w41b">vorhanden</tc:token>
+      <tc:token ID="w41c">sein</tc:token>
+      <tc:token ID="w41d">,</tc:token>
+      <tc:token ID="w41e">diese</tc:token>
+      <tc:token ID="w41f">zu</tc:token>
+      <tc:token ID="w420">speichern</tc:token>
+      <tc:token ID="w421">oder</tc:token>
+      <tc:token ID="w422">zu</tc:token>
+      <tc:token ID="w423">exportieren</tc:token>
+      <tc:token ID="w424">,</tc:token>
+      <tc:token ID="w425">um</tc:token>
+      <tc:token ID="w426">sie</tc:token>
+      <tc:token ID="w427">später</tc:token>
+      <tc:token ID="w428">nachnutzen</tc:token>
+      <tc:token ID="w429">zu</tc:token>
+      <tc:token ID="w42a">können</tc:token>
+      <tc:token ID="w42b">.</tc:token>
+      <tc:token ID="w42c">Effizienz</tc:token>
+      <tc:token ID="w42d">:</tc:token>
+      <tc:token ID="w42e">Hier</tc:token>
+      <tc:token ID="w42f">geht</tc:token>
+      <tc:token ID="w430">es</tc:token>
+      <tc:token ID="w431">um</tc:token>
+      <tc:token ID="w432">die</tc:token>
+      <tc:token ID="w433">Schnelligkeit</tc:token>
+      <tc:token ID="w434">,</tc:token>
+      <tc:token ID="w435">mit</tc:token>
+      <tc:token ID="w436">der</tc:token>
+      <tc:token ID="w437">NutzerInnen</tc:token>
+      <tc:token ID="w438">zum</tc:token>
+      <tc:token ID="w439">Ziel</tc:token>
+      <tc:token ID="w43a">kommen</tc:token>
+      <tc:token ID="w43b">.</tc:token>
+      <tc:token ID="w43c">Dies</tc:token>
+      <tc:token ID="w43d">beinhaltet</tc:token>
+      <tc:token ID="w43e">neben</tc:token>
+      <tc:token ID="w43f">schnellen</tc:token>
+      <tc:token ID="w440">Ladezeiten</tc:token>
+      <tc:token ID="w441">auch</tc:token>
+      <tc:token ID="w442">das</tc:token>
+      <tc:token ID="w443">Liefern</tc:token>
+      <tc:token ID="w444">von</tc:token>
+      <tc:token ID="w445">Systemfeedback</tc:token>
+      <tc:token ID="w446">für</tc:token>
+      <tc:token ID="w447">Nutzerinteraktionen</tc:token>
+      <tc:token ID="w448">.</tc:token>
+      <tc:token ID="w449">Fehler</tc:token>
+      <tc:token ID="w44a">:</tc:token>
+      <tc:token ID="w44b">In</tc:token>
+      <tc:token ID="w44c">diesem</tc:token>
+      <tc:token ID="w44d">Punkt</tc:token>
+      <tc:token ID="w44e">geht</tc:token>
+      <tc:token ID="w44f">es</tc:token>
+      <tc:token ID="w450">um</tc:token>
+      <tc:token ID="w451">die</tc:token>
+      <tc:token ID="w452">Toleranz</tc:token>
+      <tc:token ID="w453">,</tc:token>
+      <tc:token ID="w454">mit</tc:token>
+      <tc:token ID="w455">der</tc:token>
+      <tc:token ID="w456">das</tc:token>
+      <tc:token ID="w457">System</tc:token>
+      <tc:token ID="w458">auch</tc:token>
+      <tc:token ID="w459">fehlerhafte</tc:token>
+      <tc:token ID="w45a">Eingaben</tc:token>
+      <tc:token ID="w45b">von</tc:token>
+      <tc:token ID="w45c">NutzerInnen</tc:token>
+      <tc:token ID="w45d">verarbeitet</tc:token>
+      <tc:token ID="w45e">und</tc:token>
+      <tc:token ID="w45f">zurückmelden</tc:token>
+      <tc:token ID="w460">kann</tc:token>
+      <tc:token ID="w461">und</tc:token>
+      <tc:token ID="w462">dieser</tc:token>
+      <tc:token ID="w463">trotzdem</tc:token>
+      <tc:token ID="w464">sein</tc:token>
+      <tc:token ID="w465">Ziel</tc:token>
+      <tc:token ID="w466">erreicht</tc:token>
+      <tc:token ID="w467">.</tc:token>
+      <tc:token ID="w468">Dies</tc:token>
+      <tc:token ID="w469">hat</tc:token>
+      <tc:token ID="w46a">aber</tc:token>
+      <tc:token ID="w46b">für</tc:token>
+      <tc:token ID="w46c">geisteswissenschaftliche</tc:token>
+      <tc:token ID="w46d">Tools</tc:token>
+      <tc:token ID="w46e">noch</tc:token>
+      <tc:token ID="w46f">eine</tc:token>
+      <tc:token ID="w470">andere</tc:token>
+      <tc:token ID="w471">Dimension</tc:token>
+      <tc:token ID="w472">:</tc:token>
+      <tc:token ID="w473">Verfahren</tc:token>
+      <tc:token ID="w474">und</tc:token>
+      <tc:token ID="w475">algorithmische</tc:token>
+      <tc:token ID="w476">Berechnungen</tc:token>
+      <tc:token ID="w477">müssen</tc:token>
+      <tc:token ID="w478">so</tc:token>
+      <tc:token ID="w479">transparent</tc:token>
+      <tc:token ID="w47a">sein</tc:token>
+      <tc:token ID="w47b">,</tc:token>
+      <tc:token ID="w47c">dass</tc:token>
+      <tc:token ID="w47d">NutzerInnen</tc:token>
+      <tc:token ID="w47e">nicht</tc:token>
+      <tc:token ID="w47f">durch</tc:token>
+      <tc:token ID="w480">falsche</tc:token>
+      <tc:token ID="w481">Bedienung</tc:token>
+      <tc:token ID="w482">Resultate</tc:token>
+      <tc:token ID="w483">,</tc:token>
+      <tc:token ID="w484">die</tc:token>
+      <tc:token ID="w485">einen</tc:token>
+      <tc:token ID="w486">Einfluss</tc:token>
+      <tc:token ID="w487">auf</tc:token>
+      <tc:token ID="w488">die</tc:token>
+      <tc:token ID="w489">Beantwortung</tc:token>
+      <tc:token ID="w48a">der</tc:token>
+      <tc:token ID="w48b">Forschungsfrage</tc:token>
+      <tc:token ID="w48c">haben</tc:token>
+      <tc:token ID="w48d">,</tc:token>
+      <tc:token ID="w48e">zurückgeliefert</tc:token>
+      <tc:token ID="w48f">bekommen</tc:token>
+      <tc:token ID="w490">.</tc:token>
+      <tc:token ID="w491">Es</tc:token>
+      <tc:token ID="w492">sollte</tc:token>
+      <tc:token ID="w493">immer</tc:token>
+      <tc:token ID="w494">klar</tc:token>
+      <tc:token ID="w495">sein</tc:token>
+      <tc:token ID="w496">,</tc:token>
+      <tc:token ID="w497">was</tc:token>
+      <tc:token ID="w498">das</tc:token>
+      <tc:token ID="w499">Tool</tc:token>
+      <tc:token ID="w49a">mit</tc:token>
+      <tc:token ID="w49b">welchen</tc:token>
+      <tc:token ID="w49c">Daten</tc:token>
+      <tc:token ID="w49d">macht</tc:token>
+      <tc:token ID="w49e">und</tc:token>
+      <tc:token ID="w49f">wie</tc:token>
+      <tc:token ID="w4a0">die</tc:token>
+      <tc:token ID="w4a1">Resultate</tc:token>
+      <tc:token ID="w4a2">zu</tc:token>
+      <tc:token ID="w4a3">interpretieren</tc:token>
+      <tc:token ID="w4a4">sind</tc:token>
+      <tc:token ID="w4a5">und</tc:token>
+      <tc:token ID="w4a6">warum</tc:token>
+      <tc:token ID="w4a7">welche</tc:token>
+      <tc:token ID="w4a8">Ergebnisse</tc:token>
+      <tc:token ID="w4a9">erzielt</tc:token>
+      <tc:token ID="w4aa">wurden</tc:token>
+      <tc:token ID="w4ab">.</tc:token>
+      <tc:token ID="w4ac">Es</tc:token>
+      <tc:token ID="w4ad">ist</tc:token>
+      <tc:token ID="w4ae">natürlich</tc:token>
+      <tc:token ID="w4af">immer</tc:token>
+      <tc:token ID="w4b0">die</tc:token>
+      <tc:token ID="w4b1">Aufgabe</tc:token>
+      <tc:token ID="w4b2">der</tc:token>
+      <tc:token ID="w4b3">WissenschaftlerInnen</tc:token>
+      <tc:token ID="w4b4">,</tc:token>
+      <tc:token ID="w4b5">die</tc:token>
+      <tc:token ID="w4b6">sich</tc:token>
+      <tc:token ID="w4b7">des</tc:token>
+      <tc:token ID="w4b8">Tools</tc:token>
+      <tc:token ID="w4b9">bedienen</tc:token>
+      <tc:token ID="w4ba">,</tc:token>
+      <tc:token ID="w4bb">auf</tc:token>
+      <tc:token ID="w4bc">die</tc:token>
+      <tc:token ID="w4bd">Verlässlichkeit</tc:token>
+      <tc:token ID="w4be">und</tc:token>
+      <tc:token ID="w4bf">Nachvollziehbarkeit</tc:token>
+      <tc:token ID="w4c0">ihrer</tc:token>
+      <tc:token ID="w4c1">Daten</tc:token>
+      <tc:token ID="w4c2">zu</tc:token>
+      <tc:token ID="w4c3">achten</tc:token>
+      <tc:token ID="w4c4">.</tc:token>
+      <tc:token ID="w4c5">Doch</tc:token>
+      <tc:token ID="w4c6">spielen</tc:token>
+      <tc:token ID="w4c7">hier</tc:token>
+      <tc:token ID="w4c8">die</tc:token>
+      <tc:token ID="w4c9">graphischen</tc:token>
+      <tc:token ID="w4ca">Benutzeroberflächen</tc:token>
+      <tc:token ID="w4cb">eine</tc:token>
+      <tc:token ID="w4cc">unterstützende</tc:token>
+      <tc:token ID="w4cd">Rolle</tc:token>
+      <tc:token ID="w4ce">und</tc:token>
+      <tc:token ID="w4cf">sollten</tc:token>
+      <tc:token ID="w4d0">gerade</tc:token>
+      <tc:token ID="w4d1">im</tc:token>
+      <tc:token ID="w4d2">wissenschaftlichen</tc:token>
+      <tc:token ID="w4d3">Bereich</tc:token>
+      <tc:token ID="w4d4">nicht</tc:token>
+      <tc:token ID="w4d5">in</tc:token>
+      <tc:token ID="w4d6">die</tc:token>
+      <tc:token ID="w4d7">Irre</tc:token>
+      <tc:token ID="w4d8">führen</tc:token>
+      <tc:token ID="w4d9">.</tc:token>
+      <tc:token ID="w4da">Nutzerzufriedenheit</tc:token>
+      <tc:token ID="w4db">:</tc:token>
+      <tc:token ID="w4dc">Natürlich</tc:token>
+      <tc:token ID="w4dd">spielt</tc:token>
+      <tc:token ID="w4de">auch</tc:token>
+      <tc:token ID="w4df">die</tc:token>
+      <tc:token ID="w4e0">Nutzerzufriedenheit</tc:token>
+      <tc:token ID="w4e1">eine</tc:token>
+      <tc:token ID="w4e2">Rolle</tc:token>
+      <tc:token ID="w4e3">,</tc:token>
+      <tc:token ID="w4e4">die</tc:token>
+      <tc:token ID="w4e5">sich</tc:token>
+      <tc:token ID="w4e6">meist</tc:token>
+      <tc:token ID="w4e7">aus</tc:token>
+      <tc:token ID="w4e8">dem</tc:token>
+      <tc:token ID="w4e9">Vorhandensein</tc:token>
+      <tc:token ID="w4ea">der</tc:token>
+      <tc:token ID="w4eb">vorangegangen</tc:token>
+      <tc:token ID="w4ec">Qualitätsmerkmale</tc:token>
+      <tc:token ID="w4ed">ergibt</tc:token>
+      <tc:token ID="w4ee">.</tc:token>
+      <tc:token ID="w4ef">In</tc:token>
+      <tc:token ID="w4f0">diesem</tc:token>
+      <tc:token ID="w4f1">Vortrag</tc:token>
+      <tc:token ID="w4f2">wollen</tc:token>
+      <tc:token ID="w4f3">wir</tc:token>
+      <tc:token ID="w4f4">unsere</tc:token>
+      <tc:token ID="w4f5">Erfahrung</tc:token>
+      <tc:token ID="w4f6">aus</tc:token>
+      <tc:token ID="w4f7">dem</tc:token>
+      <tc:token ID="w4f8">Usability-Test</tc:token>
+      <tc:token ID="w4f9">mit</tc:token>
+      <tc:token ID="w4fa">dem</tc:token>
+      <tc:token ID="w4fb">LAUDATIO</tc:token>
+      <tc:token ID="w4fc">Repositorium</tc:token>
+      <tc:token ID="w4fd">schildern</tc:token>
+      <tc:token ID="w4fe">und</tc:token>
+      <tc:token ID="w4ff">auf</tc:token>
+      <tc:token ID="w500">die</tc:token>
+      <tc:token ID="w501">daraufhin</tc:token>
+      <tc:token ID="w502">eingeleiteten</tc:token>
+      <tc:token ID="w503">Massnahmen</tc:token>
+      <tc:token ID="w504">zur</tc:token>
+      <tc:token ID="w505">Verbesserung</tc:token>
+      <tc:token ID="w506">der</tc:token>
+      <tc:token ID="w507">Nutzerführung</tc:token>
+      <tc:token ID="w508">eingehen</tc:token>
+      <tc:token ID="w509">.</tc:token>
+      <tc:token ID="w50a">Einleitung</tc:token>
+      <tc:token ID="w50b">Abb.</tc:token>
+      <tc:token ID="w50c">1</tc:token>
+      <tc:token ID="w50d">:</tc:token>
+      <tc:token ID="w50e">Mockup</tc:token>
+      <tc:token ID="w50f">der</tc:token>
+      <tc:token ID="w510">facettierten</tc:token>
+      <tc:token ID="w511">Suche</tc:token>
+      <tc:token ID="w512">mit</tc:token>
+      <tc:token ID="w513">Suchergebnissen</tc:token>
+      <tc:token ID="w514">Motivation</tc:token>
+      <tc:token ID="w515">und</tc:token>
+      <tc:token ID="w516">Hintergrund</tc:token>
+      <tc:token ID="w517">Usability</tc:token>
+      <tc:token ID="w518">am</tc:token>
+      <tc:token ID="w519">Beispiel</tc:token>
+      <tc:token ID="w51a">des</tc:token>
+      <tc:token ID="w51b">LAUDATIO</tc:token>
+      <tc:token ID="w51c">Repositoriums</tc:token>
+      <tc:token ID="w51d">Präsentation</tc:token>
+      <tc:token ID="w51e">von</tc:token>
+      <tc:token ID="w51f">Korpora</tc:token>
+      <tc:token ID="w520">,</tc:token>
+      <tc:token ID="w521">Suche</tc:token>
+      <tc:token ID="w522">nach</tc:token>
+      <tc:token ID="w523">Korpora</tc:token>
+      <tc:token ID="w524">und</tc:token>
+      <tc:token ID="w525">in</tc:token>
+      <tc:token ID="w526">deren</tc:token>
+      <tc:token ID="w527">Dokumenten</tc:token>
+      <tc:token ID="w528">und</tc:token>
+      <tc:token ID="w529">Annotationen</tc:token>
+      <tc:token ID="w52a">,</tc:token>
+      <tc:token ID="w52b">Herunterladen</tc:token>
+      <tc:token ID="w52c">von</tc:token>
+      <tc:token ID="w52d">Korpora</tc:token>
+      <tc:token ID="w52e">,</tc:token>
+      <tc:token ID="w52f">Importieren</tc:token>
+      <tc:token ID="w530">von</tc:token>
+      <tc:token ID="w531">neuen</tc:token>
+      <tc:token ID="w532">und</tc:token>
+      <tc:token ID="w533">erweiterten</tc:token>
+      <tc:token ID="w534">Korpora</tc:token>
+      <tc:token ID="w535">,</tc:token>
+      <tc:token ID="w536">Auseinandersetzung</tc:token>
+      <tc:token ID="w537">mit</tc:token>
+      <tc:token ID="w538">den</tc:token>
+      <tc:token ID="w539">verschiedenen</tc:token>
+      <tc:token ID="w53a">Beschreibungen</tc:token>
+      <tc:token ID="w53b">der</tc:token>
+      <tc:token ID="w53c">einzelnen</tc:token>
+      <tc:token ID="w53d">Korpora</tc:token>
+      <tc:token ID="w53e">.</tc:token>
+      <tc:token ID="w53f">Schwere</tc:token>
+      <tc:token ID="w540">der</tc:token>
+      <tc:token ID="w541">Problems</tc:token>
+      <tc:token ID="w542">/</tc:token>
+      <tc:token ID="w543">Störfaktor</tc:token>
+      <tc:token ID="w544">bei</tc:token>
+      <tc:token ID="w545">der</tc:token>
+      <tc:token ID="w546">Benutzung</tc:token>
+      <tc:token ID="w547">des</tc:token>
+      <tc:token ID="w548">Repositoriums</tc:token>
+      <tc:token ID="w549">Häufigkeit</tc:token>
+      <tc:token ID="w54a">,</tc:token>
+      <tc:token ID="w54b">mit</tc:token>
+      <tc:token ID="w54c">der</tc:token>
+      <tc:token ID="w54d">die</tc:token>
+      <tc:token ID="w54e">Nutzer</tc:token>
+      <tc:token ID="w54f">mit</tc:token>
+      <tc:token ID="w550">dem</tc:token>
+      <tc:token ID="w551">Problem</tc:token>
+      <tc:token ID="w552">konfrontiert</tc:token>
+      <tc:token ID="w553">sind</tc:token>
+      <tc:token ID="w554">Menge</tc:token>
+      <tc:token ID="w555">der</tc:token>
+      <tc:token ID="w556">Ressourcen</tc:token>
+      <tc:token ID="w557">,</tc:token>
+      <tc:token ID="w558">die</tc:token>
+      <tc:token ID="w559">für</tc:token>
+      <tc:token ID="w55a">die</tc:token>
+      <tc:token ID="w55b">Behebung</tc:token>
+      <tc:token ID="w55c">des</tc:token>
+      <tc:token ID="w55d">Problems</tc:token>
+      <tc:token ID="w55e">nötig</tc:token>
+      <tc:token ID="w55f">wären</tc:token>
+      <tc:token ID="w560">Schlussfolgerung</tc:token>
+      <tc:token ID="w561">Burghardt</tc:token>
+      <tc:token ID="w562">,</tc:token>
+      <tc:token ID="w563">Manuel</tc:token>
+      <tc:token ID="w564">(</tc:token>
+      <tc:token ID="w565">2012</tc:token>
+      <tc:token ID="w566">)</tc:token>
+      <tc:token ID="w567">:</tc:token>
+      <tc:token ID="w568">“</tc:token>
+      <tc:token ID="w569">Annotationsergonomie</tc:token>
+      <tc:token ID="w56a">:</tc:token>
+      <tc:token ID="w56b">Design-Empfehlungen</tc:token>
+      <tc:token ID="w56c">Für</tc:token>
+      <tc:token ID="w56d">Linguistische</tc:token>
+      <tc:token ID="w56e">Annotationswerkzeuge</tc:token>
+      <tc:token ID="w56f">”</tc:token>
+      <tc:token ID="w570">,</tc:token>
+      <tc:token ID="w571">in</tc:token>
+      <tc:token ID="w572">:</tc:token>
+      <tc:token ID="w573">Information</tc:token>
+      <tc:token ID="w574">-</tc:token>
+      <tc:token ID="w575">Wissenschaft</tc:token>
+      <tc:token ID="w576">&amp;</tc:token>
+      <tc:token ID="w577">Praxis</tc:token>
+      <tc:token ID="w578">63</tc:token>
+      <tc:token ID="w579">,</tc:token>
+      <tc:token ID="w57a">5</tc:token>
+      <tc:token ID="w57b">:</tc:token>
+      <tc:token ID="w57c">300-304</tc:token>
+      <tc:token ID="w57d">.</tc:token>
+      <tc:token ID="w57e">Department</tc:token>
+      <tc:token ID="w57f">of</tc:token>
+      <tc:token ID="w580">Corpus</tc:token>
+      <tc:token ID="w581">Linguistics</tc:token>
+      <tc:token ID="w582">(</tc:token>
+      <tc:token ID="w583">Humboldt-University</tc:token>
+      <tc:token ID="w584">Berlin</tc:token>
+      <tc:token ID="w585">)</tc:token>
+      <tc:token ID="w586">/</tc:token>
+      <tc:token ID="w587">Department</tc:token>
+      <tc:token ID="w588">of</tc:token>
+      <tc:token ID="w589">Historical</tc:token>
+      <tc:token ID="w58a">Linguistics</tc:token>
+      <tc:token ID="w58b">(</tc:token>
+      <tc:token ID="w58c">Humboldt-University</tc:token>
+      <tc:token ID="w58d">Berlin</tc:token>
+      <tc:token ID="w58e">)</tc:token>
+      <tc:token ID="w58f">/</tc:token>
+      <tc:token ID="w590">Computer</tc:token>
+      <tc:token ID="w591">and</tc:token>
+      <tc:token ID="w592">Media</tc:token>
+      <tc:token ID="w593">Service</tc:token>
+      <tc:token ID="w594">(</tc:token>
+      <tc:token ID="w595">CMS</tc:token>
+      <tc:token ID="w596">)</tc:token>
+      <tc:token ID="w597">(</tc:token>
+      <tc:token ID="w598">Humboldt-University</tc:token>
+      <tc:token ID="w599">Berlin</tc:token>
+      <tc:token ID="w59a">)</tc:token>
+      <tc:token ID="w59b">/</tc:token>
+      <tc:token ID="w59c">National</tc:token>
+      <tc:token ID="w59d">Institute</tc:token>
+      <tc:token ID="w59e">for</tc:token>
+      <tc:token ID="w59f">Research</tc:token>
+      <tc:token ID="w5a0">in</tc:token>
+      <tc:token ID="w5a1">Computer</tc:token>
+      <tc:token ID="w5a2">Science</tc:token>
+      <tc:token ID="w5a3">and</tc:token>
+      <tc:token ID="w5a4">Control</tc:token>
+      <tc:token ID="w5a5">(</tc:token>
+      <tc:token ID="w5a6">INRIA</tc:token>
+      <tc:token ID="w5a7">France</tc:token>
+      <tc:token ID="w5a8">)</tc:token>
+      <tc:token ID="w5a9">/</tc:token>
+      <tc:token ID="w5aa">Berlin</tc:token>
+      <tc:token ID="w5ab">School</tc:token>
+      <tc:token ID="w5ac">of</tc:token>
+      <tc:token ID="w5ad">Library</tc:token>
+      <tc:token ID="w5ae">and</tc:token>
+      <tc:token ID="w5af">Information</tc:token>
+      <tc:token ID="w5b0">Science</tc:token>
+      <tc:token ID="w5b1">(</tc:token>
+      <tc:token ID="w5b2">BSLIS</tc:token>
+      <tc:token ID="w5b3">)</tc:token>
+      <tc:token ID="w5b4">(</tc:token>
+      <tc:token ID="w5b5">2011-</tc:token>
+      <tc:token ID="w5b6">)</tc:token>
+      <tc:token ID="w5b7">:</tc:token>
+      <tc:token ID="w5b8">LAUDATIO</tc:token>
+      <tc:token ID="w5b9">.</tc:token>
+      <tc:token ID="w5ba">Long-term</tc:token>
+      <tc:token ID="w5bb">Access</tc:token>
+      <tc:token ID="w5bc">and</tc:token>
+      <tc:token ID="w5bd">Usage</tc:token>
+      <tc:token ID="w5be">of</tc:token>
+      <tc:token ID="w5bf">Deeply</tc:token>
+      <tc:token ID="w5c0">Annotated</tc:token>
+      <tc:token ID="w5c1">Information</tc:token>
+      <tc:token ID="w5c2">http://www.laudatio-repository.org/repository/</tc:token>
+      <tc:token ID="w5c3">[</tc:token>
+      <tc:token ID="w5c4">letzter</tc:token>
+      <tc:token ID="w5c5">Zugriff</tc:token>
+      <tc:token ID="w5c6">13.</tc:token>
+      <tc:token ID="w5c7">Oktober</tc:token>
+      <tc:token ID="w5c8">2015</tc:token>
+      <tc:token ID="w5c9">]</tc:token>
+      <tc:token ID="w5ca">.</tc:token>
+      <tc:token ID="w5cb">Gibbs</tc:token>
+      <tc:token ID="w5cc">,</tc:token>
+      <tc:token ID="w5cd">Fred</tc:token>
+      <tc:token ID="w5ce">/</tc:token>
+      <tc:token ID="w5cf">Owens</tc:token>
+      <tc:token ID="w5d0">,</tc:token>
+      <tc:token ID="w5d1">Trevor</tc:token>
+      <tc:token ID="w5d2">(</tc:token>
+      <tc:token ID="w5d3">2012</tc:token>
+      <tc:token ID="w5d4">)</tc:token>
+      <tc:token ID="w5d5">:</tc:token>
+      <tc:token ID="w5d6">“</tc:token>
+      <tc:token ID="w5d7">Building</tc:token>
+      <tc:token ID="w5d8">Better</tc:token>
+      <tc:token ID="w5d9">Digital</tc:token>
+      <tc:token ID="w5da">Humanities</tc:token>
+      <tc:token ID="w5db">Tools</tc:token>
+      <tc:token ID="w5dc">:</tc:token>
+      <tc:token ID="w5dd">Toward</tc:token>
+      <tc:token ID="w5de">Broader</tc:token>
+      <tc:token ID="w5df">Audiences</tc:token>
+      <tc:token ID="w5e0">and</tc:token>
+      <tc:token ID="w5e1">User-Centered</tc:token>
+      <tc:token ID="w5e2">Designs</tc:token>
+      <tc:token ID="w5e3">”</tc:token>
+      <tc:token ID="w5e4">,</tc:token>
+      <tc:token ID="w5e5">in</tc:token>
+      <tc:token ID="w5e6">:</tc:token>
+      <tc:token ID="w5e7">Digital</tc:token>
+      <tc:token ID="w5e8">Humanities</tc:token>
+      <tc:token ID="w5e9">Quarterly</tc:token>
+      <tc:token ID="w5ea">6</tc:token>
+      <tc:token ID="w5eb">,</tc:token>
+      <tc:token ID="w5ec">2</tc:token>
+      <tc:token ID="w5ed">http://www.digitalhumanities.org/dhq/vol/6/2/000136/000136.html</tc:token>
+      <tc:token ID="w5ee">[</tc:token>
+      <tc:token ID="w5ef">letzter</tc:token>
+      <tc:token ID="w5f0">Zugriff</tc:token>
+      <tc:token ID="w5f1">10.</tc:token>
+      <tc:token ID="w5f2">Februar</tc:token>
+      <tc:token ID="w5f3">2016</tc:token>
+      <tc:token ID="w5f4">]</tc:token>
+      <tc:token ID="w5f5">.</tc:token>
+      <tc:token ID="w5f6">Nielsen</tc:token>
+      <tc:token ID="w5f7">,</tc:token>
+      <tc:token ID="w5f8">Jakob</tc:token>
+      <tc:token ID="w5f9">(</tc:token>
+      <tc:token ID="w5fa">1995</tc:token>
+      <tc:token ID="w5fb">)</tc:token>
+      <tc:token ID="w5fc">:</tc:token>
+      <tc:token ID="w5fd">"</tc:token>
+      <tc:token ID="w5fe">10</tc:token>
+      <tc:token ID="w5ff">Usability</tc:token>
+      <tc:token ID="w600">Heuristics</tc:token>
+      <tc:token ID="w601">for</tc:token>
+      <tc:token ID="w602">User</tc:token>
+      <tc:token ID="w603">Interface</tc:token>
+      <tc:token ID="w604">Design</tc:token>
+      <tc:token ID="w605">"</tc:token>
+      <tc:token ID="w606">,</tc:token>
+      <tc:token ID="w607">in</tc:token>
+      <tc:token ID="w608">:</tc:token>
+      <tc:token ID="w609">Nielson</tc:token>
+      <tc:token ID="w60a">Norman</tc:token>
+      <tc:token ID="w60b">Group</tc:token>
+      <tc:token ID="w60c">.</tc:token>
+      <tc:token ID="w60d">Evidence-Based</tc:token>
+      <tc:token ID="w60e">User</tc:token>
+      <tc:token ID="w60f">Experience</tc:token>
+      <tc:token ID="w610">Research</tc:token>
+      <tc:token ID="w611">,</tc:token>
+      <tc:token ID="w612">Training</tc:token>
+      <tc:token ID="w613">,</tc:token>
+      <tc:token ID="w614">and</tc:token>
+      <tc:token ID="w615">Consulting</tc:token>
+      <tc:token ID="w616">http://www.nngroup.com/articles/ten-usability-heuristics/</tc:token>
+      <tc:token ID="w617">[</tc:token>
+      <tc:token ID="w618">letzter</tc:token>
+      <tc:token ID="w619">Zugriff</tc:token>
+      <tc:token ID="w61a">14.</tc:token>
+      <tc:token ID="w61b">Oktober</tc:token>
+      <tc:token ID="w61c">2015</tc:token>
+      <tc:token ID="w61d">]</tc:token>
+      <tc:token ID="w61e">.</tc:token>
+      <tc:token ID="w61f">Nielsen</tc:token>
+      <tc:token ID="w620">,</tc:token>
+      <tc:token ID="w621">Jakob</tc:token>
+      <tc:token ID="w622">(</tc:token>
+      <tc:token ID="w623">2012</tc:token>
+      <tc:token ID="w624">)</tc:token>
+      <tc:token ID="w625">:</tc:token>
+      <tc:token ID="w626">"</tc:token>
+      <tc:token ID="w627">Usability</tc:token>
+      <tc:token ID="w628">101</tc:token>
+      <tc:token ID="w629">:</tc:token>
+      <tc:token ID="w62a">Introduction</tc:token>
+      <tc:token ID="w62b">to</tc:token>
+      <tc:token ID="w62c">Usability</tc:token>
+      <tc:token ID="w62d">"</tc:token>
+      <tc:token ID="w62e">,</tc:token>
+      <tc:token ID="w62f">in</tc:token>
+      <tc:token ID="w630">:</tc:token>
+      <tc:token ID="w631">Nielson</tc:token>
+      <tc:token ID="w632">Norman</tc:token>
+      <tc:token ID="w633">Group</tc:token>
+      <tc:token ID="w634">.</tc:token>
+      <tc:token ID="w635">Evidence-Based</tc:token>
+      <tc:token ID="w636">User</tc:token>
+      <tc:token ID="w637">Experience</tc:token>
+      <tc:token ID="w638">Research</tc:token>
+      <tc:token ID="w639">,</tc:token>
+      <tc:token ID="w63a">Training</tc:token>
+      <tc:token ID="w63b">,</tc:token>
+      <tc:token ID="w63c">and</tc:token>
+      <tc:token ID="w63d">Consulting</tc:token>
+      <tc:token ID="w63e">https://www.nngroup.com/articles/usability-101-introduction-to-usability/</tc:token>
+      <tc:token ID="w63f">[</tc:token>
+      <tc:token ID="w640">letzter</tc:token>
+      <tc:token ID="w641">Zugriff</tc:token>
+      <tc:token ID="w642">14.</tc:token>
+      <tc:token ID="w643">Oktober</tc:token>
+      <tc:token ID="w644">2015</tc:token>
+      <tc:token ID="w645">]</tc:token>
+      <tc:token ID="w646">.</tc:token>
+      <tc:token ID="w647">Schreibman</tc:token>
+      <tc:token ID="w648">,</tc:token>
+      <tc:token ID="w649">Susan</tc:token>
+      <tc:token ID="w64a">/</tc:token>
+      <tc:token ID="w64b">Siemens</tc:token>
+      <tc:token ID="w64c">,</tc:token>
+      <tc:token ID="w64d">Ray</tc:token>
+      <tc:token ID="w64e">/</tc:token>
+      <tc:token ID="w64f">Unsworth</tc:token>
+      <tc:token ID="w650">,</tc:token>
+      <tc:token ID="w651">John</tc:token>
+      <tc:token ID="w652">(</tc:token>
+      <tc:token ID="w653">2004</tc:token>
+      <tc:token ID="w654">)</tc:token>
+      <tc:token ID="w655">:</tc:token>
+      <tc:token ID="w656">Companion</tc:token>
+      <tc:token ID="w657">to</tc:token>
+      <tc:token ID="w658">Digital</tc:token>
+      <tc:token ID="w659">Humanities</tc:token>
+      <tc:token ID="w65a">(</tc:token>
+      <tc:token ID="w65b">=</tc:token>
+      <tc:token ID="w65c">Blackwell</tc:token>
+      <tc:token ID="w65d">Companions</tc:token>
+      <tc:token ID="w65e">to</tc:token>
+      <tc:token ID="w65f">Literature</tc:token>
+      <tc:token ID="w660">and</tc:token>
+      <tc:token ID="w661">Culture</tc:token>
+      <tc:token ID="w662">)</tc:token>
+      <tc:token ID="w663">.</tc:token>
+      <tc:token ID="w664">Oxford</tc:token>
+      <tc:token ID="w665">:</tc:token>
+      <tc:token ID="w666">Blackwell</tc:token>
+      <tc:token ID="w667">Publishing</tc:token>
+      <tc:token ID="w668">Professional</tc:token>
+      <tc:token ID="w669">.</tc:token>
+      <tc:token ID="w66a">Sears</tc:token>
+      <tc:token ID="w66b">,</tc:token>
+      <tc:token ID="w66c">Andrew</tc:token>
+      <tc:token ID="w66d">(</tc:token>
+      <tc:token ID="w66e">1997</tc:token>
+      <tc:token ID="w66f">)</tc:token>
+      <tc:token ID="w670">:</tc:token>
+      <tc:token ID="w671">“</tc:token>
+      <tc:token ID="w672">Heuristic</tc:token>
+      <tc:token ID="w673">Walkthroughs</tc:token>
+      <tc:token ID="w674">:</tc:token>
+      <tc:token ID="w675">Finding</tc:token>
+      <tc:token ID="w676">the</tc:token>
+      <tc:token ID="w677">Problems</tc:token>
+      <tc:token ID="w678">Without</tc:token>
+      <tc:token ID="w679">the</tc:token>
+      <tc:token ID="w67a">Noise</tc:token>
+      <tc:token ID="w67b">”</tc:token>
+      <tc:token ID="w67c">,</tc:token>
+      <tc:token ID="w67d">in</tc:token>
+      <tc:token ID="w67e">:</tc:token>
+      <tc:token ID="w67f">International</tc:token>
+      <tc:token ID="w680">Journal</tc:token>
+      <tc:token ID="w681">of</tc:token>
+      <tc:token ID="w682">Human-Computer</tc:token>
+      <tc:token ID="w683">Interaction</tc:token>
+      <tc:token ID="w684">9</tc:token>
+      <tc:token ID="w685">,</tc:token>
+      <tc:token ID="w686">3</tc:token>
+      <tc:token ID="w687">:</tc:token>
+      <tc:token ID="w688">213-234</tc:token>
+      <tc:token ID="w689">.</tc:token>
+      <tc:token ID="w68a">Lewis</tc:token>
+      <tc:token ID="w68b">,</tc:token>
+      <tc:token ID="w68c">Clayton</tc:token>
+      <tc:token ID="w68d">/</tc:token>
+      <tc:token ID="w68e">Rieman</tc:token>
+      <tc:token ID="w68f">,</tc:token>
+      <tc:token ID="w690">John</tc:token>
+      <tc:token ID="w691">(</tc:token>
+      <tc:token ID="w692">1994</tc:token>
+      <tc:token ID="w693">)</tc:token>
+      <tc:token ID="w694">:</tc:token>
+      <tc:token ID="w695">Task-Centered</tc:token>
+      <tc:token ID="w696">User</tc:token>
+      <tc:token ID="w697">Interface</tc:token>
+      <tc:token ID="w698">Design</tc:token>
+      <tc:token ID="w699">.</tc:token>
+      <tc:token ID="w69a">A</tc:token>
+      <tc:token ID="w69b">Practical</tc:token>
+      <tc:token ID="w69c">Introduction</tc:token>
+      <tc:token ID="w69d">.</tc:token>
+      <tc:token ID="w69e">http://grouplab.cpsc.ucalgary.ca/saul/hci_topics/tcsd-book/contents.html</tc:token>
+      <tc:token ID="w69f">[</tc:token>
+      <tc:token ID="w6a0">letzter</tc:token>
+      <tc:token ID="w6a1">Zugriff</tc:token>
+      <tc:token ID="w6a2">14.</tc:token>
+      <tc:token ID="w6a3">Oktober</tc:token>
+      <tc:token ID="w6a4">2015</tc:token>
+      <tc:token ID="w6a5">]</tc:token>
+      <tc:token ID="w6a6">.</tc:token>
+      <tc:token ID="w6a7">Long-term</tc:token>
+      <tc:token ID="w6a8">Access</tc:token>
+      <tc:token ID="w6a9">and</tc:token>
+      <tc:token ID="w6aa">Usage</tc:token>
+      <tc:token ID="w6ab">of</tc:token>
+      <tc:token ID="w6ac">Deeply</tc:token>
+      <tc:token ID="w6ad">Annotated</tc:token>
+      <tc:token ID="w6ae">Information</tc:token>
+      <tc:token ID="w6af">Digital</tc:token>
+      <tc:token ID="w6b0">Research</tc:token>
+      <tc:token ID="w6b1">Tools</tc:token>
+      <tc:token ID="w6b2">(</tc:token>
+      <tc:token ID="w6b3">DiRT</tc:token>
+      <tc:token ID="w6b4">)</tc:token>
+      <tc:token ID="w6b5">Wiki</tc:token>
+      <tc:token ID="w6b6">mit</tc:token>
+      <tc:token ID="w6b7">umfangreicher</tc:token>
+      <tc:token ID="w6b8">Sammlung</tc:token>
+      <tc:token ID="w6b9">digitaler</tc:token>
+      <tc:token ID="w6ba">Tools</tc:token>
+      <tc:token ID="w6bb">für</tc:token>
+      <tc:token ID="w6bc">Geisteswissenschaftler_innen</tc:token>
+      <tc:token ID="w6bd">:</tc:token>
+      <tc:token ID="w6be">http://dirtdirectory.org</tc:token>
+      <tc:token ID="w6bf">Eine</tc:token>
+      <tc:token ID="w6c0">von</tc:token>
+      <tc:token ID="w6c1">Sears</tc:token>
+      <tc:token ID="w6c2">(</tc:token>
+      <tc:token ID="w6c3">1997</tc:token>
+      <tc:token ID="w6c4">)</tc:token>
+      <tc:token ID="w6c5">entwickelte</tc:token>
+      <tc:token ID="w6c6">Technik</tc:token>
+      <tc:token ID="w6c7">,</tc:token>
+      <tc:token ID="w6c8">die</tc:token>
+      <tc:token ID="w6c9">eine</tc:token>
+      <tc:token ID="w6ca">Kombination</tc:token>
+      <tc:token ID="w6cb">aus</tc:token>
+      <tc:token ID="w6cc">heuristic</tc:token>
+      <tc:token ID="w6cd">evaluations</tc:token>
+      <tc:token ID="w6ce">,</tc:token>
+      <tc:token ID="w6cf">cognitive</tc:token>
+      <tc:token ID="w6d0">walkthroughs</tc:token>
+      <tc:token ID="w6d1">und</tc:token>
+      <tc:token ID="w6d2">usability</tc:token>
+      <tc:token ID="w6d3">walkthroughs</tc:token>
+      <tc:token ID="w6d4">ist</tc:token>
+      <tc:token ID="w6d5">.</tc:token>
+      <tc:token ID="w6d6">Die</tc:token>
+      <tc:token ID="w6d7">Software</tc:token>
+      <tc:token ID="w6d8">ist</tc:token>
+      <tc:token ID="w6d9">unter</tc:token>
+      <tc:token ID="w6da">Apache</tc:token>
+      <tc:token ID="w6db">Licence</tc:token>
+      <tc:token ID="w6dc">2.0</tc:token>
+      <tc:token ID="w6dd">frei</tc:token>
+      <tc:token ID="w6de">verfügbar</tc:token>
+      <tc:token ID="w6df">und</tc:token>
+      <tc:token ID="w6e0">kann</tc:token>
+      <tc:token ID="w6e1">unter</tc:token>
+      <tc:token ID="w6e2">https://github.com/DZielke/laudatio</tc:token>
+      <tc:token ID="w6e3">aufgerufen</tc:token>
+      <tc:token ID="w6e4">werden</tc:token>
+      <tc:token ID="w6e5">.</tc:token>
+      <tc:token ID="w6e6">Sears</tc:token>
+      <tc:token ID="w6e7">(</tc:token>
+      <tc:token ID="w6e8">1997</tc:token>
+      <tc:token ID="w6e9">)</tc:token>
+      <tc:token ID="w6ea">beschreibt</tc:token>
+      <tc:token ID="w6eb">die</tc:token>
+      <tc:token ID="w6ec">Vor-</tc:token>
+      <tc:token ID="w6ed">und</tc:token>
+      <tc:token ID="w6ee">Nachteile</tc:token>
+      <tc:token ID="w6ef">verschiedener</tc:token>
+      <tc:token ID="w6f0">Evaluationstechniken</tc:token>
+      <tc:token ID="w6f1">–</tc:token>
+      <tc:token ID="w6f2">auch</tc:token>
+      <tc:token ID="w6f3">der</tc:token>
+      <tc:token ID="w6f4">heuristischen</tc:token>
+      <tc:token ID="w6f5">Evaluation</tc:token>
+      <tc:token ID="w6f6">.</tc:token>
+      <tc:token ID="w6f7">Er</tc:token>
+      <tc:token ID="w6f8">stellt</tc:token>
+      <tc:token ID="w6f9">heraus</tc:token>
+      <tc:token ID="w6fa">,</tc:token>
+      <tc:token ID="w6fb">dass</tc:token>
+      <tc:token ID="w6fc">nicht</tc:token>
+      <tc:token ID="w6fd">jeder</tc:token>
+      <tc:token ID="w6fe">Verstoß</tc:token>
+      <tc:token ID="w6ff">gegen</tc:token>
+      <tc:token ID="w700">eine</tc:token>
+      <tc:token ID="w701">Heuristik</tc:token>
+      <tc:token ID="w702">auch</tc:token>
+      <tc:token ID="w703">immer</tc:token>
+      <tc:token ID="w704">ein</tc:token>
+      <tc:token ID="w705">Usability-Problem</tc:token>
+      <tc:token ID="w706">darstellt</tc:token>
+      <tc:token ID="w707">.</tc:token>
+      <tc:token ID="w708">Gerade</tc:token>
+      <tc:token ID="w709">ungeübte</tc:token>
+      <tc:token ID="w70a">GutachterInnen</tc:token>
+      <tc:token ID="w70b">laufen</tc:token>
+      <tc:token ID="w70c">Gefahr</tc:token>
+      <tc:token ID="w70d">,</tc:token>
+      <tc:token ID="w70e">die</tc:token>
+      <tc:token ID="w70f">Heuristiken</tc:token>
+      <tc:token ID="w710">auf</tc:token>
+      <tc:token ID="w711">jeder</tc:token>
+      <tc:token ID="w712">einzelnen</tc:token>
+      <tc:token ID="w713">Seite</tc:token>
+      <tc:token ID="w714">starr</tc:token>
+      <tc:token ID="w715">umgesetzt</tc:token>
+      <tc:token ID="w716">sehen</tc:token>
+      <tc:token ID="w717">zu</tc:token>
+      <tc:token ID="w718">wollen</tc:token>
+      <tc:token ID="w719">und</tc:token>
+      <tc:token ID="w71a">verlieren</tc:token>
+      <tc:token ID="w71b">dabei</tc:token>
+      <tc:token ID="w71c">aus</tc:token>
+      <tc:token ID="w71d">dem</tc:token>
+      <tc:token ID="w71e">Blick</tc:token>
+      <tc:token ID="w71f">,</tc:token>
+      <tc:token ID="w720">ob</tc:token>
+      <tc:token ID="w721">Verletzungen</tc:token>
+      <tc:token ID="w722">der</tc:token>
+      <tc:token ID="w723">Heuristiken</tc:token>
+      <tc:token ID="w724">wirklich</tc:token>
+      <tc:token ID="w725">einen</tc:token>
+      <tc:token ID="w726">Einfluss</tc:token>
+      <tc:token ID="w727">auf</tc:token>
+      <tc:token ID="w728">NutzerInnen</tc:token>
+      <tc:token ID="w729">haben</tc:token>
+      <tc:token ID="w72a">.</tc:token>
+      <tc:token ID="w72b">Bibliographie</tc:token>
+    </tc:tokens>
+    <tc:sentences xmlns:tc="http://www.dspin.de/data/textcorpus">
+      <tc:sentence tokenIDs="w1 w2 w3 w4 w5 w6 w7 w8 w9 wa wb wc wd we wf w10 w11 w12 w13 w14 w15 w16 w17 w18 w19" ID="s1"/>
+      <tc:sentence tokenIDs="w1a w1b w1c w1d w1e w1f w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 w2a" ID="s2"/>
+      <tc:sentence tokenIDs="w2b w2c w2d w2e w2f w30 w31 w32 w33 w34 w35 w36 w37 w38 w39 w3a w3b w3c w3d w3e w3f w40 w41 w42 w43 w44 w45" ID="s3"/>
+      <tc:sentence tokenIDs="w46 w47 w48 w49 w4a w4b w4c w4d w4e w4f w50 w51 w52 w53 w54 w55 w56 w57 w58" ID="s4"/>
+      <tc:sentence tokenIDs="w59 w5a w5b w5c w5d w5e w5f w60 w61 w62 w63 w64" ID="s5"/>
+      <tc:sentence tokenIDs="w65 w66 w67 w68 w69 w6a w6b w6c w6d w6e w6f w70 w71 w72 w73 w74 w75 w76 w77 w78 w79 w7a w7b w7c w7d w7e w7f w80 w81" ID="s6"/>
+      <tc:sentence tokenIDs="w82 w83 w84 w85 w86 w87 w88 w89 w8a" ID="s7"/>
+      <tc:sentence tokenIDs="w8b w8c w8d w8e w8f w90 w91 w92 w93 w94 w95 w96 w97 w98 w99 w9a w9b w9c w9d w9e w9f wa0 wa1 wa2 wa3 wa4 wa5" ID="s8"/>
+      <tc:sentence tokenIDs="wa6 wa7 wa8 wa9 waa wab wac wad wae waf wb0 wb1 wb2 wb3 wb4 wb5 wb6 wb7 wb8 wb9 wba wbb wbc wbd wbe wbf wc0 wc1 wc2" ID="s9"/>
+      <tc:sentence tokenIDs="wc3 wc4 wc5 wc6 wc7 wc8 wc9 wca wcb wcc wcd wce wcf wd0 wd1 wd2 wd3 wd4 wd5 wd6 wd7 wd8 wd9" ID="sa"/>
+      <tc:sentence tokenIDs="wda wdb wdc wdd wde wdf we0 we1 we2 we3 we4 we5 we6 we7 we8 we9 wea web wec wed wee wef wf0 wf1 wf2" ID="sb"/>
+      <tc:sentence tokenIDs="wf3 wf4 wf5 wf6 wf7 wf8 wf9 wfa wfb wfc wfd wfe wff w100 w101 w102 w103 w104 w105 w106 w107 w108 w109" ID="sc"/>
+      <tc:sentence tokenIDs="w10a w10b w10c w10d w10e w10f w110 w111 w112 w113 w114 w115 w116 w117 w118 w119 w11a w11b w11c w11d w11e w11f w120 w121 w122 w123 w124 w125 w126 w127" ID="sd"/>
+      <tc:sentence tokenIDs="w128 w129 w12a w12b w12c w12d w12e w12f w130 w131 w132" ID="se"/>
+      <tc:sentence tokenIDs="w133 w134 w135 w136 w137 w138 w139" ID="sf"/>
+      <tc:sentence tokenIDs="w13a w13b w13c w13d w13e w13f w140 w141 w142 w143 w144 w145 w146 w147 w148 w149 w14a w14b w14c w14d w14e w14f w150 w151 w152 w153 w154 w155 w156 w157 w158 w159 w15a" ID="s10"/>
+      <tc:sentence tokenIDs="w15b w15c w15d w15e w15f w160 w161 w162 w163 w164 w165 w166 w167 w168 w169 w16a w16b w16c w16d w16e w16f w170 w171" ID="s11"/>
+      <tc:sentence tokenIDs="w172 w173 w174 w175 w176 w177 w178 w179 w17a w17b w17c w17d w17e w17f w180 w181 w182 w183 w184 w185 w186 w187 w188 w189 w18a" ID="s12"/>
+      <tc:sentence tokenIDs="w18b w18c w18d w18e w18f w190 w191 w192 w193 w194 w195 w196 w197 w198 w199 w19a w19b w19c w19d w19e" ID="s13"/>
+      <tc:sentence tokenIDs="w19f w1a0 w1a1 w1a2 w1a3 w1a4 w1a5 w1a6 w1a7 w1a8 w1a9 w1aa w1ab w1ac w1ad" ID="s14"/>
+      <tc:sentence tokenIDs="w1ae w1af w1b0 w1b1 w1b2 w1b3 w1b4 w1b5 w1b6 w1b7 w1b8 w1b9 w1ba w1bb w1bc w1bd w1be w1bf w1c0 w1c1 w1c2 w1c3 w1c4 w1c5 w1c6 w1c7 w1c8 w1c9 w1ca w1cb" ID="s15"/>
+      <tc:sentence tokenIDs="w1cc w1cd w1ce w1cf w1d0 w1d1 w1d2 w1d3 w1d4 w1d5 w1d6 w1d7 w1d8 w1d9 w1da w1db w1dc w1dd w1de w1df w1e0 w1e1 w1e2 w1e3 w1e4 w1e5 w1e6 w1e7 w1e8 w1e9 w1ea w1eb w1ec w1ed w1ee w1ef w1f0 w1f1 w1f2 w1f3 w1f4 w1f5 w1f6 w1f7" ID="s16"/>
+      <tc:sentence tokenIDs="w1f8 w1f9 w1fa w1fb w1fc w1fd w1fe w1ff w200 w201 w202 w203 w204 w205 w206 w207 w208 w209 w20a w20b w20c w20d w20e" ID="s17"/>
+      <tc:sentence tokenIDs="w20f w210 w211 w212 w213 w214 w215 w216 w217 w218 w219 w21a w21b w21c w21d w21e w21f w220 w221 w222 w223 w224 w225 w226 w227 w228 w229 w22a w22b w22c" ID="s18"/>
+      <tc:sentence tokenIDs="w22d w22e w22f w230 w231 w232 w233 w234 w235 w236 w237 w238 w239 w23a w23b w23c w23d w23e w23f w240 w241 w242 w243" ID="s19"/>
+      <tc:sentence tokenIDs="w244 w245 w246 w247 w248 w249 w24a w24b w24c w24d w24e w24f w250 w251 w252 w253 w254 w255 w256 w257 w258 w259 w25a w25b w25c w25d w25e w25f w260 w261 w262 w263 w264 w265 w266 w267 w268 w269 w26a w26b w26c w26d w26e w26f w270 w271 w272 w273 w274 w275 w276 w277 w278 w279 w27a w27b w27c w27d w27e w27f w280 w281 w282 w283 w284 w285 w286 w287 w288 w289 w28a w28b w28c w28d w28e w28f w290 w291 w292 w293 w294 w295 w296 w297 w298 w299 w29a w29b w29c w29d" ID="s1a"/>
+      <tc:sentence tokenIDs="w29e w29f w2a0 w2a1 w2a2 w2a3 w2a4 w2a5 w2a6 w2a7 w2a8 w2a9 w2aa w2ab w2ac w2ad w2ae w2af w2b0 w2b1 w2b2 w2b3 w2b4 w2b5 w2b6 w2b7 w2b8" ID="s1b"/>
+      <tc:sentence tokenIDs="w2b9 w2ba w2bb w2bc w2bd w2be w2bf w2c0 w2c1 w2c2 w2c3 w2c4 w2c5 w2c6 w2c7 w2c8 w2c9 w2ca" ID="s1c"/>
+      <tc:sentence tokenIDs="w2cb w2cc w2cd w2ce w2cf w2d0 w2d1 w2d2 w2d3 w2d4 w2d5 w2d6 w2d7 w2d8 w2d9 w2da w2db w2dc w2dd w2de w2df w2e0" ID="s1d"/>
+      <tc:sentence tokenIDs="w2e1 w2e2 w2e3 w2e4 w2e5 w2e6 w2e7 w2e8 w2e9 w2ea w2eb w2ec w2ed w2ee w2ef w2f0 w2f1" ID="s1e"/>
+      <tc:sentence tokenIDs="w2f2 w2f3 w2f4 w2f5 w2f6 w2f7 w2f8 w2f9 w2fa w2fb w2fc w2fd w2fe w2ff w300 w301 w302 w303 w304 w305 w306 w307 w308 w309 w30a w30b w30c w30d w30e w30f" ID="s1f"/>
+      <tc:sentence tokenIDs="w310 w311 w312 w313 w314 w315 w316 w317 w318 w319 w31a w31b w31c w31d w31e w31f w320 w321 w322 w323 w324" ID="s20"/>
+      <tc:sentence tokenIDs="w325 w326 w327 w328 w329 w32a w32b w32c w32d w32e w32f w330 w331 w332 w333 w334 w335 w336 w337 w338 w339 w33a w33b w33c w33d w33e w33f w340 w341" ID="s21"/>
+      <tc:sentence tokenIDs="w342 w343 w344 w345 w346 w347" ID="s22"/>
+      <tc:sentence tokenIDs="w348 w349 w34a w34b w34c w34d w34e w34f w350 w351 w352 w353 w354 w355 w356 w357 w358 w359 w35a w35b" ID="s23"/>
+      <tc:sentence tokenIDs="w35c w35d w35e w35f w360 w361 w362 w363 w364 w365 w366 w367 w368 w369 w36a w36b w36c w36d w36e w36f w370 w371 w372 w373 w374 w375 w376 w377 w378 w379 w37a w37b w37c w37d w37e w37f w380" ID="s24"/>
+      <tc:sentence tokenIDs="w381 w382 w383 w384 w385 w386 w387 w388 w389 w38a w38b w38c w38d w38e w38f w390 w391 w392 w393 w394 w395 w396 w397 w398 w399" ID="s25"/>
+      <tc:sentence tokenIDs="w39a w39b w39c w39d w39e w39f w3a0 w3a1 w3a2 w3a3 w3a4 w3a5 w3a6 w3a7 w3a8 w3a9 w3aa w3ab w3ac w3ad w3ae w3af w3b0 w3b1 w3b2 w3b3 w3b4 w3b5 w3b6 w3b7 w3b8 w3b9 w3ba w3bb w3bc w3bd w3be w3bf w3c0 w3c1 w3c2 w3c3 w3c4" ID="s26"/>
+      <tc:sentence tokenIDs="w3c5 w3c6 w3c7 w3c8 w3c9 w3ca w3cb w3cc w3cd w3ce w3cf w3d0 w3d1 w3d2 w3d3 w3d4 w3d5 w3d6 w3d7 w3d8" ID="s27"/>
+      <tc:sentence tokenIDs="w3d9 w3da w3db w3dc w3dd w3de w3df w3e0 w3e1 w3e2 w3e3 w3e4 w3e5 w3e6 w3e7 w3e8" ID="s28"/>
+      <tc:sentence tokenIDs="w3e9 w3ea w3eb w3ec w3ed w3ee w3ef w3f0 w3f1 w3f2 w3f3 w3f4 w3f5 w3f6 w3f7 w3f8 w3f9 w3fa w3fb w3fc w3fd w3fe w3ff" ID="s29"/>
+      <tc:sentence tokenIDs="w400 w401 w402 w403 w404 w405 w406 w407 w408 w409 w40a w40b w40c w40d w40e w40f w410" ID="s2a"/>
+      <tc:sentence tokenIDs="w411 w412 w413 w414 w415 w416 w417 w418 w419 w41a w41b w41c w41d w41e w41f w420 w421 w422 w423 w424 w425 w426 w427 w428 w429 w42a w42b" ID="s2b"/>
+      <tc:sentence tokenIDs="w42c w42d w42e w42f w430 w431 w432 w433 w434 w435 w436 w437 w438 w439 w43a w43b" ID="s2c"/>
+      <tc:sentence tokenIDs="w43c w43d w43e w43f w440 w441 w442 w443 w444 w445 w446 w447 w448" ID="s2d"/>
+      <tc:sentence tokenIDs="w449 w44a w44b w44c w44d w44e w44f w450 w451 w452 w453 w454 w455 w456 w457 w458 w459 w45a w45b w45c w45d w45e w45f w460 w461 w462 w463 w464 w465 w466 w467" ID="s2e"/>
+      <tc:sentence tokenIDs="w468 w469 w46a w46b w46c w46d w46e w46f w470 w471 w472 w473 w474 w475 w476 w477 w478 w479 w47a w47b w47c w47d w47e w47f w480 w481 w482 w483 w484 w485 w486 w487 w488 w489 w48a w48b w48c w48d w48e w48f w490" ID="s2f"/>
+      <tc:sentence tokenIDs="w491 w492 w493 w494 w495 w496 w497 w498 w499 w49a w49b w49c w49d w49e w49f w4a0 w4a1 w4a2 w4a3 w4a4 w4a5 w4a6 w4a7 w4a8 w4a9 w4aa w4ab" ID="s30"/>
+      <tc:sentence tokenIDs="w4ac w4ad w4ae w4af w4b0 w4b1 w4b2 w4b3 w4b4 w4b5 w4b6 w4b7 w4b8 w4b9 w4ba w4bb w4bc w4bd w4be w4bf w4c0 w4c1 w4c2 w4c3 w4c4" ID="s31"/>
+      <tc:sentence tokenIDs="w4c5 w4c6 w4c7 w4c8 w4c9 w4ca w4cb w4cc w4cd w4ce w4cf w4d0 w4d1 w4d2 w4d3 w4d4 w4d5 w4d6 w4d7 w4d8 w4d9" ID="s32"/>
+      <tc:sentence tokenIDs="w4da w4db w4dc w4dd w4de w4df w4e0 w4e1 w4e2 w4e3 w4e4 w4e5 w4e6 w4e7 w4e8 w4e9 w4ea w4eb w4ec w4ed w4ee" ID="s33"/>
+      <tc:sentence tokenIDs="w4ef w4f0 w4f1 w4f2 w4f3 w4f4 w4f5 w4f6 w4f7 w4f8 w4f9 w4fa w4fb w4fc w4fd w4fe w4ff w500 w501 w502 w503 w504 w505 w506 w507 w508 w509" ID="s34"/>
+      <tc:sentence tokenIDs="w50a w50b w50c w50d w50e w50f w510 w511 w512 w513 w514 w515 w516 w517 w518 w519 w51a w51b w51c w51d w51e w51f w520 w521 w522 w523 w524 w525 w526 w527 w528 w529 w52a w52b w52c w52d w52e w52f w530 w531 w532 w533 w534 w535 w536 w537 w538 w539 w53a w53b w53c w53d w53e" ID="s35"/>
+      <tc:sentence tokenIDs="w53f w540 w541 w542 w543 w544 w545 w546 w547 w548 w549 w54a w54b w54c w54d w54e w54f w550 w551 w552 w553 w554 w555 w556 w557 w558 w559 w55a w55b w55c w55d w55e w55f w560 w561 w562 w563 w564 w565 w566 w567" ID="s36"/>
+      <tc:sentence tokenIDs="w568 w569 w56a w56b w56c w56d w56e w56f w570 w571 w572 w573 w574 w575 w576 w577 w578 w579 w57a w57b w57c w57d" ID="s37"/>
+      <tc:sentence tokenIDs="w57e w57f w580 w581 w582 w583 w584 w585 w586 w587 w588 w589 w58a w58b w58c w58d w58e w58f w590 w591 w592 w593 w594 w595 w596 w597 w598 w599 w59a w59b w59c w59d w59e w59f w5a0 w5a1 w5a2 w5a3 w5a4 w5a5 w5a6 w5a7 w5a8 w5a9 w5aa w5ab w5ac w5ad w5ae w5af w5b0 w5b1 w5b2 w5b3 w5b4 w5b5 w5b6 w5b7" ID="s38"/>
+      <tc:sentence tokenIDs="w5b8 w5b9" ID="s39"/>
+      <tc:sentence tokenIDs="w5ba w5bb w5bc w5bd w5be w5bf w5c0 w5c1 w5c2 w5c3 w5c4 w5c5 w5c6 w5c7 w5c8 w5c9 w5ca" ID="s3a"/>
+      <tc:sentence tokenIDs="w5cb w5cc w5cd w5ce w5cf w5d0 w5d1 w5d2 w5d3 w5d4 w5d5" ID="s3b"/>
+      <tc:sentence tokenIDs="w5d6 w5d7 w5d8 w5d9 w5da w5db w5dc w5dd w5de w5df w5e0 w5e1 w5e2 w5e3 w5e4 w5e5 w5e6 w5e7 w5e8 w5e9 w5ea w5eb w5ec w5ed w5ee w5ef w5f0 w5f1 w5f2 w5f3 w5f4 w5f5" ID="s3c"/>
+      <tc:sentence tokenIDs="w5f6 w5f7 w5f8 w5f9 w5fa w5fb w5fc" ID="s3d"/>
+      <tc:sentence tokenIDs="w5fd w5fe w5ff w600 w601 w602 w603 w604 w605 w606 w607 w608 w609 w60a w60b w60c" ID="s3e"/>
+      <tc:sentence tokenIDs="w60d w60e w60f w610 w611 w612 w613 w614 w615 w616 w617 w618 w619 w61a w61b w61c w61d w61e" ID="s3f"/>
+      <tc:sentence tokenIDs="w61f w620 w621 w622 w623 w624 w625" ID="s40"/>
+      <tc:sentence tokenIDs="w626 w627 w628 w629" ID="s41"/>
+      <tc:sentence tokenIDs="w62a w62b w62c w62d w62e w62f w630 w631 w632 w633 w634" ID="s42"/>
+      <tc:sentence tokenIDs="w635 w636 w637 w638 w639 w63a w63b w63c w63d w63e w63f w640 w641 w642 w643 w644 w645 w646" ID="s43"/>
+      <tc:sentence tokenIDs="w647 w648 w649 w64a w64b w64c w64d w64e w64f w650 w651 w652 w653 w654 w655" ID="s44"/>
+      <tc:sentence tokenIDs="w656 w657 w658 w659 w65a w65b w65c w65d w65e w65f w660 w661 w662 w663" ID="s45"/>
+      <tc:sentence tokenIDs="w664 w665 w666 w667 w668 w669" ID="s46"/>
+      <tc:sentence tokenIDs="w66a w66b w66c w66d w66e w66f w670" ID="s47"/>
+      <tc:sentence tokenIDs="w671 w672 w673 w674 w675 w676 w677 w678 w679 w67a w67b w67c w67d w67e w67f w680 w681 w682 w683 w684 w685 w686 w687 w688 w689" ID="s48"/>
+      <tc:sentence tokenIDs="w68a w68b w68c w68d w68e w68f w690 w691 w692 w693 w694 w695 w696 w697 w698 w699" ID="s49"/>
+      <tc:sentence tokenIDs="w69a w69b w69c w69d w69e w69f w6a0 w6a1 w6a2 w6a3 w6a4 w6a5 w6a6" ID="s4a"/>
+      <tc:sentence tokenIDs="w6a7 w6a8 w6a9 w6aa w6ab w6ac w6ad w6ae w6af w6b0 w6b1 w6b2 w6b3 w6b4" ID="s4b"/>
+      <tc:sentence tokenIDs="w6b5 w6b6 w6b7 w6b8 w6b9 w6ba w6bb w6bc w6bd w6be w6bf w6c0 w6c1 w6c2 w6c3 w6c4 w6c5 w6c6 w6c7 w6c8 w6c9 w6ca w6cb w6cc w6cd w6ce w6cf w6d0 w6d1 w6d2 w6d3 w6d4 w6d5" ID="s4c"/>
+      <tc:sentence tokenIDs="w6d6 w6d7 w6d8 w6d9 w6da w6db w6dc w6dd w6de w6df w6e0 w6e1 w6e2 w6e3 w6e4 w6e5 w6e6 w6e7 w6e8 w6e9 w6ea w6eb w6ec w6ed w6ee w6ef w6f0 w6f1 w6f2 w6f3 w6f4 w6f5 w6f6" ID="s4d"/>
+      <tc:sentence tokenIDs="w6f7 w6f8 w6f9 w6fa w6fb w6fc w6fd w6fe w6ff w700 w701 w702 w703 w704 w705 w706 w707" ID="s4e"/>
+      <tc:sentence tokenIDs="w708 w709 w70a w70b w70c w70d w70e w70f w710 w711 w712 w713 w714 w715 w716 w717 w718 w719 w71a w71b w71c w71d w71e w71f w720 w721 w722 w723 w724 w725 w726 w727 w728 w729 w72a" ID="s4f"/>
+      <tc:sentence tokenIDs="w72b" ID="s50"/>
+    </tc:sentences>
+    <tc:namedEntities xmlns:tc="http://www.dspin.de/data/textcorpus" type="tuebadz8">
+      <tc:entity class="OTH" tokenIDs="w6d"/>
+      <tc:entity class="ORG" tokenIDs="w93 w94"/>
+      <tc:entity class="PER" tokenIDs="wae"/>
+      <tc:entity class="PER" tokenIDs="wb0"/>
+      <tc:entity class="ORG" tokenIDs="wf9"/>
+      <tc:entity class="PER" tokenIDs="w10c"/>
+      <tc:entity class="OTH" tokenIDs="w12a w12b"/>
+      <tc:entity class="PER" tokenIDs="w15b"/>
+      <tc:entity class="PER" tokenIDs="w15d"/>
+      <tc:entity class="LOC" tokenIDs="w1cf"/>
+      <tc:entity class="PER" tokenIDs="w23f"/>
+      <tc:entity class="ORG" tokenIDs="w318"/>
+      <tc:entity class="PER" tokenIDs="w36c"/>
+      <tc:entity class="PER" tokenIDs="w50e"/>
+      <tc:entity class="PER" tokenIDs="w561"/>
+      <tc:entity class="PER" tokenIDs="w563"/>
+      <tc:entity class="ORG" tokenIDs="w573 w574 w575 w576 w577"/>
+      <tc:entity class="ORG" tokenIDs="w57e w57f w580 w581"/>
+      <tc:entity class="ORG" tokenIDs="w583"/>
+      <tc:entity class="GPE" tokenIDs="w584"/>
+      <tc:entity class="ORG" tokenIDs="w587 w588 w589 w58a"/>
+      <tc:entity class="ORG" tokenIDs="w58c"/>
+      <tc:entity class="GPE" tokenIDs="w58d"/>
+      <tc:entity class="ORG" tokenIDs="w590 w591 w592 w593"/>
+      <tc:entity class="ORG" tokenIDs="w595"/>
+      <tc:entity class="ORG" tokenIDs="w598"/>
+      <tc:entity class="GPE" tokenIDs="w599"/>
+      <tc:entity class="ORG" tokenIDs="w59c w59d w59e w59f"/>
+      <tc:entity class="ORG" tokenIDs="w5a1 w5a2 w5a3 w5a4"/>
+      <tc:entity class="ORG" tokenIDs="w5a6 w5a7"/>
+      <tc:entity class="ORG" tokenIDs="w5aa w5ab w5ac w5ad w5ae w5af w5b0"/>
+      <tc:entity class="PER" tokenIDs="w5cb"/>
+      <tc:entity class="PER" tokenIDs="w5cd"/>
+      <tc:entity class="PER" tokenIDs="w5cf"/>
+      <tc:entity class="PER" tokenIDs="w5d1"/>
+      <tc:entity class="OTH" tokenIDs="w5e7 w5e8 w5e9 w5ea"/>
+      <tc:entity class="PER" tokenIDs="w5f6 w5f7 w5f8"/>
+      <tc:entity class="PER" tokenIDs="w609 w60a w60b"/>
+      <tc:entity class="PER" tokenIDs="w61f w620 w621"/>
+      <tc:entity class="ORG" tokenIDs="w631 w632 w633"/>
+      <tc:entity class="PER" tokenIDs="w647"/>
+      <tc:entity class="PER" tokenIDs="w649"/>
+      <tc:entity class="ORG" tokenIDs="w64b"/>
+      <tc:entity class="PER" tokenIDs="w64d"/>
+      <tc:entity class="PER" tokenIDs="w64f"/>
+      <tc:entity class="PER" tokenIDs="w651"/>
+      <tc:entity class="OTH" tokenIDs="w65c w65d w65e w65f w660 w661"/>
+      <tc:entity class="GPE" tokenIDs="w664"/>
+      <tc:entity class="ORG" tokenIDs="w666 w667 w668"/>
+      <tc:entity class="PER" tokenIDs="w66a w66b w66c"/>
+      <tc:entity class="OTH" tokenIDs="w675 w676 w677 w678 w679 w67a"/>
+      <tc:entity class="ORG" tokenIDs="w67f w680 w681 w682 w683"/>
+      <tc:entity class="PER" tokenIDs="w68a"/>
+      <tc:entity class="PER" tokenIDs="w68c"/>
+      <tc:entity class="PER" tokenIDs="w68e"/>
+      <tc:entity class="PER" tokenIDs="w690"/>
+      <tc:entity class="OTH" tokenIDs="w69a w69b w69c"/>
+      <tc:entity class="ORG" tokenIDs="w6b3"/>
+      <tc:entity class="ORG" tokenIDs="w6c1"/>
+      <tc:entity class="ORG" tokenIDs="w6e6"/>
+    </tc:namedEntities>
+  </TextCorpus>
+</D-Spin>

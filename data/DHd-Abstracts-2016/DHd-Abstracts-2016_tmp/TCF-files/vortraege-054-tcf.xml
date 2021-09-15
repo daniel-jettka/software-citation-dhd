@@ -1,0 +1,2640 @@
+<?xml version='1.0' encoding='UTF-8'?><D-Spin xmlns="http://www.dspin.de/data" version="5">
+  <MetaData xmlns="http://www.dspin.de/data/metadata"><Services><cmd:CMD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cmd="http://www.clarin.eu/cmd/1" CMDVersion="1.2" xsi:schemaLocation="http://www.clarin.eu/cmd/1 http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_1320657629623/xsd"><cmd:Resources><cmd:ResourceProxyList/><cmd:JournalFileProxyList/><cmd:ResourceRelationList/></cmd:Resources><cmd:Components><cmd:WebServiceToolChain><cmd:GeneralInfo><cmd:Descriptions><cmd:Description/></cmd:Descriptions><cmd:ResourceName>Custom chain</cmd:ResourceName><cmd:ResourceClass>Toolchain</cmd:ResourceClass></cmd:GeneralInfo><cmd:Toolchain><cmd:ToolInChain><cmd:PID>https://hdl.handle.net/21.11120/0000-0008-319A-3</cmd:PID><cmd:Parameter value="de" name="lang"/></cmd:ToolInChain><cmd:ToolInChain><cmd:PID>https://hdl.handle.net/21.11120/0000-0008-3183-C</cmd:PID><cmd:Parameter value="5" name="version"/></cmd:ToolInChain><cmd:ToolInChain><cmd:PID>http://hdl.handle.net/11022/0000-0007-DA29-6</cmd:PID><cmd:Parameter value="de" name="lang"/><cmd:Parameter value="5" name="version"/></cmd:ToolInChain></cmd:Toolchain></cmd:WebServiceToolChain></cmd:Components></cmd:CMD></Services></MetaData>
+  <TextCorpus xmlns="http://www.dspin.de/data/textcorpus" lang="de">
+    <textSource type="application/tei+xml;format-variant=tei-dta;tokenized=0">&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="vortraege-054">
+&lt;teiHeader>
+&lt;fileDesc>
+&lt;titleStmt>
+&lt;title>Geisteswissenschaftliche Fachdatenrepositorien im Semantic Web. Modellierung, Vernetzung, Visualisierung.&lt;/title>
+&lt;author>
+&lt;name>
+&lt;surname>Schrade&lt;/surname>
+&lt;forename>Torsten&lt;/forename>
+&lt;/name>
+&lt;affiliation>Akademie der Wissenschaften und der Literatur Mainz, Deutschland&lt;/affiliation>
+&lt;email>Torsten.Schrade@adwmainz.de&lt;/email>
+&lt;/author>
+&lt;/titleStmt>
+&lt;editionStmt>
+&lt;edition>
+&lt;date>2015-10-14T22:22:58&lt;/date>
+&lt;/edition>
+&lt;/editionStmt>
+&lt;publicationStmt>
+&lt;publisher>Elisabeth Burr, Universität Leipzig&lt;/publisher>
+&lt;address>
+&lt;addrLine>Beethovenstr. 15&lt;/addrLine>
+&lt;addrLine>04107 Leipzig&lt;/addrLine>
+&lt;addrLine>Deutschland&lt;/addrLine>
+&lt;addrLine>Elisabeth Burr&lt;/addrLine>
+&lt;/address>
+&lt;/publicationStmt>
+&lt;sourceDesc>
+&lt;p>Converted from an OASIS Open Document&lt;/p>
+&lt;/sourceDesc>
+&lt;/fileDesc>
+&lt;encodingDesc>
+&lt;appInfo>
+&lt;application ident="DHCONVALIDATOR" version="1.17">
+&lt;label>DHConvalidator&lt;/label>
+&lt;/application>
+&lt;/appInfo>
+&lt;/encodingDesc>
+&lt;profileDesc>
+&lt;textClass>
+&lt;keywords scheme="ConfTool" n="category">
+&lt;term>Vortrag&lt;/term>
+&lt;/keywords>
+&lt;keywords scheme="ConfTool" n="subcategory">
+&lt;term>&lt;/term>
+&lt;/keywords>
+&lt;keywords scheme="ConfTool" n="keywords">
+&lt;term>Semantic Web&lt;/term>
+&lt;term>XML&lt;/term>
+&lt;term>RDF&lt;/term>
+&lt;term>Webservice&lt;/term>
+&lt;term>Forschungsdaten&lt;/term>
+&lt;/keywords>
+&lt;keywords scheme="ConfTool" n="topics">
+&lt;term>Umwandlung&lt;/term>
+&lt;term>Modellierung&lt;/term>
+&lt;term>Annotieren&lt;/term>
+&lt;term>Visualisierung&lt;/term>
+&lt;term>Daten&lt;/term>
+&lt;term>Metadaten&lt;/term>
+&lt;term>Methoden&lt;/term>
+&lt;term>Software&lt;/term>
+&lt;term>Standards&lt;/term>
+&lt;term>Text&lt;/term>
+&lt;term>Werkzeuge&lt;/term>
+&lt;term>Visualisierung&lt;/term>
+&lt;/keywords>
+&lt;/textClass>
+&lt;/profileDesc>
+&lt;/teiHeader>
+&lt;text>
+&lt;body>
+&lt;div type="div1" rend="DH-Heading">
+&lt;head>Implizite und explizite Semantik TEI-basierter Fachdatenrepositorien&lt;/head>
+&lt;p>Zahlreiche geisteswissenschaftliche Fachdatenrepositorien setzen zur Modellierung
+
+          ihrer Forschungsdaten auf die Richtlinien der Text Encoding Initiative (TEI) und
+
+          somit auf XML als primäres Datenformat. XML eignet sich sehr gut zur Lösung
+
+          editorisch-philologischer Aufgabenstellungen und entspricht den geforderten
+
+          Kriterien der Interoperabilität und Nachhaltigkeit von Forschungsdaten. Durch
+
+          die standardkonforme Auszeichnung der Forschungsgegenstände in TEI werden diese
+
+          formal und inhaltlich erschlossen. TEI-kodierte Daten beinhalten in jeder
+
+          Hinsicht semantische Bezüge (bspw. Raumbezüge, Personenbezüge, begriffliche und
+
+          konzeptuelle Bezüge etc.). Aus der Perspektive des &lt;hi rend="italic">Semantic
+
+          Web&lt;/hi> sind diese Bezüge jedoch zunächst nur implizit und nicht explizit
+
+          in den Daten vorhanden (Abbildung 1). Im Gegenzug gründen sich &lt;hi rend="italic"
+>Semantic Web-&lt;/hi>Technologien auf das &lt;hi rend="italic">Resource
+
+          Description Framework&lt;/hi> (RDF) zur Formulierung semantischer Aussagen (&lt;hi
+
+          rend="italic">statements&lt;/hi>) in Form von Subjekt – Prädikat –
+
+          Objektbeziehungen (&lt;hi rend="italic">triples&lt;/hi>). Die besondere Stärke von RDF
+
+          liegt in der automatisiert möglichen Vernetzung (&lt;hi rend="italic"
+>interlinking&lt;/hi>), Zusammenführung (&lt;hi rend="italic">merging&lt;/hi>) und
+
+          Analyse (&lt;hi rend="italic">reasoning&lt;/hi>) eigentlich separater Datenbestände.
+
+          RDF ist modellierungstechnisch auf einer höheren Abstraktionsebene anzusiedeln
+
+          als TEI-kodierte XML-Daten (Abbildung 2; vgl. auch Polleres u. a. 2009). &lt;/p>
+&lt;figure>
+&lt;graphic url="054-100002010000072C00000478B5A41C0E.png"/>
+&lt;p>&lt;hi rend="bold">Abb. 1&lt;/hi>&lt;/p>
+&lt;/figure>
+&lt;figure>
+&lt;graphic url="054-1000020100000632000003F67F5F0549.png"/>
+&lt;p>&lt;hi rend="bold">Abb. 2&lt;/hi>&lt;/p>
+&lt;/figure>
+&lt;p>
+
+            Während die formale Erschließung geisteswissenschaftlicher
+
+            Forschungsgegenstände mittels XML-basierter Annotationsmethoden mittlerweile als
+
+            weit fortgeschritten gelten kann, bleibt die semantische Erschließung häufig
+
+            noch weit zurück. Zwar wird in den Daten oft das Auftreten bestimmter Ortsnamen,
+
+            Personennamen, Werktitel etc. annotiert. Dennoch gehen diese Annotationen meist
+
+            nicht darüber hinaus, anzuzeigen, dass eine bestimmte Entität an einer
+
+            spezifischen Stelle erwähnt ist. Damit bleibt die Semantik der Fachdaten weit
+
+            hinter den Möglichkeiten zurück, die aktuelle Technologien – insbesondere die
+
+            des &lt;hi rend="italic">Semantic Web&lt;/hi> und des &lt;hi rend="italic">Linked Open
+
+            Data&lt;/hi> (LOD) – bieten könnten. Der durch LOD mögliche Zugang auf
+
+            vernetzte Forschungsdaten eröffnet neuartige Perspektiven der Nutzung bisher
+
+            isoliert stehender Fachdatenrepositorien. Wesentlich ist dabei, dass LOD und RDF
+
+            bestehende Standards der &lt;hi rend="italic">Digital Humanities&lt;/hi> (wie bspw.
+
+            TEI / XML) um die Verwendung gemeinsamer Terminologien und Metadatenschemata
+
+            erweitern (vgl. Iglesia et al. 2015). Dadurch wird es möglich, auch Bestände
+
+            verteilter Provenienz und unterschiedlicher Struktur gemeinsam inhaltlich zu
+
+            beschreiben und zu analysieren. &lt;/p>
+&lt;p>Insgesamt existiert momentan also noch eine Kluft: Auf der einen Seite die
+
+              zahlreichen geisteswissenschaftlichen Fachdatenrepositorien mit implizit
+
+              semantischem Potential, auf der anderen Seite die Technologien und Datenmodelle
+
+              des &lt;hi rend="italic">Semantic Web&lt;/hi>, die neue Sichten und Analysemethoden
+
+              auf die Daten eröffnen könnten. Zwar existieren einige Sprachkonzepte, Methoden
+
+              und Tools zur Übersetzung zwischen TEI / XML und RDF. Diese sind jedoch
+
+              ausnahmslos komplex, teilweise technisch veraltet, verfügen nur über
+
+              prototypische Implementierungen oder sind hochgradig spezialisiert auf einen
+
+              bestimmten Datenbestand. &lt;ref type="note" target="n01" n="1">1&lt;/ref> Während die dem &lt;hi rend="italic"
+>Semantic Web&lt;/hi> zugrunde liegenden Technologien aus informatischer Sicht
+
+              als erschlossen und anwendbar angesehen werden können (vgl. Lanthaler 2014:
+
+              11–35), besteht zum jetzigen Zeitpunkt also ein Bedarf an exemplarischen
+
+              Bearbeitungen repräsentativer Forschungsdatenbestände aus den
+
+              Geisteswissenschaften, um die Tragfähigkeit dieser Technologien auch für die
+
+              geisteswissenschaftliche Forschung zu demonstrieren. &lt;/p>
+&lt;/div>
+&lt;div type="div1" rend="DH-Heading1">
+&lt;head>
+&lt;anchor xml:id="id_h.8et4tihv3df7"/>Semantische Aussagen aus XML mit Hilfe des
+&lt;hi rend="italic">XTriples&lt;/hi>-Webservices
+&lt;/head>
+&lt;p>An dieser Stelle setzt der &lt;hi rend="italic">&lt;ref
+
+                target="http://xtriples.spatialhumanities.de"
+>XTriples&lt;/ref>-&lt;/hi>Webservice der &lt;hi rend="italic">&lt;ref
+
+                target="http://www.digitale-akademie.de">Digitalen Akademie&lt;/ref>&lt;/hi>
+
+                der Mainzer Akademie der Wissenschaften und der Literatur an. Grundgedanke des
+
+                generischen Dienstes ist das Crawling beliebiger XML-Datenbestände und die
+
+                anschließende Generierung semantischer Aussagen aus den XML-Daten auf Basis
+
+                definierter Aussagemuster. Das Prinzip der Explizierung semantischer Aussagen
+
+                aus XML ist dabei nicht sonderlich komplex: Wird die URI einer XML-Ressource
+
+                oder eine Dateneinheit in dieser Ressource als das Subjekt einer semantischen
+
+                Aussage begriffen, können diesem Subjekt über Prädikate aus kontrollierten
+
+                Vokabularen weitere Werte aus den XML-Daten bzw. URIs zu weiteren
+
+                Datenressourcen als Objekte zugeordnet werden. Im Übersetzungsvorgang zwischen
+
+                XML und RDF geht es also vor allem um die Bestimmung semantischer Aussagemuster,
+
+                die sich gesamthaft auf alle Ressourcen eines XML-Datenbestandes anwenden
+
+                lassen. &lt;/p>
+&lt;p>Die Aussagemuster werden in Form einer einfachen, XPATH-basierten Konfiguration
+
+                  an den Dienst übermittelt. Dabei ist es auch möglich, über die Bestände eines
+
+                  spezifischen XML-Repositoriums hinauszugehen und externe Ressourcen oder
+
+                  Dateneinheiten in die Transformation mit einzubeziehen (bspw. aus der GND, der
+&lt;hi rend="italic">Dbpedia,&lt;/hi> aus &lt;hi rend="italic">Geonames&lt;/hi> u. a &lt;hi
+
+                  rend="italic">)&lt;/hi>. Die technische Realisierung als Webservice hat den
+
+                  Vorteil, dass AnwenderInnen keine weitere Software zur semantischen Übersetzung
+
+                  von Forschungsdaten benötigen. Gleichzeitig kann der Webservice auch als eine
+
+                  Art „externe“ RDF-Schnittstelle (im Sinne eines Proxy) für ein oder mehrere
+
+                  XML-Repositorien eingesetzt werden. Grundvoraussetzung hierfür ist lediglich,
+
+                  dass die jeweiligen Repositorien über HTTP erreichbar sein müssen. &lt;/p>
+&lt;figure>
+&lt;graphic url="054-1000000000000472000002F7650A95CC.png"/>
+&lt;p>&lt;hi rend="bold">Abb. 3&lt;/hi>&lt;/p>
+&lt;/figure>
+&lt;p>Das Ergebnis einer &lt;hi rend="italic">XTriples&lt;/hi>-Extraktion steht in einer
+
+                  Vielzahl gängiger RDF-Serialisierungen zur Verfügung (Abbildung 3). Neben rein
+
+                  RDF-basierten Formaten ist es auch möglich, die semantischen Bezüge eines
+
+                  Repositoriums mittels SVG darzustellen oder das Extraktionsergebnis zur weiteren
+
+                  Analyse und Visualisierung an &lt;hi rend="italic">Semantic Web&lt;/hi>-Tools
+
+                  weiterzureichen. &lt;ref type="note" target="n02" n="2">2&lt;/ref>
+&lt;/p>
+&lt;/div>
+&lt;div type="div1" rend="DH-Heading1">
+&lt;head>
+&lt;anchor xml:id="id_h.vwpve2wuxvn6"/>Anwendungsbeispiele
+&lt;/head>
+&lt;p>
+&lt;hi rend="italic">XTriples&lt;/hi> wurde vom Autor im Kontext des Akademievorhabens
+&lt;hi rend="italic">&lt;ref target="http://www.inschriften.net">Deutsche
+
+                    Inschriften Online&lt;/ref>&lt;/hi> in Verbindung mit dem BMBF-Projekt &lt;hi
+
+                    rend="italic">&lt;ref target="http://www.spatialhumanities.de">Inschriften im Bezugssystem des Raumes&lt;/ref>&lt;/hi> entwickelt und steht der
+
+                    DH-Community in einer stabilen Version unter Open Source Lizenz (MIT) zur
+
+                    Verfügung. Das zugrunde liegende &lt;ref
+
+                    target="http://xtriples.spatialhumanities.de/documentation.html"
+>Softwarepaket&lt;/ref> ist vollständig dokumentiert und auf &lt;ref
+
+                    target="https://github.com/spatialhumanities/xtriples">GitHub&lt;/ref>
+
+                    veröffentlicht. &lt;/p>
+&lt;p>Neben den &lt;hi rend="italic">Deutschen Inschriften&lt;/hi> wird &lt;hi rend="italic"
+>XTriples&lt;/hi> aktuell auch in den Akademievorhaben &lt;hi rend="italic">&lt;ref
+
+                    target="http://www.regesta-imperii.de">Regesta Imperii&lt;/ref>&lt;/hi> und
+&lt;hi rend="italic">Die Schule von Salamanca&lt;/hi> verwendet. Das &lt;ref
+
+                    target="http://www.steinheim-institut.de">Salomon Ludwig Steinheim-Institut
+
+                    für deutsch-jüdische Geschichte&lt;/ref> nutzt &lt;hi rend="italic">XTriples&lt;/hi>
+
+                    für eine CIDOC-CRM basierte, semantischen Modellierung von EpiDoc-Daten im
+
+                    Rahmen des BMBF-Projektes &lt;hi rend="italic">Relationen im Raum&lt;/hi>. Gemeinsam
+
+                    mit der &lt;ref target="http://www.bbaw.de">Berlin-Brandenburgischen Akademie der
+
+                    Wissenschaften&lt;/ref> wird gerade eine Schnittstelle zwischen &lt;hi
+
+                    rend="italic">XTriples&lt;/hi> und &lt;hi rend="italic"
+>&lt;ref target="http://correspsearch.bbaw.de">correspSearch&lt;/ref>&lt;/hi>, dem Webservice der BBAW zur dezentralen
+
+                    Aggregation digitaler Briefeditionen, implementiert. &lt;/p>
+&lt;p>Folgende Beispiele geben einen ersten Überblick über die unterschiedlichen Anwendungsgebiete von
+&lt;hi rend="italic">XTriples&lt;/hi>:
+&lt;/p>
+&lt;list type="unordered">
+&lt;item>Semantische Extraktion und nachfolgende Visualisierung von Familienbeziehungen aus dem
+&lt;hi rend="italic">Epidat&lt;/hi> Grabstein Corpus für den jüdischen Friedhof in Hamburg-Altona (Ausgangsdaten EpiDoc/TEI):
+&lt;lb/>
+&lt;ref target="http://xtriples.spatialhumanities.de/examples/dh/epidat/index.html">http://xtriples.spatialhumanities.de/examples/dh/epidat/index.html&lt;/ref>
+&lt;/item>
+&lt;item>Semantische Extraktion und SVG-Visualisierung eines Briefnetzwerks (Teilbestand der Korrespondenz Goethes aus den in
+&lt;hi rend="italic">correspSearch&lt;/hi> aggregierten CMI-Daten bei gleichzeitiger
+&lt;hi rend="italic">on-the-fly&lt;/hi> Einbeziehung der RDF-Schnittstellen von
+&lt;hi rend="italic">GND&lt;/hi> und
+&lt;hi rend="italic">Geonames&lt;/hi>):
+&lt;lb/>
+&lt;ref target="http://bit.ly/1LKK1dv">http://bit.ly/1LKK1dv&lt;/ref>
+&lt;/item>
+&lt;item>Beispielhafte semantische Extraktion und Visualisierung europäischer
+
+                        Kommunikationsnetzwerke auf Basis der &lt;hi rend="italic">correspSearch&lt;/hi>
+
+                        TEI / CMI-Daten: &lt;lb/>
+&lt;ref
+
+                          target="http://metacontext.github.io/presentation-correspsearch-xtriples/viz/map.html"
+>http://metacontext.github.io/presentation-correspsearch-xtriples/viz/map.html&lt;/ref>
+&lt;/item>
+&lt;/list>
+&lt;p>Weitere Beispiele zu den einzelnen Funktionalitäten finden sich auf der
+&lt;hi rend="italic">XTriples&lt;/hi>-Website unter
+&lt;ref target="http://xtriples.spatialhumanities.de/examples.html">http://xtriples.spatialhumanities.de/examples.html&lt;/ref>. Einen schnellen Überblick über die Funktionsweise des Dienstes gibt folgende Präsentation:
+&lt;ref target="http://metacontext.github.io/presentation-correspsearch-xtriples">http://metacontext.github.io/presentation-correspsearch-xtriples&lt;/ref>.
+&lt;/p>
+&lt;p>Ziel des Vortrags ist eine Veranschaulichung der Methoden und Potentiale, die sich aus der semantischen Extraktion, Modellierung, Vernetzung und Visualisierung XML-basierter, geisteswissenschaftlicher Fachdaten ergeben. Neben einer Darstellung der technischen Hintergründe des
+&lt;hi rend="italic">XTriples&lt;/hi>-Webservices werden auch Fragen der semantischen Modellierung geisteswissenschaftlicher Fachdaten mittels bestimmter Ontologien (bspw. FOAF, CIDOC-CRM u.a.) in den Blick genommen. Weiterhin werden auch beispielhafte Analyse- und Visualisierungsmöglichkeiten für semantisch modellierte geisteswissenschaftliche Fachdaten vorgestellt.
+&lt;/p>
+&lt;/div>
+&lt;/body>
+&lt;back>
+&lt;div type="Notes">
+&lt;note xml:id="n01" n="1">Projekte wie
+
+                        bspw. &lt;ref target="http://spqr.cerch.kcl.ac.uk/?page_id=3">SPQR&lt;/ref> oder
+
+                        das &lt;ref target="http://rdftef.sourceforge.net/">Textual Encoding
+
+                        Framework&lt;/ref> sind veraltet oder technisch nicht generalisiert. Einen
+
+                        interessanten Ansatz bietet die &lt;ref
+
+                        target="http://www.w3.org/Submission/xsparql-language-specification"
+>XSPARQL&lt;/ref> Language Specification des DERI, die 2009 in Form einer
+
+                        W3C Member Submission niedergelegt wurde. Hier fehlen jedoch praktische
+
+                        Implementierungen. Die Benutzung von RDFa innerhalb von XML-Daten stellt
+
+                        eine weitere Möglichkeit dar, doch verfolgen die wenigsten
+
+                        geisteswissenschaftlichen Fachdatenrepositorien eine so ausgerichtete
+
+                        semantische Markup-Strategie. Auch das bereits 2007 in Form einer W3C
+
+                        Recommendation grundgelegte &lt;ref target="http://www.w3.org/TR/grddl/"
+>GRDDL-Framework&lt;/ref> (Gleaning Resource Descriptions from Dialects of
+
+                        Languages) ist bis heute eine theoretische Spezifikation geblieben. Der &lt;hi
+
+                        rend="italic">OxGarage&lt;/hi> Transformations-Webservice der &lt;hi
+
+                        rend="italic">&lt;ref target="http://www.tei-c.org/oxgarage">Text Encoding
+
+                        Initiative&lt;/ref>&lt;/hi> bietet zwar eine Routine für die Konvertierung
+
+                        von TEI kodierten Daten nach RDF an, legt sich für die Transformation aber
+
+                        auf das CIDOC-CRM als Ontologie fest. Mit &lt;hi rend="italic">OxGarage&lt;/hi>
+
+                        können &lt;hi rend="italic">out-of-the-box&lt;/hi> also keine anderen Ontologien
+
+                        für eine semantische Modellierung benutzt werden. Zudem ist der Webservice
+
+                        nicht darauf ausgelegt, auch weitere, externe Datenrepositorien in eine
+
+                        Transformation mit einzubeziehen oder andere RDF-Serialisierungen jenseits
+
+                        von RDF/XML zurückzugeben.
+&lt;/note>
+&lt;note xml:id="n02" n="2"> Beispielsweise an den
+
+                        RDF zu SVG &lt;ref target="http://www.rhizomik.net/html/redefer/rdf2svg-form"
+>Transformations-Webservice&lt;/ref> oder an die RDF
+
+                        Visualisierungsbibliothek &lt;ref target="http://biohackathon.org/d3sparql"
+>d3sparql&lt;/ref>.
+&lt;/note>
+&lt;/div>
+&lt;div type="bibliogr">
+&lt;listBibl>
+&lt;head>Bibliographie&lt;/head>
+&lt;bibl>&lt;hi rend="bold">Akademie der Wissenschaften und der Literatur Mainz
+&lt;/hi>(o. J.a): &lt;hi rend="italic">Digitale Akademie&lt;/hi>
+&lt;ref target="http://www.digitale-akademie.de"
+>http://www.digitale-akademie.de&lt;/ref> [letzter Zugriff 16. Februar
+
+                          2016].&lt;/bibl>
+&lt;bibl>&lt;hi rend="bold">Akademie der Wissenschaften und der Literatur Mainz
+&lt;/hi>(o. J.b): &lt;hi rend="italic">Regesta Imperii&lt;/hi>
+&lt;ref target="http://www.regesta-imperii.de/startseite.html"
+>http://www.regesta-imperii.de/startseite.html&lt;/ref> [letzter Zugriff
+
+                            16. Februar 2016].&lt;/bibl>
+&lt;bibl>&lt;hi rend="bold">BBAW&lt;/hi> (o. J.): &lt;hi rend="italic"
+>Berlin-Brandenburgische Akademie der Wissenschaften&lt;/hi>
+&lt;ref target="http://www.bbaw.de/">http://www.bbaw.de/&lt;/ref> [letzter Zugriff
+
+                            16. Februar 2016].&lt;/bibl>
+&lt;bibl>&lt;hi rend="bold">correspSearch&lt;/hi> (o. J.): &lt;hi rend="italic"
+>correspSearch&lt;/hi>. Search diverse letter editions &lt;ref
+
+                            target="http://correspsearch.bbaw.de/index.xql"
+>http://correspsearch.bbaw.de/index.xql&lt;/ref> [letzter Zugriff 16.
+
+                            Februar 2016].&lt;/bibl>
+&lt;bibl>&lt;hi rend="bold">Deutsche Inschriften Online&lt;/hi> (o. J.): &lt;ref
+
+                            target="http://www.inschriften.net">http://www.inschriften.net&lt;/ref>
+
+                            [letzter Zugriff 16. Februar 2016]. &lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Haft, Michael&lt;/hi> (2013): "RDF als Verknüpfungsmethode
+
+                              zwischen geisteswissenschaftlichen Forschungsdaten und Geometrien am
+
+                              Beispiel des Projektes 'Inschriften im Bezugssystem des Raumes'",in: &lt;hi
+
+                              rend="italic">Skriptum&lt;/hi> 2,3 &lt;ref
+
+                              target="http://nbn-resolving.de/urn:nbn:de:0289-2013120622"
+>http://nbn-resolving.de/urn:nbn:de:0289-2013120622&lt;/ref> [letzter
+
+                              Zugriff 14. Oktober 2015]. &lt;/bibl>
+&lt;bibl>&lt;hi rend="bold">i3Mainz / Akademie Mainz&lt;/hi> (o. J.): &lt;hi rend="italic"
+>Inschriften im Bezugssystem des Raumes&lt;/hi>
+&lt;ref target="http://www.spatialhumanities.de/ibr/startseite.html"
+>http://www.spatialhumanities.de/ibr/startseite.html&lt;/ref> [letzter
+
+                                Zugriff 16. Februar 2016].&lt;/bibl>
+&lt;bibl>&lt;hi rend="bold">IBR (Inscriptions in their spatial context) / Academy of
+
+                                  Sciences and Literature, Mainz / Institute for Spatial Information and
+
+                                  Surveying Technology i3Mainz&lt;/hi> (o. J.): &lt;hi rend="italic"
+>XTriples&lt;/hi>
+&lt;ref target="http://xtriples.spatialhumanities.de/index.html"
+>http://xtriples.spatialhumanities.de/index.html&lt;/ref> [letzter Zugriff
+
+                                    16. Februar 2016].&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Iglesia, Martin de la / Moretto, Nicolas / Brodhun,
+
+                                        Maximilian &lt;/hi> (2015): "Metadaten, LOD und der Mehrwert
+
+                                        standardisierter und vernetzter Daten." In: Neuroth, Heike / Rapp, Andrea /
+
+                                        Söring, Sibylle (eds.): &lt;hi rend="italic">TextGrid: Von der Community – für
+
+                                        die Community&lt;/hi>. Eine Virtuelle Forschungsumgebung für die
+
+                                        Geisteswissenschaften. Göttingen: Universitätsverlag Göttingen 91–102 &lt;ref
+
+                                        target="http://dx.doi.org/10.3249/webdoc-3947"
+>http://dx.doi.org/10.3249/webdoc-3947&lt;/ref> [letzter Zugriff 14.
+
+                                        Oktober 2015]. &lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Lange, Felix, Martin Unold&lt;/hi> (2015): Semantisch
+
+                                          angereicherte 3D-Messdaten von Kirchenräumen als Quellen für die
+
+                                          geschichtswissenschaftliche Forschung, in: &lt;hi rend="italic">Zeitschrift für
+
+                                          digitale Geisteswissenschaften &lt;/hi>1 &lt;ref
+
+                                          target="http://dx.doi.org/10.17175/sb001_015"
+>http://dx.doi.org/10.17175/sb001_015&lt;/ref> [letzter Zugriff 14. Oktober
+
+                                          2015]. &lt;/bibl>
+&lt;bibl>
+&lt;anchor xml:id="id_docs-internal-guid-d6a0f994-6501-a725-5560-cd2d188ed2fb"/>
+&lt;hi rend="bold">Lanthaler, Markus&lt;/hi> (2014): &lt;hi rend="italic">Third
+
+                                            Generation Web APIs&lt;/hi>. Bridging the Gap between REST and Linked Data.
+
+                                            Diss. Institute of Information Systems and Computer Media. Technische
+
+                                            Universität Graz &lt;ref
+
+                                            target="http://www.markus-lanthaler.com/research/third-generation-web-apis-bridging-the-gap-between-rest-and-linked-data.pdf"
+>http://www.markus-lanthaler.com/research/third-generation-web-apis-bridging-the-gap-between-rest-and-linked-data.pdf&lt;/ref>
+
+                                            [letzter Zugriff 14. Oktober 2015]. &lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Polleres, Axel u.a.&lt;/hi> (2009): &lt;hi rend="italic">XSPARQL
+
+                                              Language Specification&lt;/hi>
+&lt;ref target="http://www.w3.org/Submission/xsparql-language-specification"
+>http://www.w3.org/Submission/xsparql-language-specification&lt;/ref>
+
+                                                letzter Zugriff 14. Oktober 2015]. &lt;/bibl>
+&lt;bibl>&lt;hi rend="bold">Salomon Ludwig Steinheim-Institut für deutsch-jüdische
+
+                                                  Geschichte&lt;/hi> (o. J.): &lt;ref target="http://www.steinheim-institut.de"
+>http://www.steinheim-institut.de&lt;/ref> [letzter Zugriff 16. Februar
+
+                                                  2016].&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Schrade, Torsten &lt;/hi> (2013): "Datenstrukturierung", in:
+&lt;hi rend="italic">Über die Praxis des kulturwissenschaftlichen
+
+                                                      Arbeitens&lt;/hi>. Ein Handwörterbuch. Bielefeld: transcript 91–97. &lt;/bibl>
+&lt;/listBibl>
+&lt;/div>
+&lt;/back>
+&lt;/text>
+&lt;/TEI>
+    </textSource>
+    <text>
+
+
+Zahlreiche geisteswissenschaftliche Fachdatenrepositorien setzen zur Modellierung           ihrer Forschungsdaten auf die Richtlinien der Text Encoding Initiative (TEI) und           somit auf XML als primäres Datenformat. XML eignet sich sehr gut zur Lösung           editorisch-philologischer Aufgabenstellungen und entspricht den geforderten           Kriterien der Interoperabilität und Nachhaltigkeit von Forschungsdaten. Durch           die standardkonforme Auszeichnung der Forschungsgegenstände in TEI werden diese           formal und inhaltlich erschlossen. TEI-kodierte Daten beinhalten in jeder           Hinsicht semantische Bezüge (bspw. Raumbezüge, Personenbezüge, begriffliche und           konzeptuelle Bezüge etc.). Aus der Perspektive des Semantic           Web sind diese Bezüge jedoch zunächst nur implizit und nicht explizit           in den Daten vorhanden (Abbildung 1). Im Gegenzug gründen sich Semantic Web-Technologien auf das Resource           Description Framework (RDF) zur Formulierung semantischer Aussagen (statements) in Form von Subjekt – Prädikat –           Objektbeziehungen (triples). Die besondere Stärke von RDF           liegt in der automatisiert möglichen Vernetzung (interlinking), Zusammenführung (merging) und           Analyse (reasoning) eigentlich separater Datenbestände.           RDF ist modellierungstechnisch auf einer höheren Abstraktionsebene anzusiedeln           als TEI-kodierte XML-Daten (Abbildung 2; vgl. auch Polleres u. a. 2009). 
+
+      
+
+             Während die formale Erschließung geisteswissenschaftlicher             Forschungsgegenstände mittels XML-basierter Annotationsmethoden mittlerweile als             weit fortgeschritten gelten kann, bleibt die semantische Erschließung häufig             noch weit zurück. Zwar wird in den Daten oft das Auftreten bestimmter Ortsnamen,             Personennamen, Werktitel etc. annotiert. Dennoch gehen diese Annotationen meist             nicht darüber hinaus, anzuzeigen, dass eine bestimmte Entität an einer             spezifischen Stelle erwähnt ist. Damit bleibt die Semantik der Fachdaten weit             hinter den Möglichkeiten zurück, die aktuelle Technologien – insbesondere die             des Semantic Web und des Linked Open             Data (LOD) – bieten könnten. Der durch LOD mögliche Zugang auf             vernetzte Forschungsdaten eröffnet neuartige Perspektiven der Nutzung bisher             isoliert stehender Fachdatenrepositorien. Wesentlich ist dabei, dass LOD und RDF             bestehende Standards der Digital Humanities (wie bspw.             TEI / XML) um die Verwendung gemeinsamer Terminologien und Metadatenschemata             erweitern (vgl. Iglesia et al. 2015). Dadurch wird es möglich, auch Bestände             verteilter Provenienz und unterschiedlicher Struktur gemeinsam inhaltlich zu             beschreiben und zu analysieren. 
+
+  
+
+Insgesamt existiert momentan also noch eine Kluft: Auf der einen Seite die               zahlreichen geisteswissenschaftlichen Fachdatenrepositorien mit implizit               semantischem Potential, auf der anderen Seite die Technologien und Datenmodelle               des Semantic Web, die neue Sichten und Analysemethoden               auf die Daten eröffnen könnten. Zwar existieren einige Sprachkonzepte, Methoden               und Tools zur Übersetzung zwischen TEI / XML und RDF. Diese sind jedoch               ausnahmslos komplex, teilweise technisch veraltet, verfügen nur über               prototypische Implementierungen oder sind hochgradig spezialisiert auf einen               bestimmten Datenbestand. 
+1
+ Während die dem Semantic Web zugrunde liegenden Technologien aus informatischer Sicht               als erschlossen und anwendbar angesehen werden können (vgl. Lanthaler 2014:               11–35), besteht zum jetzigen Zeitpunkt also ein Bedarf an exemplarischen               Bearbeitungen repräsentativer Forschungsdatenbestände aus den               Geisteswissenschaften, um die Tragfähigkeit dieser Technologien auch für die               geisteswissenschaftliche Forschung zu demonstrieren. 
+
+
+    
+
+An dieser Stelle setzt der 
+XTriples
+-Webservice der 
+Digitalen Akademie
+                 der Mainzer Akademie der Wissenschaften und der Literatur an. Grundgedanke des                 generischen Dienstes ist das Crawling beliebiger XML-Datenbestände und die                 anschließende Generierung semantischer Aussagen aus den XML-Daten auf Basis                 definierter Aussagemuster. Das Prinzip der Explizierung semantischer Aussagen                 aus XML ist dabei nicht sonderlich komplex: Wird die URI einer XML-Ressource                 oder eine Dateneinheit in dieser Ressource als das Subjekt einer semantischen                 Aussage begriffen, können diesem Subjekt über Prädikate aus kontrollierten                 Vokabularen weitere Werte aus den XML-Daten bzw. URIs zu weiteren                 Datenressourcen als Objekte zugeordnet werden. Im Übersetzungsvorgang zwischen                 XML und RDF geht es also vor allem um die Bestimmung semantischer Aussagemuster,                 die sich gesamthaft auf alle Ressourcen eines XML-Datenbestandes anwenden                 lassen. 
+
+  
+
+Die Aussagemuster werden in Form einer einfachen, XPATH-basierten Konfiguration                   an den Dienst übermittelt. Dabei ist es auch möglich, über die Bestände eines                   spezifischen XML-Repositoriums hinauszugehen und externe Ressourcen oder                   Dateneinheiten in die Transformation mit einzubeziehen (bspw. aus der GND, der  Dbpedia, aus Geonames u. a ). Die technische Realisierung als Webservice hat den                   Vorteil, dass AnwenderInnen keine weitere Software zur semantischen Übersetzung                   von Forschungsdaten benötigen. Gleichzeitig kann der Webservice auch als eine                   Art „externe“ RDF-Schnittstelle (im Sinne eines Proxy) für ein oder mehrere                   XML-Repositorien eingesetzt werden. Grundvoraussetzung hierfür ist lediglich,                   dass die jeweiligen Repositorien über HTTP erreichbar sein müssen. 
+
+    
+
+Das Ergebnis einer XTriples-Extraktion steht in einer                   Vielzahl gängiger RDF-Serialisierungen zur Verfügung (Abbildung 3). Neben rein                   RDF-basierten Formaten ist es auch möglich, die semantischen Bezüge eines                   Repositoriums mittels SVG darzustellen oder das Extraktionsergebnis zur weiteren                   Analyse und Visualisierung an Semantic Web-Tools                   weiterzureichen. 
+2
+  
+
+
+    
+
+  XTriples wurde vom Autor im Kontext des Akademievorhabens  
+Deutsche                     Inschriften Online
+ in Verbindung mit dem BMBF-Projekt 
+Inschriften im Bezugssystem des Raumes
+ entwickelt und steht der                     DH-Community in einer stabilen Version unter Open Source Lizenz (MIT) zur                     Verfügung. Das zugrunde liegende 
+Softwarepaket
+ ist vollständig dokumentiert und auf 
+GitHub
+                     veröffentlicht. 
+
+  
+
+Neben den Deutschen Inschriften wird XTriples aktuell auch in den Akademievorhaben 
+Regesta Imperii
+ und  Die Schule von Salamanca verwendet. Das 
+Salomon Ludwig Steinheim-Institut                     für deutsch-jüdische Geschichte
+ nutzt XTriples                     für eine CIDOC-CRM basierte, semantischen Modellierung von EpiDoc-Daten im                     Rahmen des BMBF-Projektes Relationen im Raum. Gemeinsam                     mit der 
+Berlin-Brandenburgischen Akademie der                     Wissenschaften
+ wird gerade eine Schnittstelle zwischen XTriples und 
+correspSearch
+, dem Webservice der BBAW zur dezentralen                     Aggregation digitaler Briefeditionen, implementiert. 
+
+  
+
+Folgende Beispiele geben einen ersten Überblick über die unterschiedlichen Anwendungsgebiete von  XTriples:  
+
+    
+
+Weitere Beispiele zu den einzelnen Funktionalitäten finden sich auf der  XTriples-Website unter  
+http://xtriples.spatialhumanities.de/examples.html
+. Einen schnellen Überblick über die Funktionsweise des Dienstes gibt folgende Präsentation:  
+http://metacontext.github.io/presentation-correspsearch-xtriples
+.  
+
+  
+
+Ziel des Vortrags ist eine Veranschaulichung der Methoden und Potentiale, die sich aus der semantischen Extraktion, Modellierung, Vernetzung und Visualisierung XML-basierter, geisteswissenschaftlicher Fachdaten ergeben. Neben einer Darstellung der technischen Hintergründe des  XTriples-Webservices werden auch Fragen der semantischen Modellierung geisteswissenschaftlicher Fachdaten mittels bestimmter Ontologien (bspw. FOAF, CIDOC-CRM u.a.) in den Blick genommen. Weiterhin werden auch beispielhafte Analyse- und Visualisierungsmöglichkeiten für semantisch modellierte geisteswissenschaftliche Fachdaten vorgestellt.  
+
+  
+
+  
+
+
+
+Implizite und explizite Semantik TEI-basierter Fachdatenrepositorien
+
+
+
+    
+
+Abb. 1
+
+
+Abb. 2
+
+  
+
+
+
+  Semantische Aussagen aus XML mit Hilfe des  XTriples-Webservices  
+
+
+
+    
+
+Abb. 3
+
+  
+
+
+
+  Anwendungsbeispiele  
+
+
+
+  
+
+Semantische Extraktion und nachfolgende Visualisierung von Familienbeziehungen aus dem  Epidat Grabstein Corpus für den jüdischen Friedhof in Hamburg-Altona (Ausgangsdaten EpiDoc/TEI):  
+
+http://xtriples.spatialhumanities.de/examples/dh/epidat/index.html
+
+
+Semantische Extraktion und SVG-Visualisierung eines Briefnetzwerks (Teilbestand der Korrespondenz Goethes aus den in  correspSearch aggregierten CMI-Daten bei gleichzeitiger  on-the-fly Einbeziehung der RDF-Schnittstellen von  GND und  Geonames):  
+
+http://bit.ly/1LKK1dv
+
+
+Beispielhafte semantische Extraktion und Visualisierung europäischer                         Kommunikationsnetzwerke auf Basis der correspSearch                         TEI / CMI-Daten: 
+
+http://metacontext.github.io/presentation-correspsearch-xtriples/viz/map.html
+
+
+  
+
+      Akademie der Wissenschaften und der Literatur Mainz  (o. J.a): Digitale Akademie  
+http://www.digitale-akademie.de
+ [letzter Zugriff 16. Februar                           2016].  Akademie der Wissenschaften und der Literatur Mainz  (o. J.b): Regesta Imperii  
+http://www.regesta-imperii.de/startseite.html
+ [letzter Zugriff                             16. Februar 2016].  BBAW (o. J.): Berlin-Brandenburgische Akademie der Wissenschaften  
+http://www.bbaw.de/
+ [letzter Zugriff                             16. Februar 2016].  correspSearch (o. J.): correspSearch. Search diverse letter editions 
+http://correspsearch.bbaw.de/index.xql
+ [letzter Zugriff 16.                             Februar 2016].  Deutsche Inschriften Online (o. J.): 
+http://www.inschriften.net
+                             [letzter Zugriff 16. Februar 2016].     Haft, Michael (2013): "RDF als Verknüpfungsmethode                               zwischen geisteswissenschaftlichen Forschungsdaten und Geometrien am                               Beispiel des Projektes 'Inschriften im Bezugssystem des Raumes'",in: Skriptum 2,3 
+http://nbn-resolving.de/urn:nbn:de:0289-2013120622
+ [letzter                               Zugriff 14. Oktober 2015].   i3Mainz / Akademie Mainz (o. J.): Inschriften im Bezugssystem des Raumes  
+http://www.spatialhumanities.de/ibr/startseite.html
+ [letzter                                 Zugriff 16. Februar 2016].  IBR (Inscriptions in their spatial context) / Academy of                                   Sciences and Literature, Mainz / Institute for Spatial Information and                                   Surveying Technology i3Mainz (o. J.): XTriples  
+http://xtriples.spatialhumanities.de/index.html
+ [letzter Zugriff                                     16. Februar 2016].    Iglesia, Martin de la / Moretto, Nicolas / Brodhun,                                         Maximilian  (2015): "Metadaten, LOD und der Mehrwert                                         standardisierter und vernetzter Daten." In: Neuroth, Heike / Rapp, Andrea /                                         Söring, Sibylle (eds.): TextGrid: Von der Community – für                                         die Community. Eine Virtuelle Forschungsumgebung für die                                         Geisteswissenschaften. Göttingen: Universitätsverlag Göttingen 91–102 
+http://dx.doi.org/10.3249/webdoc-3947
+ [letzter Zugriff 14.                                         Oktober 2015].     Lange, Felix, Martin Unold (2015): Semantisch                                           angereicherte 3D-Messdaten von Kirchenräumen als Quellen für die                                           geschichtswissenschaftliche Forschung, in: Zeitschrift für                                           digitale Geisteswissenschaften 1 
+http://dx.doi.org/10.17175/sb001_015
+ [letzter Zugriff 14. Oktober                                           2015].       Lanthaler, Markus (2014): Third                                             Generation Web APIs. Bridging the Gap between REST and Linked Data.                                             Diss. Institute of Information Systems and Computer Media. Technische                                             Universität Graz 
+http://www.markus-lanthaler.com/research/third-generation-web-apis-bridging-the-gap-between-rest-and-linked-data.pdf
+                                             [letzter Zugriff 14. Oktober 2015].     Polleres, Axel u.a. (2009): XSPARQL                                               Language Specification  
+http://www.w3.org/Submission/xsparql-language-specification
+                                                 letzter Zugriff 14. Oktober 2015].   Salomon Ludwig Steinheim-Institut für deutsch-jüdische                                                   Geschichte (o. J.): 
+http://www.steinheim-institut.de
+ [letzter Zugriff 16. Februar                                                   2016].    Schrade, Torsten  (2013): "Datenstrukturierung", in:  Über die Praxis des kulturwissenschaftlichen                                                       Arbeitens. Ein Handwörterbuch. Bielefeld: transcript 91–97.     
+
+  
+
+
+
+Projekte wie                         bspw. 
+SPQR
+ oder                         das 
+Textual Encoding                         Framework
+ sind veraltet oder technisch nicht generalisiert. Einen                         interessanten Ansatz bietet die 
+XSPARQL
+ Language Specification des DERI, die 2009 in Form einer                         W3C Member Submission niedergelegt wurde. Hier fehlen jedoch praktische                         Implementierungen. Die Benutzung von RDFa innerhalb von XML-Daten stellt                         eine weitere Möglichkeit dar, doch verfolgen die wenigsten                         geisteswissenschaftlichen Fachdatenrepositorien eine so ausgerichtete                         semantische Markup-Strategie. Auch das bereits 2007 in Form einer W3C                         Recommendation grundgelegte 
+GRDDL-Framework
+ (Gleaning Resource Descriptions from Dialects of                         Languages) ist bis heute eine theoretische Spezifikation geblieben. Der OxGarage Transformations-Webservice der 
+Text Encoding                         Initiative
+ bietet zwar eine Routine für die Konvertierung                         von TEI kodierten Daten nach RDF an, legt sich für die Transformation aber                         auf das CIDOC-CRM als Ontologie fest. Mit OxGarage                         können out-of-the-box also keine anderen Ontologien                         für eine semantische Modellierung benutzt werden. Zudem ist der Webservice                         nicht darauf ausgelegt, auch weitere, externe Datenrepositorien in eine                         Transformation mit einzubeziehen oder andere RDF-Serialisierungen jenseits                         von RDF/XML zurückzugeben.  
+
+
+
+ Beispielsweise an den                         RDF zu SVG 
+Transformations-Webservice
+ oder an die RDF                         Visualisierungsbibliothek 
+d3sparql
+.  
+
+
+
+Bibliographie
+
+</text>
+    <tc:tokens xmlns:tc="http://www.dspin.de/data/textcorpus">
+      <tc:token ID="w1">Zahlreiche</tc:token>
+      <tc:token ID="w2">geisteswissenschaftliche</tc:token>
+      <tc:token ID="w3">Fachdatenrepositorien</tc:token>
+      <tc:token ID="w4">setzen</tc:token>
+      <tc:token ID="w5">zur</tc:token>
+      <tc:token ID="w6">Modellierung</tc:token>
+      <tc:token ID="w7">ihrer</tc:token>
+      <tc:token ID="w8">Forschungsdaten</tc:token>
+      <tc:token ID="w9">auf</tc:token>
+      <tc:token ID="wa">die</tc:token>
+      <tc:token ID="wb">Richtlinien</tc:token>
+      <tc:token ID="wc">der</tc:token>
+      <tc:token ID="wd">Text</tc:token>
+      <tc:token ID="we">Encoding</tc:token>
+      <tc:token ID="wf">Initiative</tc:token>
+      <tc:token ID="w10">(</tc:token>
+      <tc:token ID="w11">TEI</tc:token>
+      <tc:token ID="w12">)</tc:token>
+      <tc:token ID="w13">und</tc:token>
+      <tc:token ID="w14">somit</tc:token>
+      <tc:token ID="w15">auf</tc:token>
+      <tc:token ID="w16">XML</tc:token>
+      <tc:token ID="w17">als</tc:token>
+      <tc:token ID="w18">primäres</tc:token>
+      <tc:token ID="w19">Datenformat</tc:token>
+      <tc:token ID="w1a">.</tc:token>
+      <tc:token ID="w1b">XML</tc:token>
+      <tc:token ID="w1c">eignet</tc:token>
+      <tc:token ID="w1d">sich</tc:token>
+      <tc:token ID="w1e">sehr</tc:token>
+      <tc:token ID="w1f">gut</tc:token>
+      <tc:token ID="w20">zur</tc:token>
+      <tc:token ID="w21">Lösung</tc:token>
+      <tc:token ID="w22">editorisch-philologischer</tc:token>
+      <tc:token ID="w23">Aufgabenstellungen</tc:token>
+      <tc:token ID="w24">und</tc:token>
+      <tc:token ID="w25">entspricht</tc:token>
+      <tc:token ID="w26">den</tc:token>
+      <tc:token ID="w27">geforderten</tc:token>
+      <tc:token ID="w28">Kriterien</tc:token>
+      <tc:token ID="w29">der</tc:token>
+      <tc:token ID="w2a">Interoperabilität</tc:token>
+      <tc:token ID="w2b">und</tc:token>
+      <tc:token ID="w2c">Nachhaltigkeit</tc:token>
+      <tc:token ID="w2d">von</tc:token>
+      <tc:token ID="w2e">Forschungsdaten</tc:token>
+      <tc:token ID="w2f">.</tc:token>
+      <tc:token ID="w30">Durch</tc:token>
+      <tc:token ID="w31">die</tc:token>
+      <tc:token ID="w32">standardkonforme</tc:token>
+      <tc:token ID="w33">Auszeichnung</tc:token>
+      <tc:token ID="w34">der</tc:token>
+      <tc:token ID="w35">Forschungsgegenstände</tc:token>
+      <tc:token ID="w36">in</tc:token>
+      <tc:token ID="w37">TEI</tc:token>
+      <tc:token ID="w38">werden</tc:token>
+      <tc:token ID="w39">diese</tc:token>
+      <tc:token ID="w3a">formal</tc:token>
+      <tc:token ID="w3b">und</tc:token>
+      <tc:token ID="w3c">inhaltlich</tc:token>
+      <tc:token ID="w3d">erschlossen</tc:token>
+      <tc:token ID="w3e">.</tc:token>
+      <tc:token ID="w3f">TEI-kodierte</tc:token>
+      <tc:token ID="w40">Daten</tc:token>
+      <tc:token ID="w41">beinhalten</tc:token>
+      <tc:token ID="w42">in</tc:token>
+      <tc:token ID="w43">jeder</tc:token>
+      <tc:token ID="w44">Hinsicht</tc:token>
+      <tc:token ID="w45">semantische</tc:token>
+      <tc:token ID="w46">Bezüge</tc:token>
+      <tc:token ID="w47">(</tc:token>
+      <tc:token ID="w48">bspw.</tc:token>
+      <tc:token ID="w49">Raumbezüge</tc:token>
+      <tc:token ID="w4a">,</tc:token>
+      <tc:token ID="w4b">Personenbezüge</tc:token>
+      <tc:token ID="w4c">,</tc:token>
+      <tc:token ID="w4d">begriffliche</tc:token>
+      <tc:token ID="w4e">und</tc:token>
+      <tc:token ID="w4f">konzeptuelle</tc:token>
+      <tc:token ID="w50">Bezüge</tc:token>
+      <tc:token ID="w51">etc.</tc:token>
+      <tc:token ID="w52">)</tc:token>
+      <tc:token ID="w53">.</tc:token>
+      <tc:token ID="w54">Aus</tc:token>
+      <tc:token ID="w55">der</tc:token>
+      <tc:token ID="w56">Perspektive</tc:token>
+      <tc:token ID="w57">des</tc:token>
+      <tc:token ID="w58">Semantic</tc:token>
+      <tc:token ID="w59">Web</tc:token>
+      <tc:token ID="w5a">sind</tc:token>
+      <tc:token ID="w5b">diese</tc:token>
+      <tc:token ID="w5c">Bezüge</tc:token>
+      <tc:token ID="w5d">jedoch</tc:token>
+      <tc:token ID="w5e">zunächst</tc:token>
+      <tc:token ID="w5f">nur</tc:token>
+      <tc:token ID="w60">implizit</tc:token>
+      <tc:token ID="w61">und</tc:token>
+      <tc:token ID="w62">nicht</tc:token>
+      <tc:token ID="w63">explizit</tc:token>
+      <tc:token ID="w64">in</tc:token>
+      <tc:token ID="w65">den</tc:token>
+      <tc:token ID="w66">Daten</tc:token>
+      <tc:token ID="w67">vorhanden</tc:token>
+      <tc:token ID="w68">(</tc:token>
+      <tc:token ID="w69">Abbildung</tc:token>
+      <tc:token ID="w6a">1</tc:token>
+      <tc:token ID="w6b">)</tc:token>
+      <tc:token ID="w6c">.</tc:token>
+      <tc:token ID="w6d">Im</tc:token>
+      <tc:token ID="w6e">Gegenzug</tc:token>
+      <tc:token ID="w6f">gründen</tc:token>
+      <tc:token ID="w70">sich</tc:token>
+      <tc:token ID="w71">Semantic</tc:token>
+      <tc:token ID="w72">Web-Technologien</tc:token>
+      <tc:token ID="w73">auf</tc:token>
+      <tc:token ID="w74">das</tc:token>
+      <tc:token ID="w75">Resource</tc:token>
+      <tc:token ID="w76">Description</tc:token>
+      <tc:token ID="w77">Framework</tc:token>
+      <tc:token ID="w78">(</tc:token>
+      <tc:token ID="w79">RDF</tc:token>
+      <tc:token ID="w7a">)</tc:token>
+      <tc:token ID="w7b">zur</tc:token>
+      <tc:token ID="w7c">Formulierung</tc:token>
+      <tc:token ID="w7d">semantischer</tc:token>
+      <tc:token ID="w7e">Aussagen</tc:token>
+      <tc:token ID="w7f">(</tc:token>
+      <tc:token ID="w80">statements</tc:token>
+      <tc:token ID="w81">)</tc:token>
+      <tc:token ID="w82">in</tc:token>
+      <tc:token ID="w83">Form</tc:token>
+      <tc:token ID="w84">von</tc:token>
+      <tc:token ID="w85">Subjekt</tc:token>
+      <tc:token ID="w86">–</tc:token>
+      <tc:token ID="w87">Prädikat</tc:token>
+      <tc:token ID="w88">–</tc:token>
+      <tc:token ID="w89">Objektbeziehungen</tc:token>
+      <tc:token ID="w8a">(</tc:token>
+      <tc:token ID="w8b">triples</tc:token>
+      <tc:token ID="w8c">)</tc:token>
+      <tc:token ID="w8d">.</tc:token>
+      <tc:token ID="w8e">Die</tc:token>
+      <tc:token ID="w8f">besondere</tc:token>
+      <tc:token ID="w90">Stärke</tc:token>
+      <tc:token ID="w91">von</tc:token>
+      <tc:token ID="w92">RDF</tc:token>
+      <tc:token ID="w93">liegt</tc:token>
+      <tc:token ID="w94">in</tc:token>
+      <tc:token ID="w95">der</tc:token>
+      <tc:token ID="w96">automatisiert</tc:token>
+      <tc:token ID="w97">möglichen</tc:token>
+      <tc:token ID="w98">Vernetzung</tc:token>
+      <tc:token ID="w99">(</tc:token>
+      <tc:token ID="w9a">interlinking</tc:token>
+      <tc:token ID="w9b">)</tc:token>
+      <tc:token ID="w9c">,</tc:token>
+      <tc:token ID="w9d">Zusammenführung</tc:token>
+      <tc:token ID="w9e">(</tc:token>
+      <tc:token ID="w9f">merging</tc:token>
+      <tc:token ID="wa0">)</tc:token>
+      <tc:token ID="wa1">und</tc:token>
+      <tc:token ID="wa2">Analyse</tc:token>
+      <tc:token ID="wa3">(</tc:token>
+      <tc:token ID="wa4">reasoning</tc:token>
+      <tc:token ID="wa5">)</tc:token>
+      <tc:token ID="wa6">eigentlich</tc:token>
+      <tc:token ID="wa7">separater</tc:token>
+      <tc:token ID="wa8">Datenbestände</tc:token>
+      <tc:token ID="wa9">.</tc:token>
+      <tc:token ID="waa">RDF</tc:token>
+      <tc:token ID="wab">ist</tc:token>
+      <tc:token ID="wac">modellierungstechnisch</tc:token>
+      <tc:token ID="wad">auf</tc:token>
+      <tc:token ID="wae">einer</tc:token>
+      <tc:token ID="waf">höheren</tc:token>
+      <tc:token ID="wb0">Abstraktionsebene</tc:token>
+      <tc:token ID="wb1">anzusiedeln</tc:token>
+      <tc:token ID="wb2">als</tc:token>
+      <tc:token ID="wb3">TEI-kodierte</tc:token>
+      <tc:token ID="wb4">XML-Daten</tc:token>
+      <tc:token ID="wb5">(</tc:token>
+      <tc:token ID="wb6">Abbildung</tc:token>
+      <tc:token ID="wb7">2</tc:token>
+      <tc:token ID="wb8">;</tc:token>
+      <tc:token ID="wb9">vgl.</tc:token>
+      <tc:token ID="wba">auch</tc:token>
+      <tc:token ID="wbb">Polleres</tc:token>
+      <tc:token ID="wbc">u.</tc:token>
+      <tc:token ID="wbd">a.</tc:token>
+      <tc:token ID="wbe">2009</tc:token>
+      <tc:token ID="wbf">)</tc:token>
+      <tc:token ID="wc0">.</tc:token>
+      <tc:token ID="wc1">Während</tc:token>
+      <tc:token ID="wc2">die</tc:token>
+      <tc:token ID="wc3">formale</tc:token>
+      <tc:token ID="wc4">Erschließung</tc:token>
+      <tc:token ID="wc5">geisteswissenschaftlicher</tc:token>
+      <tc:token ID="wc6">Forschungsgegenstände</tc:token>
+      <tc:token ID="wc7">mittels</tc:token>
+      <tc:token ID="wc8">XML-basierter</tc:token>
+      <tc:token ID="wc9">Annotationsmethoden</tc:token>
+      <tc:token ID="wca">mittlerweile</tc:token>
+      <tc:token ID="wcb">als</tc:token>
+      <tc:token ID="wcc">weit</tc:token>
+      <tc:token ID="wcd">fortgeschritten</tc:token>
+      <tc:token ID="wce">gelten</tc:token>
+      <tc:token ID="wcf">kann</tc:token>
+      <tc:token ID="wd0">,</tc:token>
+      <tc:token ID="wd1">bleibt</tc:token>
+      <tc:token ID="wd2">die</tc:token>
+      <tc:token ID="wd3">semantische</tc:token>
+      <tc:token ID="wd4">Erschließung</tc:token>
+      <tc:token ID="wd5">häufig</tc:token>
+      <tc:token ID="wd6">noch</tc:token>
+      <tc:token ID="wd7">weit</tc:token>
+      <tc:token ID="wd8">zurück</tc:token>
+      <tc:token ID="wd9">.</tc:token>
+      <tc:token ID="wda">Zwar</tc:token>
+      <tc:token ID="wdb">wird</tc:token>
+      <tc:token ID="wdc">in</tc:token>
+      <tc:token ID="wdd">den</tc:token>
+      <tc:token ID="wde">Daten</tc:token>
+      <tc:token ID="wdf">oft</tc:token>
+      <tc:token ID="we0">das</tc:token>
+      <tc:token ID="we1">Auftreten</tc:token>
+      <tc:token ID="we2">bestimmter</tc:token>
+      <tc:token ID="we3">Ortsnamen</tc:token>
+      <tc:token ID="we4">,</tc:token>
+      <tc:token ID="we5">Personennamen</tc:token>
+      <tc:token ID="we6">,</tc:token>
+      <tc:token ID="we7">Werktitel</tc:token>
+      <tc:token ID="we8">etc.</tc:token>
+      <tc:token ID="we9">annotiert</tc:token>
+      <tc:token ID="wea">.</tc:token>
+      <tc:token ID="web">Dennoch</tc:token>
+      <tc:token ID="wec">gehen</tc:token>
+      <tc:token ID="wed">diese</tc:token>
+      <tc:token ID="wee">Annotationen</tc:token>
+      <tc:token ID="wef">meist</tc:token>
+      <tc:token ID="wf0">nicht</tc:token>
+      <tc:token ID="wf1">darüber</tc:token>
+      <tc:token ID="wf2">hinaus</tc:token>
+      <tc:token ID="wf3">,</tc:token>
+      <tc:token ID="wf4">anzuzeigen</tc:token>
+      <tc:token ID="wf5">,</tc:token>
+      <tc:token ID="wf6">dass</tc:token>
+      <tc:token ID="wf7">eine</tc:token>
+      <tc:token ID="wf8">bestimmte</tc:token>
+      <tc:token ID="wf9">Entität</tc:token>
+      <tc:token ID="wfa">an</tc:token>
+      <tc:token ID="wfb">einer</tc:token>
+      <tc:token ID="wfc">spezifischen</tc:token>
+      <tc:token ID="wfd">Stelle</tc:token>
+      <tc:token ID="wfe">erwähnt</tc:token>
+      <tc:token ID="wff">ist</tc:token>
+      <tc:token ID="w100">.</tc:token>
+      <tc:token ID="w101">Damit</tc:token>
+      <tc:token ID="w102">bleibt</tc:token>
+      <tc:token ID="w103">die</tc:token>
+      <tc:token ID="w104">Semantik</tc:token>
+      <tc:token ID="w105">der</tc:token>
+      <tc:token ID="w106">Fachdaten</tc:token>
+      <tc:token ID="w107">weit</tc:token>
+      <tc:token ID="w108">hinter</tc:token>
+      <tc:token ID="w109">den</tc:token>
+      <tc:token ID="w10a">Möglichkeiten</tc:token>
+      <tc:token ID="w10b">zurück</tc:token>
+      <tc:token ID="w10c">,</tc:token>
+      <tc:token ID="w10d">die</tc:token>
+      <tc:token ID="w10e">aktuelle</tc:token>
+      <tc:token ID="w10f">Technologien</tc:token>
+      <tc:token ID="w110">–</tc:token>
+      <tc:token ID="w111">insbesondere</tc:token>
+      <tc:token ID="w112">die</tc:token>
+      <tc:token ID="w113">des</tc:token>
+      <tc:token ID="w114">Semantic</tc:token>
+      <tc:token ID="w115">Web</tc:token>
+      <tc:token ID="w116">und</tc:token>
+      <tc:token ID="w117">des</tc:token>
+      <tc:token ID="w118">Linked</tc:token>
+      <tc:token ID="w119">Open</tc:token>
+      <tc:token ID="w11a">Data</tc:token>
+      <tc:token ID="w11b">(</tc:token>
+      <tc:token ID="w11c">LOD</tc:token>
+      <tc:token ID="w11d">)</tc:token>
+      <tc:token ID="w11e">–</tc:token>
+      <tc:token ID="w11f">bieten</tc:token>
+      <tc:token ID="w120">könnten</tc:token>
+      <tc:token ID="w121">.</tc:token>
+      <tc:token ID="w122">Der</tc:token>
+      <tc:token ID="w123">durch</tc:token>
+      <tc:token ID="w124">LOD</tc:token>
+      <tc:token ID="w125">mögliche</tc:token>
+      <tc:token ID="w126">Zugang</tc:token>
+      <tc:token ID="w127">auf</tc:token>
+      <tc:token ID="w128">vernetzte</tc:token>
+      <tc:token ID="w129">Forschungsdaten</tc:token>
+      <tc:token ID="w12a">eröffnet</tc:token>
+      <tc:token ID="w12b">neuartige</tc:token>
+      <tc:token ID="w12c">Perspektiven</tc:token>
+      <tc:token ID="w12d">der</tc:token>
+      <tc:token ID="w12e">Nutzung</tc:token>
+      <tc:token ID="w12f">bisher</tc:token>
+      <tc:token ID="w130">isoliert</tc:token>
+      <tc:token ID="w131">stehender</tc:token>
+      <tc:token ID="w132">Fachdatenrepositorien</tc:token>
+      <tc:token ID="w133">.</tc:token>
+      <tc:token ID="w134">Wesentlich</tc:token>
+      <tc:token ID="w135">ist</tc:token>
+      <tc:token ID="w136">dabei</tc:token>
+      <tc:token ID="w137">,</tc:token>
+      <tc:token ID="w138">dass</tc:token>
+      <tc:token ID="w139">LOD</tc:token>
+      <tc:token ID="w13a">und</tc:token>
+      <tc:token ID="w13b">RDF</tc:token>
+      <tc:token ID="w13c">bestehende</tc:token>
+      <tc:token ID="w13d">Standards</tc:token>
+      <tc:token ID="w13e">der</tc:token>
+      <tc:token ID="w13f">Digital</tc:token>
+      <tc:token ID="w140">Humanities</tc:token>
+      <tc:token ID="w141">(</tc:token>
+      <tc:token ID="w142">wie</tc:token>
+      <tc:token ID="w143">bspw</tc:token>
+      <tc:token ID="w144">.</tc:token>
+      <tc:token ID="w145">TEI</tc:token>
+      <tc:token ID="w146">/</tc:token>
+      <tc:token ID="w147">XML</tc:token>
+      <tc:token ID="w148">)</tc:token>
+      <tc:token ID="w149">um</tc:token>
+      <tc:token ID="w14a">die</tc:token>
+      <tc:token ID="w14b">Verwendung</tc:token>
+      <tc:token ID="w14c">gemeinsamer</tc:token>
+      <tc:token ID="w14d">Terminologien</tc:token>
+      <tc:token ID="w14e">und</tc:token>
+      <tc:token ID="w14f">Metadatenschemata</tc:token>
+      <tc:token ID="w150">erweitern</tc:token>
+      <tc:token ID="w151">(</tc:token>
+      <tc:token ID="w152">vgl.</tc:token>
+      <tc:token ID="w153">Iglesia</tc:token>
+      <tc:token ID="w154">et</tc:token>
+      <tc:token ID="w155">al.</tc:token>
+      <tc:token ID="w156">2015</tc:token>
+      <tc:token ID="w157">)</tc:token>
+      <tc:token ID="w158">.</tc:token>
+      <tc:token ID="w159">Dadurch</tc:token>
+      <tc:token ID="w15a">wird</tc:token>
+      <tc:token ID="w15b">es</tc:token>
+      <tc:token ID="w15c">möglich</tc:token>
+      <tc:token ID="w15d">,</tc:token>
+      <tc:token ID="w15e">auch</tc:token>
+      <tc:token ID="w15f">Bestände</tc:token>
+      <tc:token ID="w160">verteilter</tc:token>
+      <tc:token ID="w161">Provenienz</tc:token>
+      <tc:token ID="w162">und</tc:token>
+      <tc:token ID="w163">unterschiedlicher</tc:token>
+      <tc:token ID="w164">Struktur</tc:token>
+      <tc:token ID="w165">gemeinsam</tc:token>
+      <tc:token ID="w166">inhaltlich</tc:token>
+      <tc:token ID="w167">zu</tc:token>
+      <tc:token ID="w168">beschreiben</tc:token>
+      <tc:token ID="w169">und</tc:token>
+      <tc:token ID="w16a">zu</tc:token>
+      <tc:token ID="w16b">analysieren</tc:token>
+      <tc:token ID="w16c">.</tc:token>
+      <tc:token ID="w16d">Insgesamt</tc:token>
+      <tc:token ID="w16e">existiert</tc:token>
+      <tc:token ID="w16f">momentan</tc:token>
+      <tc:token ID="w170">also</tc:token>
+      <tc:token ID="w171">noch</tc:token>
+      <tc:token ID="w172">eine</tc:token>
+      <tc:token ID="w173">Kluft</tc:token>
+      <tc:token ID="w174">:</tc:token>
+      <tc:token ID="w175">Auf</tc:token>
+      <tc:token ID="w176">der</tc:token>
+      <tc:token ID="w177">einen</tc:token>
+      <tc:token ID="w178">Seite</tc:token>
+      <tc:token ID="w179">die</tc:token>
+      <tc:token ID="w17a">zahlreichen</tc:token>
+      <tc:token ID="w17b">geisteswissenschaftlichen</tc:token>
+      <tc:token ID="w17c">Fachdatenrepositorien</tc:token>
+      <tc:token ID="w17d">mit</tc:token>
+      <tc:token ID="w17e">implizit</tc:token>
+      <tc:token ID="w17f">semantischem</tc:token>
+      <tc:token ID="w180">Potential</tc:token>
+      <tc:token ID="w181">,</tc:token>
+      <tc:token ID="w182">auf</tc:token>
+      <tc:token ID="w183">der</tc:token>
+      <tc:token ID="w184">anderen</tc:token>
+      <tc:token ID="w185">Seite</tc:token>
+      <tc:token ID="w186">die</tc:token>
+      <tc:token ID="w187">Technologien</tc:token>
+      <tc:token ID="w188">und</tc:token>
+      <tc:token ID="w189">Datenmodelle</tc:token>
+      <tc:token ID="w18a">des</tc:token>
+      <tc:token ID="w18b">Semantic</tc:token>
+      <tc:token ID="w18c">Web</tc:token>
+      <tc:token ID="w18d">,</tc:token>
+      <tc:token ID="w18e">die</tc:token>
+      <tc:token ID="w18f">neue</tc:token>
+      <tc:token ID="w190">Sichten</tc:token>
+      <tc:token ID="w191">und</tc:token>
+      <tc:token ID="w192">Analysemethoden</tc:token>
+      <tc:token ID="w193">auf</tc:token>
+      <tc:token ID="w194">die</tc:token>
+      <tc:token ID="w195">Daten</tc:token>
+      <tc:token ID="w196">eröffnen</tc:token>
+      <tc:token ID="w197">könnten</tc:token>
+      <tc:token ID="w198">.</tc:token>
+      <tc:token ID="w199">Zwar</tc:token>
+      <tc:token ID="w19a">existieren</tc:token>
+      <tc:token ID="w19b">einige</tc:token>
+      <tc:token ID="w19c">Sprachkonzepte</tc:token>
+      <tc:token ID="w19d">,</tc:token>
+      <tc:token ID="w19e">Methoden</tc:token>
+      <tc:token ID="w19f">und</tc:token>
+      <tc:token ID="w1a0">Tools</tc:token>
+      <tc:token ID="w1a1">zur</tc:token>
+      <tc:token ID="w1a2">Übersetzung</tc:token>
+      <tc:token ID="w1a3">zwischen</tc:token>
+      <tc:token ID="w1a4">TEI</tc:token>
+      <tc:token ID="w1a5">/</tc:token>
+      <tc:token ID="w1a6">XML</tc:token>
+      <tc:token ID="w1a7">und</tc:token>
+      <tc:token ID="w1a8">RDF</tc:token>
+      <tc:token ID="w1a9">.</tc:token>
+      <tc:token ID="w1aa">Diese</tc:token>
+      <tc:token ID="w1ab">sind</tc:token>
+      <tc:token ID="w1ac">jedoch</tc:token>
+      <tc:token ID="w1ad">ausnahmslos</tc:token>
+      <tc:token ID="w1ae">komplex</tc:token>
+      <tc:token ID="w1af">,</tc:token>
+      <tc:token ID="w1b0">teilweise</tc:token>
+      <tc:token ID="w1b1">technisch</tc:token>
+      <tc:token ID="w1b2">veraltet</tc:token>
+      <tc:token ID="w1b3">,</tc:token>
+      <tc:token ID="w1b4">verfügen</tc:token>
+      <tc:token ID="w1b5">nur</tc:token>
+      <tc:token ID="w1b6">über</tc:token>
+      <tc:token ID="w1b7">prototypische</tc:token>
+      <tc:token ID="w1b8">Implementierungen</tc:token>
+      <tc:token ID="w1b9">oder</tc:token>
+      <tc:token ID="w1ba">sind</tc:token>
+      <tc:token ID="w1bb">hochgradig</tc:token>
+      <tc:token ID="w1bc">spezialisiert</tc:token>
+      <tc:token ID="w1bd">auf</tc:token>
+      <tc:token ID="w1be">einen</tc:token>
+      <tc:token ID="w1bf">bestimmten</tc:token>
+      <tc:token ID="w1c0">Datenbestand</tc:token>
+      <tc:token ID="w1c1">.</tc:token>
+      <tc:token ID="w1c2">1</tc:token>
+      <tc:token ID="w1c3">Während</tc:token>
+      <tc:token ID="w1c4">die</tc:token>
+      <tc:token ID="w1c5">dem</tc:token>
+      <tc:token ID="w1c6">Semantic</tc:token>
+      <tc:token ID="w1c7">Web</tc:token>
+      <tc:token ID="w1c8">zugrunde</tc:token>
+      <tc:token ID="w1c9">liegenden</tc:token>
+      <tc:token ID="w1ca">Technologien</tc:token>
+      <tc:token ID="w1cb">aus</tc:token>
+      <tc:token ID="w1cc">informatischer</tc:token>
+      <tc:token ID="w1cd">Sicht</tc:token>
+      <tc:token ID="w1ce">als</tc:token>
+      <tc:token ID="w1cf">erschlossen</tc:token>
+      <tc:token ID="w1d0">und</tc:token>
+      <tc:token ID="w1d1">anwendbar</tc:token>
+      <tc:token ID="w1d2">angesehen</tc:token>
+      <tc:token ID="w1d3">werden</tc:token>
+      <tc:token ID="w1d4">können</tc:token>
+      <tc:token ID="w1d5">(</tc:token>
+      <tc:token ID="w1d6">vgl.</tc:token>
+      <tc:token ID="w1d7">Lanthaler</tc:token>
+      <tc:token ID="w1d8">2014</tc:token>
+      <tc:token ID="w1d9">:</tc:token>
+      <tc:token ID="w1da">11–35</tc:token>
+      <tc:token ID="w1db">)</tc:token>
+      <tc:token ID="w1dc">,</tc:token>
+      <tc:token ID="w1dd">besteht</tc:token>
+      <tc:token ID="w1de">zum</tc:token>
+      <tc:token ID="w1df">jetzigen</tc:token>
+      <tc:token ID="w1e0">Zeitpunkt</tc:token>
+      <tc:token ID="w1e1">also</tc:token>
+      <tc:token ID="w1e2">ein</tc:token>
+      <tc:token ID="w1e3">Bedarf</tc:token>
+      <tc:token ID="w1e4">an</tc:token>
+      <tc:token ID="w1e5">exemplarischen</tc:token>
+      <tc:token ID="w1e6">Bearbeitungen</tc:token>
+      <tc:token ID="w1e7">repräsentativer</tc:token>
+      <tc:token ID="w1e8">Forschungsdatenbestände</tc:token>
+      <tc:token ID="w1e9">aus</tc:token>
+      <tc:token ID="w1ea">den</tc:token>
+      <tc:token ID="w1eb">Geisteswissenschaften</tc:token>
+      <tc:token ID="w1ec">,</tc:token>
+      <tc:token ID="w1ed">um</tc:token>
+      <tc:token ID="w1ee">die</tc:token>
+      <tc:token ID="w1ef">Tragfähigkeit</tc:token>
+      <tc:token ID="w1f0">dieser</tc:token>
+      <tc:token ID="w1f1">Technologien</tc:token>
+      <tc:token ID="w1f2">auch</tc:token>
+      <tc:token ID="w1f3">für</tc:token>
+      <tc:token ID="w1f4">die</tc:token>
+      <tc:token ID="w1f5">geisteswissenschaftliche</tc:token>
+      <tc:token ID="w1f6">Forschung</tc:token>
+      <tc:token ID="w1f7">zu</tc:token>
+      <tc:token ID="w1f8">demonstrieren</tc:token>
+      <tc:token ID="w1f9">.</tc:token>
+      <tc:token ID="w1fa">An</tc:token>
+      <tc:token ID="w1fb">dieser</tc:token>
+      <tc:token ID="w1fc">Stelle</tc:token>
+      <tc:token ID="w1fd">setzt</tc:token>
+      <tc:token ID="w1fe">der</tc:token>
+      <tc:token ID="w1ff">XTriples</tc:token>
+      <tc:token ID="w200">-Webservice</tc:token>
+      <tc:token ID="w201">der</tc:token>
+      <tc:token ID="w202">Digitalen</tc:token>
+      <tc:token ID="w203">Akademie</tc:token>
+      <tc:token ID="w204">der</tc:token>
+      <tc:token ID="w205">Mainzer</tc:token>
+      <tc:token ID="w206">Akademie</tc:token>
+      <tc:token ID="w207">der</tc:token>
+      <tc:token ID="w208">Wissenschaften</tc:token>
+      <tc:token ID="w209">und</tc:token>
+      <tc:token ID="w20a">der</tc:token>
+      <tc:token ID="w20b">Literatur</tc:token>
+      <tc:token ID="w20c">an</tc:token>
+      <tc:token ID="w20d">.</tc:token>
+      <tc:token ID="w20e">Grundgedanke</tc:token>
+      <tc:token ID="w20f">des</tc:token>
+      <tc:token ID="w210">generischen</tc:token>
+      <tc:token ID="w211">Dienstes</tc:token>
+      <tc:token ID="w212">ist</tc:token>
+      <tc:token ID="w213">das</tc:token>
+      <tc:token ID="w214">Crawling</tc:token>
+      <tc:token ID="w215">beliebiger</tc:token>
+      <tc:token ID="w216">XML-Datenbestände</tc:token>
+      <tc:token ID="w217">und</tc:token>
+      <tc:token ID="w218">die</tc:token>
+      <tc:token ID="w219">anschließende</tc:token>
+      <tc:token ID="w21a">Generierung</tc:token>
+      <tc:token ID="w21b">semantischer</tc:token>
+      <tc:token ID="w21c">Aussagen</tc:token>
+      <tc:token ID="w21d">aus</tc:token>
+      <tc:token ID="w21e">den</tc:token>
+      <tc:token ID="w21f">XML-Daten</tc:token>
+      <tc:token ID="w220">auf</tc:token>
+      <tc:token ID="w221">Basis</tc:token>
+      <tc:token ID="w222">definierter</tc:token>
+      <tc:token ID="w223">Aussagemuster</tc:token>
+      <tc:token ID="w224">.</tc:token>
+      <tc:token ID="w225">Das</tc:token>
+      <tc:token ID="w226">Prinzip</tc:token>
+      <tc:token ID="w227">der</tc:token>
+      <tc:token ID="w228">Explizierung</tc:token>
+      <tc:token ID="w229">semantischer</tc:token>
+      <tc:token ID="w22a">Aussagen</tc:token>
+      <tc:token ID="w22b">aus</tc:token>
+      <tc:token ID="w22c">XML</tc:token>
+      <tc:token ID="w22d">ist</tc:token>
+      <tc:token ID="w22e">dabei</tc:token>
+      <tc:token ID="w22f">nicht</tc:token>
+      <tc:token ID="w230">sonderlich</tc:token>
+      <tc:token ID="w231">komplex</tc:token>
+      <tc:token ID="w232">:</tc:token>
+      <tc:token ID="w233">Wird</tc:token>
+      <tc:token ID="w234">die</tc:token>
+      <tc:token ID="w235">URI</tc:token>
+      <tc:token ID="w236">einer</tc:token>
+      <tc:token ID="w237">XML-Ressource</tc:token>
+      <tc:token ID="w238">oder</tc:token>
+      <tc:token ID="w239">eine</tc:token>
+      <tc:token ID="w23a">Dateneinheit</tc:token>
+      <tc:token ID="w23b">in</tc:token>
+      <tc:token ID="w23c">dieser</tc:token>
+      <tc:token ID="w23d">Ressource</tc:token>
+      <tc:token ID="w23e">als</tc:token>
+      <tc:token ID="w23f">das</tc:token>
+      <tc:token ID="w240">Subjekt</tc:token>
+      <tc:token ID="w241">einer</tc:token>
+      <tc:token ID="w242">semantischen</tc:token>
+      <tc:token ID="w243">Aussage</tc:token>
+      <tc:token ID="w244">begriffen</tc:token>
+      <tc:token ID="w245">,</tc:token>
+      <tc:token ID="w246">können</tc:token>
+      <tc:token ID="w247">diesem</tc:token>
+      <tc:token ID="w248">Subjekt</tc:token>
+      <tc:token ID="w249">über</tc:token>
+      <tc:token ID="w24a">Prädikate</tc:token>
+      <tc:token ID="w24b">aus</tc:token>
+      <tc:token ID="w24c">kontrollierten</tc:token>
+      <tc:token ID="w24d">Vokabularen</tc:token>
+      <tc:token ID="w24e">weitere</tc:token>
+      <tc:token ID="w24f">Werte</tc:token>
+      <tc:token ID="w250">aus</tc:token>
+      <tc:token ID="w251">den</tc:token>
+      <tc:token ID="w252">XML-Daten</tc:token>
+      <tc:token ID="w253">bzw</tc:token>
+      <tc:token ID="w254">.</tc:token>
+      <tc:token ID="w255">URIs</tc:token>
+      <tc:token ID="w256">zu</tc:token>
+      <tc:token ID="w257">weiteren</tc:token>
+      <tc:token ID="w258">Datenressourcen</tc:token>
+      <tc:token ID="w259">als</tc:token>
+      <tc:token ID="w25a">Objekte</tc:token>
+      <tc:token ID="w25b">zugeordnet</tc:token>
+      <tc:token ID="w25c">werden</tc:token>
+      <tc:token ID="w25d">.</tc:token>
+      <tc:token ID="w25e">Im</tc:token>
+      <tc:token ID="w25f">Übersetzungsvorgang</tc:token>
+      <tc:token ID="w260">zwischen</tc:token>
+      <tc:token ID="w261">XML</tc:token>
+      <tc:token ID="w262">und</tc:token>
+      <tc:token ID="w263">RDF</tc:token>
+      <tc:token ID="w264">geht</tc:token>
+      <tc:token ID="w265">es</tc:token>
+      <tc:token ID="w266">also</tc:token>
+      <tc:token ID="w267">vor</tc:token>
+      <tc:token ID="w268">allem</tc:token>
+      <tc:token ID="w269">um</tc:token>
+      <tc:token ID="w26a">die</tc:token>
+      <tc:token ID="w26b">Bestimmung</tc:token>
+      <tc:token ID="w26c">semantischer</tc:token>
+      <tc:token ID="w26d">Aussagemuster</tc:token>
+      <tc:token ID="w26e">,</tc:token>
+      <tc:token ID="w26f">die</tc:token>
+      <tc:token ID="w270">sich</tc:token>
+      <tc:token ID="w271">gesamthaft</tc:token>
+      <tc:token ID="w272">auf</tc:token>
+      <tc:token ID="w273">alle</tc:token>
+      <tc:token ID="w274">Ressourcen</tc:token>
+      <tc:token ID="w275">eines</tc:token>
+      <tc:token ID="w276">XML-Datenbestandes</tc:token>
+      <tc:token ID="w277">anwenden</tc:token>
+      <tc:token ID="w278">lassen</tc:token>
+      <tc:token ID="w279">.</tc:token>
+      <tc:token ID="w27a">Die</tc:token>
+      <tc:token ID="w27b">Aussagemuster</tc:token>
+      <tc:token ID="w27c">werden</tc:token>
+      <tc:token ID="w27d">in</tc:token>
+      <tc:token ID="w27e">Form</tc:token>
+      <tc:token ID="w27f">einer</tc:token>
+      <tc:token ID="w280">einfachen</tc:token>
+      <tc:token ID="w281">,</tc:token>
+      <tc:token ID="w282">XPATH-basierten</tc:token>
+      <tc:token ID="w283">Konfiguration</tc:token>
+      <tc:token ID="w284">an</tc:token>
+      <tc:token ID="w285">den</tc:token>
+      <tc:token ID="w286">Dienst</tc:token>
+      <tc:token ID="w287">übermittelt</tc:token>
+      <tc:token ID="w288">.</tc:token>
+      <tc:token ID="w289">Dabei</tc:token>
+      <tc:token ID="w28a">ist</tc:token>
+      <tc:token ID="w28b">es</tc:token>
+      <tc:token ID="w28c">auch</tc:token>
+      <tc:token ID="w28d">möglich</tc:token>
+      <tc:token ID="w28e">,</tc:token>
+      <tc:token ID="w28f">über</tc:token>
+      <tc:token ID="w290">die</tc:token>
+      <tc:token ID="w291">Bestände</tc:token>
+      <tc:token ID="w292">eines</tc:token>
+      <tc:token ID="w293">spezifischen</tc:token>
+      <tc:token ID="w294">XML-Repositoriums</tc:token>
+      <tc:token ID="w295">hinauszugehen</tc:token>
+      <tc:token ID="w296">und</tc:token>
+      <tc:token ID="w297">externe</tc:token>
+      <tc:token ID="w298">Ressourcen</tc:token>
+      <tc:token ID="w299">oder</tc:token>
+      <tc:token ID="w29a">Dateneinheiten</tc:token>
+      <tc:token ID="w29b">in</tc:token>
+      <tc:token ID="w29c">die</tc:token>
+      <tc:token ID="w29d">Transformation</tc:token>
+      <tc:token ID="w29e">mit</tc:token>
+      <tc:token ID="w29f">einzubeziehen</tc:token>
+      <tc:token ID="w2a0">(</tc:token>
+      <tc:token ID="w2a1">bspw.</tc:token>
+      <tc:token ID="w2a2">aus</tc:token>
+      <tc:token ID="w2a3">der</tc:token>
+      <tc:token ID="w2a4">GND</tc:token>
+      <tc:token ID="w2a5">,</tc:token>
+      <tc:token ID="w2a6">der</tc:token>
+      <tc:token ID="w2a7">Dbpedia</tc:token>
+      <tc:token ID="w2a8">,</tc:token>
+      <tc:token ID="w2a9">aus</tc:token>
+      <tc:token ID="w2aa">Geonames</tc:token>
+      <tc:token ID="w2ab">u.</tc:token>
+      <tc:token ID="w2ac">a</tc:token>
+      <tc:token ID="w2ad">)</tc:token>
+      <tc:token ID="w2ae">.</tc:token>
+      <tc:token ID="w2af">Die</tc:token>
+      <tc:token ID="w2b0">technische</tc:token>
+      <tc:token ID="w2b1">Realisierung</tc:token>
+      <tc:token ID="w2b2">als</tc:token>
+      <tc:token ID="w2b3">Webservice</tc:token>
+      <tc:token ID="w2b4">hat</tc:token>
+      <tc:token ID="w2b5">den</tc:token>
+      <tc:token ID="w2b6">Vorteil</tc:token>
+      <tc:token ID="w2b7">,</tc:token>
+      <tc:token ID="w2b8">dass</tc:token>
+      <tc:token ID="w2b9">AnwenderInnen</tc:token>
+      <tc:token ID="w2ba">keine</tc:token>
+      <tc:token ID="w2bb">weitere</tc:token>
+      <tc:token ID="w2bc">Software</tc:token>
+      <tc:token ID="w2bd">zur</tc:token>
+      <tc:token ID="w2be">semantischen</tc:token>
+      <tc:token ID="w2bf">Übersetzung</tc:token>
+      <tc:token ID="w2c0">von</tc:token>
+      <tc:token ID="w2c1">Forschungsdaten</tc:token>
+      <tc:token ID="w2c2">benötigen</tc:token>
+      <tc:token ID="w2c3">.</tc:token>
+      <tc:token ID="w2c4">Gleichzeitig</tc:token>
+      <tc:token ID="w2c5">kann</tc:token>
+      <tc:token ID="w2c6">der</tc:token>
+      <tc:token ID="w2c7">Webservice</tc:token>
+      <tc:token ID="w2c8">auch</tc:token>
+      <tc:token ID="w2c9">als</tc:token>
+      <tc:token ID="w2ca">eine</tc:token>
+      <tc:token ID="w2cb">Art</tc:token>
+      <tc:token ID="w2cc">„</tc:token>
+      <tc:token ID="w2cd">externe</tc:token>
+      <tc:token ID="w2ce">“</tc:token>
+      <tc:token ID="w2cf">RDF-Schnittstelle</tc:token>
+      <tc:token ID="w2d0">(</tc:token>
+      <tc:token ID="w2d1">im</tc:token>
+      <tc:token ID="w2d2">Sinne</tc:token>
+      <tc:token ID="w2d3">eines</tc:token>
+      <tc:token ID="w2d4">Proxy</tc:token>
+      <tc:token ID="w2d5">)</tc:token>
+      <tc:token ID="w2d6">für</tc:token>
+      <tc:token ID="w2d7">ein</tc:token>
+      <tc:token ID="w2d8">oder</tc:token>
+      <tc:token ID="w2d9">mehrere</tc:token>
+      <tc:token ID="w2da">XML-Repositorien</tc:token>
+      <tc:token ID="w2db">eingesetzt</tc:token>
+      <tc:token ID="w2dc">werden</tc:token>
+      <tc:token ID="w2dd">.</tc:token>
+      <tc:token ID="w2de">Grundvoraussetzung</tc:token>
+      <tc:token ID="w2df">hierfür</tc:token>
+      <tc:token ID="w2e0">ist</tc:token>
+      <tc:token ID="w2e1">lediglich</tc:token>
+      <tc:token ID="w2e2">,</tc:token>
+      <tc:token ID="w2e3">dass</tc:token>
+      <tc:token ID="w2e4">die</tc:token>
+      <tc:token ID="w2e5">jeweiligen</tc:token>
+      <tc:token ID="w2e6">Repositorien</tc:token>
+      <tc:token ID="w2e7">über</tc:token>
+      <tc:token ID="w2e8">HTTP</tc:token>
+      <tc:token ID="w2e9">erreichbar</tc:token>
+      <tc:token ID="w2ea">sein</tc:token>
+      <tc:token ID="w2eb">müssen</tc:token>
+      <tc:token ID="w2ec">.</tc:token>
+      <tc:token ID="w2ed">Das</tc:token>
+      <tc:token ID="w2ee">Ergebnis</tc:token>
+      <tc:token ID="w2ef">einer</tc:token>
+      <tc:token ID="w2f0">XTriples-Extraktion</tc:token>
+      <tc:token ID="w2f1">steht</tc:token>
+      <tc:token ID="w2f2">in</tc:token>
+      <tc:token ID="w2f3">einer</tc:token>
+      <tc:token ID="w2f4">Vielzahl</tc:token>
+      <tc:token ID="w2f5">gängiger</tc:token>
+      <tc:token ID="w2f6">RDF-Serialisierungen</tc:token>
+      <tc:token ID="w2f7">zur</tc:token>
+      <tc:token ID="w2f8">Verfügung</tc:token>
+      <tc:token ID="w2f9">(</tc:token>
+      <tc:token ID="w2fa">Abbildung</tc:token>
+      <tc:token ID="w2fb">3</tc:token>
+      <tc:token ID="w2fc">)</tc:token>
+      <tc:token ID="w2fd">.</tc:token>
+      <tc:token ID="w2fe">Neben</tc:token>
+      <tc:token ID="w2ff">rein</tc:token>
+      <tc:token ID="w300">RDF-basierten</tc:token>
+      <tc:token ID="w301">Formaten</tc:token>
+      <tc:token ID="w302">ist</tc:token>
+      <tc:token ID="w303">es</tc:token>
+      <tc:token ID="w304">auch</tc:token>
+      <tc:token ID="w305">möglich</tc:token>
+      <tc:token ID="w306">,</tc:token>
+      <tc:token ID="w307">die</tc:token>
+      <tc:token ID="w308">semantischen</tc:token>
+      <tc:token ID="w309">Bezüge</tc:token>
+      <tc:token ID="w30a">eines</tc:token>
+      <tc:token ID="w30b">Repositoriums</tc:token>
+      <tc:token ID="w30c">mittels</tc:token>
+      <tc:token ID="w30d">SVG</tc:token>
+      <tc:token ID="w30e">darzustellen</tc:token>
+      <tc:token ID="w30f">oder</tc:token>
+      <tc:token ID="w310">das</tc:token>
+      <tc:token ID="w311">Extraktionsergebnis</tc:token>
+      <tc:token ID="w312">zur</tc:token>
+      <tc:token ID="w313">weiteren</tc:token>
+      <tc:token ID="w314">Analyse</tc:token>
+      <tc:token ID="w315">und</tc:token>
+      <tc:token ID="w316">Visualisierung</tc:token>
+      <tc:token ID="w317">an</tc:token>
+      <tc:token ID="w318">Semantic</tc:token>
+      <tc:token ID="w319">Web-Tools</tc:token>
+      <tc:token ID="w31a">weiterzureichen</tc:token>
+      <tc:token ID="w31b">.</tc:token>
+      <tc:token ID="w31c">2</tc:token>
+      <tc:token ID="w31d">XTriples</tc:token>
+      <tc:token ID="w31e">wurde</tc:token>
+      <tc:token ID="w31f">vom</tc:token>
+      <tc:token ID="w320">Autor</tc:token>
+      <tc:token ID="w321">im</tc:token>
+      <tc:token ID="w322">Kontext</tc:token>
+      <tc:token ID="w323">des</tc:token>
+      <tc:token ID="w324">Akademievorhabens</tc:token>
+      <tc:token ID="w325">Deutsche</tc:token>
+      <tc:token ID="w326">Inschriften</tc:token>
+      <tc:token ID="w327">Online</tc:token>
+      <tc:token ID="w328">in</tc:token>
+      <tc:token ID="w329">Verbindung</tc:token>
+      <tc:token ID="w32a">mit</tc:token>
+      <tc:token ID="w32b">dem</tc:token>
+      <tc:token ID="w32c">BMBF-Projekt</tc:token>
+      <tc:token ID="w32d">Inschriften</tc:token>
+      <tc:token ID="w32e">im</tc:token>
+      <tc:token ID="w32f">Bezugssystem</tc:token>
+      <tc:token ID="w330">des</tc:token>
+      <tc:token ID="w331">Raumes</tc:token>
+      <tc:token ID="w332">entwickelt</tc:token>
+      <tc:token ID="w333">und</tc:token>
+      <tc:token ID="w334">steht</tc:token>
+      <tc:token ID="w335">der</tc:token>
+      <tc:token ID="w336">DH-Community</tc:token>
+      <tc:token ID="w337">in</tc:token>
+      <tc:token ID="w338">einer</tc:token>
+      <tc:token ID="w339">stabilen</tc:token>
+      <tc:token ID="w33a">Version</tc:token>
+      <tc:token ID="w33b">unter</tc:token>
+      <tc:token ID="w33c">Open</tc:token>
+      <tc:token ID="w33d">Source</tc:token>
+      <tc:token ID="w33e">Lizenz</tc:token>
+      <tc:token ID="w33f">(</tc:token>
+      <tc:token ID="w340">MIT</tc:token>
+      <tc:token ID="w341">)</tc:token>
+      <tc:token ID="w342">zur</tc:token>
+      <tc:token ID="w343">Verfügung</tc:token>
+      <tc:token ID="w344">.</tc:token>
+      <tc:token ID="w345">Das</tc:token>
+      <tc:token ID="w346">zugrunde</tc:token>
+      <tc:token ID="w347">liegende</tc:token>
+      <tc:token ID="w348">Softwarepaket</tc:token>
+      <tc:token ID="w349">ist</tc:token>
+      <tc:token ID="w34a">vollständig</tc:token>
+      <tc:token ID="w34b">dokumentiert</tc:token>
+      <tc:token ID="w34c">und</tc:token>
+      <tc:token ID="w34d">auf</tc:token>
+      <tc:token ID="w34e">GitHub</tc:token>
+      <tc:token ID="w34f">veröffentlicht</tc:token>
+      <tc:token ID="w350">.</tc:token>
+      <tc:token ID="w351">Neben</tc:token>
+      <tc:token ID="w352">den</tc:token>
+      <tc:token ID="w353">Deutschen</tc:token>
+      <tc:token ID="w354">Inschriften</tc:token>
+      <tc:token ID="w355">wird</tc:token>
+      <tc:token ID="w356">XTriples</tc:token>
+      <tc:token ID="w357">aktuell</tc:token>
+      <tc:token ID="w358">auch</tc:token>
+      <tc:token ID="w359">in</tc:token>
+      <tc:token ID="w35a">den</tc:token>
+      <tc:token ID="w35b">Akademievorhaben</tc:token>
+      <tc:token ID="w35c">Regesta</tc:token>
+      <tc:token ID="w35d">Imperii</tc:token>
+      <tc:token ID="w35e">und</tc:token>
+      <tc:token ID="w35f">Die</tc:token>
+      <tc:token ID="w360">Schule</tc:token>
+      <tc:token ID="w361">von</tc:token>
+      <tc:token ID="w362">Salamanca</tc:token>
+      <tc:token ID="w363">verwendet</tc:token>
+      <tc:token ID="w364">.</tc:token>
+      <tc:token ID="w365">Das</tc:token>
+      <tc:token ID="w366">Salomon</tc:token>
+      <tc:token ID="w367">Ludwig</tc:token>
+      <tc:token ID="w368">Steinheim-Institut</tc:token>
+      <tc:token ID="w369">für</tc:token>
+      <tc:token ID="w36a">deutsch-jüdische</tc:token>
+      <tc:token ID="w36b">Geschichte</tc:token>
+      <tc:token ID="w36c">nutzt</tc:token>
+      <tc:token ID="w36d">XTriples</tc:token>
+      <tc:token ID="w36e">für</tc:token>
+      <tc:token ID="w36f">eine</tc:token>
+      <tc:token ID="w370">CIDOC-CRM</tc:token>
+      <tc:token ID="w371">basierte</tc:token>
+      <tc:token ID="w372">,</tc:token>
+      <tc:token ID="w373">semantischen</tc:token>
+      <tc:token ID="w374">Modellierung</tc:token>
+      <tc:token ID="w375">von</tc:token>
+      <tc:token ID="w376">EpiDoc-Daten</tc:token>
+      <tc:token ID="w377">im</tc:token>
+      <tc:token ID="w378">Rahmen</tc:token>
+      <tc:token ID="w379">des</tc:token>
+      <tc:token ID="w37a">BMBF-Projektes</tc:token>
+      <tc:token ID="w37b">Relationen</tc:token>
+      <tc:token ID="w37c">im</tc:token>
+      <tc:token ID="w37d">Raum</tc:token>
+      <tc:token ID="w37e">.</tc:token>
+      <tc:token ID="w37f">Gemeinsam</tc:token>
+      <tc:token ID="w380">mit</tc:token>
+      <tc:token ID="w381">der</tc:token>
+      <tc:token ID="w382">Berlin-Brandenburgischen</tc:token>
+      <tc:token ID="w383">Akademie</tc:token>
+      <tc:token ID="w384">der</tc:token>
+      <tc:token ID="w385">Wissenschaften</tc:token>
+      <tc:token ID="w386">wird</tc:token>
+      <tc:token ID="w387">gerade</tc:token>
+      <tc:token ID="w388">eine</tc:token>
+      <tc:token ID="w389">Schnittstelle</tc:token>
+      <tc:token ID="w38a">zwischen</tc:token>
+      <tc:token ID="w38b">XTriples</tc:token>
+      <tc:token ID="w38c">und</tc:token>
+      <tc:token ID="w38d">correspSearch</tc:token>
+      <tc:token ID="w38e">,</tc:token>
+      <tc:token ID="w38f">dem</tc:token>
+      <tc:token ID="w390">Webservice</tc:token>
+      <tc:token ID="w391">der</tc:token>
+      <tc:token ID="w392">BBAW</tc:token>
+      <tc:token ID="w393">zur</tc:token>
+      <tc:token ID="w394">dezentralen</tc:token>
+      <tc:token ID="w395">Aggregation</tc:token>
+      <tc:token ID="w396">digitaler</tc:token>
+      <tc:token ID="w397">Briefeditionen</tc:token>
+      <tc:token ID="w398">,</tc:token>
+      <tc:token ID="w399">implementiert</tc:token>
+      <tc:token ID="w39a">.</tc:token>
+      <tc:token ID="w39b">Folgende</tc:token>
+      <tc:token ID="w39c">Beispiele</tc:token>
+      <tc:token ID="w39d">geben</tc:token>
+      <tc:token ID="w39e">einen</tc:token>
+      <tc:token ID="w39f">ersten</tc:token>
+      <tc:token ID="w3a0">Überblick</tc:token>
+      <tc:token ID="w3a1">über</tc:token>
+      <tc:token ID="w3a2">die</tc:token>
+      <tc:token ID="w3a3">unterschiedlichen</tc:token>
+      <tc:token ID="w3a4">Anwendungsgebiete</tc:token>
+      <tc:token ID="w3a5">von</tc:token>
+      <tc:token ID="w3a6">XTriples</tc:token>
+      <tc:token ID="w3a7">:</tc:token>
+      <tc:token ID="w3a8">Weitere</tc:token>
+      <tc:token ID="w3a9">Beispiele</tc:token>
+      <tc:token ID="w3aa">zu</tc:token>
+      <tc:token ID="w3ab">den</tc:token>
+      <tc:token ID="w3ac">einzelnen</tc:token>
+      <tc:token ID="w3ad">Funktionalitäten</tc:token>
+      <tc:token ID="w3ae">finden</tc:token>
+      <tc:token ID="w3af">sich</tc:token>
+      <tc:token ID="w3b0">auf</tc:token>
+      <tc:token ID="w3b1">der</tc:token>
+      <tc:token ID="w3b2">XTriples-Website</tc:token>
+      <tc:token ID="w3b3">unter</tc:token>
+      <tc:token ID="w3b4">http://xtriples.spatialhumanities.de/examples.html</tc:token>
+      <tc:token ID="w3b5">.</tc:token>
+      <tc:token ID="w3b6">Einen</tc:token>
+      <tc:token ID="w3b7">schnellen</tc:token>
+      <tc:token ID="w3b8">Überblick</tc:token>
+      <tc:token ID="w3b9">über</tc:token>
+      <tc:token ID="w3ba">die</tc:token>
+      <tc:token ID="w3bb">Funktionsweise</tc:token>
+      <tc:token ID="w3bc">des</tc:token>
+      <tc:token ID="w3bd">Dienstes</tc:token>
+      <tc:token ID="w3be">gibt</tc:token>
+      <tc:token ID="w3bf">folgende</tc:token>
+      <tc:token ID="w3c0">Präsentation</tc:token>
+      <tc:token ID="w3c1">:</tc:token>
+      <tc:token ID="w3c2">http://metacontext.github.io/presentation-correspsearch-xtriples</tc:token>
+      <tc:token ID="w3c3">.</tc:token>
+      <tc:token ID="w3c4">Ziel</tc:token>
+      <tc:token ID="w3c5">des</tc:token>
+      <tc:token ID="w3c6">Vortrags</tc:token>
+      <tc:token ID="w3c7">ist</tc:token>
+      <tc:token ID="w3c8">eine</tc:token>
+      <tc:token ID="w3c9">Veranschaulichung</tc:token>
+      <tc:token ID="w3ca">der</tc:token>
+      <tc:token ID="w3cb">Methoden</tc:token>
+      <tc:token ID="w3cc">und</tc:token>
+      <tc:token ID="w3cd">Potentiale</tc:token>
+      <tc:token ID="w3ce">,</tc:token>
+      <tc:token ID="w3cf">die</tc:token>
+      <tc:token ID="w3d0">sich</tc:token>
+      <tc:token ID="w3d1">aus</tc:token>
+      <tc:token ID="w3d2">der</tc:token>
+      <tc:token ID="w3d3">semantischen</tc:token>
+      <tc:token ID="w3d4">Extraktion</tc:token>
+      <tc:token ID="w3d5">,</tc:token>
+      <tc:token ID="w3d6">Modellierung</tc:token>
+      <tc:token ID="w3d7">,</tc:token>
+      <tc:token ID="w3d8">Vernetzung</tc:token>
+      <tc:token ID="w3d9">und</tc:token>
+      <tc:token ID="w3da">Visualisierung</tc:token>
+      <tc:token ID="w3db">XML-basierter</tc:token>
+      <tc:token ID="w3dc">,</tc:token>
+      <tc:token ID="w3dd">geisteswissenschaftlicher</tc:token>
+      <tc:token ID="w3de">Fachdaten</tc:token>
+      <tc:token ID="w3df">ergeben</tc:token>
+      <tc:token ID="w3e0">.</tc:token>
+      <tc:token ID="w3e1">Neben</tc:token>
+      <tc:token ID="w3e2">einer</tc:token>
+      <tc:token ID="w3e3">Darstellung</tc:token>
+      <tc:token ID="w3e4">der</tc:token>
+      <tc:token ID="w3e5">technischen</tc:token>
+      <tc:token ID="w3e6">Hintergründe</tc:token>
+      <tc:token ID="w3e7">des</tc:token>
+      <tc:token ID="w3e8">XTriples-Webservices</tc:token>
+      <tc:token ID="w3e9">werden</tc:token>
+      <tc:token ID="w3ea">auch</tc:token>
+      <tc:token ID="w3eb">Fragen</tc:token>
+      <tc:token ID="w3ec">der</tc:token>
+      <tc:token ID="w3ed">semantischen</tc:token>
+      <tc:token ID="w3ee">Modellierung</tc:token>
+      <tc:token ID="w3ef">geisteswissenschaftlicher</tc:token>
+      <tc:token ID="w3f0">Fachdaten</tc:token>
+      <tc:token ID="w3f1">mittels</tc:token>
+      <tc:token ID="w3f2">bestimmter</tc:token>
+      <tc:token ID="w3f3">Ontologien</tc:token>
+      <tc:token ID="w3f4">(</tc:token>
+      <tc:token ID="w3f5">bspw.</tc:token>
+      <tc:token ID="w3f6">FOAF</tc:token>
+      <tc:token ID="w3f7">,</tc:token>
+      <tc:token ID="w3f8">CIDOC-CRM</tc:token>
+      <tc:token ID="w3f9">u.a.</tc:token>
+      <tc:token ID="w3fa">)</tc:token>
+      <tc:token ID="w3fb">in</tc:token>
+      <tc:token ID="w3fc">den</tc:token>
+      <tc:token ID="w3fd">Blick</tc:token>
+      <tc:token ID="w3fe">genommen</tc:token>
+      <tc:token ID="w3ff">.</tc:token>
+      <tc:token ID="w400">Weiterhin</tc:token>
+      <tc:token ID="w401">werden</tc:token>
+      <tc:token ID="w402">auch</tc:token>
+      <tc:token ID="w403">beispielhafte</tc:token>
+      <tc:token ID="w404">Analyse-</tc:token>
+      <tc:token ID="w405">und</tc:token>
+      <tc:token ID="w406">Visualisierungsmöglichkeiten</tc:token>
+      <tc:token ID="w407">für</tc:token>
+      <tc:token ID="w408">semantisch</tc:token>
+      <tc:token ID="w409">modellierte</tc:token>
+      <tc:token ID="w40a">geisteswissenschaftliche</tc:token>
+      <tc:token ID="w40b">Fachdaten</tc:token>
+      <tc:token ID="w40c">vorgestellt</tc:token>
+      <tc:token ID="w40d">.</tc:token>
+      <tc:token ID="w40e">Implizite</tc:token>
+      <tc:token ID="w40f">und</tc:token>
+      <tc:token ID="w410">explizite</tc:token>
+      <tc:token ID="w411">Semantik</tc:token>
+      <tc:token ID="w412">TEI-basierter</tc:token>
+      <tc:token ID="w413">Fachdatenrepositorien</tc:token>
+      <tc:token ID="w414">Abb.</tc:token>
+      <tc:token ID="w415">1</tc:token>
+      <tc:token ID="w416">Abb.</tc:token>
+      <tc:token ID="w417">2</tc:token>
+      <tc:token ID="w418">Semantische</tc:token>
+      <tc:token ID="w419">Aussagen</tc:token>
+      <tc:token ID="w41a">aus</tc:token>
+      <tc:token ID="w41b">XML</tc:token>
+      <tc:token ID="w41c">mit</tc:token>
+      <tc:token ID="w41d">Hilfe</tc:token>
+      <tc:token ID="w41e">des</tc:token>
+      <tc:token ID="w41f">XTriples-Webservices</tc:token>
+      <tc:token ID="w420">Abb.</tc:token>
+      <tc:token ID="w421">3</tc:token>
+      <tc:token ID="w422">Anwendungsbeispiele</tc:token>
+      <tc:token ID="w423">Semantische</tc:token>
+      <tc:token ID="w424">Extraktion</tc:token>
+      <tc:token ID="w425">und</tc:token>
+      <tc:token ID="w426">nachfolgende</tc:token>
+      <tc:token ID="w427">Visualisierung</tc:token>
+      <tc:token ID="w428">von</tc:token>
+      <tc:token ID="w429">Familienbeziehungen</tc:token>
+      <tc:token ID="w42a">aus</tc:token>
+      <tc:token ID="w42b">dem</tc:token>
+      <tc:token ID="w42c">Epidat</tc:token>
+      <tc:token ID="w42d">Grabstein</tc:token>
+      <tc:token ID="w42e">Corpus</tc:token>
+      <tc:token ID="w42f">für</tc:token>
+      <tc:token ID="w430">den</tc:token>
+      <tc:token ID="w431">jüdischen</tc:token>
+      <tc:token ID="w432">Friedhof</tc:token>
+      <tc:token ID="w433">in</tc:token>
+      <tc:token ID="w434">Hamburg-Altona</tc:token>
+      <tc:token ID="w435">(</tc:token>
+      <tc:token ID="w436">Ausgangsdaten</tc:token>
+      <tc:token ID="w437">EpiDoc</tc:token>
+      <tc:token ID="w438">/</tc:token>
+      <tc:token ID="w439">TEI</tc:token>
+      <tc:token ID="w43a">)</tc:token>
+      <tc:token ID="w43b">:</tc:token>
+      <tc:token ID="w43c">http://xtriples.spatialhumanities.de/examples/dh/epidat/index.html</tc:token>
+      <tc:token ID="w43d">Semantische</tc:token>
+      <tc:token ID="w43e">Extraktion</tc:token>
+      <tc:token ID="w43f">und</tc:token>
+      <tc:token ID="w440">SVG-Visualisierung</tc:token>
+      <tc:token ID="w441">eines</tc:token>
+      <tc:token ID="w442">Briefnetzwerks</tc:token>
+      <tc:token ID="w443">(</tc:token>
+      <tc:token ID="w444">Teilbestand</tc:token>
+      <tc:token ID="w445">der</tc:token>
+      <tc:token ID="w446">Korrespondenz</tc:token>
+      <tc:token ID="w447">Goethes</tc:token>
+      <tc:token ID="w448">aus</tc:token>
+      <tc:token ID="w449">den</tc:token>
+      <tc:token ID="w44a">in</tc:token>
+      <tc:token ID="w44b">correspSearch</tc:token>
+      <tc:token ID="w44c">aggregierten</tc:token>
+      <tc:token ID="w44d">CMI-Daten</tc:token>
+      <tc:token ID="w44e">bei</tc:token>
+      <tc:token ID="w44f">gleichzeitiger</tc:token>
+      <tc:token ID="w450">on-the-fly</tc:token>
+      <tc:token ID="w451">Einbeziehung</tc:token>
+      <tc:token ID="w452">der</tc:token>
+      <tc:token ID="w453">RDF-Schnittstellen</tc:token>
+      <tc:token ID="w454">von</tc:token>
+      <tc:token ID="w455">GND</tc:token>
+      <tc:token ID="w456">und</tc:token>
+      <tc:token ID="w457">Geonames</tc:token>
+      <tc:token ID="w458">)</tc:token>
+      <tc:token ID="w459">:</tc:token>
+      <tc:token ID="w45a">http://bit.ly/1LKK1dv</tc:token>
+      <tc:token ID="w45b">Beispielhafte</tc:token>
+      <tc:token ID="w45c">semantische</tc:token>
+      <tc:token ID="w45d">Extraktion</tc:token>
+      <tc:token ID="w45e">und</tc:token>
+      <tc:token ID="w45f">Visualisierung</tc:token>
+      <tc:token ID="w460">europäischer</tc:token>
+      <tc:token ID="w461">Kommunikationsnetzwerke</tc:token>
+      <tc:token ID="w462">auf</tc:token>
+      <tc:token ID="w463">Basis</tc:token>
+      <tc:token ID="w464">der</tc:token>
+      <tc:token ID="w465">correspSearch</tc:token>
+      <tc:token ID="w466">TEI</tc:token>
+      <tc:token ID="w467">/</tc:token>
+      <tc:token ID="w468">CMI-Daten</tc:token>
+      <tc:token ID="w469">:</tc:token>
+      <tc:token ID="w46a">http://metacontext.github.io/presentation-correspsearch-xtriples/viz/map.html</tc:token>
+      <tc:token ID="w46b">Akademie</tc:token>
+      <tc:token ID="w46c">der</tc:token>
+      <tc:token ID="w46d">Wissenschaften</tc:token>
+      <tc:token ID="w46e">und</tc:token>
+      <tc:token ID="w46f">der</tc:token>
+      <tc:token ID="w470">Literatur</tc:token>
+      <tc:token ID="w471">Mainz</tc:token>
+      <tc:token ID="w472">(</tc:token>
+      <tc:token ID="w473">o.</tc:token>
+      <tc:token ID="w474">J.a</tc:token>
+      <tc:token ID="w475">)</tc:token>
+      <tc:token ID="w476">:</tc:token>
+      <tc:token ID="w477">Digitale</tc:token>
+      <tc:token ID="w478">Akademie</tc:token>
+      <tc:token ID="w479">http://www.digitale-akademie.de</tc:token>
+      <tc:token ID="w47a">[</tc:token>
+      <tc:token ID="w47b">letzter</tc:token>
+      <tc:token ID="w47c">Zugriff</tc:token>
+      <tc:token ID="w47d">16.</tc:token>
+      <tc:token ID="w47e">Februar</tc:token>
+      <tc:token ID="w47f">2016</tc:token>
+      <tc:token ID="w480">]</tc:token>
+      <tc:token ID="w481">.</tc:token>
+      <tc:token ID="w482">Akademie</tc:token>
+      <tc:token ID="w483">der</tc:token>
+      <tc:token ID="w484">Wissenschaften</tc:token>
+      <tc:token ID="w485">und</tc:token>
+      <tc:token ID="w486">der</tc:token>
+      <tc:token ID="w487">Literatur</tc:token>
+      <tc:token ID="w488">Mainz</tc:token>
+      <tc:token ID="w489">(</tc:token>
+      <tc:token ID="w48a">o.</tc:token>
+      <tc:token ID="w48b">J.b</tc:token>
+      <tc:token ID="w48c">)</tc:token>
+      <tc:token ID="w48d">:</tc:token>
+      <tc:token ID="w48e">Regesta</tc:token>
+      <tc:token ID="w48f">Imperii</tc:token>
+      <tc:token ID="w490">http://www.regesta-imperii.de/startseite.html</tc:token>
+      <tc:token ID="w491">[</tc:token>
+      <tc:token ID="w492">letzter</tc:token>
+      <tc:token ID="w493">Zugriff</tc:token>
+      <tc:token ID="w494">16.</tc:token>
+      <tc:token ID="w495">Februar</tc:token>
+      <tc:token ID="w496">2016</tc:token>
+      <tc:token ID="w497">]</tc:token>
+      <tc:token ID="w498">.</tc:token>
+      <tc:token ID="w499">BBAW</tc:token>
+      <tc:token ID="w49a">(</tc:token>
+      <tc:token ID="w49b">o.</tc:token>
+      <tc:token ID="w49c">J.</tc:token>
+      <tc:token ID="w49d">)</tc:token>
+      <tc:token ID="w49e">:</tc:token>
+      <tc:token ID="w49f">Berlin-Brandenburgische</tc:token>
+      <tc:token ID="w4a0">Akademie</tc:token>
+      <tc:token ID="w4a1">der</tc:token>
+      <tc:token ID="w4a2">Wissenschaften</tc:token>
+      <tc:token ID="w4a3">http://www.bbaw.de/</tc:token>
+      <tc:token ID="w4a4">[</tc:token>
+      <tc:token ID="w4a5">letzter</tc:token>
+      <tc:token ID="w4a6">Zugriff</tc:token>
+      <tc:token ID="w4a7">16.</tc:token>
+      <tc:token ID="w4a8">Februar</tc:token>
+      <tc:token ID="w4a9">2016</tc:token>
+      <tc:token ID="w4aa">]</tc:token>
+      <tc:token ID="w4ab">.</tc:token>
+      <tc:token ID="w4ac">correspSearch</tc:token>
+      <tc:token ID="w4ad">(</tc:token>
+      <tc:token ID="w4ae">o.</tc:token>
+      <tc:token ID="w4af">J.</tc:token>
+      <tc:token ID="w4b0">)</tc:token>
+      <tc:token ID="w4b1">:</tc:token>
+      <tc:token ID="w4b2">correspSearch</tc:token>
+      <tc:token ID="w4b3">.</tc:token>
+      <tc:token ID="w4b4">Search</tc:token>
+      <tc:token ID="w4b5">diverse</tc:token>
+      <tc:token ID="w4b6">letter</tc:token>
+      <tc:token ID="w4b7">editions</tc:token>
+      <tc:token ID="w4b8">http://correspsearch.bbaw.de/index.xql</tc:token>
+      <tc:token ID="w4b9">[</tc:token>
+      <tc:token ID="w4ba">letzter</tc:token>
+      <tc:token ID="w4bb">Zugriff</tc:token>
+      <tc:token ID="w4bc">16.</tc:token>
+      <tc:token ID="w4bd">Februar</tc:token>
+      <tc:token ID="w4be">2016</tc:token>
+      <tc:token ID="w4bf">]</tc:token>
+      <tc:token ID="w4c0">.</tc:token>
+      <tc:token ID="w4c1">Deutsche</tc:token>
+      <tc:token ID="w4c2">Inschriften</tc:token>
+      <tc:token ID="w4c3">Online</tc:token>
+      <tc:token ID="w4c4">(</tc:token>
+      <tc:token ID="w4c5">o.</tc:token>
+      <tc:token ID="w4c6">J.</tc:token>
+      <tc:token ID="w4c7">)</tc:token>
+      <tc:token ID="w4c8">:</tc:token>
+      <tc:token ID="w4c9">http://www.inschriften.net</tc:token>
+      <tc:token ID="w4ca">[</tc:token>
+      <tc:token ID="w4cb">letzter</tc:token>
+      <tc:token ID="w4cc">Zugriff</tc:token>
+      <tc:token ID="w4cd">16.</tc:token>
+      <tc:token ID="w4ce">Februar</tc:token>
+      <tc:token ID="w4cf">2016</tc:token>
+      <tc:token ID="w4d0">]</tc:token>
+      <tc:token ID="w4d1">.</tc:token>
+      <tc:token ID="w4d2">Haft</tc:token>
+      <tc:token ID="w4d3">,</tc:token>
+      <tc:token ID="w4d4">Michael</tc:token>
+      <tc:token ID="w4d5">(</tc:token>
+      <tc:token ID="w4d6">2013</tc:token>
+      <tc:token ID="w4d7">)</tc:token>
+      <tc:token ID="w4d8">:</tc:token>
+      <tc:token ID="w4d9">"</tc:token>
+      <tc:token ID="w4da">RDF</tc:token>
+      <tc:token ID="w4db">als</tc:token>
+      <tc:token ID="w4dc">Verknüpfungsmethode</tc:token>
+      <tc:token ID="w4dd">zwischen</tc:token>
+      <tc:token ID="w4de">geisteswissenschaftlichen</tc:token>
+      <tc:token ID="w4df">Forschungsdaten</tc:token>
+      <tc:token ID="w4e0">und</tc:token>
+      <tc:token ID="w4e1">Geometrien</tc:token>
+      <tc:token ID="w4e2">am</tc:token>
+      <tc:token ID="w4e3">Beispiel</tc:token>
+      <tc:token ID="w4e4">des</tc:token>
+      <tc:token ID="w4e5">Projektes</tc:token>
+      <tc:token ID="w4e6">'Inschriften</tc:token>
+      <tc:token ID="w4e7">im</tc:token>
+      <tc:token ID="w4e8">Bezugssystem</tc:token>
+      <tc:token ID="w4e9">des</tc:token>
+      <tc:token ID="w4ea">Raumes'</tc:token>
+      <tc:token ID="w4eb">"</tc:token>
+      <tc:token ID="w4ec">,in</tc:token>
+      <tc:token ID="w4ed">:</tc:token>
+      <tc:token ID="w4ee">Skriptum</tc:token>
+      <tc:token ID="w4ef">2,3</tc:token>
+      <tc:token ID="w4f0">http://nbn-resolving.de/urn:nbn:de:0289-2013120622</tc:token>
+      <tc:token ID="w4f1">[</tc:token>
+      <tc:token ID="w4f2">letzter</tc:token>
+      <tc:token ID="w4f3">Zugriff</tc:token>
+      <tc:token ID="w4f4">14.</tc:token>
+      <tc:token ID="w4f5">Oktober</tc:token>
+      <tc:token ID="w4f6">2015</tc:token>
+      <tc:token ID="w4f7">]</tc:token>
+      <tc:token ID="w4f8">.</tc:token>
+      <tc:token ID="w4f9">i3Mainz</tc:token>
+      <tc:token ID="w4fa">/</tc:token>
+      <tc:token ID="w4fb">Akademie</tc:token>
+      <tc:token ID="w4fc">Mainz</tc:token>
+      <tc:token ID="w4fd">(</tc:token>
+      <tc:token ID="w4fe">o.</tc:token>
+      <tc:token ID="w4ff">J.</tc:token>
+      <tc:token ID="w500">)</tc:token>
+      <tc:token ID="w501">:</tc:token>
+      <tc:token ID="w502">Inschriften</tc:token>
+      <tc:token ID="w503">im</tc:token>
+      <tc:token ID="w504">Bezugssystem</tc:token>
+      <tc:token ID="w505">des</tc:token>
+      <tc:token ID="w506">Raumes</tc:token>
+      <tc:token ID="w507">http://www.spatialhumanities.de/ibr/startseite.html</tc:token>
+      <tc:token ID="w508">[</tc:token>
+      <tc:token ID="w509">letzter</tc:token>
+      <tc:token ID="w50a">Zugriff</tc:token>
+      <tc:token ID="w50b">16.</tc:token>
+      <tc:token ID="w50c">Februar</tc:token>
+      <tc:token ID="w50d">2016</tc:token>
+      <tc:token ID="w50e">]</tc:token>
+      <tc:token ID="w50f">.</tc:token>
+      <tc:token ID="w510">IBR</tc:token>
+      <tc:token ID="w511">(</tc:token>
+      <tc:token ID="w512">Inscriptions</tc:token>
+      <tc:token ID="w513">in</tc:token>
+      <tc:token ID="w514">their</tc:token>
+      <tc:token ID="w515">spatial</tc:token>
+      <tc:token ID="w516">context</tc:token>
+      <tc:token ID="w517">)</tc:token>
+      <tc:token ID="w518">/</tc:token>
+      <tc:token ID="w519">Academy</tc:token>
+      <tc:token ID="w51a">of</tc:token>
+      <tc:token ID="w51b">Sciences</tc:token>
+      <tc:token ID="w51c">and</tc:token>
+      <tc:token ID="w51d">Literature</tc:token>
+      <tc:token ID="w51e">,</tc:token>
+      <tc:token ID="w51f">Mainz</tc:token>
+      <tc:token ID="w520">/</tc:token>
+      <tc:token ID="w521">Institute</tc:token>
+      <tc:token ID="w522">for</tc:token>
+      <tc:token ID="w523">Spatial</tc:token>
+      <tc:token ID="w524">Information</tc:token>
+      <tc:token ID="w525">and</tc:token>
+      <tc:token ID="w526">Surveying</tc:token>
+      <tc:token ID="w527">Technology</tc:token>
+      <tc:token ID="w528">i3Mainz</tc:token>
+      <tc:token ID="w529">(</tc:token>
+      <tc:token ID="w52a">o.</tc:token>
+      <tc:token ID="w52b">J.</tc:token>
+      <tc:token ID="w52c">)</tc:token>
+      <tc:token ID="w52d">:</tc:token>
+      <tc:token ID="w52e">XTriples</tc:token>
+      <tc:token ID="w52f">http://xtriples.spatialhumanities.de/index.html</tc:token>
+      <tc:token ID="w530">[</tc:token>
+      <tc:token ID="w531">letzter</tc:token>
+      <tc:token ID="w532">Zugriff</tc:token>
+      <tc:token ID="w533">16.</tc:token>
+      <tc:token ID="w534">Februar</tc:token>
+      <tc:token ID="w535">2016</tc:token>
+      <tc:token ID="w536">]</tc:token>
+      <tc:token ID="w537">.</tc:token>
+      <tc:token ID="w538">Iglesia</tc:token>
+      <tc:token ID="w539">,</tc:token>
+      <tc:token ID="w53a">Martin</tc:token>
+      <tc:token ID="w53b">de</tc:token>
+      <tc:token ID="w53c">la</tc:token>
+      <tc:token ID="w53d">/</tc:token>
+      <tc:token ID="w53e">Moretto</tc:token>
+      <tc:token ID="w53f">,</tc:token>
+      <tc:token ID="w540">Nicolas</tc:token>
+      <tc:token ID="w541">/</tc:token>
+      <tc:token ID="w542">Brodhun</tc:token>
+      <tc:token ID="w543">,</tc:token>
+      <tc:token ID="w544">Maximilian</tc:token>
+      <tc:token ID="w545">(</tc:token>
+      <tc:token ID="w546">2015</tc:token>
+      <tc:token ID="w547">)</tc:token>
+      <tc:token ID="w548">:</tc:token>
+      <tc:token ID="w549">"</tc:token>
+      <tc:token ID="w54a">Metadaten</tc:token>
+      <tc:token ID="w54b">,</tc:token>
+      <tc:token ID="w54c">LOD</tc:token>
+      <tc:token ID="w54d">und</tc:token>
+      <tc:token ID="w54e">der</tc:token>
+      <tc:token ID="w54f">Mehrwert</tc:token>
+      <tc:token ID="w550">standardisierter</tc:token>
+      <tc:token ID="w551">und</tc:token>
+      <tc:token ID="w552">vernetzter</tc:token>
+      <tc:token ID="w553">Daten</tc:token>
+      <tc:token ID="w554">.</tc:token>
+      <tc:token ID="w555">"</tc:token>
+      <tc:token ID="w556">In</tc:token>
+      <tc:token ID="w557">:</tc:token>
+      <tc:token ID="w558">Neuroth</tc:token>
+      <tc:token ID="w559">,</tc:token>
+      <tc:token ID="w55a">Heike</tc:token>
+      <tc:token ID="w55b">/</tc:token>
+      <tc:token ID="w55c">Rapp</tc:token>
+      <tc:token ID="w55d">,</tc:token>
+      <tc:token ID="w55e">Andrea</tc:token>
+      <tc:token ID="w55f">/</tc:token>
+      <tc:token ID="w560">Söring</tc:token>
+      <tc:token ID="w561">,</tc:token>
+      <tc:token ID="w562">Sibylle</tc:token>
+      <tc:token ID="w563">(</tc:token>
+      <tc:token ID="w564">eds</tc:token>
+      <tc:token ID="w565">.</tc:token>
+      <tc:token ID="w566">)</tc:token>
+      <tc:token ID="w567">:</tc:token>
+      <tc:token ID="w568">TextGrid</tc:token>
+      <tc:token ID="w569">:</tc:token>
+      <tc:token ID="w56a">Von</tc:token>
+      <tc:token ID="w56b">der</tc:token>
+      <tc:token ID="w56c">Community</tc:token>
+      <tc:token ID="w56d">–</tc:token>
+      <tc:token ID="w56e">für</tc:token>
+      <tc:token ID="w56f">die</tc:token>
+      <tc:token ID="w570">Community</tc:token>
+      <tc:token ID="w571">.</tc:token>
+      <tc:token ID="w572">Eine</tc:token>
+      <tc:token ID="w573">Virtuelle</tc:token>
+      <tc:token ID="w574">Forschungsumgebung</tc:token>
+      <tc:token ID="w575">für</tc:token>
+      <tc:token ID="w576">die</tc:token>
+      <tc:token ID="w577">Geisteswissenschaften</tc:token>
+      <tc:token ID="w578">.</tc:token>
+      <tc:token ID="w579">Göttingen</tc:token>
+      <tc:token ID="w57a">:</tc:token>
+      <tc:token ID="w57b">Universitätsverlag</tc:token>
+      <tc:token ID="w57c">Göttingen</tc:token>
+      <tc:token ID="w57d">91–102</tc:token>
+      <tc:token ID="w57e">http://dx.doi.org/10.3249/webdoc-3947</tc:token>
+      <tc:token ID="w57f">[</tc:token>
+      <tc:token ID="w580">letzter</tc:token>
+      <tc:token ID="w581">Zugriff</tc:token>
+      <tc:token ID="w582">14.</tc:token>
+      <tc:token ID="w583">Oktober</tc:token>
+      <tc:token ID="w584">2015</tc:token>
+      <tc:token ID="w585">]</tc:token>
+      <tc:token ID="w586">.</tc:token>
+      <tc:token ID="w587">Lange</tc:token>
+      <tc:token ID="w588">,</tc:token>
+      <tc:token ID="w589">Felix</tc:token>
+      <tc:token ID="w58a">,</tc:token>
+      <tc:token ID="w58b">Martin</tc:token>
+      <tc:token ID="w58c">Unold</tc:token>
+      <tc:token ID="w58d">(</tc:token>
+      <tc:token ID="w58e">2015</tc:token>
+      <tc:token ID="w58f">)</tc:token>
+      <tc:token ID="w590">:</tc:token>
+      <tc:token ID="w591">Semantisch</tc:token>
+      <tc:token ID="w592">angereicherte</tc:token>
+      <tc:token ID="w593">3D-Messdaten</tc:token>
+      <tc:token ID="w594">von</tc:token>
+      <tc:token ID="w595">Kirchenräumen</tc:token>
+      <tc:token ID="w596">als</tc:token>
+      <tc:token ID="w597">Quellen</tc:token>
+      <tc:token ID="w598">für</tc:token>
+      <tc:token ID="w599">die</tc:token>
+      <tc:token ID="w59a">geschichtswissenschaftliche</tc:token>
+      <tc:token ID="w59b">Forschung</tc:token>
+      <tc:token ID="w59c">,</tc:token>
+      <tc:token ID="w59d">in</tc:token>
+      <tc:token ID="w59e">:</tc:token>
+      <tc:token ID="w59f">Zeitschrift</tc:token>
+      <tc:token ID="w5a0">für</tc:token>
+      <tc:token ID="w5a1">digitale</tc:token>
+      <tc:token ID="w5a2">Geisteswissenschaften</tc:token>
+      <tc:token ID="w5a3">1</tc:token>
+      <tc:token ID="w5a4">http://dx.doi.org/10.17175/sb001_015</tc:token>
+      <tc:token ID="w5a5">[</tc:token>
+      <tc:token ID="w5a6">letzter</tc:token>
+      <tc:token ID="w5a7">Zugriff</tc:token>
+      <tc:token ID="w5a8">14.</tc:token>
+      <tc:token ID="w5a9">Oktober</tc:token>
+      <tc:token ID="w5aa">2015</tc:token>
+      <tc:token ID="w5ab">]</tc:token>
+      <tc:token ID="w5ac">.</tc:token>
+      <tc:token ID="w5ad">Lanthaler</tc:token>
+      <tc:token ID="w5ae">,</tc:token>
+      <tc:token ID="w5af">Markus</tc:token>
+      <tc:token ID="w5b0">(</tc:token>
+      <tc:token ID="w5b1">2014</tc:token>
+      <tc:token ID="w5b2">)</tc:token>
+      <tc:token ID="w5b3">:</tc:token>
+      <tc:token ID="w5b4">Third</tc:token>
+      <tc:token ID="w5b5">Generation</tc:token>
+      <tc:token ID="w5b6">Web</tc:token>
+      <tc:token ID="w5b7">APIs</tc:token>
+      <tc:token ID="w5b8">.</tc:token>
+      <tc:token ID="w5b9">Bridging</tc:token>
+      <tc:token ID="w5ba">the</tc:token>
+      <tc:token ID="w5bb">Gap</tc:token>
+      <tc:token ID="w5bc">between</tc:token>
+      <tc:token ID="w5bd">REST</tc:token>
+      <tc:token ID="w5be">and</tc:token>
+      <tc:token ID="w5bf">Linked</tc:token>
+      <tc:token ID="w5c0">Data</tc:token>
+      <tc:token ID="w5c1">.</tc:token>
+      <tc:token ID="w5c2">Diss</tc:token>
+      <tc:token ID="w5c3">.</tc:token>
+      <tc:token ID="w5c4">Institute</tc:token>
+      <tc:token ID="w5c5">of</tc:token>
+      <tc:token ID="w5c6">Information</tc:token>
+      <tc:token ID="w5c7">Systems</tc:token>
+      <tc:token ID="w5c8">and</tc:token>
+      <tc:token ID="w5c9">Computer</tc:token>
+      <tc:token ID="w5ca">Media</tc:token>
+      <tc:token ID="w5cb">.</tc:token>
+      <tc:token ID="w5cc">Technische</tc:token>
+      <tc:token ID="w5cd">Universität</tc:token>
+      <tc:token ID="w5ce">Graz</tc:token>
+      <tc:token ID="w5cf">http://www.markus-lanthaler.com/research/third-generation-web-apis-bridging-the-gap-between-rest-and-linked-data.pdf</tc:token>
+      <tc:token ID="w5d0">[</tc:token>
+      <tc:token ID="w5d1">letzter</tc:token>
+      <tc:token ID="w5d2">Zugriff</tc:token>
+      <tc:token ID="w5d3">14.</tc:token>
+      <tc:token ID="w5d4">Oktober</tc:token>
+      <tc:token ID="w5d5">2015</tc:token>
+      <tc:token ID="w5d6">]</tc:token>
+      <tc:token ID="w5d7">.</tc:token>
+      <tc:token ID="w5d8">Polleres</tc:token>
+      <tc:token ID="w5d9">,</tc:token>
+      <tc:token ID="w5da">Axel</tc:token>
+      <tc:token ID="w5db">u.a.</tc:token>
+      <tc:token ID="w5dc">(</tc:token>
+      <tc:token ID="w5dd">2009</tc:token>
+      <tc:token ID="w5de">)</tc:token>
+      <tc:token ID="w5df">:</tc:token>
+      <tc:token ID="w5e0">XSPARQL</tc:token>
+      <tc:token ID="w5e1">Language</tc:token>
+      <tc:token ID="w5e2">Specification</tc:token>
+      <tc:token ID="w5e3">http://www.w3.org/Submission/xsparql-language-specification</tc:token>
+      <tc:token ID="w5e4">letzter</tc:token>
+      <tc:token ID="w5e5">Zugriff</tc:token>
+      <tc:token ID="w5e6">14.</tc:token>
+      <tc:token ID="w5e7">Oktober</tc:token>
+      <tc:token ID="w5e8">2015</tc:token>
+      <tc:token ID="w5e9">]</tc:token>
+      <tc:token ID="w5ea">.</tc:token>
+      <tc:token ID="w5eb">Salomon</tc:token>
+      <tc:token ID="w5ec">Ludwig</tc:token>
+      <tc:token ID="w5ed">Steinheim-Institut</tc:token>
+      <tc:token ID="w5ee">für</tc:token>
+      <tc:token ID="w5ef">deutsch-jüdische</tc:token>
+      <tc:token ID="w5f0">Geschichte</tc:token>
+      <tc:token ID="w5f1">(</tc:token>
+      <tc:token ID="w5f2">o.</tc:token>
+      <tc:token ID="w5f3">J.</tc:token>
+      <tc:token ID="w5f4">)</tc:token>
+      <tc:token ID="w5f5">:</tc:token>
+      <tc:token ID="w5f6">http://www.steinheim-institut.de</tc:token>
+      <tc:token ID="w5f7">[</tc:token>
+      <tc:token ID="w5f8">letzter</tc:token>
+      <tc:token ID="w5f9">Zugriff</tc:token>
+      <tc:token ID="w5fa">16.</tc:token>
+      <tc:token ID="w5fb">Februar</tc:token>
+      <tc:token ID="w5fc">2016</tc:token>
+      <tc:token ID="w5fd">]</tc:token>
+      <tc:token ID="w5fe">.</tc:token>
+      <tc:token ID="w5ff">Schrade</tc:token>
+      <tc:token ID="w600">,</tc:token>
+      <tc:token ID="w601">Torsten</tc:token>
+      <tc:token ID="w602">(</tc:token>
+      <tc:token ID="w603">2013</tc:token>
+      <tc:token ID="w604">)</tc:token>
+      <tc:token ID="w605">:</tc:token>
+      <tc:token ID="w606">"</tc:token>
+      <tc:token ID="w607">Datenstrukturierung</tc:token>
+      <tc:token ID="w608">"</tc:token>
+      <tc:token ID="w609">,</tc:token>
+      <tc:token ID="w60a">in</tc:token>
+      <tc:token ID="w60b">:</tc:token>
+      <tc:token ID="w60c">Über</tc:token>
+      <tc:token ID="w60d">die</tc:token>
+      <tc:token ID="w60e">Praxis</tc:token>
+      <tc:token ID="w60f">des</tc:token>
+      <tc:token ID="w610">kulturwissenschaftlichen</tc:token>
+      <tc:token ID="w611">Arbeitens</tc:token>
+      <tc:token ID="w612">.</tc:token>
+      <tc:token ID="w613">Ein</tc:token>
+      <tc:token ID="w614">Handwörterbuch</tc:token>
+      <tc:token ID="w615">.</tc:token>
+      <tc:token ID="w616">Bielefeld</tc:token>
+      <tc:token ID="w617">:</tc:token>
+      <tc:token ID="w618">transcript</tc:token>
+      <tc:token ID="w619">91–97</tc:token>
+      <tc:token ID="w61a">.</tc:token>
+      <tc:token ID="w61b">Projekte</tc:token>
+      <tc:token ID="w61c">wie</tc:token>
+      <tc:token ID="w61d">bspw.</tc:token>
+      <tc:token ID="w61e">SPQR</tc:token>
+      <tc:token ID="w61f">oder</tc:token>
+      <tc:token ID="w620">das</tc:token>
+      <tc:token ID="w621">Textual</tc:token>
+      <tc:token ID="w622">Encoding</tc:token>
+      <tc:token ID="w623">Framework</tc:token>
+      <tc:token ID="w624">sind</tc:token>
+      <tc:token ID="w625">veraltet</tc:token>
+      <tc:token ID="w626">oder</tc:token>
+      <tc:token ID="w627">technisch</tc:token>
+      <tc:token ID="w628">nicht</tc:token>
+      <tc:token ID="w629">generalisiert</tc:token>
+      <tc:token ID="w62a">.</tc:token>
+      <tc:token ID="w62b">Einen</tc:token>
+      <tc:token ID="w62c">interessanten</tc:token>
+      <tc:token ID="w62d">Ansatz</tc:token>
+      <tc:token ID="w62e">bietet</tc:token>
+      <tc:token ID="w62f">die</tc:token>
+      <tc:token ID="w630">XSPARQL</tc:token>
+      <tc:token ID="w631">Language</tc:token>
+      <tc:token ID="w632">Specification</tc:token>
+      <tc:token ID="w633">des</tc:token>
+      <tc:token ID="w634">DERI</tc:token>
+      <tc:token ID="w635">,</tc:token>
+      <tc:token ID="w636">die</tc:token>
+      <tc:token ID="w637">2009</tc:token>
+      <tc:token ID="w638">in</tc:token>
+      <tc:token ID="w639">Form</tc:token>
+      <tc:token ID="w63a">einer</tc:token>
+      <tc:token ID="w63b">W3C</tc:token>
+      <tc:token ID="w63c">Member</tc:token>
+      <tc:token ID="w63d">Submission</tc:token>
+      <tc:token ID="w63e">niedergelegt</tc:token>
+      <tc:token ID="w63f">wurde</tc:token>
+      <tc:token ID="w640">.</tc:token>
+      <tc:token ID="w641">Hier</tc:token>
+      <tc:token ID="w642">fehlen</tc:token>
+      <tc:token ID="w643">jedoch</tc:token>
+      <tc:token ID="w644">praktische</tc:token>
+      <tc:token ID="w645">Implementierungen</tc:token>
+      <tc:token ID="w646">.</tc:token>
+      <tc:token ID="w647">Die</tc:token>
+      <tc:token ID="w648">Benutzung</tc:token>
+      <tc:token ID="w649">von</tc:token>
+      <tc:token ID="w64a">RDFa</tc:token>
+      <tc:token ID="w64b">innerhalb</tc:token>
+      <tc:token ID="w64c">von</tc:token>
+      <tc:token ID="w64d">XML-Daten</tc:token>
+      <tc:token ID="w64e">stellt</tc:token>
+      <tc:token ID="w64f">eine</tc:token>
+      <tc:token ID="w650">weitere</tc:token>
+      <tc:token ID="w651">Möglichkeit</tc:token>
+      <tc:token ID="w652">dar</tc:token>
+      <tc:token ID="w653">,</tc:token>
+      <tc:token ID="w654">doch</tc:token>
+      <tc:token ID="w655">verfolgen</tc:token>
+      <tc:token ID="w656">die</tc:token>
+      <tc:token ID="w657">wenigsten</tc:token>
+      <tc:token ID="w658">geisteswissenschaftlichen</tc:token>
+      <tc:token ID="w659">Fachdatenrepositorien</tc:token>
+      <tc:token ID="w65a">eine</tc:token>
+      <tc:token ID="w65b">so</tc:token>
+      <tc:token ID="w65c">ausgerichtete</tc:token>
+      <tc:token ID="w65d">semantische</tc:token>
+      <tc:token ID="w65e">Markup-Strategie</tc:token>
+      <tc:token ID="w65f">.</tc:token>
+      <tc:token ID="w660">Auch</tc:token>
+      <tc:token ID="w661">das</tc:token>
+      <tc:token ID="w662">bereits</tc:token>
+      <tc:token ID="w663">2007</tc:token>
+      <tc:token ID="w664">in</tc:token>
+      <tc:token ID="w665">Form</tc:token>
+      <tc:token ID="w666">einer</tc:token>
+      <tc:token ID="w667">W3C</tc:token>
+      <tc:token ID="w668">Recommendation</tc:token>
+      <tc:token ID="w669">grundgelegte</tc:token>
+      <tc:token ID="w66a">GRDDL-Framework</tc:token>
+      <tc:token ID="w66b">(</tc:token>
+      <tc:token ID="w66c">Gleaning</tc:token>
+      <tc:token ID="w66d">Resource</tc:token>
+      <tc:token ID="w66e">Descriptions</tc:token>
+      <tc:token ID="w66f">from</tc:token>
+      <tc:token ID="w670">Dialects</tc:token>
+      <tc:token ID="w671">of</tc:token>
+      <tc:token ID="w672">Languages</tc:token>
+      <tc:token ID="w673">)</tc:token>
+      <tc:token ID="w674">ist</tc:token>
+      <tc:token ID="w675">bis</tc:token>
+      <tc:token ID="w676">heute</tc:token>
+      <tc:token ID="w677">eine</tc:token>
+      <tc:token ID="w678">theoretische</tc:token>
+      <tc:token ID="w679">Spezifikation</tc:token>
+      <tc:token ID="w67a">geblieben</tc:token>
+      <tc:token ID="w67b">.</tc:token>
+      <tc:token ID="w67c">Der</tc:token>
+      <tc:token ID="w67d">OxGarage</tc:token>
+      <tc:token ID="w67e">Transformations-Webservice</tc:token>
+      <tc:token ID="w67f">der</tc:token>
+      <tc:token ID="w680">Text</tc:token>
+      <tc:token ID="w681">Encoding</tc:token>
+      <tc:token ID="w682">Initiative</tc:token>
+      <tc:token ID="w683">bietet</tc:token>
+      <tc:token ID="w684">zwar</tc:token>
+      <tc:token ID="w685">eine</tc:token>
+      <tc:token ID="w686">Routine</tc:token>
+      <tc:token ID="w687">für</tc:token>
+      <tc:token ID="w688">die</tc:token>
+      <tc:token ID="w689">Konvertierung</tc:token>
+      <tc:token ID="w68a">von</tc:token>
+      <tc:token ID="w68b">TEI</tc:token>
+      <tc:token ID="w68c">kodierten</tc:token>
+      <tc:token ID="w68d">Daten</tc:token>
+      <tc:token ID="w68e">nach</tc:token>
+      <tc:token ID="w68f">RDF</tc:token>
+      <tc:token ID="w690">an</tc:token>
+      <tc:token ID="w691">,</tc:token>
+      <tc:token ID="w692">legt</tc:token>
+      <tc:token ID="w693">sich</tc:token>
+      <tc:token ID="w694">für</tc:token>
+      <tc:token ID="w695">die</tc:token>
+      <tc:token ID="w696">Transformation</tc:token>
+      <tc:token ID="w697">aber</tc:token>
+      <tc:token ID="w698">auf</tc:token>
+      <tc:token ID="w699">das</tc:token>
+      <tc:token ID="w69a">CIDOC-CRM</tc:token>
+      <tc:token ID="w69b">als</tc:token>
+      <tc:token ID="w69c">Ontologie</tc:token>
+      <tc:token ID="w69d">fest</tc:token>
+      <tc:token ID="w69e">.</tc:token>
+      <tc:token ID="w69f">Mit</tc:token>
+      <tc:token ID="w6a0">OxGarage</tc:token>
+      <tc:token ID="w6a1">können</tc:token>
+      <tc:token ID="w6a2">out-of-the-box</tc:token>
+      <tc:token ID="w6a3">also</tc:token>
+      <tc:token ID="w6a4">keine</tc:token>
+      <tc:token ID="w6a5">anderen</tc:token>
+      <tc:token ID="w6a6">Ontologien</tc:token>
+      <tc:token ID="w6a7">für</tc:token>
+      <tc:token ID="w6a8">eine</tc:token>
+      <tc:token ID="w6a9">semantische</tc:token>
+      <tc:token ID="w6aa">Modellierung</tc:token>
+      <tc:token ID="w6ab">benutzt</tc:token>
+      <tc:token ID="w6ac">werden</tc:token>
+      <tc:token ID="w6ad">.</tc:token>
+      <tc:token ID="w6ae">Zudem</tc:token>
+      <tc:token ID="w6af">ist</tc:token>
+      <tc:token ID="w6b0">der</tc:token>
+      <tc:token ID="w6b1">Webservice</tc:token>
+      <tc:token ID="w6b2">nicht</tc:token>
+      <tc:token ID="w6b3">darauf</tc:token>
+      <tc:token ID="w6b4">ausgelegt</tc:token>
+      <tc:token ID="w6b5">,</tc:token>
+      <tc:token ID="w6b6">auch</tc:token>
+      <tc:token ID="w6b7">weitere</tc:token>
+      <tc:token ID="w6b8">,</tc:token>
+      <tc:token ID="w6b9">externe</tc:token>
+      <tc:token ID="w6ba">Datenrepositorien</tc:token>
+      <tc:token ID="w6bb">in</tc:token>
+      <tc:token ID="w6bc">eine</tc:token>
+      <tc:token ID="w6bd">Transformation</tc:token>
+      <tc:token ID="w6be">mit</tc:token>
+      <tc:token ID="w6bf">einzubeziehen</tc:token>
+      <tc:token ID="w6c0">oder</tc:token>
+      <tc:token ID="w6c1">andere</tc:token>
+      <tc:token ID="w6c2">RDF-Serialisierungen</tc:token>
+      <tc:token ID="w6c3">jenseits</tc:token>
+      <tc:token ID="w6c4">von</tc:token>
+      <tc:token ID="w6c5">RDF/</tc:token>
+      <tc:token ID="w6c6">XML</tc:token>
+      <tc:token ID="w6c7">zurückzugeben</tc:token>
+      <tc:token ID="w6c8">.</tc:token>
+      <tc:token ID="w6c9">Beispielsweise</tc:token>
+      <tc:token ID="w6ca">an</tc:token>
+      <tc:token ID="w6cb">den</tc:token>
+      <tc:token ID="w6cc">RDF</tc:token>
+      <tc:token ID="w6cd">zu</tc:token>
+      <tc:token ID="w6ce">SVG</tc:token>
+      <tc:token ID="w6cf">Transformations-Webservice</tc:token>
+      <tc:token ID="w6d0">oder</tc:token>
+      <tc:token ID="w6d1">an</tc:token>
+      <tc:token ID="w6d2">die</tc:token>
+      <tc:token ID="w6d3">RDF</tc:token>
+      <tc:token ID="w6d4">Visualisierungsbibliothek</tc:token>
+      <tc:token ID="w6d5">d3sparql</tc:token>
+      <tc:token ID="w6d6">.</tc:token>
+      <tc:token ID="w6d7">Bibliographie</tc:token>
+    </tc:tokens>
+    <tc:sentences xmlns:tc="http://www.dspin.de/data/textcorpus">
+      <tc:sentence tokenIDs="w1 w2 w3 w4 w5 w6 w7 w8 w9 wa wb wc wd we wf w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w1a w1b w1c w1d w1e w1f w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 w2a w2b w2c w2d w2e w2f" ID="s1"/>
+      <tc:sentence tokenIDs="w30 w31 w32 w33 w34 w35 w36 w37 w38 w39 w3a w3b w3c w3d w3e" ID="s2"/>
+      <tc:sentence tokenIDs="w3f w40 w41 w42 w43 w44 w45 w46 w47 w48 w49 w4a w4b w4c w4d w4e w4f w50 w51 w52 w53" ID="s3"/>
+      <tc:sentence tokenIDs="w54 w55 w56 w57 w58 w59 w5a w5b w5c w5d w5e w5f w60 w61 w62 w63 w64 w65 w66 w67 w68 w69 w6a w6b w6c" ID="s4"/>
+      <tc:sentence tokenIDs="w6d w6e w6f w70 w71 w72 w73 w74 w75 w76 w77 w78 w79 w7a w7b w7c w7d w7e w7f w80 w81 w82 w83 w84 w85 w86 w87 w88 w89 w8a w8b w8c w8d" ID="s5"/>
+      <tc:sentence tokenIDs="w8e w8f w90 w91 w92 w93 w94 w95 w96 w97 w98 w99 w9a w9b w9c w9d w9e w9f wa0 wa1 wa2 wa3 wa4 wa5 wa6 wa7 wa8 wa9" ID="s6"/>
+      <tc:sentence tokenIDs="waa wab wac wad wae waf wb0 wb1 wb2 wb3 wb4 wb5 wb6 wb7 wb8 wb9 wba wbb wbc wbd wbe wbf wc0" ID="s7"/>
+      <tc:sentence tokenIDs="wc1 wc2 wc3 wc4 wc5 wc6 wc7 wc8 wc9 wca wcb wcc wcd wce wcf wd0 wd1 wd2 wd3 wd4 wd5 wd6 wd7 wd8 wd9" ID="s8"/>
+      <tc:sentence tokenIDs="wda wdb wdc wdd wde wdf we0 we1 we2 we3 we4 we5 we6 we7 we8 we9 wea" ID="s9"/>
+      <tc:sentence tokenIDs="web wec wed wee wef wf0 wf1 wf2 wf3 wf4 wf5 wf6 wf7 wf8 wf9 wfa wfb wfc wfd wfe wff w100" ID="sa"/>
+      <tc:sentence tokenIDs="w101 w102 w103 w104 w105 w106 w107 w108 w109 w10a w10b w10c w10d w10e w10f w110 w111 w112 w113 w114 w115 w116 w117 w118 w119 w11a w11b w11c w11d w11e w11f w120 w121" ID="sb"/>
+      <tc:sentence tokenIDs="w122 w123 w124 w125 w126 w127 w128 w129 w12a w12b w12c w12d w12e w12f w130 w131 w132 w133" ID="sc"/>
+      <tc:sentence tokenIDs="w134 w135 w136 w137 w138 w139 w13a w13b w13c w13d w13e w13f w140 w141 w142 w143 w144" ID="sd"/>
+      <tc:sentence tokenIDs="w145 w146 w147 w148 w149 w14a w14b w14c w14d w14e w14f w150 w151 w152 w153 w154 w155 w156 w157 w158" ID="se"/>
+      <tc:sentence tokenIDs="w159 w15a w15b w15c w15d w15e w15f w160 w161 w162 w163 w164 w165 w166 w167 w168 w169 w16a w16b w16c" ID="sf"/>
+      <tc:sentence tokenIDs="w16d w16e w16f w170 w171 w172 w173 w174" ID="s10"/>
+      <tc:sentence tokenIDs="w175 w176 w177 w178 w179 w17a w17b w17c w17d w17e w17f w180 w181 w182 w183 w184 w185 w186 w187 w188 w189 w18a w18b w18c w18d w18e w18f w190 w191 w192 w193 w194 w195 w196 w197 w198" ID="s11"/>
+      <tc:sentence tokenIDs="w199 w19a w19b w19c w19d w19e w19f w1a0 w1a1 w1a2 w1a3 w1a4 w1a5 w1a6 w1a7 w1a8 w1a9" ID="s12"/>
+      <tc:sentence tokenIDs="w1aa w1ab w1ac w1ad w1ae w1af w1b0 w1b1 w1b2 w1b3 w1b4 w1b5 w1b6 w1b7 w1b8 w1b9 w1ba w1bb w1bc w1bd w1be w1bf w1c0 w1c1" ID="s13"/>
+      <tc:sentence tokenIDs="w1c2 w1c3 w1c4 w1c5 w1c6 w1c7 w1c8 w1c9 w1ca w1cb w1cc w1cd w1ce w1cf w1d0 w1d1 w1d2 w1d3 w1d4 w1d5 w1d6 w1d7 w1d8 w1d9 w1da w1db w1dc w1dd w1de w1df w1e0 w1e1 w1e2 w1e3 w1e4 w1e5 w1e6 w1e7 w1e8 w1e9 w1ea w1eb w1ec w1ed w1ee w1ef w1f0 w1f1 w1f2 w1f3 w1f4 w1f5 w1f6 w1f7 w1f8 w1f9" ID="s14"/>
+      <tc:sentence tokenIDs="w1fa w1fb w1fc w1fd w1fe w1ff w200 w201 w202 w203 w204 w205 w206 w207 w208 w209 w20a w20b w20c w20d" ID="s15"/>
+      <tc:sentence tokenIDs="w20e w20f w210 w211 w212 w213 w214 w215 w216 w217 w218 w219 w21a w21b w21c w21d w21e w21f w220 w221 w222 w223 w224" ID="s16"/>
+      <tc:sentence tokenIDs="w225 w226 w227 w228 w229 w22a w22b w22c w22d w22e w22f w230 w231 w232" ID="s17"/>
+      <tc:sentence tokenIDs="w233 w234 w235 w236 w237 w238 w239 w23a w23b w23c w23d w23e w23f w240 w241 w242 w243 w244 w245 w246 w247 w248 w249 w24a w24b w24c w24d w24e w24f w250 w251 w252 w253 w254" ID="s18"/>
+      <tc:sentence tokenIDs="w255 w256 w257 w258 w259 w25a w25b w25c w25d" ID="s19"/>
+      <tc:sentence tokenIDs="w25e w25f w260 w261 w262 w263 w264 w265 w266 w267 w268 w269 w26a w26b w26c w26d w26e w26f w270 w271 w272 w273 w274 w275 w276 w277 w278 w279" ID="s1a"/>
+      <tc:sentence tokenIDs="w27a w27b w27c w27d w27e w27f w280 w281 w282 w283 w284 w285 w286 w287 w288" ID="s1b"/>
+      <tc:sentence tokenIDs="w289 w28a w28b w28c w28d w28e w28f w290 w291 w292 w293 w294 w295 w296 w297 w298 w299 w29a w29b w29c w29d w29e w29f w2a0 w2a1 w2a2 w2a3 w2a4 w2a5 w2a6 w2a7 w2a8 w2a9 w2aa w2ab w2ac w2ad w2ae" ID="s1c"/>
+      <tc:sentence tokenIDs="w2af w2b0 w2b1 w2b2 w2b3 w2b4 w2b5 w2b6 w2b7 w2b8 w2b9 w2ba w2bb w2bc w2bd w2be w2bf w2c0 w2c1 w2c2 w2c3" ID="s1d"/>
+      <tc:sentence tokenIDs="w2c4 w2c5 w2c6 w2c7 w2c8 w2c9 w2ca w2cb w2cc w2cd w2ce w2cf w2d0 w2d1 w2d2 w2d3 w2d4 w2d5 w2d6 w2d7 w2d8 w2d9 w2da w2db w2dc w2dd" ID="s1e"/>
+      <tc:sentence tokenIDs="w2de w2df w2e0 w2e1 w2e2 w2e3 w2e4 w2e5 w2e6 w2e7 w2e8 w2e9 w2ea w2eb w2ec" ID="s1f"/>
+      <tc:sentence tokenIDs="w2ed w2ee w2ef w2f0 w2f1 w2f2 w2f3 w2f4 w2f5 w2f6 w2f7 w2f8 w2f9 w2fa w2fb w2fc w2fd" ID="s20"/>
+      <tc:sentence tokenIDs="w2fe w2ff w300 w301 w302 w303 w304 w305 w306 w307 w308 w309 w30a w30b w30c w30d w30e w30f w310 w311 w312 w313 w314 w315 w316 w317 w318 w319 w31a w31b" ID="s21"/>
+      <tc:sentence tokenIDs="w31c w31d w31e w31f w320 w321 w322 w323 w324 w325 w326 w327 w328 w329 w32a w32b w32c w32d w32e w32f w330 w331 w332 w333 w334 w335 w336 w337 w338 w339 w33a w33b w33c w33d w33e w33f w340 w341 w342 w343 w344" ID="s22"/>
+      <tc:sentence tokenIDs="w345 w346 w347 w348 w349 w34a w34b w34c w34d w34e w34f w350" ID="s23"/>
+      <tc:sentence tokenIDs="w351 w352 w353 w354 w355 w356 w357 w358 w359 w35a w35b w35c w35d w35e w35f w360 w361 w362 w363 w364" ID="s24"/>
+      <tc:sentence tokenIDs="w365 w366 w367 w368 w369 w36a w36b w36c w36d w36e w36f w370 w371 w372 w373 w374 w375 w376 w377 w378 w379 w37a w37b w37c w37d w37e" ID="s25"/>
+      <tc:sentence tokenIDs="w37f w380 w381 w382 w383 w384 w385 w386 w387 w388 w389 w38a w38b w38c w38d w38e w38f w390 w391 w392 w393 w394 w395 w396 w397 w398 w399 w39a" ID="s26"/>
+      <tc:sentence tokenIDs="w39b w39c w39d w39e w39f w3a0 w3a1 w3a2 w3a3 w3a4 w3a5 w3a6 w3a7 w3a8 w3a9 w3aa w3ab w3ac w3ad w3ae w3af w3b0 w3b1 w3b2 w3b3 w3b4 w3b5" ID="s27"/>
+      <tc:sentence tokenIDs="w3b6 w3b7 w3b8 w3b9 w3ba w3bb w3bc w3bd w3be w3bf w3c0 w3c1 w3c2 w3c3 w3c4 w3c5 w3c6 w3c7 w3c8 w3c9 w3ca w3cb w3cc w3cd w3ce w3cf w3d0 w3d1 w3d2 w3d3 w3d4 w3d5 w3d6 w3d7 w3d8 w3d9 w3da w3db w3dc w3dd w3de w3df w3e0" ID="s28"/>
+      <tc:sentence tokenIDs="w3e1 w3e2 w3e3 w3e4 w3e5 w3e6 w3e7 w3e8 w3e9 w3ea w3eb w3ec w3ed w3ee w3ef w3f0 w3f1 w3f2 w3f3 w3f4 w3f5 w3f6 w3f7 w3f8 w3f9 w3fa w3fb w3fc w3fd w3fe w3ff" ID="s29"/>
+      <tc:sentence tokenIDs="w400 w401 w402 w403 w404 w405 w406 w407 w408 w409 w40a w40b w40c w40d" ID="s2a"/>
+      <tc:sentence tokenIDs="w40e w40f w410 w411 w412 w413 w414 w415 w416 w417 w418 w419 w41a w41b w41c w41d w41e w41f w420 w421 w422 w423 w424 w425 w426 w427 w428 w429 w42a w42b w42c w42d w42e w42f w430 w431 w432 w433 w434 w435 w436 w437 w438 w439 w43a w43b w43c w43d w43e w43f w440 w441 w442 w443 w444 w445 w446 w447 w448 w449 w44a w44b w44c w44d w44e w44f w450 w451 w452 w453 w454 w455 w456 w457 w458 w459 w45a w45b w45c w45d w45e w45f w460 w461 w462 w463 w464 w465 w466 w467 w468 w469 w46a w46b w46c w46d w46e w46f w470 w471 w472 w473 w474 w475 w476 w477 w478 w479 w47a w47b w47c w47d w47e w47f w480 w481" ID="s2b"/>
+      <tc:sentence tokenIDs="w482 w483 w484 w485 w486 w487 w488 w489 w48a w48b w48c w48d w48e w48f w490 w491 w492 w493 w494 w495 w496 w497 w498" ID="s2c"/>
+      <tc:sentence tokenIDs="w499 w49a w49b w49c w49d w49e w49f w4a0 w4a1 w4a2 w4a3 w4a4 w4a5 w4a6 w4a7 w4a8 w4a9 w4aa w4ab w4ac w4ad w4ae w4af w4b0 w4b1 w4b2 w4b3" ID="s2d"/>
+      <tc:sentence tokenIDs="w4b4 w4b5 w4b6 w4b7 w4b8 w4b9 w4ba w4bb w4bc w4bd w4be w4bf w4c0" ID="s2e"/>
+      <tc:sentence tokenIDs="w4c1 w4c2 w4c3 w4c4 w4c5 w4c6 w4c7 w4c8 w4c9 w4ca w4cb w4cc w4cd w4ce w4cf w4d0 w4d1" ID="s2f"/>
+      <tc:sentence tokenIDs="w4d2 w4d3 w4d4 w4d5 w4d6 w4d7 w4d8" ID="s30"/>
+      <tc:sentence tokenIDs="w4d9 w4da w4db w4dc w4dd w4de w4df w4e0 w4e1 w4e2 w4e3 w4e4 w4e5 w4e6 w4e7 w4e8 w4e9 w4ea w4eb w4ec w4ed w4ee w4ef w4f0 w4f1 w4f2 w4f3 w4f4 w4f5 w4f6 w4f7 w4f8 w4f9 w4fa w4fb w4fc w4fd w4fe w4ff w500 w501 w502 w503 w504 w505 w506 w507 w508 w509 w50a w50b w50c w50d w50e w50f" ID="s31"/>
+      <tc:sentence tokenIDs="w510 w511 w512 w513 w514 w515 w516 w517 w518 w519 w51a w51b w51c w51d w51e w51f w520 w521 w522 w523 w524 w525 w526 w527 w528 w529 w52a w52b w52c w52d w52e w52f w530 w531 w532 w533 w534 w535 w536 w537" ID="s32"/>
+      <tc:sentence tokenIDs="w538 w539 w53a w53b w53c w53d w53e w53f w540 w541 w542 w543 w544 w545 w546 w547 w548" ID="s33"/>
+      <tc:sentence tokenIDs="w549 w54a w54b w54c w54d w54e w54f w550 w551 w552 w553 w554 w555" ID="s34"/>
+      <tc:sentence tokenIDs="w556 w557 w558 w559 w55a w55b w55c w55d w55e w55f w560 w561 w562 w563 w564 w565 w566 w567 w568 w569" ID="s35"/>
+      <tc:sentence tokenIDs="w56a w56b w56c w56d w56e w56f w570 w571" ID="s36"/>
+      <tc:sentence tokenIDs="w572 w573 w574 w575 w576 w577 w578" ID="s37"/>
+      <tc:sentence tokenIDs="w579 w57a w57b w57c w57d w57e w57f w580 w581 w582 w583 w584 w585 w586" ID="s38"/>
+      <tc:sentence tokenIDs="w587 w588 w589 w58a w58b w58c w58d w58e w58f w590" ID="s39"/>
+      <tc:sentence tokenIDs="w591 w592 w593 w594 w595 w596 w597 w598 w599 w59a w59b w59c w59d w59e w59f w5a0 w5a1 w5a2 w5a3 w5a4 w5a5 w5a6 w5a7 w5a8 w5a9 w5aa w5ab w5ac" ID="s3a"/>
+      <tc:sentence tokenIDs="w5ad w5ae w5af w5b0 w5b1 w5b2 w5b3 w5b4 w5b5 w5b6 w5b7 w5b8" ID="s3b"/>
+      <tc:sentence tokenIDs="w5b9 w5ba w5bb w5bc w5bd w5be w5bf w5c0 w5c1 w5c2 w5c3" ID="s3c"/>
+      <tc:sentence tokenIDs="w5c4 w5c5 w5c6 w5c7 w5c8 w5c9 w5ca w5cb" ID="s3d"/>
+      <tc:sentence tokenIDs="w5cc w5cd w5ce w5cf w5d0 w5d1 w5d2 w5d3 w5d4 w5d5 w5d6 w5d7" ID="s3e"/>
+      <tc:sentence tokenIDs="w5d8 w5d9 w5da w5db w5dc w5dd w5de w5df" ID="s3f"/>
+      <tc:sentence tokenIDs="w5e0 w5e1 w5e2 w5e3 w5e4 w5e5 w5e6 w5e7 w5e8 w5e9 w5ea" ID="s40"/>
+      <tc:sentence tokenIDs="w5eb w5ec w5ed w5ee w5ef w5f0 w5f1 w5f2 w5f3 w5f4 w5f5 w5f6 w5f7 w5f8 w5f9 w5fa w5fb w5fc w5fd w5fe" ID="s41"/>
+      <tc:sentence tokenIDs="w5ff w600 w601 w602 w603 w604 w605 w606 w607 w608 w609 w60a w60b" ID="s42"/>
+      <tc:sentence tokenIDs="w60c w60d w60e w60f w610 w611 w612" ID="s43"/>
+      <tc:sentence tokenIDs="w613 w614 w615" ID="s44"/>
+      <tc:sentence tokenIDs="w616 w617 w618 w619 w61a" ID="s45"/>
+      <tc:sentence tokenIDs="w61b w61c w61d w61e w61f w620 w621 w622 w623 w624 w625 w626 w627 w628 w629 w62a" ID="s46"/>
+      <tc:sentence tokenIDs="w62b w62c w62d w62e w62f w630 w631 w632 w633 w634 w635 w636 w637 w638 w639 w63a w63b w63c w63d w63e w63f w640" ID="s47"/>
+      <tc:sentence tokenIDs="w641 w642 w643 w644 w645 w646" ID="s48"/>
+      <tc:sentence tokenIDs="w647 w648 w649 w64a w64b w64c w64d w64e w64f w650 w651 w652 w653 w654 w655 w656 w657 w658 w659 w65a w65b w65c w65d w65e w65f" ID="s49"/>
+      <tc:sentence tokenIDs="w660 w661 w662 w663 w664 w665 w666 w667 w668 w669 w66a w66b w66c w66d w66e w66f w670 w671 w672 w673 w674 w675 w676 w677 w678 w679 w67a w67b" ID="s4a"/>
+      <tc:sentence tokenIDs="w67c w67d w67e w67f w680 w681 w682 w683 w684 w685 w686 w687 w688 w689 w68a w68b w68c w68d w68e w68f w690 w691 w692 w693 w694 w695 w696 w697 w698 w699 w69a w69b w69c w69d w69e" ID="s4b"/>
+      <tc:sentence tokenIDs="w69f w6a0 w6a1 w6a2 w6a3 w6a4 w6a5 w6a6 w6a7 w6a8 w6a9 w6aa w6ab w6ac w6ad" ID="s4c"/>
+      <tc:sentence tokenIDs="w6ae w6af w6b0 w6b1 w6b2 w6b3 w6b4 w6b5 w6b6 w6b7 w6b8 w6b9 w6ba w6bb w6bc w6bd w6be w6bf w6c0 w6c1 w6c2 w6c3 w6c4 w6c5 w6c6 w6c7 w6c8" ID="s4d"/>
+      <tc:sentence tokenIDs="w6c9 w6ca w6cb w6cc w6cd w6ce w6cf w6d0 w6d1 w6d2 w6d3 w6d4 w6d5 w6d6 w6d7" ID="s4e"/>
+    </tc:sentences>
+    <tc:namedEntities xmlns:tc="http://www.dspin.de/data/textcorpus" type="tuebadz8">
+      <tc:entity class="OTH" tokenIDs="we wf"/>
+      <tc:entity class="ORG" tokenIDs="w37"/>
+      <tc:entity class="ORG" tokenIDs="w79"/>
+      <tc:entity class="ORG" tokenIDs="w92"/>
+      <tc:entity class="ORG" tokenIDs="w118 w119 w11a"/>
+      <tc:entity class="ORG" tokenIDs="w11c"/>
+      <tc:entity class="ORG" tokenIDs="w139"/>
+      <tc:entity class="ORG" tokenIDs="w13b"/>
+      <tc:entity class="ORG" tokenIDs="w145"/>
+      <tc:entity class="ORG" tokenIDs="w147"/>
+      <tc:entity class="OTH" tokenIDs="w153 w154 w155"/>
+      <tc:entity class="ORG" tokenIDs="w1a4"/>
+      <tc:entity class="PER" tokenIDs="w1d7"/>
+      <tc:entity class="ORG" tokenIDs="w206"/>
+      <tc:entity class="ORG" tokenIDs="w2a4"/>
+      <tc:entity class="OTH" tokenIDs="w2e8"/>
+      <tc:entity class="ORG" tokenIDs="w325 w326 w327"/>
+      <tc:entity class="OTH" tokenIDs="w32d w32e w32f w330 w331"/>
+      <tc:entity class="ORG" tokenIDs="w340"/>
+      <tc:entity class="ORG" tokenIDs="w34e"/>
+      <tc:entity class="ORG" tokenIDs="w356"/>
+      <tc:entity class="OTH" tokenIDs="w35c w35d w35e w35f w360 w361 w362"/>
+      <tc:entity class="ORG" tokenIDs="w366 w367 w368"/>
+      <tc:entity class="ORG" tokenIDs="w382 w383"/>
+      <tc:entity class="ORG" tokenIDs="w392"/>
+      <tc:entity class="ORG" tokenIDs="w3f6"/>
+      <tc:entity class="OTH" tokenIDs="w3f8"/>
+      <tc:entity class="LOC" tokenIDs="w434"/>
+      <tc:entity class="ORG" tokenIDs="w439"/>
+      <tc:entity class="PER" tokenIDs="w447"/>
+      <tc:entity class="OTH" tokenIDs="w455"/>
+      <tc:entity class="ORG" tokenIDs="w466"/>
+      <tc:entity class="GPE" tokenIDs="w471"/>
+      <tc:entity class="ORG" tokenIDs="w482 w483 w484"/>
+      <tc:entity class="GPE" tokenIDs="w488"/>
+      <tc:entity class="OTH" tokenIDs="w48e w48f w490"/>
+      <tc:entity class="ORG" tokenIDs="w499"/>
+      <tc:entity class="ORG" tokenIDs="w49b w49c"/>
+      <tc:entity class="ORG" tokenIDs="w49f w4a0 w4a1 w4a2"/>
+      <tc:entity class="PER" tokenIDs="w4d4"/>
+      <tc:entity class="ORG" tokenIDs="w4da"/>
+      <tc:entity class="GPE" tokenIDs="w4fc"/>
+      <tc:entity class="ORG" tokenIDs="w510"/>
+      <tc:entity class="ORG" tokenIDs="w512 w513 w514 w515 w516"/>
+      <tc:entity class="ORG" tokenIDs="w519 w51a w51b w51c w51d"/>
+      <tc:entity class="GPE" tokenIDs="w51f"/>
+      <tc:entity class="ORG" tokenIDs="w521 w522 w523 w524 w525 w526 w527 w528"/>
+      <tc:entity class="OTH" tokenIDs="w52e w52f"/>
+      <tc:entity class="PER" tokenIDs="w538"/>
+      <tc:entity class="PER" tokenIDs="w53a w53b w53c"/>
+      <tc:entity class="PER" tokenIDs="w53e"/>
+      <tc:entity class="PER" tokenIDs="w540"/>
+      <tc:entity class="PER" tokenIDs="w542"/>
+      <tc:entity class="PER" tokenIDs="w544"/>
+      <tc:entity class="PER" tokenIDs="w558"/>
+      <tc:entity class="PER" tokenIDs="w55a"/>
+      <tc:entity class="PER" tokenIDs="w55c"/>
+      <tc:entity class="PER" tokenIDs="w55e"/>
+      <tc:entity class="PER" tokenIDs="w560"/>
+      <tc:entity class="PER" tokenIDs="w562"/>
+      <tc:entity class="GPE" tokenIDs="w579"/>
+      <tc:entity class="GPE" tokenIDs="w57c"/>
+      <tc:entity class="PER" tokenIDs="w589"/>
+      <tc:entity class="PER" tokenIDs="w58b w58c"/>
+      <tc:entity class="PER" tokenIDs="w5ad"/>
+      <tc:entity class="PER" tokenIDs="w5af"/>
+      <tc:entity class="ORG" tokenIDs="w5c4 w5c5 w5c6 w5c7 w5c8 w5c9 w5ca"/>
+      <tc:entity class="ORG" tokenIDs="w5cc w5cd"/>
+      <tc:entity class="GPE" tokenIDs="w5ce"/>
+      <tc:entity class="PER" tokenIDs="w5da"/>
+      <tc:entity class="PER" tokenIDs="w5eb w5ec w5ed"/>
+      <tc:entity class="PER" tokenIDs="w5f2 w5f3"/>
+      <tc:entity class="PER" tokenIDs="w5ff"/>
+      <tc:entity class="PER" tokenIDs="w601"/>
+      <tc:entity class="GPE" tokenIDs="w616"/>
+      <tc:entity class="ORG" tokenIDs="w61e"/>
+      <tc:entity class="ORG" tokenIDs="w64a"/>
+      <tc:entity class="OTH" tokenIDs="w66c w66d w66e w66f w670 w671 w672"/>
+      <tc:entity class="OTH" tokenIDs="w681 w682"/>
+      <tc:entity class="ORG" tokenIDs="w68b"/>
+      <tc:entity class="ORG" tokenIDs="w6c5 w6c6"/>
+      <tc:entity class="ORG" tokenIDs="w6cc"/>
+      <tc:entity class="ORG" tokenIDs="w6ce"/>
+      <tc:entity class="ORG" tokenIDs="w6d3"/>
+    </tc:namedEntities>
+  </TextCorpus>
+</D-Spin>

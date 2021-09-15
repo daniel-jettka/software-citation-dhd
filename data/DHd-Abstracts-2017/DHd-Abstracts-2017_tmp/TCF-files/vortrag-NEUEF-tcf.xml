@@ -1,0 +1,2380 @@
+<?xml version='1.0' encoding='UTF-8'?><D-Spin xmlns="http://www.dspin.de/data" version="5">
+  <MetaData xmlns="http://www.dspin.de/data/metadata"><Services><cmd:CMD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cmd="http://www.clarin.eu/cmd/1" CMDVersion="1.2" xsi:schemaLocation="http://www.clarin.eu/cmd/1 http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_1320657629623/xsd"><cmd:Resources><cmd:ResourceProxyList/><cmd:JournalFileProxyList/><cmd:ResourceRelationList/></cmd:Resources><cmd:Components><cmd:WebServiceToolChain><cmd:GeneralInfo><cmd:Descriptions><cmd:Description/></cmd:Descriptions><cmd:ResourceName>Custom chain</cmd:ResourceName><cmd:ResourceClass>Toolchain</cmd:ResourceClass></cmd:GeneralInfo><cmd:Toolchain><cmd:ToolInChain><cmd:PID>https://hdl.handle.net/21.11120/0000-0008-319A-3</cmd:PID><cmd:Parameter value="de" name="lang"/></cmd:ToolInChain><cmd:ToolInChain><cmd:PID>https://hdl.handle.net/21.11120/0000-0008-3183-C</cmd:PID><cmd:Parameter value="5" name="version"/></cmd:ToolInChain><cmd:ToolInChain><cmd:PID>http://hdl.handle.net/11022/0000-0007-DA29-6</cmd:PID><cmd:Parameter value="de" name="lang"/><cmd:Parameter value="5" name="version"/></cmd:ToolInChain></cmd:Toolchain></cmd:WebServiceToolChain></cmd:Components></cmd:CMD></Services></MetaData>
+  <TextCorpus xmlns="http://www.dspin.de/data/textcorpus" lang="de">
+    <textSource type="application/tei+xml;format-variant=tei-dta;tokenized=0">&lt;?xml version="1.0" encoding="utf-8"?>
+&lt;TEI xml:id="vortrag-NEUEF" xmlns="http://www.tei-c.org/ns/1.0">
+&lt;teiHeader>
+&lt;fileDesc>
+&lt;titleStmt>
+&lt;title type="full">
+&lt;title type="main">Bild, Beschreibung, (Meta)Text&lt;/title>
+&lt;title type="sub">Automatische inhaltliche Erschließung und Annotation kunsthistorischer Daten&lt;/title>
+&lt;/title>
+&lt;author>
+&lt;persName>
+&lt;surname>Dieckmann&lt;/surname>
+&lt;forename>Lisa&lt;/forename>
+&lt;/persName>
+&lt;affiliation>Universität zu Köln, Deutschland&lt;/affiliation>
+&lt;email>lisa.dieckmann@uni-koeln.de&lt;/email>
+&lt;/author>
+&lt;author>
+&lt;persName>
+&lt;surname>Hermes&lt;/surname>
+&lt;forename>Jürgen&lt;/forename>
+&lt;/persName>
+&lt;affiliation>Universität zu Köln, Deutschland&lt;/affiliation>
+&lt;email>hermesj@uni-koeln.de&lt;/email>
+&lt;/author>
+&lt;author>
+&lt;persName>
+&lt;surname>Neuefeind&lt;/surname>
+&lt;forename>Claes&lt;/forename>
+&lt;/persName>
+&lt;affiliation>Universität zu Köln, Deutschland&lt;/affiliation>
+&lt;email>c.neuefeind@uni-koeln.de&lt;/email>
+&lt;/author>
+&lt;/titleStmt>
+&lt;editionStmt>
+&lt;edition>
+&lt;date>2016-12-05T14:20:41&lt;/date>
+&lt;/edition>
+&lt;/editionStmt>
+&lt;publicationStmt>
+&lt;publisher>Prof. Dr. Michael Stolz&lt;/publisher>
+&lt;address>
+&lt;addrLine>UniversitÃ¤t Bern&lt;/addrLine>
+&lt;addrLine>Institut fÃ¼r Germanistik&lt;/addrLine>
+&lt;addrLine>Laenggass-Str. 49&lt;/addrLine>
+&lt;addrLine>CH-3000 Bern 9&lt;/addrLine>
+&lt;/address>
+&lt;/publicationStmt>
+&lt;sourceDesc>
+&lt;p>Converted from an OASIS Open Document&lt;/p>
+&lt;/sourceDesc>
+&lt;/fileDesc>
+&lt;encodingDesc>
+&lt;appInfo>
+&lt;application ident="DHCONVALIDATOR" version="1.17">
+&lt;label>DHConvalidator&lt;/label>
+&lt;/application>
+&lt;/appInfo>
+&lt;/encodingDesc>
+&lt;profileDesc>
+&lt;textClass>
+&lt;keywords n="category" scheme="ConfTool">
+&lt;term>Vortrag&lt;/term>
+&lt;/keywords>
+&lt;keywords n="subcategory" scheme="ConfTool">
+&lt;term/>
+&lt;/keywords>
+&lt;keywords n="keywords" scheme="ConfTool">
+&lt;term>Bilddatenbanken&lt;/term>
+&lt;term>Informationsextraktion&lt;/term>
+&lt;term>Annotation&lt;/term>
+&lt;/keywords>
+&lt;keywords n="topics" scheme="ConfTool">
+&lt;term>Programmierung&lt;/term>
+&lt;term>Inhaltsanalyse&lt;/term>
+&lt;term>Strukturanalyse&lt;/term>
+&lt;term>Annotieren&lt;/term>
+&lt;term>Organisation&lt;/term>
+&lt;term>Artefakte&lt;/term>
+&lt;term>Daten&lt;/term>
+&lt;term>Bilder&lt;/term>
+&lt;term>Metadaten&lt;/term>
+&lt;term>Text&lt;/term>
+&lt;/keywords>
+&lt;/textClass>
+&lt;/profileDesc>
+&lt;/teiHeader>
+&lt;text>
+&lt;body>
+&lt;p>Der Vortrag thematisiert die automatische inhaltliche Erschließung und linguistische Annotation der digitalen Repräsentationen  kunst- und kulturhistorischer Artefakte innerhalb des prometheus Bildarchivs (
+                &lt;ref target="http://prometheus-bildarchiv.de/">http://prometheus-bildarchiv.de&lt;/ref>), das derzeit 89 Datenbanken aus Museen und Forschungsinstitutionen mit insgesamt über 1,5 Mio. Datensätzen zusammenführt (Dieckmann 2015). Das durch eine bereits abgeschlossene Vorstudie initiierte Projekt verfolgt zwei unterschiedliche, teilweise aufeinander aufbauende Ansätze: Zum einen die Annotation von Freitexten zur strukturierten Erschließung kunsthistorischer Daten, zum anderen die Analyse der Identität von Datensätzen über die Berechnung gradueller Ähnlichkeiten von Objekten. Beide Ansätze dienen erstens einer Verbesserung des Retrievals, zweitens einer nachhaltigen Sicherung der Daten durch die Verknüpfung mit Normdaten; drittens sollen die zusätzlich erschlossenen Informationen längerfristig als Grundlage für weiterführende (fachspezifische) Fragestellungen eingesetzt werden, etwa zur Rekonstruktion von Künstlergruppen durch die Erstellung von Personen-Netzwerken. Das Projekt wird an der Universität zu Köln in enger Zusammenarbeit zwischen Fachwissenschaftlern der Kunstgeschichte und der Sprachlichen Informationsverarbeitung (
+                &lt;ptr target="http://www.spinfo.phil-fak.uni-koeln.de/"/>) durchgeführt, deren Schwerpunkte u.a. auf Systemen zur syntaktischen und semantischen Analyse und Verarbeitung textueller Daten (Hermes 2012, Schwiebert 2012) sowie zur Annotation nicht-standardisierter Daten (Neuefeind 2013) liegen.
+            &lt;/p>
+&lt;div rend="DH-Heading" type="div1">
+&lt;head>Metadaten und Referenzobjekte&lt;/head>
+&lt;p>Die digitalen Repräsentationen der in prometheus zusammengeführten kunst- und kulturhistorischen Artefakte stellen insofern eine besondere Herausforderung für die automatisierte Erschließung inhaltlicher Informationen dar, als dass die Metadaten und Texte strukturell und inhaltlich sehr heterogen und in unterschiedlichen Kontexten vorliegen. Die Datensätze der einzelnen Bilddatenbanken sind zwar stets in ein eigenes Metadatenschema eingepasst, jedoch erfolgt die Erschließung der Werke an den jeweiligen Institutionen nicht nach einer einheitlichen Methodik, was u.a. datenbank- oder sammlungsspezifische Gründe hat. Zum einen liegt innerhalb der Klassifikationen der jeweiligen Datenbanken eine Vielzahl an Texten vor, die bislang nicht strukturiert erschlossen sind, sondern derzeit nur über eine einfache Volltextsuche miteinbezogen werden (es handelt sich hierbei oftmals um unstrukturierte Freitextfelder, die z.B. Angaben über Standort(e), die Publikationsgeschichte oder ausführliche Bildbeschreibungen enthalten können). Zum anderen wird selten ein bestimmter Metadatenstandard zugrunde gelegt oder auf Fachvokabulare und Terminologieressourcen zurückgegriffen, was dazu führt, dass zum Teil stark variierende Schreibweisen u.a. bei Künstler- oder Ortsnamen existieren. In der kunsthistorischen Forschung haben sich zudem selten einheitliche Bezeichnungen für Werktitel durchgesetzt. So liegt bspw. das Werk “Bonaparte überquert den großen Sankt Bernhard” von Jacques-Louis David (Malmaison, 1801) in prometheus in mindestens sieben verschiedenen Titelbezeichnungen vor, die zumeist in Teilen, unter Umständen aber auch vollständig voneinander abweichen (etwa “Napoleon überquert die Alpen” gegenüber “Bonaparte auf dem großen Sankt Bernhard”). Eine Verknüpfung mit Normdaten wie der Gemeinsamen Normdatei der Deutschen Nationalbibliothek (GND,
+                    &lt;ref target="http://d-nb.info/gnd/1067141367">
+&lt;/ref>
+&lt;ptr target="http://d-nb.info/gnd/1067141367"/>) ist auf dieser Grundlage nicht möglich. Diese wäre aber nötig, um eine automatische Zusammenführung der Einzelabbildungen zu Objekten vornehmen und die Objekte eindeutig und damit nachhaltig identifizieren zu können, was zugleich die Grundlage für eine weitere Anreicherung mit GND-verknüpften Daten oder weiteren Normdaten (z.B. VIAF, 
+                    &lt;ref target="http://viaf.org/">http://viaf.org&lt;/ref>; Wikidata, 
+                    &lt;ref target="https://www.wikidata.org/">
+&lt;hi rend="color(#1155cc)">https://www.wikidata.org&lt;/hi>
+&lt;/ref>) bilden würde. 
+                &lt;/p>
+&lt;/div>
+&lt;div rend="DH-Heading" type="div1">
+&lt;head>Methodologie&lt;/head>
+&lt;p>Die Heterogenität der Daten wird in prometheus bereits teilweise in Anwendung linguistischer Analyseverfahren bei der Indexierung ausgeglichen, wobei der Schwerpunkt hier v.a. auf der orthographischen und morphosyntaktischen Ebene liegt, etwa auf Grundlage sprachspezifischer Wörterbücher (u.a. zur Grundformreduzierung, Phrasenerkennung, Synonymgenerierung, Kompositazerlegung) sowie durch Anreicherung mit synonymen Künstlernamen (siehe 
+                    &lt;ptr target="http://prometheus-bildarchiv.de/tools/pkn"/>d). Diese Maßnahmen dienen in erster Linie dazu, das Retrieval zu optimieren und den Recall zu verbessern. In Bezug auf die oben aufgeworfenen Probleme der Normalisierung und Zuordnung von Einzeldarstellungen zu Objekten sind sie jedoch nur als ein erster Schritt anzusehen. Ziel ist vielmehr ein erweiterter Thesaurus, in dem die tatsächlich auftretenden, zum Teil stark variierenden Schreibweisen von Werktiteln und Künstlernamen auf die verfügbaren Normdaten abgebildet werden. Da die Variation in den Schreibweisen keine eindeutige Zuordnung erlaubt, bedarf es hierbei zusätzlicher Kriterien. Im Zuge des Projekts wird hierfür ein semantisch motiviertes Verfahren erarbeitet, das die gesamten zu einem Objekt verfügbaren Informationen berücksichtigt: Neben den bereits erschlossenen Metainformationen (wie Name, Titel, Datierung, Standort, etc.) sollen auch die in den bislang nur unstrukturiert vorliegenden Freitextfeldern (s.o.) enthaltenen Informationen genutzt werden können. Zu diesem Zweck werden die Texte zunächst mittels Informationsextraktion aufbereitet (Annotation von Orts- und Personennamen, Zeitausdrücken, etc). Auf Grundlage dieser neu gewonnenen Informationen werden zusätzliche, das Objekt beschreibende Merkmale erstellt und in Form von Feature-Vektoren kodiert (Features sind z.B. „Personen“, „Orte“, „Material“, o.ä.; Werte sind jeweils die konkreten Nennungen, vgl. Abb. 1).
+                &lt;/p>
+&lt;p>
+&lt;figure>
+&lt;graphic url="vortrag-NEUEF-image1.png"/>
+&lt;/figure>Abb. 1: Beispiel einer Freitextbeschreibung im prometheus-Bildarchiv, in der exemplarisch mittels Informationsextraktion identifizierte Elemente markiert wurden.
+                &lt;/p>
+&lt;p>Aus den zusätzlichen Merkmalen kann nun, in Kombination mit den bereits vorhandenen Metainformationen, für jedes Objekt ein „semantisches Profil“ bzw. „Fingerprint“ erstellt werden, anhand dessen sich die Ähnlichkeit zwischen Objekten ermitteln lässt. Die Ähnlichkeit wird dabei zunächst in Bezug auf die einzelnen Merkmale ermittelt (u.a. mittels Edit-Distance oder Soundex- bzw. Metaphone-Difference zwischen einzelnen Feldern, Abgleich zeitlicher Angaben, Distanz zwischen Feature-Vektoren zu „Personen“, „Orten“, „Material“, etc.), wobei der Einfluss einzelner Merkmale unterschiedlich gewichtet werden kann. Daraus wird ein kombiniertes Maß der Übereinstimmung zwischen zwei Datensätzen errechnet, das auch bei deutlich abweichenden Schreibweisen eine Aussage darüber erlaubt, ob es sich um das gleiche Objekt handelt. Auf dieser Grundlage können identische Objekte dann auf das jeweilige Referenzobjekt der GND abgebildet werden.&lt;/p>
+&lt;p>In einem vorbereitenden Projekt für das laufende Vorhaben wurden zunächst die bestehenden Metadaten der einzelnen Datenbanken des prometheus-Bildarchivs quantitativ ausgewertet, um einen Überblick darüber zu erlangen, wie sich der Umfang der zu erschließenden Daten darstellt. Die meisten der 89 Datenbanken verfügen über noch nicht erschlossene Freitextbeschreibungen der Objekte. Diese erstrecken sich zu einem nicht geringen Teil über mittellange (25-75 Wörter) und lange (&amp;gt;75 Wörter) Texte, die im Zuge des Projekts aufbereitet werden sollen. Abb. 2 zeigt die Verteilung dieser unterschiedlichen Textsorten in ausgewählten Datenbanken. Einige verfügen über keinerlei Freitext-Bildbeschreibungen, z.B. die Datenbank des 
+                    &lt;hi rend="italic">Zentralarchivs für Kunstgeschichte &lt;/hi>in München (zi_muc). Andere, etwa die Erlanger Datenbank 
+                    &lt;hi rend="italic">Zeichnungen der graphischen Sammlung&lt;/hi> (erlangen_z), weisen fast ausschließlich kurze Beschreibungen auf, wieder andere enthalten dagegen auch eine Reihe mittellanger und langer Texte.
+                &lt;/p>
+&lt;p>
+&lt;figure>
+&lt;graphic url="vortrag-NEUEF-image2.png"/>
+&lt;/figure>Abb. 2: Verteilung der Freitextlängen über verschiedene Datenbanken des prometheus-Bildarchivs
+                &lt;/p>
+&lt;p>Zur Nutzung der in den Bildbeschreibungen und Ikonographien enthaltenen Informationen müssen diese zunächst identifiziert und entsprechend ausgezeichnet werden. Dafür wurde zunächst ein Komponenten-Workflow konzipiert und auf Basis des UIMA-Frameworks (Unstructured Information Management Architecture, siehe 
+                    &lt;ref target="https://uima.apache.org/">
+&lt;hi rend="color(#1155cc)">https://uima.apache.org&lt;/hi>
+&lt;/ref>) implementiert. Im Zuge der Verarbeitung werden die zu annotierenden Informationen in ausgewählten Feldern der Datensätze identifiziert (vgl. Abb. 3). Dabei kommen Standardmethoden der Informationsextraktion (z.B. Temporal Expression Detection, Named Entity Recognition) genauso zum Einsatz wie informationstheoretische Maße (etwa Log-Likelihood oder tf.idf), um domänenspezifisch relevante Terme zu bestimmen.
+                &lt;/p>
+&lt;p>
+&lt;figure>
+&lt;graphic url="vortrag-NEUEF-image3.png"/>
+&lt;/figure>Abb. 3: Workflow zur Informationsextraktion in Freitexten im prometheus-Bildarchiv.
+                &lt;/p>
+&lt;p>Die erste Projektphase diente vor allem der Evaluierung von Werkzeugen, etwa dem Stanford Named Entity Tagger (siehe 
+                    &lt;ptr target="http://nlp.stanford.edu/software/CRF-NER.shtml"/>) zur Identifikation von (Orts-)Namen, oder HeidelTime (siehe 
+                    &lt;ptr target="http://dbs.ifi.uni-heidelberg.de/index.php?id=129"/>) zur Annotation von Zeitausdrücken, um den voraussichtlichen Bedarf an Anpassungen der Werkzeuge für die kunsthistorische Domäne zu ermitteln. Abb. 4 zeigt das Ergebnis der StanfordNER-Komponente, die in einem Text der Datenbank “The Daumier Register” (
+                    &lt;ptr target="http://www.daumier-register.org/"/>) Eigennamen auszeichnet: Künstlernamen (“Henry Monnier”), Werktitel (“Séraphita”), Werkstoffe (“China-Papier”), sowie Ortsnamen (“Sevilla”) werden mit verschiedenen Tags (I-PERS, I-MISC, I-LOC) gekennzeichnet. Wie sich zeigt, werden jedoch nicht alle Eigennamen aufgefunden (etwa “Balzac, Honoré de”), was v.a. darauf zurückzuführen ist, dass hier zunächst nur das für das Deutsche verfügbar NER-Modell zum Einsatz kam. In der weiteren Projektlaufzeit muss die Erkennungsrate durch eine Erweiterung und Modifikation der vorhandenen Modelle verbessert werden, damit die Daten möglichst präzise und vollständig auswerten werden können.
+                &lt;/p>
+&lt;p>
+&lt;figure>
+&lt;graphic url="vortrag-NEUEF-image4.png"/>
+&lt;/figure>Abb. 4: Exemplarisches Ergebnis der Anwendung eines verfügbaren Standard-Modells zur Named Entity Recognition.
+                &lt;/p>
+&lt;/div>
+&lt;div rend="DH-Heading" type="div1">
+&lt;head>Zusammenfassung und Ausblick&lt;/head>
+&lt;p>Das beschriebene Vorgehen wird derzeit exemplarisch an ausgewählten Datensätzen entwickelt, um anschließend auf den gesamten Bildpool des prometheus-Bildarchivs angewendet zu werden. Ein wesentliches Ziel des Projekts ist es, eine größtmögliche Automatisierung in der Thesauruserstellung zu erreichen. Das hierfür vorgesehene kombinierte Ähnlichkeitsmaß ist flexibel erweiterbar. So können zum einen zusätzliche Informationen aus externen Quellen herangezogen werden, etwa indem weitere, digital vorliegende kunsthistorische Texte (z.B. das Reallexikon zur Deutschen Kunstgeschichte, RDK, siehe 
+                    &lt;ref target="http://www.rdklabor.de/">
+&lt;hi rend="color(#1155cc)">http://www.rdklabor.de&lt;/hi>
+&lt;/ref>), Ausstellungs- und Auktionskataloge (z.B. Getty Art and Architecture, siehe 
+                    &lt;ptr target="http://www.getty.edu/research/tools/vocabularies/aat/"/>, UB Heidelberg 
+                    &lt;ref target="http://artsales.uni-hd.de/">
+&lt;hi rend="color(#1155cc)">http://artsales.uni-hd.de&lt;/hi>
+&lt;/ref>) oder auch Wikipedia analysiert und klassifiziert werden und mittels des erstellten Thesaurus mit den Datensätzen in prometheus verknüpft werden. Zum anderen soll das Ähnlichkeitsmaß auch durch komplementäre (z.B. optische) Verfahren des Bildvergleichs erweitert werden. So wurde bspw. zusammen mit der Computer Vision Group Heidelberg bereits ein Projekt zur automatischen Bilderkennung angestoßen (siehe Bell/Dieckmann 2015). Durch die Kombination verschiedener Methoden der Ähnlichkeitsberechnung zu einem gemeinsamen, multidimensionalen Ähnlichkeitsmaß ist der hier vorgeschlagene Ansatz in hohem Maße adaptierbar für vergleichbare Anwendungen. Die im Projekt erarbeitete Vorgehensweise ist somit auf weitere Metadatenpools kulturhistorischer Inhalte übertragbar und dank der Automatisierung beliebig skalierbar.
+                &lt;/p>
+&lt;/div>
+&lt;/body>
+&lt;back>
+&lt;div type="bibliogr">
+&lt;listBibl>
+&lt;head>Bibliographie&lt;/head>
+&lt;bibl>
+&lt;hi rend="bold">Bell, Peter / Dieckmann, Lisa&lt;/hi> (2015): 
+                        „Die Kunst als Ganzes. Heterogene Bilddatensätze als Herausforderung für die Kunstgeschichte und die Computer Vision“, 
+                        in: 
+                        &lt;hi rend="italic">DHd 2016: Modellierung - Vernetzung - Visualisierung&lt;/hi>
+&lt;ptr target="http://dhd2016.de/boa.pdf#118"/> [letzter Zugriff 23.11.2016].
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Bell, Peter / Dieckmann, Lisa / Ommer, Björn / Takami, Masato&lt;/hi> (2015): 
+                        &lt;hi rend="italic">Passion Search. Prototype of an unrestricted image search of the crucifixion&lt;/hi>. 
+                        &lt;ptr target="http://hci.iwr.uni-heidelberg.de/COMPVIS/projects/suchpassion/"/> [letzter Zugriff 23.11.2016]
+                    &lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Dieckmann, Lisa&lt;/hi> (2015): 
+                        „prometheus – das verteilte digitale Bildarchiv für Forschung &amp;amp; Lehre e. V.“, 
+                        in: Euler, Ellen / Hagedorn-Saupe, Monika/ Maier, Gerald/ Schweibenz, Werner/ Sieglerschmidt, Jörn (eds.): 
+&lt;hi rend="italic">Handbuch Kulturportale. Online-Angebote aus Kultur und Wissenschaft&lt;/hi>. 
+                        Berlin / Boston: DeGruyter 223–229.
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Hermes, Jürgen&lt;/hi> (2012): 
+                        &lt;hi rend="italic">Textprozessierung: Design und Applikation&lt;/hi>.
+                        Dissertation, Universität zu Köln. 
+&lt;ptr target="http://kups.ub.uni-koeln.de/id/eprint/4561"/> [letzter Zugriff 23. November 2016].
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Neuefeind, Claes&lt;/hi> (2013): 
+                        „The Digital Romansh Chrestomathy. Towards an Annotated Corpus of Romansh“, 
+                        in: Zampieri, Marcos / Diwersy, Sascha (eds.), 
+                        &lt;hi rend="italic">Special Volume on Non-Standard Data Sources in Corpus-Based Research&lt;/hi> (ZSM Studien 5). 
+                        Aachen: Shaker 41–58.
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Schwiebert, Stephan&lt;/hi> (2012): 
+                        &lt;hi rend="italic">Tesla - ein virtuelles Labor für experimentelle Computer- und Korpuslinguistik&lt;/hi>.
+                        Dissertation, Universität zu Köln. 
+&lt;ptr target="http://kups.ub.uni-koeln.de/id/eprint/4571"/> [letzter Zugriff 23. November 2016].
+&lt;/bibl>
+&lt;/listBibl>
+&lt;/div>
+&lt;/back>
+&lt;/text>
+&lt;/TEI></textSource>
+    <text>
+
+  
+
+
+
+
+
+Der Vortrag thematisiert die automatische inhaltliche Erschließung und linguistische Annotation der digitalen Repräsentationen  kunst- und kulturhistorischer Artefakte innerhalb des prometheus Bildarchivs (  
+http://prometheus-bildarchiv.de
+), das derzeit 89 Datenbanken aus Museen und Forschungsinstitutionen mit insgesamt über 1,5 Mio. Datensätzen zusammenführt (Dieckmann 2015). Das durch eine bereits abgeschlossene Vorstudie initiierte Projekt verfolgt zwei unterschiedliche, teilweise aufeinander aufbauende Ansätze: Zum einen die Annotation von Freitexten zur strukturierten Erschließung kunsthistorischer Daten, zum anderen die Analyse der Identität von Datensätzen über die Berechnung gradueller Ähnlichkeiten von Objekten. Beide Ansätze dienen erstens einer Verbesserung des Retrievals, zweitens einer nachhaltigen Sicherung der Daten durch die Verknüpfung mit Normdaten; drittens sollen die zusätzlich erschlossenen Informationen längerfristig als Grundlage für weiterführende (fachspezifische) Fragestellungen eingesetzt werden, etwa zur Rekonstruktion von Künstlergruppen durch die Erstellung von Personen-Netzwerken. Das Projekt wird an der Universität zu Köln in enger Zusammenarbeit zwischen Fachwissenschaftlern der Kunstgeschichte und der Sprachlichen Informationsverarbeitung (  ) durchgeführt, deren Schwerpunkte u.a. auf Systemen zur syntaktischen und semantischen Analyse und Verarbeitung textueller Daten (Hermes 2012, Schwiebert 2012) sowie zur Annotation nicht-standardisierter Daten (Neuefeind 2013) liegen.  
+
+
+Die digitalen Repräsentationen der in prometheus zusammengeführten kunst- und kulturhistorischen Artefakte stellen insofern eine besondere Herausforderung für die automatisierte Erschließung inhaltlicher Informationen dar, als dass die Metadaten und Texte strukturell und inhaltlich sehr heterogen und in unterschiedlichen Kontexten vorliegen. Die Datensätze der einzelnen Bilddatenbanken sind zwar stets in ein eigenes Metadatenschema eingepasst, jedoch erfolgt die Erschließung der Werke an den jeweiligen Institutionen nicht nach einer einheitlichen Methodik, was u.a. datenbank- oder sammlungsspezifische Gründe hat. Zum einen liegt innerhalb der Klassifikationen der jeweiligen Datenbanken eine Vielzahl an Texten vor, die bislang nicht strukturiert erschlossen sind, sondern derzeit nur über eine einfache Volltextsuche miteinbezogen werden (es handelt sich hierbei oftmals um unstrukturierte Freitextfelder, die z.B. Angaben über Standort(e), die Publikationsgeschichte oder ausführliche Bildbeschreibungen enthalten können). Zum anderen wird selten ein bestimmter Metadatenstandard zugrunde gelegt oder auf Fachvokabulare und Terminologieressourcen zurückgegriffen, was dazu führt, dass zum Teil stark variierende Schreibweisen u.a. bei Künstler- oder Ortsnamen existieren. In der kunsthistorischen Forschung haben sich zudem selten einheitliche Bezeichnungen für Werktitel durchgesetzt. So liegt bspw. das Werk “Bonaparte überquert den großen Sankt Bernhard” von Jacques-Louis David (Malmaison, 1801) in prometheus in mindestens sieben verschiedenen Titelbezeichnungen vor, die zumeist in Teilen, unter Umständen aber auch vollständig voneinander abweichen (etwa “Napoleon überquert die Alpen” gegenüber “Bonaparte auf dem großen Sankt Bernhard”). Eine Verknüpfung mit Normdaten wie der Gemeinsamen Normdatei der Deutschen Nationalbibliothek (GND,  
+ 
+ ) ist auf dieser Grundlage nicht möglich. Diese wäre aber nötig, um eine automatische Zusammenführung der Einzelabbildungen zu Objekten vornehmen und die Objekte eindeutig und damit nachhaltig identifizieren zu können, was zugleich die Grundlage für eine weitere Anreicherung mit GND-verknüpften Daten oder weiteren Normdaten (z.B. VIAF,   
+http://viaf.org
+; Wikidata,   
+ https://www.wikidata.org 
+) bilden würde.   
+
+ 
+
+
+Die Heterogenität der Daten wird in prometheus bereits teilweise in Anwendung linguistischer Analyseverfahren bei der Indexierung ausgeglichen, wobei der Schwerpunkt hier v.a. auf der orthographischen und morphosyntaktischen Ebene liegt, etwa auf Grundlage sprachspezifischer Wörterbücher (u.a. zur Grundformreduzierung, Phrasenerkennung, Synonymgenerierung, Kompositazerlegung) sowie durch Anreicherung mit synonymen Künstlernamen (siehe   d). Diese Maßnahmen dienen in erster Linie dazu, das Retrieval zu optimieren und den Recall zu verbessern. In Bezug auf die oben aufgeworfenen Probleme der Normalisierung und Zuordnung von Einzeldarstellungen zu Objekten sind sie jedoch nur als ein erster Schritt anzusehen. Ziel ist vielmehr ein erweiterter Thesaurus, in dem die tatsächlich auftretenden, zum Teil stark variierenden Schreibweisen von Werktiteln und Künstlernamen auf die verfügbaren Normdaten abgebildet werden. Da die Variation in den Schreibweisen keine eindeutige Zuordnung erlaubt, bedarf es hierbei zusätzlicher Kriterien. Im Zuge des Projekts wird hierfür ein semantisch motiviertes Verfahren erarbeitet, das die gesamten zu einem Objekt verfügbaren Informationen berücksichtigt: Neben den bereits erschlossenen Metainformationen (wie Name, Titel, Datierung, Standort, etc.) sollen auch die in den bislang nur unstrukturiert vorliegenden Freitextfeldern (s.o.) enthaltenen Informationen genutzt werden können. Zu diesem Zweck werden die Texte zunächst mittels Informationsextraktion aufbereitet (Annotation von Orts- und Personennamen, Zeitausdrücken, etc). Auf Grundlage dieser neu gewonnenen Informationen werden zusätzliche, das Objekt beschreibende Merkmale erstellt und in Form von Feature-Vektoren kodiert (Features sind z.B. „Personen“, „Orte“, „Material“, o.ä.; Werte sind jeweils die konkreten Nennungen, vgl. Abb. 1).  
+
+ 
+
+ Abb. 1: Beispiel einer Freitextbeschreibung im prometheus-Bildarchiv, in der exemplarisch mittels Informationsextraktion identifizierte Elemente markiert wurden.  
+
+ 
+
+Aus den zusätzlichen Merkmalen kann nun, in Kombination mit den bereits vorhandenen Metainformationen, für jedes Objekt ein „semantisches Profil“ bzw. „Fingerprint“ erstellt werden, anhand dessen sich die Ähnlichkeit zwischen Objekten ermitteln lässt. Die Ähnlichkeit wird dabei zunächst in Bezug auf die einzelnen Merkmale ermittelt (u.a. mittels Edit-Distance oder Soundex- bzw. Metaphone-Difference zwischen einzelnen Feldern, Abgleich zeitlicher Angaben, Distanz zwischen Feature-Vektoren zu „Personen“, „Orten“, „Material“, etc.), wobei der Einfluss einzelner Merkmale unterschiedlich gewichtet werden kann. Daraus wird ein kombiniertes Maß der Übereinstimmung zwischen zwei Datensätzen errechnet, das auch bei deutlich abweichenden Schreibweisen eine Aussage darüber erlaubt, ob es sich um das gleiche Objekt handelt. Auf dieser Grundlage können identische Objekte dann auf das jeweilige Referenzobjekt der GND abgebildet werden.
+
+ 
+
+In einem vorbereitenden Projekt für das laufende Vorhaben wurden zunächst die bestehenden Metadaten der einzelnen Datenbanken des prometheus-Bildarchivs quantitativ ausgewertet, um einen Überblick darüber zu erlangen, wie sich der Umfang der zu erschließenden Daten darstellt. Die meisten der 89 Datenbanken verfügen über noch nicht erschlossene Freitextbeschreibungen der Objekte. Diese erstrecken sich zu einem nicht geringen Teil über mittellange (25-75 Wörter) und lange (>75 Wörter) Texte, die im Zuge des Projekts aufbereitet werden sollen. Abb. 2 zeigt die Verteilung dieser unterschiedlichen Textsorten in ausgewählten Datenbanken. Einige verfügen über keinerlei Freitext-Bildbeschreibungen, z.B. die Datenbank des   Zentralarchivs für Kunstgeschichte in München (zi_muc). Andere, etwa die Erlanger Datenbank   Zeichnungen der graphischen Sammlung (erlangen_z), weisen fast ausschließlich kurze Beschreibungen auf, wieder andere enthalten dagegen auch eine Reihe mittellanger und langer Texte.  
+
+ 
+
+ Abb. 2: Verteilung der Freitextlängen über verschiedene Datenbanken des prometheus-Bildarchivs  
+
+ 
+
+Zur Nutzung der in den Bildbeschreibungen und Ikonographien enthaltenen Informationen müssen diese zunächst identifiziert und entsprechend ausgezeichnet werden. Dafür wurde zunächst ein Komponenten-Workflow konzipiert und auf Basis des UIMA-Frameworks (Unstructured Information Management Architecture, siehe   
+ https://uima.apache.org 
+) implementiert. Im Zuge der Verarbeitung werden die zu annotierenden Informationen in ausgewählten Feldern der Datensätze identifiziert (vgl. Abb. 3). Dabei kommen Standardmethoden der Informationsextraktion (z.B. Temporal Expression Detection, Named Entity Recognition) genauso zum Einsatz wie informationstheoretische Maße (etwa Log-Likelihood oder tf.idf), um domänenspezifisch relevante Terme zu bestimmen.  
+
+ 
+
+ Abb. 3: Workflow zur Informationsextraktion in Freitexten im prometheus-Bildarchiv.  
+
+ 
+
+Die erste Projektphase diente vor allem der Evaluierung von Werkzeugen, etwa dem Stanford Named Entity Tagger (siehe   ) zur Identifikation von (Orts-)Namen, oder HeidelTime (siehe   ) zur Annotation von Zeitausdrücken, um den voraussichtlichen Bedarf an Anpassungen der Werkzeuge für die kunsthistorische Domäne zu ermitteln. Abb. 4 zeigt das Ergebnis der StanfordNER-Komponente, die in einem Text der Datenbank “The Daumier Register” (  ) Eigennamen auszeichnet: Künstlernamen (“Henry Monnier”), Werktitel (“Séraphita”), Werkstoffe (“China-Papier”), sowie Ortsnamen (“Sevilla”) werden mit verschiedenen Tags (I-PERS, I-MISC, I-LOC) gekennzeichnet. Wie sich zeigt, werden jedoch nicht alle Eigennamen aufgefunden (etwa “Balzac, Honoré de”), was v.a. darauf zurückzuführen ist, dass hier zunächst nur das für das Deutsche verfügbar NER-Modell zum Einsatz kam. In der weiteren Projektlaufzeit muss die Erkennungsrate durch eine Erweiterung und Modifikation der vorhandenen Modelle verbessert werden, damit die Daten möglichst präzise und vollständig auswerten werden können.  
+
+ 
+
+ Abb. 4: Exemplarisches Ergebnis der Anwendung eines verfügbaren Standard-Modells zur Named Entity Recognition.  
+
+ 
+
+
+Das beschriebene Vorgehen wird derzeit exemplarisch an ausgewählten Datensätzen entwickelt, um anschließend auf den gesamten Bildpool des prometheus-Bildarchivs angewendet zu werden. Ein wesentliches Ziel des Projekts ist es, eine größtmögliche Automatisierung in der Thesauruserstellung zu erreichen. Das hierfür vorgesehene kombinierte Ähnlichkeitsmaß ist flexibel erweiterbar. So können zum einen zusätzliche Informationen aus externen Quellen herangezogen werden, etwa indem weitere, digital vorliegende kunsthistorische Texte (z.B. das Reallexikon zur Deutschen Kunstgeschichte, RDK, siehe   
+ http://www.rdklabor.de 
+), Ausstellungs- und Auktionskataloge (z.B. Getty Art and Architecture, siehe   , UB Heidelberg   
+ http://artsales.uni-hd.de 
+) oder auch Wikipedia analysiert und klassifiziert werden und mittels des erstellten Thesaurus mit den Datensätzen in prometheus verknüpft werden. Zum anderen soll das Ähnlichkeitsmaß auch durch komplementäre (z.B. optische) Verfahren des Bildvergleichs erweitert werden. So wurde bspw. zusammen mit der Computer Vision Group Heidelberg bereits ein Projekt zur automatischen Bilderkennung angestoßen (siehe Bell/Dieckmann 2015). Durch die Kombination verschiedener Methoden der Ähnlichkeitsberechnung zu einem gemeinsamen, multidimensionalen Ähnlichkeitsmaß ist der hier vorgeschlagene Ansatz in hohem Maße adaptierbar für vergleichbare Anwendungen. Die im Projekt erarbeitete Vorgehensweise ist somit auf weitere Metadatenpools kulturhistorischer Inhalte übertragbar und dank der Automatisierung beliebig skalierbar.  
+
+ 
+
+ 
+
+
+
+Metadaten und Referenzobjekte
+
+
+
+Methodologie
+
+
+
+  
+
+
+
+
+  
+
+
+
+Zusammenfassung und Ausblick
+
+
+
+ 
+
+    Bell, Peter / Dieckmann, Lisa (2015):                          „Die Kunst als Ganzes. Heterogene Bilddatensätze als Herausforderung für die Kunstgeschichte und die Computer Vision“,                          in:   DHd 2016: Modellierung - Vernetzung - Visualisierung  [letzter Zugriff 23.11.2016].    Bell, Peter / Dieckmann, Lisa / Ommer, Björn / Takami, Masato (2015):    Passion Search. Prototype of an unrestricted image search of the crucifixion.    [letzter Zugriff 23.11.2016]    Dieckmann, Lisa (2015):                          „prometheus – das verteilte digitale Bildarchiv für Forschung &amp; Lehre e. V.“,                          in: Euler, Ellen / Hagedorn-Saupe, Monika/ Maier, Gerald/ Schweibenz, Werner/ Sieglerschmidt, Jörn (eds.):   Handbuch Kulturportale. Online-Angebote aus Kultur und Wissenschaft.                          Berlin / Boston: DeGruyter 223–229.    Hermes, Jürgen (2012):   Textprozessierung: Design und Applikation.                         Dissertation, Universität zu Köln.    [letzter Zugriff 23. November 2016].    Neuefeind, Claes (2013):                          „The Digital Romansh Chrestomathy. Towards an Annotated Corpus of Romansh“,                          in: Zampieri, Marcos / Diwersy, Sascha (eds.),   Special Volume on Non-Standard Data Sources in Corpus-Based Research (ZSM Studien 5).                          Aachen: Shaker 41–58.    Schwiebert, Stephan (2012):   Tesla - ein virtuelles Labor für experimentelle Computer- und Korpuslinguistik.                         Dissertation, Universität zu Köln.    [letzter Zugriff 23. November 2016].    
+
+ 
+
+
+
+Bibliographie
+
+</text>
+    <tc:tokens xmlns:tc="http://www.dspin.de/data/textcorpus">
+      <tc:token ID="w1">Der</tc:token>
+      <tc:token ID="w2">Vortrag</tc:token>
+      <tc:token ID="w3">thematisiert</tc:token>
+      <tc:token ID="w4">die</tc:token>
+      <tc:token ID="w5">automatische</tc:token>
+      <tc:token ID="w6">inhaltliche</tc:token>
+      <tc:token ID="w7">Erschließung</tc:token>
+      <tc:token ID="w8">und</tc:token>
+      <tc:token ID="w9">linguistische</tc:token>
+      <tc:token ID="wa">Annotation</tc:token>
+      <tc:token ID="wb">der</tc:token>
+      <tc:token ID="wc">digitalen</tc:token>
+      <tc:token ID="wd">Repräsentationen</tc:token>
+      <tc:token ID="we">kunst-</tc:token>
+      <tc:token ID="wf">und</tc:token>
+      <tc:token ID="w10">kulturhistorischer</tc:token>
+      <tc:token ID="w11">Artefakte</tc:token>
+      <tc:token ID="w12">innerhalb</tc:token>
+      <tc:token ID="w13">des</tc:token>
+      <tc:token ID="w14">prometheus</tc:token>
+      <tc:token ID="w15">Bildarchivs</tc:token>
+      <tc:token ID="w16">(</tc:token>
+      <tc:token ID="w17">http://prometheus-bildarchiv.de</tc:token>
+      <tc:token ID="w18">)</tc:token>
+      <tc:token ID="w19">,</tc:token>
+      <tc:token ID="w1a">das</tc:token>
+      <tc:token ID="w1b">derzeit</tc:token>
+      <tc:token ID="w1c">89</tc:token>
+      <tc:token ID="w1d">Datenbanken</tc:token>
+      <tc:token ID="w1e">aus</tc:token>
+      <tc:token ID="w1f">Museen</tc:token>
+      <tc:token ID="w20">und</tc:token>
+      <tc:token ID="w21">Forschungsinstitutionen</tc:token>
+      <tc:token ID="w22">mit</tc:token>
+      <tc:token ID="w23">insgesamt</tc:token>
+      <tc:token ID="w24">über</tc:token>
+      <tc:token ID="w25">1,5</tc:token>
+      <tc:token ID="w26">Mio.</tc:token>
+      <tc:token ID="w27">Datensätzen</tc:token>
+      <tc:token ID="w28">zusammenführt</tc:token>
+      <tc:token ID="w29">(</tc:token>
+      <tc:token ID="w2a">Dieckmann</tc:token>
+      <tc:token ID="w2b">2015</tc:token>
+      <tc:token ID="w2c">)</tc:token>
+      <tc:token ID="w2d">.</tc:token>
+      <tc:token ID="w2e">Das</tc:token>
+      <tc:token ID="w2f">durch</tc:token>
+      <tc:token ID="w30">eine</tc:token>
+      <tc:token ID="w31">bereits</tc:token>
+      <tc:token ID="w32">abgeschlossene</tc:token>
+      <tc:token ID="w33">Vorstudie</tc:token>
+      <tc:token ID="w34">initiierte</tc:token>
+      <tc:token ID="w35">Projekt</tc:token>
+      <tc:token ID="w36">verfolgt</tc:token>
+      <tc:token ID="w37">zwei</tc:token>
+      <tc:token ID="w38">unterschiedliche</tc:token>
+      <tc:token ID="w39">,</tc:token>
+      <tc:token ID="w3a">teilweise</tc:token>
+      <tc:token ID="w3b">aufeinander</tc:token>
+      <tc:token ID="w3c">aufbauende</tc:token>
+      <tc:token ID="w3d">Ansätze</tc:token>
+      <tc:token ID="w3e">:</tc:token>
+      <tc:token ID="w3f">Zum</tc:token>
+      <tc:token ID="w40">einen</tc:token>
+      <tc:token ID="w41">die</tc:token>
+      <tc:token ID="w42">Annotation</tc:token>
+      <tc:token ID="w43">von</tc:token>
+      <tc:token ID="w44">Freitexten</tc:token>
+      <tc:token ID="w45">zur</tc:token>
+      <tc:token ID="w46">strukturierten</tc:token>
+      <tc:token ID="w47">Erschließung</tc:token>
+      <tc:token ID="w48">kunsthistorischer</tc:token>
+      <tc:token ID="w49">Daten</tc:token>
+      <tc:token ID="w4a">,</tc:token>
+      <tc:token ID="w4b">zum</tc:token>
+      <tc:token ID="w4c">anderen</tc:token>
+      <tc:token ID="w4d">die</tc:token>
+      <tc:token ID="w4e">Analyse</tc:token>
+      <tc:token ID="w4f">der</tc:token>
+      <tc:token ID="w50">Identität</tc:token>
+      <tc:token ID="w51">von</tc:token>
+      <tc:token ID="w52">Datensätzen</tc:token>
+      <tc:token ID="w53">über</tc:token>
+      <tc:token ID="w54">die</tc:token>
+      <tc:token ID="w55">Berechnung</tc:token>
+      <tc:token ID="w56">gradueller</tc:token>
+      <tc:token ID="w57">Ähnlichkeiten</tc:token>
+      <tc:token ID="w58">von</tc:token>
+      <tc:token ID="w59">Objekten</tc:token>
+      <tc:token ID="w5a">.</tc:token>
+      <tc:token ID="w5b">Beide</tc:token>
+      <tc:token ID="w5c">Ansätze</tc:token>
+      <tc:token ID="w5d">dienen</tc:token>
+      <tc:token ID="w5e">erstens</tc:token>
+      <tc:token ID="w5f">einer</tc:token>
+      <tc:token ID="w60">Verbesserung</tc:token>
+      <tc:token ID="w61">des</tc:token>
+      <tc:token ID="w62">Retrievals</tc:token>
+      <tc:token ID="w63">,</tc:token>
+      <tc:token ID="w64">zweitens</tc:token>
+      <tc:token ID="w65">einer</tc:token>
+      <tc:token ID="w66">nachhaltigen</tc:token>
+      <tc:token ID="w67">Sicherung</tc:token>
+      <tc:token ID="w68">der</tc:token>
+      <tc:token ID="w69">Daten</tc:token>
+      <tc:token ID="w6a">durch</tc:token>
+      <tc:token ID="w6b">die</tc:token>
+      <tc:token ID="w6c">Verknüpfung</tc:token>
+      <tc:token ID="w6d">mit</tc:token>
+      <tc:token ID="w6e">Normdaten</tc:token>
+      <tc:token ID="w6f">;</tc:token>
+      <tc:token ID="w70">drittens</tc:token>
+      <tc:token ID="w71">sollen</tc:token>
+      <tc:token ID="w72">die</tc:token>
+      <tc:token ID="w73">zusätzlich</tc:token>
+      <tc:token ID="w74">erschlossenen</tc:token>
+      <tc:token ID="w75">Informationen</tc:token>
+      <tc:token ID="w76">längerfristig</tc:token>
+      <tc:token ID="w77">als</tc:token>
+      <tc:token ID="w78">Grundlage</tc:token>
+      <tc:token ID="w79">für</tc:token>
+      <tc:token ID="w7a">weiterführende</tc:token>
+      <tc:token ID="w7b">(</tc:token>
+      <tc:token ID="w7c">fachspezifische</tc:token>
+      <tc:token ID="w7d">)</tc:token>
+      <tc:token ID="w7e">Fragestellungen</tc:token>
+      <tc:token ID="w7f">eingesetzt</tc:token>
+      <tc:token ID="w80">werden</tc:token>
+      <tc:token ID="w81">,</tc:token>
+      <tc:token ID="w82">etwa</tc:token>
+      <tc:token ID="w83">zur</tc:token>
+      <tc:token ID="w84">Rekonstruktion</tc:token>
+      <tc:token ID="w85">von</tc:token>
+      <tc:token ID="w86">Künstlergruppen</tc:token>
+      <tc:token ID="w87">durch</tc:token>
+      <tc:token ID="w88">die</tc:token>
+      <tc:token ID="w89">Erstellung</tc:token>
+      <tc:token ID="w8a">von</tc:token>
+      <tc:token ID="w8b">Personen-Netzwerken</tc:token>
+      <tc:token ID="w8c">.</tc:token>
+      <tc:token ID="w8d">Das</tc:token>
+      <tc:token ID="w8e">Projekt</tc:token>
+      <tc:token ID="w8f">wird</tc:token>
+      <tc:token ID="w90">an</tc:token>
+      <tc:token ID="w91">der</tc:token>
+      <tc:token ID="w92">Universität</tc:token>
+      <tc:token ID="w93">zu</tc:token>
+      <tc:token ID="w94">Köln</tc:token>
+      <tc:token ID="w95">in</tc:token>
+      <tc:token ID="w96">enger</tc:token>
+      <tc:token ID="w97">Zusammenarbeit</tc:token>
+      <tc:token ID="w98">zwischen</tc:token>
+      <tc:token ID="w99">Fachwissenschaftlern</tc:token>
+      <tc:token ID="w9a">der</tc:token>
+      <tc:token ID="w9b">Kunstgeschichte</tc:token>
+      <tc:token ID="w9c">und</tc:token>
+      <tc:token ID="w9d">der</tc:token>
+      <tc:token ID="w9e">Sprachlichen</tc:token>
+      <tc:token ID="w9f">Informationsverarbeitung</tc:token>
+      <tc:token ID="wa0">(</tc:token>
+      <tc:token ID="wa1">)</tc:token>
+      <tc:token ID="wa2">durchgeführt</tc:token>
+      <tc:token ID="wa3">,</tc:token>
+      <tc:token ID="wa4">deren</tc:token>
+      <tc:token ID="wa5">Schwerpunkte</tc:token>
+      <tc:token ID="wa6">u.a.</tc:token>
+      <tc:token ID="wa7">auf</tc:token>
+      <tc:token ID="wa8">Systemen</tc:token>
+      <tc:token ID="wa9">zur</tc:token>
+      <tc:token ID="waa">syntaktischen</tc:token>
+      <tc:token ID="wab">und</tc:token>
+      <tc:token ID="wac">semantischen</tc:token>
+      <tc:token ID="wad">Analyse</tc:token>
+      <tc:token ID="wae">und</tc:token>
+      <tc:token ID="waf">Verarbeitung</tc:token>
+      <tc:token ID="wb0">textueller</tc:token>
+      <tc:token ID="wb1">Daten</tc:token>
+      <tc:token ID="wb2">(</tc:token>
+      <tc:token ID="wb3">Hermes</tc:token>
+      <tc:token ID="wb4">2012</tc:token>
+      <tc:token ID="wb5">,</tc:token>
+      <tc:token ID="wb6">Schwiebert</tc:token>
+      <tc:token ID="wb7">2012</tc:token>
+      <tc:token ID="wb8">)</tc:token>
+      <tc:token ID="wb9">sowie</tc:token>
+      <tc:token ID="wba">zur</tc:token>
+      <tc:token ID="wbb">Annotation</tc:token>
+      <tc:token ID="wbc">nicht-standardisierter</tc:token>
+      <tc:token ID="wbd">Daten</tc:token>
+      <tc:token ID="wbe">(</tc:token>
+      <tc:token ID="wbf">Neuefeind</tc:token>
+      <tc:token ID="wc0">2013</tc:token>
+      <tc:token ID="wc1">)</tc:token>
+      <tc:token ID="wc2">liegen</tc:token>
+      <tc:token ID="wc3">.</tc:token>
+      <tc:token ID="wc4">Die</tc:token>
+      <tc:token ID="wc5">digitalen</tc:token>
+      <tc:token ID="wc6">Repräsentationen</tc:token>
+      <tc:token ID="wc7">der</tc:token>
+      <tc:token ID="wc8">in</tc:token>
+      <tc:token ID="wc9">prometheus</tc:token>
+      <tc:token ID="wca">zusammengeführten</tc:token>
+      <tc:token ID="wcb">kunst-</tc:token>
+      <tc:token ID="wcc">und</tc:token>
+      <tc:token ID="wcd">kulturhistorischen</tc:token>
+      <tc:token ID="wce">Artefakte</tc:token>
+      <tc:token ID="wcf">stellen</tc:token>
+      <tc:token ID="wd0">insofern</tc:token>
+      <tc:token ID="wd1">eine</tc:token>
+      <tc:token ID="wd2">besondere</tc:token>
+      <tc:token ID="wd3">Herausforderung</tc:token>
+      <tc:token ID="wd4">für</tc:token>
+      <tc:token ID="wd5">die</tc:token>
+      <tc:token ID="wd6">automatisierte</tc:token>
+      <tc:token ID="wd7">Erschließung</tc:token>
+      <tc:token ID="wd8">inhaltlicher</tc:token>
+      <tc:token ID="wd9">Informationen</tc:token>
+      <tc:token ID="wda">dar</tc:token>
+      <tc:token ID="wdb">,</tc:token>
+      <tc:token ID="wdc">als</tc:token>
+      <tc:token ID="wdd">dass</tc:token>
+      <tc:token ID="wde">die</tc:token>
+      <tc:token ID="wdf">Metadaten</tc:token>
+      <tc:token ID="we0">und</tc:token>
+      <tc:token ID="we1">Texte</tc:token>
+      <tc:token ID="we2">strukturell</tc:token>
+      <tc:token ID="we3">und</tc:token>
+      <tc:token ID="we4">inhaltlich</tc:token>
+      <tc:token ID="we5">sehr</tc:token>
+      <tc:token ID="we6">heterogen</tc:token>
+      <tc:token ID="we7">und</tc:token>
+      <tc:token ID="we8">in</tc:token>
+      <tc:token ID="we9">unterschiedlichen</tc:token>
+      <tc:token ID="wea">Kontexten</tc:token>
+      <tc:token ID="web">vorliegen</tc:token>
+      <tc:token ID="wec">.</tc:token>
+      <tc:token ID="wed">Die</tc:token>
+      <tc:token ID="wee">Datensätze</tc:token>
+      <tc:token ID="wef">der</tc:token>
+      <tc:token ID="wf0">einzelnen</tc:token>
+      <tc:token ID="wf1">Bilddatenbanken</tc:token>
+      <tc:token ID="wf2">sind</tc:token>
+      <tc:token ID="wf3">zwar</tc:token>
+      <tc:token ID="wf4">stets</tc:token>
+      <tc:token ID="wf5">in</tc:token>
+      <tc:token ID="wf6">ein</tc:token>
+      <tc:token ID="wf7">eigenes</tc:token>
+      <tc:token ID="wf8">Metadatenschema</tc:token>
+      <tc:token ID="wf9">eingepasst</tc:token>
+      <tc:token ID="wfa">,</tc:token>
+      <tc:token ID="wfb">jedoch</tc:token>
+      <tc:token ID="wfc">erfolgt</tc:token>
+      <tc:token ID="wfd">die</tc:token>
+      <tc:token ID="wfe">Erschließung</tc:token>
+      <tc:token ID="wff">der</tc:token>
+      <tc:token ID="w100">Werke</tc:token>
+      <tc:token ID="w101">an</tc:token>
+      <tc:token ID="w102">den</tc:token>
+      <tc:token ID="w103">jeweiligen</tc:token>
+      <tc:token ID="w104">Institutionen</tc:token>
+      <tc:token ID="w105">nicht</tc:token>
+      <tc:token ID="w106">nach</tc:token>
+      <tc:token ID="w107">einer</tc:token>
+      <tc:token ID="w108">einheitlichen</tc:token>
+      <tc:token ID="w109">Methodik</tc:token>
+      <tc:token ID="w10a">,</tc:token>
+      <tc:token ID="w10b">was</tc:token>
+      <tc:token ID="w10c">u.a.</tc:token>
+      <tc:token ID="w10d">datenbank-</tc:token>
+      <tc:token ID="w10e">oder</tc:token>
+      <tc:token ID="w10f">sammlungsspezifische</tc:token>
+      <tc:token ID="w110">Gründe</tc:token>
+      <tc:token ID="w111">hat</tc:token>
+      <tc:token ID="w112">.</tc:token>
+      <tc:token ID="w113">Zum</tc:token>
+      <tc:token ID="w114">einen</tc:token>
+      <tc:token ID="w115">liegt</tc:token>
+      <tc:token ID="w116">innerhalb</tc:token>
+      <tc:token ID="w117">der</tc:token>
+      <tc:token ID="w118">Klassifikationen</tc:token>
+      <tc:token ID="w119">der</tc:token>
+      <tc:token ID="w11a">jeweiligen</tc:token>
+      <tc:token ID="w11b">Datenbanken</tc:token>
+      <tc:token ID="w11c">eine</tc:token>
+      <tc:token ID="w11d">Vielzahl</tc:token>
+      <tc:token ID="w11e">an</tc:token>
+      <tc:token ID="w11f">Texten</tc:token>
+      <tc:token ID="w120">vor</tc:token>
+      <tc:token ID="w121">,</tc:token>
+      <tc:token ID="w122">die</tc:token>
+      <tc:token ID="w123">bislang</tc:token>
+      <tc:token ID="w124">nicht</tc:token>
+      <tc:token ID="w125">strukturiert</tc:token>
+      <tc:token ID="w126">erschlossen</tc:token>
+      <tc:token ID="w127">sind</tc:token>
+      <tc:token ID="w128">,</tc:token>
+      <tc:token ID="w129">sondern</tc:token>
+      <tc:token ID="w12a">derzeit</tc:token>
+      <tc:token ID="w12b">nur</tc:token>
+      <tc:token ID="w12c">über</tc:token>
+      <tc:token ID="w12d">eine</tc:token>
+      <tc:token ID="w12e">einfache</tc:token>
+      <tc:token ID="w12f">Volltextsuche</tc:token>
+      <tc:token ID="w130">miteinbezogen</tc:token>
+      <tc:token ID="w131">werden</tc:token>
+      <tc:token ID="w132">(</tc:token>
+      <tc:token ID="w133">es</tc:token>
+      <tc:token ID="w134">handelt</tc:token>
+      <tc:token ID="w135">sich</tc:token>
+      <tc:token ID="w136">hierbei</tc:token>
+      <tc:token ID="w137">oftmals</tc:token>
+      <tc:token ID="w138">um</tc:token>
+      <tc:token ID="w139">unstrukturierte</tc:token>
+      <tc:token ID="w13a">Freitextfelder</tc:token>
+      <tc:token ID="w13b">,</tc:token>
+      <tc:token ID="w13c">die</tc:token>
+      <tc:token ID="w13d">z.B.</tc:token>
+      <tc:token ID="w13e">Angaben</tc:token>
+      <tc:token ID="w13f">über</tc:token>
+      <tc:token ID="w140">Standort(e)</tc:token>
+      <tc:token ID="w141">,</tc:token>
+      <tc:token ID="w142">die</tc:token>
+      <tc:token ID="w143">Publikationsgeschichte</tc:token>
+      <tc:token ID="w144">oder</tc:token>
+      <tc:token ID="w145">ausführliche</tc:token>
+      <tc:token ID="w146">Bildbeschreibungen</tc:token>
+      <tc:token ID="w147">enthalten</tc:token>
+      <tc:token ID="w148">können</tc:token>
+      <tc:token ID="w149">)</tc:token>
+      <tc:token ID="w14a">.</tc:token>
+      <tc:token ID="w14b">Zum</tc:token>
+      <tc:token ID="w14c">anderen</tc:token>
+      <tc:token ID="w14d">wird</tc:token>
+      <tc:token ID="w14e">selten</tc:token>
+      <tc:token ID="w14f">ein</tc:token>
+      <tc:token ID="w150">bestimmter</tc:token>
+      <tc:token ID="w151">Metadatenstandard</tc:token>
+      <tc:token ID="w152">zugrunde</tc:token>
+      <tc:token ID="w153">gelegt</tc:token>
+      <tc:token ID="w154">oder</tc:token>
+      <tc:token ID="w155">auf</tc:token>
+      <tc:token ID="w156">Fachvokabulare</tc:token>
+      <tc:token ID="w157">und</tc:token>
+      <tc:token ID="w158">Terminologieressourcen</tc:token>
+      <tc:token ID="w159">zurückgegriffen</tc:token>
+      <tc:token ID="w15a">,</tc:token>
+      <tc:token ID="w15b">was</tc:token>
+      <tc:token ID="w15c">dazu</tc:token>
+      <tc:token ID="w15d">führt</tc:token>
+      <tc:token ID="w15e">,</tc:token>
+      <tc:token ID="w15f">dass</tc:token>
+      <tc:token ID="w160">zum</tc:token>
+      <tc:token ID="w161">Teil</tc:token>
+      <tc:token ID="w162">stark</tc:token>
+      <tc:token ID="w163">variierende</tc:token>
+      <tc:token ID="w164">Schreibweisen</tc:token>
+      <tc:token ID="w165">u.a.</tc:token>
+      <tc:token ID="w166">bei</tc:token>
+      <tc:token ID="w167">Künstler-</tc:token>
+      <tc:token ID="w168">oder</tc:token>
+      <tc:token ID="w169">Ortsnamen</tc:token>
+      <tc:token ID="w16a">existieren</tc:token>
+      <tc:token ID="w16b">.</tc:token>
+      <tc:token ID="w16c">In</tc:token>
+      <tc:token ID="w16d">der</tc:token>
+      <tc:token ID="w16e">kunsthistorischen</tc:token>
+      <tc:token ID="w16f">Forschung</tc:token>
+      <tc:token ID="w170">haben</tc:token>
+      <tc:token ID="w171">sich</tc:token>
+      <tc:token ID="w172">zudem</tc:token>
+      <tc:token ID="w173">selten</tc:token>
+      <tc:token ID="w174">einheitliche</tc:token>
+      <tc:token ID="w175">Bezeichnungen</tc:token>
+      <tc:token ID="w176">für</tc:token>
+      <tc:token ID="w177">Werktitel</tc:token>
+      <tc:token ID="w178">durchgesetzt</tc:token>
+      <tc:token ID="w179">.</tc:token>
+      <tc:token ID="w17a">So</tc:token>
+      <tc:token ID="w17b">liegt</tc:token>
+      <tc:token ID="w17c">bspw.</tc:token>
+      <tc:token ID="w17d">das</tc:token>
+      <tc:token ID="w17e">Werk</tc:token>
+      <tc:token ID="w17f">“</tc:token>
+      <tc:token ID="w180">Bonaparte</tc:token>
+      <tc:token ID="w181">überquert</tc:token>
+      <tc:token ID="w182">den</tc:token>
+      <tc:token ID="w183">großen</tc:token>
+      <tc:token ID="w184">Sankt</tc:token>
+      <tc:token ID="w185">Bernhard</tc:token>
+      <tc:token ID="w186">”</tc:token>
+      <tc:token ID="w187">von</tc:token>
+      <tc:token ID="w188">Jacques-Louis</tc:token>
+      <tc:token ID="w189">David</tc:token>
+      <tc:token ID="w18a">(</tc:token>
+      <tc:token ID="w18b">Malmaison</tc:token>
+      <tc:token ID="w18c">,</tc:token>
+      <tc:token ID="w18d">1801</tc:token>
+      <tc:token ID="w18e">)</tc:token>
+      <tc:token ID="w18f">in</tc:token>
+      <tc:token ID="w190">prometheus</tc:token>
+      <tc:token ID="w191">in</tc:token>
+      <tc:token ID="w192">mindestens</tc:token>
+      <tc:token ID="w193">sieben</tc:token>
+      <tc:token ID="w194">verschiedenen</tc:token>
+      <tc:token ID="w195">Titelbezeichnungen</tc:token>
+      <tc:token ID="w196">vor</tc:token>
+      <tc:token ID="w197">,</tc:token>
+      <tc:token ID="w198">die</tc:token>
+      <tc:token ID="w199">zumeist</tc:token>
+      <tc:token ID="w19a">in</tc:token>
+      <tc:token ID="w19b">Teilen</tc:token>
+      <tc:token ID="w19c">,</tc:token>
+      <tc:token ID="w19d">unter</tc:token>
+      <tc:token ID="w19e">Umständen</tc:token>
+      <tc:token ID="w19f">aber</tc:token>
+      <tc:token ID="w1a0">auch</tc:token>
+      <tc:token ID="w1a1">vollständig</tc:token>
+      <tc:token ID="w1a2">voneinander</tc:token>
+      <tc:token ID="w1a3">abweichen</tc:token>
+      <tc:token ID="w1a4">(</tc:token>
+      <tc:token ID="w1a5">etwa</tc:token>
+      <tc:token ID="w1a6">“</tc:token>
+      <tc:token ID="w1a7">Napoleon</tc:token>
+      <tc:token ID="w1a8">überquert</tc:token>
+      <tc:token ID="w1a9">die</tc:token>
+      <tc:token ID="w1aa">Alpen</tc:token>
+      <tc:token ID="w1ab">”</tc:token>
+      <tc:token ID="w1ac">gegenüber</tc:token>
+      <tc:token ID="w1ad">“</tc:token>
+      <tc:token ID="w1ae">Bonaparte</tc:token>
+      <tc:token ID="w1af">auf</tc:token>
+      <tc:token ID="w1b0">dem</tc:token>
+      <tc:token ID="w1b1">großen</tc:token>
+      <tc:token ID="w1b2">Sankt</tc:token>
+      <tc:token ID="w1b3">Bernhard</tc:token>
+      <tc:token ID="w1b4">”</tc:token>
+      <tc:token ID="w1b5">)</tc:token>
+      <tc:token ID="w1b6">.</tc:token>
+      <tc:token ID="w1b7">Eine</tc:token>
+      <tc:token ID="w1b8">Verknüpfung</tc:token>
+      <tc:token ID="w1b9">mit</tc:token>
+      <tc:token ID="w1ba">Normdaten</tc:token>
+      <tc:token ID="w1bb">wie</tc:token>
+      <tc:token ID="w1bc">der</tc:token>
+      <tc:token ID="w1bd">Gemeinsamen</tc:token>
+      <tc:token ID="w1be">Normdatei</tc:token>
+      <tc:token ID="w1bf">der</tc:token>
+      <tc:token ID="w1c0">Deutschen</tc:token>
+      <tc:token ID="w1c1">Nationalbibliothek</tc:token>
+      <tc:token ID="w1c2">(</tc:token>
+      <tc:token ID="w1c3">GND</tc:token>
+      <tc:token ID="w1c4">,</tc:token>
+      <tc:token ID="w1c5">)</tc:token>
+      <tc:token ID="w1c6">ist</tc:token>
+      <tc:token ID="w1c7">auf</tc:token>
+      <tc:token ID="w1c8">dieser</tc:token>
+      <tc:token ID="w1c9">Grundlage</tc:token>
+      <tc:token ID="w1ca">nicht</tc:token>
+      <tc:token ID="w1cb">möglich</tc:token>
+      <tc:token ID="w1cc">.</tc:token>
+      <tc:token ID="w1cd">Diese</tc:token>
+      <tc:token ID="w1ce">wäre</tc:token>
+      <tc:token ID="w1cf">aber</tc:token>
+      <tc:token ID="w1d0">nötig</tc:token>
+      <tc:token ID="w1d1">,</tc:token>
+      <tc:token ID="w1d2">um</tc:token>
+      <tc:token ID="w1d3">eine</tc:token>
+      <tc:token ID="w1d4">automatische</tc:token>
+      <tc:token ID="w1d5">Zusammenführung</tc:token>
+      <tc:token ID="w1d6">der</tc:token>
+      <tc:token ID="w1d7">Einzelabbildungen</tc:token>
+      <tc:token ID="w1d8">zu</tc:token>
+      <tc:token ID="w1d9">Objekten</tc:token>
+      <tc:token ID="w1da">vornehmen</tc:token>
+      <tc:token ID="w1db">und</tc:token>
+      <tc:token ID="w1dc">die</tc:token>
+      <tc:token ID="w1dd">Objekte</tc:token>
+      <tc:token ID="w1de">eindeutig</tc:token>
+      <tc:token ID="w1df">und</tc:token>
+      <tc:token ID="w1e0">damit</tc:token>
+      <tc:token ID="w1e1">nachhaltig</tc:token>
+      <tc:token ID="w1e2">identifizieren</tc:token>
+      <tc:token ID="w1e3">zu</tc:token>
+      <tc:token ID="w1e4">können</tc:token>
+      <tc:token ID="w1e5">,</tc:token>
+      <tc:token ID="w1e6">was</tc:token>
+      <tc:token ID="w1e7">zugleich</tc:token>
+      <tc:token ID="w1e8">die</tc:token>
+      <tc:token ID="w1e9">Grundlage</tc:token>
+      <tc:token ID="w1ea">für</tc:token>
+      <tc:token ID="w1eb">eine</tc:token>
+      <tc:token ID="w1ec">weitere</tc:token>
+      <tc:token ID="w1ed">Anreicherung</tc:token>
+      <tc:token ID="w1ee">mit</tc:token>
+      <tc:token ID="w1ef">GND-verknüpften</tc:token>
+      <tc:token ID="w1f0">Daten</tc:token>
+      <tc:token ID="w1f1">oder</tc:token>
+      <tc:token ID="w1f2">weiteren</tc:token>
+      <tc:token ID="w1f3">Normdaten</tc:token>
+      <tc:token ID="w1f4">(</tc:token>
+      <tc:token ID="w1f5">z.B.</tc:token>
+      <tc:token ID="w1f6">VIAF</tc:token>
+      <tc:token ID="w1f7">,</tc:token>
+      <tc:token ID="w1f8">http://viaf.org;</tc:token>
+      <tc:token ID="w1f9">Wikidata</tc:token>
+      <tc:token ID="w1fa">,</tc:token>
+      <tc:token ID="w1fb">https://www.wikidata.org</tc:token>
+      <tc:token ID="w1fc">)</tc:token>
+      <tc:token ID="w1fd">bilden</tc:token>
+      <tc:token ID="w1fe">würde</tc:token>
+      <tc:token ID="w1ff">.</tc:token>
+      <tc:token ID="w200">Die</tc:token>
+      <tc:token ID="w201">Heterogenität</tc:token>
+      <tc:token ID="w202">der</tc:token>
+      <tc:token ID="w203">Daten</tc:token>
+      <tc:token ID="w204">wird</tc:token>
+      <tc:token ID="w205">in</tc:token>
+      <tc:token ID="w206">prometheus</tc:token>
+      <tc:token ID="w207">bereits</tc:token>
+      <tc:token ID="w208">teilweise</tc:token>
+      <tc:token ID="w209">in</tc:token>
+      <tc:token ID="w20a">Anwendung</tc:token>
+      <tc:token ID="w20b">linguistischer</tc:token>
+      <tc:token ID="w20c">Analyseverfahren</tc:token>
+      <tc:token ID="w20d">bei</tc:token>
+      <tc:token ID="w20e">der</tc:token>
+      <tc:token ID="w20f">Indexierung</tc:token>
+      <tc:token ID="w210">ausgeglichen</tc:token>
+      <tc:token ID="w211">,</tc:token>
+      <tc:token ID="w212">wobei</tc:token>
+      <tc:token ID="w213">der</tc:token>
+      <tc:token ID="w214">Schwerpunkt</tc:token>
+      <tc:token ID="w215">hier</tc:token>
+      <tc:token ID="w216">v.a.</tc:token>
+      <tc:token ID="w217">auf</tc:token>
+      <tc:token ID="w218">der</tc:token>
+      <tc:token ID="w219">orthographischen</tc:token>
+      <tc:token ID="w21a">und</tc:token>
+      <tc:token ID="w21b">morphosyntaktischen</tc:token>
+      <tc:token ID="w21c">Ebene</tc:token>
+      <tc:token ID="w21d">liegt</tc:token>
+      <tc:token ID="w21e">,</tc:token>
+      <tc:token ID="w21f">etwa</tc:token>
+      <tc:token ID="w220">auf</tc:token>
+      <tc:token ID="w221">Grundlage</tc:token>
+      <tc:token ID="w222">sprachspezifischer</tc:token>
+      <tc:token ID="w223">Wörterbücher</tc:token>
+      <tc:token ID="w224">(</tc:token>
+      <tc:token ID="w225">u.a.</tc:token>
+      <tc:token ID="w226">zur</tc:token>
+      <tc:token ID="w227">Grundformreduzierung</tc:token>
+      <tc:token ID="w228">,</tc:token>
+      <tc:token ID="w229">Phrasenerkennung</tc:token>
+      <tc:token ID="w22a">,</tc:token>
+      <tc:token ID="w22b">Synonymgenerierung</tc:token>
+      <tc:token ID="w22c">,</tc:token>
+      <tc:token ID="w22d">Kompositazerlegung</tc:token>
+      <tc:token ID="w22e">)</tc:token>
+      <tc:token ID="w22f">sowie</tc:token>
+      <tc:token ID="w230">durch</tc:token>
+      <tc:token ID="w231">Anreicherung</tc:token>
+      <tc:token ID="w232">mit</tc:token>
+      <tc:token ID="w233">synonymen</tc:token>
+      <tc:token ID="w234">Künstlernamen</tc:token>
+      <tc:token ID="w235">(</tc:token>
+      <tc:token ID="w236">siehe</tc:token>
+      <tc:token ID="w237">d</tc:token>
+      <tc:token ID="w238">)</tc:token>
+      <tc:token ID="w239">.</tc:token>
+      <tc:token ID="w23a">Diese</tc:token>
+      <tc:token ID="w23b">Maßnahmen</tc:token>
+      <tc:token ID="w23c">dienen</tc:token>
+      <tc:token ID="w23d">in</tc:token>
+      <tc:token ID="w23e">erster</tc:token>
+      <tc:token ID="w23f">Linie</tc:token>
+      <tc:token ID="w240">dazu</tc:token>
+      <tc:token ID="w241">,</tc:token>
+      <tc:token ID="w242">das</tc:token>
+      <tc:token ID="w243">Retrieval</tc:token>
+      <tc:token ID="w244">zu</tc:token>
+      <tc:token ID="w245">optimieren</tc:token>
+      <tc:token ID="w246">und</tc:token>
+      <tc:token ID="w247">den</tc:token>
+      <tc:token ID="w248">Recall</tc:token>
+      <tc:token ID="w249">zu</tc:token>
+      <tc:token ID="w24a">verbessern</tc:token>
+      <tc:token ID="w24b">.</tc:token>
+      <tc:token ID="w24c">In</tc:token>
+      <tc:token ID="w24d">Bezug</tc:token>
+      <tc:token ID="w24e">auf</tc:token>
+      <tc:token ID="w24f">die</tc:token>
+      <tc:token ID="w250">oben</tc:token>
+      <tc:token ID="w251">aufgeworfenen</tc:token>
+      <tc:token ID="w252">Probleme</tc:token>
+      <tc:token ID="w253">der</tc:token>
+      <tc:token ID="w254">Normalisierung</tc:token>
+      <tc:token ID="w255">und</tc:token>
+      <tc:token ID="w256">Zuordnung</tc:token>
+      <tc:token ID="w257">von</tc:token>
+      <tc:token ID="w258">Einzeldarstellungen</tc:token>
+      <tc:token ID="w259">zu</tc:token>
+      <tc:token ID="w25a">Objekten</tc:token>
+      <tc:token ID="w25b">sind</tc:token>
+      <tc:token ID="w25c">sie</tc:token>
+      <tc:token ID="w25d">jedoch</tc:token>
+      <tc:token ID="w25e">nur</tc:token>
+      <tc:token ID="w25f">als</tc:token>
+      <tc:token ID="w260">ein</tc:token>
+      <tc:token ID="w261">erster</tc:token>
+      <tc:token ID="w262">Schritt</tc:token>
+      <tc:token ID="w263">anzusehen</tc:token>
+      <tc:token ID="w264">.</tc:token>
+      <tc:token ID="w265">Ziel</tc:token>
+      <tc:token ID="w266">ist</tc:token>
+      <tc:token ID="w267">vielmehr</tc:token>
+      <tc:token ID="w268">ein</tc:token>
+      <tc:token ID="w269">erweiterter</tc:token>
+      <tc:token ID="w26a">Thesaurus</tc:token>
+      <tc:token ID="w26b">,</tc:token>
+      <tc:token ID="w26c">in</tc:token>
+      <tc:token ID="w26d">dem</tc:token>
+      <tc:token ID="w26e">die</tc:token>
+      <tc:token ID="w26f">tatsächlich</tc:token>
+      <tc:token ID="w270">auftretenden</tc:token>
+      <tc:token ID="w271">,</tc:token>
+      <tc:token ID="w272">zum</tc:token>
+      <tc:token ID="w273">Teil</tc:token>
+      <tc:token ID="w274">stark</tc:token>
+      <tc:token ID="w275">variierenden</tc:token>
+      <tc:token ID="w276">Schreibweisen</tc:token>
+      <tc:token ID="w277">von</tc:token>
+      <tc:token ID="w278">Werktiteln</tc:token>
+      <tc:token ID="w279">und</tc:token>
+      <tc:token ID="w27a">Künstlernamen</tc:token>
+      <tc:token ID="w27b">auf</tc:token>
+      <tc:token ID="w27c">die</tc:token>
+      <tc:token ID="w27d">verfügbaren</tc:token>
+      <tc:token ID="w27e">Normdaten</tc:token>
+      <tc:token ID="w27f">abgebildet</tc:token>
+      <tc:token ID="w280">werden</tc:token>
+      <tc:token ID="w281">.</tc:token>
+      <tc:token ID="w282">Da</tc:token>
+      <tc:token ID="w283">die</tc:token>
+      <tc:token ID="w284">Variation</tc:token>
+      <tc:token ID="w285">in</tc:token>
+      <tc:token ID="w286">den</tc:token>
+      <tc:token ID="w287">Schreibweisen</tc:token>
+      <tc:token ID="w288">keine</tc:token>
+      <tc:token ID="w289">eindeutige</tc:token>
+      <tc:token ID="w28a">Zuordnung</tc:token>
+      <tc:token ID="w28b">erlaubt</tc:token>
+      <tc:token ID="w28c">,</tc:token>
+      <tc:token ID="w28d">bedarf</tc:token>
+      <tc:token ID="w28e">es</tc:token>
+      <tc:token ID="w28f">hierbei</tc:token>
+      <tc:token ID="w290">zusätzlicher</tc:token>
+      <tc:token ID="w291">Kriterien</tc:token>
+      <tc:token ID="w292">.</tc:token>
+      <tc:token ID="w293">Im</tc:token>
+      <tc:token ID="w294">Zuge</tc:token>
+      <tc:token ID="w295">des</tc:token>
+      <tc:token ID="w296">Projekts</tc:token>
+      <tc:token ID="w297">wird</tc:token>
+      <tc:token ID="w298">hierfür</tc:token>
+      <tc:token ID="w299">ein</tc:token>
+      <tc:token ID="w29a">semantisch</tc:token>
+      <tc:token ID="w29b">motiviertes</tc:token>
+      <tc:token ID="w29c">Verfahren</tc:token>
+      <tc:token ID="w29d">erarbeitet</tc:token>
+      <tc:token ID="w29e">,</tc:token>
+      <tc:token ID="w29f">das</tc:token>
+      <tc:token ID="w2a0">die</tc:token>
+      <tc:token ID="w2a1">gesamten</tc:token>
+      <tc:token ID="w2a2">zu</tc:token>
+      <tc:token ID="w2a3">einem</tc:token>
+      <tc:token ID="w2a4">Objekt</tc:token>
+      <tc:token ID="w2a5">verfügbaren</tc:token>
+      <tc:token ID="w2a6">Informationen</tc:token>
+      <tc:token ID="w2a7">berücksichtigt</tc:token>
+      <tc:token ID="w2a8">:</tc:token>
+      <tc:token ID="w2a9">Neben</tc:token>
+      <tc:token ID="w2aa">den</tc:token>
+      <tc:token ID="w2ab">bereits</tc:token>
+      <tc:token ID="w2ac">erschlossenen</tc:token>
+      <tc:token ID="w2ad">Metainformationen</tc:token>
+      <tc:token ID="w2ae">(</tc:token>
+      <tc:token ID="w2af">wie</tc:token>
+      <tc:token ID="w2b0">Name</tc:token>
+      <tc:token ID="w2b1">,</tc:token>
+      <tc:token ID="w2b2">Titel</tc:token>
+      <tc:token ID="w2b3">,</tc:token>
+      <tc:token ID="w2b4">Datierung</tc:token>
+      <tc:token ID="w2b5">,</tc:token>
+      <tc:token ID="w2b6">Standort</tc:token>
+      <tc:token ID="w2b7">,</tc:token>
+      <tc:token ID="w2b8">etc.</tc:token>
+      <tc:token ID="w2b9">)</tc:token>
+      <tc:token ID="w2ba">sollen</tc:token>
+      <tc:token ID="w2bb">auch</tc:token>
+      <tc:token ID="w2bc">die</tc:token>
+      <tc:token ID="w2bd">in</tc:token>
+      <tc:token ID="w2be">den</tc:token>
+      <tc:token ID="w2bf">bislang</tc:token>
+      <tc:token ID="w2c0">nur</tc:token>
+      <tc:token ID="w2c1">unstrukturiert</tc:token>
+      <tc:token ID="w2c2">vorliegenden</tc:token>
+      <tc:token ID="w2c3">Freitextfeldern</tc:token>
+      <tc:token ID="w2c4">(</tc:token>
+      <tc:token ID="w2c5">s.o.</tc:token>
+      <tc:token ID="w2c6">)</tc:token>
+      <tc:token ID="w2c7">enthaltenen</tc:token>
+      <tc:token ID="w2c8">Informationen</tc:token>
+      <tc:token ID="w2c9">genutzt</tc:token>
+      <tc:token ID="w2ca">werden</tc:token>
+      <tc:token ID="w2cb">können</tc:token>
+      <tc:token ID="w2cc">.</tc:token>
+      <tc:token ID="w2cd">Zu</tc:token>
+      <tc:token ID="w2ce">diesem</tc:token>
+      <tc:token ID="w2cf">Zweck</tc:token>
+      <tc:token ID="w2d0">werden</tc:token>
+      <tc:token ID="w2d1">die</tc:token>
+      <tc:token ID="w2d2">Texte</tc:token>
+      <tc:token ID="w2d3">zunächst</tc:token>
+      <tc:token ID="w2d4">mittels</tc:token>
+      <tc:token ID="w2d5">Informationsextraktion</tc:token>
+      <tc:token ID="w2d6">aufbereitet</tc:token>
+      <tc:token ID="w2d7">(</tc:token>
+      <tc:token ID="w2d8">Annotation</tc:token>
+      <tc:token ID="w2d9">von</tc:token>
+      <tc:token ID="w2da">Orts-</tc:token>
+      <tc:token ID="w2db">und</tc:token>
+      <tc:token ID="w2dc">Personennamen</tc:token>
+      <tc:token ID="w2dd">,</tc:token>
+      <tc:token ID="w2de">Zeitausdrücken</tc:token>
+      <tc:token ID="w2df">,</tc:token>
+      <tc:token ID="w2e0">etc</tc:token>
+      <tc:token ID="w2e1">)</tc:token>
+      <tc:token ID="w2e2">.</tc:token>
+      <tc:token ID="w2e3">Auf</tc:token>
+      <tc:token ID="w2e4">Grundlage</tc:token>
+      <tc:token ID="w2e5">dieser</tc:token>
+      <tc:token ID="w2e6">neu</tc:token>
+      <tc:token ID="w2e7">gewonnenen</tc:token>
+      <tc:token ID="w2e8">Informationen</tc:token>
+      <tc:token ID="w2e9">werden</tc:token>
+      <tc:token ID="w2ea">zusätzliche</tc:token>
+      <tc:token ID="w2eb">,</tc:token>
+      <tc:token ID="w2ec">das</tc:token>
+      <tc:token ID="w2ed">Objekt</tc:token>
+      <tc:token ID="w2ee">beschreibende</tc:token>
+      <tc:token ID="w2ef">Merkmale</tc:token>
+      <tc:token ID="w2f0">erstellt</tc:token>
+      <tc:token ID="w2f1">und</tc:token>
+      <tc:token ID="w2f2">in</tc:token>
+      <tc:token ID="w2f3">Form</tc:token>
+      <tc:token ID="w2f4">von</tc:token>
+      <tc:token ID="w2f5">Feature-Vektoren</tc:token>
+      <tc:token ID="w2f6">kodiert</tc:token>
+      <tc:token ID="w2f7">(</tc:token>
+      <tc:token ID="w2f8">Features</tc:token>
+      <tc:token ID="w2f9">sind</tc:token>
+      <tc:token ID="w2fa">z.B.</tc:token>
+      <tc:token ID="w2fb">„</tc:token>
+      <tc:token ID="w2fc">Personen</tc:token>
+      <tc:token ID="w2fd">“</tc:token>
+      <tc:token ID="w2fe">,</tc:token>
+      <tc:token ID="w2ff">„</tc:token>
+      <tc:token ID="w300">Orte</tc:token>
+      <tc:token ID="w301">“</tc:token>
+      <tc:token ID="w302">,</tc:token>
+      <tc:token ID="w303">„</tc:token>
+      <tc:token ID="w304">Material</tc:token>
+      <tc:token ID="w305">“</tc:token>
+      <tc:token ID="w306">,</tc:token>
+      <tc:token ID="w307">o.</tc:token>
+      <tc:token ID="w308">ä.</tc:token>
+      <tc:token ID="w309">;</tc:token>
+      <tc:token ID="w30a">Werte</tc:token>
+      <tc:token ID="w30b">sind</tc:token>
+      <tc:token ID="w30c">jeweils</tc:token>
+      <tc:token ID="w30d">die</tc:token>
+      <tc:token ID="w30e">konkreten</tc:token>
+      <tc:token ID="w30f">Nennungen</tc:token>
+      <tc:token ID="w310">,</tc:token>
+      <tc:token ID="w311">vgl.</tc:token>
+      <tc:token ID="w312">Abb.</tc:token>
+      <tc:token ID="w313">1</tc:token>
+      <tc:token ID="w314">)</tc:token>
+      <tc:token ID="w315">.</tc:token>
+      <tc:token ID="w316">Abb.</tc:token>
+      <tc:token ID="w317">1</tc:token>
+      <tc:token ID="w318">:</tc:token>
+      <tc:token ID="w319">Beispiel</tc:token>
+      <tc:token ID="w31a">einer</tc:token>
+      <tc:token ID="w31b">Freitextbeschreibung</tc:token>
+      <tc:token ID="w31c">im</tc:token>
+      <tc:token ID="w31d">prometheus-Bildarchiv</tc:token>
+      <tc:token ID="w31e">,</tc:token>
+      <tc:token ID="w31f">in</tc:token>
+      <tc:token ID="w320">der</tc:token>
+      <tc:token ID="w321">exemplarisch</tc:token>
+      <tc:token ID="w322">mittels</tc:token>
+      <tc:token ID="w323">Informationsextraktion</tc:token>
+      <tc:token ID="w324">identifizierte</tc:token>
+      <tc:token ID="w325">Elemente</tc:token>
+      <tc:token ID="w326">markiert</tc:token>
+      <tc:token ID="w327">wurden</tc:token>
+      <tc:token ID="w328">.</tc:token>
+      <tc:token ID="w329">Aus</tc:token>
+      <tc:token ID="w32a">den</tc:token>
+      <tc:token ID="w32b">zusätzlichen</tc:token>
+      <tc:token ID="w32c">Merkmalen</tc:token>
+      <tc:token ID="w32d">kann</tc:token>
+      <tc:token ID="w32e">nun</tc:token>
+      <tc:token ID="w32f">,</tc:token>
+      <tc:token ID="w330">in</tc:token>
+      <tc:token ID="w331">Kombination</tc:token>
+      <tc:token ID="w332">mit</tc:token>
+      <tc:token ID="w333">den</tc:token>
+      <tc:token ID="w334">bereits</tc:token>
+      <tc:token ID="w335">vorhandenen</tc:token>
+      <tc:token ID="w336">Metainformationen</tc:token>
+      <tc:token ID="w337">,</tc:token>
+      <tc:token ID="w338">für</tc:token>
+      <tc:token ID="w339">jedes</tc:token>
+      <tc:token ID="w33a">Objekt</tc:token>
+      <tc:token ID="w33b">ein</tc:token>
+      <tc:token ID="w33c">„</tc:token>
+      <tc:token ID="w33d">semantisches</tc:token>
+      <tc:token ID="w33e">Profil</tc:token>
+      <tc:token ID="w33f">“</tc:token>
+      <tc:token ID="w340">bzw</tc:token>
+      <tc:token ID="w341">.</tc:token>
+      <tc:token ID="w342">„</tc:token>
+      <tc:token ID="w343">Fingerprint</tc:token>
+      <tc:token ID="w344">“</tc:token>
+      <tc:token ID="w345">erstellt</tc:token>
+      <tc:token ID="w346">werden</tc:token>
+      <tc:token ID="w347">,</tc:token>
+      <tc:token ID="w348">anhand</tc:token>
+      <tc:token ID="w349">dessen</tc:token>
+      <tc:token ID="w34a">sich</tc:token>
+      <tc:token ID="w34b">die</tc:token>
+      <tc:token ID="w34c">Ähnlichkeit</tc:token>
+      <tc:token ID="w34d">zwischen</tc:token>
+      <tc:token ID="w34e">Objekten</tc:token>
+      <tc:token ID="w34f">ermitteln</tc:token>
+      <tc:token ID="w350">lässt</tc:token>
+      <tc:token ID="w351">.</tc:token>
+      <tc:token ID="w352">Die</tc:token>
+      <tc:token ID="w353">Ähnlichkeit</tc:token>
+      <tc:token ID="w354">wird</tc:token>
+      <tc:token ID="w355">dabei</tc:token>
+      <tc:token ID="w356">zunächst</tc:token>
+      <tc:token ID="w357">in</tc:token>
+      <tc:token ID="w358">Bezug</tc:token>
+      <tc:token ID="w359">auf</tc:token>
+      <tc:token ID="w35a">die</tc:token>
+      <tc:token ID="w35b">einzelnen</tc:token>
+      <tc:token ID="w35c">Merkmale</tc:token>
+      <tc:token ID="w35d">ermittelt</tc:token>
+      <tc:token ID="w35e">(</tc:token>
+      <tc:token ID="w35f">u.a.</tc:token>
+      <tc:token ID="w360">mittels</tc:token>
+      <tc:token ID="w361">Edit-Distance</tc:token>
+      <tc:token ID="w362">oder</tc:token>
+      <tc:token ID="w363">Soundex-</tc:token>
+      <tc:token ID="w364">bzw.</tc:token>
+      <tc:token ID="w365">Metaphone-Difference</tc:token>
+      <tc:token ID="w366">zwischen</tc:token>
+      <tc:token ID="w367">einzelnen</tc:token>
+      <tc:token ID="w368">Feldern</tc:token>
+      <tc:token ID="w369">,</tc:token>
+      <tc:token ID="w36a">Abgleich</tc:token>
+      <tc:token ID="w36b">zeitlicher</tc:token>
+      <tc:token ID="w36c">Angaben</tc:token>
+      <tc:token ID="w36d">,</tc:token>
+      <tc:token ID="w36e">Distanz</tc:token>
+      <tc:token ID="w36f">zwischen</tc:token>
+      <tc:token ID="w370">Feature-Vektoren</tc:token>
+      <tc:token ID="w371">zu</tc:token>
+      <tc:token ID="w372">„</tc:token>
+      <tc:token ID="w373">Personen</tc:token>
+      <tc:token ID="w374">“</tc:token>
+      <tc:token ID="w375">,</tc:token>
+      <tc:token ID="w376">„</tc:token>
+      <tc:token ID="w377">Orten</tc:token>
+      <tc:token ID="w378">“</tc:token>
+      <tc:token ID="w379">,</tc:token>
+      <tc:token ID="w37a">„</tc:token>
+      <tc:token ID="w37b">Material</tc:token>
+      <tc:token ID="w37c">“</tc:token>
+      <tc:token ID="w37d">,</tc:token>
+      <tc:token ID="w37e">etc.</tc:token>
+      <tc:token ID="w37f">)</tc:token>
+      <tc:token ID="w380">,</tc:token>
+      <tc:token ID="w381">wobei</tc:token>
+      <tc:token ID="w382">der</tc:token>
+      <tc:token ID="w383">Einfluss</tc:token>
+      <tc:token ID="w384">einzelner</tc:token>
+      <tc:token ID="w385">Merkmale</tc:token>
+      <tc:token ID="w386">unterschiedlich</tc:token>
+      <tc:token ID="w387">gewichtet</tc:token>
+      <tc:token ID="w388">werden</tc:token>
+      <tc:token ID="w389">kann</tc:token>
+      <tc:token ID="w38a">.</tc:token>
+      <tc:token ID="w38b">Daraus</tc:token>
+      <tc:token ID="w38c">wird</tc:token>
+      <tc:token ID="w38d">ein</tc:token>
+      <tc:token ID="w38e">kombiniertes</tc:token>
+      <tc:token ID="w38f">Maß</tc:token>
+      <tc:token ID="w390">der</tc:token>
+      <tc:token ID="w391">Übereinstimmung</tc:token>
+      <tc:token ID="w392">zwischen</tc:token>
+      <tc:token ID="w393">zwei</tc:token>
+      <tc:token ID="w394">Datensätzen</tc:token>
+      <tc:token ID="w395">errechnet</tc:token>
+      <tc:token ID="w396">,</tc:token>
+      <tc:token ID="w397">das</tc:token>
+      <tc:token ID="w398">auch</tc:token>
+      <tc:token ID="w399">bei</tc:token>
+      <tc:token ID="w39a">deutlich</tc:token>
+      <tc:token ID="w39b">abweichenden</tc:token>
+      <tc:token ID="w39c">Schreibweisen</tc:token>
+      <tc:token ID="w39d">eine</tc:token>
+      <tc:token ID="w39e">Aussage</tc:token>
+      <tc:token ID="w39f">darüber</tc:token>
+      <tc:token ID="w3a0">erlaubt</tc:token>
+      <tc:token ID="w3a1">,</tc:token>
+      <tc:token ID="w3a2">ob</tc:token>
+      <tc:token ID="w3a3">es</tc:token>
+      <tc:token ID="w3a4">sich</tc:token>
+      <tc:token ID="w3a5">um</tc:token>
+      <tc:token ID="w3a6">das</tc:token>
+      <tc:token ID="w3a7">gleiche</tc:token>
+      <tc:token ID="w3a8">Objekt</tc:token>
+      <tc:token ID="w3a9">handelt</tc:token>
+      <tc:token ID="w3aa">.</tc:token>
+      <tc:token ID="w3ab">Auf</tc:token>
+      <tc:token ID="w3ac">dieser</tc:token>
+      <tc:token ID="w3ad">Grundlage</tc:token>
+      <tc:token ID="w3ae">können</tc:token>
+      <tc:token ID="w3af">identische</tc:token>
+      <tc:token ID="w3b0">Objekte</tc:token>
+      <tc:token ID="w3b1">dann</tc:token>
+      <tc:token ID="w3b2">auf</tc:token>
+      <tc:token ID="w3b3">das</tc:token>
+      <tc:token ID="w3b4">jeweilige</tc:token>
+      <tc:token ID="w3b5">Referenzobjekt</tc:token>
+      <tc:token ID="w3b6">der</tc:token>
+      <tc:token ID="w3b7">GND</tc:token>
+      <tc:token ID="w3b8">abgebildet</tc:token>
+      <tc:token ID="w3b9">werden</tc:token>
+      <tc:token ID="w3ba">.</tc:token>
+      <tc:token ID="w3bb">In</tc:token>
+      <tc:token ID="w3bc">einem</tc:token>
+      <tc:token ID="w3bd">vorbereitenden</tc:token>
+      <tc:token ID="w3be">Projekt</tc:token>
+      <tc:token ID="w3bf">für</tc:token>
+      <tc:token ID="w3c0">das</tc:token>
+      <tc:token ID="w3c1">laufende</tc:token>
+      <tc:token ID="w3c2">Vorhaben</tc:token>
+      <tc:token ID="w3c3">wurden</tc:token>
+      <tc:token ID="w3c4">zunächst</tc:token>
+      <tc:token ID="w3c5">die</tc:token>
+      <tc:token ID="w3c6">bestehenden</tc:token>
+      <tc:token ID="w3c7">Metadaten</tc:token>
+      <tc:token ID="w3c8">der</tc:token>
+      <tc:token ID="w3c9">einzelnen</tc:token>
+      <tc:token ID="w3ca">Datenbanken</tc:token>
+      <tc:token ID="w3cb">des</tc:token>
+      <tc:token ID="w3cc">prometheus-Bildarchivs</tc:token>
+      <tc:token ID="w3cd">quantitativ</tc:token>
+      <tc:token ID="w3ce">ausgewertet</tc:token>
+      <tc:token ID="w3cf">,</tc:token>
+      <tc:token ID="w3d0">um</tc:token>
+      <tc:token ID="w3d1">einen</tc:token>
+      <tc:token ID="w3d2">Überblick</tc:token>
+      <tc:token ID="w3d3">darüber</tc:token>
+      <tc:token ID="w3d4">zu</tc:token>
+      <tc:token ID="w3d5">erlangen</tc:token>
+      <tc:token ID="w3d6">,</tc:token>
+      <tc:token ID="w3d7">wie</tc:token>
+      <tc:token ID="w3d8">sich</tc:token>
+      <tc:token ID="w3d9">der</tc:token>
+      <tc:token ID="w3da">Umfang</tc:token>
+      <tc:token ID="w3db">der</tc:token>
+      <tc:token ID="w3dc">zu</tc:token>
+      <tc:token ID="w3dd">erschließenden</tc:token>
+      <tc:token ID="w3de">Daten</tc:token>
+      <tc:token ID="w3df">darstellt</tc:token>
+      <tc:token ID="w3e0">.</tc:token>
+      <tc:token ID="w3e1">Die</tc:token>
+      <tc:token ID="w3e2">meisten</tc:token>
+      <tc:token ID="w3e3">der</tc:token>
+      <tc:token ID="w3e4">89</tc:token>
+      <tc:token ID="w3e5">Datenbanken</tc:token>
+      <tc:token ID="w3e6">verfügen</tc:token>
+      <tc:token ID="w3e7">über</tc:token>
+      <tc:token ID="w3e8">noch</tc:token>
+      <tc:token ID="w3e9">nicht</tc:token>
+      <tc:token ID="w3ea">erschlossene</tc:token>
+      <tc:token ID="w3eb">Freitextbeschreibungen</tc:token>
+      <tc:token ID="w3ec">der</tc:token>
+      <tc:token ID="w3ed">Objekte</tc:token>
+      <tc:token ID="w3ee">.</tc:token>
+      <tc:token ID="w3ef">Diese</tc:token>
+      <tc:token ID="w3f0">erstrecken</tc:token>
+      <tc:token ID="w3f1">sich</tc:token>
+      <tc:token ID="w3f2">zu</tc:token>
+      <tc:token ID="w3f3">einem</tc:token>
+      <tc:token ID="w3f4">nicht</tc:token>
+      <tc:token ID="w3f5">geringen</tc:token>
+      <tc:token ID="w3f6">Teil</tc:token>
+      <tc:token ID="w3f7">über</tc:token>
+      <tc:token ID="w3f8">mittellange</tc:token>
+      <tc:token ID="w3f9">(</tc:token>
+      <tc:token ID="w3fa">25-</tc:token>
+      <tc:token ID="w3fb">75</tc:token>
+      <tc:token ID="w3fc">Wörter</tc:token>
+      <tc:token ID="w3fd">)</tc:token>
+      <tc:token ID="w3fe">und</tc:token>
+      <tc:token ID="w3ff">lange</tc:token>
+      <tc:token ID="w400">(</tc:token>
+      <tc:token ID="w401">&gt;</tc:token>
+      <tc:token ID="w402">75</tc:token>
+      <tc:token ID="w403">Wörter</tc:token>
+      <tc:token ID="w404">)</tc:token>
+      <tc:token ID="w405">Texte</tc:token>
+      <tc:token ID="w406">,</tc:token>
+      <tc:token ID="w407">die</tc:token>
+      <tc:token ID="w408">im</tc:token>
+      <tc:token ID="w409">Zuge</tc:token>
+      <tc:token ID="w40a">des</tc:token>
+      <tc:token ID="w40b">Projekts</tc:token>
+      <tc:token ID="w40c">aufbereitet</tc:token>
+      <tc:token ID="w40d">werden</tc:token>
+      <tc:token ID="w40e">sollen</tc:token>
+      <tc:token ID="w40f">.</tc:token>
+      <tc:token ID="w410">Abb.</tc:token>
+      <tc:token ID="w411">2</tc:token>
+      <tc:token ID="w412">zeigt</tc:token>
+      <tc:token ID="w413">die</tc:token>
+      <tc:token ID="w414">Verteilung</tc:token>
+      <tc:token ID="w415">dieser</tc:token>
+      <tc:token ID="w416">unterschiedlichen</tc:token>
+      <tc:token ID="w417">Textsorten</tc:token>
+      <tc:token ID="w418">in</tc:token>
+      <tc:token ID="w419">ausgewählten</tc:token>
+      <tc:token ID="w41a">Datenbanken</tc:token>
+      <tc:token ID="w41b">.</tc:token>
+      <tc:token ID="w41c">Einige</tc:token>
+      <tc:token ID="w41d">verfügen</tc:token>
+      <tc:token ID="w41e">über</tc:token>
+      <tc:token ID="w41f">keinerlei</tc:token>
+      <tc:token ID="w420">Freitext-Bildbeschreibungen</tc:token>
+      <tc:token ID="w421">,</tc:token>
+      <tc:token ID="w422">z.B.</tc:token>
+      <tc:token ID="w423">die</tc:token>
+      <tc:token ID="w424">Datenbank</tc:token>
+      <tc:token ID="w425">des</tc:token>
+      <tc:token ID="w426">Zentralarchivs</tc:token>
+      <tc:token ID="w427">für</tc:token>
+      <tc:token ID="w428">Kunstgeschichte</tc:token>
+      <tc:token ID="w429">in</tc:token>
+      <tc:token ID="w42a">München</tc:token>
+      <tc:token ID="w42b">(</tc:token>
+      <tc:token ID="w42c">zi_</tc:token>
+      <tc:token ID="w42d">muc</tc:token>
+      <tc:token ID="w42e">)</tc:token>
+      <tc:token ID="w42f">.</tc:token>
+      <tc:token ID="w430">Andere</tc:token>
+      <tc:token ID="w431">,</tc:token>
+      <tc:token ID="w432">etwa</tc:token>
+      <tc:token ID="w433">die</tc:token>
+      <tc:token ID="w434">Erlanger</tc:token>
+      <tc:token ID="w435">Datenbank</tc:token>
+      <tc:token ID="w436">Zeichnungen</tc:token>
+      <tc:token ID="w437">der</tc:token>
+      <tc:token ID="w438">graphischen</tc:token>
+      <tc:token ID="w439">Sammlung</tc:token>
+      <tc:token ID="w43a">(</tc:token>
+      <tc:token ID="w43b">erlangen_z)</tc:token>
+      <tc:token ID="w43c">,</tc:token>
+      <tc:token ID="w43d">weisen</tc:token>
+      <tc:token ID="w43e">fast</tc:token>
+      <tc:token ID="w43f">ausschließlich</tc:token>
+      <tc:token ID="w440">kurze</tc:token>
+      <tc:token ID="w441">Beschreibungen</tc:token>
+      <tc:token ID="w442">auf</tc:token>
+      <tc:token ID="w443">,</tc:token>
+      <tc:token ID="w444">wieder</tc:token>
+      <tc:token ID="w445">andere</tc:token>
+      <tc:token ID="w446">enthalten</tc:token>
+      <tc:token ID="w447">dagegen</tc:token>
+      <tc:token ID="w448">auch</tc:token>
+      <tc:token ID="w449">eine</tc:token>
+      <tc:token ID="w44a">Reihe</tc:token>
+      <tc:token ID="w44b">mittellanger</tc:token>
+      <tc:token ID="w44c">und</tc:token>
+      <tc:token ID="w44d">langer</tc:token>
+      <tc:token ID="w44e">Texte.</tc:token>
+      <tc:token ID="w44f">Abb.</tc:token>
+      <tc:token ID="w450">2</tc:token>
+      <tc:token ID="w451">:</tc:token>
+      <tc:token ID="w452">Verteilung</tc:token>
+      <tc:token ID="w453">der</tc:token>
+      <tc:token ID="w454">Freitextlängen</tc:token>
+      <tc:token ID="w455">über</tc:token>
+      <tc:token ID="w456">verschiedene</tc:token>
+      <tc:token ID="w457">Datenbanken</tc:token>
+      <tc:token ID="w458">des</tc:token>
+      <tc:token ID="w459">prometheus-Bildarchivs</tc:token>
+      <tc:token ID="w45a">Zur</tc:token>
+      <tc:token ID="w45b">Nutzung</tc:token>
+      <tc:token ID="w45c">der</tc:token>
+      <tc:token ID="w45d">in</tc:token>
+      <tc:token ID="w45e">den</tc:token>
+      <tc:token ID="w45f">Bildbeschreibungen</tc:token>
+      <tc:token ID="w460">und</tc:token>
+      <tc:token ID="w461">Ikonographien</tc:token>
+      <tc:token ID="w462">enthaltenen</tc:token>
+      <tc:token ID="w463">Informationen</tc:token>
+      <tc:token ID="w464">müssen</tc:token>
+      <tc:token ID="w465">diese</tc:token>
+      <tc:token ID="w466">zunächst</tc:token>
+      <tc:token ID="w467">identifiziert</tc:token>
+      <tc:token ID="w468">und</tc:token>
+      <tc:token ID="w469">entsprechend</tc:token>
+      <tc:token ID="w46a">ausgezeichnet</tc:token>
+      <tc:token ID="w46b">werden</tc:token>
+      <tc:token ID="w46c">.</tc:token>
+      <tc:token ID="w46d">Dafür</tc:token>
+      <tc:token ID="w46e">wurde</tc:token>
+      <tc:token ID="w46f">zunächst</tc:token>
+      <tc:token ID="w470">ein</tc:token>
+      <tc:token ID="w471">Komponenten-Workflow</tc:token>
+      <tc:token ID="w472">konzipiert</tc:token>
+      <tc:token ID="w473">und</tc:token>
+      <tc:token ID="w474">auf</tc:token>
+      <tc:token ID="w475">Basis</tc:token>
+      <tc:token ID="w476">des</tc:token>
+      <tc:token ID="w477">UIMA-Frameworks</tc:token>
+      <tc:token ID="w478">(</tc:token>
+      <tc:token ID="w479">Unstructured</tc:token>
+      <tc:token ID="w47a">Information</tc:token>
+      <tc:token ID="w47b">Management</tc:token>
+      <tc:token ID="w47c">Architecture</tc:token>
+      <tc:token ID="w47d">,</tc:token>
+      <tc:token ID="w47e">siehe</tc:token>
+      <tc:token ID="w47f">https://uima.apache.org</tc:token>
+      <tc:token ID="w480">)</tc:token>
+      <tc:token ID="w481">implementiert</tc:token>
+      <tc:token ID="w482">.</tc:token>
+      <tc:token ID="w483">Im</tc:token>
+      <tc:token ID="w484">Zuge</tc:token>
+      <tc:token ID="w485">der</tc:token>
+      <tc:token ID="w486">Verarbeitung</tc:token>
+      <tc:token ID="w487">werden</tc:token>
+      <tc:token ID="w488">die</tc:token>
+      <tc:token ID="w489">zu</tc:token>
+      <tc:token ID="w48a">annotierenden</tc:token>
+      <tc:token ID="w48b">Informationen</tc:token>
+      <tc:token ID="w48c">in</tc:token>
+      <tc:token ID="w48d">ausgewählten</tc:token>
+      <tc:token ID="w48e">Feldern</tc:token>
+      <tc:token ID="w48f">der</tc:token>
+      <tc:token ID="w490">Datensätze</tc:token>
+      <tc:token ID="w491">identifiziert</tc:token>
+      <tc:token ID="w492">(</tc:token>
+      <tc:token ID="w493">vgl.</tc:token>
+      <tc:token ID="w494">Abb.</tc:token>
+      <tc:token ID="w495">3</tc:token>
+      <tc:token ID="w496">)</tc:token>
+      <tc:token ID="w497">.</tc:token>
+      <tc:token ID="w498">Dabei</tc:token>
+      <tc:token ID="w499">kommen</tc:token>
+      <tc:token ID="w49a">Standardmethoden</tc:token>
+      <tc:token ID="w49b">der</tc:token>
+      <tc:token ID="w49c">Informationsextraktion</tc:token>
+      <tc:token ID="w49d">(</tc:token>
+      <tc:token ID="w49e">z.B.</tc:token>
+      <tc:token ID="w49f">Temporal</tc:token>
+      <tc:token ID="w4a0">Expression</tc:token>
+      <tc:token ID="w4a1">Detection</tc:token>
+      <tc:token ID="w4a2">,</tc:token>
+      <tc:token ID="w4a3">Named</tc:token>
+      <tc:token ID="w4a4">Entity</tc:token>
+      <tc:token ID="w4a5">Recognition</tc:token>
+      <tc:token ID="w4a6">)</tc:token>
+      <tc:token ID="w4a7">genauso</tc:token>
+      <tc:token ID="w4a8">zum</tc:token>
+      <tc:token ID="w4a9">Einsatz</tc:token>
+      <tc:token ID="w4aa">wie</tc:token>
+      <tc:token ID="w4ab">informationstheoretische</tc:token>
+      <tc:token ID="w4ac">Maße</tc:token>
+      <tc:token ID="w4ad">(</tc:token>
+      <tc:token ID="w4ae">etwa</tc:token>
+      <tc:token ID="w4af">Log-Likelihood</tc:token>
+      <tc:token ID="w4b0">oder</tc:token>
+      <tc:token ID="w4b1">tf</tc:token>
+      <tc:token ID="w4b2">.idf</tc:token>
+      <tc:token ID="w4b3">)</tc:token>
+      <tc:token ID="w4b4">,</tc:token>
+      <tc:token ID="w4b5">um</tc:token>
+      <tc:token ID="w4b6">domänenspezifisch</tc:token>
+      <tc:token ID="w4b7">relevante</tc:token>
+      <tc:token ID="w4b8">Terme</tc:token>
+      <tc:token ID="w4b9">zu</tc:token>
+      <tc:token ID="w4ba">bestimmen</tc:token>
+      <tc:token ID="w4bb">.</tc:token>
+      <tc:token ID="w4bc">Abb.</tc:token>
+      <tc:token ID="w4bd">3</tc:token>
+      <tc:token ID="w4be">:</tc:token>
+      <tc:token ID="w4bf">Workflow</tc:token>
+      <tc:token ID="w4c0">zur</tc:token>
+      <tc:token ID="w4c1">Informationsextraktion</tc:token>
+      <tc:token ID="w4c2">in</tc:token>
+      <tc:token ID="w4c3">Freitexten</tc:token>
+      <tc:token ID="w4c4">im</tc:token>
+      <tc:token ID="w4c5">prometheus-Bildarchiv</tc:token>
+      <tc:token ID="w4c6">.</tc:token>
+      <tc:token ID="w4c7">Die</tc:token>
+      <tc:token ID="w4c8">erste</tc:token>
+      <tc:token ID="w4c9">Projektphase</tc:token>
+      <tc:token ID="w4ca">diente</tc:token>
+      <tc:token ID="w4cb">vor</tc:token>
+      <tc:token ID="w4cc">allem</tc:token>
+      <tc:token ID="w4cd">der</tc:token>
+      <tc:token ID="w4ce">Evaluierung</tc:token>
+      <tc:token ID="w4cf">von</tc:token>
+      <tc:token ID="w4d0">Werkzeugen</tc:token>
+      <tc:token ID="w4d1">,</tc:token>
+      <tc:token ID="w4d2">etwa</tc:token>
+      <tc:token ID="w4d3">dem</tc:token>
+      <tc:token ID="w4d4">Stanford</tc:token>
+      <tc:token ID="w4d5">Named</tc:token>
+      <tc:token ID="w4d6">Entity</tc:token>
+      <tc:token ID="w4d7">Tagger</tc:token>
+      <tc:token ID="w4d8">(</tc:token>
+      <tc:token ID="w4d9">siehe</tc:token>
+      <tc:token ID="w4da">)</tc:token>
+      <tc:token ID="w4db">zur</tc:token>
+      <tc:token ID="w4dc">Identifikation</tc:token>
+      <tc:token ID="w4dd">von</tc:token>
+      <tc:token ID="w4de">(</tc:token>
+      <tc:token ID="w4df">Orts-)Namen</tc:token>
+      <tc:token ID="w4e0">,</tc:token>
+      <tc:token ID="w4e1">oder</tc:token>
+      <tc:token ID="w4e2">HeidelTime</tc:token>
+      <tc:token ID="w4e3">(</tc:token>
+      <tc:token ID="w4e4">siehe</tc:token>
+      <tc:token ID="w4e5">)</tc:token>
+      <tc:token ID="w4e6">zur</tc:token>
+      <tc:token ID="w4e7">Annotation</tc:token>
+      <tc:token ID="w4e8">von</tc:token>
+      <tc:token ID="w4e9">Zeitausdrücken</tc:token>
+      <tc:token ID="w4ea">,</tc:token>
+      <tc:token ID="w4eb">um</tc:token>
+      <tc:token ID="w4ec">den</tc:token>
+      <tc:token ID="w4ed">voraussichtlichen</tc:token>
+      <tc:token ID="w4ee">Bedarf</tc:token>
+      <tc:token ID="w4ef">an</tc:token>
+      <tc:token ID="w4f0">Anpassungen</tc:token>
+      <tc:token ID="w4f1">der</tc:token>
+      <tc:token ID="w4f2">Werkzeuge</tc:token>
+      <tc:token ID="w4f3">für</tc:token>
+      <tc:token ID="w4f4">die</tc:token>
+      <tc:token ID="w4f5">kunsthistorische</tc:token>
+      <tc:token ID="w4f6">Domäne</tc:token>
+      <tc:token ID="w4f7">zu</tc:token>
+      <tc:token ID="w4f8">ermitteln</tc:token>
+      <tc:token ID="w4f9">.</tc:token>
+      <tc:token ID="w4fa">Abb.</tc:token>
+      <tc:token ID="w4fb">4</tc:token>
+      <tc:token ID="w4fc">zeigt</tc:token>
+      <tc:token ID="w4fd">das</tc:token>
+      <tc:token ID="w4fe">Ergebnis</tc:token>
+      <tc:token ID="w4ff">der</tc:token>
+      <tc:token ID="w500">StanfordNER-Komponente</tc:token>
+      <tc:token ID="w501">,</tc:token>
+      <tc:token ID="w502">die</tc:token>
+      <tc:token ID="w503">in</tc:token>
+      <tc:token ID="w504">einem</tc:token>
+      <tc:token ID="w505">Text</tc:token>
+      <tc:token ID="w506">der</tc:token>
+      <tc:token ID="w507">Datenbank</tc:token>
+      <tc:token ID="w508">“</tc:token>
+      <tc:token ID="w509">The</tc:token>
+      <tc:token ID="w50a">Daumier</tc:token>
+      <tc:token ID="w50b">Register</tc:token>
+      <tc:token ID="w50c">”</tc:token>
+      <tc:token ID="w50d">(</tc:token>
+      <tc:token ID="w50e">)</tc:token>
+      <tc:token ID="w50f">Eigennamen</tc:token>
+      <tc:token ID="w510">auszeichnet</tc:token>
+      <tc:token ID="w511">:</tc:token>
+      <tc:token ID="w512">Künstlernamen</tc:token>
+      <tc:token ID="w513">(</tc:token>
+      <tc:token ID="w514">“</tc:token>
+      <tc:token ID="w515">Henry</tc:token>
+      <tc:token ID="w516">Monnier</tc:token>
+      <tc:token ID="w517">”</tc:token>
+      <tc:token ID="w518">)</tc:token>
+      <tc:token ID="w519">,</tc:token>
+      <tc:token ID="w51a">Werktitel</tc:token>
+      <tc:token ID="w51b">(</tc:token>
+      <tc:token ID="w51c">“</tc:token>
+      <tc:token ID="w51d">Séraphita</tc:token>
+      <tc:token ID="w51e">”</tc:token>
+      <tc:token ID="w51f">)</tc:token>
+      <tc:token ID="w520">,</tc:token>
+      <tc:token ID="w521">Werkstoffe</tc:token>
+      <tc:token ID="w522">(</tc:token>
+      <tc:token ID="w523">“</tc:token>
+      <tc:token ID="w524">China-Papier</tc:token>
+      <tc:token ID="w525">”</tc:token>
+      <tc:token ID="w526">)</tc:token>
+      <tc:token ID="w527">,</tc:token>
+      <tc:token ID="w528">sowie</tc:token>
+      <tc:token ID="w529">Ortsnamen</tc:token>
+      <tc:token ID="w52a">(</tc:token>
+      <tc:token ID="w52b">“</tc:token>
+      <tc:token ID="w52c">Sevilla</tc:token>
+      <tc:token ID="w52d">”</tc:token>
+      <tc:token ID="w52e">)</tc:token>
+      <tc:token ID="w52f">werden</tc:token>
+      <tc:token ID="w530">mit</tc:token>
+      <tc:token ID="w531">verschiedenen</tc:token>
+      <tc:token ID="w532">Tags</tc:token>
+      <tc:token ID="w533">(</tc:token>
+      <tc:token ID="w534">I-PERS</tc:token>
+      <tc:token ID="w535">,</tc:token>
+      <tc:token ID="w536">I-MISC</tc:token>
+      <tc:token ID="w537">,</tc:token>
+      <tc:token ID="w538">I-</tc:token>
+      <tc:token ID="w539">LOC</tc:token>
+      <tc:token ID="w53a">)</tc:token>
+      <tc:token ID="w53b">gekennzeichnet</tc:token>
+      <tc:token ID="w53c">.</tc:token>
+      <tc:token ID="w53d">Wie</tc:token>
+      <tc:token ID="w53e">sich</tc:token>
+      <tc:token ID="w53f">zeigt</tc:token>
+      <tc:token ID="w540">,</tc:token>
+      <tc:token ID="w541">werden</tc:token>
+      <tc:token ID="w542">jedoch</tc:token>
+      <tc:token ID="w543">nicht</tc:token>
+      <tc:token ID="w544">alle</tc:token>
+      <tc:token ID="w545">Eigennamen</tc:token>
+      <tc:token ID="w546">aufgefunden</tc:token>
+      <tc:token ID="w547">(</tc:token>
+      <tc:token ID="w548">etwa</tc:token>
+      <tc:token ID="w549">“</tc:token>
+      <tc:token ID="w54a">Balzac</tc:token>
+      <tc:token ID="w54b">,</tc:token>
+      <tc:token ID="w54c">Honoré</tc:token>
+      <tc:token ID="w54d">de</tc:token>
+      <tc:token ID="w54e">”</tc:token>
+      <tc:token ID="w54f">)</tc:token>
+      <tc:token ID="w550">,</tc:token>
+      <tc:token ID="w551">was</tc:token>
+      <tc:token ID="w552">v.a.</tc:token>
+      <tc:token ID="w553">darauf</tc:token>
+      <tc:token ID="w554">zurückzuführen</tc:token>
+      <tc:token ID="w555">ist</tc:token>
+      <tc:token ID="w556">,</tc:token>
+      <tc:token ID="w557">dass</tc:token>
+      <tc:token ID="w558">hier</tc:token>
+      <tc:token ID="w559">zunächst</tc:token>
+      <tc:token ID="w55a">nur</tc:token>
+      <tc:token ID="w55b">das</tc:token>
+      <tc:token ID="w55c">für</tc:token>
+      <tc:token ID="w55d">das</tc:token>
+      <tc:token ID="w55e">Deutsche</tc:token>
+      <tc:token ID="w55f">verfügbar</tc:token>
+      <tc:token ID="w560">NER-Modell</tc:token>
+      <tc:token ID="w561">zum</tc:token>
+      <tc:token ID="w562">Einsatz</tc:token>
+      <tc:token ID="w563">kam</tc:token>
+      <tc:token ID="w564">.</tc:token>
+      <tc:token ID="w565">In</tc:token>
+      <tc:token ID="w566">der</tc:token>
+      <tc:token ID="w567">weiteren</tc:token>
+      <tc:token ID="w568">Projektlaufzeit</tc:token>
+      <tc:token ID="w569">muss</tc:token>
+      <tc:token ID="w56a">die</tc:token>
+      <tc:token ID="w56b">Erkennungsrate</tc:token>
+      <tc:token ID="w56c">durch</tc:token>
+      <tc:token ID="w56d">eine</tc:token>
+      <tc:token ID="w56e">Erweiterung</tc:token>
+      <tc:token ID="w56f">und</tc:token>
+      <tc:token ID="w570">Modifikation</tc:token>
+      <tc:token ID="w571">der</tc:token>
+      <tc:token ID="w572">vorhandenen</tc:token>
+      <tc:token ID="w573">Modelle</tc:token>
+      <tc:token ID="w574">verbessert</tc:token>
+      <tc:token ID="w575">werden</tc:token>
+      <tc:token ID="w576">,</tc:token>
+      <tc:token ID="w577">damit</tc:token>
+      <tc:token ID="w578">die</tc:token>
+      <tc:token ID="w579">Daten</tc:token>
+      <tc:token ID="w57a">möglichst</tc:token>
+      <tc:token ID="w57b">präzise</tc:token>
+      <tc:token ID="w57c">und</tc:token>
+      <tc:token ID="w57d">vollständig</tc:token>
+      <tc:token ID="w57e">auswerten</tc:token>
+      <tc:token ID="w57f">werden</tc:token>
+      <tc:token ID="w580">können</tc:token>
+      <tc:token ID="w581">.</tc:token>
+      <tc:token ID="w582">Abb.</tc:token>
+      <tc:token ID="w583">4</tc:token>
+      <tc:token ID="w584">:</tc:token>
+      <tc:token ID="w585">Exemplarisches</tc:token>
+      <tc:token ID="w586">Ergebnis</tc:token>
+      <tc:token ID="w587">der</tc:token>
+      <tc:token ID="w588">Anwendung</tc:token>
+      <tc:token ID="w589">eines</tc:token>
+      <tc:token ID="w58a">verfügbaren</tc:token>
+      <tc:token ID="w58b">Standard-Modells</tc:token>
+      <tc:token ID="w58c">zur</tc:token>
+      <tc:token ID="w58d">Named</tc:token>
+      <tc:token ID="w58e">Entity</tc:token>
+      <tc:token ID="w58f">Recognition</tc:token>
+      <tc:token ID="w590">.</tc:token>
+      <tc:token ID="w591">Das</tc:token>
+      <tc:token ID="w592">beschriebene</tc:token>
+      <tc:token ID="w593">Vorgehen</tc:token>
+      <tc:token ID="w594">wird</tc:token>
+      <tc:token ID="w595">derzeit</tc:token>
+      <tc:token ID="w596">exemplarisch</tc:token>
+      <tc:token ID="w597">an</tc:token>
+      <tc:token ID="w598">ausgewählten</tc:token>
+      <tc:token ID="w599">Datensätzen</tc:token>
+      <tc:token ID="w59a">entwickelt</tc:token>
+      <tc:token ID="w59b">,</tc:token>
+      <tc:token ID="w59c">um</tc:token>
+      <tc:token ID="w59d">anschließend</tc:token>
+      <tc:token ID="w59e">auf</tc:token>
+      <tc:token ID="w59f">den</tc:token>
+      <tc:token ID="w5a0">gesamten</tc:token>
+      <tc:token ID="w5a1">Bildpool</tc:token>
+      <tc:token ID="w5a2">des</tc:token>
+      <tc:token ID="w5a3">prometheus-Bildarchivs</tc:token>
+      <tc:token ID="w5a4">angewendet</tc:token>
+      <tc:token ID="w5a5">zu</tc:token>
+      <tc:token ID="w5a6">werden</tc:token>
+      <tc:token ID="w5a7">.</tc:token>
+      <tc:token ID="w5a8">Ein</tc:token>
+      <tc:token ID="w5a9">wesentliches</tc:token>
+      <tc:token ID="w5aa">Ziel</tc:token>
+      <tc:token ID="w5ab">des</tc:token>
+      <tc:token ID="w5ac">Projekts</tc:token>
+      <tc:token ID="w5ad">ist</tc:token>
+      <tc:token ID="w5ae">es</tc:token>
+      <tc:token ID="w5af">,</tc:token>
+      <tc:token ID="w5b0">eine</tc:token>
+      <tc:token ID="w5b1">größtmögliche</tc:token>
+      <tc:token ID="w5b2">Automatisierung</tc:token>
+      <tc:token ID="w5b3">in</tc:token>
+      <tc:token ID="w5b4">der</tc:token>
+      <tc:token ID="w5b5">Thesauruserstellung</tc:token>
+      <tc:token ID="w5b6">zu</tc:token>
+      <tc:token ID="w5b7">erreichen</tc:token>
+      <tc:token ID="w5b8">.</tc:token>
+      <tc:token ID="w5b9">Das</tc:token>
+      <tc:token ID="w5ba">hierfür</tc:token>
+      <tc:token ID="w5bb">vorgesehene</tc:token>
+      <tc:token ID="w5bc">kombinierte</tc:token>
+      <tc:token ID="w5bd">Ähnlichkeitsmaß</tc:token>
+      <tc:token ID="w5be">ist</tc:token>
+      <tc:token ID="w5bf">flexibel</tc:token>
+      <tc:token ID="w5c0">erweiterbar</tc:token>
+      <tc:token ID="w5c1">.</tc:token>
+      <tc:token ID="w5c2">So</tc:token>
+      <tc:token ID="w5c3">können</tc:token>
+      <tc:token ID="w5c4">zum</tc:token>
+      <tc:token ID="w5c5">einen</tc:token>
+      <tc:token ID="w5c6">zusätzliche</tc:token>
+      <tc:token ID="w5c7">Informationen</tc:token>
+      <tc:token ID="w5c8">aus</tc:token>
+      <tc:token ID="w5c9">externen</tc:token>
+      <tc:token ID="w5ca">Quellen</tc:token>
+      <tc:token ID="w5cb">herangezogen</tc:token>
+      <tc:token ID="w5cc">werden</tc:token>
+      <tc:token ID="w5cd">,</tc:token>
+      <tc:token ID="w5ce">etwa</tc:token>
+      <tc:token ID="w5cf">indem</tc:token>
+      <tc:token ID="w5d0">weitere</tc:token>
+      <tc:token ID="w5d1">,</tc:token>
+      <tc:token ID="w5d2">digital</tc:token>
+      <tc:token ID="w5d3">vorliegende</tc:token>
+      <tc:token ID="w5d4">kunsthistorische</tc:token>
+      <tc:token ID="w5d5">Texte</tc:token>
+      <tc:token ID="w5d6">(</tc:token>
+      <tc:token ID="w5d7">z.B.</tc:token>
+      <tc:token ID="w5d8">das</tc:token>
+      <tc:token ID="w5d9">Reallexikon</tc:token>
+      <tc:token ID="w5da">zur</tc:token>
+      <tc:token ID="w5db">Deutschen</tc:token>
+      <tc:token ID="w5dc">Kunstgeschichte</tc:token>
+      <tc:token ID="w5dd">,</tc:token>
+      <tc:token ID="w5de">RDK</tc:token>
+      <tc:token ID="w5df">,</tc:token>
+      <tc:token ID="w5e0">siehe</tc:token>
+      <tc:token ID="w5e1">http://www.rdklabor.de</tc:token>
+      <tc:token ID="w5e2">)</tc:token>
+      <tc:token ID="w5e3">,</tc:token>
+      <tc:token ID="w5e4">Ausstellungs-</tc:token>
+      <tc:token ID="w5e5">und</tc:token>
+      <tc:token ID="w5e6">Auktionskataloge</tc:token>
+      <tc:token ID="w5e7">(</tc:token>
+      <tc:token ID="w5e8">z.B.</tc:token>
+      <tc:token ID="w5e9">Getty</tc:token>
+      <tc:token ID="w5ea">Art</tc:token>
+      <tc:token ID="w5eb">and</tc:token>
+      <tc:token ID="w5ec">Architecture</tc:token>
+      <tc:token ID="w5ed">,</tc:token>
+      <tc:token ID="w5ee">siehe</tc:token>
+      <tc:token ID="w5ef">,</tc:token>
+      <tc:token ID="w5f0">UB</tc:token>
+      <tc:token ID="w5f1">Heidelberg</tc:token>
+      <tc:token ID="w5f2">http://artsales.uni-hd.de</tc:token>
+      <tc:token ID="w5f3">)</tc:token>
+      <tc:token ID="w5f4">oder</tc:token>
+      <tc:token ID="w5f5">auch</tc:token>
+      <tc:token ID="w5f6">Wikipedia</tc:token>
+      <tc:token ID="w5f7">analysiert</tc:token>
+      <tc:token ID="w5f8">und</tc:token>
+      <tc:token ID="w5f9">klassifiziert</tc:token>
+      <tc:token ID="w5fa">werden</tc:token>
+      <tc:token ID="w5fb">und</tc:token>
+      <tc:token ID="w5fc">mittels</tc:token>
+      <tc:token ID="w5fd">des</tc:token>
+      <tc:token ID="w5fe">erstellten</tc:token>
+      <tc:token ID="w5ff">Thesaurus</tc:token>
+      <tc:token ID="w600">mit</tc:token>
+      <tc:token ID="w601">den</tc:token>
+      <tc:token ID="w602">Datensätzen</tc:token>
+      <tc:token ID="w603">in</tc:token>
+      <tc:token ID="w604">prometheus</tc:token>
+      <tc:token ID="w605">verknüpft</tc:token>
+      <tc:token ID="w606">werden</tc:token>
+      <tc:token ID="w607">.</tc:token>
+      <tc:token ID="w608">Zum</tc:token>
+      <tc:token ID="w609">anderen</tc:token>
+      <tc:token ID="w60a">soll</tc:token>
+      <tc:token ID="w60b">das</tc:token>
+      <tc:token ID="w60c">Ähnlichkeitsmaß</tc:token>
+      <tc:token ID="w60d">auch</tc:token>
+      <tc:token ID="w60e">durch</tc:token>
+      <tc:token ID="w60f">komplementäre</tc:token>
+      <tc:token ID="w610">(</tc:token>
+      <tc:token ID="w611">z.B.</tc:token>
+      <tc:token ID="w612">optische</tc:token>
+      <tc:token ID="w613">)</tc:token>
+      <tc:token ID="w614">Verfahren</tc:token>
+      <tc:token ID="w615">des</tc:token>
+      <tc:token ID="w616">Bildvergleichs</tc:token>
+      <tc:token ID="w617">erweitert</tc:token>
+      <tc:token ID="w618">werden</tc:token>
+      <tc:token ID="w619">.</tc:token>
+      <tc:token ID="w61a">So</tc:token>
+      <tc:token ID="w61b">wurde</tc:token>
+      <tc:token ID="w61c">bspw.</tc:token>
+      <tc:token ID="w61d">zusammen</tc:token>
+      <tc:token ID="w61e">mit</tc:token>
+      <tc:token ID="w61f">der</tc:token>
+      <tc:token ID="w620">Computer</tc:token>
+      <tc:token ID="w621">Vision</tc:token>
+      <tc:token ID="w622">Group</tc:token>
+      <tc:token ID="w623">Heidelberg</tc:token>
+      <tc:token ID="w624">bereits</tc:token>
+      <tc:token ID="w625">ein</tc:token>
+      <tc:token ID="w626">Projekt</tc:token>
+      <tc:token ID="w627">zur</tc:token>
+      <tc:token ID="w628">automatischen</tc:token>
+      <tc:token ID="w629">Bilderkennung</tc:token>
+      <tc:token ID="w62a">angestoßen</tc:token>
+      <tc:token ID="w62b">(</tc:token>
+      <tc:token ID="w62c">siehe</tc:token>
+      <tc:token ID="w62d">Bell/</tc:token>
+      <tc:token ID="w62e">Dieckmann</tc:token>
+      <tc:token ID="w62f">2015</tc:token>
+      <tc:token ID="w630">)</tc:token>
+      <tc:token ID="w631">.</tc:token>
+      <tc:token ID="w632">Durch</tc:token>
+      <tc:token ID="w633">die</tc:token>
+      <tc:token ID="w634">Kombination</tc:token>
+      <tc:token ID="w635">verschiedener</tc:token>
+      <tc:token ID="w636">Methoden</tc:token>
+      <tc:token ID="w637">der</tc:token>
+      <tc:token ID="w638">Ähnlichkeitsberechnung</tc:token>
+      <tc:token ID="w639">zu</tc:token>
+      <tc:token ID="w63a">einem</tc:token>
+      <tc:token ID="w63b">gemeinsamen</tc:token>
+      <tc:token ID="w63c">,</tc:token>
+      <tc:token ID="w63d">multidimensionalen</tc:token>
+      <tc:token ID="w63e">Ähnlichkeitsmaß</tc:token>
+      <tc:token ID="w63f">ist</tc:token>
+      <tc:token ID="w640">der</tc:token>
+      <tc:token ID="w641">hier</tc:token>
+      <tc:token ID="w642">vorgeschlagene</tc:token>
+      <tc:token ID="w643">Ansatz</tc:token>
+      <tc:token ID="w644">in</tc:token>
+      <tc:token ID="w645">hohem</tc:token>
+      <tc:token ID="w646">Maße</tc:token>
+      <tc:token ID="w647">adaptierbar</tc:token>
+      <tc:token ID="w648">für</tc:token>
+      <tc:token ID="w649">vergleichbare</tc:token>
+      <tc:token ID="w64a">Anwendungen</tc:token>
+      <tc:token ID="w64b">.</tc:token>
+      <tc:token ID="w64c">Die</tc:token>
+      <tc:token ID="w64d">im</tc:token>
+      <tc:token ID="w64e">Projekt</tc:token>
+      <tc:token ID="w64f">erarbeitete</tc:token>
+      <tc:token ID="w650">Vorgehensweise</tc:token>
+      <tc:token ID="w651">ist</tc:token>
+      <tc:token ID="w652">somit</tc:token>
+      <tc:token ID="w653">auf</tc:token>
+      <tc:token ID="w654">weitere</tc:token>
+      <tc:token ID="w655">Metadatenpools</tc:token>
+      <tc:token ID="w656">kulturhistorischer</tc:token>
+      <tc:token ID="w657">Inhalte</tc:token>
+      <tc:token ID="w658">übertragbar</tc:token>
+      <tc:token ID="w659">und</tc:token>
+      <tc:token ID="w65a">dank</tc:token>
+      <tc:token ID="w65b">der</tc:token>
+      <tc:token ID="w65c">Automatisierung</tc:token>
+      <tc:token ID="w65d">beliebig</tc:token>
+      <tc:token ID="w65e">skalierbar</tc:token>
+      <tc:token ID="w65f">.</tc:token>
+      <tc:token ID="w660">Metadaten</tc:token>
+      <tc:token ID="w661">und</tc:token>
+      <tc:token ID="w662">Referenzobjekte</tc:token>
+      <tc:token ID="w663">Methodologie</tc:token>
+      <tc:token ID="w664">Zusammenfassung</tc:token>
+      <tc:token ID="w665">und</tc:token>
+      <tc:token ID="w666">Ausblick</tc:token>
+      <tc:token ID="w667">Bell</tc:token>
+      <tc:token ID="w668">,</tc:token>
+      <tc:token ID="w669">Peter</tc:token>
+      <tc:token ID="w66a">/</tc:token>
+      <tc:token ID="w66b">Dieckmann</tc:token>
+      <tc:token ID="w66c">,</tc:token>
+      <tc:token ID="w66d">Lisa</tc:token>
+      <tc:token ID="w66e">(</tc:token>
+      <tc:token ID="w66f">2015</tc:token>
+      <tc:token ID="w670">)</tc:token>
+      <tc:token ID="w671">:</tc:token>
+      <tc:token ID="w672">„</tc:token>
+      <tc:token ID="w673">Die</tc:token>
+      <tc:token ID="w674">Kunst</tc:token>
+      <tc:token ID="w675">als</tc:token>
+      <tc:token ID="w676">Ganzes</tc:token>
+      <tc:token ID="w677">.</tc:token>
+      <tc:token ID="w678">Heterogene</tc:token>
+      <tc:token ID="w679">Bilddatensätze</tc:token>
+      <tc:token ID="w67a">als</tc:token>
+      <tc:token ID="w67b">Herausforderung</tc:token>
+      <tc:token ID="w67c">für</tc:token>
+      <tc:token ID="w67d">die</tc:token>
+      <tc:token ID="w67e">Kunstgeschichte</tc:token>
+      <tc:token ID="w67f">und</tc:token>
+      <tc:token ID="w680">die</tc:token>
+      <tc:token ID="w681">Computer</tc:token>
+      <tc:token ID="w682">Vision</tc:token>
+      <tc:token ID="w683">“</tc:token>
+      <tc:token ID="w684">,</tc:token>
+      <tc:token ID="w685">in</tc:token>
+      <tc:token ID="w686">:</tc:token>
+      <tc:token ID="w687">DHd</tc:token>
+      <tc:token ID="w688">2016</tc:token>
+      <tc:token ID="w689">:</tc:token>
+      <tc:token ID="w68a">Modellierung</tc:token>
+      <tc:token ID="w68b">-</tc:token>
+      <tc:token ID="w68c">Vernetzung</tc:token>
+      <tc:token ID="w68d">-</tc:token>
+      <tc:token ID="w68e">Visualisierung</tc:token>
+      <tc:token ID="w68f">[</tc:token>
+      <tc:token ID="w690">letzter</tc:token>
+      <tc:token ID="w691">Zugriff</tc:token>
+      <tc:token ID="w692">23.</tc:token>
+      <tc:token ID="w693">11.</tc:token>
+      <tc:token ID="w694">2016</tc:token>
+      <tc:token ID="w695">]</tc:token>
+      <tc:token ID="w696">.</tc:token>
+      <tc:token ID="w697">Bell</tc:token>
+      <tc:token ID="w698">,</tc:token>
+      <tc:token ID="w699">Peter</tc:token>
+      <tc:token ID="w69a">/</tc:token>
+      <tc:token ID="w69b">Dieckmann</tc:token>
+      <tc:token ID="w69c">,</tc:token>
+      <tc:token ID="w69d">Lisa</tc:token>
+      <tc:token ID="w69e">/</tc:token>
+      <tc:token ID="w69f">Ommer</tc:token>
+      <tc:token ID="w6a0">,</tc:token>
+      <tc:token ID="w6a1">Björn</tc:token>
+      <tc:token ID="w6a2">/</tc:token>
+      <tc:token ID="w6a3">Takami</tc:token>
+      <tc:token ID="w6a4">,</tc:token>
+      <tc:token ID="w6a5">Masato</tc:token>
+      <tc:token ID="w6a6">(</tc:token>
+      <tc:token ID="w6a7">2015</tc:token>
+      <tc:token ID="w6a8">)</tc:token>
+      <tc:token ID="w6a9">:</tc:token>
+      <tc:token ID="w6aa">Passion</tc:token>
+      <tc:token ID="w6ab">Search</tc:token>
+      <tc:token ID="w6ac">.</tc:token>
+      <tc:token ID="w6ad">Prototype</tc:token>
+      <tc:token ID="w6ae">of</tc:token>
+      <tc:token ID="w6af">an</tc:token>
+      <tc:token ID="w6b0">unrestricted</tc:token>
+      <tc:token ID="w6b1">image</tc:token>
+      <tc:token ID="w6b2">search</tc:token>
+      <tc:token ID="w6b3">of</tc:token>
+      <tc:token ID="w6b4">the</tc:token>
+      <tc:token ID="w6b5">crucifixion</tc:token>
+      <tc:token ID="w6b6">.</tc:token>
+      <tc:token ID="w6b7">[</tc:token>
+      <tc:token ID="w6b8">letzter</tc:token>
+      <tc:token ID="w6b9">Zugriff</tc:token>
+      <tc:token ID="w6ba">23.</tc:token>
+      <tc:token ID="w6bb">11.</tc:token>
+      <tc:token ID="w6bc">2016</tc:token>
+      <tc:token ID="w6bd">]</tc:token>
+      <tc:token ID="w6be">Dieckmann</tc:token>
+      <tc:token ID="w6bf">,</tc:token>
+      <tc:token ID="w6c0">Lisa</tc:token>
+      <tc:token ID="w6c1">(</tc:token>
+      <tc:token ID="w6c2">2015</tc:token>
+      <tc:token ID="w6c3">)</tc:token>
+      <tc:token ID="w6c4">:</tc:token>
+      <tc:token ID="w6c5">„</tc:token>
+      <tc:token ID="w6c6">prometheus</tc:token>
+      <tc:token ID="w6c7">–</tc:token>
+      <tc:token ID="w6c8">das</tc:token>
+      <tc:token ID="w6c9">verteilte</tc:token>
+      <tc:token ID="w6ca">digitale</tc:token>
+      <tc:token ID="w6cb">Bildarchiv</tc:token>
+      <tc:token ID="w6cc">für</tc:token>
+      <tc:token ID="w6cd">Forschung</tc:token>
+      <tc:token ID="w6ce">&amp;</tc:token>
+      <tc:token ID="w6cf">Lehre</tc:token>
+      <tc:token ID="w6d0">e.</tc:token>
+      <tc:token ID="w6d1">V.</tc:token>
+      <tc:token ID="w6d2">“</tc:token>
+      <tc:token ID="w6d3">,</tc:token>
+      <tc:token ID="w6d4">in</tc:token>
+      <tc:token ID="w6d5">:</tc:token>
+      <tc:token ID="w6d6">Euler</tc:token>
+      <tc:token ID="w6d7">,</tc:token>
+      <tc:token ID="w6d8">Ellen</tc:token>
+      <tc:token ID="w6d9">/</tc:token>
+      <tc:token ID="w6da">Hagedorn-Saupe</tc:token>
+      <tc:token ID="w6db">,</tc:token>
+      <tc:token ID="w6dc">Monika</tc:token>
+      <tc:token ID="w6dd">/</tc:token>
+      <tc:token ID="w6de">Maier</tc:token>
+      <tc:token ID="w6df">,</tc:token>
+      <tc:token ID="w6e0">Gerald</tc:token>
+      <tc:token ID="w6e1">/</tc:token>
+      <tc:token ID="w6e2">Schweibenz</tc:token>
+      <tc:token ID="w6e3">,</tc:token>
+      <tc:token ID="w6e4">Werner</tc:token>
+      <tc:token ID="w6e5">/</tc:token>
+      <tc:token ID="w6e6">Sieglerschmidt</tc:token>
+      <tc:token ID="w6e7">,</tc:token>
+      <tc:token ID="w6e8">Jörn</tc:token>
+      <tc:token ID="w6e9">(</tc:token>
+      <tc:token ID="w6ea">eds</tc:token>
+      <tc:token ID="w6eb">.</tc:token>
+      <tc:token ID="w6ec">)</tc:token>
+      <tc:token ID="w6ed">:</tc:token>
+      <tc:token ID="w6ee">Handbuch</tc:token>
+      <tc:token ID="w6ef">Kulturportale</tc:token>
+      <tc:token ID="w6f0">.</tc:token>
+      <tc:token ID="w6f1">Online-Angebote</tc:token>
+      <tc:token ID="w6f2">aus</tc:token>
+      <tc:token ID="w6f3">Kultur</tc:token>
+      <tc:token ID="w6f4">und</tc:token>
+      <tc:token ID="w6f5">Wissenschaft</tc:token>
+      <tc:token ID="w6f6">.</tc:token>
+      <tc:token ID="w6f7">Berlin</tc:token>
+      <tc:token ID="w6f8">/</tc:token>
+      <tc:token ID="w6f9">Boston</tc:token>
+      <tc:token ID="w6fa">:</tc:token>
+      <tc:token ID="w6fb">DeGruyter</tc:token>
+      <tc:token ID="w6fc">223–229</tc:token>
+      <tc:token ID="w6fd">.</tc:token>
+      <tc:token ID="w6fe">Hermes</tc:token>
+      <tc:token ID="w6ff">,</tc:token>
+      <tc:token ID="w700">Jürgen</tc:token>
+      <tc:token ID="w701">(</tc:token>
+      <tc:token ID="w702">2012</tc:token>
+      <tc:token ID="w703">)</tc:token>
+      <tc:token ID="w704">:</tc:token>
+      <tc:token ID="w705">Textprozessierung</tc:token>
+      <tc:token ID="w706">:</tc:token>
+      <tc:token ID="w707">Design</tc:token>
+      <tc:token ID="w708">und</tc:token>
+      <tc:token ID="w709">Applikation</tc:token>
+      <tc:token ID="w70a">.</tc:token>
+      <tc:token ID="w70b">Dissertation</tc:token>
+      <tc:token ID="w70c">,</tc:token>
+      <tc:token ID="w70d">Universität</tc:token>
+      <tc:token ID="w70e">zu</tc:token>
+      <tc:token ID="w70f">Köln</tc:token>
+      <tc:token ID="w710">.</tc:token>
+      <tc:token ID="w711">[</tc:token>
+      <tc:token ID="w712">letzter</tc:token>
+      <tc:token ID="w713">Zugriff</tc:token>
+      <tc:token ID="w714">23.</tc:token>
+      <tc:token ID="w715">November</tc:token>
+      <tc:token ID="w716">2016</tc:token>
+      <tc:token ID="w717">]</tc:token>
+      <tc:token ID="w718">.</tc:token>
+      <tc:token ID="w719">Neuefeind</tc:token>
+      <tc:token ID="w71a">,</tc:token>
+      <tc:token ID="w71b">Claes</tc:token>
+      <tc:token ID="w71c">(</tc:token>
+      <tc:token ID="w71d">2013</tc:token>
+      <tc:token ID="w71e">)</tc:token>
+      <tc:token ID="w71f">:</tc:token>
+      <tc:token ID="w720">„</tc:token>
+      <tc:token ID="w721">The</tc:token>
+      <tc:token ID="w722">Digital</tc:token>
+      <tc:token ID="w723">Romansh</tc:token>
+      <tc:token ID="w724">Chrestomathy</tc:token>
+      <tc:token ID="w725">.</tc:token>
+      <tc:token ID="w726">Towards</tc:token>
+      <tc:token ID="w727">an</tc:token>
+      <tc:token ID="w728">Annotated</tc:token>
+      <tc:token ID="w729">Corpus</tc:token>
+      <tc:token ID="w72a">of</tc:token>
+      <tc:token ID="w72b">Romansh</tc:token>
+      <tc:token ID="w72c">“</tc:token>
+      <tc:token ID="w72d">,</tc:token>
+      <tc:token ID="w72e">in</tc:token>
+      <tc:token ID="w72f">:</tc:token>
+      <tc:token ID="w730">Zampieri</tc:token>
+      <tc:token ID="w731">,</tc:token>
+      <tc:token ID="w732">Marcos</tc:token>
+      <tc:token ID="w733">/</tc:token>
+      <tc:token ID="w734">Diwersy</tc:token>
+      <tc:token ID="w735">,</tc:token>
+      <tc:token ID="w736">Sascha</tc:token>
+      <tc:token ID="w737">(</tc:token>
+      <tc:token ID="w738">eds.</tc:token>
+      <tc:token ID="w739">)</tc:token>
+      <tc:token ID="w73a">,</tc:token>
+      <tc:token ID="w73b">Special</tc:token>
+      <tc:token ID="w73c">Volume</tc:token>
+      <tc:token ID="w73d">on</tc:token>
+      <tc:token ID="w73e">Non-Standard</tc:token>
+      <tc:token ID="w73f">Data</tc:token>
+      <tc:token ID="w740">Sources</tc:token>
+      <tc:token ID="w741">in</tc:token>
+      <tc:token ID="w742">Corpus-Based</tc:token>
+      <tc:token ID="w743">Research</tc:token>
+      <tc:token ID="w744">(</tc:token>
+      <tc:token ID="w745">ZSM</tc:token>
+      <tc:token ID="w746">Studien</tc:token>
+      <tc:token ID="w747">5</tc:token>
+      <tc:token ID="w748">)</tc:token>
+      <tc:token ID="w749">.</tc:token>
+      <tc:token ID="w74a">Aachen</tc:token>
+      <tc:token ID="w74b">:</tc:token>
+      <tc:token ID="w74c">Shaker</tc:token>
+      <tc:token ID="w74d">41–58</tc:token>
+      <tc:token ID="w74e">.</tc:token>
+      <tc:token ID="w74f">Schwiebert</tc:token>
+      <tc:token ID="w750">,</tc:token>
+      <tc:token ID="w751">Stephan</tc:token>
+      <tc:token ID="w752">(</tc:token>
+      <tc:token ID="w753">2012</tc:token>
+      <tc:token ID="w754">)</tc:token>
+      <tc:token ID="w755">:</tc:token>
+      <tc:token ID="w756">Tesla</tc:token>
+      <tc:token ID="w757">-</tc:token>
+      <tc:token ID="w758">ein</tc:token>
+      <tc:token ID="w759">virtuelles</tc:token>
+      <tc:token ID="w75a">Labor</tc:token>
+      <tc:token ID="w75b">für</tc:token>
+      <tc:token ID="w75c">experimentelle</tc:token>
+      <tc:token ID="w75d">Computer-</tc:token>
+      <tc:token ID="w75e">und</tc:token>
+      <tc:token ID="w75f">Korpuslinguistik</tc:token>
+      <tc:token ID="w760">.</tc:token>
+      <tc:token ID="w761">Dissertation</tc:token>
+      <tc:token ID="w762">,</tc:token>
+      <tc:token ID="w763">Universität</tc:token>
+      <tc:token ID="w764">zu</tc:token>
+      <tc:token ID="w765">Köln</tc:token>
+      <tc:token ID="w766">.</tc:token>
+      <tc:token ID="w767">[</tc:token>
+      <tc:token ID="w768">letzter</tc:token>
+      <tc:token ID="w769">Zugriff</tc:token>
+      <tc:token ID="w76a">23.</tc:token>
+      <tc:token ID="w76b">November</tc:token>
+      <tc:token ID="w76c">2016</tc:token>
+      <tc:token ID="w76d">]</tc:token>
+      <tc:token ID="w76e">.</tc:token>
+      <tc:token ID="w76f">Bibliographie</tc:token>
+    </tc:tokens>
+    <tc:sentences xmlns:tc="http://www.dspin.de/data/textcorpus">
+      <tc:sentence tokenIDs="w1 w2 w3 w4 w5 w6 w7 w8 w9 wa wb wc wd we wf w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w1a w1b w1c w1d w1e w1f w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 w2a w2b w2c w2d" ID="s1"/>
+      <tc:sentence tokenIDs="w2e w2f w30 w31 w32 w33 w34 w35 w36 w37 w38 w39 w3a w3b w3c w3d w3e" ID="s2"/>
+      <tc:sentence tokenIDs="w3f w40 w41 w42 w43 w44 w45 w46 w47 w48 w49 w4a w4b w4c w4d w4e w4f w50 w51 w52 w53 w54 w55 w56 w57 w58 w59 w5a" ID="s3"/>
+      <tc:sentence tokenIDs="w5b w5c w5d w5e w5f w60 w61 w62 w63 w64 w65 w66 w67 w68 w69 w6a w6b w6c w6d w6e w6f w70 w71 w72 w73 w74 w75 w76 w77 w78 w79 w7a w7b w7c w7d w7e w7f w80 w81 w82 w83 w84 w85 w86 w87 w88 w89 w8a w8b w8c" ID="s4"/>
+      <tc:sentence tokenIDs="w8d w8e w8f w90 w91 w92 w93 w94 w95 w96 w97 w98 w99 w9a w9b w9c w9d w9e w9f wa0 wa1 wa2 wa3 wa4 wa5 wa6 wa7 wa8 wa9 waa wab wac wad wae waf wb0 wb1 wb2 wb3 wb4 wb5 wb6 wb7 wb8 wb9 wba wbb wbc wbd wbe wbf wc0 wc1 wc2 wc3" ID="s5"/>
+      <tc:sentence tokenIDs="wc4 wc5 wc6 wc7 wc8 wc9 wca wcb wcc wcd wce wcf wd0 wd1 wd2 wd3 wd4 wd5 wd6 wd7 wd8 wd9 wda wdb wdc wdd wde wdf we0 we1 we2 we3 we4 we5 we6 we7 we8 we9 wea web wec" ID="s6"/>
+      <tc:sentence tokenIDs="wed wee wef wf0 wf1 wf2 wf3 wf4 wf5 wf6 wf7 wf8 wf9 wfa wfb wfc wfd wfe wff w100 w101 w102 w103 w104 w105 w106 w107 w108 w109 w10a w10b w10c w10d w10e w10f w110 w111 w112" ID="s7"/>
+      <tc:sentence tokenIDs="w113 w114 w115 w116 w117 w118 w119 w11a w11b w11c w11d w11e w11f w120 w121 w122 w123 w124 w125 w126 w127 w128 w129 w12a w12b w12c w12d w12e w12f w130 w131 w132 w133 w134 w135 w136 w137 w138 w139 w13a w13b w13c w13d w13e w13f w140 w141 w142 w143 w144 w145 w146 w147 w148 w149 w14a" ID="s8"/>
+      <tc:sentence tokenIDs="w14b w14c w14d w14e w14f w150 w151 w152 w153 w154 w155 w156 w157 w158 w159 w15a w15b w15c w15d w15e w15f w160 w161 w162 w163 w164 w165 w166 w167 w168 w169 w16a w16b" ID="s9"/>
+      <tc:sentence tokenIDs="w16c w16d w16e w16f w170 w171 w172 w173 w174 w175 w176 w177 w178 w179" ID="sa"/>
+      <tc:sentence tokenIDs="w17a w17b w17c w17d w17e w17f w180 w181 w182 w183 w184 w185 w186 w187 w188 w189 w18a w18b w18c w18d w18e w18f w190 w191 w192 w193 w194 w195 w196 w197 w198 w199 w19a w19b w19c w19d w19e w19f w1a0 w1a1 w1a2 w1a3 w1a4 w1a5 w1a6 w1a7 w1a8 w1a9 w1aa w1ab w1ac w1ad w1ae w1af w1b0 w1b1 w1b2 w1b3 w1b4 w1b5 w1b6" ID="sb"/>
+      <tc:sentence tokenIDs="w1b7 w1b8 w1b9 w1ba w1bb w1bc w1bd w1be w1bf w1c0 w1c1 w1c2 w1c3 w1c4 w1c5 w1c6 w1c7 w1c8 w1c9 w1ca w1cb w1cc" ID="sc"/>
+      <tc:sentence tokenIDs="w1cd w1ce w1cf w1d0 w1d1 w1d2 w1d3 w1d4 w1d5 w1d6 w1d7 w1d8 w1d9 w1da w1db w1dc w1dd w1de w1df w1e0 w1e1 w1e2 w1e3 w1e4 w1e5 w1e6 w1e7 w1e8 w1e9 w1ea w1eb w1ec w1ed w1ee w1ef w1f0 w1f1 w1f2 w1f3 w1f4 w1f5 w1f6 w1f7 w1f8 w1f9 w1fa w1fb w1fc w1fd w1fe w1ff" ID="sd"/>
+      <tc:sentence tokenIDs="w200 w201 w202 w203 w204 w205 w206 w207 w208 w209 w20a w20b w20c w20d w20e w20f w210 w211 w212 w213 w214 w215 w216 w217 w218 w219 w21a w21b w21c w21d w21e w21f w220 w221 w222 w223 w224 w225 w226 w227 w228 w229 w22a w22b w22c w22d w22e w22f w230 w231 w232 w233 w234 w235 w236 w237 w238 w239" ID="se"/>
+      <tc:sentence tokenIDs="w23a w23b w23c w23d w23e w23f w240 w241 w242 w243 w244 w245 w246 w247 w248 w249 w24a w24b" ID="sf"/>
+      <tc:sentence tokenIDs="w24c w24d w24e w24f w250 w251 w252 w253 w254 w255 w256 w257 w258 w259 w25a w25b w25c w25d w25e w25f w260 w261 w262 w263 w264" ID="s10"/>
+      <tc:sentence tokenIDs="w265 w266 w267 w268 w269 w26a w26b w26c w26d w26e w26f w270 w271 w272 w273 w274 w275 w276 w277 w278 w279 w27a w27b w27c w27d w27e w27f w280 w281" ID="s11"/>
+      <tc:sentence tokenIDs="w282 w283 w284 w285 w286 w287 w288 w289 w28a w28b w28c w28d w28e w28f w290 w291 w292" ID="s12"/>
+      <tc:sentence tokenIDs="w293 w294 w295 w296 w297 w298 w299 w29a w29b w29c w29d w29e w29f w2a0 w2a1 w2a2 w2a3 w2a4 w2a5 w2a6 w2a7 w2a8" ID="s13"/>
+      <tc:sentence tokenIDs="w2a9 w2aa w2ab w2ac w2ad w2ae w2af w2b0 w2b1 w2b2 w2b3 w2b4 w2b5 w2b6 w2b7 w2b8 w2b9 w2ba w2bb w2bc w2bd w2be w2bf w2c0 w2c1 w2c2 w2c3 w2c4 w2c5 w2c6 w2c7 w2c8 w2c9 w2ca w2cb w2cc" ID="s14"/>
+      <tc:sentence tokenIDs="w2cd w2ce w2cf w2d0 w2d1 w2d2 w2d3 w2d4 w2d5 w2d6 w2d7 w2d8 w2d9 w2da w2db w2dc w2dd w2de w2df w2e0 w2e1 w2e2" ID="s15"/>
+      <tc:sentence tokenIDs="w2e3 w2e4 w2e5 w2e6 w2e7 w2e8 w2e9 w2ea w2eb w2ec w2ed w2ee w2ef w2f0 w2f1 w2f2 w2f3 w2f4 w2f5 w2f6 w2f7 w2f8 w2f9 w2fa w2fb w2fc w2fd w2fe w2ff w300 w301 w302 w303 w304 w305 w306 w307 w308 w309 w30a w30b w30c w30d w30e w30f w310 w311 w312 w313 w314 w315" ID="s16"/>
+      <tc:sentence tokenIDs="w316 w317 w318 w319 w31a w31b w31c w31d w31e w31f w320 w321 w322 w323 w324 w325 w326 w327 w328" ID="s17"/>
+      <tc:sentence tokenIDs="w329 w32a w32b w32c w32d w32e w32f w330 w331 w332 w333 w334 w335 w336 w337 w338 w339 w33a w33b w33c w33d w33e w33f w340 w341" ID="s18"/>
+      <tc:sentence tokenIDs="w342 w343 w344 w345 w346 w347 w348 w349 w34a w34b w34c w34d w34e w34f w350 w351" ID="s19"/>
+      <tc:sentence tokenIDs="w352 w353 w354 w355 w356 w357 w358 w359 w35a w35b w35c w35d w35e w35f w360 w361 w362 w363 w364 w365 w366 w367 w368 w369 w36a w36b w36c w36d w36e w36f w370 w371 w372 w373 w374 w375 w376 w377 w378 w379 w37a w37b w37c w37d w37e w37f w380 w381 w382 w383 w384 w385 w386 w387 w388 w389 w38a" ID="s1a"/>
+      <tc:sentence tokenIDs="w38b w38c w38d w38e w38f w390 w391 w392 w393 w394 w395 w396 w397 w398 w399 w39a w39b w39c w39d w39e w39f w3a0 w3a1 w3a2 w3a3 w3a4 w3a5 w3a6 w3a7 w3a8 w3a9 w3aa" ID="s1b"/>
+      <tc:sentence tokenIDs="w3ab w3ac w3ad w3ae w3af w3b0 w3b1 w3b2 w3b3 w3b4 w3b5 w3b6 w3b7 w3b8 w3b9 w3ba" ID="s1c"/>
+      <tc:sentence tokenIDs="w3bb w3bc w3bd w3be w3bf w3c0 w3c1 w3c2 w3c3 w3c4 w3c5 w3c6 w3c7 w3c8 w3c9 w3ca w3cb w3cc w3cd w3ce w3cf w3d0 w3d1 w3d2 w3d3 w3d4 w3d5 w3d6 w3d7 w3d8 w3d9 w3da w3db w3dc w3dd w3de w3df w3e0" ID="s1d"/>
+      <tc:sentence tokenIDs="w3e1 w3e2 w3e3 w3e4 w3e5 w3e6 w3e7 w3e8 w3e9 w3ea w3eb w3ec w3ed w3ee" ID="s1e"/>
+      <tc:sentence tokenIDs="w3ef w3f0 w3f1 w3f2 w3f3 w3f4 w3f5 w3f6 w3f7 w3f8 w3f9 w3fa w3fb w3fc w3fd w3fe w3ff w400 w401 w402 w403 w404 w405 w406 w407 w408 w409 w40a w40b w40c w40d w40e w40f" ID="s1f"/>
+      <tc:sentence tokenIDs="w410 w411 w412 w413 w414 w415 w416 w417 w418 w419 w41a w41b" ID="s20"/>
+      <tc:sentence tokenIDs="w41c w41d w41e w41f w420 w421 w422 w423 w424 w425 w426 w427 w428 w429 w42a w42b w42c w42d w42e w42f" ID="s21"/>
+      <tc:sentence tokenIDs="w430 w431 w432 w433 w434 w435 w436 w437 w438 w439 w43a w43b w43c w43d w43e w43f w440 w441 w442 w443 w444 w445 w446 w447 w448 w449 w44a w44b w44c w44d w44e w44f w450 w451 w452 w453 w454 w455 w456 w457 w458 w459 w45a w45b w45c w45d w45e w45f w460 w461 w462 w463 w464 w465 w466 w467 w468 w469 w46a w46b w46c" ID="s22"/>
+      <tc:sentence tokenIDs="w46d w46e w46f w470 w471 w472 w473 w474 w475 w476 w477 w478 w479 w47a w47b w47c w47d w47e w47f w480 w481 w482" ID="s23"/>
+      <tc:sentence tokenIDs="w483 w484 w485 w486 w487 w488 w489 w48a w48b w48c w48d w48e w48f w490 w491 w492 w493 w494 w495 w496 w497" ID="s24"/>
+      <tc:sentence tokenIDs="w498 w499 w49a w49b w49c w49d w49e w49f w4a0 w4a1 w4a2 w4a3 w4a4 w4a5 w4a6 w4a7 w4a8 w4a9 w4aa w4ab w4ac w4ad w4ae w4af w4b0 w4b1 w4b2 w4b3 w4b4 w4b5 w4b6 w4b7 w4b8 w4b9 w4ba w4bb" ID="s25"/>
+      <tc:sentence tokenIDs="w4bc w4bd w4be w4bf w4c0 w4c1 w4c2 w4c3 w4c4 w4c5 w4c6" ID="s26"/>
+      <tc:sentence tokenIDs="w4c7 w4c8 w4c9 w4ca w4cb w4cc w4cd w4ce w4cf w4d0 w4d1 w4d2 w4d3 w4d4 w4d5 w4d6 w4d7 w4d8 w4d9 w4da w4db w4dc w4dd w4de w4df w4e0 w4e1 w4e2 w4e3 w4e4 w4e5 w4e6 w4e7 w4e8 w4e9 w4ea w4eb w4ec w4ed w4ee w4ef w4f0 w4f1 w4f2 w4f3 w4f4 w4f5 w4f6 w4f7 w4f8 w4f9" ID="s27"/>
+      <tc:sentence tokenIDs="w4fa w4fb w4fc w4fd w4fe w4ff w500 w501 w502 w503 w504 w505 w506 w507 w508 w509 w50a w50b w50c w50d w50e w50f w510 w511" ID="s28"/>
+      <tc:sentence tokenIDs="w512 w513 w514 w515 w516 w517 w518 w519 w51a w51b w51c w51d w51e w51f w520 w521 w522 w523 w524 w525 w526 w527 w528 w529 w52a w52b w52c w52d w52e w52f w530 w531 w532 w533 w534 w535 w536 w537 w538 w539 w53a w53b w53c" ID="s29"/>
+      <tc:sentence tokenIDs="w53d w53e w53f w540 w541 w542 w543 w544 w545 w546 w547 w548 w549 w54a w54b w54c w54d w54e w54f w550 w551 w552 w553 w554 w555 w556 w557 w558 w559 w55a w55b w55c w55d w55e w55f w560 w561 w562 w563 w564" ID="s2a"/>
+      <tc:sentence tokenIDs="w565 w566 w567 w568 w569 w56a w56b w56c w56d w56e w56f w570 w571 w572 w573 w574 w575 w576 w577 w578 w579 w57a w57b w57c w57d w57e w57f w580 w581" ID="s2b"/>
+      <tc:sentence tokenIDs="w582 w583 w584 w585 w586 w587 w588 w589 w58a w58b w58c w58d w58e w58f w590" ID="s2c"/>
+      <tc:sentence tokenIDs="w591 w592 w593 w594 w595 w596 w597 w598 w599 w59a w59b w59c w59d w59e w59f w5a0 w5a1 w5a2 w5a3 w5a4 w5a5 w5a6 w5a7" ID="s2d"/>
+      <tc:sentence tokenIDs="w5a8 w5a9 w5aa w5ab w5ac w5ad w5ae w5af w5b0 w5b1 w5b2 w5b3 w5b4 w5b5 w5b6 w5b7 w5b8" ID="s2e"/>
+      <tc:sentence tokenIDs="w5b9 w5ba w5bb w5bc w5bd w5be w5bf w5c0 w5c1" ID="s2f"/>
+      <tc:sentence tokenIDs="w5c2 w5c3 w5c4 w5c5 w5c6 w5c7 w5c8 w5c9 w5ca w5cb w5cc w5cd w5ce w5cf w5d0 w5d1 w5d2 w5d3 w5d4 w5d5 w5d6 w5d7 w5d8 w5d9 w5da w5db w5dc w5dd w5de w5df w5e0 w5e1 w5e2 w5e3 w5e4 w5e5 w5e6 w5e7 w5e8 w5e9 w5ea w5eb w5ec w5ed w5ee w5ef w5f0 w5f1 w5f2 w5f3 w5f4 w5f5 w5f6 w5f7 w5f8 w5f9 w5fa w5fb w5fc w5fd w5fe w5ff w600 w601 w602 w603 w604 w605 w606 w607" ID="s30"/>
+      <tc:sentence tokenIDs="w608 w609 w60a w60b w60c w60d w60e w60f w610 w611 w612 w613 w614 w615 w616 w617 w618 w619" ID="s31"/>
+      <tc:sentence tokenIDs="w61a w61b w61c w61d w61e w61f w620 w621 w622 w623 w624 w625 w626 w627 w628 w629 w62a w62b w62c w62d w62e w62f w630 w631" ID="s32"/>
+      <tc:sentence tokenIDs="w632 w633 w634 w635 w636 w637 w638 w639 w63a w63b w63c w63d w63e w63f w640 w641 w642 w643 w644 w645 w646 w647 w648 w649 w64a w64b" ID="s33"/>
+      <tc:sentence tokenIDs="w64c w64d w64e w64f w650 w651 w652 w653 w654 w655 w656 w657 w658 w659 w65a w65b w65c w65d w65e w65f" ID="s34"/>
+      <tc:sentence tokenIDs="w660 w661 w662 w663 w664 w665 w666 w667 w668 w669 w66a w66b w66c w66d w66e w66f w670 w671" ID="s35"/>
+      <tc:sentence tokenIDs="w672 w673 w674 w675 w676 w677" ID="s36"/>
+      <tc:sentence tokenIDs="w678 w679 w67a w67b w67c w67d w67e w67f w680 w681 w682 w683 w684 w685 w686 w687 w688 w689 w68a w68b w68c w68d w68e w68f w690 w691 w692 w693 w694 w695 w696" ID="s37"/>
+      <tc:sentence tokenIDs="w697 w698 w699 w69a w69b w69c w69d w69e w69f w6a0 w6a1 w6a2 w6a3 w6a4 w6a5 w6a6 w6a7 w6a8 w6a9 w6aa w6ab w6ac" ID="s38"/>
+      <tc:sentence tokenIDs="w6ad w6ae w6af w6b0 w6b1 w6b2 w6b3 w6b4 w6b5 w6b6" ID="s39"/>
+      <tc:sentence tokenIDs="w6b7 w6b8 w6b9 w6ba w6bb w6bc w6bd w6be w6bf w6c0 w6c1 w6c2 w6c3 w6c4 w6c5 w6c6 w6c7 w6c8 w6c9 w6ca w6cb w6cc w6cd w6ce w6cf w6d0 w6d1 w6d2 w6d3 w6d4 w6d5 w6d6 w6d7 w6d8 w6d9 w6da w6db w6dc w6dd w6de w6df w6e0 w6e1 w6e2 w6e3 w6e4 w6e5 w6e6 w6e7 w6e8 w6e9 w6ea w6eb w6ec w6ed w6ee w6ef w6f0" ID="s3a"/>
+      <tc:sentence tokenIDs="w6f1 w6f2 w6f3 w6f4 w6f5 w6f6" ID="s3b"/>
+      <tc:sentence tokenIDs="w6f7 w6f8 w6f9 w6fa w6fb w6fc w6fd" ID="s3c"/>
+      <tc:sentence tokenIDs="w6fe w6ff w700 w701 w702 w703 w704 w705 w706 w707 w708 w709 w70a" ID="s3d"/>
+      <tc:sentence tokenIDs="w70b w70c w70d w70e w70f w710" ID="s3e"/>
+      <tc:sentence tokenIDs="w711 w712 w713 w714 w715 w716 w717 w718" ID="s3f"/>
+      <tc:sentence tokenIDs="w719 w71a w71b w71c w71d w71e w71f" ID="s40"/>
+      <tc:sentence tokenIDs="w720 w721 w722 w723 w724 w725" ID="s41"/>
+      <tc:sentence tokenIDs="w726 w727 w728 w729 w72a w72b w72c w72d w72e w72f w730 w731 w732 w733 w734 w735 w736 w737 w738 w739 w73a w73b w73c w73d w73e w73f w740 w741 w742 w743 w744 w745 w746 w747 w748 w749" ID="s42"/>
+      <tc:sentence tokenIDs="w74a w74b w74c w74d w74e" ID="s43"/>
+      <tc:sentence tokenIDs="w74f w750 w751 w752 w753 w754 w755" ID="s44"/>
+      <tc:sentence tokenIDs="w756 w757 w758 w759 w75a w75b w75c w75d w75e w75f w760" ID="s45"/>
+      <tc:sentence tokenIDs="w761 w762 w763 w764 w765 w766" ID="s46"/>
+      <tc:sentence tokenIDs="w767 w768 w769 w76a w76b w76c w76d w76e" ID="s47"/>
+      <tc:sentence tokenIDs="w76f" ID="s48"/>
+    </tc:sentences>
+    <tc:namedEntities xmlns:tc="http://www.dspin.de/data/textcorpus" type="tuebadz8">
+      <tc:entity class="PER" tokenIDs="w2a"/>
+      <tc:entity class="ORG" tokenIDs="w92"/>
+      <tc:entity class="GPE" tokenIDs="w94"/>
+      <tc:entity class="PER" tokenIDs="wb3"/>
+      <tc:entity class="OTH" tokenIDs="w180 w181 w182 w183 w184 w185"/>
+      <tc:entity class="PER" tokenIDs="w188 w189"/>
+      <tc:entity class="GPE" tokenIDs="w18b"/>
+      <tc:entity class="ORG" tokenIDs="w190"/>
+      <tc:entity class="PER" tokenIDs="w1a7"/>
+      <tc:entity class="LOC" tokenIDs="w1aa"/>
+      <tc:entity class="PER" tokenIDs="w1ae"/>
+      <tc:entity class="LOC" tokenIDs="w1b2 w1b3"/>
+      <tc:entity class="ORG" tokenIDs="w1c0 w1c1"/>
+      <tc:entity class="ORG" tokenIDs="w1c3"/>
+      <tc:entity class="ORG" tokenIDs="w206"/>
+      <tc:entity class="ORG" tokenIDs="w31d"/>
+      <tc:entity class="ORG" tokenIDs="w3b7"/>
+      <tc:entity class="ORG" tokenIDs="w410 w411"/>
+      <tc:entity class="GPE" tokenIDs="w42a"/>
+      <tc:entity class="OTH" tokenIDs="w4bf w4c0 w4c1 w4c2 w4c3 w4c4 w4c5"/>
+      <tc:entity class="ORG" tokenIDs="w4d4 w4d5 w4d6 w4d7"/>
+      <tc:entity class="ORG" tokenIDs="w4fa w4fb"/>
+      <tc:entity class="OTH" tokenIDs="w509 w50a w50b"/>
+      <tc:entity class="PER" tokenIDs="w515 w516"/>
+      <tc:entity class="GPE" tokenIDs="w52c"/>
+      <tc:entity class="ORG" tokenIDs="w536"/>
+      <tc:entity class="OTH" tokenIDs="w538 w539"/>
+      <tc:entity class="PER" tokenIDs="w54a"/>
+      <tc:entity class="PER" tokenIDs="w54c w54d"/>
+      <tc:entity class="ORG" tokenIDs="w5d9"/>
+      <tc:entity class="ORG" tokenIDs="w5e9 w5ea w5eb w5ec"/>
+      <tc:entity class="ORG" tokenIDs="w5f0 w5f1"/>
+      <tc:entity class="ORG" tokenIDs="w5f6"/>
+      <tc:entity class="ORG" tokenIDs="w604"/>
+      <tc:entity class="ORG" tokenIDs="w621 w622 w623"/>
+      <tc:entity class="PER" tokenIDs="w62d w62e"/>
+      <tc:entity class="PER" tokenIDs="w667"/>
+      <tc:entity class="PER" tokenIDs="w669"/>
+      <tc:entity class="PER" tokenIDs="w66b"/>
+      <tc:entity class="PER" tokenIDs="w66d"/>
+      <tc:entity class="PER" tokenIDs="w687"/>
+      <tc:entity class="PER" tokenIDs="w697 w698 w699"/>
+      <tc:entity class="PER" tokenIDs="w69b"/>
+      <tc:entity class="PER" tokenIDs="w69d"/>
+      <tc:entity class="PER" tokenIDs="w69f"/>
+      <tc:entity class="PER" tokenIDs="w6a1"/>
+      <tc:entity class="PER" tokenIDs="w6a3"/>
+      <tc:entity class="PER" tokenIDs="w6a5"/>
+      <tc:entity class="OTH" tokenIDs="w6aa w6ab"/>
+      <tc:entity class="OTH" tokenIDs="w6be w6bf w6c0"/>
+      <tc:entity class="ORG" tokenIDs="w6c6"/>
+      <tc:entity class="ORG" tokenIDs="w6cd w6ce w6cf w6d0 w6d1"/>
+      <tc:entity class="PER" tokenIDs="w6d6"/>
+      <tc:entity class="PER" tokenIDs="w6d8"/>
+      <tc:entity class="PER" tokenIDs="w6da"/>
+      <tc:entity class="PER" tokenIDs="w6dc"/>
+      <tc:entity class="PER" tokenIDs="w6de"/>
+      <tc:entity class="PER" tokenIDs="w6e0"/>
+      <tc:entity class="PER" tokenIDs="w6e2"/>
+      <tc:entity class="PER" tokenIDs="w6e4"/>
+      <tc:entity class="PER" tokenIDs="w6e6"/>
+      <tc:entity class="PER" tokenIDs="w6e8"/>
+      <tc:entity class="GPE" tokenIDs="w6f7"/>
+      <tc:entity class="GPE" tokenIDs="w6f9"/>
+      <tc:entity class="PER" tokenIDs="w6fb"/>
+      <tc:entity class="PER" tokenIDs="w6fe w6ff w700"/>
+      <tc:entity class="GPE" tokenIDs="w70f"/>
+      <tc:entity class="PER" tokenIDs="w71b"/>
+      <tc:entity class="OTH" tokenIDs="w721 w722 w723 w724"/>
+      <tc:entity class="OTH" tokenIDs="w726 w727 w728 w729 w72a w72b"/>
+      <tc:entity class="PER" tokenIDs="w730"/>
+      <tc:entity class="PER" tokenIDs="w732"/>
+      <tc:entity class="PER" tokenIDs="w734"/>
+      <tc:entity class="PER" tokenIDs="w736"/>
+      <tc:entity class="OTH" tokenIDs="w73b w73c w73d w73e w73f w740 w741 w742 w743"/>
+      <tc:entity class="ORG" tokenIDs="w745"/>
+      <tc:entity class="GPE" tokenIDs="w74a"/>
+      <tc:entity class="OTH" tokenIDs="w74c w74d"/>
+      <tc:entity class="PER" tokenIDs="w74f w750 w751"/>
+      <tc:entity class="ORG" tokenIDs="w756"/>
+      <tc:entity class="GPE" tokenIDs="w765"/>
+    </tc:namedEntities>
+  </TextCorpus>
+</D-Spin>
