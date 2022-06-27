@@ -28,6 +28,8 @@
 
 Das Projekt zur Zitation von Forschungssoftware in den Digital Humanities wird durchgeführt vom Arbeitsbereich [Research Tools & Data Services](https://nfdi4culture.de/what-we-do/task-areas/task-area-3.html) des [NFDI4Culture](https://nfdi4culture.de/)-Konsortiums. Es handelt sich um eine Studie, die die aktuelle Praxis bei der Verwendung bzw. Zitation von Forschungssoftware in wissenschaftlchen Beiträgen (Abstracts der DHd-Konferenz) erhebt, um sie mit vorhandenen Empfehlungen zu Softwarezitation abzugleichen. Sie zielt darauf ab einen nachhaltigen und wissenschaftlich fundierten Umgang mit Forschungssoftware zu fördern. 
 
+Die zugrundeliegenden Daten wurden von GitHub-Repositories des [DHd-Verbands](https://github.com/DHd-Verband) geforkt und im Branch [main](https://github.com/daniel-jettka/software-citation-dhd/tree/main) unter [/data](https://github.com/daniel-jettka/software-citation-dhd/tree/main/data) als Submodules eingebunden. Im Branch [data-included](https://github.com/daniel-jettka/software-citation-dhd/tree/data-included) unter [/data](https://github.com/daniel-jettka/software-citation-dhd/tree/data-included/data) wurden sie zur einfacheren Einsehbarkeit direkt in das Projekt integriert.
+
 
 <!-- CONTRIBUTING -->
 ## Contributing
