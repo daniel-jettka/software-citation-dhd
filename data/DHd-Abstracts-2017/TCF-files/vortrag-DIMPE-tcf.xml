@@ -1,0 +1,2638 @@
+<?xml version='1.0' encoding='UTF-8'?><D-Spin xmlns="http://www.dspin.de/data" version="5">
+  <MetaData xmlns="http://www.dspin.de/data/metadata"><Services><cmd:CMD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cmd="http://www.clarin.eu/cmd/1" CMDVersion="1.2" xsi:schemaLocation="http://www.clarin.eu/cmd/1 http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_1320657629623/xsd"><cmd:Resources><cmd:ResourceProxyList/><cmd:JournalFileProxyList/><cmd:ResourceRelationList/></cmd:Resources><cmd:Components><cmd:WebServiceToolChain><cmd:GeneralInfo><cmd:Descriptions><cmd:Description/></cmd:Descriptions><cmd:ResourceName>Custom chain</cmd:ResourceName><cmd:ResourceClass>Toolchain</cmd:ResourceClass></cmd:GeneralInfo><cmd:Toolchain><cmd:ToolInChain><cmd:PID>https://hdl.handle.net/21.11120/0000-0008-319A-3</cmd:PID><cmd:Parameter value="de" name="lang"/></cmd:ToolInChain><cmd:ToolInChain><cmd:PID>https://hdl.handle.net/21.11120/0000-0008-3183-C</cmd:PID><cmd:Parameter value="5" name="version"/></cmd:ToolInChain><cmd:ToolInChain><cmd:PID>http://hdl.handle.net/11022/0000-0007-DA29-6</cmd:PID><cmd:Parameter value="de" name="lang"/><cmd:Parameter value="5" name="version"/></cmd:ToolInChain></cmd:Toolchain></cmd:WebServiceToolChain></cmd:Components></cmd:CMD></Services></MetaData>
+  <TextCorpus xmlns="http://www.dspin.de/data/textcorpus" lang="de">
+    <textSource type="application/tei+xml;format-variant=tei-dta;tokenized=0">&lt;?xml version="1.0" encoding="utf-8"?>
+&lt;TEI xml:id="vortrag-DIMPE" xmlns="http://www.tei-c.org/ns/1.0">
+&lt;teiHeader>
+&lt;fileDesc>
+&lt;titleStmt>
+&lt;title>Autorschaftsattribution bei nicht-normalisiertem Mittelhochdeutsch. Bessere Erkennungsquoten durch ein Normalisierungswörterbuch&lt;/title>
+&lt;author>
+&lt;persName>
+&lt;surname>Dimpel&lt;/surname>
+&lt;forename>Friedrich Michael&lt;/forename>
+&lt;/persName>
+&lt;affiliation>FAU Erlangen-Nürnberg, Deutschland&lt;/affiliation>
+&lt;email>mail@dimpel.de&lt;/email>
+&lt;/author>
+&lt;/titleStmt>
+&lt;editionStmt>
+&lt;edition>
+&lt;date>2016-08-25T12:46:00Z&lt;/date>
+&lt;/edition>
+&lt;/editionStmt>
+&lt;publicationStmt>
+&lt;publisher>Prof. Dr. Michael Stolz&lt;/publisher>
+&lt;address>
+&lt;addrLine>UniversitÃ¤t Bern&lt;/addrLine>
+&lt;addrLine>Institut fÃ¼r Germanistik&lt;/addrLine>
+&lt;addrLine>Laenggass-Str. 49&lt;/addrLine>
+&lt;addrLine>CH-3000 Bern 9&lt;/addrLine>
+&lt;/address>
+&lt;/publicationStmt>
+&lt;sourceDesc>
+&lt;p>Converted from a Word document &lt;/p>
+&lt;/sourceDesc>
+&lt;/fileDesc>
+&lt;encodingDesc>
+&lt;appInfo>
+&lt;application ident="DHCONVALIDATOR" version="1.17">
+&lt;label>DHConvalidator&lt;/label>
+&lt;/application>
+&lt;/appInfo>
+&lt;/encodingDesc>
+&lt;profileDesc>
+&lt;textClass>
+&lt;keywords n="category" scheme="ConfTool">
+&lt;term>Vortrag&lt;/term>
+&lt;/keywords>
+&lt;keywords n="subcategory" scheme="ConfTool">
+&lt;term/>
+&lt;/keywords>
+&lt;keywords n="keywords" scheme="ConfTool">
+&lt;term>Stilometrie; Autorschaftsattribution; Delta; ältere Sprachstufen&lt;/term>
+&lt;/keywords>
+&lt;keywords n="topics" scheme="ConfTool">
+&lt;term>Datenerkennung&lt;/term>
+&lt;term>Entdeckung&lt;/term>
+&lt;term>Programmierung&lt;/term>
+&lt;term>Bereinigung&lt;/term>
+&lt;term>Bearbeitung&lt;/term>
+&lt;term>Stilistische Analyse&lt;/term>
+&lt;term>Identifizierung&lt;/term>
+&lt;term>Sprache&lt;/term>
+&lt;term>Literatur&lt;/term>
+&lt;term>Methoden&lt;/term>
+&lt;term>Text&lt;/term>
+&lt;/keywords>
+&lt;/textClass>
+&lt;/profileDesc>
+&lt;/teiHeader>
+&lt;text>
+&lt;body>
+&lt;div rend="DH-Heading1" type="div1">
+&lt;head>Einleitung: Delta im Mittelalter und in der Forschung&lt;/head>
+&lt;p>Im Bereich der Autorschaftsattribution sind in den letzten Jahren große Fortschritte erzielt worden; insbesondere der Delta-Test nach Burrows’ (2002) und Varianten zu Burrows’ Verfahren haben sich in vielen Validierungsstudien als sehr erfolgreich erwiesen (Hoover 2004, Eder / Rybicki 2011, Eder 2013a, Eder 2013b, Jannidis / Lauer 2014, Evert / Proisl / Jannidis / Pielström / Schöch / Vitt 2015, Evert / Proisl / Jannidis / Pielström / Reger/ Schöch / Vitt 2016). In mittelalterlichen Texten stellen sich jedoch besondere Probleme: Hier ist die Schreibung weitgehend nicht normiert, das Wort ‚und‘ wird teilweise mit ‚u‘ oder ‚v‘, mit weichem ‚d‘ oder hartem ‚t‘ geschrieben; die Genitiv-Form zum nhd. Wort ‚Gott‘ lautet ‚gotes‘ oder ‚gotis‘ (Viehhauser 2015). &lt;/p>
+&lt;p>Im Rahmen eines Vortrags auf der DHd-Tagung 2016 in Leipzig konnte ich zeigen (Dimpel 2016), dass Delta bei normalisierten mittelhochdeutschen Texten sehr gut funktioniert, insbesondere dann, wenn Texte verwendet werden, die aus mindestens 5.000 Wörtern bestehen, und wenn die Bag-of-Words-Technik (vgl. Eder 2013b) zum Einsatz kommt. Um die Erkennungsquote zu ermitteln, habe ich ein „Ratekorpus“ und ein „Validierungskorpus“ gebildet. In beiden Sammlungen sind Texte mit bekannter Autorschaft enthalten. Zu jedem Autor, der im Ratekorpus enthalten ist, ist jeweils ein Text des gleichen Autors im Validierungskorpus enthalten. Ermittelt wurde der Prozentsatz der richtig erkannten Autoren. Bei einem Test mit 16 Texten im Validierungskorpus und 15 Texten im Ratekorpus wurde eine Erkennungsquote von 97,1% ermittelt.&lt;/p>
+&lt;/div>
+&lt;div rend="DH-Heading1" type="div1">
+&lt;head>Erster Validierungstest nicht-normalisierte Texte&lt;/head>
+&lt;p>Zu nicht-normalisierten Texten habe ich 2016 erste Zahlen ebenfalls mit positivem Ergebnis vorlegen können, die allerdings nicht valide sind, weil mir zu diesem Zeitpunkt nur sehr wenige nicht-normalisierte Texte digital verfügbar waren: bei einer Textlänge von 5.000 Wörtern konnte ich gegen ein Validierungskorpus mit 14 Texten nur 6 Texte von 5 Autoren prüfen. Nunmehr liegen weitere Texte vor, so dass für einen Validierungstest nun ein Ratekorpus mit 15 Texten von 10 Autoren zur Verfügung steht. Im Validierungskorpus ist je ein Text dieser 10 Autoren enthalten, dazu kommen weitere 10 Texte, die Fehlattributionen auslösen könnten.&lt;/p>
+&lt;p>Dass Delta bei nicht-normalisierten Texten schlechtere Erkennungsquoten liefert, ist deshalb zu erwarten, weil Delta auf der Verteilung von hochfrequenten Wörtern beruht. Wenn im Werk X überwiegend ‚unt‘ steht, wenn sich im Werk Y des gleichen Autors jedoch der Abschreiber für die Graphie ‚vnnd‘ entschieden hat, wird die Zuordnung des richtigen Autors dadurch erschwert. Erwartungsgemäß liegt die Erkennungsquote mit ca. 80% (bei Bag-of-Words mit 5.000 Wörtern; 50 Iterationen zum Ausgleich von Zufallsschwankungen bei der Bag-of-Words-Bildung; davon der Mittelwert für die Vektoren 200, 400, 600 und 800) deutlich unter der Quote für normalisierte Texte. Um eine Verbesserung der Erkennungsquote zu ermöglich, wurden nun Ansätze zur automatischen Teilnormalisierung erprobt. &lt;/p>
+&lt;/div>
+&lt;div rend="DH-Heading1" type="div1">
+&lt;head>Teilnormalisierung: Normalisierungswörterbuch und Vollformenwörterbuch&lt;/head>
+&lt;p>Ein erster Schritt dabei ist die Eliminierung der Sonderzeichen und der deutschen Umlaute – auch in dem soeben erwähnten Test war diese Bereinigung bereits implementiert. Eine weitere automatische Teilnormalisierung ist deshalb ökonomisch realisierbar, weil für den Delta-Test keine vollständige Normalisierung nötig ist. Weil Delta auf den hochfrequenten Wörtern beruht, sollte bereits eine Normalisierung der häufigen Wörter zu einer Verbesserung führen.&lt;/p>
+&lt;p>In einem nächsten Schritt wurde ein Skript entwickelt, das aus einigen kürzeren nicht-normalisierten Texten die hochfrequenten Wortformen heraussucht und den User bittet, die normalisierte Form zuzuordnen. Eine Vorschlagsliste aus einem normalisierten Lachmann-Korpus, die mittels Levenshtein-Distanz generiert wurde, hat meiner Hilfskraft das Leben leichter gemacht. Zudem habe ich zwei Datengeschenke bekommen: Sonja Glauch hat mir Daten aus dem Projekt „Lyrik des Mittelalters“ gegeben, das eine Zuordnung von normalisierten zu nicht-normalisierten Wortformen herstellt. Mit den Skript-Daten und den Lyrik-Projekt-Daten lag ein Normalisierungswörterbuch mit gut 1.100 Zuordnungen vor, als mir Thomas Klein Daten aus dem Referenzkorpus Mittelhochdeutsch überlassen hat. Die vorbildliche Struktur des Referenzkorpus hat es möglich gemacht, weitere Zuordnungen zu extrahieren und sie in das Normalisierungswörterbuch einspeisen, das nunmehr gut 120.000 Zuordnungen enthält.&lt;/p>
+&lt;p>Eine Sichtung des Normalisierungswörterbuchs hat jedoch gezeigt, dass teilweise auch solche diplomatische Wortformen wie ‚sluc‘ zu ‚sluoc‘ normalisiert werden, die eigentlich auch selbst als normalisierte Form eines anderen Lemmas stehen könnten: ‚sluc‘ kann als starkes Femininum etwa nhd. „ein Schluck“ heißen und müsste dann nicht durch eine andere normalisierte Form ersetzt werden. Mitunter wurde im Lyrikprojekt und im ReM unerwartet normalisiert: So findet sich bspw. eine Normalisierung der Wortform ‚chunich‘ zu ‚küninc‘, während im BMZ und im Lachmann-Parzival meist ‚künec‘ steht. &lt;/p>
+&lt;p>Um das Normalisierungswörterbuch zu überprüfen und vereinheitlichen zu können, wurde ein mittelhochdeutsches Vollformenwörterbuch benötigt, das die Wortformen enthält, die zu normalisierten Lemmata durch Flexion gebildet werden können.&lt;/p>
+&lt;p>Aus der CD „Mittelhochdeutsche Wörterbücher im Verbund“ (Trier, Kompetenzzentrum für elektronische Erschließungs- und Publikationsverfahren in den Geisteswissenschaften 2002) wurden Daten extrahiert und mögliche Flexionsformen zu den Lemmata generiert. Wenn es auf Vollständigkeit und Korrektheit ankommen würde, wäre die Erstellung eines derartigen Vollformenwörterbuchs eine große Herausforderung. Doch geht es sowohl bei dem Normalisierungswörterbuch als auch bei dem Vollformenwörterbuch hier nur darum, eine prozentuale Verbesserung der Delta-Erkennungsquote zu erreichen. Fehler bei seltenen Wortformen sind bei Delta meist zu vernachlässigen, wichtig ist eine Vereinheitlichung der häufigen Wörter. Manche Probleme haben sich überwiegend erfreulich lösen lassen: Zu Ablaut und grammatischem Wechsel sind Informationen BMZ hinterlegt. Schwache Verben mit sogenanntem Rückumlaut generiert das Skript dann, wenn im Singular Präsens ein umgelauteter Vokal sowie Positionslänge oder Naturlänge vorliegen. In der verfügbaren Zeit wurde Vieles nicht vollständig gelöst – für Nomina mit Umlaut müssten im Artikel noch die Belegstellen examiniert werden, hier wird bislang nur der Artikelkopf des Lexer ausgewertet. Funktionswörter sind überwiegend listenbasiert ergänzt.&lt;/p>
+&lt;p>Eine Evaluierung hat gezeigt, dass eine vollständige Bereinigung des Normalisierungswörterbuchs um Formen wie ‚sluc‘ zu einer minimalen Verschlechterung der Erkennungsquote führt, so dass die Eliminierung von diplomatischen Wortformen, die auch normalisierte Wortformen sein könnten, bei hoch- und mittelfrequenten Wortformen nicht angewendet wurde.&lt;/p>
+&lt;/div>
+&lt;div rend="DH-Heading1" type="div1">
+&lt;head>Delta-Verbesserung: Z-Wert-Begrenzung&lt;/head>
+&lt;p>Bei Delta berechnet man bspw. für 200 Most-Frequent-Words für jedes dieser Worte einzeln Z-Werte, in die die Abweichung der Häufigkeit eines Wortes in einem Text zur Häufigkeit dieses Wortes im Gesamtkorpus unter Berücksichtigung der Standardabweichung eingeht. Delta ist das arithmetische Mittel der positiven Z-Wert-Differenzen (Burrows 2002). Evert / Proisl / Jannidis / Pielström / Reger/ Schöch / Vitt 2016 haben meinen Verdacht evaluiert, dass Delta weniger aufgrund einzelner Extremwerte funktioniert (Ausreißerhypothese), sondern eher aufgrund einer breiten autorspezifischen Verteilung der Z-Werte (Schlüsselprofilhypothese). &lt;/p>
+&lt;p>Fehlt eine Wortform in einem Text, kann dies mitunter mit erhöhten negativen Z-Werten einhergehen. Evert et alia haben besonders hohe Z-Werte auf einen Maximalwert begrenzt, so dass „Ausreißer“ nur abgemildert eingehen. Wenn der Erfolg von Delta den „Ausreißern“ zu verdanken wäre, hätte sich die Erkennungsquote bei einer Begrenzung der Z-Werte verschlechtern müssen. Ein Begrenzen der Z-Werte führt jedoch zu einer Verbesserung der Erkennungsquote. Evert et alia haben so nicht nur die Schlüsselprofilhypothese bestätigen können, sondern zugleich eine Möglichkeit entdeckt, die Erkennungsquote zu verbessern, die gerade bei mittelalterlichen Texten nützlich sein kann: Wenn in einem Text ein Schreiber eine bestimmte Schreibvariante ganz vermeidet, können Nullwerte zu hohen Z-Werten führen; diese Schreibvariantenproblematik kann durch das Begrenzen der Z-Werte gemildert werden.&lt;/p>
+&lt;/div>
+&lt;div rend="DH-Heading1" type="div1">
+&lt;head>Zweiter Validierungstest nicht-normalisierte Texte&lt;/head>
+&lt;p>Bei dem zweiten Validierungstest habe ich einerseits nicht-normalisierte Wortformen mit Hilfe des Normalisierungswörterbuchs bei der Erstellung der jeweiligen Bag-of-Words in eine normalisierte Wortform konvertiert. Andererseits habe ich eine Z-Wert-Begrenzung durchgeführt und Z-Werte ab |1,64| auf den Wert 1,70 gesetzt (dieser Wert hat sich in einer Versuchsreihe mit verschieden gestalteten Validierungs- und Ratekorpora als vorteilhaft erwiesen). Die Erkennungsquote für Bag-of-Words mit 5.000 Wortformen steigt damit von 80% auf 91% an.&lt;/p>
+&lt;figure>
+&lt;graphic height="6.011080555555556cm" n="1001" rend="inline" url="vortrag-DIMPE-image1.png" width="10cm"/>
+&lt;/figure>
+&lt;p>Abb. 1: Erkennungsquoten ohne Normalisierungswörterbuch / Z-Wertbegrenzung für nicht-normalisierte Texte (15 Texte Ratekorpus / 20 Texte Validierungskorpus)&lt;/p>
+&lt;figure>
+&lt;graphic height="6.011080555555556cm" n="1002" rend="inline" url="vortrag-DIMPE-image2.png" width="10cm"/>
+&lt;/figure>
+&lt;p>Abb. 2: Erkennungsquoten mit Normalisierungswörterbuch / Z-Wertbegrenzung für nicht-normalisierte Texte (15 Texte Ratekorpus / 20 Texte Validierungskorpus)&lt;/p>
+&lt;p>Wenn man die mühevoll bereinigten Texte nun wieder mit Fehlern kontaminiert, indem man den Inhalt der Bag-of-Words bspw. durch korpusfremdes Vokabular (teilweise durch altfranzösische Wörter statt mhd. Wörter) austauscht, so sinkt die Erkennungsquote erstaunlich langsam. Wenn 12% der Wörter durch Fremdmaterial getauscht wurden, ist nur ein geringes Absinken erkennbar. Tauscht man 20% aller Wörter durch Noise aus, dann gibt die Erkennungsquote etwas mehr nach als bei normalisierten Texten (vgl. Dimpel 2016) – das ist plausibel, weil hier trotz aller Anstrengungen mit Normalisierungswörterbuch und Z-Wert-Begrenzung noch immer mehr Varianz in den Texten enthalten ist als in Texten, die ein Editor manuell normalisiert hat. Dennoch bleiben die Quoten erstaunlich stabil.&lt;/p>
+&lt;figure>
+&lt;graphic height="8.357919444444445cm" n="1003" rend="inline" url="vortrag-DIMPE-image3.png" width="12cm"/>
+&lt;/figure>
+&lt;p>Abb. 3: Noise – Absinken der Erkennungsquote beim Tausch des Wortmaterials der BOW der Ratedatei&lt;/p>
+&lt;figure>
+&lt;graphic height="8.105233333333333cm" n="1004" rend="inline" url="vortrag-DIMPE-image4.png" width="12cm"/>
+&lt;/figure>
+&lt;p>Abb. 4: Noise – Ausschnittvergrößerung 0-30 % Noise&lt;/p>
+&lt;/div>
+&lt;/body>
+&lt;back>
+&lt;div type="bibliogr">
+&lt;listBibl>
+&lt;head>Bibliographie&lt;/head>
+&lt;bibl>
+&lt;hi rend="bold">Burrows, John&lt;/hi> (2002): 
+                        „‚Delta‘: A Measure of Stylistic Difference and a Guide to Likely Authorship“, 
+                        in: 
+                        &lt;hi rend="italic">Literary and Linguistic Computing&lt;/hi> 17 (3): 267–87 
+                        10.1093/llc/17.3.267.
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Dimpel, Friedrich Michael&lt;/hi> (2016): 
+                        „Burrows’ Delta im Mittelalter: Wilde Graphien und metrische Analysedaten“,
+                        in: 
+                        &lt;hi rend="italic">DHd 2016: Modellierung - Vernetzung - Visualisierung&lt;/hi> 65–70.
+                    &lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Eder, Maciej&lt;/hi> (2013a): 
+                        „Mind Your Corpus: systematic errors in authorship attribution“,
+                        in: 
+                        &lt;hi rend="italic">Literary and Linguistic Computing&lt;/hi> 28: 603–614 
+                        10.1093/llc/fqt039.
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Eder, Maciej&lt;/hi> (2013b): 
+                        „Does size matter? Authorship attribution, small samples, big problem“,
+                        in:
+&lt;hi rend="italic">Literary and Linguistic Computing Advanced Access&lt;/hi> 29: 1–16 
+                        10.1093/llc/fqt066.
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Eder, Maciej / Rybicki, Jan &lt;/hi>(2011): 
+                        „Deeper Delta across genres and languages: do we really need the most frequent words?“, 
+                        in: 
+                        &lt;hi rend="italic">Literary and Linguistic Computing &lt;/hi>26 (3): 315–321 
+                        10.1093/llc/fqr031 .
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Evert, Stefan / Proisl, Thomas / Jannidis, Fotis / Pielström, Steffen / Schöch, Christof / Vitt, Thorsten&lt;/hi> (2015): 
+                        „Towards a better understanding of Burrows’s Delta in literary authorship attribution“,
+                        in:
+                        &lt;hi rend="italic">Proceedings of the Fourth Workshop on Computational Linguistics for Literature&lt;/hi>. 
+                        Denver, CO: Association for Computational Linguistics, 79–88
+                        10.5281/zenodo.18177
+                        &lt;ref target="http://www.aclweb.org/anthology/W/W15/W15-0709.pdf">http://www.aclweb.org/anthology/W/W15/W15-0709.pdf&lt;/ref> [letzter Zugriff 20. August 2015].
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Evert, Stefan / Proisl, Thomas / Jannidis, Fotis / Pielström, Steffen / Reger, Isabella/ Schöch, Christof / Vitt, Thorsten &lt;/hi>(2016): 
+                        „Burrows Delta verstehen“,
+                        in:
+                        &lt;hi rend="italic">DHd 2016: Modellierung - Vernetzung - Visualisierung&lt;/hi> 61–65.
+                    &lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Hoover, David L.&lt;/hi> (2004): 
+                        „Delta Prime?“,
+                        in:
+                        &lt;hi rend="italic">Literary and Linguistic Computing&lt;/hi> 19 (4): 477–495 
+                        10.1093/llc/19.4.477 .
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Jannidis, Fotis / Lauer, Gerhard &lt;/hi>(2014). 
+                        „Burrows’s Delta and Its Use in German Literary History“, 
+                        in: Erlin, Matt / Tatlock, Lynne (eds.): 
+                        &lt;hi rend="italic">Distant Readings: Topologies of German Culture in the Long Nineteenth Century&lt;/hi>. 
+                        New York: 29–54.
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Jannidis, Fotis / Pielström, Steffen / Schöch, Christof / Vitt, Thorsten &lt;/hi>(2015): 
+                        „Improving Burrows’ Delta - An Empirical Evaluation of Text Distance Measures“, 
+                        in: 
+                        &lt;hi rend="italic">DH2015: Global Digital Humanities&lt;/hi>
+&lt;ref target="                        http://dh2015.org/abstracts/xml/JANNIDIS_Fotis_Improving_Burrows__Delta___An_empi/JANNIDIS_Fotis_Improving_Burrows__Delta___An_empirical_.html                             ">                        http://dh2015.org/abstracts/xml/JANNIDIS_Fotis_Improving_Burrows__Delta___An_empi/JANNIDIS_Fotis_Improving_Burrows__Delta___An_empirical_.html
+&lt;/ref>
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Viehhauser, Gabriel&lt;/hi> (2015): 
+                        „Historische Stilometrie? Methodische Vorschläge für eine Annäherung textanalytischer Zugänge an die mediävistische Textualitätsdebatte“, 
+                        in: Baum, Constanze / Stäcker, Thomas (eds.): 
+                        &lt;hi rend="italic">Grenzen und Möglichkeiten der Digital Humanities&lt;/hi>. Sonderband ZfdG 1.
+                    &lt;/bibl>
+&lt;/listBibl>
+&lt;/div>
+&lt;/back>
+&lt;/text>
+&lt;/TEI></textSource>
+    <text>
+
+
+Im Bereich der Autorschaftsattribution sind in den letzten Jahren große Fortschritte erzielt worden; insbesondere der Delta-Test nach Burrows’ (2002) und Varianten zu Burrows’ Verfahren haben sich in vielen Validierungsstudien als sehr erfolgreich erwiesen (Hoover 2004, Eder / Rybicki 2011, Eder 2013a, Eder 2013b, Jannidis / Lauer 2014, Evert / Proisl / Jannidis / Pielström / Schöch / Vitt 2015, Evert / Proisl / Jannidis / Pielström / Reger/ Schöch / Vitt 2016). In mittelalterlichen Texten stellen sich jedoch besondere Probleme: Hier ist die Schreibung weitgehend nicht normiert, das Wort ‚und‘ wird teilweise mit ‚u‘ oder ‚v‘, mit weichem ‚d‘ oder hartem ‚t‘ geschrieben; die Genitiv-Form zum nhd. Wort ‚Gott‘ lautet ‚gotes‘ oder ‚gotis‘ (Viehhauser 2015). 
+
+ 
+
+Im Rahmen eines Vortrags auf der DHd-Tagung 2016 in Leipzig konnte ich zeigen (Dimpel 2016), dass Delta bei normalisierten mittelhochdeutschen Texten sehr gut funktioniert, insbesondere dann, wenn Texte verwendet werden, die aus mindestens 5.000 Wörtern bestehen, und wenn die Bag-of-Words-Technik (vgl. Eder 2013b) zum Einsatz kommt. Um die Erkennungsquote zu ermitteln, habe ich ein „Ratekorpus“ und ein „Validierungskorpus“ gebildet. In beiden Sammlungen sind Texte mit bekannter Autorschaft enthalten. Zu jedem Autor, der im Ratekorpus enthalten ist, ist jeweils ein Text des gleichen Autors im Validierungskorpus enthalten. Ermittelt wurde der Prozentsatz der richtig erkannten Autoren. Bei einem Test mit 16 Texten im Validierungskorpus und 15 Texten im Ratekorpus wurde eine Erkennungsquote von 97,1% ermittelt.
+
+ 
+
+
+Zu nicht-normalisierten Texten habe ich 2016 erste Zahlen ebenfalls mit positivem Ergebnis vorlegen können, die allerdings nicht valide sind, weil mir zu diesem Zeitpunkt nur sehr wenige nicht-normalisierte Texte digital verfügbar waren: bei einer Textlänge von 5.000 Wörtern konnte ich gegen ein Validierungskorpus mit 14 Texten nur 6 Texte von 5 Autoren prüfen. Nunmehr liegen weitere Texte vor, so dass für einen Validierungstest nun ein Ratekorpus mit 15 Texten von 10 Autoren zur Verfügung steht. Im Validierungskorpus ist je ein Text dieser 10 Autoren enthalten, dazu kommen weitere 10 Texte, die Fehlattributionen auslösen könnten.
+
+ 
+
+Dass Delta bei nicht-normalisierten Texten schlechtere Erkennungsquoten liefert, ist deshalb zu erwarten, weil Delta auf der Verteilung von hochfrequenten Wörtern beruht. Wenn im Werk X überwiegend ‚unt‘ steht, wenn sich im Werk Y des gleichen Autors jedoch der Abschreiber für die Graphie ‚vnnd‘ entschieden hat, wird die Zuordnung des richtigen Autors dadurch erschwert. Erwartungsgemäß liegt die Erkennungsquote mit ca. 80% (bei Bag-of-Words mit 5.000 Wörtern; 50 Iterationen zum Ausgleich von Zufallsschwankungen bei der Bag-of-Words-Bildung; davon der Mittelwert für die Vektoren 200, 400, 600 und 800) deutlich unter der Quote für normalisierte Texte. Um eine Verbesserung der Erkennungsquote zu ermöglich, wurden nun Ansätze zur automatischen Teilnormalisierung erprobt. 
+
+ 
+
+
+Ein erster Schritt dabei ist die Eliminierung der Sonderzeichen und der deutschen Umlaute – auch in dem soeben erwähnten Test war diese Bereinigung bereits implementiert. Eine weitere automatische Teilnormalisierung ist deshalb ökonomisch realisierbar, weil für den Delta-Test keine vollständige Normalisierung nötig ist. Weil Delta auf den hochfrequenten Wörtern beruht, sollte bereits eine Normalisierung der häufigen Wörter zu einer Verbesserung führen.
+
+ 
+
+In einem nächsten Schritt wurde ein Skript entwickelt, das aus einigen kürzeren nicht-normalisierten Texten die hochfrequenten Wortformen heraussucht und den User bittet, die normalisierte Form zuzuordnen. Eine Vorschlagsliste aus einem normalisierten Lachmann-Korpus, die mittels Levenshtein-Distanz generiert wurde, hat meiner Hilfskraft das Leben leichter gemacht. Zudem habe ich zwei Datengeschenke bekommen: Sonja Glauch hat mir Daten aus dem Projekt „Lyrik des Mittelalters“ gegeben, das eine Zuordnung von normalisierten zu nicht-normalisierten Wortformen herstellt. Mit den Skript-Daten und den Lyrik-Projekt-Daten lag ein Normalisierungswörterbuch mit gut 1.100 Zuordnungen vor, als mir Thomas Klein Daten aus dem Referenzkorpus Mittelhochdeutsch überlassen hat. Die vorbildliche Struktur des Referenzkorpus hat es möglich gemacht, weitere Zuordnungen zu extrahieren und sie in das Normalisierungswörterbuch einspeisen, das nunmehr gut 120.000 Zuordnungen enthält.
+
+ 
+
+Eine Sichtung des Normalisierungswörterbuchs hat jedoch gezeigt, dass teilweise auch solche diplomatische Wortformen wie ‚sluc‘ zu ‚sluoc‘ normalisiert werden, die eigentlich auch selbst als normalisierte Form eines anderen Lemmas stehen könnten: ‚sluc‘ kann als starkes Femininum etwa nhd. „ein Schluck“ heißen und müsste dann nicht durch eine andere normalisierte Form ersetzt werden. Mitunter wurde im Lyrikprojekt und im ReM unerwartet normalisiert: So findet sich bspw. eine Normalisierung der Wortform ‚chunich‘ zu ‚küninc‘, während im BMZ und im Lachmann-Parzival meist ‚künec‘ steht. 
+
+ 
+
+Um das Normalisierungswörterbuch zu überprüfen und vereinheitlichen zu können, wurde ein mittelhochdeutsches Vollformenwörterbuch benötigt, das die Wortformen enthält, die zu normalisierten Lemmata durch Flexion gebildet werden können.
+
+ 
+
+Aus der CD „Mittelhochdeutsche Wörterbücher im Verbund“ (Trier, Kompetenzzentrum für elektronische Erschließungs- und Publikationsverfahren in den Geisteswissenschaften 2002) wurden Daten extrahiert und mögliche Flexionsformen zu den Lemmata generiert. Wenn es auf Vollständigkeit und Korrektheit ankommen würde, wäre die Erstellung eines derartigen Vollformenwörterbuchs eine große Herausforderung. Doch geht es sowohl bei dem Normalisierungswörterbuch als auch bei dem Vollformenwörterbuch hier nur darum, eine prozentuale Verbesserung der Delta-Erkennungsquote zu erreichen. Fehler bei seltenen Wortformen sind bei Delta meist zu vernachlässigen, wichtig ist eine Vereinheitlichung der häufigen Wörter. Manche Probleme haben sich überwiegend erfreulich lösen lassen: Zu Ablaut und grammatischem Wechsel sind Informationen BMZ hinterlegt. Schwache Verben mit sogenanntem Rückumlaut generiert das Skript dann, wenn im Singular Präsens ein umgelauteter Vokal sowie Positionslänge oder Naturlänge vorliegen. In der verfügbaren Zeit wurde Vieles nicht vollständig gelöst – für Nomina mit Umlaut müssten im Artikel noch die Belegstellen examiniert werden, hier wird bislang nur der Artikelkopf des Lexer ausgewertet. Funktionswörter sind überwiegend listenbasiert ergänzt.
+
+ 
+
+Eine Evaluierung hat gezeigt, dass eine vollständige Bereinigung des Normalisierungswörterbuchs um Formen wie ‚sluc‘ zu einer minimalen Verschlechterung der Erkennungsquote führt, so dass die Eliminierung von diplomatischen Wortformen, die auch normalisierte Wortformen sein könnten, bei hoch- und mittelfrequenten Wortformen nicht angewendet wurde.
+
+
+  
+
+Bei Delta berechnet man bspw. für 200 Most-Frequent-Words für jedes dieser Worte einzeln Z-Werte, in die die Abweichung der Häufigkeit eines Wortes in einem Text zur Häufigkeit dieses Wortes im Gesamtkorpus unter Berücksichtigung der Standardabweichung eingeht. Delta ist das arithmetische Mittel der positiven Z-Wert-Differenzen (Burrows 2002). Evert / Proisl / Jannidis / Pielström / Reger/ Schöch / Vitt 2016 haben meinen Verdacht evaluiert, dass Delta weniger aufgrund einzelner Extremwerte funktioniert (Ausreißerhypothese), sondern eher aufgrund einer breiten autorspezifischen Verteilung der Z-Werte (Schlüsselprofilhypothese). 
+
+ 
+
+Fehlt eine Wortform in einem Text, kann dies mitunter mit erhöhten negativen Z-Werten einhergehen. Evert et alia haben besonders hohe Z-Werte auf einen Maximalwert begrenzt, so dass „Ausreißer“ nur abgemildert eingehen. Wenn der Erfolg von Delta den „Ausreißern“ zu verdanken wäre, hätte sich die Erkennungsquote bei einer Begrenzung der Z-Werte verschlechtern müssen. Ein Begrenzen der Z-Werte führt jedoch zu einer Verbesserung der Erkennungsquote. Evert et alia haben so nicht nur die Schlüsselprofilhypothese bestätigen können, sondern zugleich eine Möglichkeit entdeckt, die Erkennungsquote zu verbessern, die gerade bei mittelalterlichen Texten nützlich sein kann: Wenn in einem Text ein Schreiber eine bestimmte Schreibvariante ganz vermeidet, können Nullwerte zu hohen Z-Werten führen; diese Schreibvariantenproblematik kann durch das Begrenzen der Z-Werte gemildert werden.
+
+
+  
+
+Bei dem zweiten Validierungstest habe ich einerseits nicht-normalisierte Wortformen mit Hilfe des Normalisierungswörterbuchs bei der Erstellung der jeweiligen Bag-of-Words in eine normalisierte Wortform konvertiert. Andererseits habe ich eine Z-Wert-Begrenzung durchgeführt und Z-Werte ab |1,64| auf den Wert 1,70 gesetzt (dieser Wert hat sich in einer Versuchsreihe mit verschieden gestalteten Validierungs- und Ratekorpora als vorteilhaft erwiesen). Die Erkennungsquote für Bag-of-Words mit 5.000 Wortformen steigt damit von 80% auf 91% an.
+
+  
+
+Abb. 1: Erkennungsquoten ohne Normalisierungswörterbuch / Z-Wertbegrenzung für nicht-normalisierte Texte (15 Texte Ratekorpus / 20 Texte Validierungskorpus)
+
+  
+
+Abb. 2: Erkennungsquoten mit Normalisierungswörterbuch / Z-Wertbegrenzung für nicht-normalisierte Texte (15 Texte Ratekorpus / 20 Texte Validierungskorpus)
+
+ 
+
+Wenn man die mühevoll bereinigten Texte nun wieder mit Fehlern kontaminiert, indem man den Inhalt der Bag-of-Words bspw. durch korpusfremdes Vokabular (teilweise durch altfranzösische Wörter statt mhd. Wörter) austauscht, so sinkt die Erkennungsquote erstaunlich langsam. Wenn 12% der Wörter durch Fremdmaterial getauscht wurden, ist nur ein geringes Absinken erkennbar. Tauscht man 20% aller Wörter durch Noise aus, dann gibt die Erkennungsquote etwas mehr nach als bei normalisierten Texten (vgl. Dimpel 2016) – das ist plausibel, weil hier trotz aller Anstrengungen mit Normalisierungswörterbuch und Z-Wert-Begrenzung noch immer mehr Varianz in den Texten enthalten ist als in Texten, die ein Editor manuell normalisiert hat. Dennoch bleiben die Quoten erstaunlich stabil.
+
+  
+
+Abb. 3: Noise – Absinken der Erkennungsquote beim Tausch des Wortmaterials der BOW der Ratedatei
+
+  
+
+Abb. 4: Noise – Ausschnittvergrößerung 0-30 % Noise
+
+
+
+
+Einleitung: Delta im Mittelalter und in der Forschung
+
+
+
+Erster Validierungstest nicht-normalisierte Texte
+
+
+
+Teilnormalisierung: Normalisierungswörterbuch und Vollformenwörterbuch
+
+
+
+Delta-Verbesserung: Z-Wert-Begrenzung
+
+
+
+Zweiter Validierungstest nicht-normalisierte Texte
+
+
+
+  
+
+
+    Burrows, John (2002):                          „‚Delta‘: A Measure of Stylistic Difference and a Guide to Likely Authorship“,                          in:   Literary and Linguistic Computing 17 (3): 267–87                          10.1093/llc/17.3.267.    Dimpel, Friedrich Michael (2016):                          „Burrows’ Delta im Mittelalter: Wilde Graphien und metrische Analysedaten“,                         in:   DHd 2016: Modellierung - Vernetzung - Visualisierung 65–70.    Eder, Maciej (2013a):                          „Mind Your Corpus: systematic errors in authorship attribution“,                         in:   Literary and Linguistic Computing 28: 603–614                          10.1093/llc/fqt039.    Eder, Maciej (2013b):                          „Does size matter? Authorship attribution, small samples, big problem“,                         in:  Literary and Linguistic Computing Advanced Access 29: 1–16                          10.1093/llc/fqt066.    Eder, Maciej / Rybicki, Jan (2011):                          „Deeper Delta across genres and languages: do we really need the most frequent words?“,                          in:   Literary and Linguistic Computing 26 (3): 315–321                          10.1093/llc/fqr031 .    Evert, Stefan / Proisl, Thomas / Jannidis, Fotis / Pielström, Steffen / Schöch, Christof / Vitt, Thorsten (2015):                          „Towards a better understanding of Burrows’s Delta in literary authorship attribution“,                         in:  Proceedings of the Fourth Workshop on Computational Linguistics for Literature.                          Denver, CO: Association for Computational Linguistics, 79–88                         10.5281/zenodo.18177  
+http://www.aclweb.org/anthology/W/W15/W15-0709.pdf
+ [letzter Zugriff 20. August 2015].    Evert, Stefan / Proisl, Thomas / Jannidis, Fotis / Pielström, Steffen / Reger, Isabella/ Schöch, Christof / Vitt, Thorsten (2016):                          „Burrows Delta verstehen“,                         in:  DHd 2016: Modellierung - Vernetzung - Visualisierung 61–65.    Hoover, David L. (2004):                          „Delta Prime?“,                         in:  Literary and Linguistic Computing 19 (4): 477–495                          10.1093/llc/19.4.477 .    Jannidis, Fotis / Lauer, Gerhard (2014).                          „Burrows’s Delta and Its Use in German Literary History“,                          in: Erlin, Matt / Tatlock, Lynne (eds.):   Distant Readings: Topologies of German Culture in the Long Nineteenth Century.                          New York: 29–54.    Jannidis, Fotis / Pielström, Steffen / Schöch, Christof / Vitt, Thorsten (2015):                          „Improving Burrows’ Delta - An Empirical Evaluation of Text Distance Measures“,                          in:   DH2015: Global Digital Humanities 
+                        http://dh2015.org/abstracts/xml/JANNIDIS_Fotis_Improving_Burrows__Delta___An_empi/JANNIDIS_Fotis_Improving_Burrows__Delta___An_empirical_.html 
+   Viehhauser, Gabriel (2015):                          „Historische Stilometrie? Methodische Vorschläge für eine Annäherung textanalytischer Zugänge an die mediävistische Textualitätsdebatte“,                          in: Baum, Constanze / Stäcker, Thomas (eds.):   Grenzen und Möglichkeiten der Digital Humanities. Sonderband ZfdG 1.    
+
+ 
+
+
+
+Bibliographie
+
+</text>
+    <tc:tokens xmlns:tc="http://www.dspin.de/data/textcorpus">
+      <tc:token ID="w1">Im</tc:token>
+      <tc:token ID="w2">Bereich</tc:token>
+      <tc:token ID="w3">der</tc:token>
+      <tc:token ID="w4">Autorschaftsattribution</tc:token>
+      <tc:token ID="w5">sind</tc:token>
+      <tc:token ID="w6">in</tc:token>
+      <tc:token ID="w7">den</tc:token>
+      <tc:token ID="w8">letzten</tc:token>
+      <tc:token ID="w9">Jahren</tc:token>
+      <tc:token ID="wa">große</tc:token>
+      <tc:token ID="wb">Fortschritte</tc:token>
+      <tc:token ID="wc">erzielt</tc:token>
+      <tc:token ID="wd">worden</tc:token>
+      <tc:token ID="we">;</tc:token>
+      <tc:token ID="wf">insbesondere</tc:token>
+      <tc:token ID="w10">der</tc:token>
+      <tc:token ID="w11">Delta-Test</tc:token>
+      <tc:token ID="w12">nach</tc:token>
+      <tc:token ID="w13">Burrows’</tc:token>
+      <tc:token ID="w14">(</tc:token>
+      <tc:token ID="w15">2002</tc:token>
+      <tc:token ID="w16">)</tc:token>
+      <tc:token ID="w17">und</tc:token>
+      <tc:token ID="w18">Varianten</tc:token>
+      <tc:token ID="w19">zu</tc:token>
+      <tc:token ID="w1a">Burrows’</tc:token>
+      <tc:token ID="w1b">Verfahren</tc:token>
+      <tc:token ID="w1c">haben</tc:token>
+      <tc:token ID="w1d">sich</tc:token>
+      <tc:token ID="w1e">in</tc:token>
+      <tc:token ID="w1f">vielen</tc:token>
+      <tc:token ID="w20">Validierungsstudien</tc:token>
+      <tc:token ID="w21">als</tc:token>
+      <tc:token ID="w22">sehr</tc:token>
+      <tc:token ID="w23">erfolgreich</tc:token>
+      <tc:token ID="w24">erwiesen</tc:token>
+      <tc:token ID="w25">(</tc:token>
+      <tc:token ID="w26">Hoover</tc:token>
+      <tc:token ID="w27">2004</tc:token>
+      <tc:token ID="w28">,</tc:token>
+      <tc:token ID="w29">Eder</tc:token>
+      <tc:token ID="w2a">/</tc:token>
+      <tc:token ID="w2b">Rybicki</tc:token>
+      <tc:token ID="w2c">2011</tc:token>
+      <tc:token ID="w2d">,</tc:token>
+      <tc:token ID="w2e">Eder</tc:token>
+      <tc:token ID="w2f">2013a</tc:token>
+      <tc:token ID="w30">,</tc:token>
+      <tc:token ID="w31">Eder</tc:token>
+      <tc:token ID="w32">2013b</tc:token>
+      <tc:token ID="w33">,</tc:token>
+      <tc:token ID="w34">Jannidis</tc:token>
+      <tc:token ID="w35">/</tc:token>
+      <tc:token ID="w36">Lauer</tc:token>
+      <tc:token ID="w37">2014</tc:token>
+      <tc:token ID="w38">,</tc:token>
+      <tc:token ID="w39">Evert</tc:token>
+      <tc:token ID="w3a">/</tc:token>
+      <tc:token ID="w3b">Proisl</tc:token>
+      <tc:token ID="w3c">/</tc:token>
+      <tc:token ID="w3d">Jannidis</tc:token>
+      <tc:token ID="w3e">/</tc:token>
+      <tc:token ID="w3f">Pielström</tc:token>
+      <tc:token ID="w40">/</tc:token>
+      <tc:token ID="w41">Schöch</tc:token>
+      <tc:token ID="w42">/</tc:token>
+      <tc:token ID="w43">Vitt</tc:token>
+      <tc:token ID="w44">2015</tc:token>
+      <tc:token ID="w45">,</tc:token>
+      <tc:token ID="w46">Evert</tc:token>
+      <tc:token ID="w47">/</tc:token>
+      <tc:token ID="w48">Proisl</tc:token>
+      <tc:token ID="w49">/</tc:token>
+      <tc:token ID="w4a">Jannidis</tc:token>
+      <tc:token ID="w4b">/</tc:token>
+      <tc:token ID="w4c">Pielström</tc:token>
+      <tc:token ID="w4d">/</tc:token>
+      <tc:token ID="w4e">Reger</tc:token>
+      <tc:token ID="w4f">/</tc:token>
+      <tc:token ID="w50">Schöch</tc:token>
+      <tc:token ID="w51">/</tc:token>
+      <tc:token ID="w52">Vitt</tc:token>
+      <tc:token ID="w53">2016</tc:token>
+      <tc:token ID="w54">)</tc:token>
+      <tc:token ID="w55">.</tc:token>
+      <tc:token ID="w56">In</tc:token>
+      <tc:token ID="w57">mittelalterlichen</tc:token>
+      <tc:token ID="w58">Texten</tc:token>
+      <tc:token ID="w59">stellen</tc:token>
+      <tc:token ID="w5a">sich</tc:token>
+      <tc:token ID="w5b">jedoch</tc:token>
+      <tc:token ID="w5c">besondere</tc:token>
+      <tc:token ID="w5d">Probleme</tc:token>
+      <tc:token ID="w5e">:</tc:token>
+      <tc:token ID="w5f">Hier</tc:token>
+      <tc:token ID="w60">ist</tc:token>
+      <tc:token ID="w61">die</tc:token>
+      <tc:token ID="w62">Schreibung</tc:token>
+      <tc:token ID="w63">weitgehend</tc:token>
+      <tc:token ID="w64">nicht</tc:token>
+      <tc:token ID="w65">normiert</tc:token>
+      <tc:token ID="w66">,</tc:token>
+      <tc:token ID="w67">das</tc:token>
+      <tc:token ID="w68">Wort</tc:token>
+      <tc:token ID="w69">‚</tc:token>
+      <tc:token ID="w6a">und</tc:token>
+      <tc:token ID="w6b">‘</tc:token>
+      <tc:token ID="w6c">wird</tc:token>
+      <tc:token ID="w6d">teilweise</tc:token>
+      <tc:token ID="w6e">mit</tc:token>
+      <tc:token ID="w6f">‚</tc:token>
+      <tc:token ID="w70">u‘</tc:token>
+      <tc:token ID="w71">oder</tc:token>
+      <tc:token ID="w72">‚</tc:token>
+      <tc:token ID="w73">v‘</tc:token>
+      <tc:token ID="w74">,</tc:token>
+      <tc:token ID="w75">mit</tc:token>
+      <tc:token ID="w76">weichem</tc:token>
+      <tc:token ID="w77">‚</tc:token>
+      <tc:token ID="w78">d‘</tc:token>
+      <tc:token ID="w79">oder</tc:token>
+      <tc:token ID="w7a">hartem</tc:token>
+      <tc:token ID="w7b">‚</tc:token>
+      <tc:token ID="w7c">t‘</tc:token>
+      <tc:token ID="w7d">geschrieben</tc:token>
+      <tc:token ID="w7e">;</tc:token>
+      <tc:token ID="w7f">die</tc:token>
+      <tc:token ID="w80">Genitiv-Form</tc:token>
+      <tc:token ID="w81">zum</tc:token>
+      <tc:token ID="w82">nhd.</tc:token>
+      <tc:token ID="w83">Wort</tc:token>
+      <tc:token ID="w84">‚</tc:token>
+      <tc:token ID="w85">Gott</tc:token>
+      <tc:token ID="w86">‘</tc:token>
+      <tc:token ID="w87">lautet</tc:token>
+      <tc:token ID="w88">‚</tc:token>
+      <tc:token ID="w89">gotes</tc:token>
+      <tc:token ID="w8a">‘</tc:token>
+      <tc:token ID="w8b">oder</tc:token>
+      <tc:token ID="w8c">‚</tc:token>
+      <tc:token ID="w8d">gotis</tc:token>
+      <tc:token ID="w8e">‘</tc:token>
+      <tc:token ID="w8f">(</tc:token>
+      <tc:token ID="w90">Viehhauser</tc:token>
+      <tc:token ID="w91">2015</tc:token>
+      <tc:token ID="w92">)</tc:token>
+      <tc:token ID="w93">.</tc:token>
+      <tc:token ID="w94">Im</tc:token>
+      <tc:token ID="w95">Rahmen</tc:token>
+      <tc:token ID="w96">eines</tc:token>
+      <tc:token ID="w97">Vortrags</tc:token>
+      <tc:token ID="w98">auf</tc:token>
+      <tc:token ID="w99">der</tc:token>
+      <tc:token ID="w9a">DHd-Tagung</tc:token>
+      <tc:token ID="w9b">2016</tc:token>
+      <tc:token ID="w9c">in</tc:token>
+      <tc:token ID="w9d">Leipzig</tc:token>
+      <tc:token ID="w9e">konnte</tc:token>
+      <tc:token ID="w9f">ich</tc:token>
+      <tc:token ID="wa0">zeigen</tc:token>
+      <tc:token ID="wa1">(</tc:token>
+      <tc:token ID="wa2">Dimpel</tc:token>
+      <tc:token ID="wa3">2016</tc:token>
+      <tc:token ID="wa4">)</tc:token>
+      <tc:token ID="wa5">,</tc:token>
+      <tc:token ID="wa6">dass</tc:token>
+      <tc:token ID="wa7">Delta</tc:token>
+      <tc:token ID="wa8">bei</tc:token>
+      <tc:token ID="wa9">normalisierten</tc:token>
+      <tc:token ID="waa">mittelhochdeutschen</tc:token>
+      <tc:token ID="wab">Texten</tc:token>
+      <tc:token ID="wac">sehr</tc:token>
+      <tc:token ID="wad">gut</tc:token>
+      <tc:token ID="wae">funktioniert</tc:token>
+      <tc:token ID="waf">,</tc:token>
+      <tc:token ID="wb0">insbesondere</tc:token>
+      <tc:token ID="wb1">dann</tc:token>
+      <tc:token ID="wb2">,</tc:token>
+      <tc:token ID="wb3">wenn</tc:token>
+      <tc:token ID="wb4">Texte</tc:token>
+      <tc:token ID="wb5">verwendet</tc:token>
+      <tc:token ID="wb6">werden</tc:token>
+      <tc:token ID="wb7">,</tc:token>
+      <tc:token ID="wb8">die</tc:token>
+      <tc:token ID="wb9">aus</tc:token>
+      <tc:token ID="wba">mindestens</tc:token>
+      <tc:token ID="wbb">5.000</tc:token>
+      <tc:token ID="wbc">Wörtern</tc:token>
+      <tc:token ID="wbd">bestehen</tc:token>
+      <tc:token ID="wbe">,</tc:token>
+      <tc:token ID="wbf">und</tc:token>
+      <tc:token ID="wc0">wenn</tc:token>
+      <tc:token ID="wc1">die</tc:token>
+      <tc:token ID="wc2">Bag-of-Words-Technik</tc:token>
+      <tc:token ID="wc3">(</tc:token>
+      <tc:token ID="wc4">vgl.</tc:token>
+      <tc:token ID="wc5">Eder</tc:token>
+      <tc:token ID="wc6">2013b</tc:token>
+      <tc:token ID="wc7">)</tc:token>
+      <tc:token ID="wc8">zum</tc:token>
+      <tc:token ID="wc9">Einsatz</tc:token>
+      <tc:token ID="wca">kommt</tc:token>
+      <tc:token ID="wcb">.</tc:token>
+      <tc:token ID="wcc">Um</tc:token>
+      <tc:token ID="wcd">die</tc:token>
+      <tc:token ID="wce">Erkennungsquote</tc:token>
+      <tc:token ID="wcf">zu</tc:token>
+      <tc:token ID="wd0">ermitteln</tc:token>
+      <tc:token ID="wd1">,</tc:token>
+      <tc:token ID="wd2">habe</tc:token>
+      <tc:token ID="wd3">ich</tc:token>
+      <tc:token ID="wd4">ein</tc:token>
+      <tc:token ID="wd5">„</tc:token>
+      <tc:token ID="wd6">Ratekorpus</tc:token>
+      <tc:token ID="wd7">“</tc:token>
+      <tc:token ID="wd8">und</tc:token>
+      <tc:token ID="wd9">ein</tc:token>
+      <tc:token ID="wda">„</tc:token>
+      <tc:token ID="wdb">Validierungskorpus</tc:token>
+      <tc:token ID="wdc">“</tc:token>
+      <tc:token ID="wdd">gebildet</tc:token>
+      <tc:token ID="wde">.</tc:token>
+      <tc:token ID="wdf">In</tc:token>
+      <tc:token ID="we0">beiden</tc:token>
+      <tc:token ID="we1">Sammlungen</tc:token>
+      <tc:token ID="we2">sind</tc:token>
+      <tc:token ID="we3">Texte</tc:token>
+      <tc:token ID="we4">mit</tc:token>
+      <tc:token ID="we5">bekannter</tc:token>
+      <tc:token ID="we6">Autorschaft</tc:token>
+      <tc:token ID="we7">enthalten</tc:token>
+      <tc:token ID="we8">.</tc:token>
+      <tc:token ID="we9">Zu</tc:token>
+      <tc:token ID="wea">jedem</tc:token>
+      <tc:token ID="web">Autor</tc:token>
+      <tc:token ID="wec">,</tc:token>
+      <tc:token ID="wed">der</tc:token>
+      <tc:token ID="wee">im</tc:token>
+      <tc:token ID="wef">Ratekorpus</tc:token>
+      <tc:token ID="wf0">enthalten</tc:token>
+      <tc:token ID="wf1">ist</tc:token>
+      <tc:token ID="wf2">,</tc:token>
+      <tc:token ID="wf3">ist</tc:token>
+      <tc:token ID="wf4">jeweils</tc:token>
+      <tc:token ID="wf5">ein</tc:token>
+      <tc:token ID="wf6">Text</tc:token>
+      <tc:token ID="wf7">des</tc:token>
+      <tc:token ID="wf8">gleichen</tc:token>
+      <tc:token ID="wf9">Autors</tc:token>
+      <tc:token ID="wfa">im</tc:token>
+      <tc:token ID="wfb">Validierungskorpus</tc:token>
+      <tc:token ID="wfc">enthalten</tc:token>
+      <tc:token ID="wfd">.</tc:token>
+      <tc:token ID="wfe">Ermittelt</tc:token>
+      <tc:token ID="wff">wurde</tc:token>
+      <tc:token ID="w100">der</tc:token>
+      <tc:token ID="w101">Prozentsatz</tc:token>
+      <tc:token ID="w102">der</tc:token>
+      <tc:token ID="w103">richtig</tc:token>
+      <tc:token ID="w104">erkannten</tc:token>
+      <tc:token ID="w105">Autoren</tc:token>
+      <tc:token ID="w106">.</tc:token>
+      <tc:token ID="w107">Bei</tc:token>
+      <tc:token ID="w108">einem</tc:token>
+      <tc:token ID="w109">Test</tc:token>
+      <tc:token ID="w10a">mit</tc:token>
+      <tc:token ID="w10b">16</tc:token>
+      <tc:token ID="w10c">Texten</tc:token>
+      <tc:token ID="w10d">im</tc:token>
+      <tc:token ID="w10e">Validierungskorpus</tc:token>
+      <tc:token ID="w10f">und</tc:token>
+      <tc:token ID="w110">15</tc:token>
+      <tc:token ID="w111">Texten</tc:token>
+      <tc:token ID="w112">im</tc:token>
+      <tc:token ID="w113">Ratekorpus</tc:token>
+      <tc:token ID="w114">wurde</tc:token>
+      <tc:token ID="w115">eine</tc:token>
+      <tc:token ID="w116">Erkennungsquote</tc:token>
+      <tc:token ID="w117">von</tc:token>
+      <tc:token ID="w118">97,1</tc:token>
+      <tc:token ID="w119">%</tc:token>
+      <tc:token ID="w11a">ermittelt</tc:token>
+      <tc:token ID="w11b">.</tc:token>
+      <tc:token ID="w11c">Zu</tc:token>
+      <tc:token ID="w11d">nicht-normalisierten</tc:token>
+      <tc:token ID="w11e">Texten</tc:token>
+      <tc:token ID="w11f">habe</tc:token>
+      <tc:token ID="w120">ich</tc:token>
+      <tc:token ID="w121">2016</tc:token>
+      <tc:token ID="w122">erste</tc:token>
+      <tc:token ID="w123">Zahlen</tc:token>
+      <tc:token ID="w124">ebenfalls</tc:token>
+      <tc:token ID="w125">mit</tc:token>
+      <tc:token ID="w126">positivem</tc:token>
+      <tc:token ID="w127">Ergebnis</tc:token>
+      <tc:token ID="w128">vorlegen</tc:token>
+      <tc:token ID="w129">können</tc:token>
+      <tc:token ID="w12a">,</tc:token>
+      <tc:token ID="w12b">die</tc:token>
+      <tc:token ID="w12c">allerdings</tc:token>
+      <tc:token ID="w12d">nicht</tc:token>
+      <tc:token ID="w12e">valide</tc:token>
+      <tc:token ID="w12f">sind</tc:token>
+      <tc:token ID="w130">,</tc:token>
+      <tc:token ID="w131">weil</tc:token>
+      <tc:token ID="w132">mir</tc:token>
+      <tc:token ID="w133">zu</tc:token>
+      <tc:token ID="w134">diesem</tc:token>
+      <tc:token ID="w135">Zeitpunkt</tc:token>
+      <tc:token ID="w136">nur</tc:token>
+      <tc:token ID="w137">sehr</tc:token>
+      <tc:token ID="w138">wenige</tc:token>
+      <tc:token ID="w139">nicht-normalisierte</tc:token>
+      <tc:token ID="w13a">Texte</tc:token>
+      <tc:token ID="w13b">digital</tc:token>
+      <tc:token ID="w13c">verfügbar</tc:token>
+      <tc:token ID="w13d">waren</tc:token>
+      <tc:token ID="w13e">:</tc:token>
+      <tc:token ID="w13f">bei</tc:token>
+      <tc:token ID="w140">einer</tc:token>
+      <tc:token ID="w141">Textlänge</tc:token>
+      <tc:token ID="w142">von</tc:token>
+      <tc:token ID="w143">5.000</tc:token>
+      <tc:token ID="w144">Wörtern</tc:token>
+      <tc:token ID="w145">konnte</tc:token>
+      <tc:token ID="w146">ich</tc:token>
+      <tc:token ID="w147">gegen</tc:token>
+      <tc:token ID="w148">ein</tc:token>
+      <tc:token ID="w149">Validierungskorpus</tc:token>
+      <tc:token ID="w14a">mit</tc:token>
+      <tc:token ID="w14b">14</tc:token>
+      <tc:token ID="w14c">Texten</tc:token>
+      <tc:token ID="w14d">nur</tc:token>
+      <tc:token ID="w14e">6</tc:token>
+      <tc:token ID="w14f">Texte</tc:token>
+      <tc:token ID="w150">von</tc:token>
+      <tc:token ID="w151">5</tc:token>
+      <tc:token ID="w152">Autoren</tc:token>
+      <tc:token ID="w153">prüfen</tc:token>
+      <tc:token ID="w154">.</tc:token>
+      <tc:token ID="w155">Nunmehr</tc:token>
+      <tc:token ID="w156">liegen</tc:token>
+      <tc:token ID="w157">weitere</tc:token>
+      <tc:token ID="w158">Texte</tc:token>
+      <tc:token ID="w159">vor</tc:token>
+      <tc:token ID="w15a">,</tc:token>
+      <tc:token ID="w15b">so</tc:token>
+      <tc:token ID="w15c">dass</tc:token>
+      <tc:token ID="w15d">für</tc:token>
+      <tc:token ID="w15e">einen</tc:token>
+      <tc:token ID="w15f">Validierungstest</tc:token>
+      <tc:token ID="w160">nun</tc:token>
+      <tc:token ID="w161">ein</tc:token>
+      <tc:token ID="w162">Ratekorpus</tc:token>
+      <tc:token ID="w163">mit</tc:token>
+      <tc:token ID="w164">15</tc:token>
+      <tc:token ID="w165">Texten</tc:token>
+      <tc:token ID="w166">von</tc:token>
+      <tc:token ID="w167">10</tc:token>
+      <tc:token ID="w168">Autoren</tc:token>
+      <tc:token ID="w169">zur</tc:token>
+      <tc:token ID="w16a">Verfügung</tc:token>
+      <tc:token ID="w16b">steht</tc:token>
+      <tc:token ID="w16c">.</tc:token>
+      <tc:token ID="w16d">Im</tc:token>
+      <tc:token ID="w16e">Validierungskorpus</tc:token>
+      <tc:token ID="w16f">ist</tc:token>
+      <tc:token ID="w170">je</tc:token>
+      <tc:token ID="w171">ein</tc:token>
+      <tc:token ID="w172">Text</tc:token>
+      <tc:token ID="w173">dieser</tc:token>
+      <tc:token ID="w174">10</tc:token>
+      <tc:token ID="w175">Autoren</tc:token>
+      <tc:token ID="w176">enthalten</tc:token>
+      <tc:token ID="w177">,</tc:token>
+      <tc:token ID="w178">dazu</tc:token>
+      <tc:token ID="w179">kommen</tc:token>
+      <tc:token ID="w17a">weitere</tc:token>
+      <tc:token ID="w17b">10</tc:token>
+      <tc:token ID="w17c">Texte</tc:token>
+      <tc:token ID="w17d">,</tc:token>
+      <tc:token ID="w17e">die</tc:token>
+      <tc:token ID="w17f">Fehlattributionen</tc:token>
+      <tc:token ID="w180">auslösen</tc:token>
+      <tc:token ID="w181">könnten</tc:token>
+      <tc:token ID="w182">.</tc:token>
+      <tc:token ID="w183">Dass</tc:token>
+      <tc:token ID="w184">Delta</tc:token>
+      <tc:token ID="w185">bei</tc:token>
+      <tc:token ID="w186">nicht-normalisierten</tc:token>
+      <tc:token ID="w187">Texten</tc:token>
+      <tc:token ID="w188">schlechtere</tc:token>
+      <tc:token ID="w189">Erkennungsquoten</tc:token>
+      <tc:token ID="w18a">liefert</tc:token>
+      <tc:token ID="w18b">,</tc:token>
+      <tc:token ID="w18c">ist</tc:token>
+      <tc:token ID="w18d">deshalb</tc:token>
+      <tc:token ID="w18e">zu</tc:token>
+      <tc:token ID="w18f">erwarten</tc:token>
+      <tc:token ID="w190">,</tc:token>
+      <tc:token ID="w191">weil</tc:token>
+      <tc:token ID="w192">Delta</tc:token>
+      <tc:token ID="w193">auf</tc:token>
+      <tc:token ID="w194">der</tc:token>
+      <tc:token ID="w195">Verteilung</tc:token>
+      <tc:token ID="w196">von</tc:token>
+      <tc:token ID="w197">hochfrequenten</tc:token>
+      <tc:token ID="w198">Wörtern</tc:token>
+      <tc:token ID="w199">beruht</tc:token>
+      <tc:token ID="w19a">.</tc:token>
+      <tc:token ID="w19b">Wenn</tc:token>
+      <tc:token ID="w19c">im</tc:token>
+      <tc:token ID="w19d">Werk</tc:token>
+      <tc:token ID="w19e">X</tc:token>
+      <tc:token ID="w19f">überwiegend</tc:token>
+      <tc:token ID="w1a0">‚</tc:token>
+      <tc:token ID="w1a1">unt‘</tc:token>
+      <tc:token ID="w1a2">steht</tc:token>
+      <tc:token ID="w1a3">,</tc:token>
+      <tc:token ID="w1a4">wenn</tc:token>
+      <tc:token ID="w1a5">sich</tc:token>
+      <tc:token ID="w1a6">im</tc:token>
+      <tc:token ID="w1a7">Werk</tc:token>
+      <tc:token ID="w1a8">Y</tc:token>
+      <tc:token ID="w1a9">des</tc:token>
+      <tc:token ID="w1aa">gleichen</tc:token>
+      <tc:token ID="w1ab">Autors</tc:token>
+      <tc:token ID="w1ac">jedoch</tc:token>
+      <tc:token ID="w1ad">der</tc:token>
+      <tc:token ID="w1ae">Abschreiber</tc:token>
+      <tc:token ID="w1af">für</tc:token>
+      <tc:token ID="w1b0">die</tc:token>
+      <tc:token ID="w1b1">Graphie</tc:token>
+      <tc:token ID="w1b2">‚</tc:token>
+      <tc:token ID="w1b3">vnnd</tc:token>
+      <tc:token ID="w1b4">‘</tc:token>
+      <tc:token ID="w1b5">entschieden</tc:token>
+      <tc:token ID="w1b6">hat</tc:token>
+      <tc:token ID="w1b7">,</tc:token>
+      <tc:token ID="w1b8">wird</tc:token>
+      <tc:token ID="w1b9">die</tc:token>
+      <tc:token ID="w1ba">Zuordnung</tc:token>
+      <tc:token ID="w1bb">des</tc:token>
+      <tc:token ID="w1bc">richtigen</tc:token>
+      <tc:token ID="w1bd">Autors</tc:token>
+      <tc:token ID="w1be">dadurch</tc:token>
+      <tc:token ID="w1bf">erschwert</tc:token>
+      <tc:token ID="w1c0">.</tc:token>
+      <tc:token ID="w1c1">Erwartungsgemäß</tc:token>
+      <tc:token ID="w1c2">liegt</tc:token>
+      <tc:token ID="w1c3">die</tc:token>
+      <tc:token ID="w1c4">Erkennungsquote</tc:token>
+      <tc:token ID="w1c5">mit</tc:token>
+      <tc:token ID="w1c6">ca.</tc:token>
+      <tc:token ID="w1c7">80</tc:token>
+      <tc:token ID="w1c8">%</tc:token>
+      <tc:token ID="w1c9">(</tc:token>
+      <tc:token ID="w1ca">bei</tc:token>
+      <tc:token ID="w1cb">Bag-of-Words</tc:token>
+      <tc:token ID="w1cc">mit</tc:token>
+      <tc:token ID="w1cd">5.000</tc:token>
+      <tc:token ID="w1ce">Wörtern</tc:token>
+      <tc:token ID="w1cf">;</tc:token>
+      <tc:token ID="w1d0">50</tc:token>
+      <tc:token ID="w1d1">Iterationen</tc:token>
+      <tc:token ID="w1d2">zum</tc:token>
+      <tc:token ID="w1d3">Ausgleich</tc:token>
+      <tc:token ID="w1d4">von</tc:token>
+      <tc:token ID="w1d5">Zufallsschwankungen</tc:token>
+      <tc:token ID="w1d6">bei</tc:token>
+      <tc:token ID="w1d7">der</tc:token>
+      <tc:token ID="w1d8">Bag-of-Words-Bildung</tc:token>
+      <tc:token ID="w1d9">;</tc:token>
+      <tc:token ID="w1da">davon</tc:token>
+      <tc:token ID="w1db">der</tc:token>
+      <tc:token ID="w1dc">Mittelwert</tc:token>
+      <tc:token ID="w1dd">für</tc:token>
+      <tc:token ID="w1de">die</tc:token>
+      <tc:token ID="w1df">Vektoren</tc:token>
+      <tc:token ID="w1e0">200</tc:token>
+      <tc:token ID="w1e1">,</tc:token>
+      <tc:token ID="w1e2">400</tc:token>
+      <tc:token ID="w1e3">,</tc:token>
+      <tc:token ID="w1e4">600</tc:token>
+      <tc:token ID="w1e5">und</tc:token>
+      <tc:token ID="w1e6">800</tc:token>
+      <tc:token ID="w1e7">)</tc:token>
+      <tc:token ID="w1e8">deutlich</tc:token>
+      <tc:token ID="w1e9">unter</tc:token>
+      <tc:token ID="w1ea">der</tc:token>
+      <tc:token ID="w1eb">Quote</tc:token>
+      <tc:token ID="w1ec">für</tc:token>
+      <tc:token ID="w1ed">normalisierte</tc:token>
+      <tc:token ID="w1ee">Texte</tc:token>
+      <tc:token ID="w1ef">.</tc:token>
+      <tc:token ID="w1f0">Um</tc:token>
+      <tc:token ID="w1f1">eine</tc:token>
+      <tc:token ID="w1f2">Verbesserung</tc:token>
+      <tc:token ID="w1f3">der</tc:token>
+      <tc:token ID="w1f4">Erkennungsquote</tc:token>
+      <tc:token ID="w1f5">zu</tc:token>
+      <tc:token ID="w1f6">ermöglich</tc:token>
+      <tc:token ID="w1f7">,</tc:token>
+      <tc:token ID="w1f8">wurden</tc:token>
+      <tc:token ID="w1f9">nun</tc:token>
+      <tc:token ID="w1fa">Ansätze</tc:token>
+      <tc:token ID="w1fb">zur</tc:token>
+      <tc:token ID="w1fc">automatischen</tc:token>
+      <tc:token ID="w1fd">Teilnormalisierung</tc:token>
+      <tc:token ID="w1fe">erprobt</tc:token>
+      <tc:token ID="w1ff">.</tc:token>
+      <tc:token ID="w200">Ein</tc:token>
+      <tc:token ID="w201">erster</tc:token>
+      <tc:token ID="w202">Schritt</tc:token>
+      <tc:token ID="w203">dabei</tc:token>
+      <tc:token ID="w204">ist</tc:token>
+      <tc:token ID="w205">die</tc:token>
+      <tc:token ID="w206">Eliminierung</tc:token>
+      <tc:token ID="w207">der</tc:token>
+      <tc:token ID="w208">Sonderzeichen</tc:token>
+      <tc:token ID="w209">und</tc:token>
+      <tc:token ID="w20a">der</tc:token>
+      <tc:token ID="w20b">deutschen</tc:token>
+      <tc:token ID="w20c">Umlaute</tc:token>
+      <tc:token ID="w20d">–</tc:token>
+      <tc:token ID="w20e">auch</tc:token>
+      <tc:token ID="w20f">in</tc:token>
+      <tc:token ID="w210">dem</tc:token>
+      <tc:token ID="w211">soeben</tc:token>
+      <tc:token ID="w212">erwähnten</tc:token>
+      <tc:token ID="w213">Test</tc:token>
+      <tc:token ID="w214">war</tc:token>
+      <tc:token ID="w215">diese</tc:token>
+      <tc:token ID="w216">Bereinigung</tc:token>
+      <tc:token ID="w217">bereits</tc:token>
+      <tc:token ID="w218">implementiert</tc:token>
+      <tc:token ID="w219">.</tc:token>
+      <tc:token ID="w21a">Eine</tc:token>
+      <tc:token ID="w21b">weitere</tc:token>
+      <tc:token ID="w21c">automatische</tc:token>
+      <tc:token ID="w21d">Teilnormalisierung</tc:token>
+      <tc:token ID="w21e">ist</tc:token>
+      <tc:token ID="w21f">deshalb</tc:token>
+      <tc:token ID="w220">ökonomisch</tc:token>
+      <tc:token ID="w221">realisierbar</tc:token>
+      <tc:token ID="w222">,</tc:token>
+      <tc:token ID="w223">weil</tc:token>
+      <tc:token ID="w224">für</tc:token>
+      <tc:token ID="w225">den</tc:token>
+      <tc:token ID="w226">Delta-Test</tc:token>
+      <tc:token ID="w227">keine</tc:token>
+      <tc:token ID="w228">vollständige</tc:token>
+      <tc:token ID="w229">Normalisierung</tc:token>
+      <tc:token ID="w22a">nötig</tc:token>
+      <tc:token ID="w22b">ist</tc:token>
+      <tc:token ID="w22c">.</tc:token>
+      <tc:token ID="w22d">Weil</tc:token>
+      <tc:token ID="w22e">Delta</tc:token>
+      <tc:token ID="w22f">auf</tc:token>
+      <tc:token ID="w230">den</tc:token>
+      <tc:token ID="w231">hochfrequenten</tc:token>
+      <tc:token ID="w232">Wörtern</tc:token>
+      <tc:token ID="w233">beruht</tc:token>
+      <tc:token ID="w234">,</tc:token>
+      <tc:token ID="w235">sollte</tc:token>
+      <tc:token ID="w236">bereits</tc:token>
+      <tc:token ID="w237">eine</tc:token>
+      <tc:token ID="w238">Normalisierung</tc:token>
+      <tc:token ID="w239">der</tc:token>
+      <tc:token ID="w23a">häufigen</tc:token>
+      <tc:token ID="w23b">Wörter</tc:token>
+      <tc:token ID="w23c">zu</tc:token>
+      <tc:token ID="w23d">einer</tc:token>
+      <tc:token ID="w23e">Verbesserung</tc:token>
+      <tc:token ID="w23f">führen</tc:token>
+      <tc:token ID="w240">.</tc:token>
+      <tc:token ID="w241">In</tc:token>
+      <tc:token ID="w242">einem</tc:token>
+      <tc:token ID="w243">nächsten</tc:token>
+      <tc:token ID="w244">Schritt</tc:token>
+      <tc:token ID="w245">wurde</tc:token>
+      <tc:token ID="w246">ein</tc:token>
+      <tc:token ID="w247">Skript</tc:token>
+      <tc:token ID="w248">entwickelt</tc:token>
+      <tc:token ID="w249">,</tc:token>
+      <tc:token ID="w24a">das</tc:token>
+      <tc:token ID="w24b">aus</tc:token>
+      <tc:token ID="w24c">einigen</tc:token>
+      <tc:token ID="w24d">kürzeren</tc:token>
+      <tc:token ID="w24e">nicht-normalisierten</tc:token>
+      <tc:token ID="w24f">Texten</tc:token>
+      <tc:token ID="w250">die</tc:token>
+      <tc:token ID="w251">hochfrequenten</tc:token>
+      <tc:token ID="w252">Wortformen</tc:token>
+      <tc:token ID="w253">heraussucht</tc:token>
+      <tc:token ID="w254">und</tc:token>
+      <tc:token ID="w255">den</tc:token>
+      <tc:token ID="w256">User</tc:token>
+      <tc:token ID="w257">bittet</tc:token>
+      <tc:token ID="w258">,</tc:token>
+      <tc:token ID="w259">die</tc:token>
+      <tc:token ID="w25a">normalisierte</tc:token>
+      <tc:token ID="w25b">Form</tc:token>
+      <tc:token ID="w25c">zuzuordnen</tc:token>
+      <tc:token ID="w25d">.</tc:token>
+      <tc:token ID="w25e">Eine</tc:token>
+      <tc:token ID="w25f">Vorschlagsliste</tc:token>
+      <tc:token ID="w260">aus</tc:token>
+      <tc:token ID="w261">einem</tc:token>
+      <tc:token ID="w262">normalisierten</tc:token>
+      <tc:token ID="w263">Lachmann-Korpus</tc:token>
+      <tc:token ID="w264">,</tc:token>
+      <tc:token ID="w265">die</tc:token>
+      <tc:token ID="w266">mittels</tc:token>
+      <tc:token ID="w267">Levenshtein-Distanz</tc:token>
+      <tc:token ID="w268">generiert</tc:token>
+      <tc:token ID="w269">wurde</tc:token>
+      <tc:token ID="w26a">,</tc:token>
+      <tc:token ID="w26b">hat</tc:token>
+      <tc:token ID="w26c">meiner</tc:token>
+      <tc:token ID="w26d">Hilfskraft</tc:token>
+      <tc:token ID="w26e">das</tc:token>
+      <tc:token ID="w26f">Leben</tc:token>
+      <tc:token ID="w270">leichter</tc:token>
+      <tc:token ID="w271">gemacht</tc:token>
+      <tc:token ID="w272">.</tc:token>
+      <tc:token ID="w273">Zudem</tc:token>
+      <tc:token ID="w274">habe</tc:token>
+      <tc:token ID="w275">ich</tc:token>
+      <tc:token ID="w276">zwei</tc:token>
+      <tc:token ID="w277">Datengeschenke</tc:token>
+      <tc:token ID="w278">bekommen</tc:token>
+      <tc:token ID="w279">:</tc:token>
+      <tc:token ID="w27a">Sonja</tc:token>
+      <tc:token ID="w27b">Glauch</tc:token>
+      <tc:token ID="w27c">hat</tc:token>
+      <tc:token ID="w27d">mir</tc:token>
+      <tc:token ID="w27e">Daten</tc:token>
+      <tc:token ID="w27f">aus</tc:token>
+      <tc:token ID="w280">dem</tc:token>
+      <tc:token ID="w281">Projekt</tc:token>
+      <tc:token ID="w282">„</tc:token>
+      <tc:token ID="w283">Lyrik</tc:token>
+      <tc:token ID="w284">des</tc:token>
+      <tc:token ID="w285">Mittelalters</tc:token>
+      <tc:token ID="w286">“</tc:token>
+      <tc:token ID="w287">gegeben</tc:token>
+      <tc:token ID="w288">,</tc:token>
+      <tc:token ID="w289">das</tc:token>
+      <tc:token ID="w28a">eine</tc:token>
+      <tc:token ID="w28b">Zuordnung</tc:token>
+      <tc:token ID="w28c">von</tc:token>
+      <tc:token ID="w28d">normalisierten</tc:token>
+      <tc:token ID="w28e">zu</tc:token>
+      <tc:token ID="w28f">nicht-normalisierten</tc:token>
+      <tc:token ID="w290">Wortformen</tc:token>
+      <tc:token ID="w291">herstellt</tc:token>
+      <tc:token ID="w292">.</tc:token>
+      <tc:token ID="w293">Mit</tc:token>
+      <tc:token ID="w294">den</tc:token>
+      <tc:token ID="w295">Skript-Daten</tc:token>
+      <tc:token ID="w296">und</tc:token>
+      <tc:token ID="w297">den</tc:token>
+      <tc:token ID="w298">Lyrik-Projekt-Daten</tc:token>
+      <tc:token ID="w299">lag</tc:token>
+      <tc:token ID="w29a">ein</tc:token>
+      <tc:token ID="w29b">Normalisierungswörterbuch</tc:token>
+      <tc:token ID="w29c">mit</tc:token>
+      <tc:token ID="w29d">gut</tc:token>
+      <tc:token ID="w29e">1.100</tc:token>
+      <tc:token ID="w29f">Zuordnungen</tc:token>
+      <tc:token ID="w2a0">vor</tc:token>
+      <tc:token ID="w2a1">,</tc:token>
+      <tc:token ID="w2a2">als</tc:token>
+      <tc:token ID="w2a3">mir</tc:token>
+      <tc:token ID="w2a4">Thomas</tc:token>
+      <tc:token ID="w2a5">Klein</tc:token>
+      <tc:token ID="w2a6">Daten</tc:token>
+      <tc:token ID="w2a7">aus</tc:token>
+      <tc:token ID="w2a8">dem</tc:token>
+      <tc:token ID="w2a9">Referenzkorpus</tc:token>
+      <tc:token ID="w2aa">Mittelhochdeutsch</tc:token>
+      <tc:token ID="w2ab">überlassen</tc:token>
+      <tc:token ID="w2ac">hat</tc:token>
+      <tc:token ID="w2ad">.</tc:token>
+      <tc:token ID="w2ae">Die</tc:token>
+      <tc:token ID="w2af">vorbildliche</tc:token>
+      <tc:token ID="w2b0">Struktur</tc:token>
+      <tc:token ID="w2b1">des</tc:token>
+      <tc:token ID="w2b2">Referenzkorpus</tc:token>
+      <tc:token ID="w2b3">hat</tc:token>
+      <tc:token ID="w2b4">es</tc:token>
+      <tc:token ID="w2b5">möglich</tc:token>
+      <tc:token ID="w2b6">gemacht</tc:token>
+      <tc:token ID="w2b7">,</tc:token>
+      <tc:token ID="w2b8">weitere</tc:token>
+      <tc:token ID="w2b9">Zuordnungen</tc:token>
+      <tc:token ID="w2ba">zu</tc:token>
+      <tc:token ID="w2bb">extrahieren</tc:token>
+      <tc:token ID="w2bc">und</tc:token>
+      <tc:token ID="w2bd">sie</tc:token>
+      <tc:token ID="w2be">in</tc:token>
+      <tc:token ID="w2bf">das</tc:token>
+      <tc:token ID="w2c0">Normalisierungswörterbuch</tc:token>
+      <tc:token ID="w2c1">einspeisen</tc:token>
+      <tc:token ID="w2c2">,</tc:token>
+      <tc:token ID="w2c3">das</tc:token>
+      <tc:token ID="w2c4">nunmehr</tc:token>
+      <tc:token ID="w2c5">gut</tc:token>
+      <tc:token ID="w2c6">120.000</tc:token>
+      <tc:token ID="w2c7">Zuordnungen</tc:token>
+      <tc:token ID="w2c8">enthält</tc:token>
+      <tc:token ID="w2c9">.</tc:token>
+      <tc:token ID="w2ca">Eine</tc:token>
+      <tc:token ID="w2cb">Sichtung</tc:token>
+      <tc:token ID="w2cc">des</tc:token>
+      <tc:token ID="w2cd">Normalisierungswörterbuchs</tc:token>
+      <tc:token ID="w2ce">hat</tc:token>
+      <tc:token ID="w2cf">jedoch</tc:token>
+      <tc:token ID="w2d0">gezeigt</tc:token>
+      <tc:token ID="w2d1">,</tc:token>
+      <tc:token ID="w2d2">dass</tc:token>
+      <tc:token ID="w2d3">teilweise</tc:token>
+      <tc:token ID="w2d4">auch</tc:token>
+      <tc:token ID="w2d5">solche</tc:token>
+      <tc:token ID="w2d6">diplomatische</tc:token>
+      <tc:token ID="w2d7">Wortformen</tc:token>
+      <tc:token ID="w2d8">wie</tc:token>
+      <tc:token ID="w2d9">‚</tc:token>
+      <tc:token ID="w2da">sluc</tc:token>
+      <tc:token ID="w2db">‘</tc:token>
+      <tc:token ID="w2dc">zu</tc:token>
+      <tc:token ID="w2dd">‚</tc:token>
+      <tc:token ID="w2de">sluoc</tc:token>
+      <tc:token ID="w2df">‘</tc:token>
+      <tc:token ID="w2e0">normalisiert</tc:token>
+      <tc:token ID="w2e1">werden</tc:token>
+      <tc:token ID="w2e2">,</tc:token>
+      <tc:token ID="w2e3">die</tc:token>
+      <tc:token ID="w2e4">eigentlich</tc:token>
+      <tc:token ID="w2e5">auch</tc:token>
+      <tc:token ID="w2e6">selbst</tc:token>
+      <tc:token ID="w2e7">als</tc:token>
+      <tc:token ID="w2e8">normalisierte</tc:token>
+      <tc:token ID="w2e9">Form</tc:token>
+      <tc:token ID="w2ea">eines</tc:token>
+      <tc:token ID="w2eb">anderen</tc:token>
+      <tc:token ID="w2ec">Lemmas</tc:token>
+      <tc:token ID="w2ed">stehen</tc:token>
+      <tc:token ID="w2ee">könnten</tc:token>
+      <tc:token ID="w2ef">:</tc:token>
+      <tc:token ID="w2f0">‚</tc:token>
+      <tc:token ID="w2f1">sluc</tc:token>
+      <tc:token ID="w2f2">‘</tc:token>
+      <tc:token ID="w2f3">kann</tc:token>
+      <tc:token ID="w2f4">als</tc:token>
+      <tc:token ID="w2f5">starkes</tc:token>
+      <tc:token ID="w2f6">Femininum</tc:token>
+      <tc:token ID="w2f7">etwa</tc:token>
+      <tc:token ID="w2f8">nhd</tc:token>
+      <tc:token ID="w2f9">.</tc:token>
+      <tc:token ID="w2fa">„</tc:token>
+      <tc:token ID="w2fb">ein</tc:token>
+      <tc:token ID="w2fc">Schluck</tc:token>
+      <tc:token ID="w2fd">“</tc:token>
+      <tc:token ID="w2fe">heißen</tc:token>
+      <tc:token ID="w2ff">und</tc:token>
+      <tc:token ID="w300">müsste</tc:token>
+      <tc:token ID="w301">dann</tc:token>
+      <tc:token ID="w302">nicht</tc:token>
+      <tc:token ID="w303">durch</tc:token>
+      <tc:token ID="w304">eine</tc:token>
+      <tc:token ID="w305">andere</tc:token>
+      <tc:token ID="w306">normalisierte</tc:token>
+      <tc:token ID="w307">Form</tc:token>
+      <tc:token ID="w308">ersetzt</tc:token>
+      <tc:token ID="w309">werden</tc:token>
+      <tc:token ID="w30a">.</tc:token>
+      <tc:token ID="w30b">Mitunter</tc:token>
+      <tc:token ID="w30c">wurde</tc:token>
+      <tc:token ID="w30d">im</tc:token>
+      <tc:token ID="w30e">Lyrikprojekt</tc:token>
+      <tc:token ID="w30f">und</tc:token>
+      <tc:token ID="w310">im</tc:token>
+      <tc:token ID="w311">ReM</tc:token>
+      <tc:token ID="w312">unerwartet</tc:token>
+      <tc:token ID="w313">normalisiert</tc:token>
+      <tc:token ID="w314">:</tc:token>
+      <tc:token ID="w315">So</tc:token>
+      <tc:token ID="w316">findet</tc:token>
+      <tc:token ID="w317">sich</tc:token>
+      <tc:token ID="w318">bspw.</tc:token>
+      <tc:token ID="w319">eine</tc:token>
+      <tc:token ID="w31a">Normalisierung</tc:token>
+      <tc:token ID="w31b">der</tc:token>
+      <tc:token ID="w31c">Wortform</tc:token>
+      <tc:token ID="w31d">‚</tc:token>
+      <tc:token ID="w31e">chunich</tc:token>
+      <tc:token ID="w31f">‘</tc:token>
+      <tc:token ID="w320">zu</tc:token>
+      <tc:token ID="w321">‚</tc:token>
+      <tc:token ID="w322">küninc</tc:token>
+      <tc:token ID="w323">‘</tc:token>
+      <tc:token ID="w324">,</tc:token>
+      <tc:token ID="w325">während</tc:token>
+      <tc:token ID="w326">im</tc:token>
+      <tc:token ID="w327">BMZ</tc:token>
+      <tc:token ID="w328">und</tc:token>
+      <tc:token ID="w329">im</tc:token>
+      <tc:token ID="w32a">Lachmann-Parzival</tc:token>
+      <tc:token ID="w32b">meist</tc:token>
+      <tc:token ID="w32c">‚</tc:token>
+      <tc:token ID="w32d">künec</tc:token>
+      <tc:token ID="w32e">‘</tc:token>
+      <tc:token ID="w32f">steht</tc:token>
+      <tc:token ID="w330">.</tc:token>
+      <tc:token ID="w331">Um</tc:token>
+      <tc:token ID="w332">das</tc:token>
+      <tc:token ID="w333">Normalisierungswörterbuch</tc:token>
+      <tc:token ID="w334">zu</tc:token>
+      <tc:token ID="w335">überprüfen</tc:token>
+      <tc:token ID="w336">und</tc:token>
+      <tc:token ID="w337">vereinheitlichen</tc:token>
+      <tc:token ID="w338">zu</tc:token>
+      <tc:token ID="w339">können</tc:token>
+      <tc:token ID="w33a">,</tc:token>
+      <tc:token ID="w33b">wurde</tc:token>
+      <tc:token ID="w33c">ein</tc:token>
+      <tc:token ID="w33d">mittelhochdeutsches</tc:token>
+      <tc:token ID="w33e">Vollformenwörterbuch</tc:token>
+      <tc:token ID="w33f">benötigt</tc:token>
+      <tc:token ID="w340">,</tc:token>
+      <tc:token ID="w341">das</tc:token>
+      <tc:token ID="w342">die</tc:token>
+      <tc:token ID="w343">Wortformen</tc:token>
+      <tc:token ID="w344">enthält</tc:token>
+      <tc:token ID="w345">,</tc:token>
+      <tc:token ID="w346">die</tc:token>
+      <tc:token ID="w347">zu</tc:token>
+      <tc:token ID="w348">normalisierten</tc:token>
+      <tc:token ID="w349">Lemmata</tc:token>
+      <tc:token ID="w34a">durch</tc:token>
+      <tc:token ID="w34b">Flexion</tc:token>
+      <tc:token ID="w34c">gebildet</tc:token>
+      <tc:token ID="w34d">werden</tc:token>
+      <tc:token ID="w34e">können</tc:token>
+      <tc:token ID="w34f">.</tc:token>
+      <tc:token ID="w350">Aus</tc:token>
+      <tc:token ID="w351">der</tc:token>
+      <tc:token ID="w352">CD</tc:token>
+      <tc:token ID="w353">„</tc:token>
+      <tc:token ID="w354">Mittelhochdeutsche</tc:token>
+      <tc:token ID="w355">Wörterbücher</tc:token>
+      <tc:token ID="w356">im</tc:token>
+      <tc:token ID="w357">Verbund</tc:token>
+      <tc:token ID="w358">“</tc:token>
+      <tc:token ID="w359">(</tc:token>
+      <tc:token ID="w35a">Trier</tc:token>
+      <tc:token ID="w35b">,</tc:token>
+      <tc:token ID="w35c">Kompetenzzentrum</tc:token>
+      <tc:token ID="w35d">für</tc:token>
+      <tc:token ID="w35e">elektronische</tc:token>
+      <tc:token ID="w35f">Erschließungs-</tc:token>
+      <tc:token ID="w360">und</tc:token>
+      <tc:token ID="w361">Publikationsverfahren</tc:token>
+      <tc:token ID="w362">in</tc:token>
+      <tc:token ID="w363">den</tc:token>
+      <tc:token ID="w364">Geisteswissenschaften</tc:token>
+      <tc:token ID="w365">2002</tc:token>
+      <tc:token ID="w366">)</tc:token>
+      <tc:token ID="w367">wurden</tc:token>
+      <tc:token ID="w368">Daten</tc:token>
+      <tc:token ID="w369">extrahiert</tc:token>
+      <tc:token ID="w36a">und</tc:token>
+      <tc:token ID="w36b">mögliche</tc:token>
+      <tc:token ID="w36c">Flexionsformen</tc:token>
+      <tc:token ID="w36d">zu</tc:token>
+      <tc:token ID="w36e">den</tc:token>
+      <tc:token ID="w36f">Lemmata</tc:token>
+      <tc:token ID="w370">generiert</tc:token>
+      <tc:token ID="w371">.</tc:token>
+      <tc:token ID="w372">Wenn</tc:token>
+      <tc:token ID="w373">es</tc:token>
+      <tc:token ID="w374">auf</tc:token>
+      <tc:token ID="w375">Vollständigkeit</tc:token>
+      <tc:token ID="w376">und</tc:token>
+      <tc:token ID="w377">Korrektheit</tc:token>
+      <tc:token ID="w378">ankommen</tc:token>
+      <tc:token ID="w379">würde</tc:token>
+      <tc:token ID="w37a">,</tc:token>
+      <tc:token ID="w37b">wäre</tc:token>
+      <tc:token ID="w37c">die</tc:token>
+      <tc:token ID="w37d">Erstellung</tc:token>
+      <tc:token ID="w37e">eines</tc:token>
+      <tc:token ID="w37f">derartigen</tc:token>
+      <tc:token ID="w380">Vollformenwörterbuchs</tc:token>
+      <tc:token ID="w381">eine</tc:token>
+      <tc:token ID="w382">große</tc:token>
+      <tc:token ID="w383">Herausforderung</tc:token>
+      <tc:token ID="w384">.</tc:token>
+      <tc:token ID="w385">Doch</tc:token>
+      <tc:token ID="w386">geht</tc:token>
+      <tc:token ID="w387">es</tc:token>
+      <tc:token ID="w388">sowohl</tc:token>
+      <tc:token ID="w389">bei</tc:token>
+      <tc:token ID="w38a">dem</tc:token>
+      <tc:token ID="w38b">Normalisierungswörterbuch</tc:token>
+      <tc:token ID="w38c">als</tc:token>
+      <tc:token ID="w38d">auch</tc:token>
+      <tc:token ID="w38e">bei</tc:token>
+      <tc:token ID="w38f">dem</tc:token>
+      <tc:token ID="w390">Vollformenwörterbuch</tc:token>
+      <tc:token ID="w391">hier</tc:token>
+      <tc:token ID="w392">nur</tc:token>
+      <tc:token ID="w393">darum</tc:token>
+      <tc:token ID="w394">,</tc:token>
+      <tc:token ID="w395">eine</tc:token>
+      <tc:token ID="w396">prozentuale</tc:token>
+      <tc:token ID="w397">Verbesserung</tc:token>
+      <tc:token ID="w398">der</tc:token>
+      <tc:token ID="w399">Delta-Erkennungsquote</tc:token>
+      <tc:token ID="w39a">zu</tc:token>
+      <tc:token ID="w39b">erreichen</tc:token>
+      <tc:token ID="w39c">.</tc:token>
+      <tc:token ID="w39d">Fehler</tc:token>
+      <tc:token ID="w39e">bei</tc:token>
+      <tc:token ID="w39f">seltenen</tc:token>
+      <tc:token ID="w3a0">Wortformen</tc:token>
+      <tc:token ID="w3a1">sind</tc:token>
+      <tc:token ID="w3a2">bei</tc:token>
+      <tc:token ID="w3a3">Delta</tc:token>
+      <tc:token ID="w3a4">meist</tc:token>
+      <tc:token ID="w3a5">zu</tc:token>
+      <tc:token ID="w3a6">vernachlässigen</tc:token>
+      <tc:token ID="w3a7">,</tc:token>
+      <tc:token ID="w3a8">wichtig</tc:token>
+      <tc:token ID="w3a9">ist</tc:token>
+      <tc:token ID="w3aa">eine</tc:token>
+      <tc:token ID="w3ab">Vereinheitlichung</tc:token>
+      <tc:token ID="w3ac">der</tc:token>
+      <tc:token ID="w3ad">häufigen</tc:token>
+      <tc:token ID="w3ae">Wörter</tc:token>
+      <tc:token ID="w3af">.</tc:token>
+      <tc:token ID="w3b0">Manche</tc:token>
+      <tc:token ID="w3b1">Probleme</tc:token>
+      <tc:token ID="w3b2">haben</tc:token>
+      <tc:token ID="w3b3">sich</tc:token>
+      <tc:token ID="w3b4">überwiegend</tc:token>
+      <tc:token ID="w3b5">erfreulich</tc:token>
+      <tc:token ID="w3b6">lösen</tc:token>
+      <tc:token ID="w3b7">lassen</tc:token>
+      <tc:token ID="w3b8">:</tc:token>
+      <tc:token ID="w3b9">Zu</tc:token>
+      <tc:token ID="w3ba">Ablaut</tc:token>
+      <tc:token ID="w3bb">und</tc:token>
+      <tc:token ID="w3bc">grammatischem</tc:token>
+      <tc:token ID="w3bd">Wechsel</tc:token>
+      <tc:token ID="w3be">sind</tc:token>
+      <tc:token ID="w3bf">Informationen</tc:token>
+      <tc:token ID="w3c0">BMZ</tc:token>
+      <tc:token ID="w3c1">hinterlegt</tc:token>
+      <tc:token ID="w3c2">.</tc:token>
+      <tc:token ID="w3c3">Schwache</tc:token>
+      <tc:token ID="w3c4">Verben</tc:token>
+      <tc:token ID="w3c5">mit</tc:token>
+      <tc:token ID="w3c6">sogenanntem</tc:token>
+      <tc:token ID="w3c7">Rückumlaut</tc:token>
+      <tc:token ID="w3c8">generiert</tc:token>
+      <tc:token ID="w3c9">das</tc:token>
+      <tc:token ID="w3ca">Skript</tc:token>
+      <tc:token ID="w3cb">dann</tc:token>
+      <tc:token ID="w3cc">,</tc:token>
+      <tc:token ID="w3cd">wenn</tc:token>
+      <tc:token ID="w3ce">im</tc:token>
+      <tc:token ID="w3cf">Singular</tc:token>
+      <tc:token ID="w3d0">Präsens</tc:token>
+      <tc:token ID="w3d1">ein</tc:token>
+      <tc:token ID="w3d2">umgelauteter</tc:token>
+      <tc:token ID="w3d3">Vokal</tc:token>
+      <tc:token ID="w3d4">sowie</tc:token>
+      <tc:token ID="w3d5">Positionslänge</tc:token>
+      <tc:token ID="w3d6">oder</tc:token>
+      <tc:token ID="w3d7">Naturlänge</tc:token>
+      <tc:token ID="w3d8">vorliegen</tc:token>
+      <tc:token ID="w3d9">.</tc:token>
+      <tc:token ID="w3da">In</tc:token>
+      <tc:token ID="w3db">der</tc:token>
+      <tc:token ID="w3dc">verfügbaren</tc:token>
+      <tc:token ID="w3dd">Zeit</tc:token>
+      <tc:token ID="w3de">wurde</tc:token>
+      <tc:token ID="w3df">Vieles</tc:token>
+      <tc:token ID="w3e0">nicht</tc:token>
+      <tc:token ID="w3e1">vollständig</tc:token>
+      <tc:token ID="w3e2">gelöst</tc:token>
+      <tc:token ID="w3e3">–</tc:token>
+      <tc:token ID="w3e4">für</tc:token>
+      <tc:token ID="w3e5">Nomina</tc:token>
+      <tc:token ID="w3e6">mit</tc:token>
+      <tc:token ID="w3e7">Umlaut</tc:token>
+      <tc:token ID="w3e8">müssten</tc:token>
+      <tc:token ID="w3e9">im</tc:token>
+      <tc:token ID="w3ea">Artikel</tc:token>
+      <tc:token ID="w3eb">noch</tc:token>
+      <tc:token ID="w3ec">die</tc:token>
+      <tc:token ID="w3ed">Belegstellen</tc:token>
+      <tc:token ID="w3ee">examiniert</tc:token>
+      <tc:token ID="w3ef">werden</tc:token>
+      <tc:token ID="w3f0">,</tc:token>
+      <tc:token ID="w3f1">hier</tc:token>
+      <tc:token ID="w3f2">wird</tc:token>
+      <tc:token ID="w3f3">bislang</tc:token>
+      <tc:token ID="w3f4">nur</tc:token>
+      <tc:token ID="w3f5">der</tc:token>
+      <tc:token ID="w3f6">Artikelkopf</tc:token>
+      <tc:token ID="w3f7">des</tc:token>
+      <tc:token ID="w3f8">Lexer</tc:token>
+      <tc:token ID="w3f9">ausgewertet</tc:token>
+      <tc:token ID="w3fa">.</tc:token>
+      <tc:token ID="w3fb">Funktionswörter</tc:token>
+      <tc:token ID="w3fc">sind</tc:token>
+      <tc:token ID="w3fd">überwiegend</tc:token>
+      <tc:token ID="w3fe">listenbasiert</tc:token>
+      <tc:token ID="w3ff">ergänzt</tc:token>
+      <tc:token ID="w400">.</tc:token>
+      <tc:token ID="w401">Eine</tc:token>
+      <tc:token ID="w402">Evaluierung</tc:token>
+      <tc:token ID="w403">hat</tc:token>
+      <tc:token ID="w404">gezeigt</tc:token>
+      <tc:token ID="w405">,</tc:token>
+      <tc:token ID="w406">dass</tc:token>
+      <tc:token ID="w407">eine</tc:token>
+      <tc:token ID="w408">vollständige</tc:token>
+      <tc:token ID="w409">Bereinigung</tc:token>
+      <tc:token ID="w40a">des</tc:token>
+      <tc:token ID="w40b">Normalisierungswörterbuchs</tc:token>
+      <tc:token ID="w40c">um</tc:token>
+      <tc:token ID="w40d">Formen</tc:token>
+      <tc:token ID="w40e">wie</tc:token>
+      <tc:token ID="w40f">‚</tc:token>
+      <tc:token ID="w410">sluc</tc:token>
+      <tc:token ID="w411">‘</tc:token>
+      <tc:token ID="w412">zu</tc:token>
+      <tc:token ID="w413">einer</tc:token>
+      <tc:token ID="w414">minimalen</tc:token>
+      <tc:token ID="w415">Verschlechterung</tc:token>
+      <tc:token ID="w416">der</tc:token>
+      <tc:token ID="w417">Erkennungsquote</tc:token>
+      <tc:token ID="w418">führt</tc:token>
+      <tc:token ID="w419">,</tc:token>
+      <tc:token ID="w41a">so</tc:token>
+      <tc:token ID="w41b">dass</tc:token>
+      <tc:token ID="w41c">die</tc:token>
+      <tc:token ID="w41d">Eliminierung</tc:token>
+      <tc:token ID="w41e">von</tc:token>
+      <tc:token ID="w41f">diplomatischen</tc:token>
+      <tc:token ID="w420">Wortformen</tc:token>
+      <tc:token ID="w421">,</tc:token>
+      <tc:token ID="w422">die</tc:token>
+      <tc:token ID="w423">auch</tc:token>
+      <tc:token ID="w424">normalisierte</tc:token>
+      <tc:token ID="w425">Wortformen</tc:token>
+      <tc:token ID="w426">sein</tc:token>
+      <tc:token ID="w427">könnten</tc:token>
+      <tc:token ID="w428">,</tc:token>
+      <tc:token ID="w429">bei</tc:token>
+      <tc:token ID="w42a">hoch-</tc:token>
+      <tc:token ID="w42b">und</tc:token>
+      <tc:token ID="w42c">mittelfrequenten</tc:token>
+      <tc:token ID="w42d">Wortformen</tc:token>
+      <tc:token ID="w42e">nicht</tc:token>
+      <tc:token ID="w42f">angewendet</tc:token>
+      <tc:token ID="w430">wurde</tc:token>
+      <tc:token ID="w431">.</tc:token>
+      <tc:token ID="w432">Bei</tc:token>
+      <tc:token ID="w433">Delta</tc:token>
+      <tc:token ID="w434">berechnet</tc:token>
+      <tc:token ID="w435">man</tc:token>
+      <tc:token ID="w436">bspw.</tc:token>
+      <tc:token ID="w437">für</tc:token>
+      <tc:token ID="w438">200</tc:token>
+      <tc:token ID="w439">Most-Frequent-Words</tc:token>
+      <tc:token ID="w43a">für</tc:token>
+      <tc:token ID="w43b">jedes</tc:token>
+      <tc:token ID="w43c">dieser</tc:token>
+      <tc:token ID="w43d">Worte</tc:token>
+      <tc:token ID="w43e">einzeln</tc:token>
+      <tc:token ID="w43f">Z-Werte</tc:token>
+      <tc:token ID="w440">,</tc:token>
+      <tc:token ID="w441">in</tc:token>
+      <tc:token ID="w442">die</tc:token>
+      <tc:token ID="w443">die</tc:token>
+      <tc:token ID="w444">Abweichung</tc:token>
+      <tc:token ID="w445">der</tc:token>
+      <tc:token ID="w446">Häufigkeit</tc:token>
+      <tc:token ID="w447">eines</tc:token>
+      <tc:token ID="w448">Wortes</tc:token>
+      <tc:token ID="w449">in</tc:token>
+      <tc:token ID="w44a">einem</tc:token>
+      <tc:token ID="w44b">Text</tc:token>
+      <tc:token ID="w44c">zur</tc:token>
+      <tc:token ID="w44d">Häufigkeit</tc:token>
+      <tc:token ID="w44e">dieses</tc:token>
+      <tc:token ID="w44f">Wortes</tc:token>
+      <tc:token ID="w450">im</tc:token>
+      <tc:token ID="w451">Gesamtkorpus</tc:token>
+      <tc:token ID="w452">unter</tc:token>
+      <tc:token ID="w453">Berücksichtigung</tc:token>
+      <tc:token ID="w454">der</tc:token>
+      <tc:token ID="w455">Standardabweichung</tc:token>
+      <tc:token ID="w456">eingeht</tc:token>
+      <tc:token ID="w457">.</tc:token>
+      <tc:token ID="w458">Delta</tc:token>
+      <tc:token ID="w459">ist</tc:token>
+      <tc:token ID="w45a">das</tc:token>
+      <tc:token ID="w45b">arithmetische</tc:token>
+      <tc:token ID="w45c">Mittel</tc:token>
+      <tc:token ID="w45d">der</tc:token>
+      <tc:token ID="w45e">positiven</tc:token>
+      <tc:token ID="w45f">Z-Wert-Differenzen</tc:token>
+      <tc:token ID="w460">(</tc:token>
+      <tc:token ID="w461">Burrows</tc:token>
+      <tc:token ID="w462">2002</tc:token>
+      <tc:token ID="w463">)</tc:token>
+      <tc:token ID="w464">.</tc:token>
+      <tc:token ID="w465">Evert</tc:token>
+      <tc:token ID="w466">/</tc:token>
+      <tc:token ID="w467">Proisl</tc:token>
+      <tc:token ID="w468">/</tc:token>
+      <tc:token ID="w469">Jannidis</tc:token>
+      <tc:token ID="w46a">/</tc:token>
+      <tc:token ID="w46b">Pielström</tc:token>
+      <tc:token ID="w46c">/</tc:token>
+      <tc:token ID="w46d">Reger</tc:token>
+      <tc:token ID="w46e">/</tc:token>
+      <tc:token ID="w46f">Schöch</tc:token>
+      <tc:token ID="w470">/</tc:token>
+      <tc:token ID="w471">Vitt</tc:token>
+      <tc:token ID="w472">2016</tc:token>
+      <tc:token ID="w473">haben</tc:token>
+      <tc:token ID="w474">meinen</tc:token>
+      <tc:token ID="w475">Verdacht</tc:token>
+      <tc:token ID="w476">evaluiert</tc:token>
+      <tc:token ID="w477">,</tc:token>
+      <tc:token ID="w478">dass</tc:token>
+      <tc:token ID="w479">Delta</tc:token>
+      <tc:token ID="w47a">weniger</tc:token>
+      <tc:token ID="w47b">aufgrund</tc:token>
+      <tc:token ID="w47c">einzelner</tc:token>
+      <tc:token ID="w47d">Extremwerte</tc:token>
+      <tc:token ID="w47e">funktioniert</tc:token>
+      <tc:token ID="w47f">(</tc:token>
+      <tc:token ID="w480">Ausreißerhypothese</tc:token>
+      <tc:token ID="w481">)</tc:token>
+      <tc:token ID="w482">,</tc:token>
+      <tc:token ID="w483">sondern</tc:token>
+      <tc:token ID="w484">eher</tc:token>
+      <tc:token ID="w485">aufgrund</tc:token>
+      <tc:token ID="w486">einer</tc:token>
+      <tc:token ID="w487">breiten</tc:token>
+      <tc:token ID="w488">autorspezifischen</tc:token>
+      <tc:token ID="w489">Verteilung</tc:token>
+      <tc:token ID="w48a">der</tc:token>
+      <tc:token ID="w48b">Z-Werte</tc:token>
+      <tc:token ID="w48c">(</tc:token>
+      <tc:token ID="w48d">Schlüsselprofilhypothese</tc:token>
+      <tc:token ID="w48e">)</tc:token>
+      <tc:token ID="w48f">.</tc:token>
+      <tc:token ID="w490">Fehlt</tc:token>
+      <tc:token ID="w491">eine</tc:token>
+      <tc:token ID="w492">Wortform</tc:token>
+      <tc:token ID="w493">in</tc:token>
+      <tc:token ID="w494">einem</tc:token>
+      <tc:token ID="w495">Text</tc:token>
+      <tc:token ID="w496">,</tc:token>
+      <tc:token ID="w497">kann</tc:token>
+      <tc:token ID="w498">dies</tc:token>
+      <tc:token ID="w499">mitunter</tc:token>
+      <tc:token ID="w49a">mit</tc:token>
+      <tc:token ID="w49b">erhöhten</tc:token>
+      <tc:token ID="w49c">negativen</tc:token>
+      <tc:token ID="w49d">Z-Werten</tc:token>
+      <tc:token ID="w49e">einhergehen</tc:token>
+      <tc:token ID="w49f">.</tc:token>
+      <tc:token ID="w4a0">Evert</tc:token>
+      <tc:token ID="w4a1">et</tc:token>
+      <tc:token ID="w4a2">alia</tc:token>
+      <tc:token ID="w4a3">haben</tc:token>
+      <tc:token ID="w4a4">besonders</tc:token>
+      <tc:token ID="w4a5">hohe</tc:token>
+      <tc:token ID="w4a6">Z-Werte</tc:token>
+      <tc:token ID="w4a7">auf</tc:token>
+      <tc:token ID="w4a8">einen</tc:token>
+      <tc:token ID="w4a9">Maximalwert</tc:token>
+      <tc:token ID="w4aa">begrenzt</tc:token>
+      <tc:token ID="w4ab">,</tc:token>
+      <tc:token ID="w4ac">so</tc:token>
+      <tc:token ID="w4ad">dass</tc:token>
+      <tc:token ID="w4ae">„</tc:token>
+      <tc:token ID="w4af">Ausreißer</tc:token>
+      <tc:token ID="w4b0">“</tc:token>
+      <tc:token ID="w4b1">nur</tc:token>
+      <tc:token ID="w4b2">abgemildert</tc:token>
+      <tc:token ID="w4b3">eingehen</tc:token>
+      <tc:token ID="w4b4">.</tc:token>
+      <tc:token ID="w4b5">Wenn</tc:token>
+      <tc:token ID="w4b6">der</tc:token>
+      <tc:token ID="w4b7">Erfolg</tc:token>
+      <tc:token ID="w4b8">von</tc:token>
+      <tc:token ID="w4b9">Delta</tc:token>
+      <tc:token ID="w4ba">den</tc:token>
+      <tc:token ID="w4bb">„</tc:token>
+      <tc:token ID="w4bc">Ausreißern</tc:token>
+      <tc:token ID="w4bd">“</tc:token>
+      <tc:token ID="w4be">zu</tc:token>
+      <tc:token ID="w4bf">verdanken</tc:token>
+      <tc:token ID="w4c0">wäre</tc:token>
+      <tc:token ID="w4c1">,</tc:token>
+      <tc:token ID="w4c2">hätte</tc:token>
+      <tc:token ID="w4c3">sich</tc:token>
+      <tc:token ID="w4c4">die</tc:token>
+      <tc:token ID="w4c5">Erkennungsquote</tc:token>
+      <tc:token ID="w4c6">bei</tc:token>
+      <tc:token ID="w4c7">einer</tc:token>
+      <tc:token ID="w4c8">Begrenzung</tc:token>
+      <tc:token ID="w4c9">der</tc:token>
+      <tc:token ID="w4ca">Z-Werte</tc:token>
+      <tc:token ID="w4cb">verschlechtern</tc:token>
+      <tc:token ID="w4cc">müssen</tc:token>
+      <tc:token ID="w4cd">.</tc:token>
+      <tc:token ID="w4ce">Ein</tc:token>
+      <tc:token ID="w4cf">Begrenzen</tc:token>
+      <tc:token ID="w4d0">der</tc:token>
+      <tc:token ID="w4d1">Z-Werte</tc:token>
+      <tc:token ID="w4d2">führt</tc:token>
+      <tc:token ID="w4d3">jedoch</tc:token>
+      <tc:token ID="w4d4">zu</tc:token>
+      <tc:token ID="w4d5">einer</tc:token>
+      <tc:token ID="w4d6">Verbesserung</tc:token>
+      <tc:token ID="w4d7">der</tc:token>
+      <tc:token ID="w4d8">Erkennungsquote</tc:token>
+      <tc:token ID="w4d9">.</tc:token>
+      <tc:token ID="w4da">Evert</tc:token>
+      <tc:token ID="w4db">et</tc:token>
+      <tc:token ID="w4dc">alia</tc:token>
+      <tc:token ID="w4dd">haben</tc:token>
+      <tc:token ID="w4de">so</tc:token>
+      <tc:token ID="w4df">nicht</tc:token>
+      <tc:token ID="w4e0">nur</tc:token>
+      <tc:token ID="w4e1">die</tc:token>
+      <tc:token ID="w4e2">Schlüsselprofilhypothese</tc:token>
+      <tc:token ID="w4e3">bestätigen</tc:token>
+      <tc:token ID="w4e4">können</tc:token>
+      <tc:token ID="w4e5">,</tc:token>
+      <tc:token ID="w4e6">sondern</tc:token>
+      <tc:token ID="w4e7">zugleich</tc:token>
+      <tc:token ID="w4e8">eine</tc:token>
+      <tc:token ID="w4e9">Möglichkeit</tc:token>
+      <tc:token ID="w4ea">entdeckt</tc:token>
+      <tc:token ID="w4eb">,</tc:token>
+      <tc:token ID="w4ec">die</tc:token>
+      <tc:token ID="w4ed">Erkennungsquote</tc:token>
+      <tc:token ID="w4ee">zu</tc:token>
+      <tc:token ID="w4ef">verbessern</tc:token>
+      <tc:token ID="w4f0">,</tc:token>
+      <tc:token ID="w4f1">die</tc:token>
+      <tc:token ID="w4f2">gerade</tc:token>
+      <tc:token ID="w4f3">bei</tc:token>
+      <tc:token ID="w4f4">mittelalterlichen</tc:token>
+      <tc:token ID="w4f5">Texten</tc:token>
+      <tc:token ID="w4f6">nützlich</tc:token>
+      <tc:token ID="w4f7">sein</tc:token>
+      <tc:token ID="w4f8">kann</tc:token>
+      <tc:token ID="w4f9">:</tc:token>
+      <tc:token ID="w4fa">Wenn</tc:token>
+      <tc:token ID="w4fb">in</tc:token>
+      <tc:token ID="w4fc">einem</tc:token>
+      <tc:token ID="w4fd">Text</tc:token>
+      <tc:token ID="w4fe">ein</tc:token>
+      <tc:token ID="w4ff">Schreiber</tc:token>
+      <tc:token ID="w500">eine</tc:token>
+      <tc:token ID="w501">bestimmte</tc:token>
+      <tc:token ID="w502">Schreibvariante</tc:token>
+      <tc:token ID="w503">ganz</tc:token>
+      <tc:token ID="w504">vermeidet</tc:token>
+      <tc:token ID="w505">,</tc:token>
+      <tc:token ID="w506">können</tc:token>
+      <tc:token ID="w507">Nullwerte</tc:token>
+      <tc:token ID="w508">zu</tc:token>
+      <tc:token ID="w509">hohen</tc:token>
+      <tc:token ID="w50a">Z-Werten</tc:token>
+      <tc:token ID="w50b">führen</tc:token>
+      <tc:token ID="w50c">;</tc:token>
+      <tc:token ID="w50d">diese</tc:token>
+      <tc:token ID="w50e">Schreibvariantenproblematik</tc:token>
+      <tc:token ID="w50f">kann</tc:token>
+      <tc:token ID="w510">durch</tc:token>
+      <tc:token ID="w511">das</tc:token>
+      <tc:token ID="w512">Begrenzen</tc:token>
+      <tc:token ID="w513">der</tc:token>
+      <tc:token ID="w514">Z-Werte</tc:token>
+      <tc:token ID="w515">gemildert</tc:token>
+      <tc:token ID="w516">werden</tc:token>
+      <tc:token ID="w517">.</tc:token>
+      <tc:token ID="w518">Bei</tc:token>
+      <tc:token ID="w519">dem</tc:token>
+      <tc:token ID="w51a">zweiten</tc:token>
+      <tc:token ID="w51b">Validierungstest</tc:token>
+      <tc:token ID="w51c">habe</tc:token>
+      <tc:token ID="w51d">ich</tc:token>
+      <tc:token ID="w51e">einerseits</tc:token>
+      <tc:token ID="w51f">nicht-normalisierte</tc:token>
+      <tc:token ID="w520">Wortformen</tc:token>
+      <tc:token ID="w521">mit</tc:token>
+      <tc:token ID="w522">Hilfe</tc:token>
+      <tc:token ID="w523">des</tc:token>
+      <tc:token ID="w524">Normalisierungswörterbuchs</tc:token>
+      <tc:token ID="w525">bei</tc:token>
+      <tc:token ID="w526">der</tc:token>
+      <tc:token ID="w527">Erstellung</tc:token>
+      <tc:token ID="w528">der</tc:token>
+      <tc:token ID="w529">jeweiligen</tc:token>
+      <tc:token ID="w52a">Bag-of-Words</tc:token>
+      <tc:token ID="w52b">in</tc:token>
+      <tc:token ID="w52c">eine</tc:token>
+      <tc:token ID="w52d">normalisierte</tc:token>
+      <tc:token ID="w52e">Wortform</tc:token>
+      <tc:token ID="w52f">konvertiert</tc:token>
+      <tc:token ID="w530">.</tc:token>
+      <tc:token ID="w531">Andererseits</tc:token>
+      <tc:token ID="w532">habe</tc:token>
+      <tc:token ID="w533">ich</tc:token>
+      <tc:token ID="w534">eine</tc:token>
+      <tc:token ID="w535">Z-Wert-Begrenzung</tc:token>
+      <tc:token ID="w536">durchgeführt</tc:token>
+      <tc:token ID="w537">und</tc:token>
+      <tc:token ID="w538">Z-Werte</tc:token>
+      <tc:token ID="w539">ab</tc:token>
+      <tc:token ID="w53a">|</tc:token>
+      <tc:token ID="w53b">1,64|</tc:token>
+      <tc:token ID="w53c">auf</tc:token>
+      <tc:token ID="w53d">den</tc:token>
+      <tc:token ID="w53e">Wert</tc:token>
+      <tc:token ID="w53f">1,70</tc:token>
+      <tc:token ID="w540">gesetzt</tc:token>
+      <tc:token ID="w541">(</tc:token>
+      <tc:token ID="w542">dieser</tc:token>
+      <tc:token ID="w543">Wert</tc:token>
+      <tc:token ID="w544">hat</tc:token>
+      <tc:token ID="w545">sich</tc:token>
+      <tc:token ID="w546">in</tc:token>
+      <tc:token ID="w547">einer</tc:token>
+      <tc:token ID="w548">Versuchsreihe</tc:token>
+      <tc:token ID="w549">mit</tc:token>
+      <tc:token ID="w54a">verschieden</tc:token>
+      <tc:token ID="w54b">gestalteten</tc:token>
+      <tc:token ID="w54c">Validierungs-</tc:token>
+      <tc:token ID="w54d">und</tc:token>
+      <tc:token ID="w54e">Ratekorpora</tc:token>
+      <tc:token ID="w54f">als</tc:token>
+      <tc:token ID="w550">vorteilhaft</tc:token>
+      <tc:token ID="w551">erwiesen</tc:token>
+      <tc:token ID="w552">)</tc:token>
+      <tc:token ID="w553">.</tc:token>
+      <tc:token ID="w554">Die</tc:token>
+      <tc:token ID="w555">Erkennungsquote</tc:token>
+      <tc:token ID="w556">für</tc:token>
+      <tc:token ID="w557">Bag-of-Words</tc:token>
+      <tc:token ID="w558">mit</tc:token>
+      <tc:token ID="w559">5.000</tc:token>
+      <tc:token ID="w55a">Wortformen</tc:token>
+      <tc:token ID="w55b">steigt</tc:token>
+      <tc:token ID="w55c">damit</tc:token>
+      <tc:token ID="w55d">von</tc:token>
+      <tc:token ID="w55e">80</tc:token>
+      <tc:token ID="w55f">%</tc:token>
+      <tc:token ID="w560">auf</tc:token>
+      <tc:token ID="w561">91</tc:token>
+      <tc:token ID="w562">%</tc:token>
+      <tc:token ID="w563">an</tc:token>
+      <tc:token ID="w564">.</tc:token>
+      <tc:token ID="w565">Abb.</tc:token>
+      <tc:token ID="w566">1</tc:token>
+      <tc:token ID="w567">:</tc:token>
+      <tc:token ID="w568">Erkennungsquoten</tc:token>
+      <tc:token ID="w569">ohne</tc:token>
+      <tc:token ID="w56a">Normalisierungswörterbuch</tc:token>
+      <tc:token ID="w56b">/</tc:token>
+      <tc:token ID="w56c">Z-Wertbegrenzung</tc:token>
+      <tc:token ID="w56d">für</tc:token>
+      <tc:token ID="w56e">nicht-normalisierte</tc:token>
+      <tc:token ID="w56f">Texte</tc:token>
+      <tc:token ID="w570">(</tc:token>
+      <tc:token ID="w571">15</tc:token>
+      <tc:token ID="w572">Texte</tc:token>
+      <tc:token ID="w573">Ratekorpus</tc:token>
+      <tc:token ID="w574">/</tc:token>
+      <tc:token ID="w575">20</tc:token>
+      <tc:token ID="w576">Texte</tc:token>
+      <tc:token ID="w577">Validierungskorpus</tc:token>
+      <tc:token ID="w578">)</tc:token>
+      <tc:token ID="w579">Abb.</tc:token>
+      <tc:token ID="w57a">2</tc:token>
+      <tc:token ID="w57b">:</tc:token>
+      <tc:token ID="w57c">Erkennungsquoten</tc:token>
+      <tc:token ID="w57d">mit</tc:token>
+      <tc:token ID="w57e">Normalisierungswörterbuch</tc:token>
+      <tc:token ID="w57f">/</tc:token>
+      <tc:token ID="w580">Z-Wertbegrenzung</tc:token>
+      <tc:token ID="w581">für</tc:token>
+      <tc:token ID="w582">nicht-normalisierte</tc:token>
+      <tc:token ID="w583">Texte</tc:token>
+      <tc:token ID="w584">(</tc:token>
+      <tc:token ID="w585">15</tc:token>
+      <tc:token ID="w586">Texte</tc:token>
+      <tc:token ID="w587">Ratekorpus</tc:token>
+      <tc:token ID="w588">/</tc:token>
+      <tc:token ID="w589">20</tc:token>
+      <tc:token ID="w58a">Texte</tc:token>
+      <tc:token ID="w58b">Validierungskorpus</tc:token>
+      <tc:token ID="w58c">)</tc:token>
+      <tc:token ID="w58d">Wenn</tc:token>
+      <tc:token ID="w58e">man</tc:token>
+      <tc:token ID="w58f">die</tc:token>
+      <tc:token ID="w590">mühevoll</tc:token>
+      <tc:token ID="w591">bereinigten</tc:token>
+      <tc:token ID="w592">Texte</tc:token>
+      <tc:token ID="w593">nun</tc:token>
+      <tc:token ID="w594">wieder</tc:token>
+      <tc:token ID="w595">mit</tc:token>
+      <tc:token ID="w596">Fehlern</tc:token>
+      <tc:token ID="w597">kontaminiert</tc:token>
+      <tc:token ID="w598">,</tc:token>
+      <tc:token ID="w599">indem</tc:token>
+      <tc:token ID="w59a">man</tc:token>
+      <tc:token ID="w59b">den</tc:token>
+      <tc:token ID="w59c">Inhalt</tc:token>
+      <tc:token ID="w59d">der</tc:token>
+      <tc:token ID="w59e">Bag-of-Words</tc:token>
+      <tc:token ID="w59f">bspw</tc:token>
+      <tc:token ID="w5a0">.</tc:token>
+      <tc:token ID="w5a1">durch</tc:token>
+      <tc:token ID="w5a2">korpusfremdes</tc:token>
+      <tc:token ID="w5a3">Vokabular</tc:token>
+      <tc:token ID="w5a4">(</tc:token>
+      <tc:token ID="w5a5">teilweise</tc:token>
+      <tc:token ID="w5a6">durch</tc:token>
+      <tc:token ID="w5a7">altfranzösische</tc:token>
+      <tc:token ID="w5a8">Wörter</tc:token>
+      <tc:token ID="w5a9">statt</tc:token>
+      <tc:token ID="w5aa">mhd.</tc:token>
+      <tc:token ID="w5ab">Wörter</tc:token>
+      <tc:token ID="w5ac">)</tc:token>
+      <tc:token ID="w5ad">austauscht</tc:token>
+      <tc:token ID="w5ae">,</tc:token>
+      <tc:token ID="w5af">so</tc:token>
+      <tc:token ID="w5b0">sinkt</tc:token>
+      <tc:token ID="w5b1">die</tc:token>
+      <tc:token ID="w5b2">Erkennungsquote</tc:token>
+      <tc:token ID="w5b3">erstaunlich</tc:token>
+      <tc:token ID="w5b4">langsam</tc:token>
+      <tc:token ID="w5b5">.</tc:token>
+      <tc:token ID="w5b6">Wenn</tc:token>
+      <tc:token ID="w5b7">12</tc:token>
+      <tc:token ID="w5b8">%</tc:token>
+      <tc:token ID="w5b9">der</tc:token>
+      <tc:token ID="w5ba">Wörter</tc:token>
+      <tc:token ID="w5bb">durch</tc:token>
+      <tc:token ID="w5bc">Fremdmaterial</tc:token>
+      <tc:token ID="w5bd">getauscht</tc:token>
+      <tc:token ID="w5be">wurden</tc:token>
+      <tc:token ID="w5bf">,</tc:token>
+      <tc:token ID="w5c0">ist</tc:token>
+      <tc:token ID="w5c1">nur</tc:token>
+      <tc:token ID="w5c2">ein</tc:token>
+      <tc:token ID="w5c3">geringes</tc:token>
+      <tc:token ID="w5c4">Absinken</tc:token>
+      <tc:token ID="w5c5">erkennbar</tc:token>
+      <tc:token ID="w5c6">.</tc:token>
+      <tc:token ID="w5c7">Tauscht</tc:token>
+      <tc:token ID="w5c8">man</tc:token>
+      <tc:token ID="w5c9">20</tc:token>
+      <tc:token ID="w5ca">%</tc:token>
+      <tc:token ID="w5cb">aller</tc:token>
+      <tc:token ID="w5cc">Wörter</tc:token>
+      <tc:token ID="w5cd">durch</tc:token>
+      <tc:token ID="w5ce">Noise</tc:token>
+      <tc:token ID="w5cf">aus</tc:token>
+      <tc:token ID="w5d0">,</tc:token>
+      <tc:token ID="w5d1">dann</tc:token>
+      <tc:token ID="w5d2">gibt</tc:token>
+      <tc:token ID="w5d3">die</tc:token>
+      <tc:token ID="w5d4">Erkennungsquote</tc:token>
+      <tc:token ID="w5d5">etwas</tc:token>
+      <tc:token ID="w5d6">mehr</tc:token>
+      <tc:token ID="w5d7">nach</tc:token>
+      <tc:token ID="w5d8">als</tc:token>
+      <tc:token ID="w5d9">bei</tc:token>
+      <tc:token ID="w5da">normalisierten</tc:token>
+      <tc:token ID="w5db">Texten</tc:token>
+      <tc:token ID="w5dc">(</tc:token>
+      <tc:token ID="w5dd">vgl.</tc:token>
+      <tc:token ID="w5de">Dimpel</tc:token>
+      <tc:token ID="w5df">2016</tc:token>
+      <tc:token ID="w5e0">)</tc:token>
+      <tc:token ID="w5e1">–</tc:token>
+      <tc:token ID="w5e2">das</tc:token>
+      <tc:token ID="w5e3">ist</tc:token>
+      <tc:token ID="w5e4">plausibel</tc:token>
+      <tc:token ID="w5e5">,</tc:token>
+      <tc:token ID="w5e6">weil</tc:token>
+      <tc:token ID="w5e7">hier</tc:token>
+      <tc:token ID="w5e8">trotz</tc:token>
+      <tc:token ID="w5e9">aller</tc:token>
+      <tc:token ID="w5ea">Anstrengungen</tc:token>
+      <tc:token ID="w5eb">mit</tc:token>
+      <tc:token ID="w5ec">Normalisierungswörterbuch</tc:token>
+      <tc:token ID="w5ed">und</tc:token>
+      <tc:token ID="w5ee">Z-Wert-Begrenzung</tc:token>
+      <tc:token ID="w5ef">noch</tc:token>
+      <tc:token ID="w5f0">immer</tc:token>
+      <tc:token ID="w5f1">mehr</tc:token>
+      <tc:token ID="w5f2">Varianz</tc:token>
+      <tc:token ID="w5f3">in</tc:token>
+      <tc:token ID="w5f4">den</tc:token>
+      <tc:token ID="w5f5">Texten</tc:token>
+      <tc:token ID="w5f6">enthalten</tc:token>
+      <tc:token ID="w5f7">ist</tc:token>
+      <tc:token ID="w5f8">als</tc:token>
+      <tc:token ID="w5f9">in</tc:token>
+      <tc:token ID="w5fa">Texten</tc:token>
+      <tc:token ID="w5fb">,</tc:token>
+      <tc:token ID="w5fc">die</tc:token>
+      <tc:token ID="w5fd">ein</tc:token>
+      <tc:token ID="w5fe">Editor</tc:token>
+      <tc:token ID="w5ff">manuell</tc:token>
+      <tc:token ID="w600">normalisiert</tc:token>
+      <tc:token ID="w601">hat</tc:token>
+      <tc:token ID="w602">.</tc:token>
+      <tc:token ID="w603">Dennoch</tc:token>
+      <tc:token ID="w604">bleiben</tc:token>
+      <tc:token ID="w605">die</tc:token>
+      <tc:token ID="w606">Quoten</tc:token>
+      <tc:token ID="w607">erstaunlich</tc:token>
+      <tc:token ID="w608">stabil</tc:token>
+      <tc:token ID="w609">.</tc:token>
+      <tc:token ID="w60a">Abb.</tc:token>
+      <tc:token ID="w60b">3</tc:token>
+      <tc:token ID="w60c">:</tc:token>
+      <tc:token ID="w60d">Noise</tc:token>
+      <tc:token ID="w60e">–</tc:token>
+      <tc:token ID="w60f">Absinken</tc:token>
+      <tc:token ID="w610">der</tc:token>
+      <tc:token ID="w611">Erkennungsquote</tc:token>
+      <tc:token ID="w612">beim</tc:token>
+      <tc:token ID="w613">Tausch</tc:token>
+      <tc:token ID="w614">des</tc:token>
+      <tc:token ID="w615">Wortmaterials</tc:token>
+      <tc:token ID="w616">der</tc:token>
+      <tc:token ID="w617">BOW</tc:token>
+      <tc:token ID="w618">der</tc:token>
+      <tc:token ID="w619">Ratedatei</tc:token>
+      <tc:token ID="w61a">Abb.</tc:token>
+      <tc:token ID="w61b">4</tc:token>
+      <tc:token ID="w61c">:</tc:token>
+      <tc:token ID="w61d">Noise</tc:token>
+      <tc:token ID="w61e">–</tc:token>
+      <tc:token ID="w61f">Ausschnittvergrößerung</tc:token>
+      <tc:token ID="w620">0-30</tc:token>
+      <tc:token ID="w621">%</tc:token>
+      <tc:token ID="w622">Noise</tc:token>
+      <tc:token ID="w623">Einleitung</tc:token>
+      <tc:token ID="w624">:</tc:token>
+      <tc:token ID="w625">Delta</tc:token>
+      <tc:token ID="w626">im</tc:token>
+      <tc:token ID="w627">Mittelalter</tc:token>
+      <tc:token ID="w628">und</tc:token>
+      <tc:token ID="w629">in</tc:token>
+      <tc:token ID="w62a">der</tc:token>
+      <tc:token ID="w62b">Forschung</tc:token>
+      <tc:token ID="w62c">Erster</tc:token>
+      <tc:token ID="w62d">Validierungstest</tc:token>
+      <tc:token ID="w62e">nicht-normalisierte</tc:token>
+      <tc:token ID="w62f">Texte</tc:token>
+      <tc:token ID="w630">Teilnormalisierung</tc:token>
+      <tc:token ID="w631">:</tc:token>
+      <tc:token ID="w632">Normalisierungswörterbuch</tc:token>
+      <tc:token ID="w633">und</tc:token>
+      <tc:token ID="w634">Vollformenwörterbuch</tc:token>
+      <tc:token ID="w635">Delta-Verbesserung</tc:token>
+      <tc:token ID="w636">:</tc:token>
+      <tc:token ID="w637">Z-Wert-Begrenzung</tc:token>
+      <tc:token ID="w638">Zweiter</tc:token>
+      <tc:token ID="w639">Validierungstest</tc:token>
+      <tc:token ID="w63a">nicht-normalisierte</tc:token>
+      <tc:token ID="w63b">Texte</tc:token>
+      <tc:token ID="w63c">Burrows</tc:token>
+      <tc:token ID="w63d">,</tc:token>
+      <tc:token ID="w63e">John</tc:token>
+      <tc:token ID="w63f">(</tc:token>
+      <tc:token ID="w640">2002</tc:token>
+      <tc:token ID="w641">)</tc:token>
+      <tc:token ID="w642">:</tc:token>
+      <tc:token ID="w643">„</tc:token>
+      <tc:token ID="w644">‚</tc:token>
+      <tc:token ID="w645">Delta</tc:token>
+      <tc:token ID="w646">‘</tc:token>
+      <tc:token ID="w647">:</tc:token>
+      <tc:token ID="w648">A</tc:token>
+      <tc:token ID="w649">Measure</tc:token>
+      <tc:token ID="w64a">of</tc:token>
+      <tc:token ID="w64b">Stylistic</tc:token>
+      <tc:token ID="w64c">Difference</tc:token>
+      <tc:token ID="w64d">and</tc:token>
+      <tc:token ID="w64e">a</tc:token>
+      <tc:token ID="w64f">Guide</tc:token>
+      <tc:token ID="w650">to</tc:token>
+      <tc:token ID="w651">Likely</tc:token>
+      <tc:token ID="w652">Authorship</tc:token>
+      <tc:token ID="w653">“</tc:token>
+      <tc:token ID="w654">,</tc:token>
+      <tc:token ID="w655">in</tc:token>
+      <tc:token ID="w656">:</tc:token>
+      <tc:token ID="w657">Literary</tc:token>
+      <tc:token ID="w658">and</tc:token>
+      <tc:token ID="w659">Linguistic</tc:token>
+      <tc:token ID="w65a">Computing</tc:token>
+      <tc:token ID="w65b">17</tc:token>
+      <tc:token ID="w65c">(</tc:token>
+      <tc:token ID="w65d">3</tc:token>
+      <tc:token ID="w65e">)</tc:token>
+      <tc:token ID="w65f">:</tc:token>
+      <tc:token ID="w660">267–87</tc:token>
+      <tc:token ID="w661">10.</tc:token>
+      <tc:token ID="w662">1093/</tc:token>
+      <tc:token ID="w663">llc/17</tc:token>
+      <tc:token ID="w664">.</tc:token>
+      <tc:token ID="w665">3.</tc:token>
+      <tc:token ID="w666">267.</tc:token>
+      <tc:token ID="w667">Dimpel</tc:token>
+      <tc:token ID="w668">,</tc:token>
+      <tc:token ID="w669">Friedrich</tc:token>
+      <tc:token ID="w66a">Michael</tc:token>
+      <tc:token ID="w66b">(</tc:token>
+      <tc:token ID="w66c">2016</tc:token>
+      <tc:token ID="w66d">)</tc:token>
+      <tc:token ID="w66e">:</tc:token>
+      <tc:token ID="w66f">„</tc:token>
+      <tc:token ID="w670">Burrows’</tc:token>
+      <tc:token ID="w671">Delta</tc:token>
+      <tc:token ID="w672">im</tc:token>
+      <tc:token ID="w673">Mittelalter</tc:token>
+      <tc:token ID="w674">:</tc:token>
+      <tc:token ID="w675">Wilde</tc:token>
+      <tc:token ID="w676">Graphien</tc:token>
+      <tc:token ID="w677">und</tc:token>
+      <tc:token ID="w678">metrische</tc:token>
+      <tc:token ID="w679">Analysedaten</tc:token>
+      <tc:token ID="w67a">“</tc:token>
+      <tc:token ID="w67b">,</tc:token>
+      <tc:token ID="w67c">in</tc:token>
+      <tc:token ID="w67d">:</tc:token>
+      <tc:token ID="w67e">DHd</tc:token>
+      <tc:token ID="w67f">2016</tc:token>
+      <tc:token ID="w680">:</tc:token>
+      <tc:token ID="w681">Modellierung</tc:token>
+      <tc:token ID="w682">-</tc:token>
+      <tc:token ID="w683">Vernetzung</tc:token>
+      <tc:token ID="w684">-</tc:token>
+      <tc:token ID="w685">Visualisierung</tc:token>
+      <tc:token ID="w686">65–70</tc:token>
+      <tc:token ID="w687">.</tc:token>
+      <tc:token ID="w688">Eder</tc:token>
+      <tc:token ID="w689">,</tc:token>
+      <tc:token ID="w68a">Maciej</tc:token>
+      <tc:token ID="w68b">(</tc:token>
+      <tc:token ID="w68c">2013a</tc:token>
+      <tc:token ID="w68d">)</tc:token>
+      <tc:token ID="w68e">:</tc:token>
+      <tc:token ID="w68f">„</tc:token>
+      <tc:token ID="w690">Mind</tc:token>
+      <tc:token ID="w691">Your</tc:token>
+      <tc:token ID="w692">Corpus</tc:token>
+      <tc:token ID="w693">:</tc:token>
+      <tc:token ID="w694">systematic</tc:token>
+      <tc:token ID="w695">errors</tc:token>
+      <tc:token ID="w696">in</tc:token>
+      <tc:token ID="w697">authorship</tc:token>
+      <tc:token ID="w698">attribution</tc:token>
+      <tc:token ID="w699">“</tc:token>
+      <tc:token ID="w69a">,</tc:token>
+      <tc:token ID="w69b">in</tc:token>
+      <tc:token ID="w69c">:</tc:token>
+      <tc:token ID="w69d">Literary</tc:token>
+      <tc:token ID="w69e">and</tc:token>
+      <tc:token ID="w69f">Linguistic</tc:token>
+      <tc:token ID="w6a0">Computing</tc:token>
+      <tc:token ID="w6a1">28</tc:token>
+      <tc:token ID="w6a2">:</tc:token>
+      <tc:token ID="w6a3">603–614</tc:token>
+      <tc:token ID="w6a4">10.</tc:token>
+      <tc:token ID="w6a5">1093/</tc:token>
+      <tc:token ID="w6a6">llc/fqt</tc:token>
+      <tc:token ID="w6a7">039.</tc:token>
+      <tc:token ID="w6a8">Eder</tc:token>
+      <tc:token ID="w6a9">,</tc:token>
+      <tc:token ID="w6aa">Maciej</tc:token>
+      <tc:token ID="w6ab">(</tc:token>
+      <tc:token ID="w6ac">2013b</tc:token>
+      <tc:token ID="w6ad">)</tc:token>
+      <tc:token ID="w6ae">:</tc:token>
+      <tc:token ID="w6af">„</tc:token>
+      <tc:token ID="w6b0">Does</tc:token>
+      <tc:token ID="w6b1">size</tc:token>
+      <tc:token ID="w6b2">matter</tc:token>
+      <tc:token ID="w6b3">?</tc:token>
+      <tc:token ID="w6b4">Authorship</tc:token>
+      <tc:token ID="w6b5">attribution</tc:token>
+      <tc:token ID="w6b6">,</tc:token>
+      <tc:token ID="w6b7">small</tc:token>
+      <tc:token ID="w6b8">samples</tc:token>
+      <tc:token ID="w6b9">,</tc:token>
+      <tc:token ID="w6ba">big</tc:token>
+      <tc:token ID="w6bb">problem</tc:token>
+      <tc:token ID="w6bc">“</tc:token>
+      <tc:token ID="w6bd">,</tc:token>
+      <tc:token ID="w6be">in</tc:token>
+      <tc:token ID="w6bf">:</tc:token>
+      <tc:token ID="w6c0">Literary</tc:token>
+      <tc:token ID="w6c1">and</tc:token>
+      <tc:token ID="w6c2">Linguistic</tc:token>
+      <tc:token ID="w6c3">Computing</tc:token>
+      <tc:token ID="w6c4">Advanced</tc:token>
+      <tc:token ID="w6c5">Access</tc:token>
+      <tc:token ID="w6c6">29</tc:token>
+      <tc:token ID="w6c7">:</tc:token>
+      <tc:token ID="w6c8">1–16</tc:token>
+      <tc:token ID="w6c9">10.</tc:token>
+      <tc:token ID="w6ca">1093/</tc:token>
+      <tc:token ID="w6cb">llc/fqt</tc:token>
+      <tc:token ID="w6cc">066.</tc:token>
+      <tc:token ID="w6cd">Eder</tc:token>
+      <tc:token ID="w6ce">,</tc:token>
+      <tc:token ID="w6cf">Maciej</tc:token>
+      <tc:token ID="w6d0">/</tc:token>
+      <tc:token ID="w6d1">Rybicki</tc:token>
+      <tc:token ID="w6d2">,</tc:token>
+      <tc:token ID="w6d3">Jan</tc:token>
+      <tc:token ID="w6d4">(</tc:token>
+      <tc:token ID="w6d5">2011</tc:token>
+      <tc:token ID="w6d6">)</tc:token>
+      <tc:token ID="w6d7">:</tc:token>
+      <tc:token ID="w6d8">„</tc:token>
+      <tc:token ID="w6d9">Deeper</tc:token>
+      <tc:token ID="w6da">Delta</tc:token>
+      <tc:token ID="w6db">across</tc:token>
+      <tc:token ID="w6dc">genres</tc:token>
+      <tc:token ID="w6dd">and</tc:token>
+      <tc:token ID="w6de">languages</tc:token>
+      <tc:token ID="w6df">:</tc:token>
+      <tc:token ID="w6e0">do</tc:token>
+      <tc:token ID="w6e1">we</tc:token>
+      <tc:token ID="w6e2">really</tc:token>
+      <tc:token ID="w6e3">need</tc:token>
+      <tc:token ID="w6e4">the</tc:token>
+      <tc:token ID="w6e5">most</tc:token>
+      <tc:token ID="w6e6">frequent</tc:token>
+      <tc:token ID="w6e7">words</tc:token>
+      <tc:token ID="w6e8">?</tc:token>
+      <tc:token ID="w6e9">“</tc:token>
+      <tc:token ID="w6ea">,</tc:token>
+      <tc:token ID="w6eb">in</tc:token>
+      <tc:token ID="w6ec">:</tc:token>
+      <tc:token ID="w6ed">Literary</tc:token>
+      <tc:token ID="w6ee">and</tc:token>
+      <tc:token ID="w6ef">Linguistic</tc:token>
+      <tc:token ID="w6f0">Computing</tc:token>
+      <tc:token ID="w6f1">26</tc:token>
+      <tc:token ID="w6f2">(</tc:token>
+      <tc:token ID="w6f3">3</tc:token>
+      <tc:token ID="w6f4">)</tc:token>
+      <tc:token ID="w6f5">:</tc:token>
+      <tc:token ID="w6f6">315–321</tc:token>
+      <tc:token ID="w6f7">10.</tc:token>
+      <tc:token ID="w6f8">1093/</tc:token>
+      <tc:token ID="w6f9">llc/fqr031</tc:token>
+      <tc:token ID="w6fa">.</tc:token>
+      <tc:token ID="w6fb">Evert</tc:token>
+      <tc:token ID="w6fc">,</tc:token>
+      <tc:token ID="w6fd">Stefan</tc:token>
+      <tc:token ID="w6fe">/</tc:token>
+      <tc:token ID="w6ff">Proisl</tc:token>
+      <tc:token ID="w700">,</tc:token>
+      <tc:token ID="w701">Thomas</tc:token>
+      <tc:token ID="w702">/</tc:token>
+      <tc:token ID="w703">Jannidis</tc:token>
+      <tc:token ID="w704">,</tc:token>
+      <tc:token ID="w705">Fotis</tc:token>
+      <tc:token ID="w706">/</tc:token>
+      <tc:token ID="w707">Pielström</tc:token>
+      <tc:token ID="w708">,</tc:token>
+      <tc:token ID="w709">Steffen</tc:token>
+      <tc:token ID="w70a">/</tc:token>
+      <tc:token ID="w70b">Schöch</tc:token>
+      <tc:token ID="w70c">,</tc:token>
+      <tc:token ID="w70d">Christof</tc:token>
+      <tc:token ID="w70e">/</tc:token>
+      <tc:token ID="w70f">Vitt</tc:token>
+      <tc:token ID="w710">,</tc:token>
+      <tc:token ID="w711">Thorsten</tc:token>
+      <tc:token ID="w712">(</tc:token>
+      <tc:token ID="w713">2015</tc:token>
+      <tc:token ID="w714">)</tc:token>
+      <tc:token ID="w715">:</tc:token>
+      <tc:token ID="w716">„</tc:token>
+      <tc:token ID="w717">Towards</tc:token>
+      <tc:token ID="w718">a</tc:token>
+      <tc:token ID="w719">better</tc:token>
+      <tc:token ID="w71a">understanding</tc:token>
+      <tc:token ID="w71b">of</tc:token>
+      <tc:token ID="w71c">Burrows’s</tc:token>
+      <tc:token ID="w71d">Delta</tc:token>
+      <tc:token ID="w71e">in</tc:token>
+      <tc:token ID="w71f">literary</tc:token>
+      <tc:token ID="w720">authorship</tc:token>
+      <tc:token ID="w721">attribution</tc:token>
+      <tc:token ID="w722">“</tc:token>
+      <tc:token ID="w723">,</tc:token>
+      <tc:token ID="w724">in</tc:token>
+      <tc:token ID="w725">:</tc:token>
+      <tc:token ID="w726">Proceedings</tc:token>
+      <tc:token ID="w727">of</tc:token>
+      <tc:token ID="w728">the</tc:token>
+      <tc:token ID="w729">Fourth</tc:token>
+      <tc:token ID="w72a">Workshop</tc:token>
+      <tc:token ID="w72b">on</tc:token>
+      <tc:token ID="w72c">Computational</tc:token>
+      <tc:token ID="w72d">Linguistics</tc:token>
+      <tc:token ID="w72e">for</tc:token>
+      <tc:token ID="w72f">Literature</tc:token>
+      <tc:token ID="w730">.</tc:token>
+      <tc:token ID="w731">Denver</tc:token>
+      <tc:token ID="w732">,</tc:token>
+      <tc:token ID="w733">CO</tc:token>
+      <tc:token ID="w734">:</tc:token>
+      <tc:token ID="w735">Association</tc:token>
+      <tc:token ID="w736">for</tc:token>
+      <tc:token ID="w737">Computational</tc:token>
+      <tc:token ID="w738">Linguistics</tc:token>
+      <tc:token ID="w739">,</tc:token>
+      <tc:token ID="w73a">79–88</tc:token>
+      <tc:token ID="w73b">10.</tc:token>
+      <tc:token ID="w73c">5281/zenodo</tc:token>
+      <tc:token ID="w73d">.</tc:token>
+      <tc:token ID="w73e">18177</tc:token>
+      <tc:token ID="w73f">http://www.aclweb.org/anthology/W/W15/W15-0709.pdf</tc:token>
+      <tc:token ID="w740">[</tc:token>
+      <tc:token ID="w741">letzter</tc:token>
+      <tc:token ID="w742">Zugriff</tc:token>
+      <tc:token ID="w743">20.</tc:token>
+      <tc:token ID="w744">August</tc:token>
+      <tc:token ID="w745">2015</tc:token>
+      <tc:token ID="w746">]</tc:token>
+      <tc:token ID="w747">.</tc:token>
+      <tc:token ID="w748">Evert</tc:token>
+      <tc:token ID="w749">,</tc:token>
+      <tc:token ID="w74a">Stefan</tc:token>
+      <tc:token ID="w74b">/</tc:token>
+      <tc:token ID="w74c">Proisl</tc:token>
+      <tc:token ID="w74d">,</tc:token>
+      <tc:token ID="w74e">Thomas</tc:token>
+      <tc:token ID="w74f">/</tc:token>
+      <tc:token ID="w750">Jannidis</tc:token>
+      <tc:token ID="w751">,</tc:token>
+      <tc:token ID="w752">Fotis</tc:token>
+      <tc:token ID="w753">/</tc:token>
+      <tc:token ID="w754">Pielström</tc:token>
+      <tc:token ID="w755">,</tc:token>
+      <tc:token ID="w756">Steffen</tc:token>
+      <tc:token ID="w757">/</tc:token>
+      <tc:token ID="w758">Reger</tc:token>
+      <tc:token ID="w759">,</tc:token>
+      <tc:token ID="w75a">Isabella</tc:token>
+      <tc:token ID="w75b">/</tc:token>
+      <tc:token ID="w75c">Schöch</tc:token>
+      <tc:token ID="w75d">,</tc:token>
+      <tc:token ID="w75e">Christof</tc:token>
+      <tc:token ID="w75f">/</tc:token>
+      <tc:token ID="w760">Vitt</tc:token>
+      <tc:token ID="w761">,</tc:token>
+      <tc:token ID="w762">Thorsten</tc:token>
+      <tc:token ID="w763">(</tc:token>
+      <tc:token ID="w764">2016</tc:token>
+      <tc:token ID="w765">)</tc:token>
+      <tc:token ID="w766">:</tc:token>
+      <tc:token ID="w767">„</tc:token>
+      <tc:token ID="w768">Burrows</tc:token>
+      <tc:token ID="w769">Delta</tc:token>
+      <tc:token ID="w76a">verstehen</tc:token>
+      <tc:token ID="w76b">“</tc:token>
+      <tc:token ID="w76c">,</tc:token>
+      <tc:token ID="w76d">in</tc:token>
+      <tc:token ID="w76e">:</tc:token>
+      <tc:token ID="w76f">DHd</tc:token>
+      <tc:token ID="w770">2016</tc:token>
+      <tc:token ID="w771">:</tc:token>
+      <tc:token ID="w772">Modellierung</tc:token>
+      <tc:token ID="w773">-</tc:token>
+      <tc:token ID="w774">Vernetzung</tc:token>
+      <tc:token ID="w775">-</tc:token>
+      <tc:token ID="w776">Visualisierung</tc:token>
+      <tc:token ID="w777">61–65</tc:token>
+      <tc:token ID="w778">.</tc:token>
+      <tc:token ID="w779">Hoover</tc:token>
+      <tc:token ID="w77a">,</tc:token>
+      <tc:token ID="w77b">David</tc:token>
+      <tc:token ID="w77c">L.</tc:token>
+      <tc:token ID="w77d">(</tc:token>
+      <tc:token ID="w77e">2004</tc:token>
+      <tc:token ID="w77f">)</tc:token>
+      <tc:token ID="w780">:</tc:token>
+      <tc:token ID="w781">„</tc:token>
+      <tc:token ID="w782">Delta</tc:token>
+      <tc:token ID="w783">Prime</tc:token>
+      <tc:token ID="w784">?</tc:token>
+      <tc:token ID="w785">“</tc:token>
+      <tc:token ID="w786">,</tc:token>
+      <tc:token ID="w787">in</tc:token>
+      <tc:token ID="w788">:</tc:token>
+      <tc:token ID="w789">Literary</tc:token>
+      <tc:token ID="w78a">and</tc:token>
+      <tc:token ID="w78b">Linguistic</tc:token>
+      <tc:token ID="w78c">Computing</tc:token>
+      <tc:token ID="w78d">19</tc:token>
+      <tc:token ID="w78e">(</tc:token>
+      <tc:token ID="w78f">4</tc:token>
+      <tc:token ID="w790">)</tc:token>
+      <tc:token ID="w791">:</tc:token>
+      <tc:token ID="w792">477–495</tc:token>
+      <tc:token ID="w793">10.</tc:token>
+      <tc:token ID="w794">1093/</tc:token>
+      <tc:token ID="w795">llc/19</tc:token>
+      <tc:token ID="w796">.</tc:token>
+      <tc:token ID="w797">4.477</tc:token>
+      <tc:token ID="w798">.</tc:token>
+      <tc:token ID="w799">Jannidis</tc:token>
+      <tc:token ID="w79a">,</tc:token>
+      <tc:token ID="w79b">Fotis</tc:token>
+      <tc:token ID="w79c">/</tc:token>
+      <tc:token ID="w79d">Lauer</tc:token>
+      <tc:token ID="w79e">,</tc:token>
+      <tc:token ID="w79f">Gerhard</tc:token>
+      <tc:token ID="w7a0">(</tc:token>
+      <tc:token ID="w7a1">2014</tc:token>
+      <tc:token ID="w7a2">)</tc:token>
+      <tc:token ID="w7a3">.</tc:token>
+      <tc:token ID="w7a4">„</tc:token>
+      <tc:token ID="w7a5">Burrows</tc:token>
+      <tc:token ID="w7a6">’s</tc:token>
+      <tc:token ID="w7a7">Delta</tc:token>
+      <tc:token ID="w7a8">and</tc:token>
+      <tc:token ID="w7a9">Its</tc:token>
+      <tc:token ID="w7aa">Use</tc:token>
+      <tc:token ID="w7ab">in</tc:token>
+      <tc:token ID="w7ac">German</tc:token>
+      <tc:token ID="w7ad">Literary</tc:token>
+      <tc:token ID="w7ae">History</tc:token>
+      <tc:token ID="w7af">“</tc:token>
+      <tc:token ID="w7b0">,</tc:token>
+      <tc:token ID="w7b1">in</tc:token>
+      <tc:token ID="w7b2">:</tc:token>
+      <tc:token ID="w7b3">Erlin</tc:token>
+      <tc:token ID="w7b4">,</tc:token>
+      <tc:token ID="w7b5">Matt</tc:token>
+      <tc:token ID="w7b6">/</tc:token>
+      <tc:token ID="w7b7">Tatlock</tc:token>
+      <tc:token ID="w7b8">,</tc:token>
+      <tc:token ID="w7b9">Lynne</tc:token>
+      <tc:token ID="w7ba">(</tc:token>
+      <tc:token ID="w7bb">eds</tc:token>
+      <tc:token ID="w7bc">.</tc:token>
+      <tc:token ID="w7bd">)</tc:token>
+      <tc:token ID="w7be">:</tc:token>
+      <tc:token ID="w7bf">Distant</tc:token>
+      <tc:token ID="w7c0">Readings</tc:token>
+      <tc:token ID="w7c1">:</tc:token>
+      <tc:token ID="w7c2">Topologies</tc:token>
+      <tc:token ID="w7c3">of</tc:token>
+      <tc:token ID="w7c4">German</tc:token>
+      <tc:token ID="w7c5">Culture</tc:token>
+      <tc:token ID="w7c6">in</tc:token>
+      <tc:token ID="w7c7">the</tc:token>
+      <tc:token ID="w7c8">Long</tc:token>
+      <tc:token ID="w7c9">Nineteenth</tc:token>
+      <tc:token ID="w7ca">Century</tc:token>
+      <tc:token ID="w7cb">.</tc:token>
+      <tc:token ID="w7cc">New</tc:token>
+      <tc:token ID="w7cd">York</tc:token>
+      <tc:token ID="w7ce">:</tc:token>
+      <tc:token ID="w7cf">29–54</tc:token>
+      <tc:token ID="w7d0">.</tc:token>
+      <tc:token ID="w7d1">Jannidis</tc:token>
+      <tc:token ID="w7d2">,</tc:token>
+      <tc:token ID="w7d3">Fotis</tc:token>
+      <tc:token ID="w7d4">/</tc:token>
+      <tc:token ID="w7d5">Pielström</tc:token>
+      <tc:token ID="w7d6">,</tc:token>
+      <tc:token ID="w7d7">Steffen</tc:token>
+      <tc:token ID="w7d8">/</tc:token>
+      <tc:token ID="w7d9">Schöch</tc:token>
+      <tc:token ID="w7da">,</tc:token>
+      <tc:token ID="w7db">Christof</tc:token>
+      <tc:token ID="w7dc">/</tc:token>
+      <tc:token ID="w7dd">Vitt</tc:token>
+      <tc:token ID="w7de">,</tc:token>
+      <tc:token ID="w7df">Thorsten</tc:token>
+      <tc:token ID="w7e0">(</tc:token>
+      <tc:token ID="w7e1">2015</tc:token>
+      <tc:token ID="w7e2">)</tc:token>
+      <tc:token ID="w7e3">:</tc:token>
+      <tc:token ID="w7e4">„</tc:token>
+      <tc:token ID="w7e5">Improving</tc:token>
+      <tc:token ID="w7e6">Burrows</tc:token>
+      <tc:token ID="w7e7">’</tc:token>
+      <tc:token ID="w7e8">Delta</tc:token>
+      <tc:token ID="w7e9">-</tc:token>
+      <tc:token ID="w7ea">An</tc:token>
+      <tc:token ID="w7eb">Empirical</tc:token>
+      <tc:token ID="w7ec">Evaluation</tc:token>
+      <tc:token ID="w7ed">of</tc:token>
+      <tc:token ID="w7ee">Text</tc:token>
+      <tc:token ID="w7ef">Distance</tc:token>
+      <tc:token ID="w7f0">Measures</tc:token>
+      <tc:token ID="w7f1">“</tc:token>
+      <tc:token ID="w7f2">,</tc:token>
+      <tc:token ID="w7f3">in</tc:token>
+      <tc:token ID="w7f4">:</tc:token>
+      <tc:token ID="w7f5">DH</tc:token>
+      <tc:token ID="w7f6">2015</tc:token>
+      <tc:token ID="w7f7">:</tc:token>
+      <tc:token ID="w7f8">Global</tc:token>
+      <tc:token ID="w7f9">Digital</tc:token>
+      <tc:token ID="w7fa">Humanities</tc:token>
+      <tc:token ID="w7fb">http://dh2015.org/abstracts/xml/JANNIDIS_Fotis_Improving_Burrows__Delta___An_empi/JANNIDIS_Fotis_Improving_Burrows__Delta___An_empirical_.html</tc:token>
+      <tc:token ID="w7fc">Viehhauser</tc:token>
+      <tc:token ID="w7fd">,</tc:token>
+      <tc:token ID="w7fe">Gabriel</tc:token>
+      <tc:token ID="w7ff">(</tc:token>
+      <tc:token ID="w800">2015</tc:token>
+      <tc:token ID="w801">)</tc:token>
+      <tc:token ID="w802">:</tc:token>
+      <tc:token ID="w803">„</tc:token>
+      <tc:token ID="w804">Historische</tc:token>
+      <tc:token ID="w805">Stilometrie</tc:token>
+      <tc:token ID="w806">?</tc:token>
+      <tc:token ID="w807">Methodische</tc:token>
+      <tc:token ID="w808">Vorschläge</tc:token>
+      <tc:token ID="w809">für</tc:token>
+      <tc:token ID="w80a">eine</tc:token>
+      <tc:token ID="w80b">Annäherung</tc:token>
+      <tc:token ID="w80c">textanalytischer</tc:token>
+      <tc:token ID="w80d">Zugänge</tc:token>
+      <tc:token ID="w80e">an</tc:token>
+      <tc:token ID="w80f">die</tc:token>
+      <tc:token ID="w810">mediävistische</tc:token>
+      <tc:token ID="w811">Textualitätsdebatte</tc:token>
+      <tc:token ID="w812">“</tc:token>
+      <tc:token ID="w813">,</tc:token>
+      <tc:token ID="w814">in</tc:token>
+      <tc:token ID="w815">:</tc:token>
+      <tc:token ID="w816">Baum</tc:token>
+      <tc:token ID="w817">,</tc:token>
+      <tc:token ID="w818">Constanze</tc:token>
+      <tc:token ID="w819">/</tc:token>
+      <tc:token ID="w81a">Stäcker</tc:token>
+      <tc:token ID="w81b">,</tc:token>
+      <tc:token ID="w81c">Thomas</tc:token>
+      <tc:token ID="w81d">(</tc:token>
+      <tc:token ID="w81e">eds</tc:token>
+      <tc:token ID="w81f">.</tc:token>
+      <tc:token ID="w820">)</tc:token>
+      <tc:token ID="w821">:</tc:token>
+      <tc:token ID="w822">Grenzen</tc:token>
+      <tc:token ID="w823">und</tc:token>
+      <tc:token ID="w824">Möglichkeiten</tc:token>
+      <tc:token ID="w825">der</tc:token>
+      <tc:token ID="w826">Digital</tc:token>
+      <tc:token ID="w827">Humanities</tc:token>
+      <tc:token ID="w828">.</tc:token>
+      <tc:token ID="w829">Sonderband</tc:token>
+      <tc:token ID="w82a">ZfdG</tc:token>
+      <tc:token ID="w82b">1.</tc:token>
+      <tc:token ID="w82c">Bibliographie</tc:token>
+    </tc:tokens>
+    <tc:sentences xmlns:tc="http://www.dspin.de/data/textcorpus">
+      <tc:sentence tokenIDs="w1 w2 w3 w4 w5 w6 w7 w8 w9 wa wb wc wd we wf w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w1a w1b w1c w1d w1e w1f w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 w2a w2b w2c w2d w2e w2f w30 w31 w32 w33 w34 w35 w36 w37 w38 w39 w3a w3b w3c w3d w3e w3f w40 w41 w42 w43 w44 w45 w46 w47 w48 w49 w4a w4b w4c w4d w4e w4f w50 w51 w52 w53 w54 w55" ID="s1"/>
+      <tc:sentence tokenIDs="w56 w57 w58 w59 w5a w5b w5c w5d w5e" ID="s2"/>
+      <tc:sentence tokenIDs="w5f w60 w61 w62 w63 w64 w65 w66 w67 w68 w69 w6a w6b w6c w6d w6e w6f w70 w71 w72 w73 w74 w75 w76 w77 w78 w79 w7a w7b w7c w7d w7e w7f w80 w81 w82 w83 w84 w85 w86 w87 w88 w89 w8a w8b w8c w8d w8e w8f w90 w91 w92 w93" ID="s3"/>
+      <tc:sentence tokenIDs="w94 w95 w96 w97 w98 w99 w9a w9b w9c w9d w9e w9f wa0 wa1 wa2 wa3 wa4 wa5 wa6 wa7 wa8 wa9 waa wab wac wad wae waf wb0 wb1 wb2 wb3 wb4 wb5 wb6 wb7 wb8 wb9 wba wbb wbc wbd wbe wbf wc0 wc1 wc2 wc3 wc4 wc5 wc6 wc7 wc8 wc9 wca wcb" ID="s4"/>
+      <tc:sentence tokenIDs="wcc wcd wce wcf wd0 wd1 wd2 wd3 wd4 wd5 wd6 wd7 wd8 wd9 wda wdb wdc wdd wde" ID="s5"/>
+      <tc:sentence tokenIDs="wdf we0 we1 we2 we3 we4 we5 we6 we7 we8" ID="s6"/>
+      <tc:sentence tokenIDs="we9 wea web wec wed wee wef wf0 wf1 wf2 wf3 wf4 wf5 wf6 wf7 wf8 wf9 wfa wfb wfc wfd" ID="s7"/>
+      <tc:sentence tokenIDs="wfe wff w100 w101 w102 w103 w104 w105 w106" ID="s8"/>
+      <tc:sentence tokenIDs="w107 w108 w109 w10a w10b w10c w10d w10e w10f w110 w111 w112 w113 w114 w115 w116 w117 w118 w119 w11a w11b" ID="s9"/>
+      <tc:sentence tokenIDs="w11c w11d w11e w11f w120 w121 w122 w123 w124 w125 w126 w127 w128 w129 w12a w12b w12c w12d w12e w12f w130 w131 w132 w133 w134 w135 w136 w137 w138 w139 w13a w13b w13c w13d w13e w13f w140 w141 w142 w143 w144 w145 w146 w147 w148 w149 w14a w14b w14c w14d w14e w14f w150 w151 w152 w153 w154" ID="sa"/>
+      <tc:sentence tokenIDs="w155 w156 w157 w158 w159 w15a w15b w15c w15d w15e w15f w160 w161 w162 w163 w164 w165 w166 w167 w168 w169 w16a w16b w16c" ID="sb"/>
+      <tc:sentence tokenIDs="w16d w16e w16f w170 w171 w172 w173 w174 w175 w176 w177 w178 w179 w17a w17b w17c w17d w17e w17f w180 w181 w182" ID="sc"/>
+      <tc:sentence tokenIDs="w183 w184 w185 w186 w187 w188 w189 w18a w18b w18c w18d w18e w18f w190 w191 w192 w193 w194 w195 w196 w197 w198 w199 w19a" ID="sd"/>
+      <tc:sentence tokenIDs="w19b w19c w19d w19e w19f w1a0 w1a1 w1a2 w1a3 w1a4 w1a5 w1a6 w1a7 w1a8 w1a9 w1aa w1ab w1ac w1ad w1ae w1af w1b0 w1b1 w1b2 w1b3 w1b4 w1b5 w1b6 w1b7 w1b8 w1b9 w1ba w1bb w1bc w1bd w1be w1bf w1c0" ID="se"/>
+      <tc:sentence tokenIDs="w1c1 w1c2 w1c3 w1c4 w1c5 w1c6 w1c7 w1c8 w1c9 w1ca w1cb w1cc w1cd w1ce w1cf w1d0 w1d1 w1d2 w1d3 w1d4 w1d5 w1d6 w1d7 w1d8 w1d9 w1da w1db w1dc w1dd w1de w1df w1e0 w1e1 w1e2 w1e3 w1e4 w1e5 w1e6 w1e7 w1e8 w1e9 w1ea w1eb w1ec w1ed w1ee w1ef" ID="sf"/>
+      <tc:sentence tokenIDs="w1f0 w1f1 w1f2 w1f3 w1f4 w1f5 w1f6 w1f7 w1f8 w1f9 w1fa w1fb w1fc w1fd w1fe w1ff" ID="s10"/>
+      <tc:sentence tokenIDs="w200 w201 w202 w203 w204 w205 w206 w207 w208 w209 w20a w20b w20c w20d w20e w20f w210 w211 w212 w213 w214 w215 w216 w217 w218 w219" ID="s11"/>
+      <tc:sentence tokenIDs="w21a w21b w21c w21d w21e w21f w220 w221 w222 w223 w224 w225 w226 w227 w228 w229 w22a w22b w22c" ID="s12"/>
+      <tc:sentence tokenIDs="w22d w22e w22f w230 w231 w232 w233 w234 w235 w236 w237 w238 w239 w23a w23b w23c w23d w23e w23f w240" ID="s13"/>
+      <tc:sentence tokenIDs="w241 w242 w243 w244 w245 w246 w247 w248 w249 w24a w24b w24c w24d w24e w24f w250 w251 w252 w253 w254 w255 w256 w257 w258 w259 w25a w25b w25c w25d" ID="s14"/>
+      <tc:sentence tokenIDs="w25e w25f w260 w261 w262 w263 w264 w265 w266 w267 w268 w269 w26a w26b w26c w26d w26e w26f w270 w271 w272" ID="s15"/>
+      <tc:sentence tokenIDs="w273 w274 w275 w276 w277 w278 w279" ID="s16"/>
+      <tc:sentence tokenIDs="w27a w27b w27c w27d w27e w27f w280 w281 w282 w283 w284 w285 w286 w287 w288 w289 w28a w28b w28c w28d w28e w28f w290 w291 w292" ID="s17"/>
+      <tc:sentence tokenIDs="w293 w294 w295 w296 w297 w298 w299 w29a w29b w29c w29d w29e w29f w2a0 w2a1 w2a2 w2a3 w2a4 w2a5 w2a6 w2a7 w2a8 w2a9 w2aa w2ab w2ac w2ad" ID="s18"/>
+      <tc:sentence tokenIDs="w2ae w2af w2b0 w2b1 w2b2 w2b3 w2b4 w2b5 w2b6 w2b7 w2b8 w2b9 w2ba w2bb w2bc w2bd w2be w2bf w2c0 w2c1 w2c2 w2c3 w2c4 w2c5 w2c6 w2c7 w2c8 w2c9" ID="s19"/>
+      <tc:sentence tokenIDs="w2ca w2cb w2cc w2cd w2ce w2cf w2d0 w2d1 w2d2 w2d3 w2d4 w2d5 w2d6 w2d7 w2d8 w2d9 w2da w2db w2dc w2dd w2de w2df w2e0 w2e1 w2e2 w2e3 w2e4 w2e5 w2e6 w2e7 w2e8 w2e9 w2ea w2eb w2ec w2ed w2ee w2ef w2f0 w2f1 w2f2 w2f3 w2f4 w2f5 w2f6 w2f7 w2f8 w2f9 w2fa w2fb w2fc w2fd w2fe w2ff w300 w301 w302 w303 w304 w305 w306 w307 w308 w309 w30a" ID="s1a"/>
+      <tc:sentence tokenIDs="w30b w30c w30d w30e w30f w310 w311 w312 w313 w314" ID="s1b"/>
+      <tc:sentence tokenIDs="w315 w316 w317 w318 w319 w31a w31b w31c w31d w31e w31f w320 w321 w322 w323 w324 w325 w326 w327 w328 w329 w32a w32b w32c w32d w32e w32f w330" ID="s1c"/>
+      <tc:sentence tokenIDs="w331 w332 w333 w334 w335 w336 w337 w338 w339 w33a w33b w33c w33d w33e w33f w340 w341 w342 w343 w344 w345 w346 w347 w348 w349 w34a w34b w34c w34d w34e w34f" ID="s1d"/>
+      <tc:sentence tokenIDs="w350 w351 w352 w353 w354 w355 w356 w357 w358 w359 w35a w35b w35c w35d w35e w35f w360 w361 w362 w363 w364 w365 w366 w367 w368 w369 w36a w36b w36c w36d w36e w36f w370 w371" ID="s1e"/>
+      <tc:sentence tokenIDs="w372 w373 w374 w375 w376 w377 w378 w379 w37a w37b w37c w37d w37e w37f w380 w381 w382 w383 w384" ID="s1f"/>
+      <tc:sentence tokenIDs="w385 w386 w387 w388 w389 w38a w38b w38c w38d w38e w38f w390 w391 w392 w393 w394 w395 w396 w397 w398 w399 w39a w39b w39c" ID="s20"/>
+      <tc:sentence tokenIDs="w39d w39e w39f w3a0 w3a1 w3a2 w3a3 w3a4 w3a5 w3a6 w3a7 w3a8 w3a9 w3aa w3ab w3ac w3ad w3ae w3af" ID="s21"/>
+      <tc:sentence tokenIDs="w3b0 w3b1 w3b2 w3b3 w3b4 w3b5 w3b6 w3b7 w3b8" ID="s22"/>
+      <tc:sentence tokenIDs="w3b9 w3ba w3bb w3bc w3bd w3be w3bf w3c0 w3c1 w3c2" ID="s23"/>
+      <tc:sentence tokenIDs="w3c3 w3c4 w3c5 w3c6 w3c7 w3c8 w3c9 w3ca w3cb w3cc w3cd w3ce w3cf w3d0 w3d1 w3d2 w3d3 w3d4 w3d5 w3d6 w3d7 w3d8 w3d9" ID="s24"/>
+      <tc:sentence tokenIDs="w3da w3db w3dc w3dd w3de w3df w3e0 w3e1 w3e2 w3e3 w3e4 w3e5 w3e6 w3e7 w3e8 w3e9 w3ea w3eb w3ec w3ed w3ee w3ef w3f0 w3f1 w3f2 w3f3 w3f4 w3f5 w3f6 w3f7 w3f8 w3f9 w3fa" ID="s25"/>
+      <tc:sentence tokenIDs="w3fb w3fc w3fd w3fe w3ff w400" ID="s26"/>
+      <tc:sentence tokenIDs="w401 w402 w403 w404 w405 w406 w407 w408 w409 w40a w40b w40c w40d w40e w40f w410 w411 w412 w413 w414 w415 w416 w417 w418 w419 w41a w41b w41c w41d w41e w41f w420 w421 w422 w423 w424 w425 w426 w427 w428 w429 w42a w42b w42c w42d w42e w42f w430 w431" ID="s27"/>
+      <tc:sentence tokenIDs="w432 w433 w434 w435 w436 w437 w438 w439 w43a w43b w43c w43d w43e w43f w440 w441 w442 w443 w444 w445 w446 w447 w448 w449 w44a w44b w44c w44d w44e w44f w450 w451 w452 w453 w454 w455 w456 w457" ID="s28"/>
+      <tc:sentence tokenIDs="w458 w459 w45a w45b w45c w45d w45e w45f w460 w461 w462 w463 w464" ID="s29"/>
+      <tc:sentence tokenIDs="w465 w466 w467 w468 w469 w46a w46b w46c w46d w46e w46f w470 w471 w472 w473 w474 w475 w476 w477 w478 w479 w47a w47b w47c w47d w47e w47f w480 w481 w482 w483 w484 w485 w486 w487 w488 w489 w48a w48b w48c w48d w48e w48f" ID="s2a"/>
+      <tc:sentence tokenIDs="w490 w491 w492 w493 w494 w495 w496 w497 w498 w499 w49a w49b w49c w49d w49e w49f" ID="s2b"/>
+      <tc:sentence tokenIDs="w4a0 w4a1 w4a2 w4a3 w4a4 w4a5 w4a6 w4a7 w4a8 w4a9 w4aa w4ab w4ac w4ad w4ae w4af w4b0 w4b1 w4b2 w4b3 w4b4" ID="s2c"/>
+      <tc:sentence tokenIDs="w4b5 w4b6 w4b7 w4b8 w4b9 w4ba w4bb w4bc w4bd w4be w4bf w4c0 w4c1 w4c2 w4c3 w4c4 w4c5 w4c6 w4c7 w4c8 w4c9 w4ca w4cb w4cc w4cd" ID="s2d"/>
+      <tc:sentence tokenIDs="w4ce w4cf w4d0 w4d1 w4d2 w4d3 w4d4 w4d5 w4d6 w4d7 w4d8 w4d9" ID="s2e"/>
+      <tc:sentence tokenIDs="w4da w4db w4dc w4dd w4de w4df w4e0 w4e1 w4e2 w4e3 w4e4 w4e5 w4e6 w4e7 w4e8 w4e9 w4ea w4eb w4ec w4ed w4ee w4ef w4f0 w4f1 w4f2 w4f3 w4f4 w4f5 w4f6 w4f7 w4f8 w4f9" ID="s2f"/>
+      <tc:sentence tokenIDs="w4fa w4fb w4fc w4fd w4fe w4ff w500 w501 w502 w503 w504 w505 w506 w507 w508 w509 w50a w50b w50c w50d w50e w50f w510 w511 w512 w513 w514 w515 w516 w517" ID="s30"/>
+      <tc:sentence tokenIDs="w518 w519 w51a w51b w51c w51d w51e w51f w520 w521 w522 w523 w524 w525 w526 w527 w528 w529 w52a w52b w52c w52d w52e w52f w530" ID="s31"/>
+      <tc:sentence tokenIDs="w531 w532 w533 w534 w535 w536 w537 w538 w539 w53a w53b w53c w53d w53e w53f w540 w541 w542 w543 w544 w545 w546 w547 w548 w549 w54a w54b w54c w54d w54e w54f w550 w551 w552 w553" ID="s32"/>
+      <tc:sentence tokenIDs="w554 w555 w556 w557 w558 w559 w55a w55b w55c w55d w55e w55f w560 w561 w562 w563 w564" ID="s33"/>
+      <tc:sentence tokenIDs="w565 w566 w567 w568 w569 w56a w56b w56c w56d w56e w56f w570 w571 w572 w573 w574 w575 w576 w577 w578 w579 w57a w57b w57c w57d w57e w57f w580 w581 w582 w583 w584 w585 w586 w587 w588 w589 w58a w58b w58c" ID="s34"/>
+      <tc:sentence tokenIDs="w58d w58e w58f w590 w591 w592 w593 w594 w595 w596 w597 w598 w599 w59a w59b w59c w59d w59e w59f w5a0 w5a1 w5a2 w5a3 w5a4 w5a5 w5a6 w5a7 w5a8 w5a9 w5aa w5ab w5ac w5ad w5ae w5af w5b0 w5b1 w5b2 w5b3 w5b4 w5b5" ID="s35"/>
+      <tc:sentence tokenIDs="w5b6 w5b7 w5b8 w5b9 w5ba w5bb w5bc w5bd w5be w5bf w5c0 w5c1 w5c2 w5c3 w5c4 w5c5 w5c6" ID="s36"/>
+      <tc:sentence tokenIDs="w5c7 w5c8 w5c9 w5ca w5cb w5cc w5cd w5ce w5cf w5d0 w5d1 w5d2 w5d3 w5d4 w5d5 w5d6 w5d7 w5d8 w5d9 w5da w5db w5dc w5dd w5de w5df w5e0 w5e1 w5e2 w5e3 w5e4 w5e5 w5e6 w5e7 w5e8 w5e9 w5ea w5eb w5ec w5ed w5ee w5ef w5f0 w5f1 w5f2 w5f3 w5f4 w5f5 w5f6 w5f7 w5f8 w5f9 w5fa w5fb w5fc w5fd w5fe w5ff w600 w601 w602" ID="s37"/>
+      <tc:sentence tokenIDs="w603 w604 w605 w606 w607 w608 w609" ID="s38"/>
+      <tc:sentence tokenIDs="w60a w60b w60c" ID="s39"/>
+      <tc:sentence tokenIDs="w60d w60e w60f w610 w611 w612 w613 w614 w615 w616 w617 w618 w619 w61a w61b w61c" ID="s3a"/>
+      <tc:sentence tokenIDs="w61d w61e w61f w620 w621 w622 w623 w624 w625 w626 w627 w628 w629 w62a w62b w62c w62d w62e w62f w630 w631 w632 w633 w634 w635 w636 w637 w638 w639 w63a w63b w63c w63d w63e w63f w640 w641 w642" ID="s3b"/>
+      <tc:sentence tokenIDs="w643 w644 w645 w646 w647" ID="s3c"/>
+      <tc:sentence tokenIDs="w648 w649 w64a w64b w64c w64d w64e w64f w650 w651 w652 w653 w654 w655 w656 w657 w658 w659 w65a w65b w65c w65d w65e w65f w660 w661 w662 w663 w664" ID="s3d"/>
+      <tc:sentence tokenIDs="w665 w666 w667 w668 w669 w66a w66b w66c w66d w66e" ID="s3e"/>
+      <tc:sentence tokenIDs="w66f w670 w671 w672 w673 w674 w675 w676 w677 w678 w679 w67a w67b w67c w67d w67e w67f w680 w681 w682 w683 w684 w685 w686 w687" ID="s3f"/>
+      <tc:sentence tokenIDs="w688 w689 w68a w68b w68c w68d w68e" ID="s40"/>
+      <tc:sentence tokenIDs="w68f w690 w691 w692 w693 w694 w695 w696 w697 w698 w699 w69a w69b w69c w69d w69e w69f w6a0 w6a1 w6a2 w6a3 w6a4 w6a5 w6a6 w6a7 w6a8 w6a9 w6aa w6ab w6ac w6ad w6ae" ID="s41"/>
+      <tc:sentence tokenIDs="w6af w6b0 w6b1 w6b2 w6b3" ID="s42"/>
+      <tc:sentence tokenIDs="w6b4 w6b5 w6b6 w6b7 w6b8 w6b9 w6ba w6bb w6bc w6bd w6be w6bf w6c0 w6c1 w6c2 w6c3 w6c4 w6c5 w6c6 w6c7 w6c8 w6c9 w6ca w6cb w6cc w6cd w6ce w6cf w6d0 w6d1 w6d2 w6d3 w6d4 w6d5 w6d6 w6d7" ID="s43"/>
+      <tc:sentence tokenIDs="w6d8 w6d9 w6da w6db w6dc w6dd w6de w6df w6e0 w6e1 w6e2 w6e3 w6e4 w6e5 w6e6 w6e7 w6e8 w6e9 w6ea w6eb w6ec w6ed w6ee w6ef w6f0 w6f1 w6f2 w6f3 w6f4 w6f5 w6f6 w6f7 w6f8 w6f9 w6fa w6fb w6fc w6fd w6fe w6ff w700 w701 w702 w703 w704 w705 w706 w707 w708 w709 w70a w70b w70c w70d w70e w70f w710 w711 w712 w713 w714 w715" ID="s44"/>
+      <tc:sentence tokenIDs="w716 w717 w718 w719 w71a w71b w71c w71d w71e w71f w720 w721 w722 w723 w724 w725 w726 w727 w728 w729 w72a w72b w72c w72d w72e w72f w730" ID="s45"/>
+      <tc:sentence tokenIDs="w731 w732 w733 w734 w735 w736 w737 w738 w739 w73a w73b w73c w73d w73e w73f w740 w741 w742 w743 w744 w745 w746 w747" ID="s46"/>
+      <tc:sentence tokenIDs="w748 w749 w74a w74b w74c w74d w74e w74f w750 w751 w752 w753 w754 w755 w756 w757 w758 w759 w75a w75b w75c w75d w75e w75f w760 w761 w762 w763 w764 w765 w766" ID="s47"/>
+      <tc:sentence tokenIDs="w767 w768 w769 w76a w76b w76c w76d w76e w76f w770 w771 w772 w773 w774 w775 w776 w777 w778" ID="s48"/>
+      <tc:sentence tokenIDs="w779 w77a w77b w77c w77d w77e w77f w780" ID="s49"/>
+      <tc:sentence tokenIDs="w781 w782 w783 w784 w785 w786 w787 w788 w789 w78a w78b w78c w78d w78e w78f w790 w791 w792 w793 w794 w795 w796" ID="s4a"/>
+      <tc:sentence tokenIDs="w797 w798 w799 w79a w79b w79c w79d w79e w79f w7a0 w7a1 w7a2 w7a3" ID="s4b"/>
+      <tc:sentence tokenIDs="w7a4 w7a5 w7a6 w7a7 w7a8 w7a9 w7aa w7ab w7ac w7ad w7ae w7af w7b0 w7b1 w7b2 w7b3 w7b4 w7b5 w7b6 w7b7 w7b8 w7b9 w7ba w7bb w7bc w7bd w7be w7bf w7c0 w7c1" ID="s4c"/>
+      <tc:sentence tokenIDs="w7c2 w7c3 w7c4 w7c5 w7c6 w7c7 w7c8 w7c9 w7ca w7cb" ID="s4d"/>
+      <tc:sentence tokenIDs="w7cc w7cd w7ce w7cf w7d0" ID="s4e"/>
+      <tc:sentence tokenIDs="w7d1 w7d2 w7d3 w7d4 w7d5 w7d6 w7d7 w7d8 w7d9 w7da w7db w7dc w7dd w7de w7df w7e0 w7e1 w7e2 w7e3" ID="s4f"/>
+      <tc:sentence tokenIDs="w7e4 w7e5 w7e6 w7e7 w7e8 w7e9 w7ea w7eb w7ec w7ed w7ee w7ef w7f0 w7f1 w7f2 w7f3 w7f4 w7f5 w7f6 w7f7 w7f8 w7f9 w7fa w7fb w7fc w7fd w7fe w7ff w800 w801 w802" ID="s50"/>
+      <tc:sentence tokenIDs="w803 w804 w805 w806" ID="s51"/>
+      <tc:sentence tokenIDs="w807 w808 w809 w80a w80b w80c w80d w80e w80f w810 w811 w812 w813 w814 w815 w816 w817 w818 w819 w81a w81b w81c w81d w81e w81f w820 w821 w822 w823 w824 w825 w826 w827 w828" ID="s52"/>
+      <tc:sentence tokenIDs="w829 w82a w82b w82c" ID="s53"/>
+    </tc:sentences>
+    <tc:namedEntities xmlns:tc="http://www.dspin.de/data/textcorpus" type="tuebadz8">
+      <tc:entity class="LOC" tokenIDs="w13"/>
+      <tc:entity class="PER" tokenIDs="w1a"/>
+      <tc:entity class="PER" tokenIDs="w26"/>
+      <tc:entity class="PER" tokenIDs="w29"/>
+      <tc:entity class="PER" tokenIDs="w2b"/>
+      <tc:entity class="PER" tokenIDs="w2e"/>
+      <tc:entity class="PER" tokenIDs="w31"/>
+      <tc:entity class="PER" tokenIDs="w34"/>
+      <tc:entity class="PER" tokenIDs="w36"/>
+      <tc:entity class="PER" tokenIDs="w39"/>
+      <tc:entity class="PER" tokenIDs="w3b"/>
+      <tc:entity class="PER" tokenIDs="w3d"/>
+      <tc:entity class="PER" tokenIDs="w3f"/>
+      <tc:entity class="PER" tokenIDs="w41"/>
+      <tc:entity class="PER" tokenIDs="w43"/>
+      <tc:entity class="PER" tokenIDs="w46"/>
+      <tc:entity class="PER" tokenIDs="w48"/>
+      <tc:entity class="PER" tokenIDs="w4a"/>
+      <tc:entity class="PER" tokenIDs="w4c"/>
+      <tc:entity class="PER" tokenIDs="w4e"/>
+      <tc:entity class="PER" tokenIDs="w50"/>
+      <tc:entity class="PER" tokenIDs="w52"/>
+      <tc:entity class="OTH" tokenIDs="w85"/>
+      <tc:entity class="GPE" tokenIDs="w9d"/>
+      <tc:entity class="PER" tokenIDs="wa2"/>
+      <tc:entity class="ORG" tokenIDs="wa7"/>
+      <tc:entity class="PER" tokenIDs="wc5"/>
+      <tc:entity class="ORG" tokenIDs="w184"/>
+      <tc:entity class="ORG" tokenIDs="w192"/>
+      <tc:entity class="PER" tokenIDs="w27a w27b"/>
+      <tc:entity class="OTH" tokenIDs="w282 w283 w284 w285"/>
+      <tc:entity class="PER" tokenIDs="w2a4 w2a5"/>
+      <tc:entity class="OTH" tokenIDs="w354 w355 w356 w357"/>
+      <tc:entity class="GPE" tokenIDs="w35a"/>
+      <tc:entity class="ORG" tokenIDs="w3a3"/>
+      <tc:entity class="ORG" tokenIDs="w3f8"/>
+      <tc:entity class="ORG" tokenIDs="w433"/>
+      <tc:entity class="PER" tokenIDs="w458"/>
+      <tc:entity class="PER" tokenIDs="w461"/>
+      <tc:entity class="PER" tokenIDs="w465"/>
+      <tc:entity class="PER" tokenIDs="w467"/>
+      <tc:entity class="PER" tokenIDs="w469"/>
+      <tc:entity class="PER" tokenIDs="w46b"/>
+      <tc:entity class="PER" tokenIDs="w46d"/>
+      <tc:entity class="PER" tokenIDs="w46f"/>
+      <tc:entity class="PER" tokenIDs="w471"/>
+      <tc:entity class="ORG" tokenIDs="w479"/>
+      <tc:entity class="ORG" tokenIDs="w4b9"/>
+      <tc:entity class="PER" tokenIDs="w4da"/>
+      <tc:entity class="PER" tokenIDs="w5de"/>
+      <tc:entity class="OTH" tokenIDs="w61d"/>
+      <tc:entity class="PER" tokenIDs="w63c"/>
+      <tc:entity class="PER" tokenIDs="w63e"/>
+      <tc:entity class="OTH" tokenIDs="w648 w649 w64a w64b w64c w64d w64e w64f w650 w651 w652"/>
+      <tc:entity class="OTH" tokenIDs="w657 w658 w659 w65a w65b"/>
+      <tc:entity class="PER" tokenIDs="w667"/>
+      <tc:entity class="PER" tokenIDs="w669 w66a"/>
+      <tc:entity class="OTH" tokenIDs="w675 w676 w677 w678 w679"/>
+      <tc:entity class="PER" tokenIDs="w688"/>
+      <tc:entity class="PER" tokenIDs="w68a"/>
+      <tc:entity class="OTH" tokenIDs="w690 w691 w692 w693 w694 w695 w696 w697 w698"/>
+      <tc:entity class="ORG" tokenIDs="w69d w69e w69f w6a0"/>
+      <tc:entity class="PER" tokenIDs="w6a8"/>
+      <tc:entity class="PER" tokenIDs="w6aa"/>
+      <tc:entity class="OTH" tokenIDs="w6b4 w6b5 w6b6 w6b7 w6b8 w6b9 w6ba w6bb"/>
+      <tc:entity class="ORG" tokenIDs="w6c0 w6c1 w6c2 w6c3 w6c4 w6c5"/>
+      <tc:entity class="PER" tokenIDs="w6cd"/>
+      <tc:entity class="PER" tokenIDs="w6cf"/>
+      <tc:entity class="PER" tokenIDs="w6d1"/>
+      <tc:entity class="PER" tokenIDs="w6d3"/>
+      <tc:entity class="OTH" tokenIDs="w6ed w6ee w6ef w6f0"/>
+      <tc:entity class="PER" tokenIDs="w6fb"/>
+      <tc:entity class="PER" tokenIDs="w6fd"/>
+      <tc:entity class="PER" tokenIDs="w6ff"/>
+      <tc:entity class="PER" tokenIDs="w701"/>
+      <tc:entity class="PER" tokenIDs="w703"/>
+      <tc:entity class="PER" tokenIDs="w705"/>
+      <tc:entity class="PER" tokenIDs="w707"/>
+      <tc:entity class="PER" tokenIDs="w709"/>
+      <tc:entity class="PER" tokenIDs="w70b"/>
+      <tc:entity class="PER" tokenIDs="w70d"/>
+      <tc:entity class="PER" tokenIDs="w70f"/>
+      <tc:entity class="PER" tokenIDs="w711"/>
+      <tc:entity class="OTH" tokenIDs="w717 w718 w719 w71a w71b w71c w71d w71e w71f w720 w721"/>
+      <tc:entity class="ORG" tokenIDs="w726 w727 w728 w729 w72a w72b w72c w72d w72e w72f"/>
+      <tc:entity class="GPE" tokenIDs="w731"/>
+      <tc:entity class="ORG" tokenIDs="w735 w736 w737 w738"/>
+      <tc:entity class="PER" tokenIDs="w748"/>
+      <tc:entity class="PER" tokenIDs="w74a"/>
+      <tc:entity class="PER" tokenIDs="w74c"/>
+      <tc:entity class="PER" tokenIDs="w74e"/>
+      <tc:entity class="PER" tokenIDs="w750"/>
+      <tc:entity class="PER" tokenIDs="w752"/>
+      <tc:entity class="PER" tokenIDs="w754"/>
+      <tc:entity class="PER" tokenIDs="w756"/>
+      <tc:entity class="PER" tokenIDs="w758"/>
+      <tc:entity class="PER" tokenIDs="w75a"/>
+      <tc:entity class="PER" tokenIDs="w75c"/>
+      <tc:entity class="PER" tokenIDs="w75e"/>
+      <tc:entity class="PER" tokenIDs="w760"/>
+      <tc:entity class="PER" tokenIDs="w762"/>
+      <tc:entity class="ORG" tokenIDs="w768 w769"/>
+      <tc:entity class="PER" tokenIDs="w76f"/>
+      <tc:entity class="PER" tokenIDs="w779"/>
+      <tc:entity class="PER" tokenIDs="w77b w77c"/>
+      <tc:entity class="ORG" tokenIDs="w782 w783"/>
+      <tc:entity class="OTH" tokenIDs="w789 w78a w78b w78c"/>
+      <tc:entity class="PER" tokenIDs="w799"/>
+      <tc:entity class="PER" tokenIDs="w79b"/>
+      <tc:entity class="PER" tokenIDs="w79d"/>
+      <tc:entity class="PER" tokenIDs="w79f"/>
+      <tc:entity class="OTH" tokenIDs="w7a5 w7a6 w7a7 w7a8 w7a9 w7aa w7ab w7ac w7ad w7ae"/>
+      <tc:entity class="PER" tokenIDs="w7b3"/>
+      <tc:entity class="PER" tokenIDs="w7b5"/>
+      <tc:entity class="PER" tokenIDs="w7b7"/>
+      <tc:entity class="PER" tokenIDs="w7b9"/>
+      <tc:entity class="OTH" tokenIDs="w7bf w7c0"/>
+      <tc:entity class="OTH" tokenIDs="w7c2 w7c3 w7c4 w7c5 w7c6 w7c7 w7c8 w7c9 w7ca"/>
+      <tc:entity class="GPE" tokenIDs="w7cc w7cd"/>
+      <tc:entity class="PER" tokenIDs="w7d1"/>
+      <tc:entity class="PER" tokenIDs="w7d3"/>
+      <tc:entity class="PER" tokenIDs="w7d5"/>
+      <tc:entity class="PER" tokenIDs="w7d7"/>
+      <tc:entity class="PER" tokenIDs="w7d9"/>
+      <tc:entity class="PER" tokenIDs="w7db"/>
+      <tc:entity class="PER" tokenIDs="w7dd"/>
+      <tc:entity class="PER" tokenIDs="w7df"/>
+      <tc:entity class="OTH" tokenIDs="w7e5 w7e6 w7e7 w7e8 w7e9 w7ea w7eb w7ec w7ed w7ee w7ef w7f0"/>
+      <tc:entity class="OTH" tokenIDs="w7f8 w7f9 w7fa w7fb w7fc"/>
+      <tc:entity class="PER" tokenIDs="w7fe"/>
+      <tc:entity class="PER" tokenIDs="w816"/>
+      <tc:entity class="PER" tokenIDs="w818"/>
+      <tc:entity class="PER" tokenIDs="w81a"/>
+      <tc:entity class="PER" tokenIDs="w81c"/>
+      <tc:entity class="ORG" tokenIDs="w82a"/>
+    </tc:namedEntities>
+  </TextCorpus>
+</D-Spin>

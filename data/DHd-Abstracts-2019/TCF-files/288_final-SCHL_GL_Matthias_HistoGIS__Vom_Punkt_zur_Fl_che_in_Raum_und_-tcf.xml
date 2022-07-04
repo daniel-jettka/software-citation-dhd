@@ -1,0 +1,2142 @@
+<?xml version='1.0' encoding='UTF-8'?><D-Spin xmlns="http://www.dspin.de/data" version="5">
+  <MetaData xmlns="http://www.dspin.de/data/metadata"><Services><cmd:CMD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cmd="http://www.clarin.eu/cmd/1" CMDVersion="1.2" xsi:schemaLocation="http://www.clarin.eu/cmd/1 http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_1320657629623/xsd"><cmd:Resources><cmd:ResourceProxyList/><cmd:JournalFileProxyList/><cmd:ResourceRelationList/></cmd:Resources><cmd:Components><cmd:WebServiceToolChain><cmd:GeneralInfo><cmd:Descriptions><cmd:Description/></cmd:Descriptions><cmd:ResourceName>Custom chain</cmd:ResourceName><cmd:ResourceClass>Toolchain</cmd:ResourceClass></cmd:GeneralInfo><cmd:Toolchain><cmd:ToolInChain><cmd:PID>https://hdl.handle.net/21.11120/0000-0008-319A-3</cmd:PID><cmd:Parameter value="de" name="lang"/></cmd:ToolInChain><cmd:ToolInChain><cmd:PID>https://hdl.handle.net/21.11120/0000-0008-3183-C</cmd:PID><cmd:Parameter value="5" name="version"/></cmd:ToolInChain><cmd:ToolInChain><cmd:PID>http://hdl.handle.net/11022/0000-0007-DA29-6</cmd:PID><cmd:Parameter value="de" name="lang"/><cmd:Parameter value="5" name="version"/></cmd:ToolInChain></cmd:Toolchain></cmd:WebServiceToolChain></cmd:Components></cmd:CMD></Services></MetaData>
+  <TextCorpus xmlns="http://www.dspin.de/data/textcorpus" lang="de">
+    <textSource type="application/tei+xml;format-variant=tei-dta;tokenized=0">&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;TEI xml:id="288_final-SCHL_GL_Matthias_HistoGIS__Vom_Punkt_zur_Fl_che_in_Raum_und_" xmlns="http://www.tei-c.org/ns/1.0">
+&lt;teiHeader>
+&lt;fileDesc>
+&lt;titleStmt>
+&lt;title type="full">
+&lt;title type="main">HistoGIS: Vom Punkt zur Fläche in Raum und Zeit&lt;/title>
+&lt;title type="sub"/>
+&lt;/title>
+&lt;author>
+&lt;persName>
+&lt;surname>Schlögl&lt;/surname>
+&lt;forename>Matthias&lt;/forename>
+&lt;/persName>
+&lt;affiliation>Österreichische Akademie der Wissenschaften, Österreich&lt;/affiliation>
+&lt;email>matthias.schloegl@oeaw.ac.at&lt;/email>
+&lt;/author>
+&lt;author>
+&lt;persName>
+&lt;surname>Andorfer&lt;/surname>
+&lt;forename>Peter&lt;/forename>
+&lt;/persName>
+&lt;affiliation>Österreichische Akademie der Wissenschaften, Österreich&lt;/affiliation>
+&lt;email>peter.andorfer@oeaw.ac.at&lt;/email>
+&lt;/author>
+&lt;/titleStmt>
+&lt;editionStmt>
+&lt;edition>
+&lt;date>2018-10-15T11:29:48.175150128&lt;/date>
+&lt;/edition>
+&lt;/editionStmt>
+&lt;publicationStmt>
+&lt;t:publisher xmlns:t="http://www.tei-c.org/ns/1.0">Patrick Sahle, im Auftrag des Verbands Digital Humanities im deutschsprachigen Raum e.V.&lt;/t:publisher>
+&lt;t:address xmlns:t="http://www.tei-c.org/ns/1.0">
+&lt;t:addrLine>Universität zu Köln&lt;/t:addrLine>
+&lt;t:addrLine>Cologne Center for eHumanities&lt;/t:addrLine>
+&lt;t:addrLine>Albertus-Magnus-Platz&lt;/t:addrLine>
+&lt;t:addrLine>50923 Köln&lt;/t:addrLine>
+&lt;/t:address>
+&lt;/publicationStmt>
+&lt;sourceDesc>
+&lt;p>Converted from an OASIS Open Document&lt;/p>
+&lt;/sourceDesc>
+&lt;/fileDesc>
+&lt;encodingDesc>
+&lt;appInfo>
+&lt;application ident="DHCONVALIDATOR" version="1.22">
+&lt;label>DHConvalidator&lt;/label>
+&lt;/application>
+&lt;/appInfo>
+&lt;/encodingDesc>
+&lt;profileDesc>
+&lt;textClass>
+&lt;keywords scheme="ConfTool" n="category">
+&lt;term>Paper&lt;/term>
+&lt;/keywords>
+&lt;keywords scheme="ConfTool" n="subcategory">
+&lt;term>Vortrag&lt;/term>
+&lt;/keywords>
+&lt;keywords scheme="ConfTool" n="keywords">
+&lt;term>GIS&lt;/term>
+&lt;term>Polygone&lt;/term>
+&lt;term>RestAPI&lt;/term>
+&lt;/keywords>
+&lt;keywords scheme="ConfTool" n="topics">
+&lt;term>Teilen&lt;/term>
+&lt;term>Programmierung&lt;/term>
+&lt;term>Modellierung&lt;/term>
+&lt;term>Karte&lt;/term>
+&lt;/keywords>
+&lt;/textClass>
+&lt;/profileDesc>
+&lt;/teiHeader>
+&lt;text>
+&lt;body>
+&lt;p>Geographische Angaben können in historischen Kontexten nicht als simple 2-dimensionale Daten (Längen- und Breitengrade) verstanden werden. Punkte die auf der Karte nur wenige Kilometer voneinander entfernt sind waren vor 500 Jahren wegen geographischer Hürden (Berge, Schluchten, Flüsse etc.) vielleicht ewig weit voneinander entfernt. Ähnliches gilt für politische Grenzen: Vor 30 Jahren waren Orte in Deutschland die heute wenige Autominuten voneinander entfernt liegen durch den eisernen Vorhang voneinander getrennt. Kamzelak (2018) hat es so formuliert: “Orte haben eine historisch-politische Dimension, die bei einer übergreifenden Registererfassung erst sichtbar zu einem Problem wird. [...] Für die Visualisierung von Briefen etwa sind historische Karten ein Desiderat; generell auch Geodaten für Flächen. Und alle mit Geodaten versehenen Einträge müssen mit einem Zeitstempel kombiniert sein, denn beispielsweise die Altstadt von Jerusalem ist eben heute nicht am selben Ort wie vor 2.000 Jahren.”.&lt;/p>
+&lt;p>Trotzdem arbeitet eine Vielzahl an Digital Humanities Projekten auch heute noch mit 2-dimensionalen geographischen Angaben. Unserer eigenen Erfahrung nach liegt das Hauptsächlich an der Verfügbarkeit von Daten und Services. Moderne Punkt-Daten können einfach als geonames, openstreetmap etc. dump heruntergeladen werden bzw. über API Schnittstellen abgefragt werden. Für historische Daten existieren diese Services noch nicht vollumfänglich. Mit Pelagios gibt es ein Ökosystem an Services für Ortsdaten in der antiken Welt (http://commons.pelagios.org/), das im Zuge des “World-Historical Gazetteer” Projektes (http://whgazetteer.org/) auch in jüngere Zeiten ausgedehnt wird. Abgesehen von diesen notwendigen Initiativen und sehr wertvollen Datensätzen fehlen den Digital Humanities immer noch Polygondaten zu politischen Entitäten im Verlauf der Zeit.&lt;/p>
+&lt;p>HistoGIS hat sich zum Ziel gesetzt genau diese Lücke zu füllen in dem:&lt;/p>
+&lt;list type="unordered">
+&lt;item>ein Repository historischer Polygondaten mit einheitlichen Metadaten aufgebaut und zum Download angeboten wird. Für dieses Repository werden zunächst schon existierende Polygondaten eingesammelt, aufbereitet und erst in einem zweiten Schritt für historisch wichtige Zeitspannen neue Polygone erstellt. Dabei setzt sich HistoGIS zunächst zum Ziel die Periode zwischen dem ausgehenden 18. Jhdt. und 1918 für das Gebiet der KuK Monarchie und des deutschen Bundes abzudecken.&lt;/item>
+&lt;item>und RestAPI Services zur einfachen Anreicherung historischer Daten mit Hilfe des Repositories angeboten werden. Z.B.: Wo war Punkt X/Y zum Zeitpunkt 
+
+                Z&lt;ref target="ftn1" n="1"/>? Die API antwortet mit den Metadaten zu den einzelnen überlappenden Polygonen die für den Zeitraum (oder Zeitpunkt) Gültigkeit haben. Nehmen wir an: Ein Projekt hat Reiseberichte in seiner Datenbank. Eine Station war Bolzano 1910. Die Geokoordinaten (46.49067, 11.33982) wurden über Geonames gefunden. Schickt man diese mit dem Jahr an die API bekommt man die Metadaten für Bozen Stadt, An der Etsch, Tirol und Österreich-Ungarn 
+
+                zurück&lt;ref target="ftn2" n="2"/>.
+&lt;/item>
+&lt;/list>
+&lt;p>Eine Fokussierung auf die politischen Verwaltungseinheiten und ihre Grenzen erlaubt es in vielen Bereichen - zumindest für jüngere Zeiten - einen Mix aus modernen Daten/Methoden und historischen zu verwenden ohne historisch falsche Daten zu generieren. So können bei oben angeführten Beispiel Bozen die Google Maps API, Geonames oder Openstreetmap zur Geolokalisation verwendet werden (die Geokoordinaten von Bozen haben sich ja nicht geändert) und die HistoGIS API um die Eingliederung in die Verwaltungshierarchien zu verbessern (Bozen war 1910 Teil der KuK Monarchie). Dieses Vorgehen reduziert nicht nur den Aufwand für die Erstellung/Kuratierung der Daten drastisch, es ermöglicht es auch leichter Punkte denen schon Längen- und Breitengrade zugewiesen wurden politisch/historisch zu verorten.&lt;/p>
+&lt;div type="div1">
+&lt;head>Datenmodell, Technische Grundlage und Workflow&lt;/head>
+&lt;p>Die Modellierung historischer Verwaltungsräume hinsichtlich ihrer räumlichen und zeitlichen Ausdehnungen erfolgte bewusst in einer äußerst vereinfachten Art und Weise. Das mittels Python (bzw. GeoDjango) definierte und als Postgresql implementierte Datenmodell besteht in seinem Kern aus den drei Hauptklassen bzw. Tabellen “TempSpatial”, “Source” und “TempSpatialRel”&lt;/p>
+&lt;p>Ein historischer Verwaltungsraum (Temporalized Spatial Entity oder eben “TempSpatial”) definiert sich über die im gesamten Datenset einzigartige Kombination der Eigenschaften zeitliche Ausdehnungen (“start_date” und “end_date”, Datumsfelder), räumliche Ausdehnung (“geom”; Multipolygon) sowie einem Feld “date_accuracy”, welches Auskunft über den Grad der Genauigkeit der angegebenen Datumswerte gibt. Ergänzt wird diese Klasse um die Eigenschaften “name” für, entsprechend den Projektkonventionen einen zeitgenössischen Namen der Entität, “alt_names” für alternative Namen sowie einem Feld “additional_data”, welches das Speichern arbiträrer weiterer Daten im JSON Format ermöglicht.&lt;/p>
+&lt;p>Das Feld “administrativ_unit” zeigt auf eine Hilfsklasse (“SkosConcept”) für kontrolliertes Vokabular, welche in weiten Teilen das SKOS Datenmodell implementiert. &lt;/p>
+&lt;p>Die Quelle jeder Instanz der Klasse TempSpatial bzw. jeder im Datenset erfassten historischen Verwaltungseinheit wird mit Hilfe der Klasse “Source” beschrieben. Darin werden URLs zu verwendeten Daten anderer Projekte gespeichert wie auch eine Beschreibung der (weiteren) Datenerhebung und Kuration im Rahmen des Projektes sowie ein Zitationsvorschlag. Jedes Source Objekt ist außerdem auch mit einem ESRI-Shapefile verbunden welches Projektintern als primäres Datenformat dient. Mehr dazu im Abschnitt Workflow. &lt;/p>
+&lt;p>Die Modellierung beliebiger Relationen zwischen beliebigen historischen Verwaltungsräumen ist im Datenmodell durch die Klasse TempSpatialRelation grundgelegt. Hier können jeweils zwei TempSpatial Objekte (“instance_a” und “instance_b”) für eine Zeitspanne (“start_date” und “end_date”) in eine typisierte (Verweis auf die bereits erwähnte Hilfsklasse “SkosConcept”) Relation gebracht werden. Hierbei ist jedoch weniger an die in Gazetteern üblichen “part of” Beziehungen gedacht, sondern an Relationen wie beispielsweise “ist Vorgänger von” oder “wurde zusammengelegt mit”. Allerdings muss darauf hingewiesen werden, dass im derzeitigen Status des Projektes noch keine derartigen Beziehungen erfasst werden.&lt;/p>
+&lt;p>Die Art und Weise wie eben erwähnte “part of” Beziehungen erfasst werden sollen, wurde im Projekt ausgiebig diskutierte, wobei hier neben formal- konzeptionellen Argumenten vor allem auch die konkreten Arbeitsvoraussetzungen und -bedingungen im Projekt berücksichtigt werden mussten. &lt;/p>
+&lt;p>Schlussendlich wurde eine explizite Modellierung hierarchischer Strukturen der erfassten Verwaltungseinheiten verzichtet, sprich im Datenmodell wird nicht ausdrücklich festgehalten, dass z.B. die Verwaltungseinheit A für einen gegebenen Zeitraum, Teil der Verwaltungseinheit B und diese Teil der Verwaltungseinheit D war. Dies erscheint deshalb als zulässig, weil im Projekt von der Prämisse ausgegangen wird, dass, zumindest für den für das Projekt primär interessante (Zeit)Raum, die Fläche der übergeordnete Einheit stets die Summe aller ihr untergeordneten Einheiten bildet. Dies ermöglicht es, dass part-of Beziehungen zwischen TempSpatial Objekten ‘on the fly’ mit Hilfe von spatial queries und unter Berücksichtigung der jeweiligen Start- und Enddatumswerten berechnet werden können. Und dies wiederum erleichtert einerseits die Arbeit der DatenkuratorInnen im Projekt, da diese keine expliziten Verbindungen pflegen müssen, andererseits ermöglicht dieses Flexibilität die Integration anderer Datensatz mit relativ geringem Aufwand.&lt;/p>
+&lt;p>An dieser Stelle muss jedoch betont werden, dass die bis dato kuratierte Menge an Daten noch nicht ausreicht um konkrete Aussagen hinsichtlich der Belastbarkeit des hier vorgestellten Datenmodells treffen zu können. Erste Tests diesbezüglich fielen jedoch durchwegs positiv aus, sowohl was die Genauigkeit der spatial queries, vor allem aber auch was deren Performanz betrifft.&lt;/p>
+&lt;p>Die technischen Komponenten des Projektes sind überschaubar. Als Storage Layer fungiert eine Postgresql Datenbank mit PostGIS erweiterung. Die Interaktion damit erfolgt über einen mittels dem Python basierten Webframework (Geo)Django implementierten Applikation Layer, wobei mit (Geo)Django, respektive django-rest-framework sowohl die HistoGIS-Webapplikation als auch ein entsprechender REST Webservice implementiert wurde bzw. wird.&lt;/p>
+&lt;p>Die eigentlich Datenkuration erfolgt davon völlig unabhängig und unter Verwendung der open source Software Qgis. Bis dato wurden damit vorwiegend bereits existierende Daten harmonisiert und als ESRI shapefiles gespeichert. Das Schema dieser Dateien entspricht dabei weitgehend dem oben skizzierten Datenmodell. Als ‘fertig’ erachtete Datensätze (gezippte Shapefiles) werden dann über ein Webformular in HistoGIS als sogenannte “Source” objekte hochgeladen, entpackt, die Features der Shapfiles als TempSpatial Objekte gespeichert und mit dem Source Objekt verknüpft. &lt;/p>
+&lt;p>Neben der Kuration und Harmonisierung bereits bestehender “Vektordaten” werden im Projekt aber auch selbst Daten erzeugt. Dazu wählt ein Historiker im Team verwertbare (historische) Karten aus, welche idealerweise bereits digitalisiert (gescannt) sind. Die Datakuratorinnen georeferenziert diese Scans (geotiffs) und extrahieren die darin auffindbaren Informationen zu historischen Verwaltungsgrenzen als Vektordaten. &lt;/p>
+&lt;/div>
+&lt;div type="div1">
+&lt;head>Kartenmaterial bis dato und Ausblick&lt;/head>
+&lt;p>Bis dato befinden sich knapp 4000 Polygone in der Production Instanz des Systems. Das Anpassen und Einspielen schon vorhandener Polygone wurde mit Daten aus dem Census mosaic Projekt (https://censusmosaic.demog.berkeley.edu/) und dem HGis Archiv (http://www.hgis-germany.de/) begonnen. Damit können große Teile des 19. Jhdts für die Gebiete Österreich-Ungarns und des Deutschen Bundes (inkl. der jeweiligen Nachfolgeentitäten) bereits abgedeckt werden. Die Daten werden nicht nur technisch aufbereitet, sondern auch inhaltlich von einem Verwaltungshistoriker überprüft. HistoGIS implementiert dafür ein Ampelsystem. Vom HistoGIS-Team technisch wie inhaltlich überprüfte Daten werden mit Grün markiert, vom HistoGIS-Team ausgewählte Daten die noch nicht überprüft wurden mit Gelb und von Usern zur Verfügung gestellte, nicht überprüfte Daten mit Rot (momentan befinden sich lediglich gelbe und grüne Daten im System).&lt;/p>
+&lt;p>Die Aufbereitung der Daten, wie auch die Entwicklung des technischen Systems schreitet erfreulicher Weise schneller voran als geplant. Es wurde deshalb erst kürzlich beschlossen in HistoGIS schon während der Projektlaufzeit auch Daten außerhalb der geplanten räumlich-zeitlichen Grenzen aufzunehmen.&lt;/p>
+&lt;p>In unserer Präsentation werden wir vor allem das Datenmodell und die RestAPI Schnittstellen des Systems diskutieren und vorstellen.&lt;/p>
+&lt;/div>
+&lt;/body>
+&lt;back>
+&lt;div type="notes">
+&lt;note xml:id="ftn1" n="1" rend="footnote text">
+
+                    Eine auf diese API aufbauende Abfragemaske findet sich hier: https://histogis.acdh.oeaw.ac.at/shapes/where-was/
+&lt;/note>
+&lt;note xml:id="ftn2" n="2" rend="footnote text">
+
+                    Beispielhaft das Polygon für Tirol: https://histogis.acdh.oeaw.ac.at/shapes/shape/detail/3352
+&lt;/note>
+&lt;/div>
+&lt;div type="bibliogr">
+&lt;listBibl>
+&lt;head>Bibliographie&lt;/head>
+&lt;bibl>
+&lt;hi rend="bold">Kamzelak, Roland S. (2018)&lt;/hi>: &lt;hi rend="italic">“Von der Raupe zum Schmetterling oder Wie fliegen lernen – Editionsphilologie zwischen Infrastruktur und Semantic Web.”&lt;/hi> In: &lt;hi rend="bold">Kamzelak, Roland S / Steyer, Timo (eds.)&lt;/hi>: &lt;hi rend="italic">Digitale Metamorphose: Digital Humanities und Editionswissenschaft&lt;/hi>. (= Sonderband der Zeitschrift für digitale Geisteswissenschaften, 2). text/html Format. DOI: 10.17175/sb002_004 [letzter Zugriff 28. September 2018]
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Nüssli, Marc-Antoine / Nüssli, Christos (2017)&lt;/hi>: &lt;hi rend="italic">“A formal model for historical atlases and historical knowledge”&lt;/hi>, http://www.academia.edu/35853762 [letzter Zugriff 28. September 2018]
+&lt;/bibl>
+&lt;/listBibl>
+&lt;/div>
+&lt;/back>
+&lt;/text>
+&lt;/TEI>
+    </textSource>
+    <text>
+
+    
+
+
+
+
+
+Geographische Angaben können in historischen Kontexten nicht als simple 2-dimensionale Daten (Längen- und Breitengrade) verstanden werden. Punkte die auf der Karte nur wenige Kilometer voneinander entfernt sind waren vor 500 Jahren wegen geographischer Hürden (Berge, Schluchten, Flüsse etc.) vielleicht ewig weit voneinander entfernt. Ähnliches gilt für politische Grenzen: Vor 30 Jahren waren Orte in Deutschland die heute wenige Autominuten voneinander entfernt liegen durch den eisernen Vorhang voneinander getrennt. Kamzelak (2018) hat es so formuliert: “Orte haben eine historisch-politische Dimension, die bei einer übergreifenden Registererfassung erst sichtbar zu einem Problem wird. [...] Für die Visualisierung von Briefen etwa sind historische Karten ein Desiderat; generell auch Geodaten für Flächen. Und alle mit Geodaten versehenen Einträge müssen mit einem Zeitstempel kombiniert sein, denn beispielsweise die Altstadt von Jerusalem ist eben heute nicht am selben Ort wie vor 2.000 Jahren.”.
+
+  
+
+Trotzdem arbeitet eine Vielzahl an Digital Humanities Projekten auch heute noch mit 2-dimensionalen geographischen Angaben. Unserer eigenen Erfahrung nach liegt das Hauptsächlich an der Verfügbarkeit von Daten und Services. Moderne Punkt-Daten können einfach als geonames, openstreetmap etc. dump heruntergeladen werden bzw. über API Schnittstellen abgefragt werden. Für historische Daten existieren diese Services noch nicht vollumfänglich. Mit Pelagios gibt es ein Ökosystem an Services für Ortsdaten in der antiken Welt (http://commons.pelagios.org/), das im Zuge des “World-Historical Gazetteer” Projektes (http://whgazetteer.org/) auch in jüngere Zeiten ausgedehnt wird. Abgesehen von diesen notwendigen Initiativen und sehr wertvollen Datensätzen fehlen den Digital Humanities immer noch Polygondaten zu politischen Entitäten im Verlauf der Zeit.
+
+  
+
+HistoGIS hat sich zum Ziel gesetzt genau diese Lücke zu füllen in dem:
+
+    
+
+Eine Fokussierung auf die politischen Verwaltungseinheiten und ihre Grenzen erlaubt es in vielen Bereichen - zumindest für jüngere Zeiten - einen Mix aus modernen Daten/Methoden und historischen zu verwenden ohne historisch falsche Daten zu generieren. So können bei oben angeführten Beispiel Bozen die Google Maps API, Geonames oder Openstreetmap zur Geolokalisation verwendet werden (die Geokoordinaten von Bozen haben sich ja nicht geändert) und die HistoGIS API um die Eingliederung in die Verwaltungshierarchien zu verbessern (Bozen war 1910 Teil der KuK Monarchie). Dieses Vorgehen reduziert nicht nur den Aufwand für die Erstellung/Kuratierung der Daten drastisch, es ermöglicht es auch leichter Punkte denen schon Längen- und Breitengrade zugewiesen wurden politisch/historisch zu verorten.
+
+  
+
+    
+
+Die Modellierung historischer Verwaltungsräume hinsichtlich ihrer räumlichen und zeitlichen Ausdehnungen erfolgte bewusst in einer äußerst vereinfachten Art und Weise. Das mittels Python (bzw. GeoDjango) definierte und als Postgresql implementierte Datenmodell besteht in seinem Kern aus den drei Hauptklassen bzw. Tabellen “TempSpatial”, “Source” und “TempSpatialRel
+
+
+Ein historischer Verwaltungsraum (Temporalized Spatial Entity oder eben “TempSpatial”) definiert sich über die im gesamten Datenset einzigartige Kombination der Eigenschaften zeitliche Ausdehnungen (“start_date” und “end_date”, Datumsfelder), räumliche Ausdehnung (“geom”; Multipolygon) sowie einem Feld “date_accuracy”, welches Auskunft über den Grad der Genauigkeit der angegebenen Datumswerte gibt. Ergänzt wird diese Klasse um die Eigenschaften “name” für, entsprechend den Projektkonventionen einen zeitgenössischen Namen der Entität, “alt_names” für alternative Namen sowie einem Feld “additional_data”, welches das Speichern arbiträrer weiterer Daten im JSON Format ermöglicht.
+
+  
+
+Das Feld “administrativ_unit” zeigt auf eine Hilfsklasse (“SkosConcept”) für kontrolliertes Vokabular, welche in weiten Teilen das SKOS Datenmodell implementiert. 
+
+  
+
+Die Quelle jeder Instanz der Klasse TempSpatial bzw. jeder im Datenset erfassten historischen Verwaltungseinheit wird mit Hilfe der Klasse “Source” beschrieben. Darin werden URLs zu verwendeten Daten anderer Projekte gespeichert wie auch eine Beschreibung der (weiteren) Datenerhebung und Kuration im Rahmen des Projektes sowie ein Zitationsvorschlag. Jedes Source Objekt ist außerdem auch mit einem ESRI-Shapefile verbunden welches Projektintern als primäres Datenformat dient. Mehr dazu im Abschnitt Workflow. 
+
+  
+
+Die Modellierung beliebiger Relationen zwischen beliebigen historischen Verwaltungsräumen ist im Datenmodell durch die Klasse TempSpatialRelation grundgelegt. Hier können jeweils zwei TempSpatial Objekte (“instance_a” und “instance_b”) für eine Zeitspanne (“start_date” und “end_date”) in eine typisierte (Verweis auf die bereits erwähnte Hilfsklasse “SkosConcept”) Relation gebracht werden. Hierbei ist jedoch weniger an die in Gazetteern üblichen “part of” Beziehungen gedacht, sondern an Relationen wie beispielsweise “ist Vorgänger von” oder “wurde zusammengelegt mit”. Allerdings muss darauf hingewiesen werden, dass im derzeitigen Status des Projektes noch keine derartigen Beziehungen erfasst werden.
+
+  
+
+Die Art und Weise wie eben erwähnte “part of” Beziehungen erfasst werden sollen, wurde im Projekt ausgiebig diskutierte, wobei hier neben formal- konzeptionellen Argumenten vor allem auch die konkreten Arbeitsvoraussetzungen und -bedingungen im Projekt berücksichtigt werden mussten. 
+
+  
+
+Schlussendlich wurde eine explizite Modellierung hierarchischer Strukturen der erfassten Verwaltungseinheiten verzichtet, sprich im Datenmodell wird nicht ausdrücklich festgehalten, dass z.B. die Verwaltungseinheit A für einen gegebenen Zeitraum, Teil der Verwaltungseinheit B und diese Teil der Verwaltungseinheit D war. Dies erscheint deshalb als zulässig, weil im Projekt von der Prämisse ausgegangen wird, dass, zumindest für den für das Projekt primär interessante (Zeit)Raum, die Fläche der übergeordnete Einheit stets die Summe aller ihr untergeordneten Einheiten bildet. Dies ermöglicht es, dass part-of Beziehungen zwischen TempSpatial Objekten ‘on the fly’ mit Hilfe von spatial queries und unter Berücksichtigung der jeweiligen Start- und Enddatumswerten berechnet werden können. Und dies wiederum erleichtert einerseits die Arbeit der DatenkuratorInnen im Projekt, da diese keine expliziten Verbindungen pflegen müssen, andererseits ermöglicht dieses Flexibilität die Integration anderer Datensatz mit relativ geringem Aufwand.
+
+  
+
+An dieser Stelle muss jedoch betont werden, dass die bis dato kuratierte Menge an Daten noch nicht ausreicht um konkrete Aussagen hinsichtlich der Belastbarkeit des hier vorgestellten Datenmodells treffen zu können. Erste Tests diesbezüglich fielen jedoch durchwegs positiv aus, sowohl was die Genauigkeit der spatial queries, vor allem aber auch was deren Performanz betrifft.
+
+  
+
+Die technischen Komponenten des Projektes sind überschaubar. Als Storage Layer fungiert eine Postgresql Datenbank mit PostGIS erweiterung. Die Interaktion damit erfolgt über einen mittels dem Python basierten Webframework (Geo)Django implementierten Applikation Layer, wobei mit (Geo)Django, respektive django-rest-framework sowohl die HistoGIS-Webapplikation als auch ein entsprechender REST Webservice implementiert wurde bzw. wird.
+
+  
+
+Die eigentlich Datenkuration erfolgt davon völlig unabhängig und unter Verwendung der open source Software Qgis. Bis dato wurden damit vorwiegend bereits existierende Daten harmonisiert und als ESRI shapefiles gespeichert. Das Schema dieser Dateien entspricht dabei weitgehend dem oben skizzierten Datenmodell. Als ‘fertig’ erachtete Datensätze (gezippte Shapefiles) werden dann über ein Webformular in HistoGIS als sogenannte “Source” objekte hochgeladen, entpackt, die Features der Shapfiles als TempSpatial Objekte gespeichert und mit dem Source Objekt verknüpft. 
+
+  
+
+Neben der Kuration und Harmonisierung bereits bestehender “Vektordaten” werden im Projekt aber auch selbst Daten erzeugt. Dazu wählt ein Historiker im Team verwertbare (historische) Karten aus, welche idealerweise bereits digitalisiert (gescannt) sind. Die Datakuratorinnen georeferenziert diese Scans (geotiffs) und extrahieren die darin auffindbaren Informationen zu historischen Verwaltungsgrenzen als Vektordaten. 
+
+
+    
+
+Bis dato befinden sich knapp 4000 Polygone in der Production Instanz des Systems. Das Anpassen und Einspielen schon vorhandener Polygone wurde mit Daten aus dem Census mosaic Projekt (https://censusmosaic.demog.berkeley.edu/) und dem HGis Archiv (http://www.hgis-germany.de/) begonnen. Damit können große Teile des 19. Jhdts für die Gebiete Österreich-Ungarns und des Deutschen Bundes (inkl. der jeweiligen Nachfolgeentitäten) bereits abgedeckt werden. Die Daten werden nicht nur technisch aufbereitet, sondern auch inhaltlich von einem Verwaltungshistoriker überprüft. HistoGIS implementiert dafür ein Ampelsystem. Vom HistoGIS-Team technisch wie inhaltlich überprüfte Daten werden mit Grün markiert, vom HistoGIS-Team ausgewählte Daten die noch nicht überprüft wurden mit Gelb und von Usern zur Verfügung gestellte, nicht überprüfte Daten mit Rot (momentan befinden sich lediglich gelbe und grüne Daten im System).
+
+  
+
+Die Aufbereitung der Daten, wie auch die Entwicklung des technischen Systems schreitet erfreulicher Weise schneller voran als geplant. Es wurde deshalb erst kürzlich beschlossen in HistoGIS schon während der Projektlaufzeit auch Daten außerhalb der geplanten räumlich-zeitlichen Grenzen aufzunehmen.
+
+  
+
+In unserer Präsentation werden wir vor allem das Datenmodell und die RestAPI Schnittstellen des Systems diskutieren und vorstellen.
+
+
+
+
+  
+
+ein Repository historischer Polygondaten mit einheitlichen Metadaten aufgebaut und zum Download angeboten wird. Für dieses Repository werden zunächst schon existierende Polygondaten eingesammelt, aufbereitet und erst in einem zweiten Schritt für historisch wichtige Zeitspannen neue Polygone erstellt. Dabei setzt sich HistoGIS zunächst zum Ziel die Periode zwischen dem ausgehenden 18. Jhdt. und 1918 für das Gebiet der KuK Monarchie und des deutschen Bundes abzudecken.
+
+  
+
+und RestAPI Services zur einfachen Anreicherung historischer Daten mit Hilfe des Repositories angeboten werden. Z.B.: Wo war Punkt X/Y zum Zeitpunkt                  Z
+
+? Die API antwortet mit den Metadaten zu den einzelnen überlappenden Polygonen die für den Zeitraum (oder Zeitpunkt) Gültigkeit haben. Nehmen wir an: Ein Projekt hat Reiseberichte in seiner Datenbank. Eine Station war Bolzano 1910. Die Geokoordinaten (46.49067, 11.33982) wurden über Geonames gefunden. Schickt man diese mit dem Jahr an die API bekommt man die Metadaten für Bozen Stadt, An der Etsch, Tirol und Österreich-Ungarn                  zurück
+
+.  
+
+  
+
+
+
+Datenmodell, Technische Grundlage und Workflow
+
+
+
+Kartenmaterial bis dato und Ausblick
+
+
+
+  
+
+
+        Kamzelak, Roland S. (2018): “Von der Raupe zum Schmetterling oder Wie fliegen lernen – Editionsphilologie zwischen Infrastruktur und Semantic Web.” In: Kamzelak, Roland S / Steyer, Timo (eds.): Digitale Metamorphose: Digital Humanities und Editionswissenschaft. (= Sonderband der Zeitschrift für digitale Geisteswissenschaften, 2). text/html Format. DOI: 10.17175/sb002_004 [letzter Zugriff 28. September 2018]      Nüssli, Marc-Antoine / Nüssli, Christos (2017): “A formal model for historical atlases and historical knowledge”, http://www.academia.edu/35853762 [letzter Zugriff 28. September 2018]
+
+
+
+
+                     Eine auf diese API aufbauende Abfragemaske findet sich hier: https://histogis.acdh.oeaw.ac.at/shapes/where-was/  
+
+
+
+                     Beispielhaft das Polygon für Tirol: https://histogis.acdh.oeaw.ac.at/shapes/shape/detail/3352  
+
+
+
+Bibliographie
+
+</text>
+    <tc:tokens xmlns:tc="http://www.dspin.de/data/textcorpus">
+      <tc:token ID="w1">Geographische</tc:token>
+      <tc:token ID="w2">Angaben</tc:token>
+      <tc:token ID="w3">können</tc:token>
+      <tc:token ID="w4">in</tc:token>
+      <tc:token ID="w5">historischen</tc:token>
+      <tc:token ID="w6">Kontexten</tc:token>
+      <tc:token ID="w7">nicht</tc:token>
+      <tc:token ID="w8">als</tc:token>
+      <tc:token ID="w9">simple</tc:token>
+      <tc:token ID="wa">2-dimensionale</tc:token>
+      <tc:token ID="wb">Daten</tc:token>
+      <tc:token ID="wc">(</tc:token>
+      <tc:token ID="wd">Längen-</tc:token>
+      <tc:token ID="we">und</tc:token>
+      <tc:token ID="wf">Breitengrade</tc:token>
+      <tc:token ID="w10">)</tc:token>
+      <tc:token ID="w11">verstanden</tc:token>
+      <tc:token ID="w12">werden</tc:token>
+      <tc:token ID="w13">.</tc:token>
+      <tc:token ID="w14">Punkte</tc:token>
+      <tc:token ID="w15">die</tc:token>
+      <tc:token ID="w16">auf</tc:token>
+      <tc:token ID="w17">der</tc:token>
+      <tc:token ID="w18">Karte</tc:token>
+      <tc:token ID="w19">nur</tc:token>
+      <tc:token ID="w1a">wenige</tc:token>
+      <tc:token ID="w1b">Kilometer</tc:token>
+      <tc:token ID="w1c">voneinander</tc:token>
+      <tc:token ID="w1d">entfernt</tc:token>
+      <tc:token ID="w1e">sind</tc:token>
+      <tc:token ID="w1f">waren</tc:token>
+      <tc:token ID="w20">vor</tc:token>
+      <tc:token ID="w21">500</tc:token>
+      <tc:token ID="w22">Jahren</tc:token>
+      <tc:token ID="w23">wegen</tc:token>
+      <tc:token ID="w24">geographischer</tc:token>
+      <tc:token ID="w25">Hürden</tc:token>
+      <tc:token ID="w26">(</tc:token>
+      <tc:token ID="w27">Berge</tc:token>
+      <tc:token ID="w28">,</tc:token>
+      <tc:token ID="w29">Schluchten</tc:token>
+      <tc:token ID="w2a">,</tc:token>
+      <tc:token ID="w2b">Flüsse</tc:token>
+      <tc:token ID="w2c">etc.</tc:token>
+      <tc:token ID="w2d">)</tc:token>
+      <tc:token ID="w2e">vielleicht</tc:token>
+      <tc:token ID="w2f">ewig</tc:token>
+      <tc:token ID="w30">weit</tc:token>
+      <tc:token ID="w31">voneinander</tc:token>
+      <tc:token ID="w32">entfernt</tc:token>
+      <tc:token ID="w33">.</tc:token>
+      <tc:token ID="w34">Ähnliches</tc:token>
+      <tc:token ID="w35">gilt</tc:token>
+      <tc:token ID="w36">für</tc:token>
+      <tc:token ID="w37">politische</tc:token>
+      <tc:token ID="w38">Grenzen</tc:token>
+      <tc:token ID="w39">:</tc:token>
+      <tc:token ID="w3a">Vor</tc:token>
+      <tc:token ID="w3b">30</tc:token>
+      <tc:token ID="w3c">Jahren</tc:token>
+      <tc:token ID="w3d">waren</tc:token>
+      <tc:token ID="w3e">Orte</tc:token>
+      <tc:token ID="w3f">in</tc:token>
+      <tc:token ID="w40">Deutschland</tc:token>
+      <tc:token ID="w41">die</tc:token>
+      <tc:token ID="w42">heute</tc:token>
+      <tc:token ID="w43">wenige</tc:token>
+      <tc:token ID="w44">Autominuten</tc:token>
+      <tc:token ID="w45">voneinander</tc:token>
+      <tc:token ID="w46">entfernt</tc:token>
+      <tc:token ID="w47">liegen</tc:token>
+      <tc:token ID="w48">durch</tc:token>
+      <tc:token ID="w49">den</tc:token>
+      <tc:token ID="w4a">eisernen</tc:token>
+      <tc:token ID="w4b">Vorhang</tc:token>
+      <tc:token ID="w4c">voneinander</tc:token>
+      <tc:token ID="w4d">getrennt.</tc:token>
+      <tc:token ID="w4e">Kamzelak</tc:token>
+      <tc:token ID="w4f">(</tc:token>
+      <tc:token ID="w50">2018</tc:token>
+      <tc:token ID="w51">)</tc:token>
+      <tc:token ID="w52">hat</tc:token>
+      <tc:token ID="w53">es</tc:token>
+      <tc:token ID="w54">so</tc:token>
+      <tc:token ID="w55">formuliert</tc:token>
+      <tc:token ID="w56">:</tc:token>
+      <tc:token ID="w57">“</tc:token>
+      <tc:token ID="w58">Orte</tc:token>
+      <tc:token ID="w59">haben</tc:token>
+      <tc:token ID="w5a">eine</tc:token>
+      <tc:token ID="w5b">historisch-politische</tc:token>
+      <tc:token ID="w5c">Dimension</tc:token>
+      <tc:token ID="w5d">,</tc:token>
+      <tc:token ID="w5e">die</tc:token>
+      <tc:token ID="w5f">bei</tc:token>
+      <tc:token ID="w60">einer</tc:token>
+      <tc:token ID="w61">übergreifenden</tc:token>
+      <tc:token ID="w62">Registererfassung</tc:token>
+      <tc:token ID="w63">erst</tc:token>
+      <tc:token ID="w64">sichtbar</tc:token>
+      <tc:token ID="w65">zu</tc:token>
+      <tc:token ID="w66">einem</tc:token>
+      <tc:token ID="w67">Problem</tc:token>
+      <tc:token ID="w68">wird</tc:token>
+      <tc:token ID="w69">.</tc:token>
+      <tc:token ID="w6a">[</tc:token>
+      <tc:token ID="w6b">...</tc:token>
+      <tc:token ID="w6c">]</tc:token>
+      <tc:token ID="w6d">Für</tc:token>
+      <tc:token ID="w6e">die</tc:token>
+      <tc:token ID="w6f">Visualisierung</tc:token>
+      <tc:token ID="w70">von</tc:token>
+      <tc:token ID="w71">Briefen</tc:token>
+      <tc:token ID="w72">etwa</tc:token>
+      <tc:token ID="w73">sind</tc:token>
+      <tc:token ID="w74">historische</tc:token>
+      <tc:token ID="w75">Karten</tc:token>
+      <tc:token ID="w76">ein</tc:token>
+      <tc:token ID="w77">Desiderat</tc:token>
+      <tc:token ID="w78">;</tc:token>
+      <tc:token ID="w79">generell</tc:token>
+      <tc:token ID="w7a">auch</tc:token>
+      <tc:token ID="w7b">Geodaten</tc:token>
+      <tc:token ID="w7c">für</tc:token>
+      <tc:token ID="w7d">Flächen</tc:token>
+      <tc:token ID="w7e">.</tc:token>
+      <tc:token ID="w7f">Und</tc:token>
+      <tc:token ID="w80">alle</tc:token>
+      <tc:token ID="w81">mit</tc:token>
+      <tc:token ID="w82">Geodaten</tc:token>
+      <tc:token ID="w83">versehenen</tc:token>
+      <tc:token ID="w84">Einträge</tc:token>
+      <tc:token ID="w85">müssen</tc:token>
+      <tc:token ID="w86">mit</tc:token>
+      <tc:token ID="w87">einem</tc:token>
+      <tc:token ID="w88">Zeitstempel</tc:token>
+      <tc:token ID="w89">kombiniert</tc:token>
+      <tc:token ID="w8a">sein</tc:token>
+      <tc:token ID="w8b">,</tc:token>
+      <tc:token ID="w8c">denn</tc:token>
+      <tc:token ID="w8d">beispielsweise</tc:token>
+      <tc:token ID="w8e">die</tc:token>
+      <tc:token ID="w8f">Altstadt</tc:token>
+      <tc:token ID="w90">von</tc:token>
+      <tc:token ID="w91">Jerusalem</tc:token>
+      <tc:token ID="w92">ist</tc:token>
+      <tc:token ID="w93">eben</tc:token>
+      <tc:token ID="w94">heute</tc:token>
+      <tc:token ID="w95">nicht</tc:token>
+      <tc:token ID="w96">am</tc:token>
+      <tc:token ID="w97">selben</tc:token>
+      <tc:token ID="w98">Ort</tc:token>
+      <tc:token ID="w99">wie</tc:token>
+      <tc:token ID="w9a">vor</tc:token>
+      <tc:token ID="w9b">2.000</tc:token>
+      <tc:token ID="w9c">Jahren</tc:token>
+      <tc:token ID="w9d">.</tc:token>
+      <tc:token ID="w9e">”</tc:token>
+      <tc:token ID="w9f">.</tc:token>
+      <tc:token ID="wa0">Trotzdem</tc:token>
+      <tc:token ID="wa1">arbeitet</tc:token>
+      <tc:token ID="wa2">eine</tc:token>
+      <tc:token ID="wa3">Vielzahl</tc:token>
+      <tc:token ID="wa4">an</tc:token>
+      <tc:token ID="wa5">Digital</tc:token>
+      <tc:token ID="wa6">Humanities</tc:token>
+      <tc:token ID="wa7">Projekten</tc:token>
+      <tc:token ID="wa8">auch</tc:token>
+      <tc:token ID="wa9">heute</tc:token>
+      <tc:token ID="waa">noch</tc:token>
+      <tc:token ID="wab">mit</tc:token>
+      <tc:token ID="wac">2-dimensionalen</tc:token>
+      <tc:token ID="wad">geographischen</tc:token>
+      <tc:token ID="wae">Angaben</tc:token>
+      <tc:token ID="waf">.</tc:token>
+      <tc:token ID="wb0">Unserer</tc:token>
+      <tc:token ID="wb1">eigenen</tc:token>
+      <tc:token ID="wb2">Erfahrung</tc:token>
+      <tc:token ID="wb3">nach</tc:token>
+      <tc:token ID="wb4">liegt</tc:token>
+      <tc:token ID="wb5">das</tc:token>
+      <tc:token ID="wb6">Hauptsächlich</tc:token>
+      <tc:token ID="wb7">an</tc:token>
+      <tc:token ID="wb8">der</tc:token>
+      <tc:token ID="wb9">Verfügbarkeit</tc:token>
+      <tc:token ID="wba">von</tc:token>
+      <tc:token ID="wbb">Daten</tc:token>
+      <tc:token ID="wbc">und</tc:token>
+      <tc:token ID="wbd">Services</tc:token>
+      <tc:token ID="wbe">.</tc:token>
+      <tc:token ID="wbf">Moderne</tc:token>
+      <tc:token ID="wc0">Punkt-Daten</tc:token>
+      <tc:token ID="wc1">können</tc:token>
+      <tc:token ID="wc2">einfach</tc:token>
+      <tc:token ID="wc3">als</tc:token>
+      <tc:token ID="wc4">geonames</tc:token>
+      <tc:token ID="wc5">,</tc:token>
+      <tc:token ID="wc6">openstreetmap</tc:token>
+      <tc:token ID="wc7">etc.</tc:token>
+      <tc:token ID="wc8">dump</tc:token>
+      <tc:token ID="wc9">heruntergeladen</tc:token>
+      <tc:token ID="wca">werden</tc:token>
+      <tc:token ID="wcb">bzw</tc:token>
+      <tc:token ID="wcc">.</tc:token>
+      <tc:token ID="wcd">über</tc:token>
+      <tc:token ID="wce">API</tc:token>
+      <tc:token ID="wcf">Schnittstellen</tc:token>
+      <tc:token ID="wd0">abgefragt</tc:token>
+      <tc:token ID="wd1">werden</tc:token>
+      <tc:token ID="wd2">.</tc:token>
+      <tc:token ID="wd3">Für</tc:token>
+      <tc:token ID="wd4">historische</tc:token>
+      <tc:token ID="wd5">Daten</tc:token>
+      <tc:token ID="wd6">existieren</tc:token>
+      <tc:token ID="wd7">diese</tc:token>
+      <tc:token ID="wd8">Services</tc:token>
+      <tc:token ID="wd9">noch</tc:token>
+      <tc:token ID="wda">nicht</tc:token>
+      <tc:token ID="wdb">vollumfänglich</tc:token>
+      <tc:token ID="wdc">.</tc:token>
+      <tc:token ID="wdd">Mit</tc:token>
+      <tc:token ID="wde">Pelagios</tc:token>
+      <tc:token ID="wdf">gibt</tc:token>
+      <tc:token ID="we0">es</tc:token>
+      <tc:token ID="we1">ein</tc:token>
+      <tc:token ID="we2">Ökosystem</tc:token>
+      <tc:token ID="we3">an</tc:token>
+      <tc:token ID="we4">Services</tc:token>
+      <tc:token ID="we5">für</tc:token>
+      <tc:token ID="we6">Ortsdaten</tc:token>
+      <tc:token ID="we7">in</tc:token>
+      <tc:token ID="we8">der</tc:token>
+      <tc:token ID="we9">antiken</tc:token>
+      <tc:token ID="wea">Welt</tc:token>
+      <tc:token ID="web">(</tc:token>
+      <tc:token ID="wec">http://commons.pelagios.org/)</tc:token>
+      <tc:token ID="wed">,</tc:token>
+      <tc:token ID="wee">das</tc:token>
+      <tc:token ID="wef">im</tc:token>
+      <tc:token ID="wf0">Zuge</tc:token>
+      <tc:token ID="wf1">des</tc:token>
+      <tc:token ID="wf2">“</tc:token>
+      <tc:token ID="wf3">World-Historical</tc:token>
+      <tc:token ID="wf4">Gazetteer</tc:token>
+      <tc:token ID="wf5">”</tc:token>
+      <tc:token ID="wf6">Projektes</tc:token>
+      <tc:token ID="wf7">(</tc:token>
+      <tc:token ID="wf8">http://whgazetteer.org/)</tc:token>
+      <tc:token ID="wf9">auch</tc:token>
+      <tc:token ID="wfa">in</tc:token>
+      <tc:token ID="wfb">jüngere</tc:token>
+      <tc:token ID="wfc">Zeiten</tc:token>
+      <tc:token ID="wfd">ausgedehnt</tc:token>
+      <tc:token ID="wfe">wird</tc:token>
+      <tc:token ID="wff">.</tc:token>
+      <tc:token ID="w100">Abgesehen</tc:token>
+      <tc:token ID="w101">von</tc:token>
+      <tc:token ID="w102">diesen</tc:token>
+      <tc:token ID="w103">notwendigen</tc:token>
+      <tc:token ID="w104">Initiativen</tc:token>
+      <tc:token ID="w105">und</tc:token>
+      <tc:token ID="w106">sehr</tc:token>
+      <tc:token ID="w107">wertvollen</tc:token>
+      <tc:token ID="w108">Datensätzen</tc:token>
+      <tc:token ID="w109">fehlen</tc:token>
+      <tc:token ID="w10a">den</tc:token>
+      <tc:token ID="w10b">Digital</tc:token>
+      <tc:token ID="w10c">Humanities</tc:token>
+      <tc:token ID="w10d">immer</tc:token>
+      <tc:token ID="w10e">noch</tc:token>
+      <tc:token ID="w10f">Polygondaten</tc:token>
+      <tc:token ID="w110">zu</tc:token>
+      <tc:token ID="w111">politischen</tc:token>
+      <tc:token ID="w112">Entitäten</tc:token>
+      <tc:token ID="w113">im</tc:token>
+      <tc:token ID="w114">Verlauf</tc:token>
+      <tc:token ID="w115">der</tc:token>
+      <tc:token ID="w116">Zeit</tc:token>
+      <tc:token ID="w117">.</tc:token>
+      <tc:token ID="w118">HistoGIS</tc:token>
+      <tc:token ID="w119">hat</tc:token>
+      <tc:token ID="w11a">sich</tc:token>
+      <tc:token ID="w11b">zum</tc:token>
+      <tc:token ID="w11c">Ziel</tc:token>
+      <tc:token ID="w11d">gesetzt</tc:token>
+      <tc:token ID="w11e">genau</tc:token>
+      <tc:token ID="w11f">diese</tc:token>
+      <tc:token ID="w120">Lücke</tc:token>
+      <tc:token ID="w121">zu</tc:token>
+      <tc:token ID="w122">füllen</tc:token>
+      <tc:token ID="w123">in</tc:token>
+      <tc:token ID="w124">dem</tc:token>
+      <tc:token ID="w125">:</tc:token>
+      <tc:token ID="w126">Eine</tc:token>
+      <tc:token ID="w127">Fokussierung</tc:token>
+      <tc:token ID="w128">auf</tc:token>
+      <tc:token ID="w129">die</tc:token>
+      <tc:token ID="w12a">politischen</tc:token>
+      <tc:token ID="w12b">Verwaltungseinheiten</tc:token>
+      <tc:token ID="w12c">und</tc:token>
+      <tc:token ID="w12d">ihre</tc:token>
+      <tc:token ID="w12e">Grenzen</tc:token>
+      <tc:token ID="w12f">erlaubt</tc:token>
+      <tc:token ID="w130">es</tc:token>
+      <tc:token ID="w131">in</tc:token>
+      <tc:token ID="w132">vielen</tc:token>
+      <tc:token ID="w133">Bereichen</tc:token>
+      <tc:token ID="w134">-</tc:token>
+      <tc:token ID="w135">zumindest</tc:token>
+      <tc:token ID="w136">für</tc:token>
+      <tc:token ID="w137">jüngere</tc:token>
+      <tc:token ID="w138">Zeiten</tc:token>
+      <tc:token ID="w139">-</tc:token>
+      <tc:token ID="w13a">einen</tc:token>
+      <tc:token ID="w13b">Mix</tc:token>
+      <tc:token ID="w13c">aus</tc:token>
+      <tc:token ID="w13d">modernen</tc:token>
+      <tc:token ID="w13e">Daten</tc:token>
+      <tc:token ID="w13f">/Methoden</tc:token>
+      <tc:token ID="w140">und</tc:token>
+      <tc:token ID="w141">historischen</tc:token>
+      <tc:token ID="w142">zu</tc:token>
+      <tc:token ID="w143">verwenden</tc:token>
+      <tc:token ID="w144">ohne</tc:token>
+      <tc:token ID="w145">historisch</tc:token>
+      <tc:token ID="w146">falsche</tc:token>
+      <tc:token ID="w147">Daten</tc:token>
+      <tc:token ID="w148">zu</tc:token>
+      <tc:token ID="w149">generieren</tc:token>
+      <tc:token ID="w14a">.</tc:token>
+      <tc:token ID="w14b">So</tc:token>
+      <tc:token ID="w14c">können</tc:token>
+      <tc:token ID="w14d">bei</tc:token>
+      <tc:token ID="w14e">oben</tc:token>
+      <tc:token ID="w14f">angeführten</tc:token>
+      <tc:token ID="w150">Beispiel</tc:token>
+      <tc:token ID="w151">Bozen</tc:token>
+      <tc:token ID="w152">die</tc:token>
+      <tc:token ID="w153">Google</tc:token>
+      <tc:token ID="w154">Maps</tc:token>
+      <tc:token ID="w155">API</tc:token>
+      <tc:token ID="w156">,</tc:token>
+      <tc:token ID="w157">Geonames</tc:token>
+      <tc:token ID="w158">oder</tc:token>
+      <tc:token ID="w159">Openstreetmap</tc:token>
+      <tc:token ID="w15a">zur</tc:token>
+      <tc:token ID="w15b">Geolokalisation</tc:token>
+      <tc:token ID="w15c">verwendet</tc:token>
+      <tc:token ID="w15d">werden</tc:token>
+      <tc:token ID="w15e">(</tc:token>
+      <tc:token ID="w15f">die</tc:token>
+      <tc:token ID="w160">Geokoordinaten</tc:token>
+      <tc:token ID="w161">von</tc:token>
+      <tc:token ID="w162">Bozen</tc:token>
+      <tc:token ID="w163">haben</tc:token>
+      <tc:token ID="w164">sich</tc:token>
+      <tc:token ID="w165">ja</tc:token>
+      <tc:token ID="w166">nicht</tc:token>
+      <tc:token ID="w167">geändert</tc:token>
+      <tc:token ID="w168">)</tc:token>
+      <tc:token ID="w169">und</tc:token>
+      <tc:token ID="w16a">die</tc:token>
+      <tc:token ID="w16b">HistoGIS</tc:token>
+      <tc:token ID="w16c">API</tc:token>
+      <tc:token ID="w16d">um</tc:token>
+      <tc:token ID="w16e">die</tc:token>
+      <tc:token ID="w16f">Eingliederung</tc:token>
+      <tc:token ID="w170">in</tc:token>
+      <tc:token ID="w171">die</tc:token>
+      <tc:token ID="w172">Verwaltungshierarchien</tc:token>
+      <tc:token ID="w173">zu</tc:token>
+      <tc:token ID="w174">verbessern</tc:token>
+      <tc:token ID="w175">(</tc:token>
+      <tc:token ID="w176">Bozen</tc:token>
+      <tc:token ID="w177">war</tc:token>
+      <tc:token ID="w178">1910</tc:token>
+      <tc:token ID="w179">Teil</tc:token>
+      <tc:token ID="w17a">der</tc:token>
+      <tc:token ID="w17b">KuK</tc:token>
+      <tc:token ID="w17c">Monarchie</tc:token>
+      <tc:token ID="w17d">)</tc:token>
+      <tc:token ID="w17e">.</tc:token>
+      <tc:token ID="w17f">Dieses</tc:token>
+      <tc:token ID="w180">Vorgehen</tc:token>
+      <tc:token ID="w181">reduziert</tc:token>
+      <tc:token ID="w182">nicht</tc:token>
+      <tc:token ID="w183">nur</tc:token>
+      <tc:token ID="w184">den</tc:token>
+      <tc:token ID="w185">Aufwand</tc:token>
+      <tc:token ID="w186">für</tc:token>
+      <tc:token ID="w187">die</tc:token>
+      <tc:token ID="w188">Erstellung/Kuratierung</tc:token>
+      <tc:token ID="w189">der</tc:token>
+      <tc:token ID="w18a">Daten</tc:token>
+      <tc:token ID="w18b">drastisch</tc:token>
+      <tc:token ID="w18c">,</tc:token>
+      <tc:token ID="w18d">es</tc:token>
+      <tc:token ID="w18e">ermöglicht</tc:token>
+      <tc:token ID="w18f">es</tc:token>
+      <tc:token ID="w190">auch</tc:token>
+      <tc:token ID="w191">leichter</tc:token>
+      <tc:token ID="w192">Punkte</tc:token>
+      <tc:token ID="w193">denen</tc:token>
+      <tc:token ID="w194">schon</tc:token>
+      <tc:token ID="w195">Längen-</tc:token>
+      <tc:token ID="w196">und</tc:token>
+      <tc:token ID="w197">Breitengrade</tc:token>
+      <tc:token ID="w198">zugewiesen</tc:token>
+      <tc:token ID="w199">wurden</tc:token>
+      <tc:token ID="w19a">politisch</tc:token>
+      <tc:token ID="w19b">/</tc:token>
+      <tc:token ID="w19c">historisch</tc:token>
+      <tc:token ID="w19d">zu</tc:token>
+      <tc:token ID="w19e">verorten</tc:token>
+      <tc:token ID="w19f">.</tc:token>
+      <tc:token ID="w1a0">Die</tc:token>
+      <tc:token ID="w1a1">Modellierung</tc:token>
+      <tc:token ID="w1a2">historischer</tc:token>
+      <tc:token ID="w1a3">Verwaltungsräume</tc:token>
+      <tc:token ID="w1a4">hinsichtlich</tc:token>
+      <tc:token ID="w1a5">ihrer</tc:token>
+      <tc:token ID="w1a6">räumlichen</tc:token>
+      <tc:token ID="w1a7">und</tc:token>
+      <tc:token ID="w1a8">zeitlichen</tc:token>
+      <tc:token ID="w1a9">Ausdehnungen</tc:token>
+      <tc:token ID="w1aa">erfolgte</tc:token>
+      <tc:token ID="w1ab">bewusst</tc:token>
+      <tc:token ID="w1ac">in</tc:token>
+      <tc:token ID="w1ad">einer</tc:token>
+      <tc:token ID="w1ae">äußerst</tc:token>
+      <tc:token ID="w1af">vereinfachten</tc:token>
+      <tc:token ID="w1b0">Art</tc:token>
+      <tc:token ID="w1b1">und</tc:token>
+      <tc:token ID="w1b2">Weise</tc:token>
+      <tc:token ID="w1b3">.</tc:token>
+      <tc:token ID="w1b4">Das</tc:token>
+      <tc:token ID="w1b5">mittels</tc:token>
+      <tc:token ID="w1b6">Python</tc:token>
+      <tc:token ID="w1b7">(</tc:token>
+      <tc:token ID="w1b8">bzw.</tc:token>
+      <tc:token ID="w1b9">GeoDjango</tc:token>
+      <tc:token ID="w1ba">)</tc:token>
+      <tc:token ID="w1bb">definierte</tc:token>
+      <tc:token ID="w1bc">und</tc:token>
+      <tc:token ID="w1bd">als</tc:token>
+      <tc:token ID="w1be">Postgresql</tc:token>
+      <tc:token ID="w1bf">implementierte</tc:token>
+      <tc:token ID="w1c0">Datenmodell</tc:token>
+      <tc:token ID="w1c1">besteht</tc:token>
+      <tc:token ID="w1c2">in</tc:token>
+      <tc:token ID="w1c3">seinem</tc:token>
+      <tc:token ID="w1c4">Kern</tc:token>
+      <tc:token ID="w1c5">aus</tc:token>
+      <tc:token ID="w1c6">den</tc:token>
+      <tc:token ID="w1c7">drei</tc:token>
+      <tc:token ID="w1c8">Hauptklassen</tc:token>
+      <tc:token ID="w1c9">bzw</tc:token>
+      <tc:token ID="w1ca">.</tc:token>
+      <tc:token ID="w1cb">Tabellen</tc:token>
+      <tc:token ID="w1cc">“</tc:token>
+      <tc:token ID="w1cd">TempSpatial</tc:token>
+      <tc:token ID="w1ce">”</tc:token>
+      <tc:token ID="w1cf">,</tc:token>
+      <tc:token ID="w1d0">“</tc:token>
+      <tc:token ID="w1d1">Source</tc:token>
+      <tc:token ID="w1d2">”</tc:token>
+      <tc:token ID="w1d3">und</tc:token>
+      <tc:token ID="w1d4">“</tc:token>
+      <tc:token ID="w1d5">TempSpatialRel</tc:token>
+      <tc:token ID="w1d6">Ein</tc:token>
+      <tc:token ID="w1d7">historischer</tc:token>
+      <tc:token ID="w1d8">Verwaltungsraum</tc:token>
+      <tc:token ID="w1d9">(</tc:token>
+      <tc:token ID="w1da">Temporalized</tc:token>
+      <tc:token ID="w1db">Spatial</tc:token>
+      <tc:token ID="w1dc">Entity</tc:token>
+      <tc:token ID="w1dd">oder</tc:token>
+      <tc:token ID="w1de">eben</tc:token>
+      <tc:token ID="w1df">“</tc:token>
+      <tc:token ID="w1e0">TempSpatial</tc:token>
+      <tc:token ID="w1e1">”</tc:token>
+      <tc:token ID="w1e2">)</tc:token>
+      <tc:token ID="w1e3">definiert</tc:token>
+      <tc:token ID="w1e4">sich</tc:token>
+      <tc:token ID="w1e5">über</tc:token>
+      <tc:token ID="w1e6">die</tc:token>
+      <tc:token ID="w1e7">im</tc:token>
+      <tc:token ID="w1e8">gesamten</tc:token>
+      <tc:token ID="w1e9">Datenset</tc:token>
+      <tc:token ID="w1ea">einzigartige</tc:token>
+      <tc:token ID="w1eb">Kombination</tc:token>
+      <tc:token ID="w1ec">der</tc:token>
+      <tc:token ID="w1ed">Eigenschaften</tc:token>
+      <tc:token ID="w1ee">zeitliche</tc:token>
+      <tc:token ID="w1ef">Ausdehnungen</tc:token>
+      <tc:token ID="w1f0">(</tc:token>
+      <tc:token ID="w1f1">“</tc:token>
+      <tc:token ID="w1f2">start_</tc:token>
+      <tc:token ID="w1f3">date</tc:token>
+      <tc:token ID="w1f4">”</tc:token>
+      <tc:token ID="w1f5">und</tc:token>
+      <tc:token ID="w1f6">“</tc:token>
+      <tc:token ID="w1f7">end_date</tc:token>
+      <tc:token ID="w1f8">”</tc:token>
+      <tc:token ID="w1f9">,</tc:token>
+      <tc:token ID="w1fa">Datumsfelder</tc:token>
+      <tc:token ID="w1fb">)</tc:token>
+      <tc:token ID="w1fc">,</tc:token>
+      <tc:token ID="w1fd">räumliche</tc:token>
+      <tc:token ID="w1fe">Ausdehnung</tc:token>
+      <tc:token ID="w1ff">(</tc:token>
+      <tc:token ID="w200">“</tc:token>
+      <tc:token ID="w201">geom</tc:token>
+      <tc:token ID="w202">”</tc:token>
+      <tc:token ID="w203">;</tc:token>
+      <tc:token ID="w204">Multipolygon</tc:token>
+      <tc:token ID="w205">)</tc:token>
+      <tc:token ID="w206">sowie</tc:token>
+      <tc:token ID="w207">einem</tc:token>
+      <tc:token ID="w208">Feld</tc:token>
+      <tc:token ID="w209">“</tc:token>
+      <tc:token ID="w20a">date_</tc:token>
+      <tc:token ID="w20b">accuracy</tc:token>
+      <tc:token ID="w20c">”</tc:token>
+      <tc:token ID="w20d">,</tc:token>
+      <tc:token ID="w20e">welches</tc:token>
+      <tc:token ID="w20f">Auskunft</tc:token>
+      <tc:token ID="w210">über</tc:token>
+      <tc:token ID="w211">den</tc:token>
+      <tc:token ID="w212">Grad</tc:token>
+      <tc:token ID="w213">der</tc:token>
+      <tc:token ID="w214">Genauigkeit</tc:token>
+      <tc:token ID="w215">der</tc:token>
+      <tc:token ID="w216">angegebenen</tc:token>
+      <tc:token ID="w217">Datumswerte</tc:token>
+      <tc:token ID="w218">gibt</tc:token>
+      <tc:token ID="w219">.</tc:token>
+      <tc:token ID="w21a">Ergänzt</tc:token>
+      <tc:token ID="w21b">wird</tc:token>
+      <tc:token ID="w21c">diese</tc:token>
+      <tc:token ID="w21d">Klasse</tc:token>
+      <tc:token ID="w21e">um</tc:token>
+      <tc:token ID="w21f">die</tc:token>
+      <tc:token ID="w220">Eigenschaften</tc:token>
+      <tc:token ID="w221">“</tc:token>
+      <tc:token ID="w222">name</tc:token>
+      <tc:token ID="w223">”</tc:token>
+      <tc:token ID="w224">für</tc:token>
+      <tc:token ID="w225">,</tc:token>
+      <tc:token ID="w226">entsprechend</tc:token>
+      <tc:token ID="w227">den</tc:token>
+      <tc:token ID="w228">Projektkonventionen</tc:token>
+      <tc:token ID="w229">einen</tc:token>
+      <tc:token ID="w22a">zeitgenössischen</tc:token>
+      <tc:token ID="w22b">Namen</tc:token>
+      <tc:token ID="w22c">der</tc:token>
+      <tc:token ID="w22d">Entität</tc:token>
+      <tc:token ID="w22e">,</tc:token>
+      <tc:token ID="w22f">“</tc:token>
+      <tc:token ID="w230">alt_</tc:token>
+      <tc:token ID="w231">names</tc:token>
+      <tc:token ID="w232">”</tc:token>
+      <tc:token ID="w233">für</tc:token>
+      <tc:token ID="w234">alternative</tc:token>
+      <tc:token ID="w235">Namen</tc:token>
+      <tc:token ID="w236">sowie</tc:token>
+      <tc:token ID="w237">einem</tc:token>
+      <tc:token ID="w238">Feld</tc:token>
+      <tc:token ID="w239">“</tc:token>
+      <tc:token ID="w23a">additional_data</tc:token>
+      <tc:token ID="w23b">”</tc:token>
+      <tc:token ID="w23c">,</tc:token>
+      <tc:token ID="w23d">welches</tc:token>
+      <tc:token ID="w23e">das</tc:token>
+      <tc:token ID="w23f">Speichern</tc:token>
+      <tc:token ID="w240">arbiträrer</tc:token>
+      <tc:token ID="w241">weiterer</tc:token>
+      <tc:token ID="w242">Daten</tc:token>
+      <tc:token ID="w243">im</tc:token>
+      <tc:token ID="w244">JSON</tc:token>
+      <tc:token ID="w245">Format</tc:token>
+      <tc:token ID="w246">ermöglicht</tc:token>
+      <tc:token ID="w247">.</tc:token>
+      <tc:token ID="w248">Das</tc:token>
+      <tc:token ID="w249">Feld</tc:token>
+      <tc:token ID="w24a">“</tc:token>
+      <tc:token ID="w24b">administrativ_</tc:token>
+      <tc:token ID="w24c">unit</tc:token>
+      <tc:token ID="w24d">”</tc:token>
+      <tc:token ID="w24e">zeigt</tc:token>
+      <tc:token ID="w24f">auf</tc:token>
+      <tc:token ID="w250">eine</tc:token>
+      <tc:token ID="w251">Hilfsklasse</tc:token>
+      <tc:token ID="w252">(</tc:token>
+      <tc:token ID="w253">“</tc:token>
+      <tc:token ID="w254">SkosConcept</tc:token>
+      <tc:token ID="w255">”</tc:token>
+      <tc:token ID="w256">)</tc:token>
+      <tc:token ID="w257">für</tc:token>
+      <tc:token ID="w258">kontrolliertes</tc:token>
+      <tc:token ID="w259">Vokabular</tc:token>
+      <tc:token ID="w25a">,</tc:token>
+      <tc:token ID="w25b">welche</tc:token>
+      <tc:token ID="w25c">in</tc:token>
+      <tc:token ID="w25d">weiten</tc:token>
+      <tc:token ID="w25e">Teilen</tc:token>
+      <tc:token ID="w25f">das</tc:token>
+      <tc:token ID="w260">SKOS</tc:token>
+      <tc:token ID="w261">Datenmodell</tc:token>
+      <tc:token ID="w262">implementiert</tc:token>
+      <tc:token ID="w263">.</tc:token>
+      <tc:token ID="w264">Die</tc:token>
+      <tc:token ID="w265">Quelle</tc:token>
+      <tc:token ID="w266">jeder</tc:token>
+      <tc:token ID="w267">Instanz</tc:token>
+      <tc:token ID="w268">der</tc:token>
+      <tc:token ID="w269">Klasse</tc:token>
+      <tc:token ID="w26a">TempSpatial</tc:token>
+      <tc:token ID="w26b">bzw.</tc:token>
+      <tc:token ID="w26c">jeder</tc:token>
+      <tc:token ID="w26d">im</tc:token>
+      <tc:token ID="w26e">Datenset</tc:token>
+      <tc:token ID="w26f">erfassten</tc:token>
+      <tc:token ID="w270">historischen</tc:token>
+      <tc:token ID="w271">Verwaltungseinheit</tc:token>
+      <tc:token ID="w272">wird</tc:token>
+      <tc:token ID="w273">mit</tc:token>
+      <tc:token ID="w274">Hilfe</tc:token>
+      <tc:token ID="w275">der</tc:token>
+      <tc:token ID="w276">Klasse</tc:token>
+      <tc:token ID="w277">“</tc:token>
+      <tc:token ID="w278">Source</tc:token>
+      <tc:token ID="w279">”</tc:token>
+      <tc:token ID="w27a">beschrieben</tc:token>
+      <tc:token ID="w27b">.</tc:token>
+      <tc:token ID="w27c">Darin</tc:token>
+      <tc:token ID="w27d">werden</tc:token>
+      <tc:token ID="w27e">URLs</tc:token>
+      <tc:token ID="w27f">zu</tc:token>
+      <tc:token ID="w280">verwendeten</tc:token>
+      <tc:token ID="w281">Daten</tc:token>
+      <tc:token ID="w282">anderer</tc:token>
+      <tc:token ID="w283">Projekte</tc:token>
+      <tc:token ID="w284">gespeichert</tc:token>
+      <tc:token ID="w285">wie</tc:token>
+      <tc:token ID="w286">auch</tc:token>
+      <tc:token ID="w287">eine</tc:token>
+      <tc:token ID="w288">Beschreibung</tc:token>
+      <tc:token ID="w289">der</tc:token>
+      <tc:token ID="w28a">(</tc:token>
+      <tc:token ID="w28b">weiteren</tc:token>
+      <tc:token ID="w28c">)</tc:token>
+      <tc:token ID="w28d">Datenerhebung</tc:token>
+      <tc:token ID="w28e">und</tc:token>
+      <tc:token ID="w28f">Kuration</tc:token>
+      <tc:token ID="w290">im</tc:token>
+      <tc:token ID="w291">Rahmen</tc:token>
+      <tc:token ID="w292">des</tc:token>
+      <tc:token ID="w293">Projektes</tc:token>
+      <tc:token ID="w294">sowie</tc:token>
+      <tc:token ID="w295">ein</tc:token>
+      <tc:token ID="w296">Zitationsvorschlag</tc:token>
+      <tc:token ID="w297">.</tc:token>
+      <tc:token ID="w298">Jedes</tc:token>
+      <tc:token ID="w299">Source</tc:token>
+      <tc:token ID="w29a">Objekt</tc:token>
+      <tc:token ID="w29b">ist</tc:token>
+      <tc:token ID="w29c">außerdem</tc:token>
+      <tc:token ID="w29d">auch</tc:token>
+      <tc:token ID="w29e">mit</tc:token>
+      <tc:token ID="w29f">einem</tc:token>
+      <tc:token ID="w2a0">ESRI-Shapefile</tc:token>
+      <tc:token ID="w2a1">verbunden</tc:token>
+      <tc:token ID="w2a2">welches</tc:token>
+      <tc:token ID="w2a3">Projektintern</tc:token>
+      <tc:token ID="w2a4">als</tc:token>
+      <tc:token ID="w2a5">primäres</tc:token>
+      <tc:token ID="w2a6">Datenformat</tc:token>
+      <tc:token ID="w2a7">dient</tc:token>
+      <tc:token ID="w2a8">.</tc:token>
+      <tc:token ID="w2a9">Mehr</tc:token>
+      <tc:token ID="w2aa">dazu</tc:token>
+      <tc:token ID="w2ab">im</tc:token>
+      <tc:token ID="w2ac">Abschnitt</tc:token>
+      <tc:token ID="w2ad">Workflow</tc:token>
+      <tc:token ID="w2ae">.</tc:token>
+      <tc:token ID="w2af">Die</tc:token>
+      <tc:token ID="w2b0">Modellierung</tc:token>
+      <tc:token ID="w2b1">beliebiger</tc:token>
+      <tc:token ID="w2b2">Relationen</tc:token>
+      <tc:token ID="w2b3">zwischen</tc:token>
+      <tc:token ID="w2b4">beliebigen</tc:token>
+      <tc:token ID="w2b5">historischen</tc:token>
+      <tc:token ID="w2b6">Verwaltungsräumen</tc:token>
+      <tc:token ID="w2b7">ist</tc:token>
+      <tc:token ID="w2b8">im</tc:token>
+      <tc:token ID="w2b9">Datenmodell</tc:token>
+      <tc:token ID="w2ba">durch</tc:token>
+      <tc:token ID="w2bb">die</tc:token>
+      <tc:token ID="w2bc">Klasse</tc:token>
+      <tc:token ID="w2bd">TempSpatialRelation</tc:token>
+      <tc:token ID="w2be">grundgelegt</tc:token>
+      <tc:token ID="w2bf">.</tc:token>
+      <tc:token ID="w2c0">Hier</tc:token>
+      <tc:token ID="w2c1">können</tc:token>
+      <tc:token ID="w2c2">jeweils</tc:token>
+      <tc:token ID="w2c3">zwei</tc:token>
+      <tc:token ID="w2c4">TempSpatial</tc:token>
+      <tc:token ID="w2c5">Objekte</tc:token>
+      <tc:token ID="w2c6">(</tc:token>
+      <tc:token ID="w2c7">“</tc:token>
+      <tc:token ID="w2c8">instance_</tc:token>
+      <tc:token ID="w2c9">a</tc:token>
+      <tc:token ID="w2ca">”</tc:token>
+      <tc:token ID="w2cb">und</tc:token>
+      <tc:token ID="w2cc">“</tc:token>
+      <tc:token ID="w2cd">instance_</tc:token>
+      <tc:token ID="w2ce">b</tc:token>
+      <tc:token ID="w2cf">”</tc:token>
+      <tc:token ID="w2d0">)</tc:token>
+      <tc:token ID="w2d1">für</tc:token>
+      <tc:token ID="w2d2">eine</tc:token>
+      <tc:token ID="w2d3">Zeitspanne</tc:token>
+      <tc:token ID="w2d4">(</tc:token>
+      <tc:token ID="w2d5">“</tc:token>
+      <tc:token ID="w2d6">start_</tc:token>
+      <tc:token ID="w2d7">date</tc:token>
+      <tc:token ID="w2d8">”</tc:token>
+      <tc:token ID="w2d9">und</tc:token>
+      <tc:token ID="w2da">“</tc:token>
+      <tc:token ID="w2db">end_</tc:token>
+      <tc:token ID="w2dc">date</tc:token>
+      <tc:token ID="w2dd">”</tc:token>
+      <tc:token ID="w2de">)</tc:token>
+      <tc:token ID="w2df">in</tc:token>
+      <tc:token ID="w2e0">eine</tc:token>
+      <tc:token ID="w2e1">typisierte</tc:token>
+      <tc:token ID="w2e2">(</tc:token>
+      <tc:token ID="w2e3">Verweis</tc:token>
+      <tc:token ID="w2e4">auf</tc:token>
+      <tc:token ID="w2e5">die</tc:token>
+      <tc:token ID="w2e6">bereits</tc:token>
+      <tc:token ID="w2e7">erwähnte</tc:token>
+      <tc:token ID="w2e8">Hilfsklasse</tc:token>
+      <tc:token ID="w2e9">“</tc:token>
+      <tc:token ID="w2ea">SkosConcept</tc:token>
+      <tc:token ID="w2eb">”</tc:token>
+      <tc:token ID="w2ec">)</tc:token>
+      <tc:token ID="w2ed">Relation</tc:token>
+      <tc:token ID="w2ee">gebracht</tc:token>
+      <tc:token ID="w2ef">werden</tc:token>
+      <tc:token ID="w2f0">.</tc:token>
+      <tc:token ID="w2f1">Hierbei</tc:token>
+      <tc:token ID="w2f2">ist</tc:token>
+      <tc:token ID="w2f3">jedoch</tc:token>
+      <tc:token ID="w2f4">weniger</tc:token>
+      <tc:token ID="w2f5">an</tc:token>
+      <tc:token ID="w2f6">die</tc:token>
+      <tc:token ID="w2f7">in</tc:token>
+      <tc:token ID="w2f8">Gazetteern</tc:token>
+      <tc:token ID="w2f9">üblichen</tc:token>
+      <tc:token ID="w2fa">“</tc:token>
+      <tc:token ID="w2fb">part</tc:token>
+      <tc:token ID="w2fc">of</tc:token>
+      <tc:token ID="w2fd">”</tc:token>
+      <tc:token ID="w2fe">Beziehungen</tc:token>
+      <tc:token ID="w2ff">gedacht</tc:token>
+      <tc:token ID="w300">,</tc:token>
+      <tc:token ID="w301">sondern</tc:token>
+      <tc:token ID="w302">an</tc:token>
+      <tc:token ID="w303">Relationen</tc:token>
+      <tc:token ID="w304">wie</tc:token>
+      <tc:token ID="w305">beispielsweise</tc:token>
+      <tc:token ID="w306">“</tc:token>
+      <tc:token ID="w307">ist</tc:token>
+      <tc:token ID="w308">Vorgänger</tc:token>
+      <tc:token ID="w309">von</tc:token>
+      <tc:token ID="w30a">”</tc:token>
+      <tc:token ID="w30b">oder</tc:token>
+      <tc:token ID="w30c">“</tc:token>
+      <tc:token ID="w30d">wurde</tc:token>
+      <tc:token ID="w30e">zusammengelegt</tc:token>
+      <tc:token ID="w30f">mit</tc:token>
+      <tc:token ID="w310">”</tc:token>
+      <tc:token ID="w311">.</tc:token>
+      <tc:token ID="w312">Allerdings</tc:token>
+      <tc:token ID="w313">muss</tc:token>
+      <tc:token ID="w314">darauf</tc:token>
+      <tc:token ID="w315">hingewiesen</tc:token>
+      <tc:token ID="w316">werden</tc:token>
+      <tc:token ID="w317">,</tc:token>
+      <tc:token ID="w318">dass</tc:token>
+      <tc:token ID="w319">im</tc:token>
+      <tc:token ID="w31a">derzeitigen</tc:token>
+      <tc:token ID="w31b">Status</tc:token>
+      <tc:token ID="w31c">des</tc:token>
+      <tc:token ID="w31d">Projektes</tc:token>
+      <tc:token ID="w31e">noch</tc:token>
+      <tc:token ID="w31f">keine</tc:token>
+      <tc:token ID="w320">derartigen</tc:token>
+      <tc:token ID="w321">Beziehungen</tc:token>
+      <tc:token ID="w322">erfasst</tc:token>
+      <tc:token ID="w323">werden</tc:token>
+      <tc:token ID="w324">.</tc:token>
+      <tc:token ID="w325">Die</tc:token>
+      <tc:token ID="w326">Art</tc:token>
+      <tc:token ID="w327">und</tc:token>
+      <tc:token ID="w328">Weise</tc:token>
+      <tc:token ID="w329">wie</tc:token>
+      <tc:token ID="w32a">eben</tc:token>
+      <tc:token ID="w32b">erwähnte</tc:token>
+      <tc:token ID="w32c">“</tc:token>
+      <tc:token ID="w32d">part</tc:token>
+      <tc:token ID="w32e">of</tc:token>
+      <tc:token ID="w32f">”</tc:token>
+      <tc:token ID="w330">Beziehungen</tc:token>
+      <tc:token ID="w331">erfasst</tc:token>
+      <tc:token ID="w332">werden</tc:token>
+      <tc:token ID="w333">sollen</tc:token>
+      <tc:token ID="w334">,</tc:token>
+      <tc:token ID="w335">wurde</tc:token>
+      <tc:token ID="w336">im</tc:token>
+      <tc:token ID="w337">Projekt</tc:token>
+      <tc:token ID="w338">ausgiebig</tc:token>
+      <tc:token ID="w339">diskutierte</tc:token>
+      <tc:token ID="w33a">,</tc:token>
+      <tc:token ID="w33b">wobei</tc:token>
+      <tc:token ID="w33c">hier</tc:token>
+      <tc:token ID="w33d">neben</tc:token>
+      <tc:token ID="w33e">formal-</tc:token>
+      <tc:token ID="w33f">konzeptionellen</tc:token>
+      <tc:token ID="w340">Argumenten</tc:token>
+      <tc:token ID="w341">vor</tc:token>
+      <tc:token ID="w342">allem</tc:token>
+      <tc:token ID="w343">auch</tc:token>
+      <tc:token ID="w344">die</tc:token>
+      <tc:token ID="w345">konkreten</tc:token>
+      <tc:token ID="w346">Arbeitsvoraussetzungen</tc:token>
+      <tc:token ID="w347">und</tc:token>
+      <tc:token ID="w348">-bedingungen</tc:token>
+      <tc:token ID="w349">im</tc:token>
+      <tc:token ID="w34a">Projekt</tc:token>
+      <tc:token ID="w34b">berücksichtigt</tc:token>
+      <tc:token ID="w34c">werden</tc:token>
+      <tc:token ID="w34d">mussten</tc:token>
+      <tc:token ID="w34e">.</tc:token>
+      <tc:token ID="w34f">Schlussendlich</tc:token>
+      <tc:token ID="w350">wurde</tc:token>
+      <tc:token ID="w351">eine</tc:token>
+      <tc:token ID="w352">explizite</tc:token>
+      <tc:token ID="w353">Modellierung</tc:token>
+      <tc:token ID="w354">hierarchischer</tc:token>
+      <tc:token ID="w355">Strukturen</tc:token>
+      <tc:token ID="w356">der</tc:token>
+      <tc:token ID="w357">erfassten</tc:token>
+      <tc:token ID="w358">Verwaltungseinheiten</tc:token>
+      <tc:token ID="w359">verzichtet</tc:token>
+      <tc:token ID="w35a">,</tc:token>
+      <tc:token ID="w35b">sprich</tc:token>
+      <tc:token ID="w35c">im</tc:token>
+      <tc:token ID="w35d">Datenmodell</tc:token>
+      <tc:token ID="w35e">wird</tc:token>
+      <tc:token ID="w35f">nicht</tc:token>
+      <tc:token ID="w360">ausdrücklich</tc:token>
+      <tc:token ID="w361">festgehalten</tc:token>
+      <tc:token ID="w362">,</tc:token>
+      <tc:token ID="w363">dass</tc:token>
+      <tc:token ID="w364">z.B.</tc:token>
+      <tc:token ID="w365">die</tc:token>
+      <tc:token ID="w366">Verwaltungseinheit</tc:token>
+      <tc:token ID="w367">A</tc:token>
+      <tc:token ID="w368">für</tc:token>
+      <tc:token ID="w369">einen</tc:token>
+      <tc:token ID="w36a">gegebenen</tc:token>
+      <tc:token ID="w36b">Zeitraum</tc:token>
+      <tc:token ID="w36c">,</tc:token>
+      <tc:token ID="w36d">Teil</tc:token>
+      <tc:token ID="w36e">der</tc:token>
+      <tc:token ID="w36f">Verwaltungseinheit</tc:token>
+      <tc:token ID="w370">B</tc:token>
+      <tc:token ID="w371">und</tc:token>
+      <tc:token ID="w372">diese</tc:token>
+      <tc:token ID="w373">Teil</tc:token>
+      <tc:token ID="w374">der</tc:token>
+      <tc:token ID="w375">Verwaltungseinheit</tc:token>
+      <tc:token ID="w376">D</tc:token>
+      <tc:token ID="w377">war</tc:token>
+      <tc:token ID="w378">.</tc:token>
+      <tc:token ID="w379">Dies</tc:token>
+      <tc:token ID="w37a">erscheint</tc:token>
+      <tc:token ID="w37b">deshalb</tc:token>
+      <tc:token ID="w37c">als</tc:token>
+      <tc:token ID="w37d">zulässig</tc:token>
+      <tc:token ID="w37e">,</tc:token>
+      <tc:token ID="w37f">weil</tc:token>
+      <tc:token ID="w380">im</tc:token>
+      <tc:token ID="w381">Projekt</tc:token>
+      <tc:token ID="w382">von</tc:token>
+      <tc:token ID="w383">der</tc:token>
+      <tc:token ID="w384">Prämisse</tc:token>
+      <tc:token ID="w385">ausgegangen</tc:token>
+      <tc:token ID="w386">wird</tc:token>
+      <tc:token ID="w387">,</tc:token>
+      <tc:token ID="w388">dass</tc:token>
+      <tc:token ID="w389">,</tc:token>
+      <tc:token ID="w38a">zumindest</tc:token>
+      <tc:token ID="w38b">für</tc:token>
+      <tc:token ID="w38c">den</tc:token>
+      <tc:token ID="w38d">für</tc:token>
+      <tc:token ID="w38e">das</tc:token>
+      <tc:token ID="w38f">Projekt</tc:token>
+      <tc:token ID="w390">primär</tc:token>
+      <tc:token ID="w391">interessante</tc:token>
+      <tc:token ID="w392">(</tc:token>
+      <tc:token ID="w393">Zeit</tc:token>
+      <tc:token ID="w394">)Raum</tc:token>
+      <tc:token ID="w395">,</tc:token>
+      <tc:token ID="w396">die</tc:token>
+      <tc:token ID="w397">Fläche</tc:token>
+      <tc:token ID="w398">der</tc:token>
+      <tc:token ID="w399">übergeordnete</tc:token>
+      <tc:token ID="w39a">Einheit</tc:token>
+      <tc:token ID="w39b">stets</tc:token>
+      <tc:token ID="w39c">die</tc:token>
+      <tc:token ID="w39d">Summe</tc:token>
+      <tc:token ID="w39e">aller</tc:token>
+      <tc:token ID="w39f">ihr</tc:token>
+      <tc:token ID="w3a0">untergeordneten</tc:token>
+      <tc:token ID="w3a1">Einheiten</tc:token>
+      <tc:token ID="w3a2">bildet</tc:token>
+      <tc:token ID="w3a3">.</tc:token>
+      <tc:token ID="w3a4">Dies</tc:token>
+      <tc:token ID="w3a5">ermöglicht</tc:token>
+      <tc:token ID="w3a6">es</tc:token>
+      <tc:token ID="w3a7">,</tc:token>
+      <tc:token ID="w3a8">dass</tc:token>
+      <tc:token ID="w3a9">part-of</tc:token>
+      <tc:token ID="w3aa">Beziehungen</tc:token>
+      <tc:token ID="w3ab">zwischen</tc:token>
+      <tc:token ID="w3ac">TempSpatial</tc:token>
+      <tc:token ID="w3ad">Objekten</tc:token>
+      <tc:token ID="w3ae">‘on</tc:token>
+      <tc:token ID="w3af">the</tc:token>
+      <tc:token ID="w3b0">fly’</tc:token>
+      <tc:token ID="w3b1">mit</tc:token>
+      <tc:token ID="w3b2">Hilfe</tc:token>
+      <tc:token ID="w3b3">von</tc:token>
+      <tc:token ID="w3b4">spatial</tc:token>
+      <tc:token ID="w3b5">queries</tc:token>
+      <tc:token ID="w3b6">und</tc:token>
+      <tc:token ID="w3b7">unter</tc:token>
+      <tc:token ID="w3b8">Berücksichtigung</tc:token>
+      <tc:token ID="w3b9">der</tc:token>
+      <tc:token ID="w3ba">jeweiligen</tc:token>
+      <tc:token ID="w3bb">Start-</tc:token>
+      <tc:token ID="w3bc">und</tc:token>
+      <tc:token ID="w3bd">Enddatumswerten</tc:token>
+      <tc:token ID="w3be">berechnet</tc:token>
+      <tc:token ID="w3bf">werden</tc:token>
+      <tc:token ID="w3c0">können</tc:token>
+      <tc:token ID="w3c1">.</tc:token>
+      <tc:token ID="w3c2">Und</tc:token>
+      <tc:token ID="w3c3">dies</tc:token>
+      <tc:token ID="w3c4">wiederum</tc:token>
+      <tc:token ID="w3c5">erleichtert</tc:token>
+      <tc:token ID="w3c6">einerseits</tc:token>
+      <tc:token ID="w3c7">die</tc:token>
+      <tc:token ID="w3c8">Arbeit</tc:token>
+      <tc:token ID="w3c9">der</tc:token>
+      <tc:token ID="w3ca">DatenkuratorInnen</tc:token>
+      <tc:token ID="w3cb">im</tc:token>
+      <tc:token ID="w3cc">Projekt</tc:token>
+      <tc:token ID="w3cd">,</tc:token>
+      <tc:token ID="w3ce">da</tc:token>
+      <tc:token ID="w3cf">diese</tc:token>
+      <tc:token ID="w3d0">keine</tc:token>
+      <tc:token ID="w3d1">expliziten</tc:token>
+      <tc:token ID="w3d2">Verbindungen</tc:token>
+      <tc:token ID="w3d3">pflegen</tc:token>
+      <tc:token ID="w3d4">müssen</tc:token>
+      <tc:token ID="w3d5">,</tc:token>
+      <tc:token ID="w3d6">andererseits</tc:token>
+      <tc:token ID="w3d7">ermöglicht</tc:token>
+      <tc:token ID="w3d8">dieses</tc:token>
+      <tc:token ID="w3d9">Flexibilität</tc:token>
+      <tc:token ID="w3da">die</tc:token>
+      <tc:token ID="w3db">Integration</tc:token>
+      <tc:token ID="w3dc">anderer</tc:token>
+      <tc:token ID="w3dd">Datensatz</tc:token>
+      <tc:token ID="w3de">mit</tc:token>
+      <tc:token ID="w3df">relativ</tc:token>
+      <tc:token ID="w3e0">geringem</tc:token>
+      <tc:token ID="w3e1">Aufwand</tc:token>
+      <tc:token ID="w3e2">.</tc:token>
+      <tc:token ID="w3e3">An</tc:token>
+      <tc:token ID="w3e4">dieser</tc:token>
+      <tc:token ID="w3e5">Stelle</tc:token>
+      <tc:token ID="w3e6">muss</tc:token>
+      <tc:token ID="w3e7">jedoch</tc:token>
+      <tc:token ID="w3e8">betont</tc:token>
+      <tc:token ID="w3e9">werden</tc:token>
+      <tc:token ID="w3ea">,</tc:token>
+      <tc:token ID="w3eb">dass</tc:token>
+      <tc:token ID="w3ec">die</tc:token>
+      <tc:token ID="w3ed">bis</tc:token>
+      <tc:token ID="w3ee">dato</tc:token>
+      <tc:token ID="w3ef">kuratierte</tc:token>
+      <tc:token ID="w3f0">Menge</tc:token>
+      <tc:token ID="w3f1">an</tc:token>
+      <tc:token ID="w3f2">Daten</tc:token>
+      <tc:token ID="w3f3">noch</tc:token>
+      <tc:token ID="w3f4">nicht</tc:token>
+      <tc:token ID="w3f5">ausreicht</tc:token>
+      <tc:token ID="w3f6">um</tc:token>
+      <tc:token ID="w3f7">konkrete</tc:token>
+      <tc:token ID="w3f8">Aussagen</tc:token>
+      <tc:token ID="w3f9">hinsichtlich</tc:token>
+      <tc:token ID="w3fa">der</tc:token>
+      <tc:token ID="w3fb">Belastbarkeit</tc:token>
+      <tc:token ID="w3fc">des</tc:token>
+      <tc:token ID="w3fd">hier</tc:token>
+      <tc:token ID="w3fe">vorgestellten</tc:token>
+      <tc:token ID="w3ff">Datenmodells</tc:token>
+      <tc:token ID="w400">treffen</tc:token>
+      <tc:token ID="w401">zu</tc:token>
+      <tc:token ID="w402">können</tc:token>
+      <tc:token ID="w403">.</tc:token>
+      <tc:token ID="w404">Erste</tc:token>
+      <tc:token ID="w405">Tests</tc:token>
+      <tc:token ID="w406">diesbezüglich</tc:token>
+      <tc:token ID="w407">fielen</tc:token>
+      <tc:token ID="w408">jedoch</tc:token>
+      <tc:token ID="w409">durchwegs</tc:token>
+      <tc:token ID="w40a">positiv</tc:token>
+      <tc:token ID="w40b">aus</tc:token>
+      <tc:token ID="w40c">,</tc:token>
+      <tc:token ID="w40d">sowohl</tc:token>
+      <tc:token ID="w40e">was</tc:token>
+      <tc:token ID="w40f">die</tc:token>
+      <tc:token ID="w410">Genauigkeit</tc:token>
+      <tc:token ID="w411">der</tc:token>
+      <tc:token ID="w412">spatial</tc:token>
+      <tc:token ID="w413">queries</tc:token>
+      <tc:token ID="w414">,</tc:token>
+      <tc:token ID="w415">vor</tc:token>
+      <tc:token ID="w416">allem</tc:token>
+      <tc:token ID="w417">aber</tc:token>
+      <tc:token ID="w418">auch</tc:token>
+      <tc:token ID="w419">was</tc:token>
+      <tc:token ID="w41a">deren</tc:token>
+      <tc:token ID="w41b">Performanz</tc:token>
+      <tc:token ID="w41c">betrifft</tc:token>
+      <tc:token ID="w41d">.</tc:token>
+      <tc:token ID="w41e">Die</tc:token>
+      <tc:token ID="w41f">technischen</tc:token>
+      <tc:token ID="w420">Komponenten</tc:token>
+      <tc:token ID="w421">des</tc:token>
+      <tc:token ID="w422">Projektes</tc:token>
+      <tc:token ID="w423">sind</tc:token>
+      <tc:token ID="w424">überschaubar</tc:token>
+      <tc:token ID="w425">.</tc:token>
+      <tc:token ID="w426">Als</tc:token>
+      <tc:token ID="w427">Storage</tc:token>
+      <tc:token ID="w428">Layer</tc:token>
+      <tc:token ID="w429">fungiert</tc:token>
+      <tc:token ID="w42a">eine</tc:token>
+      <tc:token ID="w42b">Postgresql</tc:token>
+      <tc:token ID="w42c">Datenbank</tc:token>
+      <tc:token ID="w42d">mit</tc:token>
+      <tc:token ID="w42e">PostGIS</tc:token>
+      <tc:token ID="w42f">erweiterung</tc:token>
+      <tc:token ID="w430">.</tc:token>
+      <tc:token ID="w431">Die</tc:token>
+      <tc:token ID="w432">Interaktion</tc:token>
+      <tc:token ID="w433">damit</tc:token>
+      <tc:token ID="w434">erfolgt</tc:token>
+      <tc:token ID="w435">über</tc:token>
+      <tc:token ID="w436">einen</tc:token>
+      <tc:token ID="w437">mittels</tc:token>
+      <tc:token ID="w438">dem</tc:token>
+      <tc:token ID="w439">Python</tc:token>
+      <tc:token ID="w43a">basierten</tc:token>
+      <tc:token ID="w43b">Webframework</tc:token>
+      <tc:token ID="w43c">(</tc:token>
+      <tc:token ID="w43d">Geo</tc:token>
+      <tc:token ID="w43e">)Django</tc:token>
+      <tc:token ID="w43f">implementierten</tc:token>
+      <tc:token ID="w440">Applikation</tc:token>
+      <tc:token ID="w441">Layer</tc:token>
+      <tc:token ID="w442">,</tc:token>
+      <tc:token ID="w443">wobei</tc:token>
+      <tc:token ID="w444">mit</tc:token>
+      <tc:token ID="w445">(</tc:token>
+      <tc:token ID="w446">Geo</tc:token>
+      <tc:token ID="w447">)Django</tc:token>
+      <tc:token ID="w448">,</tc:token>
+      <tc:token ID="w449">respektive</tc:token>
+      <tc:token ID="w44a">django-rest-framework</tc:token>
+      <tc:token ID="w44b">sowohl</tc:token>
+      <tc:token ID="w44c">die</tc:token>
+      <tc:token ID="w44d">HistoGIS-Webapplikation</tc:token>
+      <tc:token ID="w44e">als</tc:token>
+      <tc:token ID="w44f">auch</tc:token>
+      <tc:token ID="w450">ein</tc:token>
+      <tc:token ID="w451">entsprechender</tc:token>
+      <tc:token ID="w452">REST</tc:token>
+      <tc:token ID="w453">Webservice</tc:token>
+      <tc:token ID="w454">implementiert</tc:token>
+      <tc:token ID="w455">wurde</tc:token>
+      <tc:token ID="w456">bzw.</tc:token>
+      <tc:token ID="w457">wird</tc:token>
+      <tc:token ID="w458">.</tc:token>
+      <tc:token ID="w459">Die</tc:token>
+      <tc:token ID="w45a">eigentlich</tc:token>
+      <tc:token ID="w45b">Datenkuration</tc:token>
+      <tc:token ID="w45c">erfolgt</tc:token>
+      <tc:token ID="w45d">davon</tc:token>
+      <tc:token ID="w45e">völlig</tc:token>
+      <tc:token ID="w45f">unabhängig</tc:token>
+      <tc:token ID="w460">und</tc:token>
+      <tc:token ID="w461">unter</tc:token>
+      <tc:token ID="w462">Verwendung</tc:token>
+      <tc:token ID="w463">der</tc:token>
+      <tc:token ID="w464">open</tc:token>
+      <tc:token ID="w465">source</tc:token>
+      <tc:token ID="w466">Software</tc:token>
+      <tc:token ID="w467">Qgis</tc:token>
+      <tc:token ID="w468">.</tc:token>
+      <tc:token ID="w469">Bis</tc:token>
+      <tc:token ID="w46a">dato</tc:token>
+      <tc:token ID="w46b">wurden</tc:token>
+      <tc:token ID="w46c">damit</tc:token>
+      <tc:token ID="w46d">vorwiegend</tc:token>
+      <tc:token ID="w46e">bereits</tc:token>
+      <tc:token ID="w46f">existierende</tc:token>
+      <tc:token ID="w470">Daten</tc:token>
+      <tc:token ID="w471">harmonisiert</tc:token>
+      <tc:token ID="w472">und</tc:token>
+      <tc:token ID="w473">als</tc:token>
+      <tc:token ID="w474">ESRI</tc:token>
+      <tc:token ID="w475">shapefiles</tc:token>
+      <tc:token ID="w476">gespeichert</tc:token>
+      <tc:token ID="w477">.</tc:token>
+      <tc:token ID="w478">Das</tc:token>
+      <tc:token ID="w479">Schema</tc:token>
+      <tc:token ID="w47a">dieser</tc:token>
+      <tc:token ID="w47b">Dateien</tc:token>
+      <tc:token ID="w47c">entspricht</tc:token>
+      <tc:token ID="w47d">dabei</tc:token>
+      <tc:token ID="w47e">weitgehend</tc:token>
+      <tc:token ID="w47f">dem</tc:token>
+      <tc:token ID="w480">oben</tc:token>
+      <tc:token ID="w481">skizzierten</tc:token>
+      <tc:token ID="w482">Datenmodell</tc:token>
+      <tc:token ID="w483">.</tc:token>
+      <tc:token ID="w484">Als</tc:token>
+      <tc:token ID="w485">‘</tc:token>
+      <tc:token ID="w486">fertig</tc:token>
+      <tc:token ID="w487">’</tc:token>
+      <tc:token ID="w488">erachtete</tc:token>
+      <tc:token ID="w489">Datensätze</tc:token>
+      <tc:token ID="w48a">(</tc:token>
+      <tc:token ID="w48b">gezippte</tc:token>
+      <tc:token ID="w48c">Shapefiles</tc:token>
+      <tc:token ID="w48d">)</tc:token>
+      <tc:token ID="w48e">werden</tc:token>
+      <tc:token ID="w48f">dann</tc:token>
+      <tc:token ID="w490">über</tc:token>
+      <tc:token ID="w491">ein</tc:token>
+      <tc:token ID="w492">Webformular</tc:token>
+      <tc:token ID="w493">in</tc:token>
+      <tc:token ID="w494">HistoGIS</tc:token>
+      <tc:token ID="w495">als</tc:token>
+      <tc:token ID="w496">sogenannte</tc:token>
+      <tc:token ID="w497">“</tc:token>
+      <tc:token ID="w498">Source</tc:token>
+      <tc:token ID="w499">”</tc:token>
+      <tc:token ID="w49a">objekte</tc:token>
+      <tc:token ID="w49b">hochgeladen</tc:token>
+      <tc:token ID="w49c">,</tc:token>
+      <tc:token ID="w49d">entpackt</tc:token>
+      <tc:token ID="w49e">,</tc:token>
+      <tc:token ID="w49f">die</tc:token>
+      <tc:token ID="w4a0">Features</tc:token>
+      <tc:token ID="w4a1">der</tc:token>
+      <tc:token ID="w4a2">Shapfiles</tc:token>
+      <tc:token ID="w4a3">als</tc:token>
+      <tc:token ID="w4a4">TempSpatial</tc:token>
+      <tc:token ID="w4a5">Objekte</tc:token>
+      <tc:token ID="w4a6">gespeichert</tc:token>
+      <tc:token ID="w4a7">und</tc:token>
+      <tc:token ID="w4a8">mit</tc:token>
+      <tc:token ID="w4a9">dem</tc:token>
+      <tc:token ID="w4aa">Source</tc:token>
+      <tc:token ID="w4ab">Objekt</tc:token>
+      <tc:token ID="w4ac">verknüpft</tc:token>
+      <tc:token ID="w4ad">.</tc:token>
+      <tc:token ID="w4ae">Neben</tc:token>
+      <tc:token ID="w4af">der</tc:token>
+      <tc:token ID="w4b0">Kuration</tc:token>
+      <tc:token ID="w4b1">und</tc:token>
+      <tc:token ID="w4b2">Harmonisierung</tc:token>
+      <tc:token ID="w4b3">bereits</tc:token>
+      <tc:token ID="w4b4">bestehender</tc:token>
+      <tc:token ID="w4b5">“</tc:token>
+      <tc:token ID="w4b6">Vektordaten</tc:token>
+      <tc:token ID="w4b7">”</tc:token>
+      <tc:token ID="w4b8">werden</tc:token>
+      <tc:token ID="w4b9">im</tc:token>
+      <tc:token ID="w4ba">Projekt</tc:token>
+      <tc:token ID="w4bb">aber</tc:token>
+      <tc:token ID="w4bc">auch</tc:token>
+      <tc:token ID="w4bd">selbst</tc:token>
+      <tc:token ID="w4be">Daten</tc:token>
+      <tc:token ID="w4bf">erzeugt</tc:token>
+      <tc:token ID="w4c0">.</tc:token>
+      <tc:token ID="w4c1">Dazu</tc:token>
+      <tc:token ID="w4c2">wählt</tc:token>
+      <tc:token ID="w4c3">ein</tc:token>
+      <tc:token ID="w4c4">Historiker</tc:token>
+      <tc:token ID="w4c5">im</tc:token>
+      <tc:token ID="w4c6">Team</tc:token>
+      <tc:token ID="w4c7">verwertbare</tc:token>
+      <tc:token ID="w4c8">(</tc:token>
+      <tc:token ID="w4c9">historische</tc:token>
+      <tc:token ID="w4ca">)</tc:token>
+      <tc:token ID="w4cb">Karten</tc:token>
+      <tc:token ID="w4cc">aus</tc:token>
+      <tc:token ID="w4cd">,</tc:token>
+      <tc:token ID="w4ce">welche</tc:token>
+      <tc:token ID="w4cf">idealerweise</tc:token>
+      <tc:token ID="w4d0">bereits</tc:token>
+      <tc:token ID="w4d1">digitalisiert</tc:token>
+      <tc:token ID="w4d2">(</tc:token>
+      <tc:token ID="w4d3">gescannt</tc:token>
+      <tc:token ID="w4d4">)</tc:token>
+      <tc:token ID="w4d5">sind</tc:token>
+      <tc:token ID="w4d6">.</tc:token>
+      <tc:token ID="w4d7">Die</tc:token>
+      <tc:token ID="w4d8">Datakuratorinnen</tc:token>
+      <tc:token ID="w4d9">georeferenziert</tc:token>
+      <tc:token ID="w4da">diese</tc:token>
+      <tc:token ID="w4db">Scans</tc:token>
+      <tc:token ID="w4dc">(</tc:token>
+      <tc:token ID="w4dd">geotiffs</tc:token>
+      <tc:token ID="w4de">)</tc:token>
+      <tc:token ID="w4df">und</tc:token>
+      <tc:token ID="w4e0">extrahieren</tc:token>
+      <tc:token ID="w4e1">die</tc:token>
+      <tc:token ID="w4e2">darin</tc:token>
+      <tc:token ID="w4e3">auffindbaren</tc:token>
+      <tc:token ID="w4e4">Informationen</tc:token>
+      <tc:token ID="w4e5">zu</tc:token>
+      <tc:token ID="w4e6">historischen</tc:token>
+      <tc:token ID="w4e7">Verwaltungsgrenzen</tc:token>
+      <tc:token ID="w4e8">als</tc:token>
+      <tc:token ID="w4e9">Vektordaten</tc:token>
+      <tc:token ID="w4ea">.</tc:token>
+      <tc:token ID="w4eb">Bis</tc:token>
+      <tc:token ID="w4ec">dato</tc:token>
+      <tc:token ID="w4ed">befinden</tc:token>
+      <tc:token ID="w4ee">sich</tc:token>
+      <tc:token ID="w4ef">knapp</tc:token>
+      <tc:token ID="w4f0">4000</tc:token>
+      <tc:token ID="w4f1">Polygone</tc:token>
+      <tc:token ID="w4f2">in</tc:token>
+      <tc:token ID="w4f3">der</tc:token>
+      <tc:token ID="w4f4">Production</tc:token>
+      <tc:token ID="w4f5">Instanz</tc:token>
+      <tc:token ID="w4f6">des</tc:token>
+      <tc:token ID="w4f7">Systems</tc:token>
+      <tc:token ID="w4f8">.</tc:token>
+      <tc:token ID="w4f9">Das</tc:token>
+      <tc:token ID="w4fa">Anpassen</tc:token>
+      <tc:token ID="w4fb">und</tc:token>
+      <tc:token ID="w4fc">Einspielen</tc:token>
+      <tc:token ID="w4fd">schon</tc:token>
+      <tc:token ID="w4fe">vorhandener</tc:token>
+      <tc:token ID="w4ff">Polygone</tc:token>
+      <tc:token ID="w500">wurde</tc:token>
+      <tc:token ID="w501">mit</tc:token>
+      <tc:token ID="w502">Daten</tc:token>
+      <tc:token ID="w503">aus</tc:token>
+      <tc:token ID="w504">dem</tc:token>
+      <tc:token ID="w505">Census</tc:token>
+      <tc:token ID="w506">mosaic</tc:token>
+      <tc:token ID="w507">Projekt</tc:token>
+      <tc:token ID="w508">(</tc:token>
+      <tc:token ID="w509">https://censusmosaic.demog.berkeley.edu/)</tc:token>
+      <tc:token ID="w50a">und</tc:token>
+      <tc:token ID="w50b">dem</tc:token>
+      <tc:token ID="w50c">HGis</tc:token>
+      <tc:token ID="w50d">Archiv</tc:token>
+      <tc:token ID="w50e">(</tc:token>
+      <tc:token ID="w50f">http://www.hgis-germany.de/)</tc:token>
+      <tc:token ID="w510">begonnen</tc:token>
+      <tc:token ID="w511">.</tc:token>
+      <tc:token ID="w512">Damit</tc:token>
+      <tc:token ID="w513">können</tc:token>
+      <tc:token ID="w514">große</tc:token>
+      <tc:token ID="w515">Teile</tc:token>
+      <tc:token ID="w516">des</tc:token>
+      <tc:token ID="w517">19.</tc:token>
+      <tc:token ID="w518">Jhdts</tc:token>
+      <tc:token ID="w519">für</tc:token>
+      <tc:token ID="w51a">die</tc:token>
+      <tc:token ID="w51b">Gebiete</tc:token>
+      <tc:token ID="w51c">Österreich-Ungarns</tc:token>
+      <tc:token ID="w51d">und</tc:token>
+      <tc:token ID="w51e">des</tc:token>
+      <tc:token ID="w51f">Deutschen</tc:token>
+      <tc:token ID="w520">Bundes</tc:token>
+      <tc:token ID="w521">(</tc:token>
+      <tc:token ID="w522">inkl.</tc:token>
+      <tc:token ID="w523">der</tc:token>
+      <tc:token ID="w524">jeweiligen</tc:token>
+      <tc:token ID="w525">Nachfolgeentitäten</tc:token>
+      <tc:token ID="w526">)</tc:token>
+      <tc:token ID="w527">bereits</tc:token>
+      <tc:token ID="w528">abgedeckt</tc:token>
+      <tc:token ID="w529">werden</tc:token>
+      <tc:token ID="w52a">.</tc:token>
+      <tc:token ID="w52b">Die</tc:token>
+      <tc:token ID="w52c">Daten</tc:token>
+      <tc:token ID="w52d">werden</tc:token>
+      <tc:token ID="w52e">nicht</tc:token>
+      <tc:token ID="w52f">nur</tc:token>
+      <tc:token ID="w530">technisch</tc:token>
+      <tc:token ID="w531">aufbereitet</tc:token>
+      <tc:token ID="w532">,</tc:token>
+      <tc:token ID="w533">sondern</tc:token>
+      <tc:token ID="w534">auch</tc:token>
+      <tc:token ID="w535">inhaltlich</tc:token>
+      <tc:token ID="w536">von</tc:token>
+      <tc:token ID="w537">einem</tc:token>
+      <tc:token ID="w538">Verwaltungshistoriker</tc:token>
+      <tc:token ID="w539">überprüft</tc:token>
+      <tc:token ID="w53a">.</tc:token>
+      <tc:token ID="w53b">HistoGIS</tc:token>
+      <tc:token ID="w53c">implementiert</tc:token>
+      <tc:token ID="w53d">dafür</tc:token>
+      <tc:token ID="w53e">ein</tc:token>
+      <tc:token ID="w53f">Ampelsystem</tc:token>
+      <tc:token ID="w540">.</tc:token>
+      <tc:token ID="w541">Vom</tc:token>
+      <tc:token ID="w542">HistoGIS-Team</tc:token>
+      <tc:token ID="w543">technisch</tc:token>
+      <tc:token ID="w544">wie</tc:token>
+      <tc:token ID="w545">inhaltlich</tc:token>
+      <tc:token ID="w546">überprüfte</tc:token>
+      <tc:token ID="w547">Daten</tc:token>
+      <tc:token ID="w548">werden</tc:token>
+      <tc:token ID="w549">mit</tc:token>
+      <tc:token ID="w54a">Grün</tc:token>
+      <tc:token ID="w54b">markiert</tc:token>
+      <tc:token ID="w54c">,</tc:token>
+      <tc:token ID="w54d">vom</tc:token>
+      <tc:token ID="w54e">HistoGIS-Team</tc:token>
+      <tc:token ID="w54f">ausgewählte</tc:token>
+      <tc:token ID="w550">Daten</tc:token>
+      <tc:token ID="w551">die</tc:token>
+      <tc:token ID="w552">noch</tc:token>
+      <tc:token ID="w553">nicht</tc:token>
+      <tc:token ID="w554">überprüft</tc:token>
+      <tc:token ID="w555">wurden</tc:token>
+      <tc:token ID="w556">mit</tc:token>
+      <tc:token ID="w557">Gelb</tc:token>
+      <tc:token ID="w558">und</tc:token>
+      <tc:token ID="w559">von</tc:token>
+      <tc:token ID="w55a">Usern</tc:token>
+      <tc:token ID="w55b">zur</tc:token>
+      <tc:token ID="w55c">Verfügung</tc:token>
+      <tc:token ID="w55d">gestellte</tc:token>
+      <tc:token ID="w55e">,</tc:token>
+      <tc:token ID="w55f">nicht</tc:token>
+      <tc:token ID="w560">überprüfte</tc:token>
+      <tc:token ID="w561">Daten</tc:token>
+      <tc:token ID="w562">mit</tc:token>
+      <tc:token ID="w563">Rot</tc:token>
+      <tc:token ID="w564">(</tc:token>
+      <tc:token ID="w565">momentan</tc:token>
+      <tc:token ID="w566">befinden</tc:token>
+      <tc:token ID="w567">sich</tc:token>
+      <tc:token ID="w568">lediglich</tc:token>
+      <tc:token ID="w569">gelbe</tc:token>
+      <tc:token ID="w56a">und</tc:token>
+      <tc:token ID="w56b">grüne</tc:token>
+      <tc:token ID="w56c">Daten</tc:token>
+      <tc:token ID="w56d">im</tc:token>
+      <tc:token ID="w56e">System</tc:token>
+      <tc:token ID="w56f">)</tc:token>
+      <tc:token ID="w570">.</tc:token>
+      <tc:token ID="w571">Die</tc:token>
+      <tc:token ID="w572">Aufbereitung</tc:token>
+      <tc:token ID="w573">der</tc:token>
+      <tc:token ID="w574">Daten</tc:token>
+      <tc:token ID="w575">,</tc:token>
+      <tc:token ID="w576">wie</tc:token>
+      <tc:token ID="w577">auch</tc:token>
+      <tc:token ID="w578">die</tc:token>
+      <tc:token ID="w579">Entwicklung</tc:token>
+      <tc:token ID="w57a">des</tc:token>
+      <tc:token ID="w57b">technischen</tc:token>
+      <tc:token ID="w57c">Systems</tc:token>
+      <tc:token ID="w57d">schreitet</tc:token>
+      <tc:token ID="w57e">erfreulicher</tc:token>
+      <tc:token ID="w57f">Weise</tc:token>
+      <tc:token ID="w580">schneller</tc:token>
+      <tc:token ID="w581">voran</tc:token>
+      <tc:token ID="w582">als</tc:token>
+      <tc:token ID="w583">geplant</tc:token>
+      <tc:token ID="w584">.</tc:token>
+      <tc:token ID="w585">Es</tc:token>
+      <tc:token ID="w586">wurde</tc:token>
+      <tc:token ID="w587">deshalb</tc:token>
+      <tc:token ID="w588">erst</tc:token>
+      <tc:token ID="w589">kürzlich</tc:token>
+      <tc:token ID="w58a">beschlossen</tc:token>
+      <tc:token ID="w58b">in</tc:token>
+      <tc:token ID="w58c">HistoGIS</tc:token>
+      <tc:token ID="w58d">schon</tc:token>
+      <tc:token ID="w58e">während</tc:token>
+      <tc:token ID="w58f">der</tc:token>
+      <tc:token ID="w590">Projektlaufzeit</tc:token>
+      <tc:token ID="w591">auch</tc:token>
+      <tc:token ID="w592">Daten</tc:token>
+      <tc:token ID="w593">außerhalb</tc:token>
+      <tc:token ID="w594">der</tc:token>
+      <tc:token ID="w595">geplanten</tc:token>
+      <tc:token ID="w596">räumlich-zeitlichen</tc:token>
+      <tc:token ID="w597">Grenzen</tc:token>
+      <tc:token ID="w598">aufzunehmen</tc:token>
+      <tc:token ID="w599">.</tc:token>
+      <tc:token ID="w59a">In</tc:token>
+      <tc:token ID="w59b">unserer</tc:token>
+      <tc:token ID="w59c">Präsentation</tc:token>
+      <tc:token ID="w59d">werden</tc:token>
+      <tc:token ID="w59e">wir</tc:token>
+      <tc:token ID="w59f">vor</tc:token>
+      <tc:token ID="w5a0">allem</tc:token>
+      <tc:token ID="w5a1">das</tc:token>
+      <tc:token ID="w5a2">Datenmodell</tc:token>
+      <tc:token ID="w5a3">und</tc:token>
+      <tc:token ID="w5a4">die</tc:token>
+      <tc:token ID="w5a5">RestAPI</tc:token>
+      <tc:token ID="w5a6">Schnittstellen</tc:token>
+      <tc:token ID="w5a7">des</tc:token>
+      <tc:token ID="w5a8">Systems</tc:token>
+      <tc:token ID="w5a9">diskutieren</tc:token>
+      <tc:token ID="w5aa">und</tc:token>
+      <tc:token ID="w5ab">vorstellen</tc:token>
+      <tc:token ID="w5ac">.</tc:token>
+      <tc:token ID="w5ad">ein</tc:token>
+      <tc:token ID="w5ae">Repository</tc:token>
+      <tc:token ID="w5af">historischer</tc:token>
+      <tc:token ID="w5b0">Polygondaten</tc:token>
+      <tc:token ID="w5b1">mit</tc:token>
+      <tc:token ID="w5b2">einheitlichen</tc:token>
+      <tc:token ID="w5b3">Metadaten</tc:token>
+      <tc:token ID="w5b4">aufgebaut</tc:token>
+      <tc:token ID="w5b5">und</tc:token>
+      <tc:token ID="w5b6">zum</tc:token>
+      <tc:token ID="w5b7">Download</tc:token>
+      <tc:token ID="w5b8">angeboten</tc:token>
+      <tc:token ID="w5b9">wird</tc:token>
+      <tc:token ID="w5ba">.</tc:token>
+      <tc:token ID="w5bb">Für</tc:token>
+      <tc:token ID="w5bc">dieses</tc:token>
+      <tc:token ID="w5bd">Repository</tc:token>
+      <tc:token ID="w5be">werden</tc:token>
+      <tc:token ID="w5bf">zunächst</tc:token>
+      <tc:token ID="w5c0">schon</tc:token>
+      <tc:token ID="w5c1">existierende</tc:token>
+      <tc:token ID="w5c2">Polygondaten</tc:token>
+      <tc:token ID="w5c3">eingesammelt</tc:token>
+      <tc:token ID="w5c4">,</tc:token>
+      <tc:token ID="w5c5">aufbereitet</tc:token>
+      <tc:token ID="w5c6">und</tc:token>
+      <tc:token ID="w5c7">erst</tc:token>
+      <tc:token ID="w5c8">in</tc:token>
+      <tc:token ID="w5c9">einem</tc:token>
+      <tc:token ID="w5ca">zweiten</tc:token>
+      <tc:token ID="w5cb">Schritt</tc:token>
+      <tc:token ID="w5cc">für</tc:token>
+      <tc:token ID="w5cd">historisch</tc:token>
+      <tc:token ID="w5ce">wichtige</tc:token>
+      <tc:token ID="w5cf">Zeitspannen</tc:token>
+      <tc:token ID="w5d0">neue</tc:token>
+      <tc:token ID="w5d1">Polygone</tc:token>
+      <tc:token ID="w5d2">erstellt</tc:token>
+      <tc:token ID="w5d3">.</tc:token>
+      <tc:token ID="w5d4">Dabei</tc:token>
+      <tc:token ID="w5d5">setzt</tc:token>
+      <tc:token ID="w5d6">sich</tc:token>
+      <tc:token ID="w5d7">HistoGIS</tc:token>
+      <tc:token ID="w5d8">zunächst</tc:token>
+      <tc:token ID="w5d9">zum</tc:token>
+      <tc:token ID="w5da">Ziel</tc:token>
+      <tc:token ID="w5db">die</tc:token>
+      <tc:token ID="w5dc">Periode</tc:token>
+      <tc:token ID="w5dd">zwischen</tc:token>
+      <tc:token ID="w5de">dem</tc:token>
+      <tc:token ID="w5df">ausgehenden</tc:token>
+      <tc:token ID="w5e0">18.</tc:token>
+      <tc:token ID="w5e1">Jhdt.</tc:token>
+      <tc:token ID="w5e2">und</tc:token>
+      <tc:token ID="w5e3">1918</tc:token>
+      <tc:token ID="w5e4">für</tc:token>
+      <tc:token ID="w5e5">das</tc:token>
+      <tc:token ID="w5e6">Gebiet</tc:token>
+      <tc:token ID="w5e7">der</tc:token>
+      <tc:token ID="w5e8">KuK</tc:token>
+      <tc:token ID="w5e9">Monarchie</tc:token>
+      <tc:token ID="w5ea">und</tc:token>
+      <tc:token ID="w5eb">des</tc:token>
+      <tc:token ID="w5ec">deutschen</tc:token>
+      <tc:token ID="w5ed">Bundes</tc:token>
+      <tc:token ID="w5ee">abzudecken</tc:token>
+      <tc:token ID="w5ef">.</tc:token>
+      <tc:token ID="w5f0">und</tc:token>
+      <tc:token ID="w5f1">RestAPI</tc:token>
+      <tc:token ID="w5f2">Services</tc:token>
+      <tc:token ID="w5f3">zur</tc:token>
+      <tc:token ID="w5f4">einfachen</tc:token>
+      <tc:token ID="w5f5">Anreicherung</tc:token>
+      <tc:token ID="w5f6">historischer</tc:token>
+      <tc:token ID="w5f7">Daten</tc:token>
+      <tc:token ID="w5f8">mit</tc:token>
+      <tc:token ID="w5f9">Hilfe</tc:token>
+      <tc:token ID="w5fa">des</tc:token>
+      <tc:token ID="w5fb">Repositories</tc:token>
+      <tc:token ID="w5fc">angeboten</tc:token>
+      <tc:token ID="w5fd">werden</tc:token>
+      <tc:token ID="w5fe">.</tc:token>
+      <tc:token ID="w5ff">Z.B.</tc:token>
+      <tc:token ID="w600">:</tc:token>
+      <tc:token ID="w601">Wo</tc:token>
+      <tc:token ID="w602">war</tc:token>
+      <tc:token ID="w603">Punkt</tc:token>
+      <tc:token ID="w604">X/</tc:token>
+      <tc:token ID="w605">Y</tc:token>
+      <tc:token ID="w606">zum</tc:token>
+      <tc:token ID="w607">Zeitpunkt</tc:token>
+      <tc:token ID="w608">Z</tc:token>
+      <tc:token ID="w609">?</tc:token>
+      <tc:token ID="w60a">Die</tc:token>
+      <tc:token ID="w60b">API</tc:token>
+      <tc:token ID="w60c">antwortet</tc:token>
+      <tc:token ID="w60d">mit</tc:token>
+      <tc:token ID="w60e">den</tc:token>
+      <tc:token ID="w60f">Metadaten</tc:token>
+      <tc:token ID="w610">zu</tc:token>
+      <tc:token ID="w611">den</tc:token>
+      <tc:token ID="w612">einzelnen</tc:token>
+      <tc:token ID="w613">überlappenden</tc:token>
+      <tc:token ID="w614">Polygonen</tc:token>
+      <tc:token ID="w615">die</tc:token>
+      <tc:token ID="w616">für</tc:token>
+      <tc:token ID="w617">den</tc:token>
+      <tc:token ID="w618">Zeitraum</tc:token>
+      <tc:token ID="w619">(</tc:token>
+      <tc:token ID="w61a">oder</tc:token>
+      <tc:token ID="w61b">Zeitpunkt</tc:token>
+      <tc:token ID="w61c">)</tc:token>
+      <tc:token ID="w61d">Gültigkeit</tc:token>
+      <tc:token ID="w61e">haben</tc:token>
+      <tc:token ID="w61f">.</tc:token>
+      <tc:token ID="w620">Nehmen</tc:token>
+      <tc:token ID="w621">wir</tc:token>
+      <tc:token ID="w622">an</tc:token>
+      <tc:token ID="w623">:</tc:token>
+      <tc:token ID="w624">Ein</tc:token>
+      <tc:token ID="w625">Projekt</tc:token>
+      <tc:token ID="w626">hat</tc:token>
+      <tc:token ID="w627">Reiseberichte</tc:token>
+      <tc:token ID="w628">in</tc:token>
+      <tc:token ID="w629">seiner</tc:token>
+      <tc:token ID="w62a">Datenbank</tc:token>
+      <tc:token ID="w62b">.</tc:token>
+      <tc:token ID="w62c">Eine</tc:token>
+      <tc:token ID="w62d">Station</tc:token>
+      <tc:token ID="w62e">war</tc:token>
+      <tc:token ID="w62f">Bolzano</tc:token>
+      <tc:token ID="w630">1910</tc:token>
+      <tc:token ID="w631">.</tc:token>
+      <tc:token ID="w632">Die</tc:token>
+      <tc:token ID="w633">Geokoordinaten</tc:token>
+      <tc:token ID="w634">(</tc:token>
+      <tc:token ID="w635">46.</tc:token>
+      <tc:token ID="w636">49067</tc:token>
+      <tc:token ID="w637">,</tc:token>
+      <tc:token ID="w638">11.</tc:token>
+      <tc:token ID="w639">33982</tc:token>
+      <tc:token ID="w63a">)</tc:token>
+      <tc:token ID="w63b">wurden</tc:token>
+      <tc:token ID="w63c">über</tc:token>
+      <tc:token ID="w63d">Geonames</tc:token>
+      <tc:token ID="w63e">gefunden</tc:token>
+      <tc:token ID="w63f">.</tc:token>
+      <tc:token ID="w640">Schickt</tc:token>
+      <tc:token ID="w641">man</tc:token>
+      <tc:token ID="w642">diese</tc:token>
+      <tc:token ID="w643">mit</tc:token>
+      <tc:token ID="w644">dem</tc:token>
+      <tc:token ID="w645">Jahr</tc:token>
+      <tc:token ID="w646">an</tc:token>
+      <tc:token ID="w647">die</tc:token>
+      <tc:token ID="w648">API</tc:token>
+      <tc:token ID="w649">bekommt</tc:token>
+      <tc:token ID="w64a">man</tc:token>
+      <tc:token ID="w64b">die</tc:token>
+      <tc:token ID="w64c">Metadaten</tc:token>
+      <tc:token ID="w64d">für</tc:token>
+      <tc:token ID="w64e">Bozen</tc:token>
+      <tc:token ID="w64f">Stadt</tc:token>
+      <tc:token ID="w650">,</tc:token>
+      <tc:token ID="w651">An</tc:token>
+      <tc:token ID="w652">der</tc:token>
+      <tc:token ID="w653">Etsch</tc:token>
+      <tc:token ID="w654">,</tc:token>
+      <tc:token ID="w655">Tirol</tc:token>
+      <tc:token ID="w656">und</tc:token>
+      <tc:token ID="w657">Österreich-Ungarn</tc:token>
+      <tc:token ID="w658">zurück</tc:token>
+      <tc:token ID="w659">.</tc:token>
+      <tc:token ID="w65a">Datenmodell</tc:token>
+      <tc:token ID="w65b">,</tc:token>
+      <tc:token ID="w65c">Technische</tc:token>
+      <tc:token ID="w65d">Grundlage</tc:token>
+      <tc:token ID="w65e">und</tc:token>
+      <tc:token ID="w65f">Workflow</tc:token>
+      <tc:token ID="w660">Kartenmaterial</tc:token>
+      <tc:token ID="w661">bis</tc:token>
+      <tc:token ID="w662">dato</tc:token>
+      <tc:token ID="w663">und</tc:token>
+      <tc:token ID="w664">Ausblick</tc:token>
+      <tc:token ID="w665">Kamzelak</tc:token>
+      <tc:token ID="w666">,</tc:token>
+      <tc:token ID="w667">Roland</tc:token>
+      <tc:token ID="w668">S.</tc:token>
+      <tc:token ID="w669">(</tc:token>
+      <tc:token ID="w66a">2018</tc:token>
+      <tc:token ID="w66b">)</tc:token>
+      <tc:token ID="w66c">:</tc:token>
+      <tc:token ID="w66d">“</tc:token>
+      <tc:token ID="w66e">Von</tc:token>
+      <tc:token ID="w66f">der</tc:token>
+      <tc:token ID="w670">Raupe</tc:token>
+      <tc:token ID="w671">zum</tc:token>
+      <tc:token ID="w672">Schmetterling</tc:token>
+      <tc:token ID="w673">oder</tc:token>
+      <tc:token ID="w674">Wie</tc:token>
+      <tc:token ID="w675">fliegen</tc:token>
+      <tc:token ID="w676">lernen</tc:token>
+      <tc:token ID="w677">–</tc:token>
+      <tc:token ID="w678">Editionsphilologie</tc:token>
+      <tc:token ID="w679">zwischen</tc:token>
+      <tc:token ID="w67a">Infrastruktur</tc:token>
+      <tc:token ID="w67b">und</tc:token>
+      <tc:token ID="w67c">Semantic</tc:token>
+      <tc:token ID="w67d">Web</tc:token>
+      <tc:token ID="w67e">.</tc:token>
+      <tc:token ID="w67f">”</tc:token>
+      <tc:token ID="w680">In</tc:token>
+      <tc:token ID="w681">:</tc:token>
+      <tc:token ID="w682">Kamzelak</tc:token>
+      <tc:token ID="w683">,</tc:token>
+      <tc:token ID="w684">Roland</tc:token>
+      <tc:token ID="w685">S</tc:token>
+      <tc:token ID="w686">/</tc:token>
+      <tc:token ID="w687">Steyer</tc:token>
+      <tc:token ID="w688">,</tc:token>
+      <tc:token ID="w689">Timo</tc:token>
+      <tc:token ID="w68a">(</tc:token>
+      <tc:token ID="w68b">eds</tc:token>
+      <tc:token ID="w68c">.</tc:token>
+      <tc:token ID="w68d">)</tc:token>
+      <tc:token ID="w68e">:</tc:token>
+      <tc:token ID="w68f">Digitale</tc:token>
+      <tc:token ID="w690">Metamorphose</tc:token>
+      <tc:token ID="w691">:</tc:token>
+      <tc:token ID="w692">Digital</tc:token>
+      <tc:token ID="w693">Humanities</tc:token>
+      <tc:token ID="w694">und</tc:token>
+      <tc:token ID="w695">Editionswissenschaft</tc:token>
+      <tc:token ID="w696">.</tc:token>
+      <tc:token ID="w697">(</tc:token>
+      <tc:token ID="w698">=</tc:token>
+      <tc:token ID="w699">Sonderband</tc:token>
+      <tc:token ID="w69a">der</tc:token>
+      <tc:token ID="w69b">Zeitschrift</tc:token>
+      <tc:token ID="w69c">für</tc:token>
+      <tc:token ID="w69d">digitale</tc:token>
+      <tc:token ID="w69e">Geisteswissenschaften</tc:token>
+      <tc:token ID="w69f">,</tc:token>
+      <tc:token ID="w6a0">2</tc:token>
+      <tc:token ID="w6a1">)</tc:token>
+      <tc:token ID="w6a2">.</tc:token>
+      <tc:token ID="w6a3">text/html</tc:token>
+      <tc:token ID="w6a4">Format</tc:token>
+      <tc:token ID="w6a5">.</tc:token>
+      <tc:token ID="w6a6">DOI</tc:token>
+      <tc:token ID="w6a7">:</tc:token>
+      <tc:token ID="w6a8">10.</tc:token>
+      <tc:token ID="w6a9">17175/sb002_004</tc:token>
+      <tc:token ID="w6aa">[</tc:token>
+      <tc:token ID="w6ab">letzter</tc:token>
+      <tc:token ID="w6ac">Zugriff</tc:token>
+      <tc:token ID="w6ad">28.</tc:token>
+      <tc:token ID="w6ae">September</tc:token>
+      <tc:token ID="w6af">2018</tc:token>
+      <tc:token ID="w6b0">]</tc:token>
+      <tc:token ID="w6b1">Nüssli</tc:token>
+      <tc:token ID="w6b2">,</tc:token>
+      <tc:token ID="w6b3">Marc-Antoine</tc:token>
+      <tc:token ID="w6b4">/</tc:token>
+      <tc:token ID="w6b5">Nüssli</tc:token>
+      <tc:token ID="w6b6">,</tc:token>
+      <tc:token ID="w6b7">Christos</tc:token>
+      <tc:token ID="w6b8">(</tc:token>
+      <tc:token ID="w6b9">2017</tc:token>
+      <tc:token ID="w6ba">)</tc:token>
+      <tc:token ID="w6bb">:</tc:token>
+      <tc:token ID="w6bc">“</tc:token>
+      <tc:token ID="w6bd">A</tc:token>
+      <tc:token ID="w6be">formal</tc:token>
+      <tc:token ID="w6bf">model</tc:token>
+      <tc:token ID="w6c0">for</tc:token>
+      <tc:token ID="w6c1">historical</tc:token>
+      <tc:token ID="w6c2">atlases</tc:token>
+      <tc:token ID="w6c3">and</tc:token>
+      <tc:token ID="w6c4">historical</tc:token>
+      <tc:token ID="w6c5">knowledge</tc:token>
+      <tc:token ID="w6c6">”</tc:token>
+      <tc:token ID="w6c7">,</tc:token>
+      <tc:token ID="w6c8">http://www.academia.edu/35853762</tc:token>
+      <tc:token ID="w6c9">[</tc:token>
+      <tc:token ID="w6ca">letzter</tc:token>
+      <tc:token ID="w6cb">Zugriff</tc:token>
+      <tc:token ID="w6cc">28.</tc:token>
+      <tc:token ID="w6cd">September</tc:token>
+      <tc:token ID="w6ce">2018</tc:token>
+      <tc:token ID="w6cf">]</tc:token>
+      <tc:token ID="w6d0">Eine</tc:token>
+      <tc:token ID="w6d1">auf</tc:token>
+      <tc:token ID="w6d2">diese</tc:token>
+      <tc:token ID="w6d3">API</tc:token>
+      <tc:token ID="w6d4">aufbauende</tc:token>
+      <tc:token ID="w6d5">Abfragemaske</tc:token>
+      <tc:token ID="w6d6">findet</tc:token>
+      <tc:token ID="w6d7">sich</tc:token>
+      <tc:token ID="w6d8">hier</tc:token>
+      <tc:token ID="w6d9">:</tc:token>
+      <tc:token ID="w6da">https://histogis.acdh.oeaw.ac.at/shapes/where-was/</tc:token>
+      <tc:token ID="w6db">Beispielhaft</tc:token>
+      <tc:token ID="w6dc">das</tc:token>
+      <tc:token ID="w6dd">Polygon</tc:token>
+      <tc:token ID="w6de">für</tc:token>
+      <tc:token ID="w6df">Tirol</tc:token>
+      <tc:token ID="w6e0">:</tc:token>
+      <tc:token ID="w6e1">https://histogis.acdh.oeaw.ac.at/shapes/shape/detail/3352</tc:token>
+      <tc:token ID="w6e2">Bibliographie</tc:token>
+    </tc:tokens>
+    <tc:sentences xmlns:tc="http://www.dspin.de/data/textcorpus">
+      <tc:sentence tokenIDs="w1 w2 w3 w4 w5 w6 w7 w8 w9 wa wb wc wd we wf w10 w11 w12 w13" ID="s1"/>
+      <tc:sentence tokenIDs="w14 w15 w16 w17 w18 w19 w1a w1b w1c w1d w1e w1f w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 w2a w2b w2c w2d w2e w2f w30 w31 w32 w33" ID="s2"/>
+      <tc:sentence tokenIDs="w34 w35 w36 w37 w38 w39" ID="s3"/>
+      <tc:sentence tokenIDs="w3a w3b w3c w3d w3e w3f w40 w41 w42 w43 w44 w45 w46 w47 w48 w49 w4a w4b w4c w4d w4e w4f w50 w51 w52 w53 w54 w55 w56" ID="s4"/>
+      <tc:sentence tokenIDs="w57 w58 w59 w5a w5b w5c w5d w5e w5f w60 w61 w62 w63 w64 w65 w66 w67 w68 w69" ID="s5"/>
+      <tc:sentence tokenIDs="w6a w6b w6c" ID="s6"/>
+      <tc:sentence tokenIDs="w6d w6e w6f w70 w71 w72 w73 w74 w75 w76 w77 w78 w79 w7a w7b w7c w7d w7e" ID="s7"/>
+      <tc:sentence tokenIDs="w7f w80 w81 w82 w83 w84 w85 w86 w87 w88 w89 w8a w8b w8c w8d w8e w8f w90 w91 w92 w93 w94 w95 w96 w97 w98 w99 w9a w9b w9c w9d w9e w9f" ID="s8"/>
+      <tc:sentence tokenIDs="wa0 wa1 wa2 wa3 wa4 wa5 wa6 wa7 wa8 wa9 waa wab wac wad wae waf" ID="s9"/>
+      <tc:sentence tokenIDs="wb0 wb1 wb2 wb3 wb4 wb5 wb6 wb7 wb8 wb9 wba wbb wbc wbd wbe" ID="sa"/>
+      <tc:sentence tokenIDs="wbf wc0 wc1 wc2 wc3 wc4 wc5 wc6 wc7 wc8 wc9 wca wcb wcc wcd wce wcf wd0 wd1 wd2" ID="sb"/>
+      <tc:sentence tokenIDs="wd3 wd4 wd5 wd6 wd7 wd8 wd9 wda wdb wdc" ID="sc"/>
+      <tc:sentence tokenIDs="wdd wde wdf we0 we1 we2 we3 we4 we5 we6 we7 we8 we9 wea web wec wed wee wef wf0 wf1 wf2 wf3 wf4 wf5 wf6 wf7 wf8 wf9 wfa wfb wfc wfd wfe wff" ID="sd"/>
+      <tc:sentence tokenIDs="w100 w101 w102 w103 w104 w105 w106 w107 w108 w109 w10a w10b w10c w10d w10e w10f w110 w111 w112 w113 w114 w115 w116 w117" ID="se"/>
+      <tc:sentence tokenIDs="w118 w119 w11a w11b w11c w11d w11e w11f w120 w121 w122 w123 w124 w125" ID="sf"/>
+      <tc:sentence tokenIDs="w126 w127 w128 w129 w12a w12b w12c w12d w12e w12f w130 w131 w132 w133 w134 w135 w136 w137 w138 w139 w13a w13b w13c w13d w13e w13f w140 w141 w142 w143 w144 w145 w146 w147 w148 w149 w14a" ID="s10"/>
+      <tc:sentence tokenIDs="w14b w14c w14d w14e w14f w150 w151 w152 w153 w154 w155 w156 w157 w158 w159 w15a w15b w15c w15d w15e w15f w160 w161 w162 w163 w164 w165 w166 w167 w168 w169 w16a w16b w16c w16d w16e w16f w170 w171 w172 w173 w174 w175 w176 w177 w178 w179 w17a w17b w17c w17d w17e" ID="s11"/>
+      <tc:sentence tokenIDs="w17f w180 w181 w182 w183 w184 w185 w186 w187 w188 w189 w18a w18b w18c w18d w18e w18f w190 w191 w192 w193 w194 w195 w196 w197 w198 w199 w19a w19b w19c w19d w19e w19f" ID="s12"/>
+      <tc:sentence tokenIDs="w1a0 w1a1 w1a2 w1a3 w1a4 w1a5 w1a6 w1a7 w1a8 w1a9 w1aa w1ab w1ac w1ad w1ae w1af w1b0 w1b1 w1b2 w1b3" ID="s13"/>
+      <tc:sentence tokenIDs="w1b4 w1b5 w1b6 w1b7 w1b8 w1b9 w1ba w1bb w1bc w1bd w1be w1bf w1c0 w1c1 w1c2 w1c3 w1c4 w1c5 w1c6 w1c7 w1c8 w1c9 w1ca" ID="s14"/>
+      <tc:sentence tokenIDs="w1cb w1cc w1cd w1ce w1cf w1d0 w1d1 w1d2 w1d3 w1d4 w1d5 w1d6 w1d7 w1d8 w1d9 w1da w1db w1dc w1dd w1de w1df w1e0 w1e1 w1e2 w1e3 w1e4 w1e5 w1e6 w1e7 w1e8 w1e9 w1ea w1eb w1ec w1ed w1ee w1ef w1f0 w1f1 w1f2 w1f3 w1f4 w1f5 w1f6 w1f7 w1f8 w1f9 w1fa w1fb w1fc w1fd w1fe w1ff w200 w201 w202 w203 w204 w205 w206 w207 w208 w209 w20a w20b w20c w20d w20e w20f w210 w211 w212 w213 w214 w215 w216 w217 w218 w219" ID="s15"/>
+      <tc:sentence tokenIDs="w21a w21b w21c w21d w21e w21f w220 w221 w222 w223 w224 w225 w226 w227 w228 w229 w22a w22b w22c w22d w22e w22f w230 w231 w232 w233 w234 w235 w236 w237 w238 w239 w23a w23b w23c w23d w23e w23f w240 w241 w242 w243 w244 w245 w246 w247" ID="s16"/>
+      <tc:sentence tokenIDs="w248 w249 w24a w24b w24c w24d w24e w24f w250 w251 w252 w253 w254 w255 w256 w257 w258 w259 w25a w25b w25c w25d w25e w25f w260 w261 w262 w263" ID="s17"/>
+      <tc:sentence tokenIDs="w264 w265 w266 w267 w268 w269 w26a w26b w26c w26d w26e w26f w270 w271 w272 w273 w274 w275 w276 w277 w278 w279 w27a w27b" ID="s18"/>
+      <tc:sentence tokenIDs="w27c w27d w27e w27f w280 w281 w282 w283 w284 w285 w286 w287 w288 w289 w28a w28b w28c w28d w28e w28f w290 w291 w292 w293 w294 w295 w296 w297" ID="s19"/>
+      <tc:sentence tokenIDs="w298 w299 w29a w29b w29c w29d w29e w29f w2a0 w2a1 w2a2 w2a3 w2a4 w2a5 w2a6 w2a7 w2a8" ID="s1a"/>
+      <tc:sentence tokenIDs="w2a9 w2aa w2ab w2ac w2ad w2ae" ID="s1b"/>
+      <tc:sentence tokenIDs="w2af w2b0 w2b1 w2b2 w2b3 w2b4 w2b5 w2b6 w2b7 w2b8 w2b9 w2ba w2bb w2bc w2bd w2be w2bf" ID="s1c"/>
+      <tc:sentence tokenIDs="w2c0 w2c1 w2c2 w2c3 w2c4 w2c5 w2c6 w2c7 w2c8 w2c9 w2ca w2cb w2cc w2cd w2ce w2cf w2d0 w2d1 w2d2 w2d3 w2d4 w2d5 w2d6 w2d7 w2d8 w2d9 w2da w2db w2dc w2dd w2de w2df w2e0 w2e1 w2e2 w2e3 w2e4 w2e5 w2e6 w2e7 w2e8 w2e9 w2ea w2eb w2ec w2ed w2ee w2ef w2f0" ID="s1d"/>
+      <tc:sentence tokenIDs="w2f1 w2f2 w2f3 w2f4 w2f5 w2f6 w2f7 w2f8 w2f9 w2fa w2fb w2fc w2fd w2fe w2ff w300 w301 w302 w303 w304 w305 w306 w307 w308 w309 w30a w30b w30c w30d w30e w30f w310 w311" ID="s1e"/>
+      <tc:sentence tokenIDs="w312 w313 w314 w315 w316 w317 w318 w319 w31a w31b w31c w31d w31e w31f w320 w321 w322 w323 w324" ID="s1f"/>
+      <tc:sentence tokenIDs="w325 w326 w327 w328 w329 w32a w32b w32c w32d w32e w32f w330 w331 w332 w333 w334 w335 w336 w337 w338 w339 w33a w33b w33c w33d w33e w33f w340 w341 w342 w343 w344 w345 w346 w347 w348 w349 w34a w34b w34c w34d w34e" ID="s20"/>
+      <tc:sentence tokenIDs="w34f w350 w351 w352 w353 w354 w355 w356 w357 w358 w359 w35a w35b w35c w35d w35e w35f w360 w361 w362 w363 w364 w365 w366 w367 w368 w369 w36a w36b w36c w36d w36e w36f w370 w371 w372 w373 w374 w375 w376 w377 w378" ID="s21"/>
+      <tc:sentence tokenIDs="w379 w37a w37b w37c w37d w37e w37f w380 w381 w382 w383 w384 w385 w386 w387 w388 w389 w38a w38b w38c w38d w38e w38f w390 w391 w392 w393 w394 w395 w396 w397 w398 w399 w39a w39b w39c w39d w39e w39f w3a0 w3a1 w3a2 w3a3" ID="s22"/>
+      <tc:sentence tokenIDs="w3a4 w3a5 w3a6 w3a7 w3a8 w3a9 w3aa w3ab w3ac w3ad w3ae w3af w3b0 w3b1 w3b2 w3b3 w3b4 w3b5 w3b6 w3b7 w3b8 w3b9 w3ba w3bb w3bc w3bd w3be w3bf w3c0 w3c1" ID="s23"/>
+      <tc:sentence tokenIDs="w3c2 w3c3 w3c4 w3c5 w3c6 w3c7 w3c8 w3c9 w3ca w3cb w3cc w3cd w3ce w3cf w3d0 w3d1 w3d2 w3d3 w3d4 w3d5 w3d6 w3d7 w3d8 w3d9 w3da w3db w3dc w3dd w3de w3df w3e0 w3e1 w3e2" ID="s24"/>
+      <tc:sentence tokenIDs="w3e3 w3e4 w3e5 w3e6 w3e7 w3e8 w3e9 w3ea w3eb w3ec w3ed w3ee w3ef w3f0 w3f1 w3f2 w3f3 w3f4 w3f5 w3f6 w3f7 w3f8 w3f9 w3fa w3fb w3fc w3fd w3fe w3ff w400 w401 w402 w403" ID="s25"/>
+      <tc:sentence tokenIDs="w404 w405 w406 w407 w408 w409 w40a w40b w40c w40d w40e w40f w410 w411 w412 w413 w414 w415 w416 w417 w418 w419 w41a w41b w41c w41d" ID="s26"/>
+      <tc:sentence tokenIDs="w41e w41f w420 w421 w422 w423 w424 w425" ID="s27"/>
+      <tc:sentence tokenIDs="w426 w427 w428 w429 w42a w42b w42c w42d w42e w42f w430" ID="s28"/>
+      <tc:sentence tokenIDs="w431 w432 w433 w434 w435 w436 w437 w438 w439 w43a w43b w43c w43d w43e w43f w440 w441 w442 w443 w444 w445 w446 w447 w448 w449 w44a w44b w44c w44d w44e w44f w450 w451 w452 w453 w454 w455 w456 w457 w458" ID="s29"/>
+      <tc:sentence tokenIDs="w459 w45a w45b w45c w45d w45e w45f w460 w461 w462 w463 w464 w465 w466 w467 w468" ID="s2a"/>
+      <tc:sentence tokenIDs="w469 w46a w46b w46c w46d w46e w46f w470 w471 w472 w473 w474 w475 w476 w477" ID="s2b"/>
+      <tc:sentence tokenIDs="w478 w479 w47a w47b w47c w47d w47e w47f w480 w481 w482 w483" ID="s2c"/>
+      <tc:sentence tokenIDs="w484 w485 w486 w487 w488 w489 w48a w48b w48c w48d w48e w48f w490 w491 w492 w493 w494 w495 w496 w497 w498 w499 w49a w49b w49c w49d w49e w49f w4a0 w4a1 w4a2 w4a3 w4a4 w4a5 w4a6 w4a7 w4a8 w4a9 w4aa w4ab w4ac w4ad" ID="s2d"/>
+      <tc:sentence tokenIDs="w4ae w4af w4b0 w4b1 w4b2 w4b3 w4b4 w4b5 w4b6 w4b7 w4b8 w4b9 w4ba w4bb w4bc w4bd w4be w4bf w4c0" ID="s2e"/>
+      <tc:sentence tokenIDs="w4c1 w4c2 w4c3 w4c4 w4c5 w4c6 w4c7 w4c8 w4c9 w4ca w4cb w4cc w4cd w4ce w4cf w4d0 w4d1 w4d2 w4d3 w4d4 w4d5 w4d6" ID="s2f"/>
+      <tc:sentence tokenIDs="w4d7 w4d8 w4d9 w4da w4db w4dc w4dd w4de w4df w4e0 w4e1 w4e2 w4e3 w4e4 w4e5 w4e6 w4e7 w4e8 w4e9 w4ea" ID="s30"/>
+      <tc:sentence tokenIDs="w4eb w4ec w4ed w4ee w4ef w4f0 w4f1 w4f2 w4f3 w4f4 w4f5 w4f6 w4f7 w4f8" ID="s31"/>
+      <tc:sentence tokenIDs="w4f9 w4fa w4fb w4fc w4fd w4fe w4ff w500 w501 w502 w503 w504 w505 w506 w507 w508 w509 w50a w50b w50c w50d w50e w50f w510 w511" ID="s32"/>
+      <tc:sentence tokenIDs="w512 w513 w514 w515 w516 w517 w518 w519 w51a w51b w51c w51d w51e w51f w520 w521 w522 w523 w524 w525 w526 w527 w528 w529 w52a" ID="s33"/>
+      <tc:sentence tokenIDs="w52b w52c w52d w52e w52f w530 w531 w532 w533 w534 w535 w536 w537 w538 w539 w53a" ID="s34"/>
+      <tc:sentence tokenIDs="w53b w53c w53d w53e w53f w540" ID="s35"/>
+      <tc:sentence tokenIDs="w541 w542 w543 w544 w545 w546 w547 w548 w549 w54a w54b w54c w54d w54e w54f w550 w551 w552 w553 w554 w555 w556 w557 w558 w559 w55a w55b w55c w55d w55e w55f w560 w561 w562 w563 w564 w565 w566 w567 w568 w569 w56a w56b w56c w56d w56e w56f w570" ID="s36"/>
+      <tc:sentence tokenIDs="w571 w572 w573 w574 w575 w576 w577 w578 w579 w57a w57b w57c w57d w57e w57f w580 w581 w582 w583 w584" ID="s37"/>
+      <tc:sentence tokenIDs="w585 w586 w587 w588 w589 w58a w58b w58c w58d w58e w58f w590 w591 w592 w593 w594 w595 w596 w597 w598 w599" ID="s38"/>
+      <tc:sentence tokenIDs="w59a w59b w59c w59d w59e w59f w5a0 w5a1 w5a2 w5a3 w5a4 w5a5 w5a6 w5a7 w5a8 w5a9 w5aa w5ab w5ac w5ad w5ae w5af w5b0 w5b1 w5b2 w5b3 w5b4 w5b5 w5b6 w5b7 w5b8 w5b9 w5ba" ID="s39"/>
+      <tc:sentence tokenIDs="w5bb w5bc w5bd w5be w5bf w5c0 w5c1 w5c2 w5c3 w5c4 w5c5 w5c6 w5c7 w5c8 w5c9 w5ca w5cb w5cc w5cd w5ce w5cf w5d0 w5d1 w5d2 w5d3" ID="s3a"/>
+      <tc:sentence tokenIDs="w5d4 w5d5 w5d6 w5d7 w5d8 w5d9 w5da w5db w5dc w5dd w5de w5df w5e0 w5e1 w5e2 w5e3 w5e4 w5e5 w5e6 w5e7 w5e8 w5e9 w5ea w5eb w5ec w5ed w5ee w5ef w5f0 w5f1 w5f2 w5f3 w5f4 w5f5 w5f6 w5f7 w5f8 w5f9 w5fa w5fb w5fc w5fd w5fe w5ff w600 w601 w602 w603 w604 w605 w606 w607 w608 w609 w60a w60b w60c w60d w60e w60f w610 w611 w612 w613 w614 w615 w616 w617 w618 w619 w61a w61b w61c w61d w61e w61f" ID="s3b"/>
+      <tc:sentence tokenIDs="w620 w621 w622 w623" ID="s3c"/>
+      <tc:sentence tokenIDs="w624 w625 w626 w627 w628 w629 w62a w62b" ID="s3d"/>
+      <tc:sentence tokenIDs="w62c w62d w62e w62f w630 w631" ID="s3e"/>
+      <tc:sentence tokenIDs="w632 w633 w634 w635 w636 w637 w638 w639 w63a w63b w63c w63d w63e w63f" ID="s3f"/>
+      <tc:sentence tokenIDs="w640 w641 w642 w643 w644 w645 w646 w647 w648 w649 w64a w64b w64c w64d w64e w64f w650 w651 w652 w653 w654 w655 w656 w657 w658 w659 w65a w65b w65c w65d w65e w65f w660 w661 w662 w663 w664 w665 w666 w667 w668 w669 w66a w66b w66c" ID="s40"/>
+      <tc:sentence tokenIDs="w66d w66e w66f w670 w671 w672 w673 w674 w675 w676 w677 w678 w679 w67a w67b w67c w67d w67e w67f" ID="s41"/>
+      <tc:sentence tokenIDs="w680 w681 w682 w683 w684 w685 w686 w687 w688 w689 w68a w68b w68c w68d w68e w68f w690 w691 w692 w693 w694 w695 w696 w697 w698 w699 w69a w69b w69c w69d w69e w69f w6a0 w6a1 w6a2 w6a3 w6a4 w6a5" ID="s42"/>
+      <tc:sentence tokenIDs="w6a6 w6a7 w6a8 w6a9 w6aa w6ab w6ac w6ad w6ae w6af w6b0 w6b1 w6b2 w6b3 w6b4 w6b5 w6b6 w6b7 w6b8 w6b9 w6ba w6bb" ID="s43"/>
+      <tc:sentence tokenIDs="w6bc w6bd w6be w6bf w6c0 w6c1 w6c2 w6c3 w6c4 w6c5 w6c6 w6c7 w6c8 w6c9 w6ca w6cb w6cc w6cd w6ce w6cf w6d0 w6d1 w6d2 w6d3 w6d4 w6d5 w6d6 w6d7 w6d8 w6d9 w6da w6db w6dc w6dd w6de w6df w6e0 w6e1 w6e2" ID="s44"/>
+    </tc:sentences>
+    <tc:namedEntities xmlns:tc="http://www.dspin.de/data/textcorpus" type="tuebadz8">
+      <tc:entity class="GPE" tokenIDs="w40"/>
+      <tc:entity class="LOC" tokenIDs="w4a w4b"/>
+      <tc:entity class="PER" tokenIDs="w4e"/>
+      <tc:entity class="GPE" tokenIDs="w91"/>
+      <tc:entity class="ORG" tokenIDs="wce"/>
+      <tc:entity class="LOC" tokenIDs="wde"/>
+      <tc:entity class="ORG" tokenIDs="w118"/>
+      <tc:entity class="GPE" tokenIDs="w151"/>
+      <tc:entity class="GPE" tokenIDs="w162"/>
+      <tc:entity class="ORG" tokenIDs="w16b w16c"/>
+      <tc:entity class="GPE" tokenIDs="w176"/>
+      <tc:entity class="OTH" tokenIDs="w446 w447"/>
+      <tc:entity class="ORG" tokenIDs="w474"/>
+      <tc:entity class="ORG" tokenIDs="w494"/>
+      <tc:entity class="ORG" tokenIDs="w50c w50d"/>
+      <tc:entity class="GPE" tokenIDs="w51c"/>
+      <tc:entity class="ORG" tokenIDs="w51f w520"/>
+      <tc:entity class="ORG" tokenIDs="w58c"/>
+      <tc:entity class="ORG" tokenIDs="w5d7"/>
+      <tc:entity class="ORG" tokenIDs="w5f1 w5f2"/>
+      <tc:entity class="PER" tokenIDs="w62f"/>
+      <tc:entity class="ORG" tokenIDs="w63d"/>
+      <tc:entity class="ORG" tokenIDs="w648"/>
+      <tc:entity class="GPE" tokenIDs="w64e"/>
+      <tc:entity class="LOC" tokenIDs="w653"/>
+      <tc:entity class="GPE" tokenIDs="w655"/>
+      <tc:entity class="GPE" tokenIDs="w657"/>
+      <tc:entity class="PER" tokenIDs="w665"/>
+      <tc:entity class="PER" tokenIDs="w667 w668"/>
+      <tc:entity class="PER" tokenIDs="w682"/>
+      <tc:entity class="PER" tokenIDs="w684 w685"/>
+      <tc:entity class="PER" tokenIDs="w687"/>
+      <tc:entity class="PER" tokenIDs="w689"/>
+      <tc:entity class="ORG" tokenIDs="w692 w693 w694 w695"/>
+      <tc:entity class="ORG" tokenIDs="w69b"/>
+      <tc:entity class="ORG" tokenIDs="w6b1"/>
+      <tc:entity class="PER" tokenIDs="w6b3"/>
+      <tc:entity class="PER" tokenIDs="w6b5"/>
+      <tc:entity class="PER" tokenIDs="w6b7"/>
+      <tc:entity class="GPE" tokenIDs="w6df"/>
+    </tc:namedEntities>
+  </TextCorpus>
+</D-Spin>

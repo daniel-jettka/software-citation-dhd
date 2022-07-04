@@ -1,0 +1,1212 @@
+<?xml version='1.0' encoding='UTF-8'?><D-Spin xmlns="http://www.dspin.de/data" version="5">
+  <MetaData xmlns="http://www.dspin.de/data/metadata"><Services><cmd:CMD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cmd="http://www.clarin.eu/cmd/1" CMDVersion="1.2" xsi:schemaLocation="http://www.clarin.eu/cmd/1 http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_1320657629623/xsd"><cmd:Resources><cmd:ResourceProxyList/><cmd:JournalFileProxyList/><cmd:ResourceRelationList/></cmd:Resources><cmd:Components><cmd:WebServiceToolChain><cmd:GeneralInfo><cmd:Descriptions><cmd:Description/></cmd:Descriptions><cmd:ResourceName>Custom chain</cmd:ResourceName><cmd:ResourceClass>Toolchain</cmd:ResourceClass></cmd:GeneralInfo><cmd:Toolchain><cmd:ToolInChain><cmd:PID>https://hdl.handle.net/21.11120/0000-0008-319A-3</cmd:PID><cmd:Parameter value="de" name="lang"/></cmd:ToolInChain><cmd:ToolInChain><cmd:PID>https://hdl.handle.net/21.11120/0000-0008-3183-C</cmd:PID><cmd:Parameter value="5" name="version"/></cmd:ToolInChain><cmd:ToolInChain><cmd:PID>http://hdl.handle.net/11022/0000-0007-DA29-6</cmd:PID><cmd:Parameter value="de" name="lang"/><cmd:Parameter value="5" name="version"/></cmd:ToolInChain></cmd:Toolchain></cmd:WebServiceToolChain></cmd:Components></cmd:CMD></Services></MetaData>
+  <TextCorpus xmlns="http://www.dspin.de/data/textcorpus" lang="de">
+    <textSource type="application/tei+xml;format-variant=tei-dta;tokenized=0">&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="posters-008">
+&lt;teiHeader>
+&lt;fileDesc>
+&lt;titleStmt>
+&lt;title>"Bleeding Edge" &amp;#8211; Datenmodellierung, Softwareentwicklung und die Freuden und Leiden forschungsgetriebener Entwicklung am Beispiel der Datenbank der Islamic Scientific Manuscript Initiative (ISMI)&lt;/title>
+&lt;author>
+&lt;name>
+&lt;surname>Casties&lt;/surname>
+&lt;forename>Robert&lt;/forename>
+&lt;/name>
+&lt;affiliation>MPI für Wissenschaftsgeschichte, Deutschland&lt;/affiliation>
+&lt;email>casties@mpiwg-berlin.mpg.de&lt;/email>
+&lt;/author>
+&lt;/titleStmt>
+&lt;editionStmt>
+&lt;edition>
+&lt;date>2015-10-18T16:58:40.184484000&lt;/date>
+&lt;/edition>
+&lt;/editionStmt>
+&lt;publicationStmt>
+&lt;publisher>Elisabeth Burr, Universität Leipzig&lt;/publisher>
+&lt;address>
+&lt;addrLine>Beethovenstr. 15&lt;/addrLine>
+&lt;addrLine>04107 Leipzig&lt;/addrLine>
+&lt;addrLine>Deutschland&lt;/addrLine>
+&lt;addrLine>Elisabeth Burr&lt;/addrLine>
+&lt;/address>
+&lt;/publicationStmt>
+&lt;sourceDesc>
+&lt;p>Converted from an OASIS Open Document&lt;/p>
+&lt;/sourceDesc>
+&lt;/fileDesc>
+&lt;encodingDesc>
+&lt;appInfo>
+&lt;application ident="DHCONVALIDATOR" version="1.17">
+&lt;label>DHConvalidator&lt;/label>
+&lt;/application>
+&lt;/appInfo>
+&lt;/encodingDesc>
+&lt;profileDesc>
+&lt;textClass>
+&lt;keywords scheme="ConfTool" n="category">
+&lt;term>Poster&lt;/term>
+&lt;/keywords>
+&lt;keywords scheme="ConfTool" n="subcategory">
+&lt;term>&lt;/term>
+&lt;/keywords>
+&lt;keywords scheme="ConfTool" n="keywords">
+&lt;term>islamische manuskripte&lt;/term>
+&lt;term>bibliographische datenbank&lt;/term>
+&lt;term>entwicklung&lt;/term>
+&lt;term>netzwerke&lt;/term>
+&lt;term>visualisierung&lt;/term>
+&lt;/keywords>
+&lt;keywords scheme="ConfTool" n="topics">
+&lt;term>Sammlung&lt;/term>
+&lt;term>Programmierung&lt;/term>
+&lt;term>Archivierung&lt;/term>
+&lt;term>Netzwerkanalyse&lt;/term>
+&lt;term>Kollaboration&lt;/term>
+&lt;term>Bibliographie&lt;/term>
+&lt;term>Daten&lt;/term>
+&lt;term>Manuskript&lt;/term>
+&lt;term>Personen&lt;/term>
+&lt;term>Software&lt;/term>
+&lt;/keywords>
+&lt;/textClass>
+&lt;/profileDesc>
+&lt;/teiHeader>
+&lt;text>
+&lt;body>
+&lt;div type="div1" rend="DH-Heading">
+&lt;head>Wissenschaftliche Manuskripte des Islamischen Raums&lt;/head>
+&lt;p>Das ISMI Projekt (Islamic Scientific Manuscripts Initiative) ist ein gemeinsames Projekt des Max-Planck-Instituts für Wissenschaftsgeschichte und des Institute of Islamic Studies der McGill University in Montreal mit dem Ziel Informationen über alle islamischen Manuskripte in den "exakten Wissenschaften" (Astronomie, Mathematik, Optik, Mathematische Geographie, Musik, Mechanik und verwandte Disziplinen) in Arabisch, Persisch, Türkisch und anderen Sprachen aus der Zeit zwischen dem 8. und dem 19. Jahrhundert (CE) zu sammeln.&lt;/p>
+&lt;p>Im Projekt werden vor allem bibliographische und kodikologische Informationen zu den Manuskripten gesammelt, aber auch Informationen zu Nutzung und Besitz der Manuskripte und damit verbundenen Orten und Personen, die sich aus Kommentaren, Verkaufsbemerkungen und anderen Anmerkungen auf dem Manuskript ergeben können.&lt;/p>
+&lt;p>Arabische Manuskripte, aber auch andere alte Handschriften stellen besondere Anforderungen an die Datenmodellierung einer bibliographischen Datenbank. Informationen über Autor, Titel und Erstellungsdatum, die Standardfelder eines modernen bibliographischen Eintrags sind oft genug unbekannt. Dazu kommen viele unterschiedliche Schreibweisen des Namens einer Person und viele Fälle gleicher Namen, die zu unterschiedlichen Personen gehören. Es gibt viele Kopien des gleichen Textes von unterschiedlichen Kopisten und eine elaborierte Kultur von Kommentaren und Kommentaren höherer Ordnung.&lt;/p>
+&lt;p>Zusätzlich zu den bibliographischen Informationen werden auch Digitalisate präsentiert wenn sie vorhanden sind und die Lizenzbedingungen eine öffentliche Präsentation zulassen.&lt;/p>
+&lt;/div>
+&lt;div type="div1" rend="DH-Heading">
+&lt;head>Von Tabellen zu Daten-Graphen&lt;/head>
+&lt;p>Die ursprüngliche ISMI Datenbank, erstellt von Prof. Jamil Ragep bestand aus einem Satz von relationalen Tabellen in MS-Access. In dieser Struktur gab es bereits die für die Arbeit mit Manuskripten wichtige Unterscheidung von abstraktem Text und der konkreten Manifestation in Form eines Manuskripts durch getrennte Tabellen für Texte und Manuskripte. Diese Unterscheidung erleichtert den Umgang mit vielen verschiedenen Kopien des gleichen Texts und erlaubt es den Blick auf die Beziehungen der Texte untereinander zu richten und beispielsweise durch zusätzliche Spalten Kommentarbeziehungen bis zu dritten Ordnung abzubilden.&lt;/p>
+&lt;p>Es schloss sich 2006 eine neue konzeptionelle Phase an, in der in Zusammenarbeit mit der IT-Gruppe des MPIWG ein neues Datenmodell entworfen wurde. Das neue Datenmodell orientiert sich an konzeptionellen Objekten, die es teilweise bereits im alten Datenbankschema gab: Texten, Manuskripten und Personen mit ihren jeweiligen Attributen und erweitert es durch weitere Objekttypen und individuelle Relations-Objekte mit frei definierbaren Typen und Attributen.&lt;/p>
+&lt;p>Das neue Modell sollte in der Software als möglichst flexible Attribut-Graph-Datenbank umgesetzt werden, so dass es jederzeit möglich sein sollte Objekten zusätzliche Attribute zu geben oder zusätzliche Relationen einzuführen, sobald dies während des Prozesses der Dateneingabe sinnvoll erscheint.&lt;/p>
+&lt;p>Im neuen Modell wurde beispielsweise die feste Relation des Author-ID Feldes der Text-Tabelle zur Autor-Tabelle durch ein Relationsobjekt des Typs "was_created_by" zwischen einem Text-Objekt und einem Personen-Objekt ersetzt.&lt;/p>
+&lt;/div>
+&lt;div type="div1" rend="DH-Heading">
+&lt;head>Neue Möglichkeiten durch ein neues Datenmodell&lt;/head>
+&lt;p>Die mit dem neuen Datenmodell einhergehende Umstellung des Umgangs mit Daten von der vergleichsweise vertrauten Welt der Tabellen und tabellarischen Daten in eine Welt individueller Objekte und Relationen erweist sich bis heute einerseits als Chance, andererseits aber auch als Herausforderung in technischer und konzeptioneller Hinsicht.&lt;/p>
+&lt;p>Die Chancen zeigten sich in den Diskussionen über das Datenmodell und während der Dateneingabe. So entstanden neue Ideen wie das Konzept auch falsche Zuschreibungen (Misattribution) abzubilden: Wenn in der Literatur für lange Zeit eine Zuschreibung für die Autorschaft eines bestimmten Textes existiert, die sich im Lauf der aktuellen Forschung als falsch herausstellt, dann ist es wichtig nicht nur die korrigierte Information aufzunehmen und anzuzeigen, sondern auch die als inkorrekt markierte alte Zuschreibung, um Forscher darauf hinzuweisen, dass die alte Zuschreibung bekannt ist und dass sie durch neue Informationen überholt ist.&lt;/p>
+&lt;/div>
+&lt;div type="div1" rend="DH-Heading">
+&lt;head>Herausforderungen durch neue Technologie&lt;/head>
+&lt;p>Der Preis für das neue Datenmodell war neben der konzeptionellen Arbeit des Umdenkens und der Umstellung der bestehenden Daten zunächst vor allem die Abwesenheit von existierender Software zur effektiven Umsetzung der geplanten Datenstrukturen. Zum Zeitpunkt der Umstellung existierte keine verbreitete Graphendatenbanksoftware, so dass in mehreren Anläufen eine spezifische Datenbank „OpenMind“ und ein webbasiertes &lt;ref target="https://it-dev.mpiwg-berlin.mpg.de/tracs/ismi">Frontend&lt;/ref>
+
+        entwickelt wurde. Der Aufwand für die Wartung der Software und die Implementierung neuer Anforderungen steigt jedoch ständig.
+&lt;/p>
+&lt;p>Eine weitere Herausforderung, die sich nach der Eingabe grosser Datenmengen (derzeit 4000 Texte in 14000 Manuskripten in 7500 Codices und 2200 Personen) stellt, ist die Suche und Analyse der Daten. Vorhandene Werkzeuge, wie tabellenorientierte Abfragen sind auf den Graphen von Daten-Objekten nicht ohne weiteres anwendbar und es müssen Abfrage-Oberflächen entwickelt werden, die es ermöglichen das Potential der vernetzten Daten auch für die Forschenden nutzbar zu machen.&lt;/p>
+&lt;p>Neben der eher klassischen Webpräsentation und Browsing-Umgebung werden derzeit verschiedene Graphen-Visualisierungs- und Abfragetools getestet. In einem geplanten Workshop soll eine grösserer Kreis von Fachwissenschaftlern Zugang zur Datenbank und den experimentellen Werkzeugen erhalten um eine weitere Diskussion in Gang zu setzen und Erfahrungen und mögliche Fragestellungen für die weitere Entwicklung zu sammeln.&lt;/p>
+&lt;/div>
+&lt;/body>
+&lt;back>
+&lt;div type="bibliogr">
+&lt;listBibl>
+&lt;head>Bibliographie&lt;/head>
+&lt;bibl>&lt;hi rend="bold">Ragep, Jamil F. / Ragep, Sally P.&lt;/hi> (2008): „The
+
+        Islamic Scientific  Manuscript Initiative (ISMI). Towards a Sociology of the
+
+        Exact Sciences in Islam“, in: Calvo, Emilia / Comes, Mercè / Puig, Roser /
+
+        Rius, Monica (eds.): &lt;hi rend="italic">A Shared Legacy: Islamic Science East
+
+        and West&lt;/hi>. Homage to Professor J. M. Millàs Vallicrosa. Barcelona:
+
+        University of Barcelona 15–21 &lt;ref
+
+        target="https://www.rasi.mcgill.ca/ISMI_SharedLegacy.pdf"
+>https://www.rasi.mcgill.ca/ISMI_SharedLegacy.pdf&lt;/ref> [letzter Zugriff
+
+        17. Februar 2016].&lt;/bibl>
+&lt;/listBibl>
+&lt;/div>
+&lt;/back>
+&lt;/text>
+&lt;/TEI>
+    </textSource>
+    <text>
+
+
+Das ISMI Projekt (Islamic Scientific Manuscripts Initiative) ist ein gemeinsames Projekt des Max-Planck-Instituts für Wissenschaftsgeschichte und des Institute of Islamic Studies der McGill University in Montreal mit dem Ziel Informationen über alle islamischen Manuskripte in den "exakten Wissenschaften" (Astronomie, Mathematik, Optik, Mathematische Geographie, Musik, Mechanik und verwandte Disziplinen) in Arabisch, Persisch, Türkisch und anderen Sprachen aus der Zeit zwischen dem 8. und dem 19. Jahrhundert (CE) zu sammeln.
+
+  
+
+Im Projekt werden vor allem bibliographische und kodikologische Informationen zu den Manuskripten gesammelt, aber auch Informationen zu Nutzung und Besitz der Manuskripte und damit verbundenen Orten und Personen, die sich aus Kommentaren, Verkaufsbemerkungen und anderen Anmerkungen auf dem Manuskript ergeben können.
+
+  
+
+Arabische Manuskripte, aber auch andere alte Handschriften stellen besondere Anforderungen an die Datenmodellierung einer bibliographischen Datenbank. Informationen über Autor, Titel und Erstellungsdatum, die Standardfelder eines modernen bibliographischen Eintrags sind oft genug unbekannt. Dazu kommen viele unterschiedliche Schreibweisen des Namens einer Person und viele Fälle gleicher Namen, die zu unterschiedlichen Personen gehören. Es gibt viele Kopien des gleichen Textes von unterschiedlichen Kopisten und eine elaborierte Kultur von Kommentaren und Kommentaren höherer Ordnung.
+
+  
+
+Zusätzlich zu den bibliographischen Informationen werden auch Digitalisate präsentiert wenn sie vorhanden sind und die Lizenzbedingungen eine öffentliche Präsentation zulassen.
+
+  
+
+
+Die ursprüngliche ISMI Datenbank, erstellt von Prof. Jamil Ragep bestand aus einem Satz von relationalen Tabellen in MS-Access. In dieser Struktur gab es bereits die für die Arbeit mit Manuskripten wichtige Unterscheidung von abstraktem Text und der konkreten Manifestation in Form eines Manuskripts durch getrennte Tabellen für Texte und Manuskripte. Diese Unterscheidung erleichtert den Umgang mit vielen verschiedenen Kopien des gleichen Texts und erlaubt es den Blick auf die Beziehungen der Texte untereinander zu richten und beispielsweise durch zusätzliche Spalten Kommentarbeziehungen bis zu dritten Ordnung abzubilden.
+
+  
+
+Es schloss sich 2006 eine neue konzeptionelle Phase an, in der in Zusammenarbeit mit der IT-Gruppe des MPIWG ein neues Datenmodell entworfen wurde. Das neue Datenmodell orientiert sich an konzeptionellen Objekten, die es teilweise bereits im alten Datenbankschema gab: Texten, Manuskripten und Personen mit ihren jeweiligen Attributen und erweitert es durch weitere Objekttypen und individuelle Relations-Objekte mit frei definierbaren Typen und Attributen.
+
+  
+
+Das neue Modell sollte in der Software als möglichst flexible Attribut-Graph-Datenbank umgesetzt werden, so dass es jederzeit möglich sein sollte Objekten zusätzliche Attribute zu geben oder zusätzliche Relationen einzuführen, sobald dies während des Prozesses der Dateneingabe sinnvoll erscheint.
+
+  
+
+Im neuen Modell wurde beispielsweise die feste Relation des Author-ID Feldes der Text-Tabelle zur Autor-Tabelle durch ein Relationsobjekt des Typs "was_created_by" zwischen einem Text-Objekt und einem Personen-Objekt ersetzt.
+
+  
+
+
+Die mit dem neuen Datenmodell einhergehende Umstellung des Umgangs mit Daten von der vergleichsweise vertrauten Welt der Tabellen und tabellarischen Daten in eine Welt individueller Objekte und Relationen erweist sich bis heute einerseits als Chance, andererseits aber auch als Herausforderung in technischer und konzeptioneller Hinsicht.
+
+  
+
+Die Chancen zeigten sich in den Diskussionen über das Datenmodell und während der Dateneingabe. So entstanden neue Ideen wie das Konzept auch falsche Zuschreibungen (Misattribution) abzubilden: Wenn in der Literatur für lange Zeit eine Zuschreibung für die Autorschaft eines bestimmten Textes existiert, die sich im Lauf der aktuellen Forschung als falsch herausstellt, dann ist es wichtig nicht nur die korrigierte Information aufzunehmen und anzuzeigen, sondern auch die als inkorrekt markierte alte Zuschreibung, um Forscher darauf hinzuweisen, dass die alte Zuschreibung bekannt ist und dass sie durch neue Informationen überholt ist.
+
+  
+
+
+Der Preis für das neue Datenmodell war neben der konzeptionellen Arbeit des Umdenkens und der Umstellung der bestehenden Daten zunächst vor allem die Abwesenheit von existierender Software zur effektiven Umsetzung der geplanten Datenstrukturen. Zum Zeitpunkt der Umstellung existierte keine verbreitete Graphendatenbanksoftware, so dass in mehreren Anläufen eine spezifische Datenbank „OpenMind“ und ein webbasiertes 
+Frontend
+         entwickelt wurde. Der Aufwand für die Wartung der Software und die Implementierung neuer Anforderungen steigt jedoch ständig.  
+
+  
+
+Eine weitere Herausforderung, die sich nach der Eingabe grosser Datenmengen (derzeit 4000 Texte in 14000 Manuskripten in 7500 Codices und 2200 Personen) stellt, ist die Suche und Analyse der Daten. Vorhandene Werkzeuge, wie tabellenorientierte Abfragen sind auf den Graphen von Daten-Objekten nicht ohne weiteres anwendbar und es müssen Abfrage-Oberflächen entwickelt werden, die es ermöglichen das Potential der vernetzten Daten auch für die Forschenden nutzbar zu machen.
+
+  
+
+Neben der eher klassischen Webpräsentation und Browsing-Umgebung werden derzeit verschiedene Graphen-Visualisierungs- und Abfragetools getestet. In einem geplanten Workshop soll eine grösserer Kreis von Fachwissenschaftlern Zugang zur Datenbank und den experimentellen Werkzeugen erhalten um eine weitere Diskussion in Gang zu setzen und Erfahrungen und mögliche Fragestellungen für die weitere Entwicklung zu sammeln.
+
+
+
+
+Wissenschaftliche Manuskripte des Islamischen Raums
+
+
+
+Von Tabellen zu Daten-Graphen
+
+
+
+Neue Möglichkeiten durch ein neues Datenmodell
+
+
+
+Herausforderungen durch neue Technologie
+
+
+
+  
+
+      Ragep, Jamil F. / Ragep, Sally P. (2008): „The         Islamic Scientific  Manuscript Initiative (ISMI). Towards a Sociology of the         Exact Sciences in Islam“, in: Calvo, Emilia / Comes, Mercè / Puig, Roser /         Rius, Monica (eds.): A Shared Legacy: Islamic Science East         and West. Homage to Professor J. M. Millàs Vallicrosa. Barcelona:         University of Barcelona 15–21 
+https://www.rasi.mcgill.ca/ISMI_SharedLegacy.pdf
+ [letzter Zugriff         17. Februar 2016].    
+
+  
+
+
+
+Bibliographie
+
+</text>
+    <tc:tokens xmlns:tc="http://www.dspin.de/data/textcorpus">
+      <tc:token ID="w1">Das</tc:token>
+      <tc:token ID="w2">ISMI</tc:token>
+      <tc:token ID="w3">Projekt</tc:token>
+      <tc:token ID="w4">(</tc:token>
+      <tc:token ID="w5">Islamic</tc:token>
+      <tc:token ID="w6">Scientific</tc:token>
+      <tc:token ID="w7">Manuscripts</tc:token>
+      <tc:token ID="w8">Initiative</tc:token>
+      <tc:token ID="w9">)</tc:token>
+      <tc:token ID="wa">ist</tc:token>
+      <tc:token ID="wb">ein</tc:token>
+      <tc:token ID="wc">gemeinsames</tc:token>
+      <tc:token ID="wd">Projekt</tc:token>
+      <tc:token ID="we">des</tc:token>
+      <tc:token ID="wf">Max-Planck-Instituts</tc:token>
+      <tc:token ID="w10">für</tc:token>
+      <tc:token ID="w11">Wissenschaftsgeschichte</tc:token>
+      <tc:token ID="w12">und</tc:token>
+      <tc:token ID="w13">des</tc:token>
+      <tc:token ID="w14">Institute</tc:token>
+      <tc:token ID="w15">of</tc:token>
+      <tc:token ID="w16">Islamic</tc:token>
+      <tc:token ID="w17">Studies</tc:token>
+      <tc:token ID="w18">der</tc:token>
+      <tc:token ID="w19">McGill</tc:token>
+      <tc:token ID="w1a">University</tc:token>
+      <tc:token ID="w1b">in</tc:token>
+      <tc:token ID="w1c">Montreal</tc:token>
+      <tc:token ID="w1d">mit</tc:token>
+      <tc:token ID="w1e">dem</tc:token>
+      <tc:token ID="w1f">Ziel</tc:token>
+      <tc:token ID="w20">Informationen</tc:token>
+      <tc:token ID="w21">über</tc:token>
+      <tc:token ID="w22">alle</tc:token>
+      <tc:token ID="w23">islamischen</tc:token>
+      <tc:token ID="w24">Manuskripte</tc:token>
+      <tc:token ID="w25">in</tc:token>
+      <tc:token ID="w26">den</tc:token>
+      <tc:token ID="w27">"</tc:token>
+      <tc:token ID="w28">exakten</tc:token>
+      <tc:token ID="w29">Wissenschaften</tc:token>
+      <tc:token ID="w2a">"</tc:token>
+      <tc:token ID="w2b">(</tc:token>
+      <tc:token ID="w2c">Astronomie</tc:token>
+      <tc:token ID="w2d">,</tc:token>
+      <tc:token ID="w2e">Mathematik</tc:token>
+      <tc:token ID="w2f">,</tc:token>
+      <tc:token ID="w30">Optik</tc:token>
+      <tc:token ID="w31">,</tc:token>
+      <tc:token ID="w32">Mathematische</tc:token>
+      <tc:token ID="w33">Geographie</tc:token>
+      <tc:token ID="w34">,</tc:token>
+      <tc:token ID="w35">Musik</tc:token>
+      <tc:token ID="w36">,</tc:token>
+      <tc:token ID="w37">Mechanik</tc:token>
+      <tc:token ID="w38">und</tc:token>
+      <tc:token ID="w39">verwandte</tc:token>
+      <tc:token ID="w3a">Disziplinen</tc:token>
+      <tc:token ID="w3b">)</tc:token>
+      <tc:token ID="w3c">in</tc:token>
+      <tc:token ID="w3d">Arabisch</tc:token>
+      <tc:token ID="w3e">,</tc:token>
+      <tc:token ID="w3f">Persisch</tc:token>
+      <tc:token ID="w40">,</tc:token>
+      <tc:token ID="w41">Türkisch</tc:token>
+      <tc:token ID="w42">und</tc:token>
+      <tc:token ID="w43">anderen</tc:token>
+      <tc:token ID="w44">Sprachen</tc:token>
+      <tc:token ID="w45">aus</tc:token>
+      <tc:token ID="w46">der</tc:token>
+      <tc:token ID="w47">Zeit</tc:token>
+      <tc:token ID="w48">zwischen</tc:token>
+      <tc:token ID="w49">dem</tc:token>
+      <tc:token ID="w4a">8.</tc:token>
+      <tc:token ID="w4b">und</tc:token>
+      <tc:token ID="w4c">dem</tc:token>
+      <tc:token ID="w4d">19.</tc:token>
+      <tc:token ID="w4e">Jahrhundert</tc:token>
+      <tc:token ID="w4f">(</tc:token>
+      <tc:token ID="w50">CE</tc:token>
+      <tc:token ID="w51">)</tc:token>
+      <tc:token ID="w52">zu</tc:token>
+      <tc:token ID="w53">sammeln</tc:token>
+      <tc:token ID="w54">.</tc:token>
+      <tc:token ID="w55">Im</tc:token>
+      <tc:token ID="w56">Projekt</tc:token>
+      <tc:token ID="w57">werden</tc:token>
+      <tc:token ID="w58">vor</tc:token>
+      <tc:token ID="w59">allem</tc:token>
+      <tc:token ID="w5a">bibliographische</tc:token>
+      <tc:token ID="w5b">und</tc:token>
+      <tc:token ID="w5c">kodikologische</tc:token>
+      <tc:token ID="w5d">Informationen</tc:token>
+      <tc:token ID="w5e">zu</tc:token>
+      <tc:token ID="w5f">den</tc:token>
+      <tc:token ID="w60">Manuskripten</tc:token>
+      <tc:token ID="w61">gesammelt</tc:token>
+      <tc:token ID="w62">,</tc:token>
+      <tc:token ID="w63">aber</tc:token>
+      <tc:token ID="w64">auch</tc:token>
+      <tc:token ID="w65">Informationen</tc:token>
+      <tc:token ID="w66">zu</tc:token>
+      <tc:token ID="w67">Nutzung</tc:token>
+      <tc:token ID="w68">und</tc:token>
+      <tc:token ID="w69">Besitz</tc:token>
+      <tc:token ID="w6a">der</tc:token>
+      <tc:token ID="w6b">Manuskripte</tc:token>
+      <tc:token ID="w6c">und</tc:token>
+      <tc:token ID="w6d">damit</tc:token>
+      <tc:token ID="w6e">verbundenen</tc:token>
+      <tc:token ID="w6f">Orten</tc:token>
+      <tc:token ID="w70">und</tc:token>
+      <tc:token ID="w71">Personen</tc:token>
+      <tc:token ID="w72">,</tc:token>
+      <tc:token ID="w73">die</tc:token>
+      <tc:token ID="w74">sich</tc:token>
+      <tc:token ID="w75">aus</tc:token>
+      <tc:token ID="w76">Kommentaren</tc:token>
+      <tc:token ID="w77">,</tc:token>
+      <tc:token ID="w78">Verkaufsbemerkungen</tc:token>
+      <tc:token ID="w79">und</tc:token>
+      <tc:token ID="w7a">anderen</tc:token>
+      <tc:token ID="w7b">Anmerkungen</tc:token>
+      <tc:token ID="w7c">auf</tc:token>
+      <tc:token ID="w7d">dem</tc:token>
+      <tc:token ID="w7e">Manuskript</tc:token>
+      <tc:token ID="w7f">ergeben</tc:token>
+      <tc:token ID="w80">können</tc:token>
+      <tc:token ID="w81">.</tc:token>
+      <tc:token ID="w82">Arabische</tc:token>
+      <tc:token ID="w83">Manuskripte</tc:token>
+      <tc:token ID="w84">,</tc:token>
+      <tc:token ID="w85">aber</tc:token>
+      <tc:token ID="w86">auch</tc:token>
+      <tc:token ID="w87">andere</tc:token>
+      <tc:token ID="w88">alte</tc:token>
+      <tc:token ID="w89">Handschriften</tc:token>
+      <tc:token ID="w8a">stellen</tc:token>
+      <tc:token ID="w8b">besondere</tc:token>
+      <tc:token ID="w8c">Anforderungen</tc:token>
+      <tc:token ID="w8d">an</tc:token>
+      <tc:token ID="w8e">die</tc:token>
+      <tc:token ID="w8f">Datenmodellierung</tc:token>
+      <tc:token ID="w90">einer</tc:token>
+      <tc:token ID="w91">bibliographischen</tc:token>
+      <tc:token ID="w92">Datenbank</tc:token>
+      <tc:token ID="w93">.</tc:token>
+      <tc:token ID="w94">Informationen</tc:token>
+      <tc:token ID="w95">über</tc:token>
+      <tc:token ID="w96">Autor</tc:token>
+      <tc:token ID="w97">,</tc:token>
+      <tc:token ID="w98">Titel</tc:token>
+      <tc:token ID="w99">und</tc:token>
+      <tc:token ID="w9a">Erstellungsdatum</tc:token>
+      <tc:token ID="w9b">,</tc:token>
+      <tc:token ID="w9c">die</tc:token>
+      <tc:token ID="w9d">Standardfelder</tc:token>
+      <tc:token ID="w9e">eines</tc:token>
+      <tc:token ID="w9f">modernen</tc:token>
+      <tc:token ID="wa0">bibliographischen</tc:token>
+      <tc:token ID="wa1">Eintrags</tc:token>
+      <tc:token ID="wa2">sind</tc:token>
+      <tc:token ID="wa3">oft</tc:token>
+      <tc:token ID="wa4">genug</tc:token>
+      <tc:token ID="wa5">unbekannt</tc:token>
+      <tc:token ID="wa6">.</tc:token>
+      <tc:token ID="wa7">Dazu</tc:token>
+      <tc:token ID="wa8">kommen</tc:token>
+      <tc:token ID="wa9">viele</tc:token>
+      <tc:token ID="waa">unterschiedliche</tc:token>
+      <tc:token ID="wab">Schreibweisen</tc:token>
+      <tc:token ID="wac">des</tc:token>
+      <tc:token ID="wad">Namens</tc:token>
+      <tc:token ID="wae">einer</tc:token>
+      <tc:token ID="waf">Person</tc:token>
+      <tc:token ID="wb0">und</tc:token>
+      <tc:token ID="wb1">viele</tc:token>
+      <tc:token ID="wb2">Fälle</tc:token>
+      <tc:token ID="wb3">gleicher</tc:token>
+      <tc:token ID="wb4">Namen</tc:token>
+      <tc:token ID="wb5">,</tc:token>
+      <tc:token ID="wb6">die</tc:token>
+      <tc:token ID="wb7">zu</tc:token>
+      <tc:token ID="wb8">unterschiedlichen</tc:token>
+      <tc:token ID="wb9">Personen</tc:token>
+      <tc:token ID="wba">gehören</tc:token>
+      <tc:token ID="wbb">.</tc:token>
+      <tc:token ID="wbc">Es</tc:token>
+      <tc:token ID="wbd">gibt</tc:token>
+      <tc:token ID="wbe">viele</tc:token>
+      <tc:token ID="wbf">Kopien</tc:token>
+      <tc:token ID="wc0">des</tc:token>
+      <tc:token ID="wc1">gleichen</tc:token>
+      <tc:token ID="wc2">Textes</tc:token>
+      <tc:token ID="wc3">von</tc:token>
+      <tc:token ID="wc4">unterschiedlichen</tc:token>
+      <tc:token ID="wc5">Kopisten</tc:token>
+      <tc:token ID="wc6">und</tc:token>
+      <tc:token ID="wc7">eine</tc:token>
+      <tc:token ID="wc8">elaborierte</tc:token>
+      <tc:token ID="wc9">Kultur</tc:token>
+      <tc:token ID="wca">von</tc:token>
+      <tc:token ID="wcb">Kommentaren</tc:token>
+      <tc:token ID="wcc">und</tc:token>
+      <tc:token ID="wcd">Kommentaren</tc:token>
+      <tc:token ID="wce">höherer</tc:token>
+      <tc:token ID="wcf">Ordnung</tc:token>
+      <tc:token ID="wd0">.</tc:token>
+      <tc:token ID="wd1">Zusätzlich</tc:token>
+      <tc:token ID="wd2">zu</tc:token>
+      <tc:token ID="wd3">den</tc:token>
+      <tc:token ID="wd4">bibliographischen</tc:token>
+      <tc:token ID="wd5">Informationen</tc:token>
+      <tc:token ID="wd6">werden</tc:token>
+      <tc:token ID="wd7">auch</tc:token>
+      <tc:token ID="wd8">Digitalisate</tc:token>
+      <tc:token ID="wd9">präsentiert</tc:token>
+      <tc:token ID="wda">wenn</tc:token>
+      <tc:token ID="wdb">sie</tc:token>
+      <tc:token ID="wdc">vorhanden</tc:token>
+      <tc:token ID="wdd">sind</tc:token>
+      <tc:token ID="wde">und</tc:token>
+      <tc:token ID="wdf">die</tc:token>
+      <tc:token ID="we0">Lizenzbedingungen</tc:token>
+      <tc:token ID="we1">eine</tc:token>
+      <tc:token ID="we2">öffentliche</tc:token>
+      <tc:token ID="we3">Präsentation</tc:token>
+      <tc:token ID="we4">zulassen</tc:token>
+      <tc:token ID="we5">.</tc:token>
+      <tc:token ID="we6">Die</tc:token>
+      <tc:token ID="we7">ursprüngliche</tc:token>
+      <tc:token ID="we8">ISMI</tc:token>
+      <tc:token ID="we9">Datenbank</tc:token>
+      <tc:token ID="wea">,</tc:token>
+      <tc:token ID="web">erstellt</tc:token>
+      <tc:token ID="wec">von</tc:token>
+      <tc:token ID="wed">Prof</tc:token>
+      <tc:token ID="wee">.</tc:token>
+      <tc:token ID="wef">Jamil</tc:token>
+      <tc:token ID="wf0">Ragep</tc:token>
+      <tc:token ID="wf1">bestand</tc:token>
+      <tc:token ID="wf2">aus</tc:token>
+      <tc:token ID="wf3">einem</tc:token>
+      <tc:token ID="wf4">Satz</tc:token>
+      <tc:token ID="wf5">von</tc:token>
+      <tc:token ID="wf6">relationalen</tc:token>
+      <tc:token ID="wf7">Tabellen</tc:token>
+      <tc:token ID="wf8">in</tc:token>
+      <tc:token ID="wf9">MS-Access</tc:token>
+      <tc:token ID="wfa">.</tc:token>
+      <tc:token ID="wfb">In</tc:token>
+      <tc:token ID="wfc">dieser</tc:token>
+      <tc:token ID="wfd">Struktur</tc:token>
+      <tc:token ID="wfe">gab</tc:token>
+      <tc:token ID="wff">es</tc:token>
+      <tc:token ID="w100">bereits</tc:token>
+      <tc:token ID="w101">die</tc:token>
+      <tc:token ID="w102">für</tc:token>
+      <tc:token ID="w103">die</tc:token>
+      <tc:token ID="w104">Arbeit</tc:token>
+      <tc:token ID="w105">mit</tc:token>
+      <tc:token ID="w106">Manuskripten</tc:token>
+      <tc:token ID="w107">wichtige</tc:token>
+      <tc:token ID="w108">Unterscheidung</tc:token>
+      <tc:token ID="w109">von</tc:token>
+      <tc:token ID="w10a">abstraktem</tc:token>
+      <tc:token ID="w10b">Text</tc:token>
+      <tc:token ID="w10c">und</tc:token>
+      <tc:token ID="w10d">der</tc:token>
+      <tc:token ID="w10e">konkreten</tc:token>
+      <tc:token ID="w10f">Manifestation</tc:token>
+      <tc:token ID="w110">in</tc:token>
+      <tc:token ID="w111">Form</tc:token>
+      <tc:token ID="w112">eines</tc:token>
+      <tc:token ID="w113">Manuskripts</tc:token>
+      <tc:token ID="w114">durch</tc:token>
+      <tc:token ID="w115">getrennte</tc:token>
+      <tc:token ID="w116">Tabellen</tc:token>
+      <tc:token ID="w117">für</tc:token>
+      <tc:token ID="w118">Texte</tc:token>
+      <tc:token ID="w119">und</tc:token>
+      <tc:token ID="w11a">Manuskripte</tc:token>
+      <tc:token ID="w11b">.</tc:token>
+      <tc:token ID="w11c">Diese</tc:token>
+      <tc:token ID="w11d">Unterscheidung</tc:token>
+      <tc:token ID="w11e">erleichtert</tc:token>
+      <tc:token ID="w11f">den</tc:token>
+      <tc:token ID="w120">Umgang</tc:token>
+      <tc:token ID="w121">mit</tc:token>
+      <tc:token ID="w122">vielen</tc:token>
+      <tc:token ID="w123">verschiedenen</tc:token>
+      <tc:token ID="w124">Kopien</tc:token>
+      <tc:token ID="w125">des</tc:token>
+      <tc:token ID="w126">gleichen</tc:token>
+      <tc:token ID="w127">Texts</tc:token>
+      <tc:token ID="w128">und</tc:token>
+      <tc:token ID="w129">erlaubt</tc:token>
+      <tc:token ID="w12a">es</tc:token>
+      <tc:token ID="w12b">den</tc:token>
+      <tc:token ID="w12c">Blick</tc:token>
+      <tc:token ID="w12d">auf</tc:token>
+      <tc:token ID="w12e">die</tc:token>
+      <tc:token ID="w12f">Beziehungen</tc:token>
+      <tc:token ID="w130">der</tc:token>
+      <tc:token ID="w131">Texte</tc:token>
+      <tc:token ID="w132">untereinander</tc:token>
+      <tc:token ID="w133">zu</tc:token>
+      <tc:token ID="w134">richten</tc:token>
+      <tc:token ID="w135">und</tc:token>
+      <tc:token ID="w136">beispielsweise</tc:token>
+      <tc:token ID="w137">durch</tc:token>
+      <tc:token ID="w138">zusätzliche</tc:token>
+      <tc:token ID="w139">Spalten</tc:token>
+      <tc:token ID="w13a">Kommentarbeziehungen</tc:token>
+      <tc:token ID="w13b">bis</tc:token>
+      <tc:token ID="w13c">zu</tc:token>
+      <tc:token ID="w13d">dritten</tc:token>
+      <tc:token ID="w13e">Ordnung</tc:token>
+      <tc:token ID="w13f">abzubilden</tc:token>
+      <tc:token ID="w140">.</tc:token>
+      <tc:token ID="w141">Es</tc:token>
+      <tc:token ID="w142">schloss</tc:token>
+      <tc:token ID="w143">sich</tc:token>
+      <tc:token ID="w144">2006</tc:token>
+      <tc:token ID="w145">eine</tc:token>
+      <tc:token ID="w146">neue</tc:token>
+      <tc:token ID="w147">konzeptionelle</tc:token>
+      <tc:token ID="w148">Phase</tc:token>
+      <tc:token ID="w149">an</tc:token>
+      <tc:token ID="w14a">,</tc:token>
+      <tc:token ID="w14b">in</tc:token>
+      <tc:token ID="w14c">der</tc:token>
+      <tc:token ID="w14d">in</tc:token>
+      <tc:token ID="w14e">Zusammenarbeit</tc:token>
+      <tc:token ID="w14f">mit</tc:token>
+      <tc:token ID="w150">der</tc:token>
+      <tc:token ID="w151">IT-Gruppe</tc:token>
+      <tc:token ID="w152">des</tc:token>
+      <tc:token ID="w153">MPIWG</tc:token>
+      <tc:token ID="w154">ein</tc:token>
+      <tc:token ID="w155">neues</tc:token>
+      <tc:token ID="w156">Datenmodell</tc:token>
+      <tc:token ID="w157">entworfen</tc:token>
+      <tc:token ID="w158">wurde</tc:token>
+      <tc:token ID="w159">.</tc:token>
+      <tc:token ID="w15a">Das</tc:token>
+      <tc:token ID="w15b">neue</tc:token>
+      <tc:token ID="w15c">Datenmodell</tc:token>
+      <tc:token ID="w15d">orientiert</tc:token>
+      <tc:token ID="w15e">sich</tc:token>
+      <tc:token ID="w15f">an</tc:token>
+      <tc:token ID="w160">konzeptionellen</tc:token>
+      <tc:token ID="w161">Objekten</tc:token>
+      <tc:token ID="w162">,</tc:token>
+      <tc:token ID="w163">die</tc:token>
+      <tc:token ID="w164">es</tc:token>
+      <tc:token ID="w165">teilweise</tc:token>
+      <tc:token ID="w166">bereits</tc:token>
+      <tc:token ID="w167">im</tc:token>
+      <tc:token ID="w168">alten</tc:token>
+      <tc:token ID="w169">Datenbankschema</tc:token>
+      <tc:token ID="w16a">gab</tc:token>
+      <tc:token ID="w16b">:</tc:token>
+      <tc:token ID="w16c">Texten</tc:token>
+      <tc:token ID="w16d">,</tc:token>
+      <tc:token ID="w16e">Manuskripten</tc:token>
+      <tc:token ID="w16f">und</tc:token>
+      <tc:token ID="w170">Personen</tc:token>
+      <tc:token ID="w171">mit</tc:token>
+      <tc:token ID="w172">ihren</tc:token>
+      <tc:token ID="w173">jeweiligen</tc:token>
+      <tc:token ID="w174">Attributen</tc:token>
+      <tc:token ID="w175">und</tc:token>
+      <tc:token ID="w176">erweitert</tc:token>
+      <tc:token ID="w177">es</tc:token>
+      <tc:token ID="w178">durch</tc:token>
+      <tc:token ID="w179">weitere</tc:token>
+      <tc:token ID="w17a">Objekttypen</tc:token>
+      <tc:token ID="w17b">und</tc:token>
+      <tc:token ID="w17c">individuelle</tc:token>
+      <tc:token ID="w17d">Relations-Objekte</tc:token>
+      <tc:token ID="w17e">mit</tc:token>
+      <tc:token ID="w17f">frei</tc:token>
+      <tc:token ID="w180">definierbaren</tc:token>
+      <tc:token ID="w181">Typen</tc:token>
+      <tc:token ID="w182">und</tc:token>
+      <tc:token ID="w183">Attributen</tc:token>
+      <tc:token ID="w184">.</tc:token>
+      <tc:token ID="w185">Das</tc:token>
+      <tc:token ID="w186">neue</tc:token>
+      <tc:token ID="w187">Modell</tc:token>
+      <tc:token ID="w188">sollte</tc:token>
+      <tc:token ID="w189">in</tc:token>
+      <tc:token ID="w18a">der</tc:token>
+      <tc:token ID="w18b">Software</tc:token>
+      <tc:token ID="w18c">als</tc:token>
+      <tc:token ID="w18d">möglichst</tc:token>
+      <tc:token ID="w18e">flexible</tc:token>
+      <tc:token ID="w18f">Attribut-Graph-Datenbank</tc:token>
+      <tc:token ID="w190">umgesetzt</tc:token>
+      <tc:token ID="w191">werden</tc:token>
+      <tc:token ID="w192">,</tc:token>
+      <tc:token ID="w193">so</tc:token>
+      <tc:token ID="w194">dass</tc:token>
+      <tc:token ID="w195">es</tc:token>
+      <tc:token ID="w196">jederzeit</tc:token>
+      <tc:token ID="w197">möglich</tc:token>
+      <tc:token ID="w198">sein</tc:token>
+      <tc:token ID="w199">sollte</tc:token>
+      <tc:token ID="w19a">Objekten</tc:token>
+      <tc:token ID="w19b">zusätzliche</tc:token>
+      <tc:token ID="w19c">Attribute</tc:token>
+      <tc:token ID="w19d">zu</tc:token>
+      <tc:token ID="w19e">geben</tc:token>
+      <tc:token ID="w19f">oder</tc:token>
+      <tc:token ID="w1a0">zusätzliche</tc:token>
+      <tc:token ID="w1a1">Relationen</tc:token>
+      <tc:token ID="w1a2">einzuführen</tc:token>
+      <tc:token ID="w1a3">,</tc:token>
+      <tc:token ID="w1a4">sobald</tc:token>
+      <tc:token ID="w1a5">dies</tc:token>
+      <tc:token ID="w1a6">während</tc:token>
+      <tc:token ID="w1a7">des</tc:token>
+      <tc:token ID="w1a8">Prozesses</tc:token>
+      <tc:token ID="w1a9">der</tc:token>
+      <tc:token ID="w1aa">Dateneingabe</tc:token>
+      <tc:token ID="w1ab">sinnvoll</tc:token>
+      <tc:token ID="w1ac">erscheint</tc:token>
+      <tc:token ID="w1ad">.</tc:token>
+      <tc:token ID="w1ae">Im</tc:token>
+      <tc:token ID="w1af">neuen</tc:token>
+      <tc:token ID="w1b0">Modell</tc:token>
+      <tc:token ID="w1b1">wurde</tc:token>
+      <tc:token ID="w1b2">beispielsweise</tc:token>
+      <tc:token ID="w1b3">die</tc:token>
+      <tc:token ID="w1b4">feste</tc:token>
+      <tc:token ID="w1b5">Relation</tc:token>
+      <tc:token ID="w1b6">des</tc:token>
+      <tc:token ID="w1b7">Author-ID</tc:token>
+      <tc:token ID="w1b8">Feldes</tc:token>
+      <tc:token ID="w1b9">der</tc:token>
+      <tc:token ID="w1ba">Text-Tabelle</tc:token>
+      <tc:token ID="w1bb">zur</tc:token>
+      <tc:token ID="w1bc">Autor-Tabelle</tc:token>
+      <tc:token ID="w1bd">durch</tc:token>
+      <tc:token ID="w1be">ein</tc:token>
+      <tc:token ID="w1bf">Relationsobjekt</tc:token>
+      <tc:token ID="w1c0">des</tc:token>
+      <tc:token ID="w1c1">Typs</tc:token>
+      <tc:token ID="w1c2">"was_</tc:token>
+      <tc:token ID="w1c3">created_by</tc:token>
+      <tc:token ID="w1c4">"</tc:token>
+      <tc:token ID="w1c5">zwischen</tc:token>
+      <tc:token ID="w1c6">einem</tc:token>
+      <tc:token ID="w1c7">Text-Objekt</tc:token>
+      <tc:token ID="w1c8">und</tc:token>
+      <tc:token ID="w1c9">einem</tc:token>
+      <tc:token ID="w1ca">Personen-Objekt</tc:token>
+      <tc:token ID="w1cb">ersetzt</tc:token>
+      <tc:token ID="w1cc">.</tc:token>
+      <tc:token ID="w1cd">Die</tc:token>
+      <tc:token ID="w1ce">mit</tc:token>
+      <tc:token ID="w1cf">dem</tc:token>
+      <tc:token ID="w1d0">neuen</tc:token>
+      <tc:token ID="w1d1">Datenmodell</tc:token>
+      <tc:token ID="w1d2">einhergehende</tc:token>
+      <tc:token ID="w1d3">Umstellung</tc:token>
+      <tc:token ID="w1d4">des</tc:token>
+      <tc:token ID="w1d5">Umgangs</tc:token>
+      <tc:token ID="w1d6">mit</tc:token>
+      <tc:token ID="w1d7">Daten</tc:token>
+      <tc:token ID="w1d8">von</tc:token>
+      <tc:token ID="w1d9">der</tc:token>
+      <tc:token ID="w1da">vergleichsweise</tc:token>
+      <tc:token ID="w1db">vertrauten</tc:token>
+      <tc:token ID="w1dc">Welt</tc:token>
+      <tc:token ID="w1dd">der</tc:token>
+      <tc:token ID="w1de">Tabellen</tc:token>
+      <tc:token ID="w1df">und</tc:token>
+      <tc:token ID="w1e0">tabellarischen</tc:token>
+      <tc:token ID="w1e1">Daten</tc:token>
+      <tc:token ID="w1e2">in</tc:token>
+      <tc:token ID="w1e3">eine</tc:token>
+      <tc:token ID="w1e4">Welt</tc:token>
+      <tc:token ID="w1e5">individueller</tc:token>
+      <tc:token ID="w1e6">Objekte</tc:token>
+      <tc:token ID="w1e7">und</tc:token>
+      <tc:token ID="w1e8">Relationen</tc:token>
+      <tc:token ID="w1e9">erweist</tc:token>
+      <tc:token ID="w1ea">sich</tc:token>
+      <tc:token ID="w1eb">bis</tc:token>
+      <tc:token ID="w1ec">heute</tc:token>
+      <tc:token ID="w1ed">einerseits</tc:token>
+      <tc:token ID="w1ee">als</tc:token>
+      <tc:token ID="w1ef">Chance</tc:token>
+      <tc:token ID="w1f0">,</tc:token>
+      <tc:token ID="w1f1">andererseits</tc:token>
+      <tc:token ID="w1f2">aber</tc:token>
+      <tc:token ID="w1f3">auch</tc:token>
+      <tc:token ID="w1f4">als</tc:token>
+      <tc:token ID="w1f5">Herausforderung</tc:token>
+      <tc:token ID="w1f6">in</tc:token>
+      <tc:token ID="w1f7">technischer</tc:token>
+      <tc:token ID="w1f8">und</tc:token>
+      <tc:token ID="w1f9">konzeptioneller</tc:token>
+      <tc:token ID="w1fa">Hinsicht</tc:token>
+      <tc:token ID="w1fb">.</tc:token>
+      <tc:token ID="w1fc">Die</tc:token>
+      <tc:token ID="w1fd">Chancen</tc:token>
+      <tc:token ID="w1fe">zeigten</tc:token>
+      <tc:token ID="w1ff">sich</tc:token>
+      <tc:token ID="w200">in</tc:token>
+      <tc:token ID="w201">den</tc:token>
+      <tc:token ID="w202">Diskussionen</tc:token>
+      <tc:token ID="w203">über</tc:token>
+      <tc:token ID="w204">das</tc:token>
+      <tc:token ID="w205">Datenmodell</tc:token>
+      <tc:token ID="w206">und</tc:token>
+      <tc:token ID="w207">während</tc:token>
+      <tc:token ID="w208">der</tc:token>
+      <tc:token ID="w209">Dateneingabe</tc:token>
+      <tc:token ID="w20a">.</tc:token>
+      <tc:token ID="w20b">So</tc:token>
+      <tc:token ID="w20c">entstanden</tc:token>
+      <tc:token ID="w20d">neue</tc:token>
+      <tc:token ID="w20e">Ideen</tc:token>
+      <tc:token ID="w20f">wie</tc:token>
+      <tc:token ID="w210">das</tc:token>
+      <tc:token ID="w211">Konzept</tc:token>
+      <tc:token ID="w212">auch</tc:token>
+      <tc:token ID="w213">falsche</tc:token>
+      <tc:token ID="w214">Zuschreibungen</tc:token>
+      <tc:token ID="w215">(</tc:token>
+      <tc:token ID="w216">Misattribution</tc:token>
+      <tc:token ID="w217">)</tc:token>
+      <tc:token ID="w218">abzubilden</tc:token>
+      <tc:token ID="w219">:</tc:token>
+      <tc:token ID="w21a">Wenn</tc:token>
+      <tc:token ID="w21b">in</tc:token>
+      <tc:token ID="w21c">der</tc:token>
+      <tc:token ID="w21d">Literatur</tc:token>
+      <tc:token ID="w21e">für</tc:token>
+      <tc:token ID="w21f">lange</tc:token>
+      <tc:token ID="w220">Zeit</tc:token>
+      <tc:token ID="w221">eine</tc:token>
+      <tc:token ID="w222">Zuschreibung</tc:token>
+      <tc:token ID="w223">für</tc:token>
+      <tc:token ID="w224">die</tc:token>
+      <tc:token ID="w225">Autorschaft</tc:token>
+      <tc:token ID="w226">eines</tc:token>
+      <tc:token ID="w227">bestimmten</tc:token>
+      <tc:token ID="w228">Textes</tc:token>
+      <tc:token ID="w229">existiert</tc:token>
+      <tc:token ID="w22a">,</tc:token>
+      <tc:token ID="w22b">die</tc:token>
+      <tc:token ID="w22c">sich</tc:token>
+      <tc:token ID="w22d">im</tc:token>
+      <tc:token ID="w22e">Lauf</tc:token>
+      <tc:token ID="w22f">der</tc:token>
+      <tc:token ID="w230">aktuellen</tc:token>
+      <tc:token ID="w231">Forschung</tc:token>
+      <tc:token ID="w232">als</tc:token>
+      <tc:token ID="w233">falsch</tc:token>
+      <tc:token ID="w234">herausstellt</tc:token>
+      <tc:token ID="w235">,</tc:token>
+      <tc:token ID="w236">dann</tc:token>
+      <tc:token ID="w237">ist</tc:token>
+      <tc:token ID="w238">es</tc:token>
+      <tc:token ID="w239">wichtig</tc:token>
+      <tc:token ID="w23a">nicht</tc:token>
+      <tc:token ID="w23b">nur</tc:token>
+      <tc:token ID="w23c">die</tc:token>
+      <tc:token ID="w23d">korrigierte</tc:token>
+      <tc:token ID="w23e">Information</tc:token>
+      <tc:token ID="w23f">aufzunehmen</tc:token>
+      <tc:token ID="w240">und</tc:token>
+      <tc:token ID="w241">anzuzeigen</tc:token>
+      <tc:token ID="w242">,</tc:token>
+      <tc:token ID="w243">sondern</tc:token>
+      <tc:token ID="w244">auch</tc:token>
+      <tc:token ID="w245">die</tc:token>
+      <tc:token ID="w246">als</tc:token>
+      <tc:token ID="w247">inkorrekt</tc:token>
+      <tc:token ID="w248">markierte</tc:token>
+      <tc:token ID="w249">alte</tc:token>
+      <tc:token ID="w24a">Zuschreibung</tc:token>
+      <tc:token ID="w24b">,</tc:token>
+      <tc:token ID="w24c">um</tc:token>
+      <tc:token ID="w24d">Forscher</tc:token>
+      <tc:token ID="w24e">darauf</tc:token>
+      <tc:token ID="w24f">hinzuweisen</tc:token>
+      <tc:token ID="w250">,</tc:token>
+      <tc:token ID="w251">dass</tc:token>
+      <tc:token ID="w252">die</tc:token>
+      <tc:token ID="w253">alte</tc:token>
+      <tc:token ID="w254">Zuschreibung</tc:token>
+      <tc:token ID="w255">bekannt</tc:token>
+      <tc:token ID="w256">ist</tc:token>
+      <tc:token ID="w257">und</tc:token>
+      <tc:token ID="w258">dass</tc:token>
+      <tc:token ID="w259">sie</tc:token>
+      <tc:token ID="w25a">durch</tc:token>
+      <tc:token ID="w25b">neue</tc:token>
+      <tc:token ID="w25c">Informationen</tc:token>
+      <tc:token ID="w25d">überholt</tc:token>
+      <tc:token ID="w25e">ist</tc:token>
+      <tc:token ID="w25f">.</tc:token>
+      <tc:token ID="w260">Der</tc:token>
+      <tc:token ID="w261">Preis</tc:token>
+      <tc:token ID="w262">für</tc:token>
+      <tc:token ID="w263">das</tc:token>
+      <tc:token ID="w264">neue</tc:token>
+      <tc:token ID="w265">Datenmodell</tc:token>
+      <tc:token ID="w266">war</tc:token>
+      <tc:token ID="w267">neben</tc:token>
+      <tc:token ID="w268">der</tc:token>
+      <tc:token ID="w269">konzeptionellen</tc:token>
+      <tc:token ID="w26a">Arbeit</tc:token>
+      <tc:token ID="w26b">des</tc:token>
+      <tc:token ID="w26c">Umdenkens</tc:token>
+      <tc:token ID="w26d">und</tc:token>
+      <tc:token ID="w26e">der</tc:token>
+      <tc:token ID="w26f">Umstellung</tc:token>
+      <tc:token ID="w270">der</tc:token>
+      <tc:token ID="w271">bestehenden</tc:token>
+      <tc:token ID="w272">Daten</tc:token>
+      <tc:token ID="w273">zunächst</tc:token>
+      <tc:token ID="w274">vor</tc:token>
+      <tc:token ID="w275">allem</tc:token>
+      <tc:token ID="w276">die</tc:token>
+      <tc:token ID="w277">Abwesenheit</tc:token>
+      <tc:token ID="w278">von</tc:token>
+      <tc:token ID="w279">existierender</tc:token>
+      <tc:token ID="w27a">Software</tc:token>
+      <tc:token ID="w27b">zur</tc:token>
+      <tc:token ID="w27c">effektiven</tc:token>
+      <tc:token ID="w27d">Umsetzung</tc:token>
+      <tc:token ID="w27e">der</tc:token>
+      <tc:token ID="w27f">geplanten</tc:token>
+      <tc:token ID="w280">Datenstrukturen</tc:token>
+      <tc:token ID="w281">.</tc:token>
+      <tc:token ID="w282">Zum</tc:token>
+      <tc:token ID="w283">Zeitpunkt</tc:token>
+      <tc:token ID="w284">der</tc:token>
+      <tc:token ID="w285">Umstellung</tc:token>
+      <tc:token ID="w286">existierte</tc:token>
+      <tc:token ID="w287">keine</tc:token>
+      <tc:token ID="w288">verbreitete</tc:token>
+      <tc:token ID="w289">Graphendatenbanksoftware</tc:token>
+      <tc:token ID="w28a">,</tc:token>
+      <tc:token ID="w28b">so</tc:token>
+      <tc:token ID="w28c">dass</tc:token>
+      <tc:token ID="w28d">in</tc:token>
+      <tc:token ID="w28e">mehreren</tc:token>
+      <tc:token ID="w28f">Anläufen</tc:token>
+      <tc:token ID="w290">eine</tc:token>
+      <tc:token ID="w291">spezifische</tc:token>
+      <tc:token ID="w292">Datenbank</tc:token>
+      <tc:token ID="w293">„</tc:token>
+      <tc:token ID="w294">OpenMind</tc:token>
+      <tc:token ID="w295">“</tc:token>
+      <tc:token ID="w296">und</tc:token>
+      <tc:token ID="w297">ein</tc:token>
+      <tc:token ID="w298">webbasiertes</tc:token>
+      <tc:token ID="w299">Frontend</tc:token>
+      <tc:token ID="w29a">entwickelt</tc:token>
+      <tc:token ID="w29b">wurde</tc:token>
+      <tc:token ID="w29c">.</tc:token>
+      <tc:token ID="w29d">Der</tc:token>
+      <tc:token ID="w29e">Aufwand</tc:token>
+      <tc:token ID="w29f">für</tc:token>
+      <tc:token ID="w2a0">die</tc:token>
+      <tc:token ID="w2a1">Wartung</tc:token>
+      <tc:token ID="w2a2">der</tc:token>
+      <tc:token ID="w2a3">Software</tc:token>
+      <tc:token ID="w2a4">und</tc:token>
+      <tc:token ID="w2a5">die</tc:token>
+      <tc:token ID="w2a6">Implementierung</tc:token>
+      <tc:token ID="w2a7">neuer</tc:token>
+      <tc:token ID="w2a8">Anforderungen</tc:token>
+      <tc:token ID="w2a9">steigt</tc:token>
+      <tc:token ID="w2aa">jedoch</tc:token>
+      <tc:token ID="w2ab">ständig</tc:token>
+      <tc:token ID="w2ac">.</tc:token>
+      <tc:token ID="w2ad">Eine</tc:token>
+      <tc:token ID="w2ae">weitere</tc:token>
+      <tc:token ID="w2af">Herausforderung</tc:token>
+      <tc:token ID="w2b0">,</tc:token>
+      <tc:token ID="w2b1">die</tc:token>
+      <tc:token ID="w2b2">sich</tc:token>
+      <tc:token ID="w2b3">nach</tc:token>
+      <tc:token ID="w2b4">der</tc:token>
+      <tc:token ID="w2b5">Eingabe</tc:token>
+      <tc:token ID="w2b6">grosser</tc:token>
+      <tc:token ID="w2b7">Datenmengen</tc:token>
+      <tc:token ID="w2b8">(</tc:token>
+      <tc:token ID="w2b9">derzeit</tc:token>
+      <tc:token ID="w2ba">4000</tc:token>
+      <tc:token ID="w2bb">Texte</tc:token>
+      <tc:token ID="w2bc">in</tc:token>
+      <tc:token ID="w2bd">14000</tc:token>
+      <tc:token ID="w2be">Manuskripten</tc:token>
+      <tc:token ID="w2bf">in</tc:token>
+      <tc:token ID="w2c0">7500</tc:token>
+      <tc:token ID="w2c1">Codices</tc:token>
+      <tc:token ID="w2c2">und</tc:token>
+      <tc:token ID="w2c3">2200</tc:token>
+      <tc:token ID="w2c4">Personen</tc:token>
+      <tc:token ID="w2c5">)</tc:token>
+      <tc:token ID="w2c6">stellt</tc:token>
+      <tc:token ID="w2c7">,</tc:token>
+      <tc:token ID="w2c8">ist</tc:token>
+      <tc:token ID="w2c9">die</tc:token>
+      <tc:token ID="w2ca">Suche</tc:token>
+      <tc:token ID="w2cb">und</tc:token>
+      <tc:token ID="w2cc">Analyse</tc:token>
+      <tc:token ID="w2cd">der</tc:token>
+      <tc:token ID="w2ce">Daten</tc:token>
+      <tc:token ID="w2cf">.</tc:token>
+      <tc:token ID="w2d0">Vorhandene</tc:token>
+      <tc:token ID="w2d1">Werkzeuge</tc:token>
+      <tc:token ID="w2d2">,</tc:token>
+      <tc:token ID="w2d3">wie</tc:token>
+      <tc:token ID="w2d4">tabellenorientierte</tc:token>
+      <tc:token ID="w2d5">Abfragen</tc:token>
+      <tc:token ID="w2d6">sind</tc:token>
+      <tc:token ID="w2d7">auf</tc:token>
+      <tc:token ID="w2d8">den</tc:token>
+      <tc:token ID="w2d9">Graphen</tc:token>
+      <tc:token ID="w2da">von</tc:token>
+      <tc:token ID="w2db">Daten-Objekten</tc:token>
+      <tc:token ID="w2dc">nicht</tc:token>
+      <tc:token ID="w2dd">ohne</tc:token>
+      <tc:token ID="w2de">weiteres</tc:token>
+      <tc:token ID="w2df">anwendbar</tc:token>
+      <tc:token ID="w2e0">und</tc:token>
+      <tc:token ID="w2e1">es</tc:token>
+      <tc:token ID="w2e2">müssen</tc:token>
+      <tc:token ID="w2e3">Abfrage-Oberflächen</tc:token>
+      <tc:token ID="w2e4">entwickelt</tc:token>
+      <tc:token ID="w2e5">werden</tc:token>
+      <tc:token ID="w2e6">,</tc:token>
+      <tc:token ID="w2e7">die</tc:token>
+      <tc:token ID="w2e8">es</tc:token>
+      <tc:token ID="w2e9">ermöglichen</tc:token>
+      <tc:token ID="w2ea">das</tc:token>
+      <tc:token ID="w2eb">Potential</tc:token>
+      <tc:token ID="w2ec">der</tc:token>
+      <tc:token ID="w2ed">vernetzten</tc:token>
+      <tc:token ID="w2ee">Daten</tc:token>
+      <tc:token ID="w2ef">auch</tc:token>
+      <tc:token ID="w2f0">für</tc:token>
+      <tc:token ID="w2f1">die</tc:token>
+      <tc:token ID="w2f2">Forschenden</tc:token>
+      <tc:token ID="w2f3">nutzbar</tc:token>
+      <tc:token ID="w2f4">zu</tc:token>
+      <tc:token ID="w2f5">machen</tc:token>
+      <tc:token ID="w2f6">.</tc:token>
+      <tc:token ID="w2f7">Neben</tc:token>
+      <tc:token ID="w2f8">der</tc:token>
+      <tc:token ID="w2f9">eher</tc:token>
+      <tc:token ID="w2fa">klassischen</tc:token>
+      <tc:token ID="w2fb">Webpräsentation</tc:token>
+      <tc:token ID="w2fc">und</tc:token>
+      <tc:token ID="w2fd">Browsing-Umgebung</tc:token>
+      <tc:token ID="w2fe">werden</tc:token>
+      <tc:token ID="w2ff">derzeit</tc:token>
+      <tc:token ID="w300">verschiedene</tc:token>
+      <tc:token ID="w301">Graphen-Visualisierungs-</tc:token>
+      <tc:token ID="w302">und</tc:token>
+      <tc:token ID="w303">Abfragetools</tc:token>
+      <tc:token ID="w304">getestet</tc:token>
+      <tc:token ID="w305">.</tc:token>
+      <tc:token ID="w306">In</tc:token>
+      <tc:token ID="w307">einem</tc:token>
+      <tc:token ID="w308">geplanten</tc:token>
+      <tc:token ID="w309">Workshop</tc:token>
+      <tc:token ID="w30a">soll</tc:token>
+      <tc:token ID="w30b">eine</tc:token>
+      <tc:token ID="w30c">grösserer</tc:token>
+      <tc:token ID="w30d">Kreis</tc:token>
+      <tc:token ID="w30e">von</tc:token>
+      <tc:token ID="w30f">Fachwissenschaftlern</tc:token>
+      <tc:token ID="w310">Zugang</tc:token>
+      <tc:token ID="w311">zur</tc:token>
+      <tc:token ID="w312">Datenbank</tc:token>
+      <tc:token ID="w313">und</tc:token>
+      <tc:token ID="w314">den</tc:token>
+      <tc:token ID="w315">experimentellen</tc:token>
+      <tc:token ID="w316">Werkzeugen</tc:token>
+      <tc:token ID="w317">erhalten</tc:token>
+      <tc:token ID="w318">um</tc:token>
+      <tc:token ID="w319">eine</tc:token>
+      <tc:token ID="w31a">weitere</tc:token>
+      <tc:token ID="w31b">Diskussion</tc:token>
+      <tc:token ID="w31c">in</tc:token>
+      <tc:token ID="w31d">Gang</tc:token>
+      <tc:token ID="w31e">zu</tc:token>
+      <tc:token ID="w31f">setzen</tc:token>
+      <tc:token ID="w320">und</tc:token>
+      <tc:token ID="w321">Erfahrungen</tc:token>
+      <tc:token ID="w322">und</tc:token>
+      <tc:token ID="w323">mögliche</tc:token>
+      <tc:token ID="w324">Fragestellungen</tc:token>
+      <tc:token ID="w325">für</tc:token>
+      <tc:token ID="w326">die</tc:token>
+      <tc:token ID="w327">weitere</tc:token>
+      <tc:token ID="w328">Entwicklung</tc:token>
+      <tc:token ID="w329">zu</tc:token>
+      <tc:token ID="w32a">sammeln</tc:token>
+      <tc:token ID="w32b">.</tc:token>
+      <tc:token ID="w32c">Wissenschaftliche</tc:token>
+      <tc:token ID="w32d">Manuskripte</tc:token>
+      <tc:token ID="w32e">des</tc:token>
+      <tc:token ID="w32f">Islamischen</tc:token>
+      <tc:token ID="w330">Raums</tc:token>
+      <tc:token ID="w331">Von</tc:token>
+      <tc:token ID="w332">Tabellen</tc:token>
+      <tc:token ID="w333">zu</tc:token>
+      <tc:token ID="w334">Daten-Graphen</tc:token>
+      <tc:token ID="w335">Neue</tc:token>
+      <tc:token ID="w336">Möglichkeiten</tc:token>
+      <tc:token ID="w337">durch</tc:token>
+      <tc:token ID="w338">ein</tc:token>
+      <tc:token ID="w339">neues</tc:token>
+      <tc:token ID="w33a">Datenmodell</tc:token>
+      <tc:token ID="w33b">Herausforderungen</tc:token>
+      <tc:token ID="w33c">durch</tc:token>
+      <tc:token ID="w33d">neue</tc:token>
+      <tc:token ID="w33e">Technologie</tc:token>
+      <tc:token ID="w33f">Ragep</tc:token>
+      <tc:token ID="w340">,</tc:token>
+      <tc:token ID="w341">Jamil</tc:token>
+      <tc:token ID="w342">F.</tc:token>
+      <tc:token ID="w343">/</tc:token>
+      <tc:token ID="w344">Ragep</tc:token>
+      <tc:token ID="w345">,</tc:token>
+      <tc:token ID="w346">Sally</tc:token>
+      <tc:token ID="w347">P.</tc:token>
+      <tc:token ID="w348">(</tc:token>
+      <tc:token ID="w349">2008</tc:token>
+      <tc:token ID="w34a">)</tc:token>
+      <tc:token ID="w34b">:</tc:token>
+      <tc:token ID="w34c">„</tc:token>
+      <tc:token ID="w34d">The</tc:token>
+      <tc:token ID="w34e">Islamic</tc:token>
+      <tc:token ID="w34f">Scientific</tc:token>
+      <tc:token ID="w350">Manuscript</tc:token>
+      <tc:token ID="w351">Initiative</tc:token>
+      <tc:token ID="w352">(</tc:token>
+      <tc:token ID="w353">ISMI</tc:token>
+      <tc:token ID="w354">)</tc:token>
+      <tc:token ID="w355">.</tc:token>
+      <tc:token ID="w356">Towards</tc:token>
+      <tc:token ID="w357">a</tc:token>
+      <tc:token ID="w358">Sociology</tc:token>
+      <tc:token ID="w359">of</tc:token>
+      <tc:token ID="w35a">the</tc:token>
+      <tc:token ID="w35b">Exact</tc:token>
+      <tc:token ID="w35c">Sciences</tc:token>
+      <tc:token ID="w35d">in</tc:token>
+      <tc:token ID="w35e">Islam</tc:token>
+      <tc:token ID="w35f">“</tc:token>
+      <tc:token ID="w360">,</tc:token>
+      <tc:token ID="w361">in</tc:token>
+      <tc:token ID="w362">:</tc:token>
+      <tc:token ID="w363">Calvo</tc:token>
+      <tc:token ID="w364">,</tc:token>
+      <tc:token ID="w365">Emilia</tc:token>
+      <tc:token ID="w366">/</tc:token>
+      <tc:token ID="w367">Comes</tc:token>
+      <tc:token ID="w368">,</tc:token>
+      <tc:token ID="w369">Mercè</tc:token>
+      <tc:token ID="w36a">/</tc:token>
+      <tc:token ID="w36b">Puig</tc:token>
+      <tc:token ID="w36c">,</tc:token>
+      <tc:token ID="w36d">Roser</tc:token>
+      <tc:token ID="w36e">/</tc:token>
+      <tc:token ID="w36f">Rius</tc:token>
+      <tc:token ID="w370">,</tc:token>
+      <tc:token ID="w371">Monica</tc:token>
+      <tc:token ID="w372">(</tc:token>
+      <tc:token ID="w373">eds</tc:token>
+      <tc:token ID="w374">.</tc:token>
+      <tc:token ID="w375">)</tc:token>
+      <tc:token ID="w376">:</tc:token>
+      <tc:token ID="w377">A</tc:token>
+      <tc:token ID="w378">Shared</tc:token>
+      <tc:token ID="w379">Legacy</tc:token>
+      <tc:token ID="w37a">:</tc:token>
+      <tc:token ID="w37b">Islamic</tc:token>
+      <tc:token ID="w37c">Science</tc:token>
+      <tc:token ID="w37d">East</tc:token>
+      <tc:token ID="w37e">and</tc:token>
+      <tc:token ID="w37f">West</tc:token>
+      <tc:token ID="w380">.</tc:token>
+      <tc:token ID="w381">Homage</tc:token>
+      <tc:token ID="w382">to</tc:token>
+      <tc:token ID="w383">Professor</tc:token>
+      <tc:token ID="w384">J.</tc:token>
+      <tc:token ID="w385">M.</tc:token>
+      <tc:token ID="w386">Millàs</tc:token>
+      <tc:token ID="w387">Vallicrosa</tc:token>
+      <tc:token ID="w388">.</tc:token>
+      <tc:token ID="w389">Barcelona</tc:token>
+      <tc:token ID="w38a">:</tc:token>
+      <tc:token ID="w38b">University</tc:token>
+      <tc:token ID="w38c">of</tc:token>
+      <tc:token ID="w38d">Barcelona</tc:token>
+      <tc:token ID="w38e">15–21</tc:token>
+      <tc:token ID="w38f">https://www.rasi.mcgill.ca/ISMI_SharedLegacy.pdf</tc:token>
+      <tc:token ID="w390">[</tc:token>
+      <tc:token ID="w391">letzter</tc:token>
+      <tc:token ID="w392">Zugriff</tc:token>
+      <tc:token ID="w393">17.</tc:token>
+      <tc:token ID="w394">Februar</tc:token>
+      <tc:token ID="w395">2016</tc:token>
+      <tc:token ID="w396">]</tc:token>
+      <tc:token ID="w397">.</tc:token>
+      <tc:token ID="w398">Bibliographie</tc:token>
+    </tc:tokens>
+    <tc:sentences xmlns:tc="http://www.dspin.de/data/textcorpus">
+      <tc:sentence tokenIDs="w1 w2 w3 w4 w5 w6 w7 w8 w9 wa wb wc wd we wf w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w1a w1b w1c w1d w1e w1f w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 w2a w2b w2c w2d w2e w2f w30 w31 w32 w33 w34 w35 w36 w37 w38 w39 w3a w3b w3c w3d w3e w3f w40 w41 w42 w43 w44 w45 w46 w47 w48 w49 w4a w4b w4c w4d w4e w4f w50 w51 w52 w53 w54" ID="s1"/>
+      <tc:sentence tokenIDs="w55 w56 w57 w58 w59 w5a w5b w5c w5d w5e w5f w60 w61 w62 w63 w64 w65 w66 w67 w68 w69 w6a w6b w6c w6d w6e w6f w70 w71 w72 w73 w74 w75 w76 w77 w78 w79 w7a w7b w7c w7d w7e w7f w80 w81" ID="s2"/>
+      <tc:sentence tokenIDs="w82 w83 w84 w85 w86 w87 w88 w89 w8a w8b w8c w8d w8e w8f w90 w91 w92 w93" ID="s3"/>
+      <tc:sentence tokenIDs="w94 w95 w96 w97 w98 w99 w9a w9b w9c w9d w9e w9f wa0 wa1 wa2 wa3 wa4 wa5 wa6" ID="s4"/>
+      <tc:sentence tokenIDs="wa7 wa8 wa9 waa wab wac wad wae waf wb0 wb1 wb2 wb3 wb4 wb5 wb6 wb7 wb8 wb9 wba wbb" ID="s5"/>
+      <tc:sentence tokenIDs="wbc wbd wbe wbf wc0 wc1 wc2 wc3 wc4 wc5 wc6 wc7 wc8 wc9 wca wcb wcc wcd wce wcf wd0" ID="s6"/>
+      <tc:sentence tokenIDs="wd1 wd2 wd3 wd4 wd5 wd6 wd7 wd8 wd9 wda wdb wdc wdd wde wdf we0 we1 we2 we3 we4 we5" ID="s7"/>
+      <tc:sentence tokenIDs="we6 we7 we8 we9 wea web wec wed wee" ID="s8"/>
+      <tc:sentence tokenIDs="wef wf0 wf1 wf2 wf3 wf4 wf5 wf6 wf7 wf8 wf9 wfa" ID="s9"/>
+      <tc:sentence tokenIDs="wfb wfc wfd wfe wff w100 w101 w102 w103 w104 w105 w106 w107 w108 w109 w10a w10b w10c w10d w10e w10f w110 w111 w112 w113 w114 w115 w116 w117 w118 w119 w11a w11b" ID="sa"/>
+      <tc:sentence tokenIDs="w11c w11d w11e w11f w120 w121 w122 w123 w124 w125 w126 w127 w128 w129 w12a w12b w12c w12d w12e w12f w130 w131 w132 w133 w134 w135 w136 w137 w138 w139 w13a w13b w13c w13d w13e w13f w140" ID="sb"/>
+      <tc:sentence tokenIDs="w141 w142 w143 w144 w145 w146 w147 w148 w149 w14a w14b w14c w14d w14e w14f w150 w151 w152 w153 w154 w155 w156 w157 w158 w159" ID="sc"/>
+      <tc:sentence tokenIDs="w15a w15b w15c w15d w15e w15f w160 w161 w162 w163 w164 w165 w166 w167 w168 w169 w16a w16b" ID="sd"/>
+      <tc:sentence tokenIDs="w16c w16d w16e w16f w170 w171 w172 w173 w174 w175 w176 w177 w178 w179 w17a w17b w17c w17d w17e w17f w180 w181 w182 w183 w184" ID="se"/>
+      <tc:sentence tokenIDs="w185 w186 w187 w188 w189 w18a w18b w18c w18d w18e w18f w190 w191 w192 w193 w194 w195 w196 w197 w198 w199 w19a w19b w19c w19d w19e w19f w1a0 w1a1 w1a2 w1a3 w1a4 w1a5 w1a6 w1a7 w1a8 w1a9 w1aa w1ab w1ac w1ad" ID="sf"/>
+      <tc:sentence tokenIDs="w1ae w1af w1b0 w1b1 w1b2 w1b3 w1b4 w1b5 w1b6 w1b7 w1b8 w1b9 w1ba w1bb w1bc w1bd w1be w1bf w1c0 w1c1 w1c2 w1c3 w1c4 w1c5 w1c6 w1c7 w1c8 w1c9 w1ca w1cb w1cc" ID="s10"/>
+      <tc:sentence tokenIDs="w1cd w1ce w1cf w1d0 w1d1 w1d2 w1d3 w1d4 w1d5 w1d6 w1d7 w1d8 w1d9 w1da w1db w1dc w1dd w1de w1df w1e0 w1e1 w1e2 w1e3 w1e4 w1e5 w1e6 w1e7 w1e8 w1e9 w1ea w1eb w1ec w1ed w1ee w1ef w1f0 w1f1 w1f2 w1f3 w1f4 w1f5 w1f6 w1f7 w1f8 w1f9 w1fa w1fb" ID="s11"/>
+      <tc:sentence tokenIDs="w1fc w1fd w1fe w1ff w200 w201 w202 w203 w204 w205 w206 w207 w208 w209 w20a" ID="s12"/>
+      <tc:sentence tokenIDs="w20b w20c w20d w20e w20f w210 w211 w212 w213 w214 w215 w216 w217 w218 w219 w21a w21b w21c w21d w21e w21f w220 w221 w222 w223 w224 w225 w226 w227 w228 w229 w22a w22b w22c w22d w22e w22f w230 w231 w232 w233 w234 w235 w236 w237 w238 w239 w23a w23b w23c w23d w23e w23f w240 w241 w242 w243 w244 w245 w246 w247 w248 w249 w24a w24b w24c w24d w24e w24f w250 w251 w252 w253 w254 w255 w256 w257 w258 w259 w25a w25b w25c w25d w25e w25f" ID="s13"/>
+      <tc:sentence tokenIDs="w260 w261 w262 w263 w264 w265 w266 w267 w268 w269 w26a w26b w26c w26d w26e w26f w270 w271 w272 w273 w274 w275 w276 w277 w278 w279 w27a w27b w27c w27d w27e w27f w280 w281" ID="s14"/>
+      <tc:sentence tokenIDs="w282 w283 w284 w285 w286 w287 w288 w289 w28a w28b w28c w28d w28e w28f w290 w291 w292 w293 w294 w295 w296 w297 w298 w299 w29a w29b w29c" ID="s15"/>
+      <tc:sentence tokenIDs="w29d w29e w29f w2a0 w2a1 w2a2 w2a3 w2a4 w2a5 w2a6 w2a7 w2a8 w2a9 w2aa w2ab w2ac" ID="s16"/>
+      <tc:sentence tokenIDs="w2ad w2ae w2af w2b0 w2b1 w2b2 w2b3 w2b4 w2b5 w2b6 w2b7 w2b8 w2b9 w2ba w2bb w2bc w2bd w2be w2bf w2c0 w2c1 w2c2 w2c3 w2c4 w2c5 w2c6 w2c7 w2c8 w2c9 w2ca w2cb w2cc w2cd w2ce w2cf" ID="s17"/>
+      <tc:sentence tokenIDs="w2d0 w2d1 w2d2 w2d3 w2d4 w2d5 w2d6 w2d7 w2d8 w2d9 w2da w2db w2dc w2dd w2de w2df w2e0 w2e1 w2e2 w2e3 w2e4 w2e5 w2e6 w2e7 w2e8 w2e9 w2ea w2eb w2ec w2ed w2ee w2ef w2f0 w2f1 w2f2 w2f3 w2f4 w2f5 w2f6" ID="s18"/>
+      <tc:sentence tokenIDs="w2f7 w2f8 w2f9 w2fa w2fb w2fc w2fd w2fe w2ff w300 w301 w302 w303 w304 w305" ID="s19"/>
+      <tc:sentence tokenIDs="w306 w307 w308 w309 w30a w30b w30c w30d w30e w30f w310 w311 w312 w313 w314 w315 w316 w317 w318 w319 w31a w31b w31c w31d w31e w31f w320 w321 w322 w323 w324 w325 w326 w327 w328 w329 w32a w32b" ID="s1a"/>
+      <tc:sentence tokenIDs="w32c w32d w32e w32f w330 w331 w332 w333 w334 w335 w336 w337 w338 w339 w33a w33b w33c w33d w33e w33f w340 w341 w342 w343 w344 w345 w346 w347 w348 w349 w34a w34b" ID="s1b"/>
+      <tc:sentence tokenIDs="w34c w34d w34e w34f w350 w351 w352 w353 w354 w355" ID="s1c"/>
+      <tc:sentence tokenIDs="w356 w357 w358 w359 w35a w35b w35c w35d w35e w35f w360 w361 w362 w363 w364 w365 w366 w367 w368 w369 w36a w36b w36c w36d w36e w36f w370 w371 w372 w373 w374 w375 w376" ID="s1d"/>
+      <tc:sentence tokenIDs="w377 w378 w379 w37a w37b w37c w37d w37e w37f w380" ID="s1e"/>
+      <tc:sentence tokenIDs="w381 w382 w383 w384 w385" ID="s1f"/>
+      <tc:sentence tokenIDs="w386 w387 w388" ID="s20"/>
+      <tc:sentence tokenIDs="w389 w38a w38b w38c w38d w38e w38f w390 w391 w392 w393 w394 w395 w396 w397" ID="s21"/>
+      <tc:sentence tokenIDs="w398" ID="s22"/>
+    </tc:sentences>
+    <tc:namedEntities xmlns:tc="http://www.dspin.de/data/textcorpus" type="tuebadz8">
+      <tc:entity class="ORG" tokenIDs="w2"/>
+      <tc:entity class="ORG" tokenIDs="w5 w6 w7 w8"/>
+      <tc:entity class="ORG" tokenIDs="wf"/>
+      <tc:entity class="ORG" tokenIDs="w14 w15 w16 w17"/>
+      <tc:entity class="ORG" tokenIDs="w19 w1a"/>
+      <tc:entity class="GPE" tokenIDs="w1c"/>
+      <tc:entity class="ORG" tokenIDs="we8"/>
+      <tc:entity class="PER" tokenIDs="wef wf0"/>
+      <tc:entity class="ORG" tokenIDs="w153"/>
+      <tc:entity class="PER" tokenIDs="w24d"/>
+      <tc:entity class="ORG" tokenIDs="w32f w330"/>
+      <tc:entity class="PER" tokenIDs="w341 w342"/>
+      <tc:entity class="PER" tokenIDs="w344"/>
+      <tc:entity class="PER" tokenIDs="w346 w347"/>
+      <tc:entity class="ORG" tokenIDs="w34d w34e w34f w350 w351"/>
+      <tc:entity class="ORG" tokenIDs="w353"/>
+      <tc:entity class="OTH" tokenIDs="w356 w357 w358 w359 w35a w35b w35c w35d w35e"/>
+      <tc:entity class="PER" tokenIDs="w363"/>
+      <tc:entity class="PER" tokenIDs="w365"/>
+      <tc:entity class="PER" tokenIDs="w367"/>
+      <tc:entity class="PER" tokenIDs="w369"/>
+      <tc:entity class="PER" tokenIDs="w36b"/>
+      <tc:entity class="PER" tokenIDs="w36d"/>
+      <tc:entity class="PER" tokenIDs="w36f"/>
+      <tc:entity class="PER" tokenIDs="w371"/>
+      <tc:entity class="OTH" tokenIDs="w37b w37c w37d w37e w37f"/>
+      <tc:entity class="PER" tokenIDs="w384"/>
+      <tc:entity class="PER" tokenIDs="w386 w387"/>
+      <tc:entity class="GPE" tokenIDs="w389"/>
+      <tc:entity class="ORG" tokenIDs="w38b w38c w38d"/>
+    </tc:namedEntities>
+  </TextCorpus>
+</D-Spin>

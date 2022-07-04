@@ -1,0 +1,2559 @@
+<?xml version='1.0' encoding='UTF-8'?><D-Spin xmlns="http://www.dspin.de/data" version="5">
+  <MetaData xmlns="http://www.dspin.de/data/metadata"><Services><cmd:CMD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cmd="http://www.clarin.eu/cmd/1" CMDVersion="1.2" xsi:schemaLocation="http://www.clarin.eu/cmd/1 http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_1320657629623/xsd"><cmd:Resources><cmd:ResourceProxyList/><cmd:JournalFileProxyList/><cmd:ResourceRelationList/></cmd:Resources><cmd:Components><cmd:WebServiceToolChain><cmd:GeneralInfo><cmd:Descriptions><cmd:Description/></cmd:Descriptions><cmd:ResourceName>Custom chain</cmd:ResourceName><cmd:ResourceClass>Toolchain</cmd:ResourceClass></cmd:GeneralInfo><cmd:Toolchain><cmd:ToolInChain><cmd:PID>https://hdl.handle.net/21.11120/0000-0008-319A-3</cmd:PID><cmd:Parameter value="de" name="lang"/></cmd:ToolInChain><cmd:ToolInChain><cmd:PID>https://hdl.handle.net/21.11120/0000-0008-3183-C</cmd:PID><cmd:Parameter value="5" name="version"/></cmd:ToolInChain><cmd:ToolInChain><cmd:PID>http://hdl.handle.net/11022/0000-0007-DA29-6</cmd:PID><cmd:Parameter value="de" name="lang"/><cmd:Parameter value="5" name="version"/></cmd:ToolInChain></cmd:Toolchain></cmd:WebServiceToolChain></cmd:Components></cmd:CMD></Services></MetaData>
+  <TextCorpus xmlns="http://www.dspin.de/data/textcorpus" lang="de">
+    <textSource type="application/tei+xml;format-variant=tei-dta;tokenized=0">&lt;?xml version="1.0" encoding="utf-8"?>
+&lt;TEI xml:id="214_final-SCHROTT_Maximilian_Die_Digitale_Edition_der_Protokolle_des_B" xmlns="http://www.tei-c.org/ns/1.0">
+&lt;teiHeader>
+&lt;fileDesc>
+&lt;titleStmt>
+&lt;title>Die Digitale Edition der Protokolle des Bayerischen Ministerrats – ein Erfahrungsbericht&lt;/title>
+&lt;author>
+&lt;persName>
+&lt;surname>Schrott&lt;/surname>
+&lt;forename>Maximilian&lt;/forename>
+&lt;/persName>
+&lt;affiliation>Historische Kommission bei der Bayerischen Akademie der Wissenschaften, Deutschland&lt;/affiliation>
+&lt;email>maximilian.schrott@ndb.badw-muenchen.de&lt;/email>
+&lt;/author>
+&lt;author>
+&lt;persName>
+&lt;surname>Reinert&lt;/surname>
+&lt;forename>Matthias&lt;/forename>
+&lt;/persName>
+&lt;affiliation>Historische Kommission bei der Bayerischen Akademie der Wissenschaften, Deutschland&lt;/affiliation>
+&lt;email>Matthias.Reinert@ndb.badw-muenchen.de&lt;/email>
+&lt;/author>
+&lt;/titleStmt>
+&lt;editionStmt>
+&lt;edition>
+&lt;date>2019-12-09T11:27:00Z&lt;/date>
+&lt;/edition>
+&lt;/editionStmt>
+&lt;publicationStmt>
+&lt;publisher>Universität Paderborn&lt;/publisher>
+&lt;address>
+&lt;addrLine>Warburger Str. 100&lt;/addrLine>
+&lt;addrLine>33098 Paderborn&lt;/addrLine>
+&lt;addrLine>Deutschland&lt;/addrLine>
+&lt;/address>
+&lt;/publicationStmt>
+&lt;sourceDesc>
+&lt;p>Converted from a Word document&lt;/p>
+&lt;/sourceDesc>
+&lt;/fileDesc>
+&lt;encodingDesc>
+&lt;appInfo>
+&lt;application ident="DHCONVALIDATOR" version="1.22">
+&lt;label>DHConvalidator&lt;/label>
+&lt;/application>
+&lt;/appInfo>
+&lt;/encodingDesc>
+&lt;profileDesc>
+&lt;textClass>
+&lt;keywords n="category" scheme="ConfTool">
+&lt;term>Paper&lt;/term>
+&lt;/keywords>
+&lt;keywords n="subcategory" scheme="ConfTool">
+&lt;term>Vortrag&lt;/term>
+&lt;/keywords>
+&lt;keywords n="keywords" scheme="ConfTool">
+&lt;term>Historische Edition&lt;/term>
+&lt;term>Digitale Edition&lt;/term>
+&lt;term>XML&lt;/term>
+&lt;term>TEI&lt;/term>
+&lt;term>Oxygen XML Editor&lt;/term>
+&lt;term>Bayern&lt;/term>
+&lt;term>Zeitgeschichte&lt;/term>
+&lt;term>Protokolle&lt;/term>
+&lt;/keywords>
+&lt;keywords n="topics" scheme="ConfTool">
+&lt;term>Programmierung&lt;/term>
+&lt;term>Modellierung&lt;/term>
+&lt;term>Bearbeitung&lt;/term>
+&lt;term>Veröffentlichung&lt;/term>
+&lt;term>Text&lt;/term>
+&lt;/keywords>
+&lt;/textClass>
+&lt;/profileDesc>
+&lt;/teiHeader>
+&lt;text>
+&lt;body>
+&lt;p>Im Sommer 2019 konnte die Historische Kommission bei der Bayerischen Akademie der Wissenschaften ihr 2014 begonnenes Pilotprojekt für ein neues Konzept historisch-kritischer Editionsarbeit zu einem erfolgreichen Abschluss bringen. Mit dem neunten Band der Reihe „Protokolle des Bayerischen Ministerrats 1945–1962“&lt;ref n="1" target="ftn1"/>, bearbeitet von Dr. Oliver Braun (München), entstand die erste Edition der Historischen Kommission auf XML-Basis. Das neue Konzept ermöglicht es, ohne großen Zusatzaufwand, einen vollwertigen gedruckten Band und eine digitale Version mit zahlreichen Such- und Verlinkungsfeatures herzustellen. Vor allem aber ist es darauf ausgelegt, dass die Bearbeiter und Bearbeiterinnen ihren Editionstext in vollwertigem TEI-XML&lt;ref n="2" target="ftn2"/> herstellen können, ohne technische Vorkenntnisse zu benötigen. Dank einer speziell eingerichteten Arbeitsumgebung im Programm                &lt;hi rend="italic">Oxygen XML Editor&lt;/hi>&lt;ref n="3" target="ftn3"/> können sie ihre bisher gewohnte Arbeitsweise weitgehend beibehalten. Unser Vortrag möchte dieses neue Editionskonzept und die Arbeitsumgebung vorstellen sowie von den Erfahrungen berichten, die wir bei der Herstellung des Bands 9 der Bayerischen Ministerratsprotokolle gemacht haben.
+            &lt;/p>
+&lt;p>Die Edition „Protokolle des Bayerischen Ministerrats 1945–1962“&lt;ref n="4" target="ftn4"/>, die seit Anfang der 1990er Jahre
+                &lt;hi rend="bold">,&lt;/hi> dank Förderung durch den Freistaat Bayern, bei der Historischen Kommission entsteht, ist eines der wichtigsten Forschungsprojekte zur bayerischen Zeitgeschichte. In bisher acht Bänden, die die Jahre 1945 bis 1951 abdecken, dokumentieren die ausführlichen Gesprächsprotokolle der Ministerratssitzungen das Handeln der Bayerischen Staatsregierung. Sie geben Einblick in die Fragen und Herausforderungen der Nachkriegszeit in Bayern, erst unter amerikanischer Kontrolle, dann in der noch jungen Bundesrepublik. Deutlich lassen sich aus Ihnen die Kontroversen und die teilweise heftig geführten Diskussionen zwischen den Kabinettsmitgliedern herauslesen. Nicht selten gleichen dabei die vor 70 Jahren geführten Debatten zu Themen wie Flüchtlingen, Verkehrspolitik und Bildungswesen verblüffend den aktuellen politischen Auseinandersetzungen in Bayern und Deutschland. Die ersten acht Bände der Edition (bis 1952) stehen im Volltext retrodigitalisiert auch online zur Verfügung.&lt;ref n="5" target="ftn5"/>
+&lt;/p>
+&lt;figure>
+&lt;graphic height="8.669513888888888cm" n="1001" rend="inline" url="214_final-6ba30a0c7e61812dd79a4e16c096c2ed.png" width="16.002cm"/>
+&lt;head>Abbildung 1: Ein Protokoll aus der Edition in seiner XML-Grundform, …&lt;/head>
+&lt;/figure>
+&lt;p>Die Arbeiten an dem hier vorgestellten Editionskonzept begannen im Jahr 2014. Ausgangsbasis war damals das Projekt 
+                &lt;hi rend="italic">ediarum&lt;/hi>&lt;ref n="6" target="ftn6"/> der Berlin-Brandenburgischen Akademie der Wissenschaften (Dumont/Fechner 2015). Während es Inspiration und eine wertvolle technische Grundlage lieferte, ergaben sich rasch Anforderungen, die mit dem damals verfügbaren Werkzeugen von 
+                &lt;hi rend="italic">ediarum&lt;/hi> nicht vollständig zu erfüllen waren. Und so begannen Matthias Reinert und Maximilian Schrott (beide München), Mitarbeiter in der Abteilung „Digitale Publikationen“ mit der Entwicklung eines eigenen Ansatzes. Dessen Kerngedanke ist es, dass der Bearbeiter möglichst gar keine Berührungspunkte mit der XML-Syntax der Dokumente hat. Stattdessen soll er sich voll auf die Arbeit am Editionstext konzentrieren können. Dennoch legt Herr Dr. Braun teils komplexe Strukturen auf Basis des TEI Lite Schemas in den Protokolltext an und baut während der gesamten Editionsarbeit interne und externe Verknüpfungen in den Text ein. So wird das Projekt mit Metainformationen angereicht, die vor allem bei der digitalen Veröffentlichung im Internet einen Mehrwert bringen. Entscheidend unterstützt wird er dabei durch den 
+                &lt;hi rend="italic">Oxygen XML Editor&lt;/hi>. Dieses leistungsstarke XML-Bearbeitungsprogramm, bietet die Möglichkeit eine stark individualisierte Arbeitsumgebung einzurichten. 
+            &lt;/p>
+&lt;p>Die wichtigsten Bestandteile dieser Arbeitsumgebung für unser Editionsprojekt sind Operationen und Stile. Die Operationen sind eine Reihe von vorbereiten Funktionen, die eine Eingabe des Bearbeiters entgegen nehmen, daraus XML-Fragmente generieren und in den Text einfügen. Sie werden entweder aus Standardoperationen, die der 
+                &lt;hi rend="italic">Oxygen XML Editor&lt;/hi> bietet, konfiguriert oder können selbst über eine Java-Schnittstelle programmiert werden. Herr Dr. Braun löst sie nach Bedarf über Buttons in der Menüleiste des Editors aus. Die Operationen ermöglichen es ihm mit wenigen Mausklicks und Eingaben in Textmasken komplexe Strukturelemente wie den Protokollkopf einzufügen, den Protokolltext in Tagesordnungspunkte und Unterpunkte zu gliedern oder Verweise auf andere Abschnitte und Fußnoten innerhalb des Editionskorpus zu setzen. Auf diese Weise kann Herr Dr. Braun das XML seiner Editionsdokumente bequem und ohne Angst vor lästigen Flüchtigkeitsfehlern bearbeiten und das mit minimalem Einarbeitungsaufwand.
+&lt;/p>
+&lt;p>Die Stile werden über Cascading Style Sheets (CSS) eingerichtet. Mit diesen kann die Darstellung der XML-Dokumente in 
+                &lt;hi rend="italic">Oxygen XML Editor&lt;/hi> weitreichend angepasst werden. Für die Bayerischen Ministerratsprotokolle fiel der Entschluss, das XML-Markup, das oft als störend empfunden wird, größtenteils auszublenden und nur den reinen Editionstext darzustellen. Die semantischen Strukturen werden stattdessen über Formatierung, Textsetzung und farbliche Markierungen kenntlich gemacht. Herr Dr. Braun kann zwischen mehreren hinterlegten Stilen wechseln, die jeweils einen bestimmten Schritt des Workflows besonders unterstützen.
+            &lt;/p>
+&lt;figure>
+&lt;graphic height="8.669513888888888cm" n="1002" rend="inline" url="214_final-01e8203a4d8b7778e4f5002f0f79e442.png" width="16.002cm"/>
+&lt;head>Abbildung 2: … in der Darstellung der Arbeitsumgebung …&lt;/head>
+&lt;/figure>
+&lt;p>Zusammengenommen ermöglichen Operationen und Stile ein bequemes und produktives Arbeiten in XML. Durch das vollständige Verlagern der Syntax in den Hintergrund, sinkt die Einstiegshürde für XML-unkundige Bearbeiter. Gleichzeitig ist die Arbeit schneller, bequemer und weniger fehleranfällig, als wenn das Markup von Hand eingegeben werden müsste. Und der Blick des Bearbeiters auf den Text wird nicht durch unübersichtliche XML-Element-Konstruktionen versperrt.&lt;/p>
+&lt;p>Eine neu hinzugekommene Aufgabe für Herrn Dr. Braun während der Editionsarbeit ist die Markierung der registerrelevanten Entitäten (Personen, Orte, Schlagwörter, Gesetze, Quellen und Literaturtitel) im Text. Die systematische Referenzierung dieser Textstellen erhöht den Grad der thematischen Verknüpfung innerhalb der Edition enorm und ermöglicht ein hohes Maß an Erschließ- und Durchsuchbarkeit für die digitale Präsentation. Kernstück dieser Verknüpfungsarbeit ist die Registerdatenbank (RDB). In diese trägt der Bearbeiter sämtliche registerrelevanten Entitäten im TEI-Format ein, ebenfalls unterstützt durch die Arbeitsumgebung. Da Herr Dr. Braun zwar an verschiedenen Orten aber alleine an seinen Editionstexten arbeitet, schien es zunächst unnötig die RDB als 
+                &lt;hi rend="italic">eXist-&lt;/hi>Datenbank&lt;ref n="7" target="ftn7"/> einzurichten. Stattdessen handelt es sich um eine Reihe von einfachen XML-Dateien, die jeweils einen einzelnen Entitätstypen beinhalten. Diese Lösung spart Wartungsaufwand und vermeidet einen Onlinezwang während der Arbeit, ohne dass sich dadurch ein merkbarer Nachteil ergab. Die Sicherung der RDB-Dateien, wie auch der Editionsdokumente, erfolgt stattdessen über 
+                &lt;hi rend="italic">Sync+Share&lt;/hi>&lt;ref n="8" target="ftn8"/>, das Cloud-Speicherangebot des Leibniz-Rechenzentrums. Dieses sorgt gleichzeitig für den Austausch der Arbeitsdateien mit den technischen Betreuern.
+            &lt;/p>
+&lt;p>Vom Text aus kann Herr Dr. Braun über entsprechende Operationen den jeweils benötigten RDB-Eintrag heraussuchen und eine Referenz auf diesen hinterlegen. Zusätzlich zu den Registerinformationen wie Personen- und Ortsname kann die RDB auch weiterführende Daten zu ihren Einträgen speichern. Zum Beispiel die geographischen Koordinaten eines Ortes, Normdaten-Identifier (GND)&lt;ref n="9" target="ftn9"/> oder biographische Informationen zu den Personen. Diese können während der Bearbeitung und später in der digitalen Präsentation genutzt werden, um zusätzlichen Funktionen zu realisieren.
+            &lt;/p>
+&lt;p>Während sich Herr Dr. Braun auf seine Editionsarbeit konzentrieren kann, kümmert sich die Abteilung Digitale Publikationen der Historischen Kommission um die technische Umsetzung. Zu Projektbeginn prüfte sie, in Absprachen mit dem Bearbeiter, die Anforderungen des Editionsprojekts. Auf dieser Basis wurde dann entschieden, welche Phänomene des Editionstextes in XML kodiert werden mussten und wie. Aus diesen Überlegungen entstanden schließlich die digitalen Editionsrichtlinien. Anhand dieser richtete Maximilian Schrott dann die Editionsumgebung in 
+                &lt;hi rend="italic">Oxygen XML Editor&lt;/hi> ein, designte die Stile und programmierte die Operationen. Nach dieser Erstkonfiguration leistete er Herrn Dr. Braun während des gesamten Bearbeitungszeitraums fortlaufend Support. Er verbesserte Fehler in der Arbeitsumgebung, entwickelte diese auf Basis seines Feedbacks weiter und überwachte die korrekte Form der Editionsdokumente. Zum Ende der Editionsarbeit hin übernahm die Abteilung Digitale Publikation schließlich die Umwandlung des Editionstextes in die gedruckte Form.
+            &lt;/p>
+&lt;figure>
+&lt;graphic height="16.00023611111111cm" n="1003" rend="inline" url="214_final-78d2980a6357bc47e3dfc80b0b1285d2.png" width="10.410472222222221cm"/>
+&lt;head>Abbildung 3: … und in der finalen PDF-Druckfassung.&lt;/head>
+&lt;/figure>
+&lt;p>Denn auch wenn die Veröffentlichung einer hochwertigen, digitalen Version im Fokus des Editionskonzepts steht, sollte auch der neunte Band der Bayerischen Ministerratsprotokolle noch gedruckt erscheinen. Die PDF-Vorlage für den Druck wird dabei direkt aus den erstellten XML-Dateien erzeugt. Als Satzprogramm dient das in den 
+                &lt;hi rend="italic">Oxygen XML Editor&lt;/hi> integrierte 
+                &lt;hi rend="italic">Apache-FOP&lt;/hi>&lt;ref n="10" target="ftn10"/>. In dieses werden die Editionsdateien mittels einer XSL-Transformation überführt. So lässt sich in weniger als einer Minute eine vollständige Druckversion des kompletten 1000seitigen Druckbandes im gewünschten Layout erstellen. Der finale Satz erfolgt somit komplett intern, ohne Zuarbeiten durch den Verlag. Der automatisierte Satz funktioniert insgesamt sehr gut, es bleiben aber vereinzelte Mängel. Vor allem Zeilen-, Spalten- und Seitenumbruch müssen an einigen Stellen manuell nachgearbeitet werden. Auch bei der Erstellung der gedruckten Version ergeben sich durch die Anreicherungsarbeiten in XML Vorteile. So kann durch die wortgenaue Kennzeichnung der registerrelevanten Entitäten und die Verknüpfung mit der RDB auch das Druckregister halbautomatisch erstellt und dem Bearbeiter so eine besonders mühsame Arbeit erspart werden.
+            &lt;/p>
+&lt;p>Das abgeschlossen Pilotprojekt wird von Seiten der Historischen Kommission als sehr erfolgreich eingestuft. Die Arbeit im 
+                &lt;hi rend="italic">Oxygen XML Editor&lt;/hi> wurde von Herrn Dr. Braun als angenehm empfunden, die Drucklegung wurde pünktlich abgeschlossen und es konnten wertvolle Erfahrungen zur Verbesserung der Arbeitsumgebung und des Workflows gesammelt werden. Der Komfort für den Bearbeiter und die Qualität der Ergebnisse wird freilich durch eine vergleichsweise hohen Einrichtungs- und Supportaufwand erkauft. Diese Mehrarbeiten werden aber von der technischen Betreuung geleistet. Eine zusätzliche Belastung für den wissenschaftlichen Editor wird weitestgehend vermieden. Die Veränderungen in seinem Workflow sind zwar merkbar, aber nicht einschneidend. In der jetzigen Form funktioniert die Zusammenarbeit zwischen Bearbeiter und Technikern für beide Seiten sehr fruchtbringend. Außerdem sind die gewonnen Erfahrungen und Programmierarbeiten zum größten Teil für andere Projekte wiederverwendbar. Die Historische Kommission sieht sich deshalb in ihrem Entschluss bestätigt, zukünftig verstärkt auf das digitale, XML-basierte Editionskonzept zu setzen. Neben den noch ausstehenden Bänden der Bayerischen Ministerratsprotokolle sind bereits drei Briefeditionsprojekte in Arbeit, die auf diesem Ansatz beruhen.&lt;ref n="11" target="ftn11"/>  Weitere Projekte befinden sich in der Vorbereitungs- und Planungsphase. 
+            &lt;/p>
+&lt;p>Der neunte Band der Bayerischen Ministerratsprotokolle ist im Oktober 2019 gedruckt erschienen. Die Veröffentlichung im Internet wird sich noch bis voraussichtlich 2022 verzögern. Dann endet mit dem Erscheinen des 10. Bandes, die mit dem Verlag vereinbarte Exklusivitätsperiode im Druck. Der Inhalt von Band 9 und der RDB können somit zum bestehenden Webangebot der Protokolle des Bayerischen Ministerrats&lt;ref n="12" target="ftn12"/> hinzugefügt werden. Ein größeres Funktionsupdate für die Website, das hiermit einhergehen soll, befindet sich derzeit noch in der Konzeptionsphase. Es soll das Webangebot um zahlreiche neue Features erweitern, die die Anreicherungen und Vernetzungen im Editionstext für die User zugänglich macht. Noch geprüft wird, welche Verlinkungsmöglichkeiten zu externen Webangeboten und Normdatenbanken umgesetzt werden können. Außerdem gibt es Überlegungen für spezialisierte Recherche- und Visualisierungsmöglichkeiten, zum Bespiel mittels der in der RDB erfassten Orte auf Karten.
+            &lt;/p>
+&lt;/body>
+&lt;back>
+&lt;div type="notes">
+&lt;note n="1" rend="footnote text" xml:id="ftn1">
+      Das Kabinett Ehard III 18.Dezember 1950 bis 14. Dezember 1954, Band 3 8.1.1953–29.12.1953. bearb. von Oliver Braun, München [2019] (= Die Protokolle des Bayerischen Ministerrats. 1945-1962, Hg. von der Historischen Kommission bei der Bayerischen Akademie der Wissenschaften durch Andreas Wirsching und von der Generaldirektion der Staatlichen Archive durch Margit Ksoll-Marcon, Band 9).
+&lt;/note>
+&lt;note n="2" rend="footnote text" xml:id="ftn2">
+&lt;ref target="http://www.tei-c.org/">http://www.tei-c.org&lt;/ref> ; alle URLs in diesem Artikel wurden zuletzt am 25.09.2019 aufgerufen.
+    &lt;/note>
+&lt;note n="3" rend="footnote text" xml:id="ftn3">
+&lt;ref target="http://oxygenxml.com/">http://oxygenxml.com&lt;/ref>
+&lt;/note>
+&lt;note n="4" rend="footnote text" xml:id="ftn4">
+      Die Protokolle des Bayerischen Ministerrats 1945-1962 [ehemals 1945-1954], Hg. von der Historischen Kommission bei der Bayerischen Akademie der Wissenschaften und der Generaldirektion der Staatlichen Archive Bayerns, 9 Bände, bearbeitet von Karl-Ulrich Gelberg [Bände 1-5] und Oliver Braun [Bände 6-9], 1995-2019.
+&lt;/note>
+&lt;note n="5" rend="footnote text" xml:id="ftn5">
+&lt;ref target="http://www.bayerischer-ministerrat.de/">www.bayerischer-ministerrat.de&lt;/ref>
+&lt;/note>
+&lt;note n="6" rend="footnote text" xml:id="ftn6">
+&lt;ref target="http://www.bbaw.de/telota/software/ediarum">http://www.bbaw.de/telota/software/ediarum&lt;/ref>
+&lt;/note>
+&lt;note n="7" rend="footnote text" xml:id="ftn7">
+&lt;ref target="https://exist-db.org">https://exist-db.org&lt;/ref>
+&lt;/note>
+&lt;note n="8" rend="footnote text" xml:id="ftn8">
+&lt;ref target="https://syncandshare.lrz.de">https://syncandshare.lrz.de&lt;/ref>
+&lt;/note>
+&lt;note n="9" rend="footnote text" xml:id="ftn9">
+&lt;ref target="https://www.dnb.de/DE/Professionell/Standardisierung/GND/gnd_node.html">https://www.dnb.de/DE/Professionell/Standardisierung/GND/gnd_node.html&lt;/ref>
+&lt;/note>
+&lt;note n="10" rend="footnote text" xml:id="ftn10">
+&lt;ref target="https://xmlgraphics.apache.org/fop/">https://xmlgraphics.apache.org/fop/&lt;/ref>
+&lt;/note>
+&lt;note n="11" rend="footnote text" xml:id="ftn11">
+      Die wissenschaftliche Korrespondenz des Historikers Karl Hegel (1813-1901), bearbeitet von Marion Kreis; Der Briefwechsel zwischen Adolf Harnack und Friedrich Althoff (1886-1908), bearbeitet von Claudia Kampmann; Zwischen Wissenschaft und Politik. Hans Delbrück – Ausgewählte Korrespondenz (1868-1929), bearbeitet von Andreas Rose und Jonas Klein.
+    &lt;/note>
+&lt;note n="12" rend="footnote text" xml:id="ftn12">
+      Siehe Anm. 5.
+      &lt;/note>&lt;/div>&lt;div type="bibliogr">
+&lt;listBibl>
+&lt;head>Bibliographie&lt;/head>
+&lt;bibl style="text-align:left; ">
+&lt;hi rend="bold">Dumont, Stefan / Fechner, Martin&lt;/hi> (2012): „Digitale Arbeitsumgebung für das Editionvorhaben ‚Schleiermacher in Berlin 1808–1834‘“ http://digiversity.net/2012/digitale-arbeitsumgebung-fur-das-editionsvorhaben-schleiermacher-in-berlin-1808-1834 [letzter Zugriff 25.09.2019].
+&lt;/bibl>
+&lt;bibl style="text-align:left; ">
+&lt;hi rend="bold">Dumont Stefan / Fechner Martin&lt;/hi> (2015): „Bridging the Gap: Greater Usability for TEI encoding, in: Journal of the Text Encoding Initiative 8“ http://jtei.revues.org/1242 [letzter Zugriff 25.09.2019].
+&lt;/bibl>
+&lt;/listBibl>
+&lt;p>&amp;#160;&lt;lb/>&amp;#160;&lt;lb/>&amp;#160;&lt;lb/>&amp;#160; &lt;lb/>&amp;#160;&lt;/p>
+&lt;/div>
+&lt;/back>
+&lt;/text>
+&lt;/TEI>
+    </textSource>
+    <text>
+
+  
+
+
+
+
+
+Im Sommer 2019 konnte die Historische Kommission bei der Bayerischen Akademie der Wissenschaften ihr 2014 begonnenes Pilotprojekt für ein neues Konzept historisch-kritischer Editionsarbeit zu einem erfolgreichen Abschluss bringen. Mit dem neunten Band der Reihe „Protokolle des Bayerischen Ministerrats 1945–1962
+   
+, bearbeitet von Dr. Oliver Braun (München), entstand die erste Edition der Historischen Kommission auf XML-Basis. Das neue Konzept ermöglicht es, ohne großen Zusatzaufwand, einen vollwertigen gedruckten Band und eine digitale Version mit zahlreichen Such- und Verlinkungsfeatures herzustellen. Vor allem aber ist es darauf ausgelegt, dass die Bearbeiter und Bearbeiterinnen ihren Editionstext in vollwertigem TEI-XML
+
+ herstellen können, ohne technische Vorkenntnisse zu benötigen. Dank einer speziell eingerichteten Arbeitsumgebung im Programm                Oxygen XML Editor
+
+ können sie ihre bisher gewohnte Arbeitsweise weitgehend beibehalten. Unser Vortrag möchte dieses neue Editionskonzept und die Arbeitsumgebung vorstellen sowie von den Erfahrungen berichten, die wir bei der Herstellung des Bands 9 der Bayerischen Ministerratsprotokolle gemacht haben.  
+
+ 
+
+Die Edition „Protokolle des Bayerischen Ministerrats 1945–1962
+   
+, die seit Anfang der 1990er Jahre  , dank Förderung durch den Freistaat Bayern, bei der Historischen Kommission entsteht, ist eines der wichtigsten Forschungsprojekte zur bayerischen Zeitgeschichte. In bisher acht Bänden, die die Jahre 1945 bis 1951 abdecken, dokumentieren die ausführlichen Gesprächsprotokolle der Ministerratssitzungen das Handeln der Bayerischen Staatsregierung. Sie geben Einblick in die Fragen und Herausforderungen der Nachkriegszeit in Bayern, erst unter amerikanischer Kontrolle, dann in der noch jungen Bundesrepublik. Deutlich lassen sich aus Ihnen die Kontroversen und die teilweise heftig geführten Diskussionen zwischen den Kabinettsmitgliedern herauslesen. Nicht selten gleichen dabei die vor 70 Jahren geführten Debatten zu Themen wie Flüchtlingen, Verkehrspolitik und Bildungswesen verblüffend den aktuellen politischen Auseinandersetzungen in Bayern und Deutschland. Die ersten acht Bände der Edition (bis 1952) stehen im Volltext retrodigitalisiert auch online zur Verfügung.
+
+
+Die Arbeiten an dem hier vorgestellten Editionskonzept begannen im Jahr 2014. Ausgangsbasis war damals das Projekt   ediarum
+
+ der Berlin-Brandenburgischen Akademie der Wissenschaften (Dumont/Fechner 2015). Während es Inspiration und eine wertvolle technische Grundlage lieferte, ergaben sich rasch Anforderungen, die mit dem damals verfügbaren Werkzeugen von   ediarum nicht vollständig zu erfüllen waren. Und so begannen Matthias Reinert und Maximilian Schrott (beide München), Mitarbeiter in der Abteilung „Digitale Publikationen“ mit der Entwicklung eines eigenen Ansatzes. Dessen Kerngedanke ist es, dass der Bearbeiter möglichst gar keine Berührungspunkte mit der XML-Syntax der Dokumente hat. Stattdessen soll er sich voll auf die Arbeit am Editionstext konzentrieren können. Dennoch legt Herr Dr. Braun teils komplexe Strukturen auf Basis des TEI Lite Schemas in den Protokolltext an und baut während der gesamten Editionsarbeit interne und externe Verknüpfungen in den Text ein. So wird das Projekt mit Metainformationen angereicht, die vor allem bei der digitalen Veröffentlichung im Internet einen Mehrwert bringen. Entscheidend unterstützt wird er dabei durch den   Oxygen XML Editor. Dieses leistungsstarke XML-Bearbeitungsprogramm, bietet die Möglichkeit eine stark individualisierte Arbeitsumgebung einzurichten.   
+
+ 
+
+Die wichtigsten Bestandteile dieser Arbeitsumgebung für unser Editionsprojekt sind Operationen und Stile. Die Operationen sind eine Reihe von vorbereiten Funktionen, die eine Eingabe des Bearbeiters entgegen nehmen, daraus XML-Fragmente generieren und in den Text einfügen. Sie werden entweder aus Standardoperationen, die der   Oxygen XML Editor bietet, konfiguriert oder können selbst über eine Java-Schnittstelle programmiert werden. Herr Dr. Braun löst sie nach Bedarf über Buttons in der Menüleiste des Editors aus. Die Operationen ermöglichen es ihm mit wenigen Mausklicks und Eingaben in Textmasken komplexe Strukturelemente wie den Protokollkopf einzufügen, den Protokolltext in Tagesordnungspunkte und Unterpunkte zu gliedern oder Verweise auf andere Abschnitte und Fußnoten innerhalb des Editionskorpus zu setzen. Auf diese Weise kann Herr Dr. Braun das XML seiner Editionsdokumente bequem und ohne Angst vor lästigen Flüchtigkeitsfehlern bearbeiten und das mit minimalem Einarbeitungsaufwand.  
+
+ 
+
+Die Stile werden über Cascading Style Sheets (CSS) eingerichtet. Mit diesen kann die Darstellung der XML-Dokumente in   Oxygen XML Editor weitreichend angepasst werden. Für die Bayerischen Ministerratsprotokolle fiel der Entschluss, das XML-Markup, das oft als störend empfunden wird, größtenteils auszublenden und nur den reinen Editionstext darzustellen. Die semantischen Strukturen werden stattdessen über Formatierung, Textsetzung und farbliche Markierungen kenntlich gemacht. Herr Dr. Braun kann zwischen mehreren hinterlegten Stilen wechseln, die jeweils einen bestimmten Schritt des Workflows besonders unterstützen.  
+
+  
+
+Zusammengenommen ermöglichen Operationen und Stile ein bequemes und produktives Arbeiten in XML. Durch das vollständige Verlagern der Syntax in den Hintergrund, sinkt die Einstiegshürde für XML-unkundige Bearbeiter. Gleichzeitig ist die Arbeit schneller, bequemer und weniger fehleranfällig, als wenn das Markup von Hand eingegeben werden müsste. Und der Blick des Bearbeiters auf den Text wird nicht durch unübersichtliche XML-Element-Konstruktionen versperrt.
+
+ 
+
+Eine neu hinzugekommene Aufgabe für Herrn Dr. Braun während der Editionsarbeit ist die Markierung der registerrelevanten Entitäten (Personen, Orte, Schlagwörter, Gesetze, Quellen und Literaturtitel) im Text. Die systematische Referenzierung dieser Textstellen erhöht den Grad der thematischen Verknüpfung innerhalb der Edition enorm und ermöglicht ein hohes Maß an Erschließ- und Durchsuchbarkeit für die digitale Präsentation. Kernstück dieser Verknüpfungsarbeit ist die Registerdatenbank (RDB). In diese trägt der Bearbeiter sämtliche registerrelevanten Entitäten im TEI-Format ein, ebenfalls unterstützt durch die Arbeitsumgebung. Da Herr Dr. Braun zwar an verschiedenen Orten aber alleine an seinen Editionstexten arbeitet, schien es zunächst unnötig die RDB als   eXist-Datenbank
+
+ einzurichten. Stattdessen handelt es sich um eine Reihe von einfachen XML-Dateien, die jeweils einen einzelnen Entitätstypen beinhalten. Diese Lösung spart Wartungsaufwand und vermeidet einen Onlinezwang während der Arbeit, ohne dass sich dadurch ein merkbarer Nachteil ergab. Die Sicherung der RDB-Dateien, wie auch der Editionsdokumente, erfolgt stattdessen über   Sync+Share
+
+, das Cloud-Speicherangebot des Leibniz-Rechenzentrums. Dieses sorgt gleichzeitig für den Austausch der Arbeitsdateien mit den technischen Betreuern.  
+
+ 
+
+Vom Text aus kann Herr Dr. Braun über entsprechende Operationen den jeweils benötigten RDB-Eintrag heraussuchen und eine Referenz auf diesen hinterlegen. Zusätzlich zu den Registerinformationen wie Personen- und Ortsname kann die RDB auch weiterführende Daten zu ihren Einträgen speichern. Zum Beispiel die geographischen Koordinaten eines Ortes, Normdaten-Identifier (GND)
+
+ oder biographische Informationen zu den Personen. Diese können während der Bearbeitung und später in der digitalen Präsentation genutzt werden, um zusätzlichen Funktionen zu realisieren.  
+
+ 
+
+Während sich Herr Dr. Braun auf seine Editionsarbeit konzentrieren kann, kümmert sich die Abteilung Digitale Publikationen der Historischen Kommission um die technische Umsetzung. Zu Projektbeginn prüfte sie, in Absprachen mit dem Bearbeiter, die Anforderungen des Editionsprojekts. Auf dieser Basis wurde dann entschieden, welche Phänomene des Editionstextes in XML kodiert werden mussten und wie. Aus diesen Überlegungen entstanden schließlich die digitalen Editionsrichtlinien. Anhand dieser richtete Maximilian Schrott dann die Editionsumgebung in   Oxygen XML Editor ein, designte die Stile und programmierte die Operationen. Nach dieser Erstkonfiguration leistete er Herrn Dr. Braun während des gesamten Bearbeitungszeitraums fortlaufend Support. Er verbesserte Fehler in der Arbeitsumgebung, entwickelte diese auf Basis seines Feedbacks weiter und überwachte die korrekte Form der Editionsdokumente. Zum Ende der Editionsarbeit hin übernahm die Abteilung Digitale Publikation schließlich die Umwandlung des Editionstextes in die gedruckte Form.  
+
+  
+
+Denn auch wenn die Veröffentlichung einer hochwertigen, digitalen Version im Fokus des Editionskonzepts steht, sollte auch der neunte Band der Bayerischen Ministerratsprotokolle noch gedruckt erscheinen. Die PDF-Vorlage für den Druck wird dabei direkt aus den erstellten XML-Dateien erzeugt. Als Satzprogramm dient das in den   Oxygen XML Editor integrierte   Apache-FOP
+
+. In dieses werden die Editionsdateien mittels einer XSL-Transformation überführt. So lässt sich in weniger als einer Minute eine vollständige Druckversion des kompletten 1000seitigen Druckbandes im gewünschten Layout erstellen. Der finale Satz erfolgt somit komplett intern, ohne Zuarbeiten durch den Verlag. Der automatisierte Satz funktioniert insgesamt sehr gut, es bleiben aber vereinzelte Mängel. Vor allem Zeilen-, Spalten- und Seitenumbruch müssen an einigen Stellen manuell nachgearbeitet werden. Auch bei der Erstellung der gedruckten Version ergeben sich durch die Anreicherungsarbeiten in XML Vorteile. So kann durch die wortgenaue Kennzeichnung der registerrelevanten Entitäten und die Verknüpfung mit der RDB auch das Druckregister halbautomatisch erstellt und dem Bearbeiter so eine besonders mühsame Arbeit erspart werden.  
+
+ 
+
+Das abgeschlossen Pilotprojekt wird von Seiten der Historischen Kommission als sehr erfolgreich eingestuft. Die Arbeit im   Oxygen XML Editor wurde von Herrn Dr. Braun als angenehm empfunden, die Drucklegung wurde pünktlich abgeschlossen und es konnten wertvolle Erfahrungen zur Verbesserung der Arbeitsumgebung und des Workflows gesammelt werden. Der Komfort für den Bearbeiter und die Qualität der Ergebnisse wird freilich durch eine vergleichsweise hohen Einrichtungs- und Supportaufwand erkauft. Diese Mehrarbeiten werden aber von der technischen Betreuung geleistet. Eine zusätzliche Belastung für den wissenschaftlichen Editor wird weitestgehend vermieden. Die Veränderungen in seinem Workflow sind zwar merkbar, aber nicht einschneidend. In der jetzigen Form funktioniert die Zusammenarbeit zwischen Bearbeiter und Technikern für beide Seiten sehr fruchtbringend. Außerdem sind die gewonnen Erfahrungen und Programmierarbeiten zum größten Teil für andere Projekte wiederverwendbar. Die Historische Kommission sieht sich deshalb in ihrem Entschluss bestätigt, zukünftig verstärkt auf das digitale, XML-basierte Editionskonzept zu setzen. Neben den noch ausstehenden Bänden der Bayerischen Ministerratsprotokolle sind bereits drei Briefeditionsprojekte in Arbeit, die auf diesem Ansatz beruhen.
+
+  Weitere Projekte befinden sich in der Vorbereitungs- und Planungsphase.   
+
+ 
+
+Der neunte Band der Bayerischen Ministerratsprotokolle ist im Oktober 2019 gedruckt erschienen. Die Veröffentlichung im Internet wird sich noch bis voraussichtlich 2022 verzögern. Dann endet mit dem Erscheinen des 10. Bandes, die mit dem Verlag vereinbarte Exklusivitätsperiode im Druck. Der Inhalt von Band 9 und der RDB können somit zum bestehenden Webangebot der Protokolle des Bayerischen Ministerrats
+
+ hinzugefügt werden. Ein größeres Funktionsupdate für die Website, das hiermit einhergehen soll, befindet sich derzeit noch in der Konzeptionsphase. Es soll das Webangebot um zahlreiche neue Features erweitern, die die Anreicherungen und Vernetzungen im Editionstext für die User zugänglich macht. Noch geprüft wird, welche Verlinkungsmöglichkeiten zu externen Webangeboten und Normdatenbanken umgesetzt werden können. Außerdem gibt es Überlegungen für spezialisierte Recherche- und Visualisierungsmöglichkeiten, zum Bespiel mittels der in der RDB erfassten Orte auf Karten.  
+
+
+
+
+Abbildung 1: Ein Protokoll aus der Edition in seiner XML-Grundform, …
+
+
+
+   
+
+
+
+Abbildung 2: … in der Darstellung der Arbeitsumgebung …
+
+
+
+   
+
+
+
+Abbildung 3: … und in der finalen PDF-Druckfassung.
+
+
+
+  
+
+                        
+
+
+
+    Dumont, Stefan / Fechner, Martin (2012): „Digitale Arbeitsumgebung für das Editionvorhaben ‚Schleiermacher in Berlin 1808–1834‘“ http://digiversity.net/2012/digitale-arbeitsumgebung-fur-das-editionsvorhaben-schleiermacher-in-berlin-1808-1834 [letzter Zugriff 25.09.2019].    Dumont Stefan / Fechner Martin (2015): „Bridging the Gap: Greater Usability for TEI encoding, in: Journal of the Text Encoding Initiative 8“ http://jtei.revues.org/1242 [letzter Zugriff 25.09.2019].     
+
+ 
+ 
+ 
+  
+ 
+
+  
+
+ 
+
+
+
+       Das Kabinett Ehard III 18.Dezember 1950 bis 14. Dezember 1954, Band 3 8.1.1953–29.12.1953. bearb. von Oliver Braun, München [2019] (= Die Protokolle des Bayerischen Ministerrats. 1945-1962, Hg. von der Historischen Kommission bei der Bayerischen Akademie der Wissenschaften durch Andreas Wirsching und von der Generaldirektion der Staatlichen Archive durch Margit Ksoll-Marcon, Band 9).  
+
+
+
+  
+http://www.tei-c.org
+ ; alle URLs in diesem Artikel wurden zuletzt am 25.09.2019 aufgerufen.  
+
+
+
+  
+http://oxygenxml.com
+  
+
+
+
+       Die Protokolle des Bayerischen Ministerrats 1945-1962 [ehemals 1945-1954], Hg. von der Historischen Kommission bei der Bayerischen Akademie der Wissenschaften und der Generaldirektion der Staatlichen Archive Bayerns, 9 Bände, bearbeitet von Karl-Ulrich Gelberg [Bände 1-5] und Oliver Braun [Bände 6-9], 1995-2019.  
+
+
+
+  
+www.bayerischer-ministerrat.de
+  
+
+
+
+  
+http://www.bbaw.de/telota/software/ediarum
+
+https://exist-db.org
+  
+
+
+
+  
+https://syncandshare.lrz.de
+
+https://www.dnb.de/DE/Professionell/Standardisierung/GND/gnd_node.html
+  
+
+
+
+  
+https://xmlgraphics.apache.org/fop/
+  
+
+
+
+       Die wissenschaftliche Korrespondenz des Historikers Karl Hegel (1813-1901), bearbeitet von Marion Kreis; Der Briefwechsel zwischen Adolf Harnack und Friedrich Althoff (1886-1908), bearbeitet von Claudia Kampmann; Zwischen Wissenschaft und Politik. Hans Delbrück – Ausgewählte Korrespondenz (1868-1929), bearbeitet von Andreas Rose und Jonas Klein.  
+
+
+
+       Siehe Anm. 5.  
+
+
+
+Bibliographie
+    </text>
+    <tc:tokens xmlns:tc="http://www.dspin.de/data/textcorpus">
+      <tc:token ID="w1">Im</tc:token>
+      <tc:token ID="w2">Sommer</tc:token>
+      <tc:token ID="w3">2019</tc:token>
+      <tc:token ID="w4">konnte</tc:token>
+      <tc:token ID="w5">die</tc:token>
+      <tc:token ID="w6">Historische</tc:token>
+      <tc:token ID="w7">Kommission</tc:token>
+      <tc:token ID="w8">bei</tc:token>
+      <tc:token ID="w9">der</tc:token>
+      <tc:token ID="wa">Bayerischen</tc:token>
+      <tc:token ID="wb">Akademie</tc:token>
+      <tc:token ID="wc">der</tc:token>
+      <tc:token ID="wd">Wissenschaften</tc:token>
+      <tc:token ID="we">ihr</tc:token>
+      <tc:token ID="wf">2014</tc:token>
+      <tc:token ID="w10">begonnenes</tc:token>
+      <tc:token ID="w11">Pilotprojekt</tc:token>
+      <tc:token ID="w12">für</tc:token>
+      <tc:token ID="w13">ein</tc:token>
+      <tc:token ID="w14">neues</tc:token>
+      <tc:token ID="w15">Konzept</tc:token>
+      <tc:token ID="w16">historisch-kritischer</tc:token>
+      <tc:token ID="w17">Editionsarbeit</tc:token>
+      <tc:token ID="w18">zu</tc:token>
+      <tc:token ID="w19">einem</tc:token>
+      <tc:token ID="w1a">erfolgreichen</tc:token>
+      <tc:token ID="w1b">Abschluss</tc:token>
+      <tc:token ID="w1c">bringen</tc:token>
+      <tc:token ID="w1d">.</tc:token>
+      <tc:token ID="w1e">Mit</tc:token>
+      <tc:token ID="w1f">dem</tc:token>
+      <tc:token ID="w20">neunten</tc:token>
+      <tc:token ID="w21">Band</tc:token>
+      <tc:token ID="w22">der</tc:token>
+      <tc:token ID="w23">Reihe</tc:token>
+      <tc:token ID="w24">„</tc:token>
+      <tc:token ID="w25">Protokolle</tc:token>
+      <tc:token ID="w26">des</tc:token>
+      <tc:token ID="w27">Bayerischen</tc:token>
+      <tc:token ID="w28">Ministerrats</tc:token>
+      <tc:token ID="w29">1945–1962</tc:token>
+      <tc:token ID="w2a">,</tc:token>
+      <tc:token ID="w2b">bearbeitet</tc:token>
+      <tc:token ID="w2c">von</tc:token>
+      <tc:token ID="w2d">Dr.</tc:token>
+      <tc:token ID="w2e">Oliver</tc:token>
+      <tc:token ID="w2f">Braun</tc:token>
+      <tc:token ID="w30">(</tc:token>
+      <tc:token ID="w31">München</tc:token>
+      <tc:token ID="w32">)</tc:token>
+      <tc:token ID="w33">,</tc:token>
+      <tc:token ID="w34">entstand</tc:token>
+      <tc:token ID="w35">die</tc:token>
+      <tc:token ID="w36">erste</tc:token>
+      <tc:token ID="w37">Edition</tc:token>
+      <tc:token ID="w38">der</tc:token>
+      <tc:token ID="w39">Historischen</tc:token>
+      <tc:token ID="w3a">Kommission</tc:token>
+      <tc:token ID="w3b">auf</tc:token>
+      <tc:token ID="w3c">XML-Basis</tc:token>
+      <tc:token ID="w3d">.</tc:token>
+      <tc:token ID="w3e">Das</tc:token>
+      <tc:token ID="w3f">neue</tc:token>
+      <tc:token ID="w40">Konzept</tc:token>
+      <tc:token ID="w41">ermöglicht</tc:token>
+      <tc:token ID="w42">es</tc:token>
+      <tc:token ID="w43">,</tc:token>
+      <tc:token ID="w44">ohne</tc:token>
+      <tc:token ID="w45">großen</tc:token>
+      <tc:token ID="w46">Zusatzaufwand</tc:token>
+      <tc:token ID="w47">,</tc:token>
+      <tc:token ID="w48">einen</tc:token>
+      <tc:token ID="w49">vollwertigen</tc:token>
+      <tc:token ID="w4a">gedruckten</tc:token>
+      <tc:token ID="w4b">Band</tc:token>
+      <tc:token ID="w4c">und</tc:token>
+      <tc:token ID="w4d">eine</tc:token>
+      <tc:token ID="w4e">digitale</tc:token>
+      <tc:token ID="w4f">Version</tc:token>
+      <tc:token ID="w50">mit</tc:token>
+      <tc:token ID="w51">zahlreichen</tc:token>
+      <tc:token ID="w52">Such-</tc:token>
+      <tc:token ID="w53">und</tc:token>
+      <tc:token ID="w54">Verlinkungsfeatures</tc:token>
+      <tc:token ID="w55">herzustellen</tc:token>
+      <tc:token ID="w56">.</tc:token>
+      <tc:token ID="w57">Vor</tc:token>
+      <tc:token ID="w58">allem</tc:token>
+      <tc:token ID="w59">aber</tc:token>
+      <tc:token ID="w5a">ist</tc:token>
+      <tc:token ID="w5b">es</tc:token>
+      <tc:token ID="w5c">darauf</tc:token>
+      <tc:token ID="w5d">ausgelegt</tc:token>
+      <tc:token ID="w5e">,</tc:token>
+      <tc:token ID="w5f">dass</tc:token>
+      <tc:token ID="w60">die</tc:token>
+      <tc:token ID="w61">Bearbeiter</tc:token>
+      <tc:token ID="w62">und</tc:token>
+      <tc:token ID="w63">Bearbeiterinnen</tc:token>
+      <tc:token ID="w64">ihren</tc:token>
+      <tc:token ID="w65">Editionstext</tc:token>
+      <tc:token ID="w66">in</tc:token>
+      <tc:token ID="w67">vollwertigem</tc:token>
+      <tc:token ID="w68">TEI-XML</tc:token>
+      <tc:token ID="w69">herstellen</tc:token>
+      <tc:token ID="w6a">können</tc:token>
+      <tc:token ID="w6b">,</tc:token>
+      <tc:token ID="w6c">ohne</tc:token>
+      <tc:token ID="w6d">technische</tc:token>
+      <tc:token ID="w6e">Vorkenntnisse</tc:token>
+      <tc:token ID="w6f">zu</tc:token>
+      <tc:token ID="w70">benötigen</tc:token>
+      <tc:token ID="w71">.</tc:token>
+      <tc:token ID="w72">Dank</tc:token>
+      <tc:token ID="w73">einer</tc:token>
+      <tc:token ID="w74">speziell</tc:token>
+      <tc:token ID="w75">eingerichteten</tc:token>
+      <tc:token ID="w76">Arbeitsumgebung</tc:token>
+      <tc:token ID="w77">im</tc:token>
+      <tc:token ID="w78">Programm</tc:token>
+      <tc:token ID="w79">Oxygen</tc:token>
+      <tc:token ID="w7a">XML</tc:token>
+      <tc:token ID="w7b">Editor</tc:token>
+      <tc:token ID="w7c">können</tc:token>
+      <tc:token ID="w7d">sie</tc:token>
+      <tc:token ID="w7e">ihre</tc:token>
+      <tc:token ID="w7f">bisher</tc:token>
+      <tc:token ID="w80">gewohnte</tc:token>
+      <tc:token ID="w81">Arbeitsweise</tc:token>
+      <tc:token ID="w82">weitgehend</tc:token>
+      <tc:token ID="w83">beibehalten</tc:token>
+      <tc:token ID="w84">.</tc:token>
+      <tc:token ID="w85">Unser</tc:token>
+      <tc:token ID="w86">Vortrag</tc:token>
+      <tc:token ID="w87">möchte</tc:token>
+      <tc:token ID="w88">dieses</tc:token>
+      <tc:token ID="w89">neue</tc:token>
+      <tc:token ID="w8a">Editionskonzept</tc:token>
+      <tc:token ID="w8b">und</tc:token>
+      <tc:token ID="w8c">die</tc:token>
+      <tc:token ID="w8d">Arbeitsumgebung</tc:token>
+      <tc:token ID="w8e">vorstellen</tc:token>
+      <tc:token ID="w8f">sowie</tc:token>
+      <tc:token ID="w90">von</tc:token>
+      <tc:token ID="w91">den</tc:token>
+      <tc:token ID="w92">Erfahrungen</tc:token>
+      <tc:token ID="w93">berichten</tc:token>
+      <tc:token ID="w94">,</tc:token>
+      <tc:token ID="w95">die</tc:token>
+      <tc:token ID="w96">wir</tc:token>
+      <tc:token ID="w97">bei</tc:token>
+      <tc:token ID="w98">der</tc:token>
+      <tc:token ID="w99">Herstellung</tc:token>
+      <tc:token ID="w9a">des</tc:token>
+      <tc:token ID="w9b">Bands</tc:token>
+      <tc:token ID="w9c">9</tc:token>
+      <tc:token ID="w9d">der</tc:token>
+      <tc:token ID="w9e">Bayerischen</tc:token>
+      <tc:token ID="w9f">Ministerratsprotokolle</tc:token>
+      <tc:token ID="wa0">gemacht</tc:token>
+      <tc:token ID="wa1">haben</tc:token>
+      <tc:token ID="wa2">.</tc:token>
+      <tc:token ID="wa3">Die</tc:token>
+      <tc:token ID="wa4">Edition</tc:token>
+      <tc:token ID="wa5">„</tc:token>
+      <tc:token ID="wa6">Protokolle</tc:token>
+      <tc:token ID="wa7">des</tc:token>
+      <tc:token ID="wa8">Bayerischen</tc:token>
+      <tc:token ID="wa9">Ministerrats</tc:token>
+      <tc:token ID="waa">1945–1962</tc:token>
+      <tc:token ID="wab">,</tc:token>
+      <tc:token ID="wac">die</tc:token>
+      <tc:token ID="wad">seit</tc:token>
+      <tc:token ID="wae">Anfang</tc:token>
+      <tc:token ID="waf">der</tc:token>
+      <tc:token ID="wb0">1990er</tc:token>
+      <tc:token ID="wb1">Jahre</tc:token>
+      <tc:token ID="wb2">,</tc:token>
+      <tc:token ID="wb3">dank</tc:token>
+      <tc:token ID="wb4">Förderung</tc:token>
+      <tc:token ID="wb5">durch</tc:token>
+      <tc:token ID="wb6">den</tc:token>
+      <tc:token ID="wb7">Freistaat</tc:token>
+      <tc:token ID="wb8">Bayern</tc:token>
+      <tc:token ID="wb9">,</tc:token>
+      <tc:token ID="wba">bei</tc:token>
+      <tc:token ID="wbb">der</tc:token>
+      <tc:token ID="wbc">Historischen</tc:token>
+      <tc:token ID="wbd">Kommission</tc:token>
+      <tc:token ID="wbe">entsteht</tc:token>
+      <tc:token ID="wbf">,</tc:token>
+      <tc:token ID="wc0">ist</tc:token>
+      <tc:token ID="wc1">eines</tc:token>
+      <tc:token ID="wc2">der</tc:token>
+      <tc:token ID="wc3">wichtigsten</tc:token>
+      <tc:token ID="wc4">Forschungsprojekte</tc:token>
+      <tc:token ID="wc5">zur</tc:token>
+      <tc:token ID="wc6">bayerischen</tc:token>
+      <tc:token ID="wc7">Zeitgeschichte</tc:token>
+      <tc:token ID="wc8">.</tc:token>
+      <tc:token ID="wc9">In</tc:token>
+      <tc:token ID="wca">bisher</tc:token>
+      <tc:token ID="wcb">acht</tc:token>
+      <tc:token ID="wcc">Bänden</tc:token>
+      <tc:token ID="wcd">,</tc:token>
+      <tc:token ID="wce">die</tc:token>
+      <tc:token ID="wcf">die</tc:token>
+      <tc:token ID="wd0">Jahre</tc:token>
+      <tc:token ID="wd1">1945</tc:token>
+      <tc:token ID="wd2">bis</tc:token>
+      <tc:token ID="wd3">1951</tc:token>
+      <tc:token ID="wd4">abdecken</tc:token>
+      <tc:token ID="wd5">,</tc:token>
+      <tc:token ID="wd6">dokumentieren</tc:token>
+      <tc:token ID="wd7">die</tc:token>
+      <tc:token ID="wd8">ausführlichen</tc:token>
+      <tc:token ID="wd9">Gesprächsprotokolle</tc:token>
+      <tc:token ID="wda">der</tc:token>
+      <tc:token ID="wdb">Ministerratssitzungen</tc:token>
+      <tc:token ID="wdc">das</tc:token>
+      <tc:token ID="wdd">Handeln</tc:token>
+      <tc:token ID="wde">der</tc:token>
+      <tc:token ID="wdf">Bayerischen</tc:token>
+      <tc:token ID="we0">Staatsregierung</tc:token>
+      <tc:token ID="we1">.</tc:token>
+      <tc:token ID="we2">Sie</tc:token>
+      <tc:token ID="we3">geben</tc:token>
+      <tc:token ID="we4">Einblick</tc:token>
+      <tc:token ID="we5">in</tc:token>
+      <tc:token ID="we6">die</tc:token>
+      <tc:token ID="we7">Fragen</tc:token>
+      <tc:token ID="we8">und</tc:token>
+      <tc:token ID="we9">Herausforderungen</tc:token>
+      <tc:token ID="wea">der</tc:token>
+      <tc:token ID="web">Nachkriegszeit</tc:token>
+      <tc:token ID="wec">in</tc:token>
+      <tc:token ID="wed">Bayern</tc:token>
+      <tc:token ID="wee">,</tc:token>
+      <tc:token ID="wef">erst</tc:token>
+      <tc:token ID="wf0">unter</tc:token>
+      <tc:token ID="wf1">amerikanischer</tc:token>
+      <tc:token ID="wf2">Kontrolle</tc:token>
+      <tc:token ID="wf3">,</tc:token>
+      <tc:token ID="wf4">dann</tc:token>
+      <tc:token ID="wf5">in</tc:token>
+      <tc:token ID="wf6">der</tc:token>
+      <tc:token ID="wf7">noch</tc:token>
+      <tc:token ID="wf8">jungen</tc:token>
+      <tc:token ID="wf9">Bundesrepublik</tc:token>
+      <tc:token ID="wfa">.</tc:token>
+      <tc:token ID="wfb">Deutlich</tc:token>
+      <tc:token ID="wfc">lassen</tc:token>
+      <tc:token ID="wfd">sich</tc:token>
+      <tc:token ID="wfe">aus</tc:token>
+      <tc:token ID="wff">Ihnen</tc:token>
+      <tc:token ID="w100">die</tc:token>
+      <tc:token ID="w101">Kontroversen</tc:token>
+      <tc:token ID="w102">und</tc:token>
+      <tc:token ID="w103">die</tc:token>
+      <tc:token ID="w104">teilweise</tc:token>
+      <tc:token ID="w105">heftig</tc:token>
+      <tc:token ID="w106">geführten</tc:token>
+      <tc:token ID="w107">Diskussionen</tc:token>
+      <tc:token ID="w108">zwischen</tc:token>
+      <tc:token ID="w109">den</tc:token>
+      <tc:token ID="w10a">Kabinettsmitgliedern</tc:token>
+      <tc:token ID="w10b">herauslesen</tc:token>
+      <tc:token ID="w10c">.</tc:token>
+      <tc:token ID="w10d">Nicht</tc:token>
+      <tc:token ID="w10e">selten</tc:token>
+      <tc:token ID="w10f">gleichen</tc:token>
+      <tc:token ID="w110">dabei</tc:token>
+      <tc:token ID="w111">die</tc:token>
+      <tc:token ID="w112">vor</tc:token>
+      <tc:token ID="w113">70</tc:token>
+      <tc:token ID="w114">Jahren</tc:token>
+      <tc:token ID="w115">geführten</tc:token>
+      <tc:token ID="w116">Debatten</tc:token>
+      <tc:token ID="w117">zu</tc:token>
+      <tc:token ID="w118">Themen</tc:token>
+      <tc:token ID="w119">wie</tc:token>
+      <tc:token ID="w11a">Flüchtlingen</tc:token>
+      <tc:token ID="w11b">,</tc:token>
+      <tc:token ID="w11c">Verkehrspolitik</tc:token>
+      <tc:token ID="w11d">und</tc:token>
+      <tc:token ID="w11e">Bildungswesen</tc:token>
+      <tc:token ID="w11f">verblüffend</tc:token>
+      <tc:token ID="w120">den</tc:token>
+      <tc:token ID="w121">aktuellen</tc:token>
+      <tc:token ID="w122">politischen</tc:token>
+      <tc:token ID="w123">Auseinandersetzungen</tc:token>
+      <tc:token ID="w124">in</tc:token>
+      <tc:token ID="w125">Bayern</tc:token>
+      <tc:token ID="w126">und</tc:token>
+      <tc:token ID="w127">Deutschland</tc:token>
+      <tc:token ID="w128">.</tc:token>
+      <tc:token ID="w129">Die</tc:token>
+      <tc:token ID="w12a">ersten</tc:token>
+      <tc:token ID="w12b">acht</tc:token>
+      <tc:token ID="w12c">Bände</tc:token>
+      <tc:token ID="w12d">der</tc:token>
+      <tc:token ID="w12e">Edition</tc:token>
+      <tc:token ID="w12f">(</tc:token>
+      <tc:token ID="w130">bis</tc:token>
+      <tc:token ID="w131">1952</tc:token>
+      <tc:token ID="w132">)</tc:token>
+      <tc:token ID="w133">stehen</tc:token>
+      <tc:token ID="w134">im</tc:token>
+      <tc:token ID="w135">Volltext</tc:token>
+      <tc:token ID="w136">retrodigitalisiert</tc:token>
+      <tc:token ID="w137">auch</tc:token>
+      <tc:token ID="w138">online</tc:token>
+      <tc:token ID="w139">zur</tc:token>
+      <tc:token ID="w13a">Verfügung</tc:token>
+      <tc:token ID="w13b">.</tc:token>
+      <tc:token ID="w13c">Die</tc:token>
+      <tc:token ID="w13d">Arbeiten</tc:token>
+      <tc:token ID="w13e">an</tc:token>
+      <tc:token ID="w13f">dem</tc:token>
+      <tc:token ID="w140">hier</tc:token>
+      <tc:token ID="w141">vorgestellten</tc:token>
+      <tc:token ID="w142">Editionskonzept</tc:token>
+      <tc:token ID="w143">begannen</tc:token>
+      <tc:token ID="w144">im</tc:token>
+      <tc:token ID="w145">Jahr</tc:token>
+      <tc:token ID="w146">2014</tc:token>
+      <tc:token ID="w147">.</tc:token>
+      <tc:token ID="w148">Ausgangsbasis</tc:token>
+      <tc:token ID="w149">war</tc:token>
+      <tc:token ID="w14a">damals</tc:token>
+      <tc:token ID="w14b">das</tc:token>
+      <tc:token ID="w14c">Projekt</tc:token>
+      <tc:token ID="w14d">ediarum</tc:token>
+      <tc:token ID="w14e">der</tc:token>
+      <tc:token ID="w14f">Berlin-Brandenburgischen</tc:token>
+      <tc:token ID="w150">Akademie</tc:token>
+      <tc:token ID="w151">der</tc:token>
+      <tc:token ID="w152">Wissenschaften</tc:token>
+      <tc:token ID="w153">(</tc:token>
+      <tc:token ID="w154">Dumont/</tc:token>
+      <tc:token ID="w155">Fechner</tc:token>
+      <tc:token ID="w156">2015</tc:token>
+      <tc:token ID="w157">)</tc:token>
+      <tc:token ID="w158">.</tc:token>
+      <tc:token ID="w159">Während</tc:token>
+      <tc:token ID="w15a">es</tc:token>
+      <tc:token ID="w15b">Inspiration</tc:token>
+      <tc:token ID="w15c">und</tc:token>
+      <tc:token ID="w15d">eine</tc:token>
+      <tc:token ID="w15e">wertvolle</tc:token>
+      <tc:token ID="w15f">technische</tc:token>
+      <tc:token ID="w160">Grundlage</tc:token>
+      <tc:token ID="w161">lieferte</tc:token>
+      <tc:token ID="w162">,</tc:token>
+      <tc:token ID="w163">ergaben</tc:token>
+      <tc:token ID="w164">sich</tc:token>
+      <tc:token ID="w165">rasch</tc:token>
+      <tc:token ID="w166">Anforderungen</tc:token>
+      <tc:token ID="w167">,</tc:token>
+      <tc:token ID="w168">die</tc:token>
+      <tc:token ID="w169">mit</tc:token>
+      <tc:token ID="w16a">dem</tc:token>
+      <tc:token ID="w16b">damals</tc:token>
+      <tc:token ID="w16c">verfügbaren</tc:token>
+      <tc:token ID="w16d">Werkzeugen</tc:token>
+      <tc:token ID="w16e">von</tc:token>
+      <tc:token ID="w16f">ediarum</tc:token>
+      <tc:token ID="w170">nicht</tc:token>
+      <tc:token ID="w171">vollständig</tc:token>
+      <tc:token ID="w172">zu</tc:token>
+      <tc:token ID="w173">erfüllen</tc:token>
+      <tc:token ID="w174">waren</tc:token>
+      <tc:token ID="w175">.</tc:token>
+      <tc:token ID="w176">Und</tc:token>
+      <tc:token ID="w177">so</tc:token>
+      <tc:token ID="w178">begannen</tc:token>
+      <tc:token ID="w179">Matthias</tc:token>
+      <tc:token ID="w17a">Reinert</tc:token>
+      <tc:token ID="w17b">und</tc:token>
+      <tc:token ID="w17c">Maximilian</tc:token>
+      <tc:token ID="w17d">Schrott</tc:token>
+      <tc:token ID="w17e">(</tc:token>
+      <tc:token ID="w17f">beide</tc:token>
+      <tc:token ID="w180">München</tc:token>
+      <tc:token ID="w181">)</tc:token>
+      <tc:token ID="w182">,</tc:token>
+      <tc:token ID="w183">Mitarbeiter</tc:token>
+      <tc:token ID="w184">in</tc:token>
+      <tc:token ID="w185">der</tc:token>
+      <tc:token ID="w186">Abteilung</tc:token>
+      <tc:token ID="w187">„</tc:token>
+      <tc:token ID="w188">Digitale</tc:token>
+      <tc:token ID="w189">Publikationen</tc:token>
+      <tc:token ID="w18a">“</tc:token>
+      <tc:token ID="w18b">mit</tc:token>
+      <tc:token ID="w18c">der</tc:token>
+      <tc:token ID="w18d">Entwicklung</tc:token>
+      <tc:token ID="w18e">eines</tc:token>
+      <tc:token ID="w18f">eigenen</tc:token>
+      <tc:token ID="w190">Ansatzes</tc:token>
+      <tc:token ID="w191">.</tc:token>
+      <tc:token ID="w192">Dessen</tc:token>
+      <tc:token ID="w193">Kerngedanke</tc:token>
+      <tc:token ID="w194">ist</tc:token>
+      <tc:token ID="w195">es</tc:token>
+      <tc:token ID="w196">,</tc:token>
+      <tc:token ID="w197">dass</tc:token>
+      <tc:token ID="w198">der</tc:token>
+      <tc:token ID="w199">Bearbeiter</tc:token>
+      <tc:token ID="w19a">möglichst</tc:token>
+      <tc:token ID="w19b">gar</tc:token>
+      <tc:token ID="w19c">keine</tc:token>
+      <tc:token ID="w19d">Berührungspunkte</tc:token>
+      <tc:token ID="w19e">mit</tc:token>
+      <tc:token ID="w19f">der</tc:token>
+      <tc:token ID="w1a0">XML-Syntax</tc:token>
+      <tc:token ID="w1a1">der</tc:token>
+      <tc:token ID="w1a2">Dokumente</tc:token>
+      <tc:token ID="w1a3">hat</tc:token>
+      <tc:token ID="w1a4">.</tc:token>
+      <tc:token ID="w1a5">Stattdessen</tc:token>
+      <tc:token ID="w1a6">soll</tc:token>
+      <tc:token ID="w1a7">er</tc:token>
+      <tc:token ID="w1a8">sich</tc:token>
+      <tc:token ID="w1a9">voll</tc:token>
+      <tc:token ID="w1aa">auf</tc:token>
+      <tc:token ID="w1ab">die</tc:token>
+      <tc:token ID="w1ac">Arbeit</tc:token>
+      <tc:token ID="w1ad">am</tc:token>
+      <tc:token ID="w1ae">Editionstext</tc:token>
+      <tc:token ID="w1af">konzentrieren</tc:token>
+      <tc:token ID="w1b0">können</tc:token>
+      <tc:token ID="w1b1">.</tc:token>
+      <tc:token ID="w1b2">Dennoch</tc:token>
+      <tc:token ID="w1b3">legt</tc:token>
+      <tc:token ID="w1b4">Herr</tc:token>
+      <tc:token ID="w1b5">Dr</tc:token>
+      <tc:token ID="w1b6">.</tc:token>
+      <tc:token ID="w1b7">Braun</tc:token>
+      <tc:token ID="w1b8">teils</tc:token>
+      <tc:token ID="w1b9">komplexe</tc:token>
+      <tc:token ID="w1ba">Strukturen</tc:token>
+      <tc:token ID="w1bb">auf</tc:token>
+      <tc:token ID="w1bc">Basis</tc:token>
+      <tc:token ID="w1bd">des</tc:token>
+      <tc:token ID="w1be">TEI</tc:token>
+      <tc:token ID="w1bf">Lite</tc:token>
+      <tc:token ID="w1c0">Schemas</tc:token>
+      <tc:token ID="w1c1">in</tc:token>
+      <tc:token ID="w1c2">den</tc:token>
+      <tc:token ID="w1c3">Protokolltext</tc:token>
+      <tc:token ID="w1c4">an</tc:token>
+      <tc:token ID="w1c5">und</tc:token>
+      <tc:token ID="w1c6">baut</tc:token>
+      <tc:token ID="w1c7">während</tc:token>
+      <tc:token ID="w1c8">der</tc:token>
+      <tc:token ID="w1c9">gesamten</tc:token>
+      <tc:token ID="w1ca">Editionsarbeit</tc:token>
+      <tc:token ID="w1cb">interne</tc:token>
+      <tc:token ID="w1cc">und</tc:token>
+      <tc:token ID="w1cd">externe</tc:token>
+      <tc:token ID="w1ce">Verknüpfungen</tc:token>
+      <tc:token ID="w1cf">in</tc:token>
+      <tc:token ID="w1d0">den</tc:token>
+      <tc:token ID="w1d1">Text</tc:token>
+      <tc:token ID="w1d2">ein</tc:token>
+      <tc:token ID="w1d3">.</tc:token>
+      <tc:token ID="w1d4">So</tc:token>
+      <tc:token ID="w1d5">wird</tc:token>
+      <tc:token ID="w1d6">das</tc:token>
+      <tc:token ID="w1d7">Projekt</tc:token>
+      <tc:token ID="w1d8">mit</tc:token>
+      <tc:token ID="w1d9">Metainformationen</tc:token>
+      <tc:token ID="w1da">angereicht</tc:token>
+      <tc:token ID="w1db">,</tc:token>
+      <tc:token ID="w1dc">die</tc:token>
+      <tc:token ID="w1dd">vor</tc:token>
+      <tc:token ID="w1de">allem</tc:token>
+      <tc:token ID="w1df">bei</tc:token>
+      <tc:token ID="w1e0">der</tc:token>
+      <tc:token ID="w1e1">digitalen</tc:token>
+      <tc:token ID="w1e2">Veröffentlichung</tc:token>
+      <tc:token ID="w1e3">im</tc:token>
+      <tc:token ID="w1e4">Internet</tc:token>
+      <tc:token ID="w1e5">einen</tc:token>
+      <tc:token ID="w1e6">Mehrwert</tc:token>
+      <tc:token ID="w1e7">bringen</tc:token>
+      <tc:token ID="w1e8">.</tc:token>
+      <tc:token ID="w1e9">Entscheidend</tc:token>
+      <tc:token ID="w1ea">unterstützt</tc:token>
+      <tc:token ID="w1eb">wird</tc:token>
+      <tc:token ID="w1ec">er</tc:token>
+      <tc:token ID="w1ed">dabei</tc:token>
+      <tc:token ID="w1ee">durch</tc:token>
+      <tc:token ID="w1ef">den</tc:token>
+      <tc:token ID="w1f0">Oxygen</tc:token>
+      <tc:token ID="w1f1">XML</tc:token>
+      <tc:token ID="w1f2">Editor</tc:token>
+      <tc:token ID="w1f3">.</tc:token>
+      <tc:token ID="w1f4">Dieses</tc:token>
+      <tc:token ID="w1f5">leistungsstarke</tc:token>
+      <tc:token ID="w1f6">XML-Bearbeitungsprogramm</tc:token>
+      <tc:token ID="w1f7">,</tc:token>
+      <tc:token ID="w1f8">bietet</tc:token>
+      <tc:token ID="w1f9">die</tc:token>
+      <tc:token ID="w1fa">Möglichkeit</tc:token>
+      <tc:token ID="w1fb">eine</tc:token>
+      <tc:token ID="w1fc">stark</tc:token>
+      <tc:token ID="w1fd">individualisierte</tc:token>
+      <tc:token ID="w1fe">Arbeitsumgebung</tc:token>
+      <tc:token ID="w1ff">einzurichten</tc:token>
+      <tc:token ID="w200">.</tc:token>
+      <tc:token ID="w201">Die</tc:token>
+      <tc:token ID="w202">wichtigsten</tc:token>
+      <tc:token ID="w203">Bestandteile</tc:token>
+      <tc:token ID="w204">dieser</tc:token>
+      <tc:token ID="w205">Arbeitsumgebung</tc:token>
+      <tc:token ID="w206">für</tc:token>
+      <tc:token ID="w207">unser</tc:token>
+      <tc:token ID="w208">Editionsprojekt</tc:token>
+      <tc:token ID="w209">sind</tc:token>
+      <tc:token ID="w20a">Operationen</tc:token>
+      <tc:token ID="w20b">und</tc:token>
+      <tc:token ID="w20c">Stile</tc:token>
+      <tc:token ID="w20d">.</tc:token>
+      <tc:token ID="w20e">Die</tc:token>
+      <tc:token ID="w20f">Operationen</tc:token>
+      <tc:token ID="w210">sind</tc:token>
+      <tc:token ID="w211">eine</tc:token>
+      <tc:token ID="w212">Reihe</tc:token>
+      <tc:token ID="w213">von</tc:token>
+      <tc:token ID="w214">vorbereiten</tc:token>
+      <tc:token ID="w215">Funktionen</tc:token>
+      <tc:token ID="w216">,</tc:token>
+      <tc:token ID="w217">die</tc:token>
+      <tc:token ID="w218">eine</tc:token>
+      <tc:token ID="w219">Eingabe</tc:token>
+      <tc:token ID="w21a">des</tc:token>
+      <tc:token ID="w21b">Bearbeiters</tc:token>
+      <tc:token ID="w21c">entgegen</tc:token>
+      <tc:token ID="w21d">nehmen</tc:token>
+      <tc:token ID="w21e">,</tc:token>
+      <tc:token ID="w21f">daraus</tc:token>
+      <tc:token ID="w220">XML-Fragmente</tc:token>
+      <tc:token ID="w221">generieren</tc:token>
+      <tc:token ID="w222">und</tc:token>
+      <tc:token ID="w223">in</tc:token>
+      <tc:token ID="w224">den</tc:token>
+      <tc:token ID="w225">Text</tc:token>
+      <tc:token ID="w226">einfügen</tc:token>
+      <tc:token ID="w227">.</tc:token>
+      <tc:token ID="w228">Sie</tc:token>
+      <tc:token ID="w229">werden</tc:token>
+      <tc:token ID="w22a">entweder</tc:token>
+      <tc:token ID="w22b">aus</tc:token>
+      <tc:token ID="w22c">Standardoperationen</tc:token>
+      <tc:token ID="w22d">,</tc:token>
+      <tc:token ID="w22e">die</tc:token>
+      <tc:token ID="w22f">der</tc:token>
+      <tc:token ID="w230">Oxygen</tc:token>
+      <tc:token ID="w231">XML</tc:token>
+      <tc:token ID="w232">Editor</tc:token>
+      <tc:token ID="w233">bietet</tc:token>
+      <tc:token ID="w234">,</tc:token>
+      <tc:token ID="w235">konfiguriert</tc:token>
+      <tc:token ID="w236">oder</tc:token>
+      <tc:token ID="w237">können</tc:token>
+      <tc:token ID="w238">selbst</tc:token>
+      <tc:token ID="w239">über</tc:token>
+      <tc:token ID="w23a">eine</tc:token>
+      <tc:token ID="w23b">Java-Schnittstelle</tc:token>
+      <tc:token ID="w23c">programmiert</tc:token>
+      <tc:token ID="w23d">werden</tc:token>
+      <tc:token ID="w23e">.</tc:token>
+      <tc:token ID="w23f">Herr</tc:token>
+      <tc:token ID="w240">Dr.</tc:token>
+      <tc:token ID="w241">Braun</tc:token>
+      <tc:token ID="w242">löst</tc:token>
+      <tc:token ID="w243">sie</tc:token>
+      <tc:token ID="w244">nach</tc:token>
+      <tc:token ID="w245">Bedarf</tc:token>
+      <tc:token ID="w246">über</tc:token>
+      <tc:token ID="w247">Buttons</tc:token>
+      <tc:token ID="w248">in</tc:token>
+      <tc:token ID="w249">der</tc:token>
+      <tc:token ID="w24a">Menüleiste</tc:token>
+      <tc:token ID="w24b">des</tc:token>
+      <tc:token ID="w24c">Editors</tc:token>
+      <tc:token ID="w24d">aus</tc:token>
+      <tc:token ID="w24e">.</tc:token>
+      <tc:token ID="w24f">Die</tc:token>
+      <tc:token ID="w250">Operationen</tc:token>
+      <tc:token ID="w251">ermöglichen</tc:token>
+      <tc:token ID="w252">es</tc:token>
+      <tc:token ID="w253">ihm</tc:token>
+      <tc:token ID="w254">mit</tc:token>
+      <tc:token ID="w255">wenigen</tc:token>
+      <tc:token ID="w256">Mausklicks</tc:token>
+      <tc:token ID="w257">und</tc:token>
+      <tc:token ID="w258">Eingaben</tc:token>
+      <tc:token ID="w259">in</tc:token>
+      <tc:token ID="w25a">Textmasken</tc:token>
+      <tc:token ID="w25b">komplexe</tc:token>
+      <tc:token ID="w25c">Strukturelemente</tc:token>
+      <tc:token ID="w25d">wie</tc:token>
+      <tc:token ID="w25e">den</tc:token>
+      <tc:token ID="w25f">Protokollkopf</tc:token>
+      <tc:token ID="w260">einzufügen</tc:token>
+      <tc:token ID="w261">,</tc:token>
+      <tc:token ID="w262">den</tc:token>
+      <tc:token ID="w263">Protokolltext</tc:token>
+      <tc:token ID="w264">in</tc:token>
+      <tc:token ID="w265">Tagesordnungspunkte</tc:token>
+      <tc:token ID="w266">und</tc:token>
+      <tc:token ID="w267">Unterpunkte</tc:token>
+      <tc:token ID="w268">zu</tc:token>
+      <tc:token ID="w269">gliedern</tc:token>
+      <tc:token ID="w26a">oder</tc:token>
+      <tc:token ID="w26b">Verweise</tc:token>
+      <tc:token ID="w26c">auf</tc:token>
+      <tc:token ID="w26d">andere</tc:token>
+      <tc:token ID="w26e">Abschnitte</tc:token>
+      <tc:token ID="w26f">und</tc:token>
+      <tc:token ID="w270">Fußnoten</tc:token>
+      <tc:token ID="w271">innerhalb</tc:token>
+      <tc:token ID="w272">des</tc:token>
+      <tc:token ID="w273">Editionskorpus</tc:token>
+      <tc:token ID="w274">zu</tc:token>
+      <tc:token ID="w275">setzen</tc:token>
+      <tc:token ID="w276">.</tc:token>
+      <tc:token ID="w277">Auf</tc:token>
+      <tc:token ID="w278">diese</tc:token>
+      <tc:token ID="w279">Weise</tc:token>
+      <tc:token ID="w27a">kann</tc:token>
+      <tc:token ID="w27b">Herr</tc:token>
+      <tc:token ID="w27c">Dr.</tc:token>
+      <tc:token ID="w27d">Braun</tc:token>
+      <tc:token ID="w27e">das</tc:token>
+      <tc:token ID="w27f">XML</tc:token>
+      <tc:token ID="w280">seiner</tc:token>
+      <tc:token ID="w281">Editionsdokumente</tc:token>
+      <tc:token ID="w282">bequem</tc:token>
+      <tc:token ID="w283">und</tc:token>
+      <tc:token ID="w284">ohne</tc:token>
+      <tc:token ID="w285">Angst</tc:token>
+      <tc:token ID="w286">vor</tc:token>
+      <tc:token ID="w287">lästigen</tc:token>
+      <tc:token ID="w288">Flüchtigkeitsfehlern</tc:token>
+      <tc:token ID="w289">bearbeiten</tc:token>
+      <tc:token ID="w28a">und</tc:token>
+      <tc:token ID="w28b">das</tc:token>
+      <tc:token ID="w28c">mit</tc:token>
+      <tc:token ID="w28d">minimalem</tc:token>
+      <tc:token ID="w28e">Einarbeitungsaufwand</tc:token>
+      <tc:token ID="w28f">.</tc:token>
+      <tc:token ID="w290">Die</tc:token>
+      <tc:token ID="w291">Stile</tc:token>
+      <tc:token ID="w292">werden</tc:token>
+      <tc:token ID="w293">über</tc:token>
+      <tc:token ID="w294">Cascading</tc:token>
+      <tc:token ID="w295">Style</tc:token>
+      <tc:token ID="w296">Sheets</tc:token>
+      <tc:token ID="w297">(</tc:token>
+      <tc:token ID="w298">CSS</tc:token>
+      <tc:token ID="w299">)</tc:token>
+      <tc:token ID="w29a">eingerichtet</tc:token>
+      <tc:token ID="w29b">.</tc:token>
+      <tc:token ID="w29c">Mit</tc:token>
+      <tc:token ID="w29d">diesen</tc:token>
+      <tc:token ID="w29e">kann</tc:token>
+      <tc:token ID="w29f">die</tc:token>
+      <tc:token ID="w2a0">Darstellung</tc:token>
+      <tc:token ID="w2a1">der</tc:token>
+      <tc:token ID="w2a2">XML-Dokumente</tc:token>
+      <tc:token ID="w2a3">in</tc:token>
+      <tc:token ID="w2a4">Oxygen</tc:token>
+      <tc:token ID="w2a5">XML</tc:token>
+      <tc:token ID="w2a6">Editor</tc:token>
+      <tc:token ID="w2a7">weitreichend</tc:token>
+      <tc:token ID="w2a8">angepasst</tc:token>
+      <tc:token ID="w2a9">werden</tc:token>
+      <tc:token ID="w2aa">.</tc:token>
+      <tc:token ID="w2ab">Für</tc:token>
+      <tc:token ID="w2ac">die</tc:token>
+      <tc:token ID="w2ad">Bayerischen</tc:token>
+      <tc:token ID="w2ae">Ministerratsprotokolle</tc:token>
+      <tc:token ID="w2af">fiel</tc:token>
+      <tc:token ID="w2b0">der</tc:token>
+      <tc:token ID="w2b1">Entschluss</tc:token>
+      <tc:token ID="w2b2">,</tc:token>
+      <tc:token ID="w2b3">das</tc:token>
+      <tc:token ID="w2b4">XML-Markup</tc:token>
+      <tc:token ID="w2b5">,</tc:token>
+      <tc:token ID="w2b6">das</tc:token>
+      <tc:token ID="w2b7">oft</tc:token>
+      <tc:token ID="w2b8">als</tc:token>
+      <tc:token ID="w2b9">störend</tc:token>
+      <tc:token ID="w2ba">empfunden</tc:token>
+      <tc:token ID="w2bb">wird</tc:token>
+      <tc:token ID="w2bc">,</tc:token>
+      <tc:token ID="w2bd">größtenteils</tc:token>
+      <tc:token ID="w2be">auszublenden</tc:token>
+      <tc:token ID="w2bf">und</tc:token>
+      <tc:token ID="w2c0">nur</tc:token>
+      <tc:token ID="w2c1">den</tc:token>
+      <tc:token ID="w2c2">reinen</tc:token>
+      <tc:token ID="w2c3">Editionstext</tc:token>
+      <tc:token ID="w2c4">darzustellen</tc:token>
+      <tc:token ID="w2c5">.</tc:token>
+      <tc:token ID="w2c6">Die</tc:token>
+      <tc:token ID="w2c7">semantischen</tc:token>
+      <tc:token ID="w2c8">Strukturen</tc:token>
+      <tc:token ID="w2c9">werden</tc:token>
+      <tc:token ID="w2ca">stattdessen</tc:token>
+      <tc:token ID="w2cb">über</tc:token>
+      <tc:token ID="w2cc">Formatierung</tc:token>
+      <tc:token ID="w2cd">,</tc:token>
+      <tc:token ID="w2ce">Textsetzung</tc:token>
+      <tc:token ID="w2cf">und</tc:token>
+      <tc:token ID="w2d0">farbliche</tc:token>
+      <tc:token ID="w2d1">Markierungen</tc:token>
+      <tc:token ID="w2d2">kenntlich</tc:token>
+      <tc:token ID="w2d3">gemacht</tc:token>
+      <tc:token ID="w2d4">.</tc:token>
+      <tc:token ID="w2d5">Herr</tc:token>
+      <tc:token ID="w2d6">Dr.</tc:token>
+      <tc:token ID="w2d7">Braun</tc:token>
+      <tc:token ID="w2d8">kann</tc:token>
+      <tc:token ID="w2d9">zwischen</tc:token>
+      <tc:token ID="w2da">mehreren</tc:token>
+      <tc:token ID="w2db">hinterlegten</tc:token>
+      <tc:token ID="w2dc">Stilen</tc:token>
+      <tc:token ID="w2dd">wechseln</tc:token>
+      <tc:token ID="w2de">,</tc:token>
+      <tc:token ID="w2df">die</tc:token>
+      <tc:token ID="w2e0">jeweils</tc:token>
+      <tc:token ID="w2e1">einen</tc:token>
+      <tc:token ID="w2e2">bestimmten</tc:token>
+      <tc:token ID="w2e3">Schritt</tc:token>
+      <tc:token ID="w2e4">des</tc:token>
+      <tc:token ID="w2e5">Workflows</tc:token>
+      <tc:token ID="w2e6">besonders</tc:token>
+      <tc:token ID="w2e7">unterstützen</tc:token>
+      <tc:token ID="w2e8">.</tc:token>
+      <tc:token ID="w2e9">Zusammengenommen</tc:token>
+      <tc:token ID="w2ea">ermöglichen</tc:token>
+      <tc:token ID="w2eb">Operationen</tc:token>
+      <tc:token ID="w2ec">und</tc:token>
+      <tc:token ID="w2ed">Stile</tc:token>
+      <tc:token ID="w2ee">ein</tc:token>
+      <tc:token ID="w2ef">bequemes</tc:token>
+      <tc:token ID="w2f0">und</tc:token>
+      <tc:token ID="w2f1">produktives</tc:token>
+      <tc:token ID="w2f2">Arbeiten</tc:token>
+      <tc:token ID="w2f3">in</tc:token>
+      <tc:token ID="w2f4">XML</tc:token>
+      <tc:token ID="w2f5">.</tc:token>
+      <tc:token ID="w2f6">Durch</tc:token>
+      <tc:token ID="w2f7">das</tc:token>
+      <tc:token ID="w2f8">vollständige</tc:token>
+      <tc:token ID="w2f9">Verlagern</tc:token>
+      <tc:token ID="w2fa">der</tc:token>
+      <tc:token ID="w2fb">Syntax</tc:token>
+      <tc:token ID="w2fc">in</tc:token>
+      <tc:token ID="w2fd">den</tc:token>
+      <tc:token ID="w2fe">Hintergrund</tc:token>
+      <tc:token ID="w2ff">,</tc:token>
+      <tc:token ID="w300">sinkt</tc:token>
+      <tc:token ID="w301">die</tc:token>
+      <tc:token ID="w302">Einstiegshürde</tc:token>
+      <tc:token ID="w303">für</tc:token>
+      <tc:token ID="w304">XML-unkundige</tc:token>
+      <tc:token ID="w305">Bearbeiter</tc:token>
+      <tc:token ID="w306">.</tc:token>
+      <tc:token ID="w307">Gleichzeitig</tc:token>
+      <tc:token ID="w308">ist</tc:token>
+      <tc:token ID="w309">die</tc:token>
+      <tc:token ID="w30a">Arbeit</tc:token>
+      <tc:token ID="w30b">schneller</tc:token>
+      <tc:token ID="w30c">,</tc:token>
+      <tc:token ID="w30d">bequemer</tc:token>
+      <tc:token ID="w30e">und</tc:token>
+      <tc:token ID="w30f">weniger</tc:token>
+      <tc:token ID="w310">fehleranfällig</tc:token>
+      <tc:token ID="w311">,</tc:token>
+      <tc:token ID="w312">als</tc:token>
+      <tc:token ID="w313">wenn</tc:token>
+      <tc:token ID="w314">das</tc:token>
+      <tc:token ID="w315">Markup</tc:token>
+      <tc:token ID="w316">von</tc:token>
+      <tc:token ID="w317">Hand</tc:token>
+      <tc:token ID="w318">eingegeben</tc:token>
+      <tc:token ID="w319">werden</tc:token>
+      <tc:token ID="w31a">müsste</tc:token>
+      <tc:token ID="w31b">.</tc:token>
+      <tc:token ID="w31c">Und</tc:token>
+      <tc:token ID="w31d">der</tc:token>
+      <tc:token ID="w31e">Blick</tc:token>
+      <tc:token ID="w31f">des</tc:token>
+      <tc:token ID="w320">Bearbeiters</tc:token>
+      <tc:token ID="w321">auf</tc:token>
+      <tc:token ID="w322">den</tc:token>
+      <tc:token ID="w323">Text</tc:token>
+      <tc:token ID="w324">wird</tc:token>
+      <tc:token ID="w325">nicht</tc:token>
+      <tc:token ID="w326">durch</tc:token>
+      <tc:token ID="w327">unübersichtliche</tc:token>
+      <tc:token ID="w328">XML-Element-Konstruktionen</tc:token>
+      <tc:token ID="w329">versperrt</tc:token>
+      <tc:token ID="w32a">.</tc:token>
+      <tc:token ID="w32b">Eine</tc:token>
+      <tc:token ID="w32c">neu</tc:token>
+      <tc:token ID="w32d">hinzugekommene</tc:token>
+      <tc:token ID="w32e">Aufgabe</tc:token>
+      <tc:token ID="w32f">für</tc:token>
+      <tc:token ID="w330">Herrn</tc:token>
+      <tc:token ID="w331">Dr</tc:token>
+      <tc:token ID="w332">.</tc:token>
+      <tc:token ID="w333">Braun</tc:token>
+      <tc:token ID="w334">während</tc:token>
+      <tc:token ID="w335">der</tc:token>
+      <tc:token ID="w336">Editionsarbeit</tc:token>
+      <tc:token ID="w337">ist</tc:token>
+      <tc:token ID="w338">die</tc:token>
+      <tc:token ID="w339">Markierung</tc:token>
+      <tc:token ID="w33a">der</tc:token>
+      <tc:token ID="w33b">registerrelevanten</tc:token>
+      <tc:token ID="w33c">Entitäten</tc:token>
+      <tc:token ID="w33d">(</tc:token>
+      <tc:token ID="w33e">Personen</tc:token>
+      <tc:token ID="w33f">,</tc:token>
+      <tc:token ID="w340">Orte</tc:token>
+      <tc:token ID="w341">,</tc:token>
+      <tc:token ID="w342">Schlagwörter</tc:token>
+      <tc:token ID="w343">,</tc:token>
+      <tc:token ID="w344">Gesetze</tc:token>
+      <tc:token ID="w345">,</tc:token>
+      <tc:token ID="w346">Quellen</tc:token>
+      <tc:token ID="w347">und</tc:token>
+      <tc:token ID="w348">Literaturtitel</tc:token>
+      <tc:token ID="w349">)</tc:token>
+      <tc:token ID="w34a">im</tc:token>
+      <tc:token ID="w34b">Text</tc:token>
+      <tc:token ID="w34c">.</tc:token>
+      <tc:token ID="w34d">Die</tc:token>
+      <tc:token ID="w34e">systematische</tc:token>
+      <tc:token ID="w34f">Referenzierung</tc:token>
+      <tc:token ID="w350">dieser</tc:token>
+      <tc:token ID="w351">Textstellen</tc:token>
+      <tc:token ID="w352">erhöht</tc:token>
+      <tc:token ID="w353">den</tc:token>
+      <tc:token ID="w354">Grad</tc:token>
+      <tc:token ID="w355">der</tc:token>
+      <tc:token ID="w356">thematischen</tc:token>
+      <tc:token ID="w357">Verknüpfung</tc:token>
+      <tc:token ID="w358">innerhalb</tc:token>
+      <tc:token ID="w359">der</tc:token>
+      <tc:token ID="w35a">Edition</tc:token>
+      <tc:token ID="w35b">enorm</tc:token>
+      <tc:token ID="w35c">und</tc:token>
+      <tc:token ID="w35d">ermöglicht</tc:token>
+      <tc:token ID="w35e">ein</tc:token>
+      <tc:token ID="w35f">hohes</tc:token>
+      <tc:token ID="w360">Maß</tc:token>
+      <tc:token ID="w361">an</tc:token>
+      <tc:token ID="w362">Erschließ-</tc:token>
+      <tc:token ID="w363">und</tc:token>
+      <tc:token ID="w364">Durchsuchbarkeit</tc:token>
+      <tc:token ID="w365">für</tc:token>
+      <tc:token ID="w366">die</tc:token>
+      <tc:token ID="w367">digitale</tc:token>
+      <tc:token ID="w368">Präsentation</tc:token>
+      <tc:token ID="w369">.</tc:token>
+      <tc:token ID="w36a">Kernstück</tc:token>
+      <tc:token ID="w36b">dieser</tc:token>
+      <tc:token ID="w36c">Verknüpfungsarbeit</tc:token>
+      <tc:token ID="w36d">ist</tc:token>
+      <tc:token ID="w36e">die</tc:token>
+      <tc:token ID="w36f">Registerdatenbank</tc:token>
+      <tc:token ID="w370">(</tc:token>
+      <tc:token ID="w371">RDB</tc:token>
+      <tc:token ID="w372">)</tc:token>
+      <tc:token ID="w373">.</tc:token>
+      <tc:token ID="w374">In</tc:token>
+      <tc:token ID="w375">diese</tc:token>
+      <tc:token ID="w376">trägt</tc:token>
+      <tc:token ID="w377">der</tc:token>
+      <tc:token ID="w378">Bearbeiter</tc:token>
+      <tc:token ID="w379">sämtliche</tc:token>
+      <tc:token ID="w37a">registerrelevanten</tc:token>
+      <tc:token ID="w37b">Entitäten</tc:token>
+      <tc:token ID="w37c">im</tc:token>
+      <tc:token ID="w37d">TEI-Format</tc:token>
+      <tc:token ID="w37e">ein</tc:token>
+      <tc:token ID="w37f">,</tc:token>
+      <tc:token ID="w380">ebenfalls</tc:token>
+      <tc:token ID="w381">unterstützt</tc:token>
+      <tc:token ID="w382">durch</tc:token>
+      <tc:token ID="w383">die</tc:token>
+      <tc:token ID="w384">Arbeitsumgebung</tc:token>
+      <tc:token ID="w385">.</tc:token>
+      <tc:token ID="w386">Da</tc:token>
+      <tc:token ID="w387">Herr</tc:token>
+      <tc:token ID="w388">Dr.</tc:token>
+      <tc:token ID="w389">Braun</tc:token>
+      <tc:token ID="w38a">zwar</tc:token>
+      <tc:token ID="w38b">an</tc:token>
+      <tc:token ID="w38c">verschiedenen</tc:token>
+      <tc:token ID="w38d">Orten</tc:token>
+      <tc:token ID="w38e">aber</tc:token>
+      <tc:token ID="w38f">alleine</tc:token>
+      <tc:token ID="w390">an</tc:token>
+      <tc:token ID="w391">seinen</tc:token>
+      <tc:token ID="w392">Editionstexten</tc:token>
+      <tc:token ID="w393">arbeitet</tc:token>
+      <tc:token ID="w394">,</tc:token>
+      <tc:token ID="w395">schien</tc:token>
+      <tc:token ID="w396">es</tc:token>
+      <tc:token ID="w397">zunächst</tc:token>
+      <tc:token ID="w398">unnötig</tc:token>
+      <tc:token ID="w399">die</tc:token>
+      <tc:token ID="w39a">RDB</tc:token>
+      <tc:token ID="w39b">als</tc:token>
+      <tc:token ID="w39c">eXist-Datenbank</tc:token>
+      <tc:token ID="w39d">einzurichten</tc:token>
+      <tc:token ID="w39e">.</tc:token>
+      <tc:token ID="w39f">Stattdessen</tc:token>
+      <tc:token ID="w3a0">handelt</tc:token>
+      <tc:token ID="w3a1">es</tc:token>
+      <tc:token ID="w3a2">sich</tc:token>
+      <tc:token ID="w3a3">um</tc:token>
+      <tc:token ID="w3a4">eine</tc:token>
+      <tc:token ID="w3a5">Reihe</tc:token>
+      <tc:token ID="w3a6">von</tc:token>
+      <tc:token ID="w3a7">einfachen</tc:token>
+      <tc:token ID="w3a8">XML-Dateien</tc:token>
+      <tc:token ID="w3a9">,</tc:token>
+      <tc:token ID="w3aa">die</tc:token>
+      <tc:token ID="w3ab">jeweils</tc:token>
+      <tc:token ID="w3ac">einen</tc:token>
+      <tc:token ID="w3ad">einzelnen</tc:token>
+      <tc:token ID="w3ae">Entitätstypen</tc:token>
+      <tc:token ID="w3af">beinhalten</tc:token>
+      <tc:token ID="w3b0">.</tc:token>
+      <tc:token ID="w3b1">Diese</tc:token>
+      <tc:token ID="w3b2">Lösung</tc:token>
+      <tc:token ID="w3b3">spart</tc:token>
+      <tc:token ID="w3b4">Wartungsaufwand</tc:token>
+      <tc:token ID="w3b5">und</tc:token>
+      <tc:token ID="w3b6">vermeidet</tc:token>
+      <tc:token ID="w3b7">einen</tc:token>
+      <tc:token ID="w3b8">Onlinezwang</tc:token>
+      <tc:token ID="w3b9">während</tc:token>
+      <tc:token ID="w3ba">der</tc:token>
+      <tc:token ID="w3bb">Arbeit</tc:token>
+      <tc:token ID="w3bc">,</tc:token>
+      <tc:token ID="w3bd">ohne</tc:token>
+      <tc:token ID="w3be">dass</tc:token>
+      <tc:token ID="w3bf">sich</tc:token>
+      <tc:token ID="w3c0">dadurch</tc:token>
+      <tc:token ID="w3c1">ein</tc:token>
+      <tc:token ID="w3c2">merkbarer</tc:token>
+      <tc:token ID="w3c3">Nachteil</tc:token>
+      <tc:token ID="w3c4">ergab</tc:token>
+      <tc:token ID="w3c5">.</tc:token>
+      <tc:token ID="w3c6">Die</tc:token>
+      <tc:token ID="w3c7">Sicherung</tc:token>
+      <tc:token ID="w3c8">der</tc:token>
+      <tc:token ID="w3c9">RDB-Dateien</tc:token>
+      <tc:token ID="w3ca">,</tc:token>
+      <tc:token ID="w3cb">wie</tc:token>
+      <tc:token ID="w3cc">auch</tc:token>
+      <tc:token ID="w3cd">der</tc:token>
+      <tc:token ID="w3ce">Editionsdokumente</tc:token>
+      <tc:token ID="w3cf">,</tc:token>
+      <tc:token ID="w3d0">erfolgt</tc:token>
+      <tc:token ID="w3d1">stattdessen</tc:token>
+      <tc:token ID="w3d2">über</tc:token>
+      <tc:token ID="w3d3">Sync+Share</tc:token>
+      <tc:token ID="w3d4">,</tc:token>
+      <tc:token ID="w3d5">das</tc:token>
+      <tc:token ID="w3d6">Cloud-Speicherangebot</tc:token>
+      <tc:token ID="w3d7">des</tc:token>
+      <tc:token ID="w3d8">Leibniz-Rechenzentrums</tc:token>
+      <tc:token ID="w3d9">.</tc:token>
+      <tc:token ID="w3da">Dieses</tc:token>
+      <tc:token ID="w3db">sorgt</tc:token>
+      <tc:token ID="w3dc">gleichzeitig</tc:token>
+      <tc:token ID="w3dd">für</tc:token>
+      <tc:token ID="w3de">den</tc:token>
+      <tc:token ID="w3df">Austausch</tc:token>
+      <tc:token ID="w3e0">der</tc:token>
+      <tc:token ID="w3e1">Arbeitsdateien</tc:token>
+      <tc:token ID="w3e2">mit</tc:token>
+      <tc:token ID="w3e3">den</tc:token>
+      <tc:token ID="w3e4">technischen</tc:token>
+      <tc:token ID="w3e5">Betreuern</tc:token>
+      <tc:token ID="w3e6">.</tc:token>
+      <tc:token ID="w3e7">Vom</tc:token>
+      <tc:token ID="w3e8">Text</tc:token>
+      <tc:token ID="w3e9">aus</tc:token>
+      <tc:token ID="w3ea">kann</tc:token>
+      <tc:token ID="w3eb">Herr</tc:token>
+      <tc:token ID="w3ec">Dr.</tc:token>
+      <tc:token ID="w3ed">Braun</tc:token>
+      <tc:token ID="w3ee">über</tc:token>
+      <tc:token ID="w3ef">entsprechende</tc:token>
+      <tc:token ID="w3f0">Operationen</tc:token>
+      <tc:token ID="w3f1">den</tc:token>
+      <tc:token ID="w3f2">jeweils</tc:token>
+      <tc:token ID="w3f3">benötigten</tc:token>
+      <tc:token ID="w3f4">RDB-Eintrag</tc:token>
+      <tc:token ID="w3f5">heraussuchen</tc:token>
+      <tc:token ID="w3f6">und</tc:token>
+      <tc:token ID="w3f7">eine</tc:token>
+      <tc:token ID="w3f8">Referenz</tc:token>
+      <tc:token ID="w3f9">auf</tc:token>
+      <tc:token ID="w3fa">diesen</tc:token>
+      <tc:token ID="w3fb">hinterlegen</tc:token>
+      <tc:token ID="w3fc">.</tc:token>
+      <tc:token ID="w3fd">Zusätzlich</tc:token>
+      <tc:token ID="w3fe">zu</tc:token>
+      <tc:token ID="w3ff">den</tc:token>
+      <tc:token ID="w400">Registerinformationen</tc:token>
+      <tc:token ID="w401">wie</tc:token>
+      <tc:token ID="w402">Personen-</tc:token>
+      <tc:token ID="w403">und</tc:token>
+      <tc:token ID="w404">Ortsname</tc:token>
+      <tc:token ID="w405">kann</tc:token>
+      <tc:token ID="w406">die</tc:token>
+      <tc:token ID="w407">RDB</tc:token>
+      <tc:token ID="w408">auch</tc:token>
+      <tc:token ID="w409">weiterführende</tc:token>
+      <tc:token ID="w40a">Daten</tc:token>
+      <tc:token ID="w40b">zu</tc:token>
+      <tc:token ID="w40c">ihren</tc:token>
+      <tc:token ID="w40d">Einträgen</tc:token>
+      <tc:token ID="w40e">speichern</tc:token>
+      <tc:token ID="w40f">.</tc:token>
+      <tc:token ID="w410">Zum</tc:token>
+      <tc:token ID="w411">Beispiel</tc:token>
+      <tc:token ID="w412">die</tc:token>
+      <tc:token ID="w413">geographischen</tc:token>
+      <tc:token ID="w414">Koordinaten</tc:token>
+      <tc:token ID="w415">eines</tc:token>
+      <tc:token ID="w416">Ortes</tc:token>
+      <tc:token ID="w417">,</tc:token>
+      <tc:token ID="w418">Normdaten-Identifier</tc:token>
+      <tc:token ID="w419">(</tc:token>
+      <tc:token ID="w41a">GND</tc:token>
+      <tc:token ID="w41b">)</tc:token>
+      <tc:token ID="w41c">oder</tc:token>
+      <tc:token ID="w41d">biographische</tc:token>
+      <tc:token ID="w41e">Informationen</tc:token>
+      <tc:token ID="w41f">zu</tc:token>
+      <tc:token ID="w420">den</tc:token>
+      <tc:token ID="w421">Personen</tc:token>
+      <tc:token ID="w422">.</tc:token>
+      <tc:token ID="w423">Diese</tc:token>
+      <tc:token ID="w424">können</tc:token>
+      <tc:token ID="w425">während</tc:token>
+      <tc:token ID="w426">der</tc:token>
+      <tc:token ID="w427">Bearbeitung</tc:token>
+      <tc:token ID="w428">und</tc:token>
+      <tc:token ID="w429">später</tc:token>
+      <tc:token ID="w42a">in</tc:token>
+      <tc:token ID="w42b">der</tc:token>
+      <tc:token ID="w42c">digitalen</tc:token>
+      <tc:token ID="w42d">Präsentation</tc:token>
+      <tc:token ID="w42e">genutzt</tc:token>
+      <tc:token ID="w42f">werden</tc:token>
+      <tc:token ID="w430">,</tc:token>
+      <tc:token ID="w431">um</tc:token>
+      <tc:token ID="w432">zusätzlichen</tc:token>
+      <tc:token ID="w433">Funktionen</tc:token>
+      <tc:token ID="w434">zu</tc:token>
+      <tc:token ID="w435">realisieren</tc:token>
+      <tc:token ID="w436">.</tc:token>
+      <tc:token ID="w437">Während</tc:token>
+      <tc:token ID="w438">sich</tc:token>
+      <tc:token ID="w439">Herr</tc:token>
+      <tc:token ID="w43a">Dr.</tc:token>
+      <tc:token ID="w43b">Braun</tc:token>
+      <tc:token ID="w43c">auf</tc:token>
+      <tc:token ID="w43d">seine</tc:token>
+      <tc:token ID="w43e">Editionsarbeit</tc:token>
+      <tc:token ID="w43f">konzentrieren</tc:token>
+      <tc:token ID="w440">kann</tc:token>
+      <tc:token ID="w441">,</tc:token>
+      <tc:token ID="w442">kümmert</tc:token>
+      <tc:token ID="w443">sich</tc:token>
+      <tc:token ID="w444">die</tc:token>
+      <tc:token ID="w445">Abteilung</tc:token>
+      <tc:token ID="w446">Digitale</tc:token>
+      <tc:token ID="w447">Publikationen</tc:token>
+      <tc:token ID="w448">der</tc:token>
+      <tc:token ID="w449">Historischen</tc:token>
+      <tc:token ID="w44a">Kommission</tc:token>
+      <tc:token ID="w44b">um</tc:token>
+      <tc:token ID="w44c">die</tc:token>
+      <tc:token ID="w44d">technische</tc:token>
+      <tc:token ID="w44e">Umsetzung</tc:token>
+      <tc:token ID="w44f">.</tc:token>
+      <tc:token ID="w450">Zu</tc:token>
+      <tc:token ID="w451">Projektbeginn</tc:token>
+      <tc:token ID="w452">prüfte</tc:token>
+      <tc:token ID="w453">sie</tc:token>
+      <tc:token ID="w454">,</tc:token>
+      <tc:token ID="w455">in</tc:token>
+      <tc:token ID="w456">Absprachen</tc:token>
+      <tc:token ID="w457">mit</tc:token>
+      <tc:token ID="w458">dem</tc:token>
+      <tc:token ID="w459">Bearbeiter</tc:token>
+      <tc:token ID="w45a">,</tc:token>
+      <tc:token ID="w45b">die</tc:token>
+      <tc:token ID="w45c">Anforderungen</tc:token>
+      <tc:token ID="w45d">des</tc:token>
+      <tc:token ID="w45e">Editionsprojekts</tc:token>
+      <tc:token ID="w45f">.</tc:token>
+      <tc:token ID="w460">Auf</tc:token>
+      <tc:token ID="w461">dieser</tc:token>
+      <tc:token ID="w462">Basis</tc:token>
+      <tc:token ID="w463">wurde</tc:token>
+      <tc:token ID="w464">dann</tc:token>
+      <tc:token ID="w465">entschieden</tc:token>
+      <tc:token ID="w466">,</tc:token>
+      <tc:token ID="w467">welche</tc:token>
+      <tc:token ID="w468">Phänomene</tc:token>
+      <tc:token ID="w469">des</tc:token>
+      <tc:token ID="w46a">Editionstextes</tc:token>
+      <tc:token ID="w46b">in</tc:token>
+      <tc:token ID="w46c">XML</tc:token>
+      <tc:token ID="w46d">kodiert</tc:token>
+      <tc:token ID="w46e">werden</tc:token>
+      <tc:token ID="w46f">mussten</tc:token>
+      <tc:token ID="w470">und</tc:token>
+      <tc:token ID="w471">wie</tc:token>
+      <tc:token ID="w472">.</tc:token>
+      <tc:token ID="w473">Aus</tc:token>
+      <tc:token ID="w474">diesen</tc:token>
+      <tc:token ID="w475">Überlegungen</tc:token>
+      <tc:token ID="w476">entstanden</tc:token>
+      <tc:token ID="w477">schließlich</tc:token>
+      <tc:token ID="w478">die</tc:token>
+      <tc:token ID="w479">digitalen</tc:token>
+      <tc:token ID="w47a">Editionsrichtlinien</tc:token>
+      <tc:token ID="w47b">.</tc:token>
+      <tc:token ID="w47c">Anhand</tc:token>
+      <tc:token ID="w47d">dieser</tc:token>
+      <tc:token ID="w47e">richtete</tc:token>
+      <tc:token ID="w47f">Maximilian</tc:token>
+      <tc:token ID="w480">Schrott</tc:token>
+      <tc:token ID="w481">dann</tc:token>
+      <tc:token ID="w482">die</tc:token>
+      <tc:token ID="w483">Editionsumgebung</tc:token>
+      <tc:token ID="w484">in</tc:token>
+      <tc:token ID="w485">Oxygen</tc:token>
+      <tc:token ID="w486">XML</tc:token>
+      <tc:token ID="w487">Editor</tc:token>
+      <tc:token ID="w488">ein</tc:token>
+      <tc:token ID="w489">,</tc:token>
+      <tc:token ID="w48a">designte</tc:token>
+      <tc:token ID="w48b">die</tc:token>
+      <tc:token ID="w48c">Stile</tc:token>
+      <tc:token ID="w48d">und</tc:token>
+      <tc:token ID="w48e">programmierte</tc:token>
+      <tc:token ID="w48f">die</tc:token>
+      <tc:token ID="w490">Operationen</tc:token>
+      <tc:token ID="w491">.</tc:token>
+      <tc:token ID="w492">Nach</tc:token>
+      <tc:token ID="w493">dieser</tc:token>
+      <tc:token ID="w494">Erstkonfiguration</tc:token>
+      <tc:token ID="w495">leistete</tc:token>
+      <tc:token ID="w496">er</tc:token>
+      <tc:token ID="w497">Herrn</tc:token>
+      <tc:token ID="w498">Dr</tc:token>
+      <tc:token ID="w499">.</tc:token>
+      <tc:token ID="w49a">Braun</tc:token>
+      <tc:token ID="w49b">während</tc:token>
+      <tc:token ID="w49c">des</tc:token>
+      <tc:token ID="w49d">gesamten</tc:token>
+      <tc:token ID="w49e">Bearbeitungszeitraums</tc:token>
+      <tc:token ID="w49f">fortlaufend</tc:token>
+      <tc:token ID="w4a0">Support</tc:token>
+      <tc:token ID="w4a1">.</tc:token>
+      <tc:token ID="w4a2">Er</tc:token>
+      <tc:token ID="w4a3">verbesserte</tc:token>
+      <tc:token ID="w4a4">Fehler</tc:token>
+      <tc:token ID="w4a5">in</tc:token>
+      <tc:token ID="w4a6">der</tc:token>
+      <tc:token ID="w4a7">Arbeitsumgebung</tc:token>
+      <tc:token ID="w4a8">,</tc:token>
+      <tc:token ID="w4a9">entwickelte</tc:token>
+      <tc:token ID="w4aa">diese</tc:token>
+      <tc:token ID="w4ab">auf</tc:token>
+      <tc:token ID="w4ac">Basis</tc:token>
+      <tc:token ID="w4ad">seines</tc:token>
+      <tc:token ID="w4ae">Feedbacks</tc:token>
+      <tc:token ID="w4af">weiter</tc:token>
+      <tc:token ID="w4b0">und</tc:token>
+      <tc:token ID="w4b1">überwachte</tc:token>
+      <tc:token ID="w4b2">die</tc:token>
+      <tc:token ID="w4b3">korrekte</tc:token>
+      <tc:token ID="w4b4">Form</tc:token>
+      <tc:token ID="w4b5">der</tc:token>
+      <tc:token ID="w4b6">Editionsdokumente</tc:token>
+      <tc:token ID="w4b7">.</tc:token>
+      <tc:token ID="w4b8">Zum</tc:token>
+      <tc:token ID="w4b9">Ende</tc:token>
+      <tc:token ID="w4ba">der</tc:token>
+      <tc:token ID="w4bb">Editionsarbeit</tc:token>
+      <tc:token ID="w4bc">hin</tc:token>
+      <tc:token ID="w4bd">übernahm</tc:token>
+      <tc:token ID="w4be">die</tc:token>
+      <tc:token ID="w4bf">Abteilung</tc:token>
+      <tc:token ID="w4c0">Digitale</tc:token>
+      <tc:token ID="w4c1">Publikation</tc:token>
+      <tc:token ID="w4c2">schließlich</tc:token>
+      <tc:token ID="w4c3">die</tc:token>
+      <tc:token ID="w4c4">Umwandlung</tc:token>
+      <tc:token ID="w4c5">des</tc:token>
+      <tc:token ID="w4c6">Editionstextes</tc:token>
+      <tc:token ID="w4c7">in</tc:token>
+      <tc:token ID="w4c8">die</tc:token>
+      <tc:token ID="w4c9">gedruckte</tc:token>
+      <tc:token ID="w4ca">Form</tc:token>
+      <tc:token ID="w4cb">.</tc:token>
+      <tc:token ID="w4cc">Denn</tc:token>
+      <tc:token ID="w4cd">auch</tc:token>
+      <tc:token ID="w4ce">wenn</tc:token>
+      <tc:token ID="w4cf">die</tc:token>
+      <tc:token ID="w4d0">Veröffentlichung</tc:token>
+      <tc:token ID="w4d1">einer</tc:token>
+      <tc:token ID="w4d2">hochwertigen</tc:token>
+      <tc:token ID="w4d3">,</tc:token>
+      <tc:token ID="w4d4">digitalen</tc:token>
+      <tc:token ID="w4d5">Version</tc:token>
+      <tc:token ID="w4d6">im</tc:token>
+      <tc:token ID="w4d7">Fokus</tc:token>
+      <tc:token ID="w4d8">des</tc:token>
+      <tc:token ID="w4d9">Editionskonzepts</tc:token>
+      <tc:token ID="w4da">steht</tc:token>
+      <tc:token ID="w4db">,</tc:token>
+      <tc:token ID="w4dc">sollte</tc:token>
+      <tc:token ID="w4dd">auch</tc:token>
+      <tc:token ID="w4de">der</tc:token>
+      <tc:token ID="w4df">neunte</tc:token>
+      <tc:token ID="w4e0">Band</tc:token>
+      <tc:token ID="w4e1">der</tc:token>
+      <tc:token ID="w4e2">Bayerischen</tc:token>
+      <tc:token ID="w4e3">Ministerratsprotokolle</tc:token>
+      <tc:token ID="w4e4">noch</tc:token>
+      <tc:token ID="w4e5">gedruckt</tc:token>
+      <tc:token ID="w4e6">erscheinen</tc:token>
+      <tc:token ID="w4e7">.</tc:token>
+      <tc:token ID="w4e8">Die</tc:token>
+      <tc:token ID="w4e9">PDF-Vorlage</tc:token>
+      <tc:token ID="w4ea">für</tc:token>
+      <tc:token ID="w4eb">den</tc:token>
+      <tc:token ID="w4ec">Druck</tc:token>
+      <tc:token ID="w4ed">wird</tc:token>
+      <tc:token ID="w4ee">dabei</tc:token>
+      <tc:token ID="w4ef">direkt</tc:token>
+      <tc:token ID="w4f0">aus</tc:token>
+      <tc:token ID="w4f1">den</tc:token>
+      <tc:token ID="w4f2">erstellten</tc:token>
+      <tc:token ID="w4f3">XML-Dateien</tc:token>
+      <tc:token ID="w4f4">erzeugt</tc:token>
+      <tc:token ID="w4f5">.</tc:token>
+      <tc:token ID="w4f6">Als</tc:token>
+      <tc:token ID="w4f7">Satzprogramm</tc:token>
+      <tc:token ID="w4f8">dient</tc:token>
+      <tc:token ID="w4f9">das</tc:token>
+      <tc:token ID="w4fa">in</tc:token>
+      <tc:token ID="w4fb">den</tc:token>
+      <tc:token ID="w4fc">Oxygen</tc:token>
+      <tc:token ID="w4fd">XML</tc:token>
+      <tc:token ID="w4fe">Editor</tc:token>
+      <tc:token ID="w4ff">integrierte</tc:token>
+      <tc:token ID="w500">Apache-FOP</tc:token>
+      <tc:token ID="w501">.</tc:token>
+      <tc:token ID="w502">In</tc:token>
+      <tc:token ID="w503">dieses</tc:token>
+      <tc:token ID="w504">werden</tc:token>
+      <tc:token ID="w505">die</tc:token>
+      <tc:token ID="w506">Editionsdateien</tc:token>
+      <tc:token ID="w507">mittels</tc:token>
+      <tc:token ID="w508">einer</tc:token>
+      <tc:token ID="w509">XSL-Transformation</tc:token>
+      <tc:token ID="w50a">überführt</tc:token>
+      <tc:token ID="w50b">.</tc:token>
+      <tc:token ID="w50c">So</tc:token>
+      <tc:token ID="w50d">lässt</tc:token>
+      <tc:token ID="w50e">sich</tc:token>
+      <tc:token ID="w50f">in</tc:token>
+      <tc:token ID="w510">weniger</tc:token>
+      <tc:token ID="w511">als</tc:token>
+      <tc:token ID="w512">einer</tc:token>
+      <tc:token ID="w513">Minute</tc:token>
+      <tc:token ID="w514">eine</tc:token>
+      <tc:token ID="w515">vollständige</tc:token>
+      <tc:token ID="w516">Druckversion</tc:token>
+      <tc:token ID="w517">des</tc:token>
+      <tc:token ID="w518">kompletten</tc:token>
+      <tc:token ID="w519">1000seitigen</tc:token>
+      <tc:token ID="w51a">Druckbandes</tc:token>
+      <tc:token ID="w51b">im</tc:token>
+      <tc:token ID="w51c">gewünschten</tc:token>
+      <tc:token ID="w51d">Layout</tc:token>
+      <tc:token ID="w51e">erstellen</tc:token>
+      <tc:token ID="w51f">.</tc:token>
+      <tc:token ID="w520">Der</tc:token>
+      <tc:token ID="w521">finale</tc:token>
+      <tc:token ID="w522">Satz</tc:token>
+      <tc:token ID="w523">erfolgt</tc:token>
+      <tc:token ID="w524">somit</tc:token>
+      <tc:token ID="w525">komplett</tc:token>
+      <tc:token ID="w526">intern</tc:token>
+      <tc:token ID="w527">,</tc:token>
+      <tc:token ID="w528">ohne</tc:token>
+      <tc:token ID="w529">Zuarbeiten</tc:token>
+      <tc:token ID="w52a">durch</tc:token>
+      <tc:token ID="w52b">den</tc:token>
+      <tc:token ID="w52c">Verlag</tc:token>
+      <tc:token ID="w52d">.</tc:token>
+      <tc:token ID="w52e">Der</tc:token>
+      <tc:token ID="w52f">automatisierte</tc:token>
+      <tc:token ID="w530">Satz</tc:token>
+      <tc:token ID="w531">funktioniert</tc:token>
+      <tc:token ID="w532">insgesamt</tc:token>
+      <tc:token ID="w533">sehr</tc:token>
+      <tc:token ID="w534">gut</tc:token>
+      <tc:token ID="w535">,</tc:token>
+      <tc:token ID="w536">es</tc:token>
+      <tc:token ID="w537">bleiben</tc:token>
+      <tc:token ID="w538">aber</tc:token>
+      <tc:token ID="w539">vereinzelte</tc:token>
+      <tc:token ID="w53a">Mängel</tc:token>
+      <tc:token ID="w53b">.</tc:token>
+      <tc:token ID="w53c">Vor</tc:token>
+      <tc:token ID="w53d">allem</tc:token>
+      <tc:token ID="w53e">Zeilen-</tc:token>
+      <tc:token ID="w53f">,</tc:token>
+      <tc:token ID="w540">Spalten-</tc:token>
+      <tc:token ID="w541">und</tc:token>
+      <tc:token ID="w542">Seitenumbruch</tc:token>
+      <tc:token ID="w543">müssen</tc:token>
+      <tc:token ID="w544">an</tc:token>
+      <tc:token ID="w545">einigen</tc:token>
+      <tc:token ID="w546">Stellen</tc:token>
+      <tc:token ID="w547">manuell</tc:token>
+      <tc:token ID="w548">nachgearbeitet</tc:token>
+      <tc:token ID="w549">werden</tc:token>
+      <tc:token ID="w54a">.</tc:token>
+      <tc:token ID="w54b">Auch</tc:token>
+      <tc:token ID="w54c">bei</tc:token>
+      <tc:token ID="w54d">der</tc:token>
+      <tc:token ID="w54e">Erstellung</tc:token>
+      <tc:token ID="w54f">der</tc:token>
+      <tc:token ID="w550">gedruckten</tc:token>
+      <tc:token ID="w551">Version</tc:token>
+      <tc:token ID="w552">ergeben</tc:token>
+      <tc:token ID="w553">sich</tc:token>
+      <tc:token ID="w554">durch</tc:token>
+      <tc:token ID="w555">die</tc:token>
+      <tc:token ID="w556">Anreicherungsarbeiten</tc:token>
+      <tc:token ID="w557">in</tc:token>
+      <tc:token ID="w558">XML</tc:token>
+      <tc:token ID="w559">Vorteile</tc:token>
+      <tc:token ID="w55a">.</tc:token>
+      <tc:token ID="w55b">So</tc:token>
+      <tc:token ID="w55c">kann</tc:token>
+      <tc:token ID="w55d">durch</tc:token>
+      <tc:token ID="w55e">die</tc:token>
+      <tc:token ID="w55f">wortgenaue</tc:token>
+      <tc:token ID="w560">Kennzeichnung</tc:token>
+      <tc:token ID="w561">der</tc:token>
+      <tc:token ID="w562">registerrelevanten</tc:token>
+      <tc:token ID="w563">Entitäten</tc:token>
+      <tc:token ID="w564">und</tc:token>
+      <tc:token ID="w565">die</tc:token>
+      <tc:token ID="w566">Verknüpfung</tc:token>
+      <tc:token ID="w567">mit</tc:token>
+      <tc:token ID="w568">der</tc:token>
+      <tc:token ID="w569">RDB</tc:token>
+      <tc:token ID="w56a">auch</tc:token>
+      <tc:token ID="w56b">das</tc:token>
+      <tc:token ID="w56c">Druckregister</tc:token>
+      <tc:token ID="w56d">halbautomatisch</tc:token>
+      <tc:token ID="w56e">erstellt</tc:token>
+      <tc:token ID="w56f">und</tc:token>
+      <tc:token ID="w570">dem</tc:token>
+      <tc:token ID="w571">Bearbeiter</tc:token>
+      <tc:token ID="w572">so</tc:token>
+      <tc:token ID="w573">eine</tc:token>
+      <tc:token ID="w574">besonders</tc:token>
+      <tc:token ID="w575">mühsame</tc:token>
+      <tc:token ID="w576">Arbeit</tc:token>
+      <tc:token ID="w577">erspart</tc:token>
+      <tc:token ID="w578">werden</tc:token>
+      <tc:token ID="w579">.</tc:token>
+      <tc:token ID="w57a">Das</tc:token>
+      <tc:token ID="w57b">abgeschlossen</tc:token>
+      <tc:token ID="w57c">Pilotprojekt</tc:token>
+      <tc:token ID="w57d">wird</tc:token>
+      <tc:token ID="w57e">von</tc:token>
+      <tc:token ID="w57f">Seiten</tc:token>
+      <tc:token ID="w580">der</tc:token>
+      <tc:token ID="w581">Historischen</tc:token>
+      <tc:token ID="w582">Kommission</tc:token>
+      <tc:token ID="w583">als</tc:token>
+      <tc:token ID="w584">sehr</tc:token>
+      <tc:token ID="w585">erfolgreich</tc:token>
+      <tc:token ID="w586">eingestuft</tc:token>
+      <tc:token ID="w587">.</tc:token>
+      <tc:token ID="w588">Die</tc:token>
+      <tc:token ID="w589">Arbeit</tc:token>
+      <tc:token ID="w58a">im</tc:token>
+      <tc:token ID="w58b">Oxygen</tc:token>
+      <tc:token ID="w58c">XML</tc:token>
+      <tc:token ID="w58d">Editor</tc:token>
+      <tc:token ID="w58e">wurde</tc:token>
+      <tc:token ID="w58f">von</tc:token>
+      <tc:token ID="w590">Herrn</tc:token>
+      <tc:token ID="w591">Dr.</tc:token>
+      <tc:token ID="w592">Braun</tc:token>
+      <tc:token ID="w593">als</tc:token>
+      <tc:token ID="w594">angenehm</tc:token>
+      <tc:token ID="w595">empfunden</tc:token>
+      <tc:token ID="w596">,</tc:token>
+      <tc:token ID="w597">die</tc:token>
+      <tc:token ID="w598">Drucklegung</tc:token>
+      <tc:token ID="w599">wurde</tc:token>
+      <tc:token ID="w59a">pünktlich</tc:token>
+      <tc:token ID="w59b">abgeschlossen</tc:token>
+      <tc:token ID="w59c">und</tc:token>
+      <tc:token ID="w59d">es</tc:token>
+      <tc:token ID="w59e">konnten</tc:token>
+      <tc:token ID="w59f">wertvolle</tc:token>
+      <tc:token ID="w5a0">Erfahrungen</tc:token>
+      <tc:token ID="w5a1">zur</tc:token>
+      <tc:token ID="w5a2">Verbesserung</tc:token>
+      <tc:token ID="w5a3">der</tc:token>
+      <tc:token ID="w5a4">Arbeitsumgebung</tc:token>
+      <tc:token ID="w5a5">und</tc:token>
+      <tc:token ID="w5a6">des</tc:token>
+      <tc:token ID="w5a7">Workflows</tc:token>
+      <tc:token ID="w5a8">gesammelt</tc:token>
+      <tc:token ID="w5a9">werden</tc:token>
+      <tc:token ID="w5aa">.</tc:token>
+      <tc:token ID="w5ab">Der</tc:token>
+      <tc:token ID="w5ac">Komfort</tc:token>
+      <tc:token ID="w5ad">für</tc:token>
+      <tc:token ID="w5ae">den</tc:token>
+      <tc:token ID="w5af">Bearbeiter</tc:token>
+      <tc:token ID="w5b0">und</tc:token>
+      <tc:token ID="w5b1">die</tc:token>
+      <tc:token ID="w5b2">Qualität</tc:token>
+      <tc:token ID="w5b3">der</tc:token>
+      <tc:token ID="w5b4">Ergebnisse</tc:token>
+      <tc:token ID="w5b5">wird</tc:token>
+      <tc:token ID="w5b6">freilich</tc:token>
+      <tc:token ID="w5b7">durch</tc:token>
+      <tc:token ID="w5b8">eine</tc:token>
+      <tc:token ID="w5b9">vergleichsweise</tc:token>
+      <tc:token ID="w5ba">hohen</tc:token>
+      <tc:token ID="w5bb">Einrichtungs-</tc:token>
+      <tc:token ID="w5bc">und</tc:token>
+      <tc:token ID="w5bd">Supportaufwand</tc:token>
+      <tc:token ID="w5be">erkauft</tc:token>
+      <tc:token ID="w5bf">.</tc:token>
+      <tc:token ID="w5c0">Diese</tc:token>
+      <tc:token ID="w5c1">Mehrarbeiten</tc:token>
+      <tc:token ID="w5c2">werden</tc:token>
+      <tc:token ID="w5c3">aber</tc:token>
+      <tc:token ID="w5c4">von</tc:token>
+      <tc:token ID="w5c5">der</tc:token>
+      <tc:token ID="w5c6">technischen</tc:token>
+      <tc:token ID="w5c7">Betreuung</tc:token>
+      <tc:token ID="w5c8">geleistet</tc:token>
+      <tc:token ID="w5c9">.</tc:token>
+      <tc:token ID="w5ca">Eine</tc:token>
+      <tc:token ID="w5cb">zusätzliche</tc:token>
+      <tc:token ID="w5cc">Belastung</tc:token>
+      <tc:token ID="w5cd">für</tc:token>
+      <tc:token ID="w5ce">den</tc:token>
+      <tc:token ID="w5cf">wissenschaftlichen</tc:token>
+      <tc:token ID="w5d0">Editor</tc:token>
+      <tc:token ID="w5d1">wird</tc:token>
+      <tc:token ID="w5d2">weitestgehend</tc:token>
+      <tc:token ID="w5d3">vermieden</tc:token>
+      <tc:token ID="w5d4">.</tc:token>
+      <tc:token ID="w5d5">Die</tc:token>
+      <tc:token ID="w5d6">Veränderungen</tc:token>
+      <tc:token ID="w5d7">in</tc:token>
+      <tc:token ID="w5d8">seinem</tc:token>
+      <tc:token ID="w5d9">Workflow</tc:token>
+      <tc:token ID="w5da">sind</tc:token>
+      <tc:token ID="w5db">zwar</tc:token>
+      <tc:token ID="w5dc">merkbar</tc:token>
+      <tc:token ID="w5dd">,</tc:token>
+      <tc:token ID="w5de">aber</tc:token>
+      <tc:token ID="w5df">nicht</tc:token>
+      <tc:token ID="w5e0">einschneidend</tc:token>
+      <tc:token ID="w5e1">.</tc:token>
+      <tc:token ID="w5e2">In</tc:token>
+      <tc:token ID="w5e3">der</tc:token>
+      <tc:token ID="w5e4">jetzigen</tc:token>
+      <tc:token ID="w5e5">Form</tc:token>
+      <tc:token ID="w5e6">funktioniert</tc:token>
+      <tc:token ID="w5e7">die</tc:token>
+      <tc:token ID="w5e8">Zusammenarbeit</tc:token>
+      <tc:token ID="w5e9">zwischen</tc:token>
+      <tc:token ID="w5ea">Bearbeiter</tc:token>
+      <tc:token ID="w5eb">und</tc:token>
+      <tc:token ID="w5ec">Technikern</tc:token>
+      <tc:token ID="w5ed">für</tc:token>
+      <tc:token ID="w5ee">beide</tc:token>
+      <tc:token ID="w5ef">Seiten</tc:token>
+      <tc:token ID="w5f0">sehr</tc:token>
+      <tc:token ID="w5f1">fruchtbringend</tc:token>
+      <tc:token ID="w5f2">.</tc:token>
+      <tc:token ID="w5f3">Außerdem</tc:token>
+      <tc:token ID="w5f4">sind</tc:token>
+      <tc:token ID="w5f5">die</tc:token>
+      <tc:token ID="w5f6">gewonnen</tc:token>
+      <tc:token ID="w5f7">Erfahrungen</tc:token>
+      <tc:token ID="w5f8">und</tc:token>
+      <tc:token ID="w5f9">Programmierarbeiten</tc:token>
+      <tc:token ID="w5fa">zum</tc:token>
+      <tc:token ID="w5fb">größten</tc:token>
+      <tc:token ID="w5fc">Teil</tc:token>
+      <tc:token ID="w5fd">für</tc:token>
+      <tc:token ID="w5fe">andere</tc:token>
+      <tc:token ID="w5ff">Projekte</tc:token>
+      <tc:token ID="w600">wiederverwendbar</tc:token>
+      <tc:token ID="w601">.</tc:token>
+      <tc:token ID="w602">Die</tc:token>
+      <tc:token ID="w603">Historische</tc:token>
+      <tc:token ID="w604">Kommission</tc:token>
+      <tc:token ID="w605">sieht</tc:token>
+      <tc:token ID="w606">sich</tc:token>
+      <tc:token ID="w607">deshalb</tc:token>
+      <tc:token ID="w608">in</tc:token>
+      <tc:token ID="w609">ihrem</tc:token>
+      <tc:token ID="w60a">Entschluss</tc:token>
+      <tc:token ID="w60b">bestätigt</tc:token>
+      <tc:token ID="w60c">,</tc:token>
+      <tc:token ID="w60d">zukünftig</tc:token>
+      <tc:token ID="w60e">verstärkt</tc:token>
+      <tc:token ID="w60f">auf</tc:token>
+      <tc:token ID="w610">das</tc:token>
+      <tc:token ID="w611">digitale</tc:token>
+      <tc:token ID="w612">,</tc:token>
+      <tc:token ID="w613">XML-basierte</tc:token>
+      <tc:token ID="w614">Editionskonzept</tc:token>
+      <tc:token ID="w615">zu</tc:token>
+      <tc:token ID="w616">setzen</tc:token>
+      <tc:token ID="w617">.</tc:token>
+      <tc:token ID="w618">Neben</tc:token>
+      <tc:token ID="w619">den</tc:token>
+      <tc:token ID="w61a">noch</tc:token>
+      <tc:token ID="w61b">ausstehenden</tc:token>
+      <tc:token ID="w61c">Bänden</tc:token>
+      <tc:token ID="w61d">der</tc:token>
+      <tc:token ID="w61e">Bayerischen</tc:token>
+      <tc:token ID="w61f">Ministerratsprotokolle</tc:token>
+      <tc:token ID="w620">sind</tc:token>
+      <tc:token ID="w621">bereits</tc:token>
+      <tc:token ID="w622">drei</tc:token>
+      <tc:token ID="w623">Briefeditionsprojekte</tc:token>
+      <tc:token ID="w624">in</tc:token>
+      <tc:token ID="w625">Arbeit</tc:token>
+      <tc:token ID="w626">,</tc:token>
+      <tc:token ID="w627">die</tc:token>
+      <tc:token ID="w628">auf</tc:token>
+      <tc:token ID="w629">diesem</tc:token>
+      <tc:token ID="w62a">Ansatz</tc:token>
+      <tc:token ID="w62b">beruhen</tc:token>
+      <tc:token ID="w62c">.</tc:token>
+      <tc:token ID="w62d">Weitere</tc:token>
+      <tc:token ID="w62e">Projekte</tc:token>
+      <tc:token ID="w62f">befinden</tc:token>
+      <tc:token ID="w630">sich</tc:token>
+      <tc:token ID="w631">in</tc:token>
+      <tc:token ID="w632">der</tc:token>
+      <tc:token ID="w633">Vorbereitungs-</tc:token>
+      <tc:token ID="w634">und</tc:token>
+      <tc:token ID="w635">Planungsphase</tc:token>
+      <tc:token ID="w636">.</tc:token>
+      <tc:token ID="w637">Der</tc:token>
+      <tc:token ID="w638">neunte</tc:token>
+      <tc:token ID="w639">Band</tc:token>
+      <tc:token ID="w63a">der</tc:token>
+      <tc:token ID="w63b">Bayerischen</tc:token>
+      <tc:token ID="w63c">Ministerratsprotokolle</tc:token>
+      <tc:token ID="w63d">ist</tc:token>
+      <tc:token ID="w63e">im</tc:token>
+      <tc:token ID="w63f">Oktober</tc:token>
+      <tc:token ID="w640">2019</tc:token>
+      <tc:token ID="w641">gedruckt</tc:token>
+      <tc:token ID="w642">erschienen</tc:token>
+      <tc:token ID="w643">.</tc:token>
+      <tc:token ID="w644">Die</tc:token>
+      <tc:token ID="w645">Veröffentlichung</tc:token>
+      <tc:token ID="w646">im</tc:token>
+      <tc:token ID="w647">Internet</tc:token>
+      <tc:token ID="w648">wird</tc:token>
+      <tc:token ID="w649">sich</tc:token>
+      <tc:token ID="w64a">noch</tc:token>
+      <tc:token ID="w64b">bis</tc:token>
+      <tc:token ID="w64c">voraussichtlich</tc:token>
+      <tc:token ID="w64d">2022</tc:token>
+      <tc:token ID="w64e">verzögern</tc:token>
+      <tc:token ID="w64f">.</tc:token>
+      <tc:token ID="w650">Dann</tc:token>
+      <tc:token ID="w651">endet</tc:token>
+      <tc:token ID="w652">mit</tc:token>
+      <tc:token ID="w653">dem</tc:token>
+      <tc:token ID="w654">Erscheinen</tc:token>
+      <tc:token ID="w655">des</tc:token>
+      <tc:token ID="w656">10.</tc:token>
+      <tc:token ID="w657">Bandes</tc:token>
+      <tc:token ID="w658">,</tc:token>
+      <tc:token ID="w659">die</tc:token>
+      <tc:token ID="w65a">mit</tc:token>
+      <tc:token ID="w65b">dem</tc:token>
+      <tc:token ID="w65c">Verlag</tc:token>
+      <tc:token ID="w65d">vereinbarte</tc:token>
+      <tc:token ID="w65e">Exklusivitätsperiode</tc:token>
+      <tc:token ID="w65f">im</tc:token>
+      <tc:token ID="w660">Druck</tc:token>
+      <tc:token ID="w661">.</tc:token>
+      <tc:token ID="w662">Der</tc:token>
+      <tc:token ID="w663">Inhalt</tc:token>
+      <tc:token ID="w664">von</tc:token>
+      <tc:token ID="w665">Band</tc:token>
+      <tc:token ID="w666">9</tc:token>
+      <tc:token ID="w667">und</tc:token>
+      <tc:token ID="w668">der</tc:token>
+      <tc:token ID="w669">RDB</tc:token>
+      <tc:token ID="w66a">können</tc:token>
+      <tc:token ID="w66b">somit</tc:token>
+      <tc:token ID="w66c">zum</tc:token>
+      <tc:token ID="w66d">bestehenden</tc:token>
+      <tc:token ID="w66e">Webangebot</tc:token>
+      <tc:token ID="w66f">der</tc:token>
+      <tc:token ID="w670">Protokolle</tc:token>
+      <tc:token ID="w671">des</tc:token>
+      <tc:token ID="w672">Bayerischen</tc:token>
+      <tc:token ID="w673">Ministerrats</tc:token>
+      <tc:token ID="w674">hinzugefügt</tc:token>
+      <tc:token ID="w675">werden</tc:token>
+      <tc:token ID="w676">.</tc:token>
+      <tc:token ID="w677">Ein</tc:token>
+      <tc:token ID="w678">größeres</tc:token>
+      <tc:token ID="w679">Funktionsupdate</tc:token>
+      <tc:token ID="w67a">für</tc:token>
+      <tc:token ID="w67b">die</tc:token>
+      <tc:token ID="w67c">Website</tc:token>
+      <tc:token ID="w67d">,</tc:token>
+      <tc:token ID="w67e">das</tc:token>
+      <tc:token ID="w67f">hiermit</tc:token>
+      <tc:token ID="w680">einhergehen</tc:token>
+      <tc:token ID="w681">soll</tc:token>
+      <tc:token ID="w682">,</tc:token>
+      <tc:token ID="w683">befindet</tc:token>
+      <tc:token ID="w684">sich</tc:token>
+      <tc:token ID="w685">derzeit</tc:token>
+      <tc:token ID="w686">noch</tc:token>
+      <tc:token ID="w687">in</tc:token>
+      <tc:token ID="w688">der</tc:token>
+      <tc:token ID="w689">Konzeptionsphase</tc:token>
+      <tc:token ID="w68a">.</tc:token>
+      <tc:token ID="w68b">Es</tc:token>
+      <tc:token ID="w68c">soll</tc:token>
+      <tc:token ID="w68d">das</tc:token>
+      <tc:token ID="w68e">Webangebot</tc:token>
+      <tc:token ID="w68f">um</tc:token>
+      <tc:token ID="w690">zahlreiche</tc:token>
+      <tc:token ID="w691">neue</tc:token>
+      <tc:token ID="w692">Features</tc:token>
+      <tc:token ID="w693">erweitern</tc:token>
+      <tc:token ID="w694">,</tc:token>
+      <tc:token ID="w695">die</tc:token>
+      <tc:token ID="w696">die</tc:token>
+      <tc:token ID="w697">Anreicherungen</tc:token>
+      <tc:token ID="w698">und</tc:token>
+      <tc:token ID="w699">Vernetzungen</tc:token>
+      <tc:token ID="w69a">im</tc:token>
+      <tc:token ID="w69b">Editionstext</tc:token>
+      <tc:token ID="w69c">für</tc:token>
+      <tc:token ID="w69d">die</tc:token>
+      <tc:token ID="w69e">User</tc:token>
+      <tc:token ID="w69f">zugänglich</tc:token>
+      <tc:token ID="w6a0">macht</tc:token>
+      <tc:token ID="w6a1">.</tc:token>
+      <tc:token ID="w6a2">Noch</tc:token>
+      <tc:token ID="w6a3">geprüft</tc:token>
+      <tc:token ID="w6a4">wird</tc:token>
+      <tc:token ID="w6a5">,</tc:token>
+      <tc:token ID="w6a6">welche</tc:token>
+      <tc:token ID="w6a7">Verlinkungsmöglichkeiten</tc:token>
+      <tc:token ID="w6a8">zu</tc:token>
+      <tc:token ID="w6a9">externen</tc:token>
+      <tc:token ID="w6aa">Webangeboten</tc:token>
+      <tc:token ID="w6ab">und</tc:token>
+      <tc:token ID="w6ac">Normdatenbanken</tc:token>
+      <tc:token ID="w6ad">umgesetzt</tc:token>
+      <tc:token ID="w6ae">werden</tc:token>
+      <tc:token ID="w6af">können</tc:token>
+      <tc:token ID="w6b0">.</tc:token>
+      <tc:token ID="w6b1">Außerdem</tc:token>
+      <tc:token ID="w6b2">gibt</tc:token>
+      <tc:token ID="w6b3">es</tc:token>
+      <tc:token ID="w6b4">Überlegungen</tc:token>
+      <tc:token ID="w6b5">für</tc:token>
+      <tc:token ID="w6b6">spezialisierte</tc:token>
+      <tc:token ID="w6b7">Recherche-</tc:token>
+      <tc:token ID="w6b8">und</tc:token>
+      <tc:token ID="w6b9">Visualisierungsmöglichkeiten</tc:token>
+      <tc:token ID="w6ba">,</tc:token>
+      <tc:token ID="w6bb">zum</tc:token>
+      <tc:token ID="w6bc">Bespiel</tc:token>
+      <tc:token ID="w6bd">mittels</tc:token>
+      <tc:token ID="w6be">der</tc:token>
+      <tc:token ID="w6bf">in</tc:token>
+      <tc:token ID="w6c0">der</tc:token>
+      <tc:token ID="w6c1">RDB</tc:token>
+      <tc:token ID="w6c2">erfassten</tc:token>
+      <tc:token ID="w6c3">Orte</tc:token>
+      <tc:token ID="w6c4">auf</tc:token>
+      <tc:token ID="w6c5">Karten</tc:token>
+      <tc:token ID="w6c6">.</tc:token>
+      <tc:token ID="w6c7">Abbildung</tc:token>
+      <tc:token ID="w6c8">1</tc:token>
+      <tc:token ID="w6c9">:</tc:token>
+      <tc:token ID="w6ca">Ein</tc:token>
+      <tc:token ID="w6cb">Protokoll</tc:token>
+      <tc:token ID="w6cc">aus</tc:token>
+      <tc:token ID="w6cd">der</tc:token>
+      <tc:token ID="w6ce">Edition</tc:token>
+      <tc:token ID="w6cf">in</tc:token>
+      <tc:token ID="w6d0">seiner</tc:token>
+      <tc:token ID="w6d1">XML-Grundform</tc:token>
+      <tc:token ID="w6d2">,</tc:token>
+      <tc:token ID="w6d3">…</tc:token>
+      <tc:token ID="w6d4">Abbildung</tc:token>
+      <tc:token ID="w6d5">2:</tc:token>
+      <tc:token ID="w6d6">…</tc:token>
+      <tc:token ID="w6d7">in</tc:token>
+      <tc:token ID="w6d8">der</tc:token>
+      <tc:token ID="w6d9">Darstellung</tc:token>
+      <tc:token ID="w6da">der</tc:token>
+      <tc:token ID="w6db">Arbeitsumgebung</tc:token>
+      <tc:token ID="w6dc">…</tc:token>
+      <tc:token ID="w6dd">Abbildung</tc:token>
+      <tc:token ID="w6de">3:</tc:token>
+      <tc:token ID="w6df">…</tc:token>
+      <tc:token ID="w6e0">und</tc:token>
+      <tc:token ID="w6e1">in</tc:token>
+      <tc:token ID="w6e2">der</tc:token>
+      <tc:token ID="w6e3">finalen</tc:token>
+      <tc:token ID="w6e4">PDF-Druckfassung</tc:token>
+      <tc:token ID="w6e5">.</tc:token>
+      <tc:token ID="w6e6">Dumont</tc:token>
+      <tc:token ID="w6e7">,</tc:token>
+      <tc:token ID="w6e8">Stefan</tc:token>
+      <tc:token ID="w6e9">/</tc:token>
+      <tc:token ID="w6ea">Fechner</tc:token>
+      <tc:token ID="w6eb">,</tc:token>
+      <tc:token ID="w6ec">Martin</tc:token>
+      <tc:token ID="w6ed">(</tc:token>
+      <tc:token ID="w6ee">2012</tc:token>
+      <tc:token ID="w6ef">)</tc:token>
+      <tc:token ID="w6f0">:</tc:token>
+      <tc:token ID="w6f1">„</tc:token>
+      <tc:token ID="w6f2">Digitale</tc:token>
+      <tc:token ID="w6f3">Arbeitsumgebung</tc:token>
+      <tc:token ID="w6f4">für</tc:token>
+      <tc:token ID="w6f5">das</tc:token>
+      <tc:token ID="w6f6">Editionvorhaben</tc:token>
+      <tc:token ID="w6f7">‚</tc:token>
+      <tc:token ID="w6f8">Schleiermacher</tc:token>
+      <tc:token ID="w6f9">in</tc:token>
+      <tc:token ID="w6fa">Berlin</tc:token>
+      <tc:token ID="w6fb">1808–1834‘</tc:token>
+      <tc:token ID="w6fc">“</tc:token>
+      <tc:token ID="w6fd">http://digiversity.net/2012/digitale-arbeitsumgebung-fur-das-editionsvorhaben-schleiermacher-in-berlin-1808-1834</tc:token>
+      <tc:token ID="w6fe">[</tc:token>
+      <tc:token ID="w6ff">letzter</tc:token>
+      <tc:token ID="w700">Zugriff</tc:token>
+      <tc:token ID="w701">25.</tc:token>
+      <tc:token ID="w702">09.</tc:token>
+      <tc:token ID="w703">2019</tc:token>
+      <tc:token ID="w704">]</tc:token>
+      <tc:token ID="w705">.</tc:token>
+      <tc:token ID="w706">Dumont</tc:token>
+      <tc:token ID="w707">Stefan</tc:token>
+      <tc:token ID="w708">/</tc:token>
+      <tc:token ID="w709">Fechner</tc:token>
+      <tc:token ID="w70a">Martin</tc:token>
+      <tc:token ID="w70b">(</tc:token>
+      <tc:token ID="w70c">2015</tc:token>
+      <tc:token ID="w70d">)</tc:token>
+      <tc:token ID="w70e">:</tc:token>
+      <tc:token ID="w70f">„</tc:token>
+      <tc:token ID="w710">Bridging</tc:token>
+      <tc:token ID="w711">the</tc:token>
+      <tc:token ID="w712">Gap</tc:token>
+      <tc:token ID="w713">:</tc:token>
+      <tc:token ID="w714">Greater</tc:token>
+      <tc:token ID="w715">Usability</tc:token>
+      <tc:token ID="w716">for</tc:token>
+      <tc:token ID="w717">TEI</tc:token>
+      <tc:token ID="w718">encoding</tc:token>
+      <tc:token ID="w719">,</tc:token>
+      <tc:token ID="w71a">in</tc:token>
+      <tc:token ID="w71b">:</tc:token>
+      <tc:token ID="w71c">Journal</tc:token>
+      <tc:token ID="w71d">of</tc:token>
+      <tc:token ID="w71e">the</tc:token>
+      <tc:token ID="w71f">Text</tc:token>
+      <tc:token ID="w720">Encoding</tc:token>
+      <tc:token ID="w721">Initiative</tc:token>
+      <tc:token ID="w722">8</tc:token>
+      <tc:token ID="w723">“</tc:token>
+      <tc:token ID="w724">http://jtei.revues.org/1242</tc:token>
+      <tc:token ID="w725">[</tc:token>
+      <tc:token ID="w726">letzter</tc:token>
+      <tc:token ID="w727">Zugriff</tc:token>
+      <tc:token ID="w728">25.</tc:token>
+      <tc:token ID="w729">09.</tc:token>
+      <tc:token ID="w72a">2019</tc:token>
+      <tc:token ID="w72b">]</tc:token>
+      <tc:token ID="w72c">.</tc:token>
+      <tc:token ID="w72d">Das</tc:token>
+      <tc:token ID="w72e">Kabinett</tc:token>
+      <tc:token ID="w72f">Ehard</tc:token>
+      <tc:token ID="w730">III</tc:token>
+      <tc:token ID="w731">18.Dezember</tc:token>
+      <tc:token ID="w732">1950</tc:token>
+      <tc:token ID="w733">bis</tc:token>
+      <tc:token ID="w734">14.</tc:token>
+      <tc:token ID="w735">Dezember</tc:token>
+      <tc:token ID="w736">1954</tc:token>
+      <tc:token ID="w737">,</tc:token>
+      <tc:token ID="w738">Band</tc:token>
+      <tc:token ID="w739">3</tc:token>
+      <tc:token ID="w73a">8.</tc:token>
+      <tc:token ID="w73b">1.</tc:token>
+      <tc:token ID="w73c">1953–29.</tc:token>
+      <tc:token ID="w73d">12.</tc:token>
+      <tc:token ID="w73e">1953.</tc:token>
+      <tc:token ID="w73f">bearb.</tc:token>
+      <tc:token ID="w740">von</tc:token>
+      <tc:token ID="w741">Oliver</tc:token>
+      <tc:token ID="w742">Braun</tc:token>
+      <tc:token ID="w743">,</tc:token>
+      <tc:token ID="w744">München</tc:token>
+      <tc:token ID="w745">[</tc:token>
+      <tc:token ID="w746">2019</tc:token>
+      <tc:token ID="w747">]</tc:token>
+      <tc:token ID="w748">(</tc:token>
+      <tc:token ID="w749">=</tc:token>
+      <tc:token ID="w74a">Die</tc:token>
+      <tc:token ID="w74b">Protokolle</tc:token>
+      <tc:token ID="w74c">des</tc:token>
+      <tc:token ID="w74d">Bayerischen</tc:token>
+      <tc:token ID="w74e">Ministerrats</tc:token>
+      <tc:token ID="w74f">.</tc:token>
+      <tc:token ID="w750">1945-1962</tc:token>
+      <tc:token ID="w751">,</tc:token>
+      <tc:token ID="w752">Hg.</tc:token>
+      <tc:token ID="w753">von</tc:token>
+      <tc:token ID="w754">der</tc:token>
+      <tc:token ID="w755">Historischen</tc:token>
+      <tc:token ID="w756">Kommission</tc:token>
+      <tc:token ID="w757">bei</tc:token>
+      <tc:token ID="w758">der</tc:token>
+      <tc:token ID="w759">Bayerischen</tc:token>
+      <tc:token ID="w75a">Akademie</tc:token>
+      <tc:token ID="w75b">der</tc:token>
+      <tc:token ID="w75c">Wissenschaften</tc:token>
+      <tc:token ID="w75d">durch</tc:token>
+      <tc:token ID="w75e">Andreas</tc:token>
+      <tc:token ID="w75f">Wirsching</tc:token>
+      <tc:token ID="w760">und</tc:token>
+      <tc:token ID="w761">von</tc:token>
+      <tc:token ID="w762">der</tc:token>
+      <tc:token ID="w763">Generaldirektion</tc:token>
+      <tc:token ID="w764">der</tc:token>
+      <tc:token ID="w765">Staatlichen</tc:token>
+      <tc:token ID="w766">Archive</tc:token>
+      <tc:token ID="w767">durch</tc:token>
+      <tc:token ID="w768">Margit</tc:token>
+      <tc:token ID="w769">Ksoll-Marcon</tc:token>
+      <tc:token ID="w76a">,</tc:token>
+      <tc:token ID="w76b">Band</tc:token>
+      <tc:token ID="w76c">9</tc:token>
+      <tc:token ID="w76d">)</tc:token>
+      <tc:token ID="w76e">.</tc:token>
+      <tc:token ID="w76f">http://www.tei-c.org;</tc:token>
+      <tc:token ID="w770">alle</tc:token>
+      <tc:token ID="w771">URLs</tc:token>
+      <tc:token ID="w772">in</tc:token>
+      <tc:token ID="w773">diesem</tc:token>
+      <tc:token ID="w774">Artikel</tc:token>
+      <tc:token ID="w775">wurden</tc:token>
+      <tc:token ID="w776">zuletzt</tc:token>
+      <tc:token ID="w777">am</tc:token>
+      <tc:token ID="w778">25.</tc:token>
+      <tc:token ID="w779">09.</tc:token>
+      <tc:token ID="w77a">2019</tc:token>
+      <tc:token ID="w77b">aufgerufen</tc:token>
+      <tc:token ID="w77c">.</tc:token>
+      <tc:token ID="w77d">http://oxygenxml.com</tc:token>
+      <tc:token ID="w77e">Die</tc:token>
+      <tc:token ID="w77f">Protokolle</tc:token>
+      <tc:token ID="w780">des</tc:token>
+      <tc:token ID="w781">Bayerischen</tc:token>
+      <tc:token ID="w782">Ministerrats</tc:token>
+      <tc:token ID="w783">1945-1962</tc:token>
+      <tc:token ID="w784">[</tc:token>
+      <tc:token ID="w785">ehemals</tc:token>
+      <tc:token ID="w786">1945-1954</tc:token>
+      <tc:token ID="w787">]</tc:token>
+      <tc:token ID="w788">,</tc:token>
+      <tc:token ID="w789">Hg.</tc:token>
+      <tc:token ID="w78a">von</tc:token>
+      <tc:token ID="w78b">der</tc:token>
+      <tc:token ID="w78c">Historischen</tc:token>
+      <tc:token ID="w78d">Kommission</tc:token>
+      <tc:token ID="w78e">bei</tc:token>
+      <tc:token ID="w78f">der</tc:token>
+      <tc:token ID="w790">Bayerischen</tc:token>
+      <tc:token ID="w791">Akademie</tc:token>
+      <tc:token ID="w792">der</tc:token>
+      <tc:token ID="w793">Wissenschaften</tc:token>
+      <tc:token ID="w794">und</tc:token>
+      <tc:token ID="w795">der</tc:token>
+      <tc:token ID="w796">Generaldirektion</tc:token>
+      <tc:token ID="w797">der</tc:token>
+      <tc:token ID="w798">Staatlichen</tc:token>
+      <tc:token ID="w799">Archive</tc:token>
+      <tc:token ID="w79a">Bayerns</tc:token>
+      <tc:token ID="w79b">,</tc:token>
+      <tc:token ID="w79c">9</tc:token>
+      <tc:token ID="w79d">Bände</tc:token>
+      <tc:token ID="w79e">,</tc:token>
+      <tc:token ID="w79f">bearbeitet</tc:token>
+      <tc:token ID="w7a0">von</tc:token>
+      <tc:token ID="w7a1">Karl-Ulrich</tc:token>
+      <tc:token ID="w7a2">Gelberg</tc:token>
+      <tc:token ID="w7a3">[</tc:token>
+      <tc:token ID="w7a4">Bände</tc:token>
+      <tc:token ID="w7a5">1-5</tc:token>
+      <tc:token ID="w7a6">]</tc:token>
+      <tc:token ID="w7a7">und</tc:token>
+      <tc:token ID="w7a8">Oliver</tc:token>
+      <tc:token ID="w7a9">Braun</tc:token>
+      <tc:token ID="w7aa">[</tc:token>
+      <tc:token ID="w7ab">Bände</tc:token>
+      <tc:token ID="w7ac">6-9</tc:token>
+      <tc:token ID="w7ad">]</tc:token>
+      <tc:token ID="w7ae">,</tc:token>
+      <tc:token ID="w7af">1995-2019.</tc:token>
+      <tc:token ID="w7b0">www.bayerischer-ministerrat.de</tc:token>
+      <tc:token ID="w7b1">http://www.bbaw.de/telota/software/ediarum</tc:token>
+      <tc:token ID="w7b2">https://exist-db.org</tc:token>
+      <tc:token ID="w7b3">https://syncandshare.lrz.de</tc:token>
+      <tc:token ID="w7b4">https://www.dnb.de/DE/Professionell/Standardisierung/GND/gnd_node.html</tc:token>
+      <tc:token ID="w7b5">https://xmlgraphics.apache.org/fop/</tc:token>
+      <tc:token ID="w7b6">Die</tc:token>
+      <tc:token ID="w7b7">wissenschaftliche</tc:token>
+      <tc:token ID="w7b8">Korrespondenz</tc:token>
+      <tc:token ID="w7b9">des</tc:token>
+      <tc:token ID="w7ba">Historikers</tc:token>
+      <tc:token ID="w7bb">Karl</tc:token>
+      <tc:token ID="w7bc">Hegel</tc:token>
+      <tc:token ID="w7bd">(</tc:token>
+      <tc:token ID="w7be">1813-1901</tc:token>
+      <tc:token ID="w7bf">)</tc:token>
+      <tc:token ID="w7c0">,</tc:token>
+      <tc:token ID="w7c1">bearbeitet</tc:token>
+      <tc:token ID="w7c2">von</tc:token>
+      <tc:token ID="w7c3">Marion</tc:token>
+      <tc:token ID="w7c4">Kreis</tc:token>
+      <tc:token ID="w7c5">;</tc:token>
+      <tc:token ID="w7c6">Der</tc:token>
+      <tc:token ID="w7c7">Briefwechsel</tc:token>
+      <tc:token ID="w7c8">zwischen</tc:token>
+      <tc:token ID="w7c9">Adolf</tc:token>
+      <tc:token ID="w7ca">Harnack</tc:token>
+      <tc:token ID="w7cb">und</tc:token>
+      <tc:token ID="w7cc">Friedrich</tc:token>
+      <tc:token ID="w7cd">Althoff</tc:token>
+      <tc:token ID="w7ce">(</tc:token>
+      <tc:token ID="w7cf">1886-1908</tc:token>
+      <tc:token ID="w7d0">)</tc:token>
+      <tc:token ID="w7d1">,</tc:token>
+      <tc:token ID="w7d2">bearbeitet</tc:token>
+      <tc:token ID="w7d3">von</tc:token>
+      <tc:token ID="w7d4">Claudia</tc:token>
+      <tc:token ID="w7d5">Kampmann</tc:token>
+      <tc:token ID="w7d6">;</tc:token>
+      <tc:token ID="w7d7">Zwischen</tc:token>
+      <tc:token ID="w7d8">Wissenschaft</tc:token>
+      <tc:token ID="w7d9">und</tc:token>
+      <tc:token ID="w7da">Politik</tc:token>
+      <tc:token ID="w7db">.</tc:token>
+      <tc:token ID="w7dc">Hans</tc:token>
+      <tc:token ID="w7dd">Delbrück</tc:token>
+      <tc:token ID="w7de">–</tc:token>
+      <tc:token ID="w7df">Ausgewählte</tc:token>
+      <tc:token ID="w7e0">Korrespondenz</tc:token>
+      <tc:token ID="w7e1">(</tc:token>
+      <tc:token ID="w7e2">1868-1929</tc:token>
+      <tc:token ID="w7e3">)</tc:token>
+      <tc:token ID="w7e4">,</tc:token>
+      <tc:token ID="w7e5">bearbeitet</tc:token>
+      <tc:token ID="w7e6">von</tc:token>
+      <tc:token ID="w7e7">Andreas</tc:token>
+      <tc:token ID="w7e8">Rose</tc:token>
+      <tc:token ID="w7e9">und</tc:token>
+      <tc:token ID="w7ea">Jonas</tc:token>
+      <tc:token ID="w7eb">Klein</tc:token>
+      <tc:token ID="w7ec">.</tc:token>
+      <tc:token ID="w7ed">Siehe</tc:token>
+      <tc:token ID="w7ee">Anm.</tc:token>
+      <tc:token ID="w7ef">5.</tc:token>
+      <tc:token ID="w7f0">Bibliographie</tc:token>
+    </tc:tokens>
+    <tc:sentences xmlns:tc="http://www.dspin.de/data/textcorpus">
+      <tc:sentence tokenIDs="w1 w2 w3 w4 w5 w6 w7 w8 w9 wa wb wc wd we wf w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w1a w1b w1c w1d" ID="s1"/>
+      <tc:sentence tokenIDs="w1e w1f w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 w2a w2b w2c w2d w2e w2f w30 w31 w32 w33 w34 w35 w36 w37 w38 w39 w3a w3b w3c w3d" ID="s2"/>
+      <tc:sentence tokenIDs="w3e w3f w40 w41 w42 w43 w44 w45 w46 w47 w48 w49 w4a w4b w4c w4d w4e w4f w50 w51 w52 w53 w54 w55 w56" ID="s3"/>
+      <tc:sentence tokenIDs="w57 w58 w59 w5a w5b w5c w5d w5e w5f w60 w61 w62 w63 w64 w65 w66 w67 w68 w69 w6a w6b w6c w6d w6e w6f w70 w71" ID="s4"/>
+      <tc:sentence tokenIDs="w72 w73 w74 w75 w76 w77 w78 w79 w7a w7b w7c w7d w7e w7f w80 w81 w82 w83 w84" ID="s5"/>
+      <tc:sentence tokenIDs="w85 w86 w87 w88 w89 w8a w8b w8c w8d w8e w8f w90 w91 w92 w93 w94 w95 w96 w97 w98 w99 w9a w9b w9c w9d w9e w9f wa0 wa1 wa2" ID="s6"/>
+      <tc:sentence tokenIDs="wa3 wa4 wa5 wa6 wa7 wa8 wa9 waa wab wac wad wae waf wb0 wb1 wb2 wb3 wb4 wb5 wb6 wb7 wb8 wb9 wba wbb wbc wbd wbe wbf wc0 wc1 wc2 wc3 wc4 wc5 wc6 wc7 wc8" ID="s7"/>
+      <tc:sentence tokenIDs="wc9 wca wcb wcc wcd wce wcf wd0 wd1 wd2 wd3 wd4 wd5 wd6 wd7 wd8 wd9 wda wdb wdc wdd wde wdf we0 we1" ID="s8"/>
+      <tc:sentence tokenIDs="we2 we3 we4 we5 we6 we7 we8 we9 wea web wec wed wee wef wf0 wf1 wf2 wf3 wf4 wf5 wf6 wf7 wf8 wf9 wfa" ID="s9"/>
+      <tc:sentence tokenIDs="wfb wfc wfd wfe wff w100 w101 w102 w103 w104 w105 w106 w107 w108 w109 w10a w10b w10c" ID="sa"/>
+      <tc:sentence tokenIDs="w10d w10e w10f w110 w111 w112 w113 w114 w115 w116 w117 w118 w119 w11a w11b w11c w11d w11e w11f w120 w121 w122 w123 w124 w125 w126 w127 w128" ID="sb"/>
+      <tc:sentence tokenIDs="w129 w12a w12b w12c w12d w12e w12f w130 w131 w132 w133 w134 w135 w136 w137 w138 w139 w13a w13b" ID="sc"/>
+      <tc:sentence tokenIDs="w13c w13d w13e w13f w140 w141 w142 w143 w144 w145 w146 w147" ID="sd"/>
+      <tc:sentence tokenIDs="w148 w149 w14a w14b w14c w14d w14e w14f w150 w151 w152 w153 w154 w155 w156 w157 w158" ID="se"/>
+      <tc:sentence tokenIDs="w159 w15a w15b w15c w15d w15e w15f w160 w161 w162 w163 w164 w165 w166 w167 w168 w169 w16a w16b w16c w16d w16e w16f w170 w171 w172 w173 w174 w175" ID="sf"/>
+      <tc:sentence tokenIDs="w176 w177 w178 w179 w17a w17b w17c w17d w17e w17f w180 w181 w182 w183 w184 w185 w186 w187 w188 w189 w18a w18b w18c w18d w18e w18f w190 w191" ID="s10"/>
+      <tc:sentence tokenIDs="w192 w193 w194 w195 w196 w197 w198 w199 w19a w19b w19c w19d w19e w19f w1a0 w1a1 w1a2 w1a3 w1a4" ID="s11"/>
+      <tc:sentence tokenIDs="w1a5 w1a6 w1a7 w1a8 w1a9 w1aa w1ab w1ac w1ad w1ae w1af w1b0 w1b1" ID="s12"/>
+      <tc:sentence tokenIDs="w1b2 w1b3 w1b4 w1b5 w1b6" ID="s13"/>
+      <tc:sentence tokenIDs="w1b7 w1b8 w1b9 w1ba w1bb w1bc w1bd w1be w1bf w1c0 w1c1 w1c2 w1c3 w1c4 w1c5 w1c6 w1c7 w1c8 w1c9 w1ca w1cb w1cc w1cd w1ce w1cf w1d0 w1d1 w1d2 w1d3" ID="s14"/>
+      <tc:sentence tokenIDs="w1d4 w1d5 w1d6 w1d7 w1d8 w1d9 w1da w1db w1dc w1dd w1de w1df w1e0 w1e1 w1e2 w1e3 w1e4 w1e5 w1e6 w1e7 w1e8" ID="s15"/>
+      <tc:sentence tokenIDs="w1e9 w1ea w1eb w1ec w1ed w1ee w1ef w1f0 w1f1 w1f2 w1f3" ID="s16"/>
+      <tc:sentence tokenIDs="w1f4 w1f5 w1f6 w1f7 w1f8 w1f9 w1fa w1fb w1fc w1fd w1fe w1ff w200" ID="s17"/>
+      <tc:sentence tokenIDs="w201 w202 w203 w204 w205 w206 w207 w208 w209 w20a w20b w20c w20d" ID="s18"/>
+      <tc:sentence tokenIDs="w20e w20f w210 w211 w212 w213 w214 w215 w216 w217 w218 w219 w21a w21b w21c w21d w21e w21f w220 w221 w222 w223 w224 w225 w226 w227" ID="s19"/>
+      <tc:sentence tokenIDs="w228 w229 w22a w22b w22c w22d w22e w22f w230 w231 w232 w233 w234 w235 w236 w237 w238 w239 w23a w23b w23c w23d w23e" ID="s1a"/>
+      <tc:sentence tokenIDs="w23f w240 w241 w242 w243 w244 w245 w246 w247 w248 w249 w24a w24b w24c w24d w24e" ID="s1b"/>
+      <tc:sentence tokenIDs="w24f w250 w251 w252 w253 w254 w255 w256 w257 w258 w259 w25a w25b w25c w25d w25e w25f w260 w261 w262 w263 w264 w265 w266 w267 w268 w269 w26a w26b w26c w26d w26e w26f w270 w271 w272 w273 w274 w275 w276" ID="s1c"/>
+      <tc:sentence tokenIDs="w277 w278 w279 w27a w27b w27c w27d w27e w27f w280 w281 w282 w283 w284 w285 w286 w287 w288 w289 w28a w28b w28c w28d w28e w28f" ID="s1d"/>
+      <tc:sentence tokenIDs="w290 w291 w292 w293 w294 w295 w296 w297 w298 w299 w29a w29b" ID="s1e"/>
+      <tc:sentence tokenIDs="w29c w29d w29e w29f w2a0 w2a1 w2a2 w2a3 w2a4 w2a5 w2a6 w2a7 w2a8 w2a9 w2aa" ID="s1f"/>
+      <tc:sentence tokenIDs="w2ab w2ac w2ad w2ae w2af w2b0 w2b1 w2b2 w2b3 w2b4 w2b5 w2b6 w2b7 w2b8 w2b9 w2ba w2bb w2bc w2bd w2be w2bf w2c0 w2c1 w2c2 w2c3 w2c4 w2c5" ID="s20"/>
+      <tc:sentence tokenIDs="w2c6 w2c7 w2c8 w2c9 w2ca w2cb w2cc w2cd w2ce w2cf w2d0 w2d1 w2d2 w2d3 w2d4" ID="s21"/>
+      <tc:sentence tokenIDs="w2d5 w2d6 w2d7 w2d8 w2d9 w2da w2db w2dc w2dd w2de w2df w2e0 w2e1 w2e2 w2e3 w2e4 w2e5 w2e6 w2e7 w2e8" ID="s22"/>
+      <tc:sentence tokenIDs="w2e9 w2ea w2eb w2ec w2ed w2ee w2ef w2f0 w2f1 w2f2 w2f3 w2f4 w2f5" ID="s23"/>
+      <tc:sentence tokenIDs="w2f6 w2f7 w2f8 w2f9 w2fa w2fb w2fc w2fd w2fe w2ff w300 w301 w302 w303 w304 w305 w306" ID="s24"/>
+      <tc:sentence tokenIDs="w307 w308 w309 w30a w30b w30c w30d w30e w30f w310 w311 w312 w313 w314 w315 w316 w317 w318 w319 w31a w31b" ID="s25"/>
+      <tc:sentence tokenIDs="w31c w31d w31e w31f w320 w321 w322 w323 w324 w325 w326 w327 w328 w329 w32a" ID="s26"/>
+      <tc:sentence tokenIDs="w32b w32c w32d w32e w32f w330 w331 w332" ID="s27"/>
+      <tc:sentence tokenIDs="w333 w334 w335 w336 w337 w338 w339 w33a w33b w33c w33d w33e w33f w340 w341 w342 w343 w344 w345 w346 w347 w348 w349 w34a w34b w34c" ID="s28"/>
+      <tc:sentence tokenIDs="w34d w34e w34f w350 w351 w352 w353 w354 w355 w356 w357 w358 w359 w35a w35b w35c w35d w35e w35f w360 w361 w362 w363 w364 w365 w366 w367 w368 w369" ID="s29"/>
+      <tc:sentence tokenIDs="w36a w36b w36c w36d w36e w36f w370 w371 w372 w373" ID="s2a"/>
+      <tc:sentence tokenIDs="w374 w375 w376 w377 w378 w379 w37a w37b w37c w37d w37e w37f w380 w381 w382 w383 w384 w385" ID="s2b"/>
+      <tc:sentence tokenIDs="w386 w387 w388 w389 w38a w38b w38c w38d w38e w38f w390 w391 w392 w393 w394 w395 w396 w397 w398 w399 w39a w39b w39c w39d w39e" ID="s2c"/>
+      <tc:sentence tokenIDs="w39f w3a0 w3a1 w3a2 w3a3 w3a4 w3a5 w3a6 w3a7 w3a8 w3a9 w3aa w3ab w3ac w3ad w3ae w3af w3b0" ID="s2d"/>
+      <tc:sentence tokenIDs="w3b1 w3b2 w3b3 w3b4 w3b5 w3b6 w3b7 w3b8 w3b9 w3ba w3bb w3bc w3bd w3be w3bf w3c0 w3c1 w3c2 w3c3 w3c4 w3c5" ID="s2e"/>
+      <tc:sentence tokenIDs="w3c6 w3c7 w3c8 w3c9 w3ca w3cb w3cc w3cd w3ce w3cf w3d0 w3d1 w3d2 w3d3 w3d4 w3d5 w3d6 w3d7 w3d8 w3d9" ID="s2f"/>
+      <tc:sentence tokenIDs="w3da w3db w3dc w3dd w3de w3df w3e0 w3e1 w3e2 w3e3 w3e4 w3e5 w3e6" ID="s30"/>
+      <tc:sentence tokenIDs="w3e7 w3e8 w3e9 w3ea w3eb w3ec w3ed w3ee w3ef w3f0 w3f1 w3f2 w3f3 w3f4 w3f5 w3f6 w3f7 w3f8 w3f9 w3fa w3fb w3fc" ID="s31"/>
+      <tc:sentence tokenIDs="w3fd w3fe w3ff w400 w401 w402 w403 w404 w405 w406 w407 w408 w409 w40a w40b w40c w40d w40e w40f" ID="s32"/>
+      <tc:sentence tokenIDs="w410 w411 w412 w413 w414 w415 w416 w417 w418 w419 w41a w41b w41c w41d w41e w41f w420 w421 w422" ID="s33"/>
+      <tc:sentence tokenIDs="w423 w424 w425 w426 w427 w428 w429 w42a w42b w42c w42d w42e w42f w430 w431 w432 w433 w434 w435 w436" ID="s34"/>
+      <tc:sentence tokenIDs="w437 w438 w439 w43a w43b w43c w43d w43e w43f w440 w441 w442 w443 w444 w445 w446 w447 w448 w449 w44a w44b w44c w44d w44e w44f" ID="s35"/>
+      <tc:sentence tokenIDs="w450 w451 w452 w453 w454 w455 w456 w457 w458 w459 w45a w45b w45c w45d w45e w45f" ID="s36"/>
+      <tc:sentence tokenIDs="w460 w461 w462 w463 w464 w465 w466 w467 w468 w469 w46a w46b w46c w46d w46e w46f w470 w471 w472" ID="s37"/>
+      <tc:sentence tokenIDs="w473 w474 w475 w476 w477 w478 w479 w47a w47b" ID="s38"/>
+      <tc:sentence tokenIDs="w47c w47d w47e w47f w480 w481 w482 w483 w484 w485 w486 w487 w488 w489 w48a w48b w48c w48d w48e w48f w490 w491" ID="s39"/>
+      <tc:sentence tokenIDs="w492 w493 w494 w495 w496 w497 w498 w499" ID="s3a"/>
+      <tc:sentence tokenIDs="w49a w49b w49c w49d w49e w49f w4a0 w4a1" ID="s3b"/>
+      <tc:sentence tokenIDs="w4a2 w4a3 w4a4 w4a5 w4a6 w4a7 w4a8 w4a9 w4aa w4ab w4ac w4ad w4ae w4af w4b0 w4b1 w4b2 w4b3 w4b4 w4b5 w4b6 w4b7" ID="s3c"/>
+      <tc:sentence tokenIDs="w4b8 w4b9 w4ba w4bb w4bc w4bd w4be w4bf w4c0 w4c1 w4c2 w4c3 w4c4 w4c5 w4c6 w4c7 w4c8 w4c9 w4ca w4cb" ID="s3d"/>
+      <tc:sentence tokenIDs="w4cc w4cd w4ce w4cf w4d0 w4d1 w4d2 w4d3 w4d4 w4d5 w4d6 w4d7 w4d8 w4d9 w4da w4db w4dc w4dd w4de w4df w4e0 w4e1 w4e2 w4e3 w4e4 w4e5 w4e6 w4e7" ID="s3e"/>
+      <tc:sentence tokenIDs="w4e8 w4e9 w4ea w4eb w4ec w4ed w4ee w4ef w4f0 w4f1 w4f2 w4f3 w4f4 w4f5" ID="s3f"/>
+      <tc:sentence tokenIDs="w4f6 w4f7 w4f8 w4f9 w4fa w4fb w4fc w4fd w4fe w4ff w500 w501 w502 w503 w504 w505 w506 w507 w508 w509 w50a w50b" ID="s40"/>
+      <tc:sentence tokenIDs="w50c w50d w50e w50f w510 w511 w512 w513 w514 w515 w516 w517 w518 w519 w51a w51b w51c w51d w51e w51f" ID="s41"/>
+      <tc:sentence tokenIDs="w520 w521 w522 w523 w524 w525 w526 w527 w528 w529 w52a w52b w52c w52d" ID="s42"/>
+      <tc:sentence tokenIDs="w52e w52f w530 w531 w532 w533 w534 w535 w536 w537 w538 w539 w53a w53b" ID="s43"/>
+      <tc:sentence tokenIDs="w53c w53d w53e w53f w540 w541 w542 w543 w544 w545 w546 w547 w548 w549 w54a" ID="s44"/>
+      <tc:sentence tokenIDs="w54b w54c w54d w54e w54f w550 w551 w552 w553 w554 w555 w556 w557 w558 w559 w55a" ID="s45"/>
+      <tc:sentence tokenIDs="w55b w55c w55d w55e w55f w560 w561 w562 w563 w564 w565 w566 w567 w568 w569 w56a w56b w56c w56d w56e w56f w570 w571 w572 w573 w574 w575 w576 w577 w578 w579" ID="s46"/>
+      <tc:sentence tokenIDs="w57a w57b w57c w57d w57e w57f w580 w581 w582 w583 w584 w585 w586 w587" ID="s47"/>
+      <tc:sentence tokenIDs="w588 w589 w58a w58b w58c w58d w58e w58f w590 w591 w592 w593 w594 w595 w596 w597 w598 w599 w59a w59b w59c w59d w59e w59f w5a0 w5a1 w5a2 w5a3 w5a4 w5a5 w5a6 w5a7 w5a8 w5a9 w5aa" ID="s48"/>
+      <tc:sentence tokenIDs="w5ab w5ac w5ad w5ae w5af w5b0 w5b1 w5b2 w5b3 w5b4 w5b5 w5b6 w5b7 w5b8 w5b9 w5ba w5bb w5bc w5bd w5be w5bf" ID="s49"/>
+      <tc:sentence tokenIDs="w5c0 w5c1 w5c2 w5c3 w5c4 w5c5 w5c6 w5c7 w5c8 w5c9" ID="s4a"/>
+      <tc:sentence tokenIDs="w5ca w5cb w5cc w5cd w5ce w5cf w5d0 w5d1 w5d2 w5d3 w5d4" ID="s4b"/>
+      <tc:sentence tokenIDs="w5d5 w5d6 w5d7 w5d8 w5d9 w5da w5db w5dc w5dd w5de w5df w5e0 w5e1" ID="s4c"/>
+      <tc:sentence tokenIDs="w5e2 w5e3 w5e4 w5e5 w5e6 w5e7 w5e8 w5e9 w5ea w5eb w5ec w5ed w5ee w5ef w5f0 w5f1 w5f2" ID="s4d"/>
+      <tc:sentence tokenIDs="w5f3 w5f4 w5f5 w5f6 w5f7 w5f8 w5f9 w5fa w5fb w5fc w5fd w5fe w5ff w600 w601" ID="s4e"/>
+      <tc:sentence tokenIDs="w602 w603 w604 w605 w606 w607 w608 w609 w60a w60b w60c w60d w60e w60f w610 w611 w612 w613 w614 w615 w616 w617" ID="s4f"/>
+      <tc:sentence tokenIDs="w618 w619 w61a w61b w61c w61d w61e w61f w620 w621 w622 w623 w624 w625 w626 w627 w628 w629 w62a w62b w62c" ID="s50"/>
+      <tc:sentence tokenIDs="w62d w62e w62f w630 w631 w632 w633 w634 w635 w636" ID="s51"/>
+      <tc:sentence tokenIDs="w637 w638 w639 w63a w63b w63c w63d w63e w63f w640 w641 w642 w643" ID="s52"/>
+      <tc:sentence tokenIDs="w644 w645 w646 w647 w648 w649 w64a w64b w64c w64d w64e w64f" ID="s53"/>
+      <tc:sentence tokenIDs="w650 w651 w652 w653 w654 w655 w656 w657 w658 w659 w65a w65b w65c w65d w65e w65f w660 w661" ID="s54"/>
+      <tc:sentence tokenIDs="w662 w663 w664 w665 w666 w667 w668 w669 w66a w66b w66c w66d w66e w66f w670 w671 w672 w673 w674 w675 w676" ID="s55"/>
+      <tc:sentence tokenIDs="w677 w678 w679 w67a w67b w67c w67d w67e w67f w680 w681 w682 w683 w684 w685 w686 w687 w688 w689 w68a" ID="s56"/>
+      <tc:sentence tokenIDs="w68b w68c w68d w68e w68f w690 w691 w692 w693 w694 w695 w696 w697 w698 w699 w69a w69b w69c w69d w69e w69f w6a0 w6a1" ID="s57"/>
+      <tc:sentence tokenIDs="w6a2 w6a3 w6a4 w6a5 w6a6 w6a7 w6a8 w6a9 w6aa w6ab w6ac w6ad w6ae w6af w6b0" ID="s58"/>
+      <tc:sentence tokenIDs="w6b1 w6b2 w6b3 w6b4 w6b5 w6b6 w6b7 w6b8 w6b9 w6ba w6bb w6bc w6bd w6be w6bf w6c0 w6c1 w6c2 w6c3 w6c4 w6c5 w6c6 w6c7 w6c8 w6c9" ID="s59"/>
+      <tc:sentence tokenIDs="w6ca w6cb w6cc w6cd w6ce w6cf w6d0 w6d1 w6d2 w6d3 w6d4 w6d5 w6d6 w6d7 w6d8 w6d9 w6da w6db w6dc w6dd w6de w6df w6e0 w6e1 w6e2 w6e3 w6e4 w6e5" ID="s5a"/>
+      <tc:sentence tokenIDs="w6e6 w6e7 w6e8 w6e9 w6ea w6eb w6ec w6ed w6ee w6ef w6f0" ID="s5b"/>
+      <tc:sentence tokenIDs="w6f1 w6f2 w6f3 w6f4 w6f5 w6f6 w6f7 w6f8 w6f9 w6fa w6fb w6fc w6fd w6fe w6ff w700 w701 w702 w703 w704 w705" ID="s5c"/>
+      <tc:sentence tokenIDs="w706 w707 w708 w709 w70a w70b w70c w70d w70e" ID="s5d"/>
+      <tc:sentence tokenIDs="w70f w710 w711 w712 w713 w714 w715 w716 w717 w718 w719 w71a w71b w71c w71d w71e w71f w720 w721 w722 w723 w724 w725 w726 w727 w728 w729 w72a w72b w72c" ID="s5e"/>
+      <tc:sentence tokenIDs="w72d w72e w72f w730 w731 w732 w733 w734 w735 w736 w737 w738 w739 w73a w73b w73c w73d w73e w73f w740 w741 w742 w743 w744 w745 w746 w747 w748 w749 w74a w74b w74c w74d w74e w74f w750 w751 w752 w753 w754 w755 w756 w757 w758 w759 w75a w75b w75c w75d w75e w75f w760 w761 w762 w763 w764 w765 w766 w767 w768 w769 w76a w76b w76c w76d w76e w76f w770 w771 w772 w773 w774 w775 w776 w777 w778 w779 w77a w77b w77c w77d w77e w77f w780 w781 w782 w783 w784 w785 w786 w787 w788 w789 w78a w78b w78c w78d w78e w78f w790 w791 w792 w793 w794 w795 w796 w797 w798 w799 w79a w79b w79c w79d w79e w79f w7a0 w7a1 w7a2 w7a3 w7a4 w7a5 w7a6 w7a7 w7a8 w7a9 w7aa w7ab w7ac w7ad w7ae w7af w7b0 w7b1 w7b2 w7b3 w7b4 w7b5 w7b6 w7b7 w7b8 w7b9 w7ba w7bb w7bc w7bd w7be w7bf w7c0 w7c1 w7c2 w7c3 w7c4 w7c5 w7c6 w7c7 w7c8 w7c9 w7ca w7cb w7cc w7cd w7ce w7cf w7d0 w7d1 w7d2 w7d3 w7d4 w7d5 w7d6 w7d7 w7d8 w7d9 w7da w7db" ID="s5f"/>
+      <tc:sentence tokenIDs="w7dc w7dd w7de w7df w7e0 w7e1 w7e2 w7e3 w7e4 w7e5 w7e6 w7e7 w7e8 w7e9 w7ea w7eb w7ec" ID="s60"/>
+      <tc:sentence tokenIDs="w7ed w7ee w7ef w7f0" ID="s61"/>
+    </tc:sentences>
+    <tc:namedEntities xmlns:tc="http://www.dspin.de/data/textcorpus" type="tuebadz8">
+      <tc:entity class="ORG" tokenIDs="wa wb"/>
+      <tc:entity class="PER" tokenIDs="w2e w2f"/>
+      <tc:entity class="GPE" tokenIDs="w31"/>
+      <tc:entity class="OTH" tokenIDs="w79 w7a w7b"/>
+      <tc:entity class="GPE" tokenIDs="wb8"/>
+      <tc:entity class="GPE" tokenIDs="wed"/>
+      <tc:entity class="GPE" tokenIDs="w125"/>
+      <tc:entity class="GPE" tokenIDs="w127"/>
+      <tc:entity class="ORG" tokenIDs="w14f w150"/>
+      <tc:entity class="ORG" tokenIDs="w154 w155 w156"/>
+      <tc:entity class="PER" tokenIDs="w179 w17a"/>
+      <tc:entity class="PER" tokenIDs="w17c w17d"/>
+      <tc:entity class="GPE" tokenIDs="w180"/>
+      <tc:entity class="PER" tokenIDs="w1b5"/>
+      <tc:entity class="PER" tokenIDs="w1b7"/>
+      <tc:entity class="PER" tokenIDs="w241"/>
+      <tc:entity class="PER" tokenIDs="w27d"/>
+      <tc:entity class="OTH" tokenIDs="w298"/>
+      <tc:entity class="OTH" tokenIDs="w2a4 w2a5"/>
+      <tc:entity class="PER" tokenIDs="w2d7"/>
+      <tc:entity class="PER" tokenIDs="w331"/>
+      <tc:entity class="PER" tokenIDs="w333"/>
+      <tc:entity class="PER" tokenIDs="w389"/>
+      <tc:entity class="ORG" tokenIDs="w39a"/>
+      <tc:entity class="PER" tokenIDs="w3ed"/>
+      <tc:entity class="PER" tokenIDs="w43b"/>
+      <tc:entity class="OTH" tokenIDs="w46c"/>
+      <tc:entity class="PER" tokenIDs="w47f w480"/>
+      <tc:entity class="OTH" tokenIDs="w485 w486"/>
+      <tc:entity class="PER" tokenIDs="w498"/>
+      <tc:entity class="PER" tokenIDs="w49a"/>
+      <tc:entity class="OTH" tokenIDs="w500"/>
+      <tc:entity class="PER" tokenIDs="w592"/>
+      <tc:entity class="ORG" tokenIDs="w669"/>
+      <tc:entity class="OTH" tokenIDs="w6d4 w6d5"/>
+      <tc:entity class="PER" tokenIDs="w6e6 w6e7 w6e8"/>
+      <tc:entity class="PER" tokenIDs="w6ea"/>
+      <tc:entity class="PER" tokenIDs="w6ec"/>
+      <tc:entity class="OTH" tokenIDs="w6f7 w6f8"/>
+      <tc:entity class="GPE" tokenIDs="w6fa"/>
+      <tc:entity class="PER" tokenIDs="w706 w707"/>
+      <tc:entity class="PER" tokenIDs="w709 w70a"/>
+      <tc:entity class="OTH" tokenIDs="w714 w715 w716 w717 w718"/>
+      <tc:entity class="OTH" tokenIDs="w71c w71d w71e w71f w720 w721 w722"/>
+      <tc:entity class="PER" tokenIDs="w72f"/>
+      <tc:entity class="PER" tokenIDs="w741 w742"/>
+      <tc:entity class="GPE" tokenIDs="w744"/>
+      <tc:entity class="ORG" tokenIDs="w759 w75a"/>
+      <tc:entity class="PER" tokenIDs="w75e w75f"/>
+      <tc:entity class="PER" tokenIDs="w768 w769"/>
+      <tc:entity class="OTH" tokenIDs="w77e w77f w780 w781 w782"/>
+      <tc:entity class="ORG" tokenIDs="w790 w791"/>
+      <tc:entity class="GPE" tokenIDs="w79a"/>
+      <tc:entity class="PER" tokenIDs="w7a1 w7a2"/>
+      <tc:entity class="OTH" tokenIDs="w7a4 w7a5"/>
+      <tc:entity class="PER" tokenIDs="w7a8 w7a9"/>
+      <tc:entity class="PER" tokenIDs="w7bb w7bc"/>
+      <tc:entity class="PER" tokenIDs="w7c3 w7c4"/>
+      <tc:entity class="PER" tokenIDs="w7c9 w7ca"/>
+      <tc:entity class="PER" tokenIDs="w7cc w7cd"/>
+      <tc:entity class="PER" tokenIDs="w7d4 w7d5"/>
+      <tc:entity class="OTH" tokenIDs="w7d7 w7d8 w7d9 w7da"/>
+      <tc:entity class="PER" tokenIDs="w7dc w7dd"/>
+      <tc:entity class="PER" tokenIDs="w7e7 w7e8"/>
+      <tc:entity class="PER" tokenIDs="w7ea w7eb"/>
+    </tc:namedEntities>
+  </TextCorpus>
+</D-Spin>

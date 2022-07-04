@@ -1,0 +1,3206 @@
+<?xml version='1.0' encoding='UTF-8'?><D-Spin xmlns="http://www.dspin.de/data" version="5">
+  <MetaData xmlns="http://www.dspin.de/data/metadata"><Services><cmd:CMD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cmd="http://www.clarin.eu/cmd/1" CMDVersion="1.2" xsi:schemaLocation="http://www.clarin.eu/cmd/1 http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_1320657629623/xsd"><cmd:Resources><cmd:ResourceProxyList/><cmd:JournalFileProxyList/><cmd:ResourceRelationList/></cmd:Resources><cmd:Components><cmd:WebServiceToolChain><cmd:GeneralInfo><cmd:Descriptions><cmd:Description/></cmd:Descriptions><cmd:ResourceName>Custom chain</cmd:ResourceName><cmd:ResourceClass>Toolchain</cmd:ResourceClass></cmd:GeneralInfo><cmd:Toolchain><cmd:ToolInChain><cmd:PID>https://hdl.handle.net/21.11120/0000-0008-319A-3</cmd:PID><cmd:Parameter value="de" name="lang"/></cmd:ToolInChain><cmd:ToolInChain><cmd:PID>https://hdl.handle.net/21.11120/0000-0008-3183-C</cmd:PID><cmd:Parameter value="5" name="version"/></cmd:ToolInChain><cmd:ToolInChain><cmd:PID>http://hdl.handle.net/11022/0000-0007-DA29-6</cmd:PID><cmd:Parameter value="de" name="lang"/><cmd:Parameter value="5" name="version"/></cmd:ToolInChain></cmd:Toolchain></cmd:WebServiceToolChain></cmd:Components></cmd:CMD></Services></MetaData>
+  <TextCorpus xmlns="http://www.dspin.de/data/textcorpus" lang="de">
+    <textSource type="application/tei+xml;format-variant=tei-dta;tokenized=0">&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="vortraege-036">
+&lt;teiHeader>
+&lt;fileDesc>
+&lt;titleStmt>
+&lt;title>Judaica recherchieren – Unterstützung bei der Realisierung forschungsspezifischer Suchlösungen durch die generische Suche von DARIAH-DE&lt;/title>
+&lt;author>
+&lt;name>
+&lt;surname>Gradl&lt;/surname>
+&lt;forename>Tobias&lt;/forename>
+&lt;/name>
+&lt;affiliation>Universität Bamberg&lt;/affiliation>
+&lt;email>tobias.gradl@uni-bamberg.de&lt;/email>
+&lt;/author>
+&lt;author>
+&lt;name>
+&lt;surname>Lordick&lt;/surname>
+&lt;forename>Harald&lt;/forename>
+&lt;/name>
+&lt;affiliation>Salomon Ludwig Steinheim-Institut für deutsch-jüdische Geschichte&lt;/affiliation>
+&lt;email>lor@steinheim-institut.org&lt;/email>
+&lt;/author>
+&lt;author>
+&lt;name>
+&lt;surname>Henrich&lt;/surname>
+&lt;forename>Andreas&lt;/forename>
+&lt;/name>
+&lt;affiliation>Universität Bamberg&lt;/affiliation>
+&lt;email>andreas.henrich@uni-bamberg.de&lt;/email>
+&lt;/author>
+&lt;/titleStmt>
+&lt;editionStmt>
+&lt;edition>
+&lt;date>2015-10-09T10:15:08&lt;/date>
+&lt;/edition>
+&lt;/editionStmt>
+&lt;publicationStmt>
+&lt;publisher>Elisabeth Burr, Universität Leipzig&lt;/publisher>
+&lt;address>
+&lt;addrLine>Beethovenstr. 15&lt;/addrLine>
+&lt;addrLine>04107 Leipzig&lt;/addrLine>
+&lt;addrLine>Deutschland&lt;/addrLine>
+&lt;addrLine>Elisabeth Burr&lt;/addrLine>
+&lt;/address>
+&lt;/publicationStmt>
+&lt;sourceDesc>
+&lt;p>Converted from an OASIS Open Document&lt;/p>
+&lt;/sourceDesc>
+&lt;/fileDesc>
+&lt;encodingDesc>
+&lt;appInfo>
+&lt;application ident="DHCONVALIDATOR" version="1.14">
+&lt;label>DHConvalidator&lt;/label>
+&lt;/application>
+&lt;/appInfo>
+&lt;/encodingDesc>
+&lt;profileDesc>
+&lt;textClass>
+&lt;keywords scheme="ConfTool" n="category">
+&lt;term>Vortrag&lt;/term>
+&lt;/keywords>
+&lt;keywords scheme="ConfTool" n="subcategory">
+&lt;term>&lt;/term>
+&lt;/keywords>
+&lt;keywords scheme="ConfTool" n="keywords">
+&lt;term>Judaica Suchmaschine&lt;/term>
+&lt;term>generische Suche&lt;/term>
+&lt;term>forschungsorienterte Datenföderation&lt;/term>
+&lt;term>DARIAH-DE&lt;/term>
+&lt;/keywords>
+&lt;keywords scheme="ConfTool" n="topics">
+&lt;term>Umwandlung&lt;/term>
+&lt;term>Gestaltung&lt;/term>
+&lt;term>Programmierung&lt;/term>
+&lt;term>Kontextsetzung&lt;/term>
+&lt;term>Veröffentlichung&lt;/term>
+&lt;term>Identifizierung&lt;/term>
+&lt;term>Kollaboration&lt;/term>
+&lt;term>Webentwicklung&lt;/term>
+&lt;term>Organisation&lt;/term>
+&lt;term>Daten&lt;/term>
+&lt;term>Infrastruktur&lt;/term>
+&lt;term>Metadaten&lt;/term>
+&lt;term>Projekte&lt;/term>
+&lt;term>Forschung&lt;/term>
+&lt;term>Forschungsergebnis&lt;/term>
+&lt;term>Software&lt;/term>
+&lt;/keywords>
+&lt;/textClass>
+&lt;/profileDesc>
+&lt;/teiHeader>
+&lt;text>
+&lt;body>
+&lt;div type="div1" rend="DH-Heading1">
+&lt;head>Einleitung&lt;/head>
+&lt;p>Jenseits der standardisierten und institutionalisierten Bereitstellung von
+
+          Forschungsquellen und -literatur bedarf es weiterführender Recherchekonzepte und
+
+          Anwendungen, die Geisteswissenschaftler_innen mit ihren spezifischen Forschungen
+
+          und den &lt;hi rend="italic">für sie verfügbaren und relevanten Daten&lt;/hi> so weit
+
+          wie möglich entgegenkommen. Integrative Suchlösungen wie &lt;ref
+
+          target="http://oaister.worldcat.org/">OAIster&lt;/ref> und &lt;ref
+
+          target="http://www.europeana.eu/portal/">Europeana&lt;/ref> bieten Zugriff auf
+
+          eine Vielzahl von Kollektionen und unterstützen breite, fachunabhängige
+
+          Suchanfragen im strukturellen Rahmen integrativer Schemata (Hagedorn 2013;
+
+          Peroni et al. 2013). Der semantisch tiefe und forschungspezifische Zugang zu
+
+          Ressourcen steht bei solchen Suchportalen dabei zumeist nicht im Fokus. Aus
+
+          diesem Grund stehen den Suchportalen spezifische Lösungen gegenüber, die
+
+          speziell an die Bedürfnisse des einzelnen Forschers und seine aktuellen
+
+          Fragestellungen angepasst sind. Ein Beispiel bildet hierbei die am
+
+          Steinheim-Institut entwickelte &lt;ref target="http://steinheim-institut.de/vf/"
+>Judaica-Suchmaschine&lt;/ref> (Lordick 2013). &lt;lb/>
+&lt;lb/>In diesem Beitrag stellen wir mit der generischen Suche von DARIAH-DE eine
+
+          weitere breite Suchlösung vor, welche jedoch auch Funktionen spezifischer
+
+          Ansätze realisiert, wie etwa die individuelle Aggregation und Filterung von
+
+          Sammlungen, sowie differenzierte Möglichkeiten der Zugriffskontrolle. Auf Basis
+
+          des Anwendungsfalls der Judaica-Suchmaschine zeigen wir exemplarisch die
+
+          Unterstützung individueller Suchbedürfnisse im Rahmen der generischen Suche und
+
+          verdeutlichen dabei, wie neue, fachspezifische Suchen verfügbar gemacht werden
+
+          können - ohne dass die hierfür notwendigen, technischen Aspekte durch den
+
+          einzelnen Forscher umzusetzen sind. &lt;/p>
+&lt;/div>
+&lt;div type="div1" rend="DH-Heading1">
+&lt;head>Die Judaica-Suchmaschine als Anwendungsfall&lt;/head>
+&lt;p>Als Use-Case dient die langjährige Auseinandersetzung mit den Möglichkeiten und Grenzen einer übergreifenden
+&lt;hi rend="italic">Judaica-Suchmaschine&lt;/hi> im Steinheim-Institut. Sie war ursprünglich als Allegro-C-Katalog gestartet, der verschiedene institutsinterne Datenbanken in eine gemeinsame Datenbank mit dem Ziel der effizienteren fachspezifischen Recherche zusammenführte. Bald darauf wurde begonnen, auch passende externe Datenangebote einzubinden. Die Suchmaschine enthält zur Zeit ca. 500.000 Datensätze aus 20 filterbaren Katalogen, ist auch für mobile Geräte geeignet (Lordick 2014) und XML-basiert.
+&lt;/p>
+&lt;figure>
+&lt;graphic url="036-100002010000043E000002EE9AD5DBCE.png"/>
+&lt;/figure>Über Standardschnittstellen lassen sich beispielsweise integrieren: die Freimann-Sammlung mit 8.772 Titeln (Teil von Judaica Frankfurt), CompactMemory 46.637 (seit 2014 ebenfalls Judaica Frankfurt), Center for Jewish History (New York) 65.667 oder Jewish Theological Seminary 9.257. Die ca. 15.000 digitalisierten Seiten der Sammlung Jüdische Zeitschriften der NS-Zeit der Deutschen Nationalbibliothek sind zwar 2012 abgeschaltet worden. Die Suchmaschine enthält aber noch die 34.346 erschließenden Metadatensätzen dazu. Sie haben nun 'nur noch' bibliografischen Charakter, der um so wertvoller bleibt. Gleiches gilt für die Exilpresse digital: Deutsche Exilzeitschriften 1933–1945 mit nicht weniger als 231.548 Metadatensätzen.
+&lt;p>In diesen Kontext gehört auch der Ansatz, eigene Daten ebenfalls über etablierte
+
+            Standardformate und Protokolle anzubieten, um sie zur Nachnutzung zur Verfügung
+
+            zu stellen. So wurde ein OAI-PMH Testserver&lt;ref type="note" target="n01" n="1">1&lt;/ref> eingerichtet, der
+
+            digitale Sammlungen des Steinheim-Instituts zusammenführt:
+
+            Universal-Kirchenzeitung, Kalonymos, Deutsch-jüdische Publizistik. Ebenfalls
+
+            wurde das Verfahren der Bereitstellung mittels eines statischen
+
+            OAI-PMH-Repositorys
+
+            geprüft (&lt;ref target="https://dev2.dariah.eu/wiki/download/attachments/14651583/R3.3.1.pdf?version=1&amp;amp;modificationDate=1366904278298&amp;amp;api=v2">Beer et al. 2013&lt;/ref>). Dieser Weg ist empfehlenswert, hinsichtlich
+
+            des erforderlichen technischen Knowhows jedoch durchaus anspruchsvoll, erfordert
+
+            (Zugriff auf) Infrastrukturkomponenten und Serverressourcen und eignet sich
+
+            insbesondere für 'fertige', abgeschlossene Datensätze. &lt;/p>
+&lt;p>Viele digitale Quellen lassen sich jedoch unter den gegebenen Umständen gar nicht harvesten, etliche verfügbare fachlich interessante oder auch unentbehrliche Datensätze immerhin mittels ind ividueller Programmierung in die Suchmaschine einbinden: das jüngst erschienene Jüdische Adressbuch Berlin 1931, die NS-Liste der verbannten Bücher, das Kapitel Judentum der Rheinland-Pfälzischen Bibliografie oder die 10.600 Artikel der Kategorie Judentum in Europa der Wikipedia etwa. &lt;/p>
+&lt;/div>
+&lt;div type="div1" rend="DH-Heading1">
+&lt;head> Umsetzung im Rahmen der generischen Suche&lt;/head>
+&lt;p>Der Umgang mit technischen Problemen zählt nicht zu den typischen Aufgaben von Forschern kultur- und geisteswissenschaftlicher Disziplinen. Eine auf individuelle Bedürfnisse zugeschnittene Integration von Daten oder die Realisierung von Softwarekomponenten ist jedoch für die Umsetzung spezifischer Anwendungen wie der Judaica-Suchmaschine erforderlich. Um Lösungen für technische Probleme in nachhaltiger und für anschließende Forschungsprojekte wiederverwendbarer Form bereitzustellen, beinhalten derzeit laufende Initiativen wie DARIAH oder CLARIN häufig Arbeitspakete zur Umsetzung von Infrastrukturkomponenten.&lt;/p>
+&lt;p>Obwohl die &lt;ref target="http://search.de.dariah.eu/">generische Suche&lt;/ref> von
+
+            DARIAH-DE (Gradl 2011-2016) nicht als Infrastrukturkomponente, sondern als
+
+            eigenständiger Dienst entwickelt wurde, basiert auch das Konzept der generischen
+
+            Suche auf dem Ziel der Umsetzung wiederverwendbarer technischer Funktionalität
+
+            zur Integration, Verarbeitung und Analyse von Daten. Im Folgenden stellen wir
+
+            eine im Rahmen der generischen Suche implementierte Funktionalität vor, welche
+
+            es Forschern ermöglicht, spezifisch angepasste Suchlösungen zu generieren und
+
+            bereitzustellen - ohne die hierzu erforderlichen technischen Aspekte selbst
+
+            lösen zu müssen. &lt;/p>
+&lt;div type="div2" rend="DH-Heading2">
+&lt;head>Hintergrund des generischen Konzepts&lt;/head>
+&lt;p>Konzept und Implementierung der generischen Suche resultieren aus der
+
+                Zielsetzung der Realisierung einer kombinierten und flexibel anpassbar en
+
+                Breiten- und Tiefensuche (Gradl / Henrich 2014). Dabei wurde zum einen eine
+
+                universelle und einfache Möglichkeit (vgl. Abbildung) zur übergreifenden
+
+                Suche in einer Vielzahl digitaler Kollektionen eingerichtet, um Forscher bei
+
+                der Suche und Analyse relevanter und potenziell unbekannter Ressourcen und
+
+                Kollektionen zu unterstützen. Neben dieser disziplinunabhängigen
+
+                Breitensuche erlaubt die generische Suche auch eine kontextspezifische
+
+                Anpassung ─sowohl im Hinblick auf die Auswahl der zu durchsuchenden
+
+                Datenquellen, als auch auf das verwendete Schema für die Integration der in
+
+                diesen enthaltenen, zumeist heterogenen Ressourcen. Die so entstehende
+
+                Tiefensuche erlaubt eine differenziertere Analyse und Suche in einer
+
+                forschungsspezifisch begrenzten Datenbasis.&lt;/p>
+&lt;figure>
+&lt;graphic url="036-100002010000043E000002EEA4F396A4.png"/>
+&lt;/figure>
+&lt;p>Die flexible Anpassbarkeit der generischen Suche an übergreifende
+
+                  oder spezifische Fragestellungen wird dabei durch das in untenstehender
+
+                  Abbildung exemplarisch angedeutete Konzept der forschungsorientierten
+
+                  Föderation digitaler Kollektionen erreicht (Gradl / Henrich 2014; Gradl et
+
+                  al. 2014). &lt;/p>
+&lt;figure>
+&lt;graphic url="036-10000201000008B0000004280540861F.png"/>
+&lt;/figure>
+&lt;p>Anstelle der für übergreifende Integrationssysteme typischen Harmonisierung
+
+                    heterogener Daten (vgl. Batini et al. 1986; Lenzerini 2002) basiert die
+
+                    generische Suche wesentlich auf folgenden Annahmen:&lt;/p>
+&lt;list type="unordered">
+&lt;item>Durch die semantische Assoziation von Kollektionen und darin
+
+                        verwendeten Schemata durch fachwissenschaftliche Experten können
+
+                        integrative Sichten generiert werden, die den Anforderungen konkreter
+
+                        Forschungsfragen entsprechen. Dies wird insbesondere dadurch erreicht,
+
+                        dass nicht technisch motivierte Integrationsziele wie die
+
+                        Vollständigkeit und Korrektheit eines Integrationsschemas (Batini et al.
+
+                        1986) im Vordergrund stehen, sondern disziplinspezifische und auch
+
+                        konfliktäre Zusammenhänge modelliert werden können.&lt;/item>
+&lt;item>Kohärente Bereiche mit eng assozierten Schemata &lt;hi rend="italic"
+>S&lt;/hi> und Kollektionen werden in obiger Abbildung durch &lt;hi
+
+                          rend="italic">semantische Cluster&lt;/hi> widergespiegelt und bilden
+
+                          die Voraussetzung für spezifische Tiefensuchen. Für die übergreifende
+
+                          Breitensuche werden wichtige Schemata der einzelnen Cluster
+
+                          (repräsentiert als &lt;hi rend="italic">S3&lt;/hi>, &lt;hi rend="italic">S5&lt;/hi>
+
+                          und &lt;hi rend="italic">S8&lt;/hi>) mit generischen Schemata, wie z. B.
+
+                          Dublin Core - in der Abbildung symbolisiert durch &lt;hi rend="italic"
+>S10&lt;/hi> - assoziiert. &lt;/item>
+&lt;/list>
+&lt;p>Die besondere Eigenschaft des Föderationskonzepts besteht darin, dass Daten in ihrer ursprünglichen Form analysiert und indexiert werden. Erst zum Anfragezeitpunkt und in Abhängigkeit von der einer Anfrage zu Grunde liegenden Zusammenstellung von Kollektionen werden die Daten zusammengeführt und integriert.&lt;/p>
+&lt;/div>
+&lt;div type="div2" rend="DH-Heading2">
+&lt;head>Abbildung der Cluster in der generischen Suche&lt;/head>
+&lt;p>Die generische Suche beschreibt einen im Rahmen des DARIAH-DE Projektes
+
+                          entwickelten Dienst, welcher im Hinblick auf seine Datenbasis auf die
+
+                          Einträge der DARIAH-DE &lt;ref target="http://colreg.de.dariah.eu/">Collection
+
+                          Registry&lt;/ref> zurückgreift (Plutte et al. 2014) und registrierten
+
+                          Benutzern die Aufnahme weiterer Datenquellen erlaubt. Neben der Assoziation
+
+                          von Schemata als wesentlicher Teilaspekt (Gradl / Henrich 2014) bildet die
+
+                          Möglichkeit der Auswahl und Gruppierung relevanter Kollektionen im Rahmen
+
+                          der generischen Suche (als &lt;hi rend="italic">myCollections&lt;/hi>) die Basis
+
+                          für die Erstellung angepasster Suchlösungen. &lt;/p>
+&lt;figure>
+&lt;graphic url="036-100002010000043E000002EEC42DBB3D.png"/>
+&lt;/figure> Der Bildschirmausschnitt zeigt exemplarisch drei solcher myCollections und verdeutlicht die derzeit implementierte Funktionalität:
+&lt;list type="unordered">
+&lt;item>Einträge von myCollections können durch authentifizierte Anwender angelegt werden und definieren eine Zusammenstellung einzelner Kollektionen.&lt;/item>
+&lt;item>Diese myCollections erlauben eine Schnellauswahl von Kollektionen bei
+
+                              der Ausführung von Suchanfragen - sowohl im Rahmen des
+
+                              Benutzerinterfaces, als auch in Form der REST-basierten
+
+                              Schnittstelle.&lt;/item>
+&lt;item>Möchte der Benutzer eine myCollection (z. B. im Rahmen eines gemeinsamen Forschungsinteresses) teilen, so können Freigaben für weitere Benutzer oder DARIAH Gruppen erteilt werden.&lt;/item>
+&lt;/list>
+&lt;/div>
+&lt;div type="div2" rend="DH-Heading2">
+&lt;head>Spezifischer Zugang in Form einer
+&lt;hi rend="italic">Branded Search&lt;/hi>
+&lt;/head>
+&lt;p>Anknüpfend an den eingeführten Anwendungsfall der Judaica-Suchmaschine wird
+
+                              der Zusammenhang zwischen der generischen Suche von DARIAH-DE und
+
+                              forschungsspezifischen Suchlösungen abgebildet durch die Idee der
+
+                              benutzerdefinierten Zusammenstellung von Kollektionen: Wird eine
+
+                              myCollection - wie in der Abbildung unten dargestellt - als Branded Search
+
+                              ausgezeichnet, so wird dadurch eine eigene Suchoberfläche veröffentlicht,
+
+                              welche sowohl optisch als auch inhaltlich an spezifische Bedürfnisse
+
+                              angepasst und von der eigentlichen generischen Suche abgegrenzt ist.&lt;/p>
+&lt;figure>
+&lt;graphic url="036-100002010000044C000002EE9714DB92.png"/>
+&lt;/figure>
+&lt;p>
+
+                                Die folgenden Bildschirmausschnitte verdeutlichen insbesondere die
+
+                                  optische Abgrenzung durch konfigurierbare Farbgebung und die Verwendung von
+
+                                  Such- und Organisationslogos. Insbesondere der Vergleich der Wordclouds der
+
+                                  Startseiten von &lt;ref target="http://search.de.dariah.eu/">generischer Suche&lt;/ref> und &lt;ref target="target="
+>Judaica-Suchmaschine&lt;/ref> (Gradl / Lordick 2015-2016) deuten jedoch
+
+                                  die jeweils unterschiedliche, zu Grunde liegende Datenbasis an: Die in einer
+
+                                  Branded Search angebotenen Kollektionen spiegeln bei sämtlichen Such-,
+
+                                  Analyse- und Visualisierungaufgaben die von den Erstellern der Suche
+
+                                  getroffene Kollektionsauswahl wider. &lt;/p>
+&lt;figure>
+&lt;graphic url="036-100002010000043E000002EE5B78B67A.png"/>
+&lt;/figure>
+&lt;figure>
+&lt;graphic url="036-100002010000043E000002EECFFEDEAA.png"/>
+&lt;/figure>
+&lt;p>Im Fall der Veröffentlichung einer Branded Search bleibt diese auch als zugreifbare myCollection für berechtigte Benutzer erhalten und kann im Hinblick auf die Kollektionsauswahl und die Assoziation der Schemata verändert werden ─mit unmittelbaren Auswirkungen auf die entsprechende Branded Search. Von technischen Implementierungen an der Basis der generischen Suche, z. B. der Anbindung weiterer Quellenarten wie Wikipedia können schließlich sämtliche eingerichteten Branded Searches profitieren, sofern dies durch die jeweiligen Forscher gewünscht wird.&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;div type="div1" rend="DH-Heading1">
+&lt;head>Ausblick&lt;/head>
+&lt;p>Ein ausgeprägt generischer Ansatz muss kein Gegensatz zu den in den Geisteswissenschaften vorherrschenden individuellen Fragestellungen und Forschungsansätzen sein. Indem sie entsprechende Freiheitsgrade, kreatives und kollaboratives Datenmanagement anbietet, erlaubt die generische Suche ihren Nutzern die Erstellung eigener, jeweils individuell ausgelegter Suchmaschinen. &lt;/p>
+&lt;p>Es ist das Knowhow der Forschenden, das die Relevanz der Daten, die sie zusammenstellen, filtern, teilen, auch ad-hoc zum Zwecke der Recherche bereitstellen, ausmacht. Ein solches Framework, verbunden mit der fachspezifischen Kenntnis der Daten ist eine gute Basis für überraschende Funde und das Aufspüren unerwarteter Zusammenhänge. &lt;/p>
+&lt;/div>
+&lt;/body>
+&lt;back>
+&lt;div type="Notes">
+&lt;note xml:id="n01" n="1"> am Jülich Supercomputing Center, DARIAH-DE.&lt;/note>
+&lt;/div>
+&lt;div type="bibliogr">
+&lt;listBibl>
+&lt;head>Bibliographie&lt;/head>
+&lt;bibl>&lt;hi rend="bold">Batini, Carlo / Lenzerini, Maurizio / Navathe, Shamkant
+
+                                    Bhalchandra&lt;/hi> (1986): "A comparative analysis of methodologies for
+
+                                    database schema integration", in: &lt;hi rend="italic">ACM Computing
+
+                                    Surveys&lt;/hi> 18, 4: 323–364.&lt;/bibl>
+&lt;bibl>&lt;hi rend="bold">Beer, Nikolaos / Herold, Kristin / Kolbmann, Wibke /
+
+                                      Kollatz, Thomas / Romanello, Matteo / Rose, Sebastian / Walkowski,
+
+                                      Niels-Oliver&lt;/hi> (2013): &lt;hi rend="italic">Recommendations for
+
+                                      Interdisciplinary Interoperability (R 3.3.1)&lt;/hi>. DARIAH-DE report &lt;ref
+
+                                      target="https://dev2.dariah.eu/wiki/download/attachments/14651583/R3.3.1.pdf?
+
+                                      version=1&amp;amp;modificationDate=1366904278298&amp;amp;api=v2"
+>https://dev2.dariah.eu/wiki/download/attachments/14651583/R3.3.1.pdf?
+
+                                      version=1&amp;amp;modificationDate=1366904278298 &amp;amp;api=v2&lt;/ref> [letzter
+
+                                      Zugriff 07. Februar 2016].&lt;/bibl>
+&lt;bibl>&lt;hi rend="bold">Europeana Foundation&lt;/hi> (2008-2015): &lt;hi rend="italic"
+>Europeana Collections&lt;/hi>. Den Haag &lt;ref
+
+                                      target="http://www.europeana.eu/portal/"
+>http://www.europeana.eu/portal/&lt;/ref> [letzter Zugriff 07. Februar
+
+                                      2016].&lt;/bibl>
+&lt;bibl>&lt;hi rend="bold">Gradl, Tobias&lt;/hi> (2011-2016): &lt;hi rend="italic"
+>DARIAH-DE Generic Search&lt;/hi>
+&lt;ref target="http://search.de.dariah.eu">http://search.de.dariah.eu&lt;/ref>
+
+                                      [letzter Zugriff 07. Februar 2016].&lt;/bibl>
+&lt;bibl>&lt;hi rend="bold">Gradl, Tobias / Henrich, Andreas&lt;/hi> (2014): "A novel
+
+                                      approach for a reusable federation of research data within the arts and
+
+                                      humanities", in: &lt;hi rend="italic">Digital Humanities 2014&lt;/hi>. Book of
+
+                                      Abstracts382–384 &lt;ref target="http://dh2014.org/program/abstracts/"
+>http://dh2014.org/program/abstracts/&lt;/ref> [letzter Zugriff 09. Oktober
+
+                                      2015]. &lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Gradl, Tobias / Henrich, Andreas / Plutte, Christoph&lt;/hi>
+
+                                        (2015): "Heterogene Daten in den Digital Humanities: Eine Architektur zur
+
+                                        forschungsorientierten Förderation von Kollektionen", in: Constanze Baum /
+
+                                        Thomas Stäcker (eds.): &lt;hi rend="italic">Grenzen und Möglichkeiten der
+
+                                        Digital Humanities&lt;/hi>. Sonderband der Zeitschrift für digitale
+
+                                        Geisteswissenschaften 1 &lt;ref target="http://dx.doi.org/10.17175/sb001_020"
+>http://dx.doi.org/10.17175/sb001_020&lt;/ref> [letzter Zugriff 09. Oktober
+
+                                        2015]. &lt;/bibl>
+&lt;bibl>&lt;hi rend="bold">Gradl, Tobias / Lordick, Harald&lt;/hi> (2015-2016): &lt;hi
+
+                                        rend="italic">Judaica Search&lt;/hi>. Branded Search in the DARIAH-DE
+
+                                        Generic Search &lt;ref target="http://judaica.search.de.dariah.eu"
+>http://judaica.search.de.dariah.eu&lt;/ref> [letzter Zugriff 07. Februar
+
+                                        2016].&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Hagedorn, Kat &lt;/hi>(2003): "OAIster: a 'no dead ends' OAI
+
+                                          service provider", in: &lt;hi rend="italic">Library Hi Tech&lt;/hi> 21, 2:
+
+                                          170–181.&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Henrich, Andreas / Gradl, Tobias&lt;/hi> (2013): "DARIAH(-DE):
+
+                                            Digital research infrastructure for the arts and humanities - concepts and
+
+                                            perspectives", in: &lt;hi rend="italic">International Journal of Humanities and
+
+                                            Arts Computing&lt;/hi> 7: 47–58.&lt;/bibl>
+&lt;bibl>&lt;hi rend="bold">Lenzerini, Maurizio &lt;/hi>(2002): "Data integration: a
+
+                                            theoretical perspective", in: &lt;hi rend="italic">PODS'02 - Proceedings of the
+
+                                            twenty-first ACM SIGMOD-SIGACT-SIGART symposium on Principles of
+
+                                            database systems &lt;/hi>: 233-246 &lt;ref
+
+                                            target="http://dl.acm.org/citation.cfm?doid=543613.543644"
+>http://dl.acm.org/citation.cfm?doid=543613.543644&lt;/ref> [letzter
+
+                                            Zugriff 09. Oktober 2015]. &lt;/bibl>
+&lt;bibl>&lt;hi rend="bold">Lordick, Harald&lt;/hi> (2010-2016): &lt;hi rend="italic">Vieles
+
+                                            finden&lt;/hi>. Die Judaica-Suchmaschine im Steinheim-Institut. Salomon
+
+                                            Ludwig Steinheim-Institut für deutsch-jüdische Geschichte an der Universität
+
+                                            Duisburg-Essen &lt;ref target="http://steinheim-institut.de/vf/"
+>http://steinheim-institut.de/vf/&lt;/ref> [letzter Zugriff 07. Februar
+
+                                            2016].&lt;/bibl>
+&lt;bibl>&lt;hi rend="bold">Lordick, Harald&lt;/hi> (2013): "Die judaica-bibliothek im
+
+                                            web. ganz real oder noch immer virtuell?", in: &lt;hi rend="italic"
+>Kalonymos&lt;/hi>1: 12–14 &lt;ref
+
+                                            target="http://www.steinheim-institut.de/edocs/kalonymos/kalonymos_2013_1.pdf"
+>http://www.steinheim-institut.de/edocs/kalonymos/kalonymos_2013_1.pdf&lt;/ref>
+
+                                            [letzter Zugriff 09. Oktober 2015]. &lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Lordick, Harald &lt;/hi>(2014): "Jüdische Geschichte (mobil)
+      recherchieren", in: &lt;hi rend="italic">Kalonymos&lt;/hi>3: 13 &lt;ref
+
+                                              target="http://www.steinheim-institut.de/edocs/kalonymos/kalonymos_2014_3.pdf"
+>http://www.steinheim-institut.de/edocs/kalonymos/kalonymos_2014_3.pdf&lt;/ref>
+
+                                              [letzter Zugriff 9. Oktober 2015].&lt;/bibl>
+&lt;bibl>&lt;hi rend="bold">OAIster&lt;/hi> (2001-2016): &lt;hi rend="italic">OAIster&lt;/hi>.
+
+                                              OCLC WorldCat.org Services. Dublin / Ohio: OCLC Online Computer Library
+
+                                              Center &lt;ref target="http://oaister.worldcat.org/"
+>http://oaister.worldcat.org/&lt;/ref> [letzter Zugriff 07. Februar
+
+                                              2016].&lt;/bibl>
+&lt;bibl>&lt;hi rend="bold">Peroni, Silvio / Tomasi, Francesca / Vitali, Fabio&lt;/hi>
+
+                                              (2013): "Reflecting on the europeana data model", in: Agosti, Maristella /
+
+                                              Esposito, Floriana / Ferilli, Stefano / Ferro, Nicola (eds.): &lt;hi
+
+                                              rend="italic">Digital Libraries and Archives&lt;/hi>. Berlin / Heidelberg:
+
+                                              Springer 228–240 &lt;ref
+
+                                              target="http://link.springer.com/chapter/10.1007%2F978-3-642-35834-0_23"
+>http://link.springer.com/chapter/10.1007%2F978-3-642-35834-0_23&lt;/ref>
+
+                                              [letzter Zugriff 09. Oktober 2015].&lt;/bibl>
+&lt;bibl>&lt;hi rend="bold">Plutte, Christoph&lt;/hi> (2011-2014): &lt;hi rend="italic"
+>DARIAH-DE Collection Registry&lt;/hi>. Initial Prototype. &lt;ref
+
+                                              target="http://colreg.de.dariah.eu">http://colreg.de.dariah.eu&lt;/ref>
+
+                                              [letzter Zugriff 07. Februar 2016].&lt;/bibl>
+&lt;/listBibl>
+&lt;/div>
+&lt;/back>
+&lt;/text>
+&lt;/TEI>
+    </textSource>
+    <text>
+
+
+Jenseits der standardisierten und institutionalisierten Bereitstellung von           Forschungsquellen und -literatur bedarf es weiterführender Recherchekonzepte und           Anwendungen, die Geisteswissenschaftler_innen mit ihren spezifischen Forschungen           und den für sie verfügbaren und relevanten Daten so weit           wie möglich entgegenkommen. Integrative Suchlösungen wie 
+OAIster
+ und 
+Europeana
+ bieten Zugriff auf           eine Vielzahl von Kollektionen und unterstützen breite, fachunabhängige           Suchanfragen im strukturellen Rahmen integrativer Schemata (Hagedorn 2013;           Peroni et al. 2013). Der semantisch tiefe und forschungspezifische Zugang zu           Ressourcen steht bei solchen Suchportalen dabei zumeist nicht im Fokus. Aus           diesem Grund stehen den Suchportalen spezifische Lösungen gegenüber, die           speziell an die Bedürfnisse des einzelnen Forschers und seine aktuellen           Fragestellungen angepasst sind. Ein Beispiel bildet hierbei die am           Steinheim-Institut entwickelte 
+Judaica-Suchmaschine
+ (Lordick 2013). 
+
+In diesem Beitrag stellen wir mit der generischen Suche von DARIAH-DE eine           weitere breite Suchlösung vor, welche jedoch auch Funktionen spezifischer           Ansätze realisiert, wie etwa die individuelle Aggregation und Filterung von           Sammlungen, sowie differenzierte Möglichkeiten der Zugriffskontrolle. Auf Basis           des Anwendungsfalls der Judaica-Suchmaschine zeigen wir exemplarisch die           Unterstützung individueller Suchbedürfnisse im Rahmen der generischen Suche und           verdeutlichen dabei, wie neue, fachspezifische Suchen verfügbar gemacht werden           können - ohne dass die hierfür notwendigen, technischen Aspekte durch den           einzelnen Forscher umzusetzen sind. 
+
+
+    
+
+Als Use-Case dient die langjährige Auseinandersetzung mit den Möglichkeiten und Grenzen einer übergreifenden  Judaica-Suchmaschine im Steinheim-Institut. Sie war ursprünglich als Allegro-C-Katalog gestartet, der verschiedene institutsinterne Datenbanken in eine gemeinsame Datenbank mit dem Ziel der effizienteren fachspezifischen Recherche zusammenführte. Bald darauf wurde begonnen, auch passende externe Datenangebote einzubinden. Die Suchmaschine enthält zur Zeit ca. 500.000 Datensätze aus 20 filterbaren Katalogen, ist auch für mobile Geräte geeignet (Lordick 2014) und XML-basiert.  
+
+  Über Standardschnittstellen lassen sich beispielsweise integrieren: die Freimann-Sammlung mit 8.772 Titeln (Teil von Judaica Frankfurt), CompactMemory 46.637 (seit 2014 ebenfalls Judaica Frankfurt), Center for Jewish History (New York) 65.667 oder Jewish Theological Seminary 9.257. Die ca. 15.000 digitalisierten Seiten der Sammlung Jüdische Zeitschriften der NS-Zeit der Deutschen Nationalbibliothek sind zwar 2012 abgeschaltet worden. Die Suchmaschine enthält aber noch die 34.346 erschließenden Metadatensätzen dazu. Sie haben nun 'nur noch' bibliografischen Charakter, der um so wertvoller bleibt. Gleiches gilt für die Exilpresse digital: Deutsche Exilzeitschriften 1933–1945 mit nicht weniger als 231.548 Metadatensätzen.  
+
+In diesen Kontext gehört auch der Ansatz, eigene Daten ebenfalls über etablierte             Standardformate und Protokolle anzubieten, um sie zur Nachnutzung zur Verfügung             zu stellen. So wurde ein OAI-PMH Testserver
+1
+ eingerichtet, der             digitale Sammlungen des Steinheim-Instituts zusammenführt:             Universal-Kirchenzeitung, Kalonymos, Deutsch-jüdische Publizistik. Ebenfalls             wurde das Verfahren der Bereitstellung mittels eines statischen             OAI-PMH-Repositorys             geprüft (
+Beer et al. 2013
+). Dieser Weg ist empfehlenswert, hinsichtlich             des erforderlichen technischen Knowhows jedoch durchaus anspruchsvoll, erfordert             (Zugriff auf) Infrastrukturkomponenten und Serverressourcen und eignet sich             insbesondere für 'fertige', abgeschlossene Datensätze. 
+
+  
+
+Viele digitale Quellen lassen sich jedoch unter den gegebenen Umständen gar nicht harvesten, etliche verfügbare fachlich interessante oder auch unentbehrliche Datensätze immerhin mittels ind ividueller Programmierung in die Suchmaschine einbinden: das jüngst erschienene Jüdische Adressbuch Berlin 1931, die NS-Liste der verbannten Bücher, das Kapitel Judentum der Rheinland-Pfälzischen Bibliografie oder die 10.600 Artikel der Kategorie Judentum in Europa der Wikipedia etwa. 
+
+
+    
+
+Der Umgang mit technischen Problemen zählt nicht zu den typischen Aufgaben von Forschern kultur- und geisteswissenschaftlicher Disziplinen. Eine auf individuelle Bedürfnisse zugeschnittene Integration von Daten oder die Realisierung von Softwarekomponenten ist jedoch für die Umsetzung spezifischer Anwendungen wie der Judaica-Suchmaschine erforderlich. Um Lösungen für technische Probleme in nachhaltiger und für anschließende Forschungsprojekte wiederverwendbarer Form bereitzustellen, beinhalten derzeit laufende Initiativen wie DARIAH oder CLARIN häufig Arbeitspakete zur Umsetzung von Infrastrukturkomponenten.
+
+  
+
+Obwohl die 
+generische Suche
+ von             DARIAH-DE (Gradl 2011-2016) nicht als Infrastrukturkomponente, sondern als             eigenständiger Dienst entwickelt wurde, basiert auch das Konzept der generischen             Suche auf dem Ziel der Umsetzung wiederverwendbarer technischer Funktionalität             zur Integration, Verarbeitung und Analyse von Daten. Im Folgenden stellen wir             eine im Rahmen der generischen Suche implementierte Funktionalität vor, welche             es Forschern ermöglicht, spezifisch angepasste Suchlösungen zu generieren und             bereitzustellen - ohne die hierzu erforderlichen technischen Aspekte selbst             lösen zu müssen. 
+
+  
+
+    
+
+Konzept und Implementierung der generischen Suche resultieren aus der                 Zielsetzung der Realisierung einer kombinierten und flexibel anpassbar en                 Breiten- und Tiefensuche (Gradl / Henrich 2014). Dabei wurde zum einen eine                 universelle und einfache Möglichkeit (vgl. Abbildung) zur übergreifenden                 Suche in einer Vielzahl digitaler Kollektionen eingerichtet, um Forscher bei                 der Suche und Analyse relevanter und potenziell unbekannter Ressourcen und                 Kollektionen zu unterstützen. Neben dieser disziplinunabhängigen                 Breitensuche erlaubt die generische Suche auch eine kontextspezifische                 Anpassung ─sowohl im Hinblick auf die Auswahl der zu durchsuchenden                 Datenquellen, als auch auf das verwendete Schema für die Integration der in                 diesen enthaltenen, zumeist heterogenen Ressourcen. Die so entstehende                 Tiefensuche erlaubt eine differenziertere Analyse und Suche in einer                 forschungsspezifisch begrenzten Datenbasis.
+
+    
+
+Die flexible Anpassbarkeit der generischen Suche an übergreifende                   oder spezifische Fragestellungen wird dabei durch das in untenstehender                   Abbildung exemplarisch angedeutete Konzept der forschungsorientierten                   Föderation digitaler Kollektionen erreicht (Gradl / Henrich 2014; Gradl et                   al. 2014). 
+
+    
+
+Anstelle der für übergreifende Integrationssysteme typischen Harmonisierung                     heterogener Daten (vgl. Batini et al. 1986; Lenzerini 2002) basiert die                     generische Suche wesentlich auf folgenden Annahmen:
+
+    
+
+Die besondere Eigenschaft des Föderationskonzepts besteht darin, dass Daten in ihrer ursprünglichen Form analysiert und indexiert werden. Erst zum Anfragezeitpunkt und in Abhängigkeit von der einer Anfrage zu Grunde liegenden Zusammenstellung von Kollektionen werden die Daten zusammengeführt und integriert.
+
+
+    
+
+Die generische Suche beschreibt einen im Rahmen des DARIAH-DE Projektes                           entwickelten Dienst, welcher im Hinblick auf seine Datenbasis auf die                           Einträge der DARIAH-DE 
+Collection                           Registry
+ zurückgreift (Plutte et al. 2014) und registrierten                           Benutzern die Aufnahme weiterer Datenquellen erlaubt. Neben der Assoziation                           von Schemata als wesentlicher Teilaspekt (Gradl / Henrich 2014) bildet die                           Möglichkeit der Auswahl und Gruppierung relevanter Kollektionen im Rahmen                           der generischen Suche (als myCollections) die Basis                           für die Erstellung angepasster Suchlösungen. 
+
+   Der Bildschirmausschnitt zeigt exemplarisch drei solcher myCollections und verdeutlicht die derzeit implementierte Funktionalität:    
+
+  
+
+    
+
+Anknüpfend an den eingeführten Anwendungsfall der Judaica-Suchmaschine wird                               der Zusammenhang zwischen der generischen Suche von DARIAH-DE und                               forschungsspezifischen Suchlösungen abgebildet durch die Idee der                               benutzerdefinierten Zusammenstellung von Kollektionen: Wird eine                               myCollection - wie in der Abbildung unten dargestellt - als Branded Search                               ausgezeichnet, so wird dadurch eine eigene Suchoberfläche veröffentlicht,                               welche sowohl optisch als auch inhaltlich an spezifische Bedürfnisse                               angepasst und von der eigentlichen generischen Suche abgegrenzt ist.
+
+    
+
+                                 Die folgenden Bildschirmausschnitte verdeutlichen insbesondere die                                   optische Abgrenzung durch konfigurierbare Farbgebung und die Verwendung von                                   Such- und Organisationslogos. Insbesondere der Vergleich der Wordclouds der                                   Startseiten von 
+generischer Suche
+ und 
+Judaica-Suchmaschine
+ (Gradl / Lordick 2015-2016) deuten jedoch                                   die jeweils unterschiedliche, zu Grunde liegende Datenbasis an: Die in einer                                   Branded Search angebotenen Kollektionen spiegeln bei sämtlichen Such-,                                   Analyse- und Visualisierungaufgaben die von den Erstellern der Suche                                   getroffene Kollektionsauswahl wider. 
+
+      
+
+Im Fall der Veröffentlichung einer Branded Search bleibt diese auch als zugreifbare myCollection für berechtigte Benutzer erhalten und kann im Hinblick auf die Kollektionsauswahl und die Assoziation der Schemata verändert werden ─mit unmittelbaren Auswirkungen auf die entsprechende Branded Search. Von technischen Implementierungen an der Basis der generischen Suche, z. B. der Anbindung weiterer Quellenarten wie Wikipedia können schließlich sämtliche eingerichteten Branded Searches profitieren, sofern dies durch die jeweiligen Forscher gewünscht wird.
+
+
+Ein ausgeprägt generischer Ansatz muss kein Gegensatz zu den in den Geisteswissenschaften vorherrschenden individuellen Fragestellungen und Forschungsansätzen sein. Indem sie entsprechende Freiheitsgrade, kreatives und kollaboratives Datenmanagement anbietet, erlaubt die generische Suche ihren Nutzern die Erstellung eigener, jeweils individuell ausgelegter Suchmaschinen. 
+
+  
+
+Es ist das Knowhow der Forschenden, das die Relevanz der Daten, die sie zusammenstellen, filtern, teilen, auch ad-hoc zum Zwecke der Recherche bereitstellen, ausmacht. Ein solches Framework, verbunden mit der fachspezifischen Kenntnis der Daten ist eine gute Basis für überraschende Funde und das Aufspüren unerwarteter Zusammenhänge. 
+
+  
+
+  
+
+
+
+Einleitung
+
+
+
+Die Judaica-Suchmaschine als Anwendungsfall
+
+
+
+    
+
+
+
+ Umsetzung im Rahmen der generischen Suche
+
+
+
+Hintergrund des generischen Konzepts
+
+
+
+
+  
+
+Durch die semantische Assoziation von Kollektionen und darin                         verwendeten Schemata durch fachwissenschaftliche Experten können                         integrative Sichten generiert werden, die den Anforderungen konkreter                         Forschungsfragen entsprechen. Dies wird insbesondere dadurch erreicht,                         dass nicht technisch motivierte Integrationsziele wie die                         Vollständigkeit und Korrektheit eines Integrationsschemas (Batini et al.                         1986) im Vordergrund stehen, sondern disziplinspezifische und auch                         konfliktäre Zusammenhänge modelliert werden können.
+
+  
+
+Kohärente Bereiche mit eng assozierten Schemata S und Kollektionen werden in obiger Abbildung durch semantische Cluster widergespiegelt und bilden                           die Voraussetzung für spezifische Tiefensuchen. Für die übergreifende                           Breitensuche werden wichtige Schemata der einzelnen Cluster                           (repräsentiert als S3, S5                           und S8) mit generischen Schemata, wie z. B.                           Dublin Core - in der Abbildung symbolisiert durch S10 - assoziiert. 
+
+  
+
+
+
+Abbildung der Cluster in der generischen Suche
+
+
+Einträge von myCollections können durch authentifizierte Anwender angelegt werden und definieren eine Zusammenstellung einzelner Kollektionen.
+
+  
+
+Diese myCollections erlauben eine Schnellauswahl von Kollektionen bei                               der Ausführung von Suchanfragen - sowohl im Rahmen des                               Benutzerinterfaces, als auch in Form der REST-basierten                               Schnittstelle.
+
+  
+
+Möchte der Benutzer eine myCollection (z. B. im Rahmen eines gemeinsamen Forschungsinteresses) teilen, so können Freigaben für weitere Benutzer oder DARIAH Gruppen erteilt werden.
+
+  
+
+
+
+Spezifischer Zugang in Form einer  Branded Search  
+
+
+
+
+    
+
+
+
+Ausblick
+
+
+  
+
+      Batini, Carlo / Lenzerini, Maurizio / Navathe, Shamkant                                     Bhalchandra (1986): "A comparative analysis of methodologies for                                     database schema integration", in: ACM Computing                                     Surveys 18, 4: 323–364.  Beer, Nikolaos / Herold, Kristin / Kolbmann, Wibke /                                       Kollatz, Thomas / Romanello, Matteo / Rose, Sebastian / Walkowski,                                       Niels-Oliver (2013): Recommendations for                                       Interdisciplinary Interoperability (R 3.3.1). DARIAH-DE report 
+https://dev2.dariah.eu/wiki/download/attachments/14651583/R3.3.1.pdf?                                       version=1&amp;modificationDate=1366904278298 &amp;api=v2
+ [letzter                                       Zugriff 07. Februar 2016].  Europeana Foundation (2008-2015): Europeana Collections. Den Haag 
+http://www.europeana.eu/portal/
+ [letzter Zugriff 07. Februar                                       2016].  Gradl, Tobias (2011-2016): DARIAH-DE Generic Search  
+http://search.de.dariah.eu
+                                       [letzter Zugriff 07. Februar 2016].  Gradl, Tobias / Henrich, Andreas (2014): "A novel                                       approach for a reusable federation of research data within the arts and                                       humanities", in: Digital Humanities 2014. Book of                                       Abstracts382–384 
+http://dh2014.org/program/abstracts/
+ [letzter Zugriff 09. Oktober                                       2015].     Gradl, Tobias / Henrich, Andreas / Plutte, Christoph                                         (2015): "Heterogene Daten in den Digital Humanities: Eine Architektur zur                                         forschungsorientierten Förderation von Kollektionen", in: Constanze Baum /                                         Thomas Stäcker (eds.): Grenzen und Möglichkeiten der                                         Digital Humanities. Sonderband der Zeitschrift für digitale                                         Geisteswissenschaften 1 
+http://dx.doi.org/10.17175/sb001_020
+ [letzter Zugriff 09. Oktober                                         2015].   Gradl, Tobias / Lordick, Harald (2015-2016): Judaica Search. Branded Search in the DARIAH-DE                                         Generic Search 
+http://judaica.search.de.dariah.eu
+ [letzter Zugriff 07. Februar                                         2016].    Hagedorn, Kat (2003): "OAIster: a 'no dead ends' OAI                                           service provider", in: Library Hi Tech 21, 2:                                           170–181.    Henrich, Andreas / Gradl, Tobias (2013): "DARIAH(-DE):                                             Digital research infrastructure for the arts and humanities - concepts and                                             perspectives", in: International Journal of Humanities and                                             Arts Computing 7: 47–58.  Lenzerini, Maurizio (2002): "Data integration: a                                             theoretical perspective", in: PODS'02 - Proceedings of the                                             twenty-first ACM SIGMOD-SIGACT-SIGART symposium on Principles of                                             database systems : 233-246 
+http://dl.acm.org/citation.cfm?doid=543613.543644
+ [letzter                                             Zugriff 09. Oktober 2015].   Lordick, Harald (2010-2016): Vieles                                             finden. Die Judaica-Suchmaschine im Steinheim-Institut. Salomon                                             Ludwig Steinheim-Institut für deutsch-jüdische Geschichte an der Universität                                             Duisburg-Essen 
+http://steinheim-institut.de/vf/
+ [letzter Zugriff 07. Februar                                             2016].  Lordick, Harald (2013): "Die judaica-bibliothek im                                             web. ganz real oder noch immer virtuell?", in: Kalonymos1: 12–14 
+http://www.steinheim-institut.de/edocs/kalonymos/kalonymos_2013_1.pdf
+                                             [letzter Zugriff 09. Oktober 2015].     Lordick, Harald (2014): "Jüdische Geschichte (mobil)                                               recherchieren", in: Kalonymos3: 13 
+http://www.steinheim-institut.de/edocs/kalonymos/kalonymos_2014_3.pdf
+                                               [letzter Zugriff 9. Oktober 2015].  OAIster (2001-2016): OAIster.                                               OCLC WorldCat.org Services. Dublin / Ohio: OCLC Online Computer Library                                               Center 
+http://oaister.worldcat.org/
+ [letzter Zugriff 07. Februar                                               2016].  Peroni, Silvio / Tomasi, Francesca / Vitali, Fabio                                               (2013): "Reflecting on the europeana data model", in: Agosti, Maristella /                                               Esposito, Floriana / Ferilli, Stefano / Ferro, Nicola (eds.): Digital Libraries and Archives. Berlin / Heidelberg:                                               Springer 228–240 
+http://link.springer.com/chapter/10.1007%2F978-3-642-35834-0_23
+                                               [letzter Zugriff 09. Oktober 2015].  Plutte, Christoph (2011-2014): DARIAH-DE Collection Registry. Initial Prototype. 
+http://colreg.de.dariah.eu
+                                               [letzter Zugriff 07. Februar 2016].    
+
+  
+
+
+
+ am Jülich Supercomputing Center, DARIAH-DE.
+
+
+
+Bibliographie
+    </text>
+    <tc:tokens xmlns:tc="http://www.dspin.de/data/textcorpus">
+      <tc:token ID="w1">Jenseits</tc:token>
+      <tc:token ID="w2">der</tc:token>
+      <tc:token ID="w3">standardisierten</tc:token>
+      <tc:token ID="w4">und</tc:token>
+      <tc:token ID="w5">institutionalisierten</tc:token>
+      <tc:token ID="w6">Bereitstellung</tc:token>
+      <tc:token ID="w7">von</tc:token>
+      <tc:token ID="w8">Forschungsquellen</tc:token>
+      <tc:token ID="w9">und</tc:token>
+      <tc:token ID="wa">-literatur</tc:token>
+      <tc:token ID="wb">bedarf</tc:token>
+      <tc:token ID="wc">es</tc:token>
+      <tc:token ID="wd">weiterführender</tc:token>
+      <tc:token ID="we">Recherchekonzepte</tc:token>
+      <tc:token ID="wf">und</tc:token>
+      <tc:token ID="w10">Anwendungen</tc:token>
+      <tc:token ID="w11">,</tc:token>
+      <tc:token ID="w12">die</tc:token>
+      <tc:token ID="w13">Geisteswissenschaftler_innen</tc:token>
+      <tc:token ID="w14">mit</tc:token>
+      <tc:token ID="w15">ihren</tc:token>
+      <tc:token ID="w16">spezifischen</tc:token>
+      <tc:token ID="w17">Forschungen</tc:token>
+      <tc:token ID="w18">und</tc:token>
+      <tc:token ID="w19">den</tc:token>
+      <tc:token ID="w1a">für</tc:token>
+      <tc:token ID="w1b">sie</tc:token>
+      <tc:token ID="w1c">verfügbaren</tc:token>
+      <tc:token ID="w1d">und</tc:token>
+      <tc:token ID="w1e">relevanten</tc:token>
+      <tc:token ID="w1f">Daten</tc:token>
+      <tc:token ID="w20">so</tc:token>
+      <tc:token ID="w21">weit</tc:token>
+      <tc:token ID="w22">wie</tc:token>
+      <tc:token ID="w23">möglich</tc:token>
+      <tc:token ID="w24">entgegenkommen</tc:token>
+      <tc:token ID="w25">.</tc:token>
+      <tc:token ID="w26">Integrative</tc:token>
+      <tc:token ID="w27">Suchlösungen</tc:token>
+      <tc:token ID="w28">wie</tc:token>
+      <tc:token ID="w29">OAIster</tc:token>
+      <tc:token ID="w2a">und</tc:token>
+      <tc:token ID="w2b">Europeana</tc:token>
+      <tc:token ID="w2c">bieten</tc:token>
+      <tc:token ID="w2d">Zugriff</tc:token>
+      <tc:token ID="w2e">auf</tc:token>
+      <tc:token ID="w2f">eine</tc:token>
+      <tc:token ID="w30">Vielzahl</tc:token>
+      <tc:token ID="w31">von</tc:token>
+      <tc:token ID="w32">Kollektionen</tc:token>
+      <tc:token ID="w33">und</tc:token>
+      <tc:token ID="w34">unterstützen</tc:token>
+      <tc:token ID="w35">breite</tc:token>
+      <tc:token ID="w36">,</tc:token>
+      <tc:token ID="w37">fachunabhängige</tc:token>
+      <tc:token ID="w38">Suchanfragen</tc:token>
+      <tc:token ID="w39">im</tc:token>
+      <tc:token ID="w3a">strukturellen</tc:token>
+      <tc:token ID="w3b">Rahmen</tc:token>
+      <tc:token ID="w3c">integrativer</tc:token>
+      <tc:token ID="w3d">Schemata</tc:token>
+      <tc:token ID="w3e">(</tc:token>
+      <tc:token ID="w3f">Hagedorn</tc:token>
+      <tc:token ID="w40">2013</tc:token>
+      <tc:token ID="w41">;</tc:token>
+      <tc:token ID="w42">Peroni</tc:token>
+      <tc:token ID="w43">et</tc:token>
+      <tc:token ID="w44">al.</tc:token>
+      <tc:token ID="w45">2013</tc:token>
+      <tc:token ID="w46">)</tc:token>
+      <tc:token ID="w47">.</tc:token>
+      <tc:token ID="w48">Der</tc:token>
+      <tc:token ID="w49">semantisch</tc:token>
+      <tc:token ID="w4a">tiefe</tc:token>
+      <tc:token ID="w4b">und</tc:token>
+      <tc:token ID="w4c">forschungspezifische</tc:token>
+      <tc:token ID="w4d">Zugang</tc:token>
+      <tc:token ID="w4e">zu</tc:token>
+      <tc:token ID="w4f">Ressourcen</tc:token>
+      <tc:token ID="w50">steht</tc:token>
+      <tc:token ID="w51">bei</tc:token>
+      <tc:token ID="w52">solchen</tc:token>
+      <tc:token ID="w53">Suchportalen</tc:token>
+      <tc:token ID="w54">dabei</tc:token>
+      <tc:token ID="w55">zumeist</tc:token>
+      <tc:token ID="w56">nicht</tc:token>
+      <tc:token ID="w57">im</tc:token>
+      <tc:token ID="w58">Fokus</tc:token>
+      <tc:token ID="w59">.</tc:token>
+      <tc:token ID="w5a">Aus</tc:token>
+      <tc:token ID="w5b">diesem</tc:token>
+      <tc:token ID="w5c">Grund</tc:token>
+      <tc:token ID="w5d">stehen</tc:token>
+      <tc:token ID="w5e">den</tc:token>
+      <tc:token ID="w5f">Suchportalen</tc:token>
+      <tc:token ID="w60">spezifische</tc:token>
+      <tc:token ID="w61">Lösungen</tc:token>
+      <tc:token ID="w62">gegenüber</tc:token>
+      <tc:token ID="w63">,</tc:token>
+      <tc:token ID="w64">die</tc:token>
+      <tc:token ID="w65">speziell</tc:token>
+      <tc:token ID="w66">an</tc:token>
+      <tc:token ID="w67">die</tc:token>
+      <tc:token ID="w68">Bedürfnisse</tc:token>
+      <tc:token ID="w69">des</tc:token>
+      <tc:token ID="w6a">einzelnen</tc:token>
+      <tc:token ID="w6b">Forschers</tc:token>
+      <tc:token ID="w6c">und</tc:token>
+      <tc:token ID="w6d">seine</tc:token>
+      <tc:token ID="w6e">aktuellen</tc:token>
+      <tc:token ID="w6f">Fragestellungen</tc:token>
+      <tc:token ID="w70">angepasst</tc:token>
+      <tc:token ID="w71">sind</tc:token>
+      <tc:token ID="w72">.</tc:token>
+      <tc:token ID="w73">Ein</tc:token>
+      <tc:token ID="w74">Beispiel</tc:token>
+      <tc:token ID="w75">bildet</tc:token>
+      <tc:token ID="w76">hierbei</tc:token>
+      <tc:token ID="w77">die</tc:token>
+      <tc:token ID="w78">am</tc:token>
+      <tc:token ID="w79">Steinheim-Institut</tc:token>
+      <tc:token ID="w7a">entwickelte</tc:token>
+      <tc:token ID="w7b">Judaica-Suchmaschine</tc:token>
+      <tc:token ID="w7c">(</tc:token>
+      <tc:token ID="w7d">Lordick</tc:token>
+      <tc:token ID="w7e">2013</tc:token>
+      <tc:token ID="w7f">)</tc:token>
+      <tc:token ID="w80">.</tc:token>
+      <tc:token ID="w81">In</tc:token>
+      <tc:token ID="w82">diesem</tc:token>
+      <tc:token ID="w83">Beitrag</tc:token>
+      <tc:token ID="w84">stellen</tc:token>
+      <tc:token ID="w85">wir</tc:token>
+      <tc:token ID="w86">mit</tc:token>
+      <tc:token ID="w87">der</tc:token>
+      <tc:token ID="w88">generischen</tc:token>
+      <tc:token ID="w89">Suche</tc:token>
+      <tc:token ID="w8a">von</tc:token>
+      <tc:token ID="w8b">DARIAH-DE</tc:token>
+      <tc:token ID="w8c">eine</tc:token>
+      <tc:token ID="w8d">weitere</tc:token>
+      <tc:token ID="w8e">breite</tc:token>
+      <tc:token ID="w8f">Suchlösung</tc:token>
+      <tc:token ID="w90">vor</tc:token>
+      <tc:token ID="w91">,</tc:token>
+      <tc:token ID="w92">welche</tc:token>
+      <tc:token ID="w93">jedoch</tc:token>
+      <tc:token ID="w94">auch</tc:token>
+      <tc:token ID="w95">Funktionen</tc:token>
+      <tc:token ID="w96">spezifischer</tc:token>
+      <tc:token ID="w97">Ansätze</tc:token>
+      <tc:token ID="w98">realisiert</tc:token>
+      <tc:token ID="w99">,</tc:token>
+      <tc:token ID="w9a">wie</tc:token>
+      <tc:token ID="w9b">etwa</tc:token>
+      <tc:token ID="w9c">die</tc:token>
+      <tc:token ID="w9d">individuelle</tc:token>
+      <tc:token ID="w9e">Aggregation</tc:token>
+      <tc:token ID="w9f">und</tc:token>
+      <tc:token ID="wa0">Filterung</tc:token>
+      <tc:token ID="wa1">von</tc:token>
+      <tc:token ID="wa2">Sammlungen</tc:token>
+      <tc:token ID="wa3">,</tc:token>
+      <tc:token ID="wa4">sowie</tc:token>
+      <tc:token ID="wa5">differenzierte</tc:token>
+      <tc:token ID="wa6">Möglichkeiten</tc:token>
+      <tc:token ID="wa7">der</tc:token>
+      <tc:token ID="wa8">Zugriffskontrolle</tc:token>
+      <tc:token ID="wa9">.</tc:token>
+      <tc:token ID="waa">Auf</tc:token>
+      <tc:token ID="wab">Basis</tc:token>
+      <tc:token ID="wac">des</tc:token>
+      <tc:token ID="wad">Anwendungsfalls</tc:token>
+      <tc:token ID="wae">der</tc:token>
+      <tc:token ID="waf">Judaica-Suchmaschine</tc:token>
+      <tc:token ID="wb0">zeigen</tc:token>
+      <tc:token ID="wb1">wir</tc:token>
+      <tc:token ID="wb2">exemplarisch</tc:token>
+      <tc:token ID="wb3">die</tc:token>
+      <tc:token ID="wb4">Unterstützung</tc:token>
+      <tc:token ID="wb5">individueller</tc:token>
+      <tc:token ID="wb6">Suchbedürfnisse</tc:token>
+      <tc:token ID="wb7">im</tc:token>
+      <tc:token ID="wb8">Rahmen</tc:token>
+      <tc:token ID="wb9">der</tc:token>
+      <tc:token ID="wba">generischen</tc:token>
+      <tc:token ID="wbb">Suche</tc:token>
+      <tc:token ID="wbc">und</tc:token>
+      <tc:token ID="wbd">verdeutlichen</tc:token>
+      <tc:token ID="wbe">dabei</tc:token>
+      <tc:token ID="wbf">,</tc:token>
+      <tc:token ID="wc0">wie</tc:token>
+      <tc:token ID="wc1">neue</tc:token>
+      <tc:token ID="wc2">,</tc:token>
+      <tc:token ID="wc3">fachspezifische</tc:token>
+      <tc:token ID="wc4">Suchen</tc:token>
+      <tc:token ID="wc5">verfügbar</tc:token>
+      <tc:token ID="wc6">gemacht</tc:token>
+      <tc:token ID="wc7">werden</tc:token>
+      <tc:token ID="wc8">können</tc:token>
+      <tc:token ID="wc9">-</tc:token>
+      <tc:token ID="wca">ohne</tc:token>
+      <tc:token ID="wcb">dass</tc:token>
+      <tc:token ID="wcc">die</tc:token>
+      <tc:token ID="wcd">hierfür</tc:token>
+      <tc:token ID="wce">notwendigen</tc:token>
+      <tc:token ID="wcf">,</tc:token>
+      <tc:token ID="wd0">technischen</tc:token>
+      <tc:token ID="wd1">Aspekte</tc:token>
+      <tc:token ID="wd2">durch</tc:token>
+      <tc:token ID="wd3">den</tc:token>
+      <tc:token ID="wd4">einzelnen</tc:token>
+      <tc:token ID="wd5">Forscher</tc:token>
+      <tc:token ID="wd6">umzusetzen</tc:token>
+      <tc:token ID="wd7">sind</tc:token>
+      <tc:token ID="wd8">.</tc:token>
+      <tc:token ID="wd9">Als</tc:token>
+      <tc:token ID="wda">Use-Case</tc:token>
+      <tc:token ID="wdb">dient</tc:token>
+      <tc:token ID="wdc">die</tc:token>
+      <tc:token ID="wdd">langjährige</tc:token>
+      <tc:token ID="wde">Auseinandersetzung</tc:token>
+      <tc:token ID="wdf">mit</tc:token>
+      <tc:token ID="we0">den</tc:token>
+      <tc:token ID="we1">Möglichkeiten</tc:token>
+      <tc:token ID="we2">und</tc:token>
+      <tc:token ID="we3">Grenzen</tc:token>
+      <tc:token ID="we4">einer</tc:token>
+      <tc:token ID="we5">übergreifenden</tc:token>
+      <tc:token ID="we6">Judaica-Suchmaschine</tc:token>
+      <tc:token ID="we7">im</tc:token>
+      <tc:token ID="we8">Steinheim-Institut</tc:token>
+      <tc:token ID="we9">.</tc:token>
+      <tc:token ID="wea">Sie</tc:token>
+      <tc:token ID="web">war</tc:token>
+      <tc:token ID="wec">ursprünglich</tc:token>
+      <tc:token ID="wed">als</tc:token>
+      <tc:token ID="wee">Allegro-C-Katalog</tc:token>
+      <tc:token ID="wef">gestartet</tc:token>
+      <tc:token ID="wf0">,</tc:token>
+      <tc:token ID="wf1">der</tc:token>
+      <tc:token ID="wf2">verschiedene</tc:token>
+      <tc:token ID="wf3">institutsinterne</tc:token>
+      <tc:token ID="wf4">Datenbanken</tc:token>
+      <tc:token ID="wf5">in</tc:token>
+      <tc:token ID="wf6">eine</tc:token>
+      <tc:token ID="wf7">gemeinsame</tc:token>
+      <tc:token ID="wf8">Datenbank</tc:token>
+      <tc:token ID="wf9">mit</tc:token>
+      <tc:token ID="wfa">dem</tc:token>
+      <tc:token ID="wfb">Ziel</tc:token>
+      <tc:token ID="wfc">der</tc:token>
+      <tc:token ID="wfd">effizienteren</tc:token>
+      <tc:token ID="wfe">fachspezifischen</tc:token>
+      <tc:token ID="wff">Recherche</tc:token>
+      <tc:token ID="w100">zusammenführte</tc:token>
+      <tc:token ID="w101">.</tc:token>
+      <tc:token ID="w102">Bald</tc:token>
+      <tc:token ID="w103">darauf</tc:token>
+      <tc:token ID="w104">wurde</tc:token>
+      <tc:token ID="w105">begonnen</tc:token>
+      <tc:token ID="w106">,</tc:token>
+      <tc:token ID="w107">auch</tc:token>
+      <tc:token ID="w108">passende</tc:token>
+      <tc:token ID="w109">externe</tc:token>
+      <tc:token ID="w10a">Datenangebote</tc:token>
+      <tc:token ID="w10b">einzubinden</tc:token>
+      <tc:token ID="w10c">.</tc:token>
+      <tc:token ID="w10d">Die</tc:token>
+      <tc:token ID="w10e">Suchmaschine</tc:token>
+      <tc:token ID="w10f">enthält</tc:token>
+      <tc:token ID="w110">zur</tc:token>
+      <tc:token ID="w111">Zeit</tc:token>
+      <tc:token ID="w112">ca.</tc:token>
+      <tc:token ID="w113">500.000</tc:token>
+      <tc:token ID="w114">Datensätze</tc:token>
+      <tc:token ID="w115">aus</tc:token>
+      <tc:token ID="w116">20</tc:token>
+      <tc:token ID="w117">filterbaren</tc:token>
+      <tc:token ID="w118">Katalogen</tc:token>
+      <tc:token ID="w119">,</tc:token>
+      <tc:token ID="w11a">ist</tc:token>
+      <tc:token ID="w11b">auch</tc:token>
+      <tc:token ID="w11c">für</tc:token>
+      <tc:token ID="w11d">mobile</tc:token>
+      <tc:token ID="w11e">Geräte</tc:token>
+      <tc:token ID="w11f">geeignet</tc:token>
+      <tc:token ID="w120">(</tc:token>
+      <tc:token ID="w121">Lordick</tc:token>
+      <tc:token ID="w122">2014</tc:token>
+      <tc:token ID="w123">)</tc:token>
+      <tc:token ID="w124">und</tc:token>
+      <tc:token ID="w125">XML-basiert</tc:token>
+      <tc:token ID="w126">.</tc:token>
+      <tc:token ID="w127">Über</tc:token>
+      <tc:token ID="w128">Standardschnittstellen</tc:token>
+      <tc:token ID="w129">lassen</tc:token>
+      <tc:token ID="w12a">sich</tc:token>
+      <tc:token ID="w12b">beispielsweise</tc:token>
+      <tc:token ID="w12c">integrieren</tc:token>
+      <tc:token ID="w12d">:</tc:token>
+      <tc:token ID="w12e">die</tc:token>
+      <tc:token ID="w12f">Freimann-Sammlung</tc:token>
+      <tc:token ID="w130">mit</tc:token>
+      <tc:token ID="w131">8.772</tc:token>
+      <tc:token ID="w132">Titeln</tc:token>
+      <tc:token ID="w133">(</tc:token>
+      <tc:token ID="w134">Teil</tc:token>
+      <tc:token ID="w135">von</tc:token>
+      <tc:token ID="w136">Judaica</tc:token>
+      <tc:token ID="w137">Frankfurt</tc:token>
+      <tc:token ID="w138">)</tc:token>
+      <tc:token ID="w139">,</tc:token>
+      <tc:token ID="w13a">CompactMemory</tc:token>
+      <tc:token ID="w13b">46.637</tc:token>
+      <tc:token ID="w13c">(</tc:token>
+      <tc:token ID="w13d">seit</tc:token>
+      <tc:token ID="w13e">2014</tc:token>
+      <tc:token ID="w13f">ebenfalls</tc:token>
+      <tc:token ID="w140">Judaica</tc:token>
+      <tc:token ID="w141">Frankfurt</tc:token>
+      <tc:token ID="w142">)</tc:token>
+      <tc:token ID="w143">,</tc:token>
+      <tc:token ID="w144">Center</tc:token>
+      <tc:token ID="w145">for</tc:token>
+      <tc:token ID="w146">Jewish</tc:token>
+      <tc:token ID="w147">History</tc:token>
+      <tc:token ID="w148">(</tc:token>
+      <tc:token ID="w149">New</tc:token>
+      <tc:token ID="w14a">York</tc:token>
+      <tc:token ID="w14b">)</tc:token>
+      <tc:token ID="w14c">65.667</tc:token>
+      <tc:token ID="w14d">oder</tc:token>
+      <tc:token ID="w14e">Jewish</tc:token>
+      <tc:token ID="w14f">Theological</tc:token>
+      <tc:token ID="w150">Seminary</tc:token>
+      <tc:token ID="w151">9.257</tc:token>
+      <tc:token ID="w152">.</tc:token>
+      <tc:token ID="w153">Die</tc:token>
+      <tc:token ID="w154">ca.</tc:token>
+      <tc:token ID="w155">15.000</tc:token>
+      <tc:token ID="w156">digitalisierten</tc:token>
+      <tc:token ID="w157">Seiten</tc:token>
+      <tc:token ID="w158">der</tc:token>
+      <tc:token ID="w159">Sammlung</tc:token>
+      <tc:token ID="w15a">Jüdische</tc:token>
+      <tc:token ID="w15b">Zeitschriften</tc:token>
+      <tc:token ID="w15c">der</tc:token>
+      <tc:token ID="w15d">NS-Zeit</tc:token>
+      <tc:token ID="w15e">der</tc:token>
+      <tc:token ID="w15f">Deutschen</tc:token>
+      <tc:token ID="w160">Nationalbibliothek</tc:token>
+      <tc:token ID="w161">sind</tc:token>
+      <tc:token ID="w162">zwar</tc:token>
+      <tc:token ID="w163">2012</tc:token>
+      <tc:token ID="w164">abgeschaltet</tc:token>
+      <tc:token ID="w165">worden</tc:token>
+      <tc:token ID="w166">.</tc:token>
+      <tc:token ID="w167">Die</tc:token>
+      <tc:token ID="w168">Suchmaschine</tc:token>
+      <tc:token ID="w169">enthält</tc:token>
+      <tc:token ID="w16a">aber</tc:token>
+      <tc:token ID="w16b">noch</tc:token>
+      <tc:token ID="w16c">die</tc:token>
+      <tc:token ID="w16d">34.346</tc:token>
+      <tc:token ID="w16e">erschließenden</tc:token>
+      <tc:token ID="w16f">Metadatensätzen</tc:token>
+      <tc:token ID="w170">dazu</tc:token>
+      <tc:token ID="w171">.</tc:token>
+      <tc:token ID="w172">Sie</tc:token>
+      <tc:token ID="w173">haben</tc:token>
+      <tc:token ID="w174">nun</tc:token>
+      <tc:token ID="w175">'</tc:token>
+      <tc:token ID="w176">nur</tc:token>
+      <tc:token ID="w177">noch'</tc:token>
+      <tc:token ID="w178">bibliografischen</tc:token>
+      <tc:token ID="w179">Charakter</tc:token>
+      <tc:token ID="w17a">,</tc:token>
+      <tc:token ID="w17b">der</tc:token>
+      <tc:token ID="w17c">um</tc:token>
+      <tc:token ID="w17d">so</tc:token>
+      <tc:token ID="w17e">wertvoller</tc:token>
+      <tc:token ID="w17f">bleibt</tc:token>
+      <tc:token ID="w180">.</tc:token>
+      <tc:token ID="w181">Gleiches</tc:token>
+      <tc:token ID="w182">gilt</tc:token>
+      <tc:token ID="w183">für</tc:token>
+      <tc:token ID="w184">die</tc:token>
+      <tc:token ID="w185">Exilpresse</tc:token>
+      <tc:token ID="w186">digital</tc:token>
+      <tc:token ID="w187">:</tc:token>
+      <tc:token ID="w188">Deutsche</tc:token>
+      <tc:token ID="w189">Exilzeitschriften</tc:token>
+      <tc:token ID="w18a">1933</tc:token>
+      <tc:token ID="w18b">–</tc:token>
+      <tc:token ID="w18c">1945</tc:token>
+      <tc:token ID="w18d">mit</tc:token>
+      <tc:token ID="w18e">nicht</tc:token>
+      <tc:token ID="w18f">weniger</tc:token>
+      <tc:token ID="w190">als</tc:token>
+      <tc:token ID="w191">231.548</tc:token>
+      <tc:token ID="w192">Metadatensätzen</tc:token>
+      <tc:token ID="w193">.</tc:token>
+      <tc:token ID="w194">In</tc:token>
+      <tc:token ID="w195">diesen</tc:token>
+      <tc:token ID="w196">Kontext</tc:token>
+      <tc:token ID="w197">gehört</tc:token>
+      <tc:token ID="w198">auch</tc:token>
+      <tc:token ID="w199">der</tc:token>
+      <tc:token ID="w19a">Ansatz</tc:token>
+      <tc:token ID="w19b">,</tc:token>
+      <tc:token ID="w19c">eigene</tc:token>
+      <tc:token ID="w19d">Daten</tc:token>
+      <tc:token ID="w19e">ebenfalls</tc:token>
+      <tc:token ID="w19f">über</tc:token>
+      <tc:token ID="w1a0">etablierte</tc:token>
+      <tc:token ID="w1a1">Standardformate</tc:token>
+      <tc:token ID="w1a2">und</tc:token>
+      <tc:token ID="w1a3">Protokolle</tc:token>
+      <tc:token ID="w1a4">anzubieten</tc:token>
+      <tc:token ID="w1a5">,</tc:token>
+      <tc:token ID="w1a6">um</tc:token>
+      <tc:token ID="w1a7">sie</tc:token>
+      <tc:token ID="w1a8">zur</tc:token>
+      <tc:token ID="w1a9">Nachnutzung</tc:token>
+      <tc:token ID="w1aa">zur</tc:token>
+      <tc:token ID="w1ab">Verfügung</tc:token>
+      <tc:token ID="w1ac">zu</tc:token>
+      <tc:token ID="w1ad">stellen</tc:token>
+      <tc:token ID="w1ae">.</tc:token>
+      <tc:token ID="w1af">So</tc:token>
+      <tc:token ID="w1b0">wurde</tc:token>
+      <tc:token ID="w1b1">ein</tc:token>
+      <tc:token ID="w1b2">OAI-PMH</tc:token>
+      <tc:token ID="w1b3">Testserver</tc:token>
+      <tc:token ID="w1b4">1</tc:token>
+      <tc:token ID="w1b5">eingerichtet</tc:token>
+      <tc:token ID="w1b6">,</tc:token>
+      <tc:token ID="w1b7">der</tc:token>
+      <tc:token ID="w1b8">digitale</tc:token>
+      <tc:token ID="w1b9">Sammlungen</tc:token>
+      <tc:token ID="w1ba">des</tc:token>
+      <tc:token ID="w1bb">Steinheim-Instituts</tc:token>
+      <tc:token ID="w1bc">zusammenführt</tc:token>
+      <tc:token ID="w1bd">:</tc:token>
+      <tc:token ID="w1be">Universal-Kirchenzeitung</tc:token>
+      <tc:token ID="w1bf">,</tc:token>
+      <tc:token ID="w1c0">Kalonymos</tc:token>
+      <tc:token ID="w1c1">,</tc:token>
+      <tc:token ID="w1c2">Deutsch-jüdische</tc:token>
+      <tc:token ID="w1c3">Publizistik</tc:token>
+      <tc:token ID="w1c4">.</tc:token>
+      <tc:token ID="w1c5">Ebenfalls</tc:token>
+      <tc:token ID="w1c6">wurde</tc:token>
+      <tc:token ID="w1c7">das</tc:token>
+      <tc:token ID="w1c8">Verfahren</tc:token>
+      <tc:token ID="w1c9">der</tc:token>
+      <tc:token ID="w1ca">Bereitstellung</tc:token>
+      <tc:token ID="w1cb">mittels</tc:token>
+      <tc:token ID="w1cc">eines</tc:token>
+      <tc:token ID="w1cd">statischen</tc:token>
+      <tc:token ID="w1ce">OAI-PMH-Repositorys</tc:token>
+      <tc:token ID="w1cf">geprüft</tc:token>
+      <tc:token ID="w1d0">(</tc:token>
+      <tc:token ID="w1d1">Beer</tc:token>
+      <tc:token ID="w1d2">et</tc:token>
+      <tc:token ID="w1d3">al.</tc:token>
+      <tc:token ID="w1d4">2013</tc:token>
+      <tc:token ID="w1d5">)</tc:token>
+      <tc:token ID="w1d6">.</tc:token>
+      <tc:token ID="w1d7">Dieser</tc:token>
+      <tc:token ID="w1d8">Weg</tc:token>
+      <tc:token ID="w1d9">ist</tc:token>
+      <tc:token ID="w1da">empfehlenswert</tc:token>
+      <tc:token ID="w1db">,</tc:token>
+      <tc:token ID="w1dc">hinsichtlich</tc:token>
+      <tc:token ID="w1dd">des</tc:token>
+      <tc:token ID="w1de">erforderlichen</tc:token>
+      <tc:token ID="w1df">technischen</tc:token>
+      <tc:token ID="w1e0">Knowhows</tc:token>
+      <tc:token ID="w1e1">jedoch</tc:token>
+      <tc:token ID="w1e2">durchaus</tc:token>
+      <tc:token ID="w1e3">anspruchsvoll</tc:token>
+      <tc:token ID="w1e4">,</tc:token>
+      <tc:token ID="w1e5">erfordert</tc:token>
+      <tc:token ID="w1e6">(</tc:token>
+      <tc:token ID="w1e7">Zugriff</tc:token>
+      <tc:token ID="w1e8">auf</tc:token>
+      <tc:token ID="w1e9">)</tc:token>
+      <tc:token ID="w1ea">Infrastrukturkomponenten</tc:token>
+      <tc:token ID="w1eb">und</tc:token>
+      <tc:token ID="w1ec">Serverressourcen</tc:token>
+      <tc:token ID="w1ed">und</tc:token>
+      <tc:token ID="w1ee">eignet</tc:token>
+      <tc:token ID="w1ef">sich</tc:token>
+      <tc:token ID="w1f0">insbesondere</tc:token>
+      <tc:token ID="w1f1">für</tc:token>
+      <tc:token ID="w1f2">'</tc:token>
+      <tc:token ID="w1f3">fertige</tc:token>
+      <tc:token ID="w1f4">'</tc:token>
+      <tc:token ID="w1f5">,</tc:token>
+      <tc:token ID="w1f6">abgeschlossene</tc:token>
+      <tc:token ID="w1f7">Datensätze</tc:token>
+      <tc:token ID="w1f8">.</tc:token>
+      <tc:token ID="w1f9">Viele</tc:token>
+      <tc:token ID="w1fa">digitale</tc:token>
+      <tc:token ID="w1fb">Quellen</tc:token>
+      <tc:token ID="w1fc">lassen</tc:token>
+      <tc:token ID="w1fd">sich</tc:token>
+      <tc:token ID="w1fe">jedoch</tc:token>
+      <tc:token ID="w1ff">unter</tc:token>
+      <tc:token ID="w200">den</tc:token>
+      <tc:token ID="w201">gegebenen</tc:token>
+      <tc:token ID="w202">Umständen</tc:token>
+      <tc:token ID="w203">gar</tc:token>
+      <tc:token ID="w204">nicht</tc:token>
+      <tc:token ID="w205">harvesten</tc:token>
+      <tc:token ID="w206">,</tc:token>
+      <tc:token ID="w207">etliche</tc:token>
+      <tc:token ID="w208">verfügbare</tc:token>
+      <tc:token ID="w209">fachlich</tc:token>
+      <tc:token ID="w20a">interessante</tc:token>
+      <tc:token ID="w20b">oder</tc:token>
+      <tc:token ID="w20c">auch</tc:token>
+      <tc:token ID="w20d">unentbehrliche</tc:token>
+      <tc:token ID="w20e">Datensätze</tc:token>
+      <tc:token ID="w20f">immerhin</tc:token>
+      <tc:token ID="w210">mittels</tc:token>
+      <tc:token ID="w211">ind</tc:token>
+      <tc:token ID="w212">ividueller</tc:token>
+      <tc:token ID="w213">Programmierung</tc:token>
+      <tc:token ID="w214">in</tc:token>
+      <tc:token ID="w215">die</tc:token>
+      <tc:token ID="w216">Suchmaschine</tc:token>
+      <tc:token ID="w217">einbinden</tc:token>
+      <tc:token ID="w218">:</tc:token>
+      <tc:token ID="w219">das</tc:token>
+      <tc:token ID="w21a">jüngst</tc:token>
+      <tc:token ID="w21b">erschienene</tc:token>
+      <tc:token ID="w21c">Jüdische</tc:token>
+      <tc:token ID="w21d">Adressbuch</tc:token>
+      <tc:token ID="w21e">Berlin</tc:token>
+      <tc:token ID="w21f">1931</tc:token>
+      <tc:token ID="w220">,</tc:token>
+      <tc:token ID="w221">die</tc:token>
+      <tc:token ID="w222">NS-Liste</tc:token>
+      <tc:token ID="w223">der</tc:token>
+      <tc:token ID="w224">verbannten</tc:token>
+      <tc:token ID="w225">Bücher</tc:token>
+      <tc:token ID="w226">,</tc:token>
+      <tc:token ID="w227">das</tc:token>
+      <tc:token ID="w228">Kapitel</tc:token>
+      <tc:token ID="w229">Judentum</tc:token>
+      <tc:token ID="w22a">der</tc:token>
+      <tc:token ID="w22b">Rheinland-Pfälzischen</tc:token>
+      <tc:token ID="w22c">Bibliografie</tc:token>
+      <tc:token ID="w22d">oder</tc:token>
+      <tc:token ID="w22e">die</tc:token>
+      <tc:token ID="w22f">10.600</tc:token>
+      <tc:token ID="w230">Artikel</tc:token>
+      <tc:token ID="w231">der</tc:token>
+      <tc:token ID="w232">Kategorie</tc:token>
+      <tc:token ID="w233">Judentum</tc:token>
+      <tc:token ID="w234">in</tc:token>
+      <tc:token ID="w235">Europa</tc:token>
+      <tc:token ID="w236">der</tc:token>
+      <tc:token ID="w237">Wikipedia</tc:token>
+      <tc:token ID="w238">etwa</tc:token>
+      <tc:token ID="w239">.</tc:token>
+      <tc:token ID="w23a">Der</tc:token>
+      <tc:token ID="w23b">Umgang</tc:token>
+      <tc:token ID="w23c">mit</tc:token>
+      <tc:token ID="w23d">technischen</tc:token>
+      <tc:token ID="w23e">Problemen</tc:token>
+      <tc:token ID="w23f">zählt</tc:token>
+      <tc:token ID="w240">nicht</tc:token>
+      <tc:token ID="w241">zu</tc:token>
+      <tc:token ID="w242">den</tc:token>
+      <tc:token ID="w243">typischen</tc:token>
+      <tc:token ID="w244">Aufgaben</tc:token>
+      <tc:token ID="w245">von</tc:token>
+      <tc:token ID="w246">Forschern</tc:token>
+      <tc:token ID="w247">kultur-</tc:token>
+      <tc:token ID="w248">und</tc:token>
+      <tc:token ID="w249">geisteswissenschaftlicher</tc:token>
+      <tc:token ID="w24a">Disziplinen</tc:token>
+      <tc:token ID="w24b">.</tc:token>
+      <tc:token ID="w24c">Eine</tc:token>
+      <tc:token ID="w24d">auf</tc:token>
+      <tc:token ID="w24e">individuelle</tc:token>
+      <tc:token ID="w24f">Bedürfnisse</tc:token>
+      <tc:token ID="w250">zugeschnittene</tc:token>
+      <tc:token ID="w251">Integration</tc:token>
+      <tc:token ID="w252">von</tc:token>
+      <tc:token ID="w253">Daten</tc:token>
+      <tc:token ID="w254">oder</tc:token>
+      <tc:token ID="w255">die</tc:token>
+      <tc:token ID="w256">Realisierung</tc:token>
+      <tc:token ID="w257">von</tc:token>
+      <tc:token ID="w258">Softwarekomponenten</tc:token>
+      <tc:token ID="w259">ist</tc:token>
+      <tc:token ID="w25a">jedoch</tc:token>
+      <tc:token ID="w25b">für</tc:token>
+      <tc:token ID="w25c">die</tc:token>
+      <tc:token ID="w25d">Umsetzung</tc:token>
+      <tc:token ID="w25e">spezifischer</tc:token>
+      <tc:token ID="w25f">Anwendungen</tc:token>
+      <tc:token ID="w260">wie</tc:token>
+      <tc:token ID="w261">der</tc:token>
+      <tc:token ID="w262">Judaica-Suchmaschine</tc:token>
+      <tc:token ID="w263">erforderlich</tc:token>
+      <tc:token ID="w264">.</tc:token>
+      <tc:token ID="w265">Um</tc:token>
+      <tc:token ID="w266">Lösungen</tc:token>
+      <tc:token ID="w267">für</tc:token>
+      <tc:token ID="w268">technische</tc:token>
+      <tc:token ID="w269">Probleme</tc:token>
+      <tc:token ID="w26a">in</tc:token>
+      <tc:token ID="w26b">nachhaltiger</tc:token>
+      <tc:token ID="w26c">und</tc:token>
+      <tc:token ID="w26d">für</tc:token>
+      <tc:token ID="w26e">anschließende</tc:token>
+      <tc:token ID="w26f">Forschungsprojekte</tc:token>
+      <tc:token ID="w270">wiederverwendbarer</tc:token>
+      <tc:token ID="w271">Form</tc:token>
+      <tc:token ID="w272">bereitzustellen</tc:token>
+      <tc:token ID="w273">,</tc:token>
+      <tc:token ID="w274">beinhalten</tc:token>
+      <tc:token ID="w275">derzeit</tc:token>
+      <tc:token ID="w276">laufende</tc:token>
+      <tc:token ID="w277">Initiativen</tc:token>
+      <tc:token ID="w278">wie</tc:token>
+      <tc:token ID="w279">DARIAH</tc:token>
+      <tc:token ID="w27a">oder</tc:token>
+      <tc:token ID="w27b">CLARIN</tc:token>
+      <tc:token ID="w27c">häufig</tc:token>
+      <tc:token ID="w27d">Arbeitspakete</tc:token>
+      <tc:token ID="w27e">zur</tc:token>
+      <tc:token ID="w27f">Umsetzung</tc:token>
+      <tc:token ID="w280">von</tc:token>
+      <tc:token ID="w281">Infrastrukturkomponenten</tc:token>
+      <tc:token ID="w282">.</tc:token>
+      <tc:token ID="w283">Obwohl</tc:token>
+      <tc:token ID="w284">die</tc:token>
+      <tc:token ID="w285">generische</tc:token>
+      <tc:token ID="w286">Suche</tc:token>
+      <tc:token ID="w287">von</tc:token>
+      <tc:token ID="w288">DARIAH-DE</tc:token>
+      <tc:token ID="w289">(</tc:token>
+      <tc:token ID="w28a">Gradl</tc:token>
+      <tc:token ID="w28b">2011-2016</tc:token>
+      <tc:token ID="w28c">)</tc:token>
+      <tc:token ID="w28d">nicht</tc:token>
+      <tc:token ID="w28e">als</tc:token>
+      <tc:token ID="w28f">Infrastrukturkomponente</tc:token>
+      <tc:token ID="w290">,</tc:token>
+      <tc:token ID="w291">sondern</tc:token>
+      <tc:token ID="w292">als</tc:token>
+      <tc:token ID="w293">eigenständiger</tc:token>
+      <tc:token ID="w294">Dienst</tc:token>
+      <tc:token ID="w295">entwickelt</tc:token>
+      <tc:token ID="w296">wurde</tc:token>
+      <tc:token ID="w297">,</tc:token>
+      <tc:token ID="w298">basiert</tc:token>
+      <tc:token ID="w299">auch</tc:token>
+      <tc:token ID="w29a">das</tc:token>
+      <tc:token ID="w29b">Konzept</tc:token>
+      <tc:token ID="w29c">der</tc:token>
+      <tc:token ID="w29d">generischen</tc:token>
+      <tc:token ID="w29e">Suche</tc:token>
+      <tc:token ID="w29f">auf</tc:token>
+      <tc:token ID="w2a0">dem</tc:token>
+      <tc:token ID="w2a1">Ziel</tc:token>
+      <tc:token ID="w2a2">der</tc:token>
+      <tc:token ID="w2a3">Umsetzung</tc:token>
+      <tc:token ID="w2a4">wiederverwendbarer</tc:token>
+      <tc:token ID="w2a5">technischer</tc:token>
+      <tc:token ID="w2a6">Funktionalität</tc:token>
+      <tc:token ID="w2a7">zur</tc:token>
+      <tc:token ID="w2a8">Integration</tc:token>
+      <tc:token ID="w2a9">,</tc:token>
+      <tc:token ID="w2aa">Verarbeitung</tc:token>
+      <tc:token ID="w2ab">und</tc:token>
+      <tc:token ID="w2ac">Analyse</tc:token>
+      <tc:token ID="w2ad">von</tc:token>
+      <tc:token ID="w2ae">Daten</tc:token>
+      <tc:token ID="w2af">.</tc:token>
+      <tc:token ID="w2b0">Im</tc:token>
+      <tc:token ID="w2b1">Folgenden</tc:token>
+      <tc:token ID="w2b2">stellen</tc:token>
+      <tc:token ID="w2b3">wir</tc:token>
+      <tc:token ID="w2b4">eine</tc:token>
+      <tc:token ID="w2b5">im</tc:token>
+      <tc:token ID="w2b6">Rahmen</tc:token>
+      <tc:token ID="w2b7">der</tc:token>
+      <tc:token ID="w2b8">generischen</tc:token>
+      <tc:token ID="w2b9">Suche</tc:token>
+      <tc:token ID="w2ba">implementierte</tc:token>
+      <tc:token ID="w2bb">Funktionalität</tc:token>
+      <tc:token ID="w2bc">vor</tc:token>
+      <tc:token ID="w2bd">,</tc:token>
+      <tc:token ID="w2be">welche</tc:token>
+      <tc:token ID="w2bf">es</tc:token>
+      <tc:token ID="w2c0">Forschern</tc:token>
+      <tc:token ID="w2c1">ermöglicht</tc:token>
+      <tc:token ID="w2c2">,</tc:token>
+      <tc:token ID="w2c3">spezifisch</tc:token>
+      <tc:token ID="w2c4">angepasste</tc:token>
+      <tc:token ID="w2c5">Suchlösungen</tc:token>
+      <tc:token ID="w2c6">zu</tc:token>
+      <tc:token ID="w2c7">generieren</tc:token>
+      <tc:token ID="w2c8">und</tc:token>
+      <tc:token ID="w2c9">bereitzustellen</tc:token>
+      <tc:token ID="w2ca">-</tc:token>
+      <tc:token ID="w2cb">ohne</tc:token>
+      <tc:token ID="w2cc">die</tc:token>
+      <tc:token ID="w2cd">hierzu</tc:token>
+      <tc:token ID="w2ce">erforderlichen</tc:token>
+      <tc:token ID="w2cf">technischen</tc:token>
+      <tc:token ID="w2d0">Aspekte</tc:token>
+      <tc:token ID="w2d1">selbst</tc:token>
+      <tc:token ID="w2d2">lösen</tc:token>
+      <tc:token ID="w2d3">zu</tc:token>
+      <tc:token ID="w2d4">müssen</tc:token>
+      <tc:token ID="w2d5">.</tc:token>
+      <tc:token ID="w2d6">Konzept</tc:token>
+      <tc:token ID="w2d7">und</tc:token>
+      <tc:token ID="w2d8">Implementierung</tc:token>
+      <tc:token ID="w2d9">der</tc:token>
+      <tc:token ID="w2da">generischen</tc:token>
+      <tc:token ID="w2db">Suche</tc:token>
+      <tc:token ID="w2dc">resultieren</tc:token>
+      <tc:token ID="w2dd">aus</tc:token>
+      <tc:token ID="w2de">der</tc:token>
+      <tc:token ID="w2df">Zielsetzung</tc:token>
+      <tc:token ID="w2e0">der</tc:token>
+      <tc:token ID="w2e1">Realisierung</tc:token>
+      <tc:token ID="w2e2">einer</tc:token>
+      <tc:token ID="w2e3">kombinierten</tc:token>
+      <tc:token ID="w2e4">und</tc:token>
+      <tc:token ID="w2e5">flexibel</tc:token>
+      <tc:token ID="w2e6">anpassbar</tc:token>
+      <tc:token ID="w2e7">en</tc:token>
+      <tc:token ID="w2e8">Breiten-</tc:token>
+      <tc:token ID="w2e9">und</tc:token>
+      <tc:token ID="w2ea">Tiefensuche</tc:token>
+      <tc:token ID="w2eb">(</tc:token>
+      <tc:token ID="w2ec">Gradl</tc:token>
+      <tc:token ID="w2ed">/</tc:token>
+      <tc:token ID="w2ee">Henrich</tc:token>
+      <tc:token ID="w2ef">2014</tc:token>
+      <tc:token ID="w2f0">)</tc:token>
+      <tc:token ID="w2f1">.</tc:token>
+      <tc:token ID="w2f2">Dabei</tc:token>
+      <tc:token ID="w2f3">wurde</tc:token>
+      <tc:token ID="w2f4">zum</tc:token>
+      <tc:token ID="w2f5">einen</tc:token>
+      <tc:token ID="w2f6">eine</tc:token>
+      <tc:token ID="w2f7">universelle</tc:token>
+      <tc:token ID="w2f8">und</tc:token>
+      <tc:token ID="w2f9">einfache</tc:token>
+      <tc:token ID="w2fa">Möglichkeit</tc:token>
+      <tc:token ID="w2fb">(</tc:token>
+      <tc:token ID="w2fc">vgl.</tc:token>
+      <tc:token ID="w2fd">Abbildung</tc:token>
+      <tc:token ID="w2fe">)</tc:token>
+      <tc:token ID="w2ff">zur</tc:token>
+      <tc:token ID="w300">übergreifenden</tc:token>
+      <tc:token ID="w301">Suche</tc:token>
+      <tc:token ID="w302">in</tc:token>
+      <tc:token ID="w303">einer</tc:token>
+      <tc:token ID="w304">Vielzahl</tc:token>
+      <tc:token ID="w305">digitaler</tc:token>
+      <tc:token ID="w306">Kollektionen</tc:token>
+      <tc:token ID="w307">eingerichtet</tc:token>
+      <tc:token ID="w308">,</tc:token>
+      <tc:token ID="w309">um</tc:token>
+      <tc:token ID="w30a">Forscher</tc:token>
+      <tc:token ID="w30b">bei</tc:token>
+      <tc:token ID="w30c">der</tc:token>
+      <tc:token ID="w30d">Suche</tc:token>
+      <tc:token ID="w30e">und</tc:token>
+      <tc:token ID="w30f">Analyse</tc:token>
+      <tc:token ID="w310">relevanter</tc:token>
+      <tc:token ID="w311">und</tc:token>
+      <tc:token ID="w312">potenziell</tc:token>
+      <tc:token ID="w313">unbekannter</tc:token>
+      <tc:token ID="w314">Ressourcen</tc:token>
+      <tc:token ID="w315">und</tc:token>
+      <tc:token ID="w316">Kollektionen</tc:token>
+      <tc:token ID="w317">zu</tc:token>
+      <tc:token ID="w318">unterstützen</tc:token>
+      <tc:token ID="w319">.</tc:token>
+      <tc:token ID="w31a">Neben</tc:token>
+      <tc:token ID="w31b">dieser</tc:token>
+      <tc:token ID="w31c">disziplinunabhängigen</tc:token>
+      <tc:token ID="w31d">Breitensuche</tc:token>
+      <tc:token ID="w31e">erlaubt</tc:token>
+      <tc:token ID="w31f">die</tc:token>
+      <tc:token ID="w320">generische</tc:token>
+      <tc:token ID="w321">Suche</tc:token>
+      <tc:token ID="w322">auch</tc:token>
+      <tc:token ID="w323">eine</tc:token>
+      <tc:token ID="w324">kontextspezifische</tc:token>
+      <tc:token ID="w325">Anpassung</tc:token>
+      <tc:token ID="w326">─</tc:token>
+      <tc:token ID="w327">sowohl</tc:token>
+      <tc:token ID="w328">im</tc:token>
+      <tc:token ID="w329">Hinblick</tc:token>
+      <tc:token ID="w32a">auf</tc:token>
+      <tc:token ID="w32b">die</tc:token>
+      <tc:token ID="w32c">Auswahl</tc:token>
+      <tc:token ID="w32d">der</tc:token>
+      <tc:token ID="w32e">zu</tc:token>
+      <tc:token ID="w32f">durchsuchenden</tc:token>
+      <tc:token ID="w330">Datenquellen</tc:token>
+      <tc:token ID="w331">,</tc:token>
+      <tc:token ID="w332">als</tc:token>
+      <tc:token ID="w333">auch</tc:token>
+      <tc:token ID="w334">auf</tc:token>
+      <tc:token ID="w335">das</tc:token>
+      <tc:token ID="w336">verwendete</tc:token>
+      <tc:token ID="w337">Schema</tc:token>
+      <tc:token ID="w338">für</tc:token>
+      <tc:token ID="w339">die</tc:token>
+      <tc:token ID="w33a">Integration</tc:token>
+      <tc:token ID="w33b">der</tc:token>
+      <tc:token ID="w33c">in</tc:token>
+      <tc:token ID="w33d">diesen</tc:token>
+      <tc:token ID="w33e">enthaltenen</tc:token>
+      <tc:token ID="w33f">,</tc:token>
+      <tc:token ID="w340">zumeist</tc:token>
+      <tc:token ID="w341">heterogenen</tc:token>
+      <tc:token ID="w342">Ressourcen</tc:token>
+      <tc:token ID="w343">.</tc:token>
+      <tc:token ID="w344">Die</tc:token>
+      <tc:token ID="w345">so</tc:token>
+      <tc:token ID="w346">entstehende</tc:token>
+      <tc:token ID="w347">Tiefensuche</tc:token>
+      <tc:token ID="w348">erlaubt</tc:token>
+      <tc:token ID="w349">eine</tc:token>
+      <tc:token ID="w34a">differenziertere</tc:token>
+      <tc:token ID="w34b">Analyse</tc:token>
+      <tc:token ID="w34c">und</tc:token>
+      <tc:token ID="w34d">Suche</tc:token>
+      <tc:token ID="w34e">in</tc:token>
+      <tc:token ID="w34f">einer</tc:token>
+      <tc:token ID="w350">forschungsspezifisch</tc:token>
+      <tc:token ID="w351">begrenzten</tc:token>
+      <tc:token ID="w352">Datenbasis</tc:token>
+      <tc:token ID="w353">.</tc:token>
+      <tc:token ID="w354">Die</tc:token>
+      <tc:token ID="w355">flexible</tc:token>
+      <tc:token ID="w356">Anpassbarkeit</tc:token>
+      <tc:token ID="w357">der</tc:token>
+      <tc:token ID="w358">generischen</tc:token>
+      <tc:token ID="w359">Suche</tc:token>
+      <tc:token ID="w35a">an</tc:token>
+      <tc:token ID="w35b">übergreifende</tc:token>
+      <tc:token ID="w35c">oder</tc:token>
+      <tc:token ID="w35d">spezifische</tc:token>
+      <tc:token ID="w35e">Fragestellungen</tc:token>
+      <tc:token ID="w35f">wird</tc:token>
+      <tc:token ID="w360">dabei</tc:token>
+      <tc:token ID="w361">durch</tc:token>
+      <tc:token ID="w362">das</tc:token>
+      <tc:token ID="w363">in</tc:token>
+      <tc:token ID="w364">untenstehender</tc:token>
+      <tc:token ID="w365">Abbildung</tc:token>
+      <tc:token ID="w366">exemplarisch</tc:token>
+      <tc:token ID="w367">angedeutete</tc:token>
+      <tc:token ID="w368">Konzept</tc:token>
+      <tc:token ID="w369">der</tc:token>
+      <tc:token ID="w36a">forschungsorientierten</tc:token>
+      <tc:token ID="w36b">Föderation</tc:token>
+      <tc:token ID="w36c">digitaler</tc:token>
+      <tc:token ID="w36d">Kollektionen</tc:token>
+      <tc:token ID="w36e">erreicht</tc:token>
+      <tc:token ID="w36f">(</tc:token>
+      <tc:token ID="w370">Gradl</tc:token>
+      <tc:token ID="w371">/</tc:token>
+      <tc:token ID="w372">Henrich</tc:token>
+      <tc:token ID="w373">2014</tc:token>
+      <tc:token ID="w374">;</tc:token>
+      <tc:token ID="w375">Gradl</tc:token>
+      <tc:token ID="w376">et</tc:token>
+      <tc:token ID="w377">al.</tc:token>
+      <tc:token ID="w378">2014</tc:token>
+      <tc:token ID="w379">)</tc:token>
+      <tc:token ID="w37a">.</tc:token>
+      <tc:token ID="w37b">Anstelle</tc:token>
+      <tc:token ID="w37c">der</tc:token>
+      <tc:token ID="w37d">für</tc:token>
+      <tc:token ID="w37e">übergreifende</tc:token>
+      <tc:token ID="w37f">Integrationssysteme</tc:token>
+      <tc:token ID="w380">typischen</tc:token>
+      <tc:token ID="w381">Harmonisierung</tc:token>
+      <tc:token ID="w382">heterogener</tc:token>
+      <tc:token ID="w383">Daten</tc:token>
+      <tc:token ID="w384">(</tc:token>
+      <tc:token ID="w385">vgl.</tc:token>
+      <tc:token ID="w386">Batini</tc:token>
+      <tc:token ID="w387">et</tc:token>
+      <tc:token ID="w388">al.</tc:token>
+      <tc:token ID="w389">1986</tc:token>
+      <tc:token ID="w38a">;</tc:token>
+      <tc:token ID="w38b">Lenzerini</tc:token>
+      <tc:token ID="w38c">2002</tc:token>
+      <tc:token ID="w38d">)</tc:token>
+      <tc:token ID="w38e">basiert</tc:token>
+      <tc:token ID="w38f">die</tc:token>
+      <tc:token ID="w390">generische</tc:token>
+      <tc:token ID="w391">Suche</tc:token>
+      <tc:token ID="w392">wesentlich</tc:token>
+      <tc:token ID="w393">auf</tc:token>
+      <tc:token ID="w394">folgenden</tc:token>
+      <tc:token ID="w395">Annahmen</tc:token>
+      <tc:token ID="w396">:</tc:token>
+      <tc:token ID="w397">Die</tc:token>
+      <tc:token ID="w398">besondere</tc:token>
+      <tc:token ID="w399">Eigenschaft</tc:token>
+      <tc:token ID="w39a">des</tc:token>
+      <tc:token ID="w39b">Föderationskonzepts</tc:token>
+      <tc:token ID="w39c">besteht</tc:token>
+      <tc:token ID="w39d">darin</tc:token>
+      <tc:token ID="w39e">,</tc:token>
+      <tc:token ID="w39f">dass</tc:token>
+      <tc:token ID="w3a0">Daten</tc:token>
+      <tc:token ID="w3a1">in</tc:token>
+      <tc:token ID="w3a2">ihrer</tc:token>
+      <tc:token ID="w3a3">ursprünglichen</tc:token>
+      <tc:token ID="w3a4">Form</tc:token>
+      <tc:token ID="w3a5">analysiert</tc:token>
+      <tc:token ID="w3a6">und</tc:token>
+      <tc:token ID="w3a7">indexiert</tc:token>
+      <tc:token ID="w3a8">werden</tc:token>
+      <tc:token ID="w3a9">.</tc:token>
+      <tc:token ID="w3aa">Erst</tc:token>
+      <tc:token ID="w3ab">zum</tc:token>
+      <tc:token ID="w3ac">Anfragezeitpunkt</tc:token>
+      <tc:token ID="w3ad">und</tc:token>
+      <tc:token ID="w3ae">in</tc:token>
+      <tc:token ID="w3af">Abhängigkeit</tc:token>
+      <tc:token ID="w3b0">von</tc:token>
+      <tc:token ID="w3b1">der</tc:token>
+      <tc:token ID="w3b2">einer</tc:token>
+      <tc:token ID="w3b3">Anfrage</tc:token>
+      <tc:token ID="w3b4">zu</tc:token>
+      <tc:token ID="w3b5">Grunde</tc:token>
+      <tc:token ID="w3b6">liegenden</tc:token>
+      <tc:token ID="w3b7">Zusammenstellung</tc:token>
+      <tc:token ID="w3b8">von</tc:token>
+      <tc:token ID="w3b9">Kollektionen</tc:token>
+      <tc:token ID="w3ba">werden</tc:token>
+      <tc:token ID="w3bb">die</tc:token>
+      <tc:token ID="w3bc">Daten</tc:token>
+      <tc:token ID="w3bd">zusammengeführt</tc:token>
+      <tc:token ID="w3be">und</tc:token>
+      <tc:token ID="w3bf">integriert</tc:token>
+      <tc:token ID="w3c0">.</tc:token>
+      <tc:token ID="w3c1">Die</tc:token>
+      <tc:token ID="w3c2">generische</tc:token>
+      <tc:token ID="w3c3">Suche</tc:token>
+      <tc:token ID="w3c4">beschreibt</tc:token>
+      <tc:token ID="w3c5">einen</tc:token>
+      <tc:token ID="w3c6">im</tc:token>
+      <tc:token ID="w3c7">Rahmen</tc:token>
+      <tc:token ID="w3c8">des</tc:token>
+      <tc:token ID="w3c9">DARIAH-DE</tc:token>
+      <tc:token ID="w3ca">Projektes</tc:token>
+      <tc:token ID="w3cb">entwickelten</tc:token>
+      <tc:token ID="w3cc">Dienst</tc:token>
+      <tc:token ID="w3cd">,</tc:token>
+      <tc:token ID="w3ce">welcher</tc:token>
+      <tc:token ID="w3cf">im</tc:token>
+      <tc:token ID="w3d0">Hinblick</tc:token>
+      <tc:token ID="w3d1">auf</tc:token>
+      <tc:token ID="w3d2">seine</tc:token>
+      <tc:token ID="w3d3">Datenbasis</tc:token>
+      <tc:token ID="w3d4">auf</tc:token>
+      <tc:token ID="w3d5">die</tc:token>
+      <tc:token ID="w3d6">Einträge</tc:token>
+      <tc:token ID="w3d7">der</tc:token>
+      <tc:token ID="w3d8">DARIAH-DE</tc:token>
+      <tc:token ID="w3d9">Collection</tc:token>
+      <tc:token ID="w3da">Registry</tc:token>
+      <tc:token ID="w3db">zurückgreift</tc:token>
+      <tc:token ID="w3dc">(</tc:token>
+      <tc:token ID="w3dd">Plutte</tc:token>
+      <tc:token ID="w3de">et</tc:token>
+      <tc:token ID="w3df">al.</tc:token>
+      <tc:token ID="w3e0">2014</tc:token>
+      <tc:token ID="w3e1">)</tc:token>
+      <tc:token ID="w3e2">und</tc:token>
+      <tc:token ID="w3e3">registrierten</tc:token>
+      <tc:token ID="w3e4">Benutzern</tc:token>
+      <tc:token ID="w3e5">die</tc:token>
+      <tc:token ID="w3e6">Aufnahme</tc:token>
+      <tc:token ID="w3e7">weiterer</tc:token>
+      <tc:token ID="w3e8">Datenquellen</tc:token>
+      <tc:token ID="w3e9">erlaubt</tc:token>
+      <tc:token ID="w3ea">.</tc:token>
+      <tc:token ID="w3eb">Neben</tc:token>
+      <tc:token ID="w3ec">der</tc:token>
+      <tc:token ID="w3ed">Assoziation</tc:token>
+      <tc:token ID="w3ee">von</tc:token>
+      <tc:token ID="w3ef">Schemata</tc:token>
+      <tc:token ID="w3f0">als</tc:token>
+      <tc:token ID="w3f1">wesentlicher</tc:token>
+      <tc:token ID="w3f2">Teilaspekt</tc:token>
+      <tc:token ID="w3f3">(</tc:token>
+      <tc:token ID="w3f4">Gradl</tc:token>
+      <tc:token ID="w3f5">/</tc:token>
+      <tc:token ID="w3f6">Henrich</tc:token>
+      <tc:token ID="w3f7">2014</tc:token>
+      <tc:token ID="w3f8">)</tc:token>
+      <tc:token ID="w3f9">bildet</tc:token>
+      <tc:token ID="w3fa">die</tc:token>
+      <tc:token ID="w3fb">Möglichkeit</tc:token>
+      <tc:token ID="w3fc">der</tc:token>
+      <tc:token ID="w3fd">Auswahl</tc:token>
+      <tc:token ID="w3fe">und</tc:token>
+      <tc:token ID="w3ff">Gruppierung</tc:token>
+      <tc:token ID="w400">relevanter</tc:token>
+      <tc:token ID="w401">Kollektionen</tc:token>
+      <tc:token ID="w402">im</tc:token>
+      <tc:token ID="w403">Rahmen</tc:token>
+      <tc:token ID="w404">der</tc:token>
+      <tc:token ID="w405">generischen</tc:token>
+      <tc:token ID="w406">Suche</tc:token>
+      <tc:token ID="w407">(</tc:token>
+      <tc:token ID="w408">als</tc:token>
+      <tc:token ID="w409">myCollections</tc:token>
+      <tc:token ID="w40a">)</tc:token>
+      <tc:token ID="w40b">die</tc:token>
+      <tc:token ID="w40c">Basis</tc:token>
+      <tc:token ID="w40d">für</tc:token>
+      <tc:token ID="w40e">die</tc:token>
+      <tc:token ID="w40f">Erstellung</tc:token>
+      <tc:token ID="w410">angepasster</tc:token>
+      <tc:token ID="w411">Suchlösungen</tc:token>
+      <tc:token ID="w412">.</tc:token>
+      <tc:token ID="w413">Der</tc:token>
+      <tc:token ID="w414">Bildschirmausschnitt</tc:token>
+      <tc:token ID="w415">zeigt</tc:token>
+      <tc:token ID="w416">exemplarisch</tc:token>
+      <tc:token ID="w417">drei</tc:token>
+      <tc:token ID="w418">solcher</tc:token>
+      <tc:token ID="w419">myCollections</tc:token>
+      <tc:token ID="w41a">und</tc:token>
+      <tc:token ID="w41b">verdeutlicht</tc:token>
+      <tc:token ID="w41c">die</tc:token>
+      <tc:token ID="w41d">derzeit</tc:token>
+      <tc:token ID="w41e">implementierte</tc:token>
+      <tc:token ID="w41f">Funktionalität</tc:token>
+      <tc:token ID="w420">:</tc:token>
+      <tc:token ID="w421">Anknüpfend</tc:token>
+      <tc:token ID="w422">an</tc:token>
+      <tc:token ID="w423">den</tc:token>
+      <tc:token ID="w424">eingeführten</tc:token>
+      <tc:token ID="w425">Anwendungsfall</tc:token>
+      <tc:token ID="w426">der</tc:token>
+      <tc:token ID="w427">Judaica-Suchmaschine</tc:token>
+      <tc:token ID="w428">wird</tc:token>
+      <tc:token ID="w429">der</tc:token>
+      <tc:token ID="w42a">Zusammenhang</tc:token>
+      <tc:token ID="w42b">zwischen</tc:token>
+      <tc:token ID="w42c">der</tc:token>
+      <tc:token ID="w42d">generischen</tc:token>
+      <tc:token ID="w42e">Suche</tc:token>
+      <tc:token ID="w42f">von</tc:token>
+      <tc:token ID="w430">DARIAH-DE</tc:token>
+      <tc:token ID="w431">und</tc:token>
+      <tc:token ID="w432">forschungsspezifischen</tc:token>
+      <tc:token ID="w433">Suchlösungen</tc:token>
+      <tc:token ID="w434">abgebildet</tc:token>
+      <tc:token ID="w435">durch</tc:token>
+      <tc:token ID="w436">die</tc:token>
+      <tc:token ID="w437">Idee</tc:token>
+      <tc:token ID="w438">der</tc:token>
+      <tc:token ID="w439">benutzerdefinierten</tc:token>
+      <tc:token ID="w43a">Zusammenstellung</tc:token>
+      <tc:token ID="w43b">von</tc:token>
+      <tc:token ID="w43c">Kollektionen</tc:token>
+      <tc:token ID="w43d">:</tc:token>
+      <tc:token ID="w43e">Wird</tc:token>
+      <tc:token ID="w43f">eine</tc:token>
+      <tc:token ID="w440">myCollection</tc:token>
+      <tc:token ID="w441">-</tc:token>
+      <tc:token ID="w442">wie</tc:token>
+      <tc:token ID="w443">in</tc:token>
+      <tc:token ID="w444">der</tc:token>
+      <tc:token ID="w445">Abbildung</tc:token>
+      <tc:token ID="w446">unten</tc:token>
+      <tc:token ID="w447">dargestellt</tc:token>
+      <tc:token ID="w448">-</tc:token>
+      <tc:token ID="w449">als</tc:token>
+      <tc:token ID="w44a">Branded</tc:token>
+      <tc:token ID="w44b">Search</tc:token>
+      <tc:token ID="w44c">ausgezeichnet</tc:token>
+      <tc:token ID="w44d">,</tc:token>
+      <tc:token ID="w44e">so</tc:token>
+      <tc:token ID="w44f">wird</tc:token>
+      <tc:token ID="w450">dadurch</tc:token>
+      <tc:token ID="w451">eine</tc:token>
+      <tc:token ID="w452">eigene</tc:token>
+      <tc:token ID="w453">Suchoberfläche</tc:token>
+      <tc:token ID="w454">veröffentlicht</tc:token>
+      <tc:token ID="w455">,</tc:token>
+      <tc:token ID="w456">welche</tc:token>
+      <tc:token ID="w457">sowohl</tc:token>
+      <tc:token ID="w458">optisch</tc:token>
+      <tc:token ID="w459">als</tc:token>
+      <tc:token ID="w45a">auch</tc:token>
+      <tc:token ID="w45b">inhaltlich</tc:token>
+      <tc:token ID="w45c">an</tc:token>
+      <tc:token ID="w45d">spezifische</tc:token>
+      <tc:token ID="w45e">Bedürfnisse</tc:token>
+      <tc:token ID="w45f">angepasst</tc:token>
+      <tc:token ID="w460">und</tc:token>
+      <tc:token ID="w461">von</tc:token>
+      <tc:token ID="w462">der</tc:token>
+      <tc:token ID="w463">eigentlichen</tc:token>
+      <tc:token ID="w464">generischen</tc:token>
+      <tc:token ID="w465">Suche</tc:token>
+      <tc:token ID="w466">abgegrenzt</tc:token>
+      <tc:token ID="w467">ist</tc:token>
+      <tc:token ID="w468">.</tc:token>
+      <tc:token ID="w469">Die</tc:token>
+      <tc:token ID="w46a">folgenden</tc:token>
+      <tc:token ID="w46b">Bildschirmausschnitte</tc:token>
+      <tc:token ID="w46c">verdeutlichen</tc:token>
+      <tc:token ID="w46d">insbesondere</tc:token>
+      <tc:token ID="w46e">die</tc:token>
+      <tc:token ID="w46f">optische</tc:token>
+      <tc:token ID="w470">Abgrenzung</tc:token>
+      <tc:token ID="w471">durch</tc:token>
+      <tc:token ID="w472">konfigurierbare</tc:token>
+      <tc:token ID="w473">Farbgebung</tc:token>
+      <tc:token ID="w474">und</tc:token>
+      <tc:token ID="w475">die</tc:token>
+      <tc:token ID="w476">Verwendung</tc:token>
+      <tc:token ID="w477">von</tc:token>
+      <tc:token ID="w478">Such-</tc:token>
+      <tc:token ID="w479">und</tc:token>
+      <tc:token ID="w47a">Organisationslogos</tc:token>
+      <tc:token ID="w47b">.</tc:token>
+      <tc:token ID="w47c">Insbesondere</tc:token>
+      <tc:token ID="w47d">der</tc:token>
+      <tc:token ID="w47e">Vergleich</tc:token>
+      <tc:token ID="w47f">der</tc:token>
+      <tc:token ID="w480">Wordclouds</tc:token>
+      <tc:token ID="w481">der</tc:token>
+      <tc:token ID="w482">Startseiten</tc:token>
+      <tc:token ID="w483">von</tc:token>
+      <tc:token ID="w484">generischer</tc:token>
+      <tc:token ID="w485">Suche</tc:token>
+      <tc:token ID="w486">und</tc:token>
+      <tc:token ID="w487">Judaica-Suchmaschine</tc:token>
+      <tc:token ID="w488">(</tc:token>
+      <tc:token ID="w489">Gradl</tc:token>
+      <tc:token ID="w48a">/</tc:token>
+      <tc:token ID="w48b">Lordick</tc:token>
+      <tc:token ID="w48c">2015-2016</tc:token>
+      <tc:token ID="w48d">)</tc:token>
+      <tc:token ID="w48e">deuten</tc:token>
+      <tc:token ID="w48f">jedoch</tc:token>
+      <tc:token ID="w490">die</tc:token>
+      <tc:token ID="w491">jeweils</tc:token>
+      <tc:token ID="w492">unterschiedliche</tc:token>
+      <tc:token ID="w493">,</tc:token>
+      <tc:token ID="w494">zu</tc:token>
+      <tc:token ID="w495">Grunde</tc:token>
+      <tc:token ID="w496">liegende</tc:token>
+      <tc:token ID="w497">Datenbasis</tc:token>
+      <tc:token ID="w498">an</tc:token>
+      <tc:token ID="w499">:</tc:token>
+      <tc:token ID="w49a">Die</tc:token>
+      <tc:token ID="w49b">in</tc:token>
+      <tc:token ID="w49c">einer</tc:token>
+      <tc:token ID="w49d">Branded</tc:token>
+      <tc:token ID="w49e">Search</tc:token>
+      <tc:token ID="w49f">angebotenen</tc:token>
+      <tc:token ID="w4a0">Kollektionen</tc:token>
+      <tc:token ID="w4a1">spiegeln</tc:token>
+      <tc:token ID="w4a2">bei</tc:token>
+      <tc:token ID="w4a3">sämtlichen</tc:token>
+      <tc:token ID="w4a4">Such-</tc:token>
+      <tc:token ID="w4a5">,</tc:token>
+      <tc:token ID="w4a6">Analyse-</tc:token>
+      <tc:token ID="w4a7">und</tc:token>
+      <tc:token ID="w4a8">Visualisierungaufgaben</tc:token>
+      <tc:token ID="w4a9">die</tc:token>
+      <tc:token ID="w4aa">von</tc:token>
+      <tc:token ID="w4ab">den</tc:token>
+      <tc:token ID="w4ac">Erstellern</tc:token>
+      <tc:token ID="w4ad">der</tc:token>
+      <tc:token ID="w4ae">Suche</tc:token>
+      <tc:token ID="w4af">getroffene</tc:token>
+      <tc:token ID="w4b0">Kollektionsauswahl</tc:token>
+      <tc:token ID="w4b1">wider</tc:token>
+      <tc:token ID="w4b2">.</tc:token>
+      <tc:token ID="w4b3">Im</tc:token>
+      <tc:token ID="w4b4">Fall</tc:token>
+      <tc:token ID="w4b5">der</tc:token>
+      <tc:token ID="w4b6">Veröffentlichung</tc:token>
+      <tc:token ID="w4b7">einer</tc:token>
+      <tc:token ID="w4b8">Branded</tc:token>
+      <tc:token ID="w4b9">Search</tc:token>
+      <tc:token ID="w4ba">bleibt</tc:token>
+      <tc:token ID="w4bb">diese</tc:token>
+      <tc:token ID="w4bc">auch</tc:token>
+      <tc:token ID="w4bd">als</tc:token>
+      <tc:token ID="w4be">zugreifbare</tc:token>
+      <tc:token ID="w4bf">myCollection</tc:token>
+      <tc:token ID="w4c0">für</tc:token>
+      <tc:token ID="w4c1">berechtigte</tc:token>
+      <tc:token ID="w4c2">Benutzer</tc:token>
+      <tc:token ID="w4c3">erhalten</tc:token>
+      <tc:token ID="w4c4">und</tc:token>
+      <tc:token ID="w4c5">kann</tc:token>
+      <tc:token ID="w4c6">im</tc:token>
+      <tc:token ID="w4c7">Hinblick</tc:token>
+      <tc:token ID="w4c8">auf</tc:token>
+      <tc:token ID="w4c9">die</tc:token>
+      <tc:token ID="w4ca">Kollektionsauswahl</tc:token>
+      <tc:token ID="w4cb">und</tc:token>
+      <tc:token ID="w4cc">die</tc:token>
+      <tc:token ID="w4cd">Assoziation</tc:token>
+      <tc:token ID="w4ce">der</tc:token>
+      <tc:token ID="w4cf">Schemata</tc:token>
+      <tc:token ID="w4d0">verändert</tc:token>
+      <tc:token ID="w4d1">werden</tc:token>
+      <tc:token ID="w4d2">─</tc:token>
+      <tc:token ID="w4d3">mit</tc:token>
+      <tc:token ID="w4d4">unmittelbaren</tc:token>
+      <tc:token ID="w4d5">Auswirkungen</tc:token>
+      <tc:token ID="w4d6">auf</tc:token>
+      <tc:token ID="w4d7">die</tc:token>
+      <tc:token ID="w4d8">entsprechende</tc:token>
+      <tc:token ID="w4d9">Branded</tc:token>
+      <tc:token ID="w4da">Search</tc:token>
+      <tc:token ID="w4db">.</tc:token>
+      <tc:token ID="w4dc">Von</tc:token>
+      <tc:token ID="w4dd">technischen</tc:token>
+      <tc:token ID="w4de">Implementierungen</tc:token>
+      <tc:token ID="w4df">an</tc:token>
+      <tc:token ID="w4e0">der</tc:token>
+      <tc:token ID="w4e1">Basis</tc:token>
+      <tc:token ID="w4e2">der</tc:token>
+      <tc:token ID="w4e3">generischen</tc:token>
+      <tc:token ID="w4e4">Suche</tc:token>
+      <tc:token ID="w4e5">,</tc:token>
+      <tc:token ID="w4e6">z.</tc:token>
+      <tc:token ID="w4e7">B.</tc:token>
+      <tc:token ID="w4e8">der</tc:token>
+      <tc:token ID="w4e9">Anbindung</tc:token>
+      <tc:token ID="w4ea">weiterer</tc:token>
+      <tc:token ID="w4eb">Quellenarten</tc:token>
+      <tc:token ID="w4ec">wie</tc:token>
+      <tc:token ID="w4ed">Wikipedia</tc:token>
+      <tc:token ID="w4ee">können</tc:token>
+      <tc:token ID="w4ef">schließlich</tc:token>
+      <tc:token ID="w4f0">sämtliche</tc:token>
+      <tc:token ID="w4f1">eingerichteten</tc:token>
+      <tc:token ID="w4f2">Branded</tc:token>
+      <tc:token ID="w4f3">Searches</tc:token>
+      <tc:token ID="w4f4">profitieren</tc:token>
+      <tc:token ID="w4f5">,</tc:token>
+      <tc:token ID="w4f6">sofern</tc:token>
+      <tc:token ID="w4f7">dies</tc:token>
+      <tc:token ID="w4f8">durch</tc:token>
+      <tc:token ID="w4f9">die</tc:token>
+      <tc:token ID="w4fa">jeweiligen</tc:token>
+      <tc:token ID="w4fb">Forscher</tc:token>
+      <tc:token ID="w4fc">gewünscht</tc:token>
+      <tc:token ID="w4fd">wird</tc:token>
+      <tc:token ID="w4fe">.</tc:token>
+      <tc:token ID="w4ff">Ein</tc:token>
+      <tc:token ID="w500">ausgeprägt</tc:token>
+      <tc:token ID="w501">generischer</tc:token>
+      <tc:token ID="w502">Ansatz</tc:token>
+      <tc:token ID="w503">muss</tc:token>
+      <tc:token ID="w504">kein</tc:token>
+      <tc:token ID="w505">Gegensatz</tc:token>
+      <tc:token ID="w506">zu</tc:token>
+      <tc:token ID="w507">den</tc:token>
+      <tc:token ID="w508">in</tc:token>
+      <tc:token ID="w509">den</tc:token>
+      <tc:token ID="w50a">Geisteswissenschaften</tc:token>
+      <tc:token ID="w50b">vorherrschenden</tc:token>
+      <tc:token ID="w50c">individuellen</tc:token>
+      <tc:token ID="w50d">Fragestellungen</tc:token>
+      <tc:token ID="w50e">und</tc:token>
+      <tc:token ID="w50f">Forschungsansätzen</tc:token>
+      <tc:token ID="w510">sein</tc:token>
+      <tc:token ID="w511">.</tc:token>
+      <tc:token ID="w512">Indem</tc:token>
+      <tc:token ID="w513">sie</tc:token>
+      <tc:token ID="w514">entsprechende</tc:token>
+      <tc:token ID="w515">Freiheitsgrade</tc:token>
+      <tc:token ID="w516">,</tc:token>
+      <tc:token ID="w517">kreatives</tc:token>
+      <tc:token ID="w518">und</tc:token>
+      <tc:token ID="w519">kollaboratives</tc:token>
+      <tc:token ID="w51a">Datenmanagement</tc:token>
+      <tc:token ID="w51b">anbietet</tc:token>
+      <tc:token ID="w51c">,</tc:token>
+      <tc:token ID="w51d">erlaubt</tc:token>
+      <tc:token ID="w51e">die</tc:token>
+      <tc:token ID="w51f">generische</tc:token>
+      <tc:token ID="w520">Suche</tc:token>
+      <tc:token ID="w521">ihren</tc:token>
+      <tc:token ID="w522">Nutzern</tc:token>
+      <tc:token ID="w523">die</tc:token>
+      <tc:token ID="w524">Erstellung</tc:token>
+      <tc:token ID="w525">eigener</tc:token>
+      <tc:token ID="w526">,</tc:token>
+      <tc:token ID="w527">jeweils</tc:token>
+      <tc:token ID="w528">individuell</tc:token>
+      <tc:token ID="w529">ausgelegter</tc:token>
+      <tc:token ID="w52a">Suchmaschinen</tc:token>
+      <tc:token ID="w52b">.</tc:token>
+      <tc:token ID="w52c">Es</tc:token>
+      <tc:token ID="w52d">ist</tc:token>
+      <tc:token ID="w52e">das</tc:token>
+      <tc:token ID="w52f">Knowhow</tc:token>
+      <tc:token ID="w530">der</tc:token>
+      <tc:token ID="w531">Forschenden</tc:token>
+      <tc:token ID="w532">,</tc:token>
+      <tc:token ID="w533">das</tc:token>
+      <tc:token ID="w534">die</tc:token>
+      <tc:token ID="w535">Relevanz</tc:token>
+      <tc:token ID="w536">der</tc:token>
+      <tc:token ID="w537">Daten</tc:token>
+      <tc:token ID="w538">,</tc:token>
+      <tc:token ID="w539">die</tc:token>
+      <tc:token ID="w53a">sie</tc:token>
+      <tc:token ID="w53b">zusammenstellen</tc:token>
+      <tc:token ID="w53c">,</tc:token>
+      <tc:token ID="w53d">filtern</tc:token>
+      <tc:token ID="w53e">,</tc:token>
+      <tc:token ID="w53f">teilen</tc:token>
+      <tc:token ID="w540">,</tc:token>
+      <tc:token ID="w541">auch</tc:token>
+      <tc:token ID="w542">ad-hoc</tc:token>
+      <tc:token ID="w543">zum</tc:token>
+      <tc:token ID="w544">Zwecke</tc:token>
+      <tc:token ID="w545">der</tc:token>
+      <tc:token ID="w546">Recherche</tc:token>
+      <tc:token ID="w547">bereitstellen</tc:token>
+      <tc:token ID="w548">,</tc:token>
+      <tc:token ID="w549">ausmacht</tc:token>
+      <tc:token ID="w54a">.</tc:token>
+      <tc:token ID="w54b">Ein</tc:token>
+      <tc:token ID="w54c">solches</tc:token>
+      <tc:token ID="w54d">Framework</tc:token>
+      <tc:token ID="w54e">,</tc:token>
+      <tc:token ID="w54f">verbunden</tc:token>
+      <tc:token ID="w550">mit</tc:token>
+      <tc:token ID="w551">der</tc:token>
+      <tc:token ID="w552">fachspezifischen</tc:token>
+      <tc:token ID="w553">Kenntnis</tc:token>
+      <tc:token ID="w554">der</tc:token>
+      <tc:token ID="w555">Daten</tc:token>
+      <tc:token ID="w556">ist</tc:token>
+      <tc:token ID="w557">eine</tc:token>
+      <tc:token ID="w558">gute</tc:token>
+      <tc:token ID="w559">Basis</tc:token>
+      <tc:token ID="w55a">für</tc:token>
+      <tc:token ID="w55b">überraschende</tc:token>
+      <tc:token ID="w55c">Funde</tc:token>
+      <tc:token ID="w55d">und</tc:token>
+      <tc:token ID="w55e">das</tc:token>
+      <tc:token ID="w55f">Aufspüren</tc:token>
+      <tc:token ID="w560">unerwarteter</tc:token>
+      <tc:token ID="w561">Zusammenhänge</tc:token>
+      <tc:token ID="w562">.</tc:token>
+      <tc:token ID="w563">Einleitung</tc:token>
+      <tc:token ID="w564">Die</tc:token>
+      <tc:token ID="w565">Judaica-Suchmaschine</tc:token>
+      <tc:token ID="w566">als</tc:token>
+      <tc:token ID="w567">Anwendungsfall</tc:token>
+      <tc:token ID="w568">Umsetzung</tc:token>
+      <tc:token ID="w569">im</tc:token>
+      <tc:token ID="w56a">Rahmen</tc:token>
+      <tc:token ID="w56b">der</tc:token>
+      <tc:token ID="w56c">generischen</tc:token>
+      <tc:token ID="w56d">Suche</tc:token>
+      <tc:token ID="w56e">Hintergrund</tc:token>
+      <tc:token ID="w56f">des</tc:token>
+      <tc:token ID="w570">generischen</tc:token>
+      <tc:token ID="w571">Konzepts</tc:token>
+      <tc:token ID="w572">Durch</tc:token>
+      <tc:token ID="w573">die</tc:token>
+      <tc:token ID="w574">semantische</tc:token>
+      <tc:token ID="w575">Assoziation</tc:token>
+      <tc:token ID="w576">von</tc:token>
+      <tc:token ID="w577">Kollektionen</tc:token>
+      <tc:token ID="w578">und</tc:token>
+      <tc:token ID="w579">darin</tc:token>
+      <tc:token ID="w57a">verwendeten</tc:token>
+      <tc:token ID="w57b">Schemata</tc:token>
+      <tc:token ID="w57c">durch</tc:token>
+      <tc:token ID="w57d">fachwissenschaftliche</tc:token>
+      <tc:token ID="w57e">Experten</tc:token>
+      <tc:token ID="w57f">können</tc:token>
+      <tc:token ID="w580">integrative</tc:token>
+      <tc:token ID="w581">Sichten</tc:token>
+      <tc:token ID="w582">generiert</tc:token>
+      <tc:token ID="w583">werden</tc:token>
+      <tc:token ID="w584">,</tc:token>
+      <tc:token ID="w585">die</tc:token>
+      <tc:token ID="w586">den</tc:token>
+      <tc:token ID="w587">Anforderungen</tc:token>
+      <tc:token ID="w588">konkreter</tc:token>
+      <tc:token ID="w589">Forschungsfragen</tc:token>
+      <tc:token ID="w58a">entsprechen</tc:token>
+      <tc:token ID="w58b">.</tc:token>
+      <tc:token ID="w58c">Dies</tc:token>
+      <tc:token ID="w58d">wird</tc:token>
+      <tc:token ID="w58e">insbesondere</tc:token>
+      <tc:token ID="w58f">dadurch</tc:token>
+      <tc:token ID="w590">erreicht</tc:token>
+      <tc:token ID="w591">,</tc:token>
+      <tc:token ID="w592">dass</tc:token>
+      <tc:token ID="w593">nicht</tc:token>
+      <tc:token ID="w594">technisch</tc:token>
+      <tc:token ID="w595">motivierte</tc:token>
+      <tc:token ID="w596">Integrationsziele</tc:token>
+      <tc:token ID="w597">wie</tc:token>
+      <tc:token ID="w598">die</tc:token>
+      <tc:token ID="w599">Vollständigkeit</tc:token>
+      <tc:token ID="w59a">und</tc:token>
+      <tc:token ID="w59b">Korrektheit</tc:token>
+      <tc:token ID="w59c">eines</tc:token>
+      <tc:token ID="w59d">Integrationsschemas</tc:token>
+      <tc:token ID="w59e">(</tc:token>
+      <tc:token ID="w59f">Batini</tc:token>
+      <tc:token ID="w5a0">et</tc:token>
+      <tc:token ID="w5a1">al.</tc:token>
+      <tc:token ID="w5a2">1986</tc:token>
+      <tc:token ID="w5a3">)</tc:token>
+      <tc:token ID="w5a4">im</tc:token>
+      <tc:token ID="w5a5">Vordergrund</tc:token>
+      <tc:token ID="w5a6">stehen</tc:token>
+      <tc:token ID="w5a7">,</tc:token>
+      <tc:token ID="w5a8">sondern</tc:token>
+      <tc:token ID="w5a9">disziplinspezifische</tc:token>
+      <tc:token ID="w5aa">und</tc:token>
+      <tc:token ID="w5ab">auch</tc:token>
+      <tc:token ID="w5ac">konfliktäre</tc:token>
+      <tc:token ID="w5ad">Zusammenhänge</tc:token>
+      <tc:token ID="w5ae">modelliert</tc:token>
+      <tc:token ID="w5af">werden</tc:token>
+      <tc:token ID="w5b0">können</tc:token>
+      <tc:token ID="w5b1">.</tc:token>
+      <tc:token ID="w5b2">Kohärente</tc:token>
+      <tc:token ID="w5b3">Bereiche</tc:token>
+      <tc:token ID="w5b4">mit</tc:token>
+      <tc:token ID="w5b5">eng</tc:token>
+      <tc:token ID="w5b6">assozierten</tc:token>
+      <tc:token ID="w5b7">Schemata</tc:token>
+      <tc:token ID="w5b8">S</tc:token>
+      <tc:token ID="w5b9">und</tc:token>
+      <tc:token ID="w5ba">Kollektionen</tc:token>
+      <tc:token ID="w5bb">werden</tc:token>
+      <tc:token ID="w5bc">in</tc:token>
+      <tc:token ID="w5bd">obiger</tc:token>
+      <tc:token ID="w5be">Abbildung</tc:token>
+      <tc:token ID="w5bf">durch</tc:token>
+      <tc:token ID="w5c0">semantische</tc:token>
+      <tc:token ID="w5c1">Cluster</tc:token>
+      <tc:token ID="w5c2">widergespiegelt</tc:token>
+      <tc:token ID="w5c3">und</tc:token>
+      <tc:token ID="w5c4">bilden</tc:token>
+      <tc:token ID="w5c5">die</tc:token>
+      <tc:token ID="w5c6">Voraussetzung</tc:token>
+      <tc:token ID="w5c7">für</tc:token>
+      <tc:token ID="w5c8">spezifische</tc:token>
+      <tc:token ID="w5c9">Tiefensuchen</tc:token>
+      <tc:token ID="w5ca">.</tc:token>
+      <tc:token ID="w5cb">Für</tc:token>
+      <tc:token ID="w5cc">die</tc:token>
+      <tc:token ID="w5cd">übergreifende</tc:token>
+      <tc:token ID="w5ce">Breitensuche</tc:token>
+      <tc:token ID="w5cf">werden</tc:token>
+      <tc:token ID="w5d0">wichtige</tc:token>
+      <tc:token ID="w5d1">Schemata</tc:token>
+      <tc:token ID="w5d2">der</tc:token>
+      <tc:token ID="w5d3">einzelnen</tc:token>
+      <tc:token ID="w5d4">Cluster</tc:token>
+      <tc:token ID="w5d5">(</tc:token>
+      <tc:token ID="w5d6">repräsentiert</tc:token>
+      <tc:token ID="w5d7">als</tc:token>
+      <tc:token ID="w5d8">S3</tc:token>
+      <tc:token ID="w5d9">,</tc:token>
+      <tc:token ID="w5da">S5</tc:token>
+      <tc:token ID="w5db">und</tc:token>
+      <tc:token ID="w5dc">S8</tc:token>
+      <tc:token ID="w5dd">)</tc:token>
+      <tc:token ID="w5de">mit</tc:token>
+      <tc:token ID="w5df">generischen</tc:token>
+      <tc:token ID="w5e0">Schemata</tc:token>
+      <tc:token ID="w5e1">,</tc:token>
+      <tc:token ID="w5e2">wie</tc:token>
+      <tc:token ID="w5e3">z.</tc:token>
+      <tc:token ID="w5e4">B.</tc:token>
+      <tc:token ID="w5e5">Dublin</tc:token>
+      <tc:token ID="w5e6">Core</tc:token>
+      <tc:token ID="w5e7">-</tc:token>
+      <tc:token ID="w5e8">in</tc:token>
+      <tc:token ID="w5e9">der</tc:token>
+      <tc:token ID="w5ea">Abbildung</tc:token>
+      <tc:token ID="w5eb">symbolisiert</tc:token>
+      <tc:token ID="w5ec">durch</tc:token>
+      <tc:token ID="w5ed">S10</tc:token>
+      <tc:token ID="w5ee">-</tc:token>
+      <tc:token ID="w5ef">assoziiert</tc:token>
+      <tc:token ID="w5f0">.</tc:token>
+      <tc:token ID="w5f1">Abbildung</tc:token>
+      <tc:token ID="w5f2">der</tc:token>
+      <tc:token ID="w5f3">Cluster</tc:token>
+      <tc:token ID="w5f4">in</tc:token>
+      <tc:token ID="w5f5">der</tc:token>
+      <tc:token ID="w5f6">generischen</tc:token>
+      <tc:token ID="w5f7">Suche</tc:token>
+      <tc:token ID="w5f8">Einträge</tc:token>
+      <tc:token ID="w5f9">von</tc:token>
+      <tc:token ID="w5fa">myCollections</tc:token>
+      <tc:token ID="w5fb">können</tc:token>
+      <tc:token ID="w5fc">durch</tc:token>
+      <tc:token ID="w5fd">authentifizierte</tc:token>
+      <tc:token ID="w5fe">Anwender</tc:token>
+      <tc:token ID="w5ff">angelegt</tc:token>
+      <tc:token ID="w600">werden</tc:token>
+      <tc:token ID="w601">und</tc:token>
+      <tc:token ID="w602">definieren</tc:token>
+      <tc:token ID="w603">eine</tc:token>
+      <tc:token ID="w604">Zusammenstellung</tc:token>
+      <tc:token ID="w605">einzelner</tc:token>
+      <tc:token ID="w606">Kollektionen</tc:token>
+      <tc:token ID="w607">.</tc:token>
+      <tc:token ID="w608">Diese</tc:token>
+      <tc:token ID="w609">myCollections</tc:token>
+      <tc:token ID="w60a">erlauben</tc:token>
+      <tc:token ID="w60b">eine</tc:token>
+      <tc:token ID="w60c">Schnellauswahl</tc:token>
+      <tc:token ID="w60d">von</tc:token>
+      <tc:token ID="w60e">Kollektionen</tc:token>
+      <tc:token ID="w60f">bei</tc:token>
+      <tc:token ID="w610">der</tc:token>
+      <tc:token ID="w611">Ausführung</tc:token>
+      <tc:token ID="w612">von</tc:token>
+      <tc:token ID="w613">Suchanfragen</tc:token>
+      <tc:token ID="w614">-</tc:token>
+      <tc:token ID="w615">sowohl</tc:token>
+      <tc:token ID="w616">im</tc:token>
+      <tc:token ID="w617">Rahmen</tc:token>
+      <tc:token ID="w618">des</tc:token>
+      <tc:token ID="w619">Benutzerinterfaces</tc:token>
+      <tc:token ID="w61a">,</tc:token>
+      <tc:token ID="w61b">als</tc:token>
+      <tc:token ID="w61c">auch</tc:token>
+      <tc:token ID="w61d">in</tc:token>
+      <tc:token ID="w61e">Form</tc:token>
+      <tc:token ID="w61f">der</tc:token>
+      <tc:token ID="w620">REST-basierten</tc:token>
+      <tc:token ID="w621">Schnittstelle</tc:token>
+      <tc:token ID="w622">.</tc:token>
+      <tc:token ID="w623">Möchte</tc:token>
+      <tc:token ID="w624">der</tc:token>
+      <tc:token ID="w625">Benutzer</tc:token>
+      <tc:token ID="w626">eine</tc:token>
+      <tc:token ID="w627">myCollection</tc:token>
+      <tc:token ID="w628">(</tc:token>
+      <tc:token ID="w629">z.</tc:token>
+      <tc:token ID="w62a">B.</tc:token>
+      <tc:token ID="w62b">im</tc:token>
+      <tc:token ID="w62c">Rahmen</tc:token>
+      <tc:token ID="w62d">eines</tc:token>
+      <tc:token ID="w62e">gemeinsamen</tc:token>
+      <tc:token ID="w62f">Forschungsinteresses</tc:token>
+      <tc:token ID="w630">)</tc:token>
+      <tc:token ID="w631">teilen</tc:token>
+      <tc:token ID="w632">,</tc:token>
+      <tc:token ID="w633">so</tc:token>
+      <tc:token ID="w634">können</tc:token>
+      <tc:token ID="w635">Freigaben</tc:token>
+      <tc:token ID="w636">für</tc:token>
+      <tc:token ID="w637">weitere</tc:token>
+      <tc:token ID="w638">Benutzer</tc:token>
+      <tc:token ID="w639">oder</tc:token>
+      <tc:token ID="w63a">DARIAH</tc:token>
+      <tc:token ID="w63b">Gruppen</tc:token>
+      <tc:token ID="w63c">erteilt</tc:token>
+      <tc:token ID="w63d">werden</tc:token>
+      <tc:token ID="w63e">.</tc:token>
+      <tc:token ID="w63f">Spezifischer</tc:token>
+      <tc:token ID="w640">Zugang</tc:token>
+      <tc:token ID="w641">in</tc:token>
+      <tc:token ID="w642">Form</tc:token>
+      <tc:token ID="w643">einer</tc:token>
+      <tc:token ID="w644">Branded</tc:token>
+      <tc:token ID="w645">Search</tc:token>
+      <tc:token ID="w646">Ausblick</tc:token>
+      <tc:token ID="w647">Batini</tc:token>
+      <tc:token ID="w648">,</tc:token>
+      <tc:token ID="w649">Carlo</tc:token>
+      <tc:token ID="w64a">/</tc:token>
+      <tc:token ID="w64b">Lenzerini</tc:token>
+      <tc:token ID="w64c">,</tc:token>
+      <tc:token ID="w64d">Maurizio</tc:token>
+      <tc:token ID="w64e">/</tc:token>
+      <tc:token ID="w64f">Navathe</tc:token>
+      <tc:token ID="w650">,</tc:token>
+      <tc:token ID="w651">Shamkant</tc:token>
+      <tc:token ID="w652">Bhalchandra</tc:token>
+      <tc:token ID="w653">(</tc:token>
+      <tc:token ID="w654">1986</tc:token>
+      <tc:token ID="w655">)</tc:token>
+      <tc:token ID="w656">:</tc:token>
+      <tc:token ID="w657">"</tc:token>
+      <tc:token ID="w658">A</tc:token>
+      <tc:token ID="w659">comparative</tc:token>
+      <tc:token ID="w65a">analysis</tc:token>
+      <tc:token ID="w65b">of</tc:token>
+      <tc:token ID="w65c">methodologies</tc:token>
+      <tc:token ID="w65d">for</tc:token>
+      <tc:token ID="w65e">database</tc:token>
+      <tc:token ID="w65f">schema</tc:token>
+      <tc:token ID="w660">integration</tc:token>
+      <tc:token ID="w661">"</tc:token>
+      <tc:token ID="w662">,</tc:token>
+      <tc:token ID="w663">in</tc:token>
+      <tc:token ID="w664">:</tc:token>
+      <tc:token ID="w665">ACM</tc:token>
+      <tc:token ID="w666">Computing</tc:token>
+      <tc:token ID="w667">Surveys</tc:token>
+      <tc:token ID="w668">18</tc:token>
+      <tc:token ID="w669">,</tc:token>
+      <tc:token ID="w66a">4</tc:token>
+      <tc:token ID="w66b">:</tc:token>
+      <tc:token ID="w66c">323–364</tc:token>
+      <tc:token ID="w66d">.</tc:token>
+      <tc:token ID="w66e">Beer</tc:token>
+      <tc:token ID="w66f">,</tc:token>
+      <tc:token ID="w670">Nikolaos</tc:token>
+      <tc:token ID="w671">/</tc:token>
+      <tc:token ID="w672">Herold</tc:token>
+      <tc:token ID="w673">,</tc:token>
+      <tc:token ID="w674">Kristin</tc:token>
+      <tc:token ID="w675">/</tc:token>
+      <tc:token ID="w676">Kolbmann</tc:token>
+      <tc:token ID="w677">,</tc:token>
+      <tc:token ID="w678">Wibke</tc:token>
+      <tc:token ID="w679">/</tc:token>
+      <tc:token ID="w67a">Kollatz</tc:token>
+      <tc:token ID="w67b">,</tc:token>
+      <tc:token ID="w67c">Thomas</tc:token>
+      <tc:token ID="w67d">/</tc:token>
+      <tc:token ID="w67e">Romanello</tc:token>
+      <tc:token ID="w67f">,</tc:token>
+      <tc:token ID="w680">Matteo</tc:token>
+      <tc:token ID="w681">/</tc:token>
+      <tc:token ID="w682">Rose</tc:token>
+      <tc:token ID="w683">,</tc:token>
+      <tc:token ID="w684">Sebastian</tc:token>
+      <tc:token ID="w685">/</tc:token>
+      <tc:token ID="w686">Walkowski</tc:token>
+      <tc:token ID="w687">,</tc:token>
+      <tc:token ID="w688">Niels-Oliver</tc:token>
+      <tc:token ID="w689">(</tc:token>
+      <tc:token ID="w68a">2013</tc:token>
+      <tc:token ID="w68b">)</tc:token>
+      <tc:token ID="w68c">:</tc:token>
+      <tc:token ID="w68d">Recommendations</tc:token>
+      <tc:token ID="w68e">for</tc:token>
+      <tc:token ID="w68f">Interdisciplinary</tc:token>
+      <tc:token ID="w690">Interoperability</tc:token>
+      <tc:token ID="w691">(</tc:token>
+      <tc:token ID="w692">R</tc:token>
+      <tc:token ID="w693">3.3</tc:token>
+      <tc:token ID="w694">.1</tc:token>
+      <tc:token ID="w695">)</tc:token>
+      <tc:token ID="w696">.</tc:token>
+      <tc:token ID="w697">DARIAH-DE</tc:token>
+      <tc:token ID="w698">report</tc:token>
+      <tc:token ID="w699">https://dev2.dariah.eu/wiki/download/attachments/14651583/R3.3.1.pdf</tc:token>
+      <tc:token ID="w69a">?</tc:token>
+      <tc:token ID="w69b">version=1&amp;</tc:token>
+      <tc:token ID="w69c">modificationDate=</tc:token>
+      <tc:token ID="w69d">1366904278298</tc:token>
+      <tc:token ID="w69e">&amp;</tc:token>
+      <tc:token ID="w69f">api=v</tc:token>
+      <tc:token ID="w6a0">2</tc:token>
+      <tc:token ID="w6a1">[</tc:token>
+      <tc:token ID="w6a2">letzter</tc:token>
+      <tc:token ID="w6a3">Zugriff</tc:token>
+      <tc:token ID="w6a4">07.</tc:token>
+      <tc:token ID="w6a5">Februar</tc:token>
+      <tc:token ID="w6a6">2016</tc:token>
+      <tc:token ID="w6a7">]</tc:token>
+      <tc:token ID="w6a8">.</tc:token>
+      <tc:token ID="w6a9">Europeana</tc:token>
+      <tc:token ID="w6aa">Foundation</tc:token>
+      <tc:token ID="w6ab">(</tc:token>
+      <tc:token ID="w6ac">2008-2015</tc:token>
+      <tc:token ID="w6ad">)</tc:token>
+      <tc:token ID="w6ae">:</tc:token>
+      <tc:token ID="w6af">Europeana</tc:token>
+      <tc:token ID="w6b0">Collections</tc:token>
+      <tc:token ID="w6b1">.</tc:token>
+      <tc:token ID="w6b2">Den</tc:token>
+      <tc:token ID="w6b3">Haag</tc:token>
+      <tc:token ID="w6b4">http://www.europeana.eu/portal/</tc:token>
+      <tc:token ID="w6b5">[</tc:token>
+      <tc:token ID="w6b6">letzter</tc:token>
+      <tc:token ID="w6b7">Zugriff</tc:token>
+      <tc:token ID="w6b8">07.</tc:token>
+      <tc:token ID="w6b9">Februar</tc:token>
+      <tc:token ID="w6ba">2016</tc:token>
+      <tc:token ID="w6bb">]</tc:token>
+      <tc:token ID="w6bc">.</tc:token>
+      <tc:token ID="w6bd">Gradl</tc:token>
+      <tc:token ID="w6be">,</tc:token>
+      <tc:token ID="w6bf">Tobias</tc:token>
+      <tc:token ID="w6c0">(</tc:token>
+      <tc:token ID="w6c1">2011-2016</tc:token>
+      <tc:token ID="w6c2">)</tc:token>
+      <tc:token ID="w6c3">:</tc:token>
+      <tc:token ID="w6c4">DARIAH-DE</tc:token>
+      <tc:token ID="w6c5">Generic</tc:token>
+      <tc:token ID="w6c6">Search</tc:token>
+      <tc:token ID="w6c7">http://search.de.dariah.eu</tc:token>
+      <tc:token ID="w6c8">[</tc:token>
+      <tc:token ID="w6c9">letzter</tc:token>
+      <tc:token ID="w6ca">Zugriff</tc:token>
+      <tc:token ID="w6cb">07.</tc:token>
+      <tc:token ID="w6cc">Februar</tc:token>
+      <tc:token ID="w6cd">2016</tc:token>
+      <tc:token ID="w6ce">]</tc:token>
+      <tc:token ID="w6cf">.</tc:token>
+      <tc:token ID="w6d0">Gradl</tc:token>
+      <tc:token ID="w6d1">,</tc:token>
+      <tc:token ID="w6d2">Tobias</tc:token>
+      <tc:token ID="w6d3">/</tc:token>
+      <tc:token ID="w6d4">Henrich</tc:token>
+      <tc:token ID="w6d5">,</tc:token>
+      <tc:token ID="w6d6">Andreas</tc:token>
+      <tc:token ID="w6d7">(</tc:token>
+      <tc:token ID="w6d8">2014</tc:token>
+      <tc:token ID="w6d9">)</tc:token>
+      <tc:token ID="w6da">:</tc:token>
+      <tc:token ID="w6db">"</tc:token>
+      <tc:token ID="w6dc">A</tc:token>
+      <tc:token ID="w6dd">novel</tc:token>
+      <tc:token ID="w6de">approach</tc:token>
+      <tc:token ID="w6df">for</tc:token>
+      <tc:token ID="w6e0">a</tc:token>
+      <tc:token ID="w6e1">reusable</tc:token>
+      <tc:token ID="w6e2">federation</tc:token>
+      <tc:token ID="w6e3">of</tc:token>
+      <tc:token ID="w6e4">research</tc:token>
+      <tc:token ID="w6e5">data</tc:token>
+      <tc:token ID="w6e6">within</tc:token>
+      <tc:token ID="w6e7">the</tc:token>
+      <tc:token ID="w6e8">arts</tc:token>
+      <tc:token ID="w6e9">and</tc:token>
+      <tc:token ID="w6ea">humanities</tc:token>
+      <tc:token ID="w6eb">"</tc:token>
+      <tc:token ID="w6ec">,</tc:token>
+      <tc:token ID="w6ed">in</tc:token>
+      <tc:token ID="w6ee">:</tc:token>
+      <tc:token ID="w6ef">Digital</tc:token>
+      <tc:token ID="w6f0">Humanities</tc:token>
+      <tc:token ID="w6f1">2014</tc:token>
+      <tc:token ID="w6f2">.</tc:token>
+      <tc:token ID="w6f3">Book</tc:token>
+      <tc:token ID="w6f4">of</tc:token>
+      <tc:token ID="w6f5">Abstracts382–384</tc:token>
+      <tc:token ID="w6f6">http://dh2014.org/program/abstracts/</tc:token>
+      <tc:token ID="w6f7">[</tc:token>
+      <tc:token ID="w6f8">letzter</tc:token>
+      <tc:token ID="w6f9">Zugriff</tc:token>
+      <tc:token ID="w6fa">09.</tc:token>
+      <tc:token ID="w6fb">Oktober</tc:token>
+      <tc:token ID="w6fc">2015</tc:token>
+      <tc:token ID="w6fd">]</tc:token>
+      <tc:token ID="w6fe">.</tc:token>
+      <tc:token ID="w6ff">Gradl</tc:token>
+      <tc:token ID="w700">,</tc:token>
+      <tc:token ID="w701">Tobias</tc:token>
+      <tc:token ID="w702">/</tc:token>
+      <tc:token ID="w703">Henrich</tc:token>
+      <tc:token ID="w704">,</tc:token>
+      <tc:token ID="w705">Andreas</tc:token>
+      <tc:token ID="w706">/</tc:token>
+      <tc:token ID="w707">Plutte</tc:token>
+      <tc:token ID="w708">,</tc:token>
+      <tc:token ID="w709">Christoph</tc:token>
+      <tc:token ID="w70a">(</tc:token>
+      <tc:token ID="w70b">2015</tc:token>
+      <tc:token ID="w70c">)</tc:token>
+      <tc:token ID="w70d">:</tc:token>
+      <tc:token ID="w70e">"</tc:token>
+      <tc:token ID="w70f">Heterogene</tc:token>
+      <tc:token ID="w710">Daten</tc:token>
+      <tc:token ID="w711">in</tc:token>
+      <tc:token ID="w712">den</tc:token>
+      <tc:token ID="w713">Digital</tc:token>
+      <tc:token ID="w714">Humanities</tc:token>
+      <tc:token ID="w715">:</tc:token>
+      <tc:token ID="w716">Eine</tc:token>
+      <tc:token ID="w717">Architektur</tc:token>
+      <tc:token ID="w718">zur</tc:token>
+      <tc:token ID="w719">forschungsorientierten</tc:token>
+      <tc:token ID="w71a">Förderation</tc:token>
+      <tc:token ID="w71b">von</tc:token>
+      <tc:token ID="w71c">Kollektionen</tc:token>
+      <tc:token ID="w71d">"</tc:token>
+      <tc:token ID="w71e">,</tc:token>
+      <tc:token ID="w71f">in</tc:token>
+      <tc:token ID="w720">:</tc:token>
+      <tc:token ID="w721">Constanze</tc:token>
+      <tc:token ID="w722">Baum</tc:token>
+      <tc:token ID="w723">/</tc:token>
+      <tc:token ID="w724">Thomas</tc:token>
+      <tc:token ID="w725">Stäcker</tc:token>
+      <tc:token ID="w726">(</tc:token>
+      <tc:token ID="w727">eds</tc:token>
+      <tc:token ID="w728">.</tc:token>
+      <tc:token ID="w729">)</tc:token>
+      <tc:token ID="w72a">:</tc:token>
+      <tc:token ID="w72b">Grenzen</tc:token>
+      <tc:token ID="w72c">und</tc:token>
+      <tc:token ID="w72d">Möglichkeiten</tc:token>
+      <tc:token ID="w72e">der</tc:token>
+      <tc:token ID="w72f">Digital</tc:token>
+      <tc:token ID="w730">Humanities</tc:token>
+      <tc:token ID="w731">.</tc:token>
+      <tc:token ID="w732">Sonderband</tc:token>
+      <tc:token ID="w733">der</tc:token>
+      <tc:token ID="w734">Zeitschrift</tc:token>
+      <tc:token ID="w735">für</tc:token>
+      <tc:token ID="w736">digitale</tc:token>
+      <tc:token ID="w737">Geisteswissenschaften</tc:token>
+      <tc:token ID="w738">1</tc:token>
+      <tc:token ID="w739">http://dx.doi.org/10.17175/sb001_020</tc:token>
+      <tc:token ID="w73a">[</tc:token>
+      <tc:token ID="w73b">letzter</tc:token>
+      <tc:token ID="w73c">Zugriff</tc:token>
+      <tc:token ID="w73d">09.</tc:token>
+      <tc:token ID="w73e">Oktober</tc:token>
+      <tc:token ID="w73f">2015</tc:token>
+      <tc:token ID="w740">]</tc:token>
+      <tc:token ID="w741">.</tc:token>
+      <tc:token ID="w742">Gradl</tc:token>
+      <tc:token ID="w743">,</tc:token>
+      <tc:token ID="w744">Tobias</tc:token>
+      <tc:token ID="w745">/</tc:token>
+      <tc:token ID="w746">Lordick</tc:token>
+      <tc:token ID="w747">,</tc:token>
+      <tc:token ID="w748">Harald</tc:token>
+      <tc:token ID="w749">(</tc:token>
+      <tc:token ID="w74a">2015-2016</tc:token>
+      <tc:token ID="w74b">)</tc:token>
+      <tc:token ID="w74c">:</tc:token>
+      <tc:token ID="w74d">Judaica</tc:token>
+      <tc:token ID="w74e">Search</tc:token>
+      <tc:token ID="w74f">.</tc:token>
+      <tc:token ID="w750">Branded</tc:token>
+      <tc:token ID="w751">Search</tc:token>
+      <tc:token ID="w752">in</tc:token>
+      <tc:token ID="w753">the</tc:token>
+      <tc:token ID="w754">DARIAH-DE</tc:token>
+      <tc:token ID="w755">Generic</tc:token>
+      <tc:token ID="w756">Search</tc:token>
+      <tc:token ID="w757">http://judaica.search.de.dariah.eu</tc:token>
+      <tc:token ID="w758">[</tc:token>
+      <tc:token ID="w759">letzter</tc:token>
+      <tc:token ID="w75a">Zugriff</tc:token>
+      <tc:token ID="w75b">07.</tc:token>
+      <tc:token ID="w75c">Februar</tc:token>
+      <tc:token ID="w75d">2016</tc:token>
+      <tc:token ID="w75e">]</tc:token>
+      <tc:token ID="w75f">.</tc:token>
+      <tc:token ID="w760">Hagedorn</tc:token>
+      <tc:token ID="w761">,</tc:token>
+      <tc:token ID="w762">Kat</tc:token>
+      <tc:token ID="w763">(</tc:token>
+      <tc:token ID="w764">2003</tc:token>
+      <tc:token ID="w765">)</tc:token>
+      <tc:token ID="w766">:</tc:token>
+      <tc:token ID="w767">"</tc:token>
+      <tc:token ID="w768">OAIster</tc:token>
+      <tc:token ID="w769">:</tc:token>
+      <tc:token ID="w76a">a</tc:token>
+      <tc:token ID="w76b">'no</tc:token>
+      <tc:token ID="w76c">dead</tc:token>
+      <tc:token ID="w76d">ends</tc:token>
+      <tc:token ID="w76e">'</tc:token>
+      <tc:token ID="w76f">OAI</tc:token>
+      <tc:token ID="w770">service</tc:token>
+      <tc:token ID="w771">provider</tc:token>
+      <tc:token ID="w772">"</tc:token>
+      <tc:token ID="w773">,</tc:token>
+      <tc:token ID="w774">in</tc:token>
+      <tc:token ID="w775">:</tc:token>
+      <tc:token ID="w776">Library</tc:token>
+      <tc:token ID="w777">Hi</tc:token>
+      <tc:token ID="w778">Tech</tc:token>
+      <tc:token ID="w779">21</tc:token>
+      <tc:token ID="w77a">,</tc:token>
+      <tc:token ID="w77b">2</tc:token>
+      <tc:token ID="w77c">:</tc:token>
+      <tc:token ID="w77d">170–181</tc:token>
+      <tc:token ID="w77e">.</tc:token>
+      <tc:token ID="w77f">Henrich</tc:token>
+      <tc:token ID="w780">,</tc:token>
+      <tc:token ID="w781">Andreas</tc:token>
+      <tc:token ID="w782">/</tc:token>
+      <tc:token ID="w783">Gradl</tc:token>
+      <tc:token ID="w784">,</tc:token>
+      <tc:token ID="w785">Tobias</tc:token>
+      <tc:token ID="w786">(</tc:token>
+      <tc:token ID="w787">2013</tc:token>
+      <tc:token ID="w788">)</tc:token>
+      <tc:token ID="w789">:</tc:token>
+      <tc:token ID="w78a">"</tc:token>
+      <tc:token ID="w78b">DARIAH(-</tc:token>
+      <tc:token ID="w78c">DE</tc:token>
+      <tc:token ID="w78d">)</tc:token>
+      <tc:token ID="w78e">:</tc:token>
+      <tc:token ID="w78f">Digital</tc:token>
+      <tc:token ID="w790">research</tc:token>
+      <tc:token ID="w791">infrastructure</tc:token>
+      <tc:token ID="w792">for</tc:token>
+      <tc:token ID="w793">the</tc:token>
+      <tc:token ID="w794">arts</tc:token>
+      <tc:token ID="w795">and</tc:token>
+      <tc:token ID="w796">humanities</tc:token>
+      <tc:token ID="w797">-</tc:token>
+      <tc:token ID="w798">concepts</tc:token>
+      <tc:token ID="w799">and</tc:token>
+      <tc:token ID="w79a">perspectives</tc:token>
+      <tc:token ID="w79b">"</tc:token>
+      <tc:token ID="w79c">,</tc:token>
+      <tc:token ID="w79d">in</tc:token>
+      <tc:token ID="w79e">:</tc:token>
+      <tc:token ID="w79f">International</tc:token>
+      <tc:token ID="w7a0">Journal</tc:token>
+      <tc:token ID="w7a1">of</tc:token>
+      <tc:token ID="w7a2">Humanities</tc:token>
+      <tc:token ID="w7a3">and</tc:token>
+      <tc:token ID="w7a4">Arts</tc:token>
+      <tc:token ID="w7a5">Computing</tc:token>
+      <tc:token ID="w7a6">7</tc:token>
+      <tc:token ID="w7a7">:</tc:token>
+      <tc:token ID="w7a8">47–58</tc:token>
+      <tc:token ID="w7a9">.</tc:token>
+      <tc:token ID="w7aa">Lenzerini</tc:token>
+      <tc:token ID="w7ab">,</tc:token>
+      <tc:token ID="w7ac">Maurizio</tc:token>
+      <tc:token ID="w7ad">(</tc:token>
+      <tc:token ID="w7ae">2002</tc:token>
+      <tc:token ID="w7af">)</tc:token>
+      <tc:token ID="w7b0">:</tc:token>
+      <tc:token ID="w7b1">"</tc:token>
+      <tc:token ID="w7b2">Data</tc:token>
+      <tc:token ID="w7b3">integration</tc:token>
+      <tc:token ID="w7b4">:</tc:token>
+      <tc:token ID="w7b5">a</tc:token>
+      <tc:token ID="w7b6">theoretical</tc:token>
+      <tc:token ID="w7b7">perspective</tc:token>
+      <tc:token ID="w7b8">"</tc:token>
+      <tc:token ID="w7b9">,</tc:token>
+      <tc:token ID="w7ba">in</tc:token>
+      <tc:token ID="w7bb">:</tc:token>
+      <tc:token ID="w7bc">PODS'</tc:token>
+      <tc:token ID="w7bd">02</tc:token>
+      <tc:token ID="w7be">-</tc:token>
+      <tc:token ID="w7bf">Proceedings</tc:token>
+      <tc:token ID="w7c0">of</tc:token>
+      <tc:token ID="w7c1">the</tc:token>
+      <tc:token ID="w7c2">twenty-first</tc:token>
+      <tc:token ID="w7c3">ACM</tc:token>
+      <tc:token ID="w7c4">SIGMOD-SIGACT-SIGART</tc:token>
+      <tc:token ID="w7c5">symposium</tc:token>
+      <tc:token ID="w7c6">on</tc:token>
+      <tc:token ID="w7c7">Principles</tc:token>
+      <tc:token ID="w7c8">of</tc:token>
+      <tc:token ID="w7c9">database</tc:token>
+      <tc:token ID="w7ca">systems</tc:token>
+      <tc:token ID="w7cb">:</tc:token>
+      <tc:token ID="w7cc">233-246</tc:token>
+      <tc:token ID="w7cd">http://dl.acm.org/citation.cfm?doid=543613.543644</tc:token>
+      <tc:token ID="w7ce">[</tc:token>
+      <tc:token ID="w7cf">letzter</tc:token>
+      <tc:token ID="w7d0">Zugriff</tc:token>
+      <tc:token ID="w7d1">09.</tc:token>
+      <tc:token ID="w7d2">Oktober</tc:token>
+      <tc:token ID="w7d3">2015</tc:token>
+      <tc:token ID="w7d4">]</tc:token>
+      <tc:token ID="w7d5">.</tc:token>
+      <tc:token ID="w7d6">Lordick</tc:token>
+      <tc:token ID="w7d7">,</tc:token>
+      <tc:token ID="w7d8">Harald</tc:token>
+      <tc:token ID="w7d9">(</tc:token>
+      <tc:token ID="w7da">2010-2016</tc:token>
+      <tc:token ID="w7db">)</tc:token>
+      <tc:token ID="w7dc">:</tc:token>
+      <tc:token ID="w7dd">Vieles</tc:token>
+      <tc:token ID="w7de">finden</tc:token>
+      <tc:token ID="w7df">.</tc:token>
+      <tc:token ID="w7e0">Die</tc:token>
+      <tc:token ID="w7e1">Judaica-Suchmaschine</tc:token>
+      <tc:token ID="w7e2">im</tc:token>
+      <tc:token ID="w7e3">Steinheim-Institut</tc:token>
+      <tc:token ID="w7e4">.</tc:token>
+      <tc:token ID="w7e5">Salomon</tc:token>
+      <tc:token ID="w7e6">Ludwig</tc:token>
+      <tc:token ID="w7e7">Steinheim-Institut</tc:token>
+      <tc:token ID="w7e8">für</tc:token>
+      <tc:token ID="w7e9">deutsch-jüdische</tc:token>
+      <tc:token ID="w7ea">Geschichte</tc:token>
+      <tc:token ID="w7eb">an</tc:token>
+      <tc:token ID="w7ec">der</tc:token>
+      <tc:token ID="w7ed">Universität</tc:token>
+      <tc:token ID="w7ee">Duisburg-Essen</tc:token>
+      <tc:token ID="w7ef">http://steinheim-institut.de/vf/</tc:token>
+      <tc:token ID="w7f0">[</tc:token>
+      <tc:token ID="w7f1">letzter</tc:token>
+      <tc:token ID="w7f2">Zugriff</tc:token>
+      <tc:token ID="w7f3">07.</tc:token>
+      <tc:token ID="w7f4">Februar</tc:token>
+      <tc:token ID="w7f5">2016</tc:token>
+      <tc:token ID="w7f6">]</tc:token>
+      <tc:token ID="w7f7">.</tc:token>
+      <tc:token ID="w7f8">Lordick</tc:token>
+      <tc:token ID="w7f9">,</tc:token>
+      <tc:token ID="w7fa">Harald</tc:token>
+      <tc:token ID="w7fb">(</tc:token>
+      <tc:token ID="w7fc">2013</tc:token>
+      <tc:token ID="w7fd">)</tc:token>
+      <tc:token ID="w7fe">:</tc:token>
+      <tc:token ID="w7ff">"</tc:token>
+      <tc:token ID="w800">Die</tc:token>
+      <tc:token ID="w801">judaica-bibliothek</tc:token>
+      <tc:token ID="w802">im</tc:token>
+      <tc:token ID="w803">web</tc:token>
+      <tc:token ID="w804">.</tc:token>
+      <tc:token ID="w805">ganz</tc:token>
+      <tc:token ID="w806">real</tc:token>
+      <tc:token ID="w807">oder</tc:token>
+      <tc:token ID="w808">noch</tc:token>
+      <tc:token ID="w809">immer</tc:token>
+      <tc:token ID="w80a">virtuell</tc:token>
+      <tc:token ID="w80b">?</tc:token>
+      <tc:token ID="w80c">"</tc:token>
+      <tc:token ID="w80d">,</tc:token>
+      <tc:token ID="w80e">in</tc:token>
+      <tc:token ID="w80f">:</tc:token>
+      <tc:token ID="w810">Kalonymos1</tc:token>
+      <tc:token ID="w811">:</tc:token>
+      <tc:token ID="w812">12–14</tc:token>
+      <tc:token ID="w813">http://www.steinheim-institut.de/edocs/kalonymos/kalonymos_2013_1.pdf</tc:token>
+      <tc:token ID="w814">[</tc:token>
+      <tc:token ID="w815">letzter</tc:token>
+      <tc:token ID="w816">Zugriff</tc:token>
+      <tc:token ID="w817">09.</tc:token>
+      <tc:token ID="w818">Oktober</tc:token>
+      <tc:token ID="w819">2015</tc:token>
+      <tc:token ID="w81a">]</tc:token>
+      <tc:token ID="w81b">.</tc:token>
+      <tc:token ID="w81c">Lordick</tc:token>
+      <tc:token ID="w81d">,</tc:token>
+      <tc:token ID="w81e">Harald</tc:token>
+      <tc:token ID="w81f">(</tc:token>
+      <tc:token ID="w820">2014</tc:token>
+      <tc:token ID="w821">)</tc:token>
+      <tc:token ID="w822">:</tc:token>
+      <tc:token ID="w823">"</tc:token>
+      <tc:token ID="w824">Jüdische</tc:token>
+      <tc:token ID="w825">Geschichte</tc:token>
+      <tc:token ID="w826">(</tc:token>
+      <tc:token ID="w827">mobil</tc:token>
+      <tc:token ID="w828">)</tc:token>
+      <tc:token ID="w829">recherchieren</tc:token>
+      <tc:token ID="w82a">"</tc:token>
+      <tc:token ID="w82b">,</tc:token>
+      <tc:token ID="w82c">in</tc:token>
+      <tc:token ID="w82d">:</tc:token>
+      <tc:token ID="w82e">Kalonymos3</tc:token>
+      <tc:token ID="w82f">:</tc:token>
+      <tc:token ID="w830">13</tc:token>
+      <tc:token ID="w831">http://www.steinheim-institut.de/edocs/kalonymos/kalonymos_2014_3.pdf</tc:token>
+      <tc:token ID="w832">[</tc:token>
+      <tc:token ID="w833">letzter</tc:token>
+      <tc:token ID="w834">Zugriff</tc:token>
+      <tc:token ID="w835">9.</tc:token>
+      <tc:token ID="w836">Oktober</tc:token>
+      <tc:token ID="w837">2015</tc:token>
+      <tc:token ID="w838">]</tc:token>
+      <tc:token ID="w839">.</tc:token>
+      <tc:token ID="w83a">OAIster</tc:token>
+      <tc:token ID="w83b">(</tc:token>
+      <tc:token ID="w83c">2001-2016</tc:token>
+      <tc:token ID="w83d">)</tc:token>
+      <tc:token ID="w83e">:</tc:token>
+      <tc:token ID="w83f">OAIster</tc:token>
+      <tc:token ID="w840">.</tc:token>
+      <tc:token ID="w841">OCLC</tc:token>
+      <tc:token ID="w842">WorldCat</tc:token>
+      <tc:token ID="w843">.org</tc:token>
+      <tc:token ID="w844">Services</tc:token>
+      <tc:token ID="w845">.</tc:token>
+      <tc:token ID="w846">Dublin</tc:token>
+      <tc:token ID="w847">/</tc:token>
+      <tc:token ID="w848">Ohio</tc:token>
+      <tc:token ID="w849">:</tc:token>
+      <tc:token ID="w84a">OCLC</tc:token>
+      <tc:token ID="w84b">Online</tc:token>
+      <tc:token ID="w84c">Computer</tc:token>
+      <tc:token ID="w84d">Library</tc:token>
+      <tc:token ID="w84e">Center</tc:token>
+      <tc:token ID="w84f">http://oaister.worldcat.org/</tc:token>
+      <tc:token ID="w850">[</tc:token>
+      <tc:token ID="w851">letzter</tc:token>
+      <tc:token ID="w852">Zugriff</tc:token>
+      <tc:token ID="w853">07.</tc:token>
+      <tc:token ID="w854">Februar</tc:token>
+      <tc:token ID="w855">2016</tc:token>
+      <tc:token ID="w856">]</tc:token>
+      <tc:token ID="w857">.</tc:token>
+      <tc:token ID="w858">Peroni</tc:token>
+      <tc:token ID="w859">,</tc:token>
+      <tc:token ID="w85a">Silvio</tc:token>
+      <tc:token ID="w85b">/</tc:token>
+      <tc:token ID="w85c">Tomasi</tc:token>
+      <tc:token ID="w85d">,</tc:token>
+      <tc:token ID="w85e">Francesca</tc:token>
+      <tc:token ID="w85f">/</tc:token>
+      <tc:token ID="w860">Vitali</tc:token>
+      <tc:token ID="w861">,</tc:token>
+      <tc:token ID="w862">Fabio</tc:token>
+      <tc:token ID="w863">(</tc:token>
+      <tc:token ID="w864">2013</tc:token>
+      <tc:token ID="w865">)</tc:token>
+      <tc:token ID="w866">:</tc:token>
+      <tc:token ID="w867">"</tc:token>
+      <tc:token ID="w868">Reflecting</tc:token>
+      <tc:token ID="w869">on</tc:token>
+      <tc:token ID="w86a">the</tc:token>
+      <tc:token ID="w86b">europeana</tc:token>
+      <tc:token ID="w86c">data</tc:token>
+      <tc:token ID="w86d">model</tc:token>
+      <tc:token ID="w86e">"</tc:token>
+      <tc:token ID="w86f">,</tc:token>
+      <tc:token ID="w870">in</tc:token>
+      <tc:token ID="w871">:</tc:token>
+      <tc:token ID="w872">Agosti</tc:token>
+      <tc:token ID="w873">,</tc:token>
+      <tc:token ID="w874">Maristella</tc:token>
+      <tc:token ID="w875">/</tc:token>
+      <tc:token ID="w876">Esposito</tc:token>
+      <tc:token ID="w877">,</tc:token>
+      <tc:token ID="w878">Floriana</tc:token>
+      <tc:token ID="w879">/</tc:token>
+      <tc:token ID="w87a">Ferilli</tc:token>
+      <tc:token ID="w87b">,</tc:token>
+      <tc:token ID="w87c">Stefano</tc:token>
+      <tc:token ID="w87d">/</tc:token>
+      <tc:token ID="w87e">Ferro</tc:token>
+      <tc:token ID="w87f">,</tc:token>
+      <tc:token ID="w880">Nicola</tc:token>
+      <tc:token ID="w881">(</tc:token>
+      <tc:token ID="w882">eds</tc:token>
+      <tc:token ID="w883">.</tc:token>
+      <tc:token ID="w884">)</tc:token>
+      <tc:token ID="w885">:</tc:token>
+      <tc:token ID="w886">Digital</tc:token>
+      <tc:token ID="w887">Libraries</tc:token>
+      <tc:token ID="w888">and</tc:token>
+      <tc:token ID="w889">Archives</tc:token>
+      <tc:token ID="w88a">.</tc:token>
+      <tc:token ID="w88b">Berlin</tc:token>
+      <tc:token ID="w88c">/</tc:token>
+      <tc:token ID="w88d">Heidelberg</tc:token>
+      <tc:token ID="w88e">:</tc:token>
+      <tc:token ID="w88f">Springer</tc:token>
+      <tc:token ID="w890">228–240</tc:token>
+      <tc:token ID="w891">http://link.springer.com/chapter/10.1007%2F978-3-642-35834-0_23</tc:token>
+      <tc:token ID="w892">[</tc:token>
+      <tc:token ID="w893">letzter</tc:token>
+      <tc:token ID="w894">Zugriff</tc:token>
+      <tc:token ID="w895">09.</tc:token>
+      <tc:token ID="w896">Oktober</tc:token>
+      <tc:token ID="w897">2015</tc:token>
+      <tc:token ID="w898">]</tc:token>
+      <tc:token ID="w899">.</tc:token>
+      <tc:token ID="w89a">Plutte</tc:token>
+      <tc:token ID="w89b">,</tc:token>
+      <tc:token ID="w89c">Christoph</tc:token>
+      <tc:token ID="w89d">(</tc:token>
+      <tc:token ID="w89e">2011-2014</tc:token>
+      <tc:token ID="w89f">)</tc:token>
+      <tc:token ID="w8a0">:</tc:token>
+      <tc:token ID="w8a1">DARIAH-DE</tc:token>
+      <tc:token ID="w8a2">Collection</tc:token>
+      <tc:token ID="w8a3">Registry</tc:token>
+      <tc:token ID="w8a4">.</tc:token>
+      <tc:token ID="w8a5">Initial</tc:token>
+      <tc:token ID="w8a6">Prototype</tc:token>
+      <tc:token ID="w8a7">.</tc:token>
+      <tc:token ID="w8a8">http://colreg.de.dariah.eu</tc:token>
+      <tc:token ID="w8a9">[</tc:token>
+      <tc:token ID="w8aa">letzter</tc:token>
+      <tc:token ID="w8ab">Zugriff</tc:token>
+      <tc:token ID="w8ac">07.</tc:token>
+      <tc:token ID="w8ad">Februar</tc:token>
+      <tc:token ID="w8ae">2016</tc:token>
+      <tc:token ID="w8af">]</tc:token>
+      <tc:token ID="w8b0">.</tc:token>
+      <tc:token ID="w8b1">am</tc:token>
+      <tc:token ID="w8b2">Jülich</tc:token>
+      <tc:token ID="w8b3">Supercomputing</tc:token>
+      <tc:token ID="w8b4">Center</tc:token>
+      <tc:token ID="w8b5">,</tc:token>
+      <tc:token ID="w8b6">DARIAH-DE</tc:token>
+      <tc:token ID="w8b7">.</tc:token>
+      <tc:token ID="w8b8">Bibliographie</tc:token>
+    </tc:tokens>
+    <tc:sentences xmlns:tc="http://www.dspin.de/data/textcorpus">
+      <tc:sentence tokenIDs="w1 w2 w3 w4 w5 w6 w7 w8 w9 wa wb wc wd we wf w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w1a w1b w1c w1d w1e w1f w20 w21 w22 w23 w24 w25" ID="s1"/>
+      <tc:sentence tokenIDs="w26 w27 w28 w29 w2a w2b w2c w2d w2e w2f w30 w31 w32 w33 w34 w35 w36 w37 w38 w39 w3a w3b w3c w3d w3e w3f w40 w41 w42 w43 w44 w45 w46 w47" ID="s2"/>
+      <tc:sentence tokenIDs="w48 w49 w4a w4b w4c w4d w4e w4f w50 w51 w52 w53 w54 w55 w56 w57 w58 w59" ID="s3"/>
+      <tc:sentence tokenIDs="w5a w5b w5c w5d w5e w5f w60 w61 w62 w63 w64 w65 w66 w67 w68 w69 w6a w6b w6c w6d w6e w6f w70 w71 w72" ID="s4"/>
+      <tc:sentence tokenIDs="w73 w74 w75 w76 w77 w78 w79 w7a w7b w7c w7d w7e w7f w80" ID="s5"/>
+      <tc:sentence tokenIDs="w81 w82 w83 w84 w85 w86 w87 w88 w89 w8a w8b w8c w8d w8e w8f w90 w91 w92 w93 w94 w95 w96 w97 w98 w99 w9a w9b w9c w9d w9e w9f wa0 wa1 wa2 wa3 wa4 wa5 wa6 wa7 wa8 wa9" ID="s6"/>
+      <tc:sentence tokenIDs="waa wab wac wad wae waf wb0 wb1 wb2 wb3 wb4 wb5 wb6 wb7 wb8 wb9 wba wbb wbc wbd wbe wbf wc0 wc1 wc2 wc3 wc4 wc5 wc6 wc7 wc8 wc9 wca wcb wcc wcd wce wcf wd0 wd1 wd2 wd3 wd4 wd5 wd6 wd7 wd8" ID="s7"/>
+      <tc:sentence tokenIDs="wd9 wda wdb wdc wdd wde wdf we0 we1 we2 we3 we4 we5 we6 we7 we8 we9" ID="s8"/>
+      <tc:sentence tokenIDs="wea web wec wed wee wef wf0 wf1 wf2 wf3 wf4 wf5 wf6 wf7 wf8 wf9 wfa wfb wfc wfd wfe wff w100 w101" ID="s9"/>
+      <tc:sentence tokenIDs="w102 w103 w104 w105 w106 w107 w108 w109 w10a w10b w10c" ID="sa"/>
+      <tc:sentence tokenIDs="w10d w10e w10f w110 w111 w112 w113 w114 w115 w116 w117 w118 w119 w11a w11b w11c w11d w11e w11f w120 w121 w122 w123 w124 w125 w126" ID="sb"/>
+      <tc:sentence tokenIDs="w127 w128 w129 w12a w12b w12c w12d w12e w12f w130 w131 w132 w133 w134 w135 w136 w137 w138 w139 w13a w13b w13c w13d w13e w13f w140 w141 w142 w143 w144 w145 w146 w147 w148 w149 w14a w14b" ID="sc"/>
+      <tc:sentence tokenIDs="w14c w14d w14e w14f w150 w151 w152" ID="sd"/>
+      <tc:sentence tokenIDs="w153 w154 w155 w156 w157 w158 w159 w15a w15b w15c w15d w15e w15f w160 w161 w162 w163 w164 w165 w166" ID="se"/>
+      <tc:sentence tokenIDs="w167 w168 w169 w16a w16b w16c w16d w16e w16f w170 w171" ID="sf"/>
+      <tc:sentence tokenIDs="w172 w173 w174 w175 w176 w177 w178 w179 w17a w17b w17c w17d w17e w17f w180" ID="s10"/>
+      <tc:sentence tokenIDs="w181 w182 w183 w184 w185 w186 w187 w188 w189 w18a w18b w18c w18d w18e w18f w190 w191 w192 w193" ID="s11"/>
+      <tc:sentence tokenIDs="w194 w195 w196 w197 w198 w199 w19a w19b w19c w19d w19e w19f w1a0 w1a1 w1a2 w1a3 w1a4 w1a5 w1a6 w1a7 w1a8 w1a9 w1aa w1ab w1ac w1ad w1ae" ID="s12"/>
+      <tc:sentence tokenIDs="w1af w1b0 w1b1 w1b2 w1b3 w1b4 w1b5 w1b6 w1b7 w1b8 w1b9 w1ba w1bb w1bc w1bd w1be w1bf w1c0 w1c1 w1c2 w1c3 w1c4" ID="s13"/>
+      <tc:sentence tokenIDs="w1c5 w1c6 w1c7 w1c8 w1c9 w1ca w1cb w1cc w1cd w1ce w1cf w1d0 w1d1 w1d2 w1d3 w1d4 w1d5 w1d6" ID="s14"/>
+      <tc:sentence tokenIDs="w1d7 w1d8 w1d9 w1da w1db w1dc w1dd w1de w1df w1e0 w1e1 w1e2 w1e3 w1e4 w1e5 w1e6 w1e7 w1e8 w1e9 w1ea w1eb w1ec w1ed w1ee w1ef w1f0 w1f1 w1f2 w1f3 w1f4 w1f5 w1f6 w1f7 w1f8" ID="s15"/>
+      <tc:sentence tokenIDs="w1f9 w1fa w1fb w1fc w1fd w1fe w1ff w200 w201 w202 w203 w204 w205 w206 w207 w208 w209 w20a w20b w20c w20d w20e w20f w210 w211 w212 w213 w214 w215 w216 w217 w218" ID="s16"/>
+      <tc:sentence tokenIDs="w219 w21a w21b w21c w21d w21e w21f w220 w221 w222 w223 w224 w225 w226 w227 w228 w229 w22a w22b w22c w22d w22e w22f w230 w231 w232 w233 w234 w235 w236 w237 w238 w239" ID="s17"/>
+      <tc:sentence tokenIDs="w23a w23b w23c w23d w23e w23f w240 w241 w242 w243 w244 w245 w246 w247 w248 w249 w24a w24b" ID="s18"/>
+      <tc:sentence tokenIDs="w24c w24d w24e w24f w250 w251 w252 w253 w254 w255 w256 w257 w258 w259 w25a w25b w25c w25d w25e w25f w260 w261 w262 w263 w264" ID="s19"/>
+      <tc:sentence tokenIDs="w265 w266 w267 w268 w269 w26a w26b w26c w26d w26e w26f w270 w271 w272 w273 w274 w275 w276 w277 w278 w279 w27a w27b w27c w27d w27e w27f w280 w281 w282" ID="s1a"/>
+      <tc:sentence tokenIDs="w283 w284 w285 w286 w287 w288 w289 w28a w28b w28c w28d w28e w28f w290 w291 w292 w293 w294 w295 w296 w297 w298 w299 w29a w29b w29c w29d w29e w29f w2a0 w2a1 w2a2 w2a3 w2a4 w2a5 w2a6 w2a7 w2a8 w2a9 w2aa w2ab w2ac w2ad w2ae w2af" ID="s1b"/>
+      <tc:sentence tokenIDs="w2b0 w2b1 w2b2 w2b3 w2b4 w2b5 w2b6 w2b7 w2b8 w2b9 w2ba w2bb w2bc w2bd w2be w2bf w2c0 w2c1 w2c2 w2c3 w2c4 w2c5 w2c6 w2c7 w2c8 w2c9 w2ca w2cb w2cc w2cd w2ce w2cf w2d0 w2d1 w2d2 w2d3 w2d4 w2d5" ID="s1c"/>
+      <tc:sentence tokenIDs="w2d6 w2d7 w2d8 w2d9 w2da w2db w2dc w2dd w2de w2df w2e0 w2e1 w2e2 w2e3 w2e4 w2e5 w2e6 w2e7 w2e8 w2e9 w2ea w2eb w2ec w2ed w2ee w2ef w2f0 w2f1" ID="s1d"/>
+      <tc:sentence tokenIDs="w2f2 w2f3 w2f4 w2f5 w2f6 w2f7 w2f8 w2f9 w2fa w2fb w2fc w2fd w2fe w2ff w300 w301 w302 w303 w304 w305 w306 w307 w308 w309 w30a w30b w30c w30d w30e w30f w310 w311 w312 w313 w314 w315 w316 w317 w318 w319" ID="s1e"/>
+      <tc:sentence tokenIDs="w31a w31b w31c w31d w31e w31f w320 w321 w322 w323 w324 w325 w326 w327 w328 w329 w32a w32b w32c w32d w32e w32f w330 w331 w332 w333 w334 w335 w336 w337 w338 w339 w33a w33b w33c w33d w33e w33f w340 w341 w342 w343" ID="s1f"/>
+      <tc:sentence tokenIDs="w344 w345 w346 w347 w348 w349 w34a w34b w34c w34d w34e w34f w350 w351 w352 w353" ID="s20"/>
+      <tc:sentence tokenIDs="w354 w355 w356 w357 w358 w359 w35a w35b w35c w35d w35e w35f w360 w361 w362 w363 w364 w365 w366 w367 w368 w369 w36a w36b w36c w36d w36e w36f w370 w371 w372 w373 w374 w375 w376 w377 w378 w379 w37a" ID="s21"/>
+      <tc:sentence tokenIDs="w37b w37c w37d w37e w37f w380 w381 w382 w383 w384 w385 w386 w387 w388 w389 w38a w38b w38c w38d w38e w38f w390 w391 w392 w393 w394 w395 w396" ID="s22"/>
+      <tc:sentence tokenIDs="w397 w398 w399 w39a w39b w39c w39d w39e w39f w3a0 w3a1 w3a2 w3a3 w3a4 w3a5 w3a6 w3a7 w3a8 w3a9" ID="s23"/>
+      <tc:sentence tokenIDs="w3aa w3ab w3ac w3ad w3ae w3af w3b0 w3b1 w3b2 w3b3 w3b4 w3b5 w3b6 w3b7 w3b8 w3b9 w3ba w3bb w3bc w3bd w3be w3bf w3c0" ID="s24"/>
+      <tc:sentence tokenIDs="w3c1 w3c2 w3c3 w3c4 w3c5 w3c6 w3c7 w3c8 w3c9 w3ca w3cb w3cc w3cd w3ce w3cf w3d0 w3d1 w3d2 w3d3 w3d4 w3d5 w3d6 w3d7 w3d8 w3d9 w3da w3db w3dc w3dd w3de w3df w3e0 w3e1 w3e2 w3e3 w3e4 w3e5 w3e6 w3e7 w3e8 w3e9 w3ea" ID="s25"/>
+      <tc:sentence tokenIDs="w3eb w3ec w3ed w3ee w3ef w3f0 w3f1 w3f2 w3f3 w3f4 w3f5 w3f6 w3f7 w3f8 w3f9 w3fa w3fb w3fc w3fd w3fe w3ff w400 w401 w402 w403 w404 w405 w406 w407 w408 w409 w40a w40b w40c w40d w40e w40f w410 w411 w412" ID="s26"/>
+      <tc:sentence tokenIDs="w413 w414 w415 w416 w417 w418 w419 w41a w41b w41c w41d w41e w41f w420 w421 w422 w423 w424 w425 w426 w427 w428 w429 w42a w42b w42c w42d w42e w42f w430 w431 w432 w433 w434 w435 w436 w437 w438 w439 w43a w43b w43c w43d w43e w43f w440 w441 w442 w443 w444 w445 w446 w447 w448 w449 w44a w44b w44c w44d w44e w44f w450 w451 w452 w453 w454 w455 w456 w457 w458 w459 w45a w45b w45c w45d w45e w45f w460 w461 w462 w463 w464 w465 w466 w467 w468" ID="s27"/>
+      <tc:sentence tokenIDs="w469 w46a w46b w46c w46d w46e w46f w470 w471 w472 w473 w474 w475 w476 w477 w478 w479 w47a w47b" ID="s28"/>
+      <tc:sentence tokenIDs="w47c w47d w47e w47f w480 w481 w482 w483 w484 w485 w486 w487 w488 w489 w48a w48b w48c w48d w48e w48f w490 w491 w492 w493 w494 w495 w496 w497 w498 w499" ID="s29"/>
+      <tc:sentence tokenIDs="w49a w49b w49c w49d w49e w49f w4a0 w4a1 w4a2 w4a3 w4a4 w4a5 w4a6 w4a7 w4a8 w4a9 w4aa w4ab w4ac w4ad w4ae w4af w4b0 w4b1 w4b2" ID="s2a"/>
+      <tc:sentence tokenIDs="w4b3 w4b4 w4b5 w4b6 w4b7 w4b8 w4b9 w4ba w4bb w4bc w4bd w4be w4bf w4c0 w4c1 w4c2 w4c3 w4c4 w4c5 w4c6 w4c7 w4c8 w4c9 w4ca w4cb w4cc w4cd w4ce w4cf w4d0 w4d1 w4d2 w4d3 w4d4 w4d5 w4d6 w4d7 w4d8 w4d9 w4da w4db" ID="s2b"/>
+      <tc:sentence tokenIDs="w4dc w4dd w4de w4df w4e0 w4e1 w4e2 w4e3 w4e4 w4e5 w4e6 w4e7 w4e8 w4e9 w4ea w4eb w4ec w4ed w4ee w4ef w4f0 w4f1 w4f2 w4f3 w4f4 w4f5 w4f6 w4f7 w4f8 w4f9 w4fa w4fb w4fc w4fd w4fe" ID="s2c"/>
+      <tc:sentence tokenIDs="w4ff w500 w501 w502 w503 w504 w505 w506 w507 w508 w509 w50a w50b w50c w50d w50e w50f w510 w511" ID="s2d"/>
+      <tc:sentence tokenIDs="w512 w513 w514 w515 w516 w517 w518 w519 w51a w51b w51c w51d w51e w51f w520 w521 w522 w523 w524 w525 w526 w527 w528 w529 w52a w52b" ID="s2e"/>
+      <tc:sentence tokenIDs="w52c w52d w52e w52f w530 w531 w532 w533 w534 w535 w536 w537 w538 w539 w53a w53b w53c w53d w53e w53f w540 w541 w542 w543 w544 w545 w546 w547 w548 w549 w54a" ID="s2f"/>
+      <tc:sentence tokenIDs="w54b w54c w54d w54e w54f w550 w551 w552 w553 w554 w555 w556 w557 w558 w559 w55a w55b w55c w55d w55e w55f w560 w561 w562" ID="s30"/>
+      <tc:sentence tokenIDs="w563 w564 w565 w566 w567 w568 w569 w56a w56b w56c w56d w56e w56f w570 w571 w572 w573 w574 w575 w576 w577 w578 w579 w57a w57b w57c w57d w57e w57f w580 w581 w582 w583 w584 w585 w586 w587 w588 w589 w58a w58b" ID="s31"/>
+      <tc:sentence tokenIDs="w58c w58d w58e w58f w590 w591 w592 w593 w594 w595 w596 w597 w598 w599 w59a w59b w59c w59d w59e w59f w5a0 w5a1 w5a2 w5a3 w5a4 w5a5 w5a6 w5a7 w5a8 w5a9 w5aa w5ab w5ac w5ad w5ae w5af w5b0 w5b1" ID="s32"/>
+      <tc:sentence tokenIDs="w5b2 w5b3 w5b4 w5b5 w5b6 w5b7 w5b8 w5b9 w5ba w5bb w5bc w5bd w5be w5bf w5c0 w5c1 w5c2 w5c3 w5c4 w5c5 w5c6 w5c7 w5c8 w5c9 w5ca" ID="s33"/>
+      <tc:sentence tokenIDs="w5cb w5cc w5cd w5ce w5cf w5d0 w5d1 w5d2 w5d3 w5d4 w5d5 w5d6 w5d7 w5d8 w5d9 w5da w5db w5dc w5dd w5de w5df w5e0 w5e1 w5e2 w5e3 w5e4 w5e5 w5e6 w5e7 w5e8 w5e9 w5ea w5eb w5ec w5ed w5ee w5ef w5f0" ID="s34"/>
+      <tc:sentence tokenIDs="w5f1 w5f2 w5f3 w5f4 w5f5 w5f6 w5f7 w5f8 w5f9 w5fa w5fb w5fc w5fd w5fe w5ff w600 w601 w602 w603 w604 w605 w606 w607" ID="s35"/>
+      <tc:sentence tokenIDs="w608 w609 w60a w60b w60c w60d w60e w60f w610 w611 w612 w613 w614 w615 w616 w617 w618 w619 w61a w61b w61c w61d w61e w61f w620 w621 w622" ID="s36"/>
+      <tc:sentence tokenIDs="w623 w624 w625 w626 w627 w628 w629 w62a w62b w62c w62d w62e w62f w630 w631 w632 w633 w634 w635 w636 w637 w638 w639 w63a w63b w63c w63d w63e" ID="s37"/>
+      <tc:sentence tokenIDs="w63f w640 w641 w642 w643 w644 w645 w646 w647 w648 w649 w64a w64b w64c w64d w64e w64f w650 w651 w652 w653 w654 w655 w656" ID="s38"/>
+      <tc:sentence tokenIDs="w657 w658 w659 w65a w65b w65c w65d w65e w65f w660 w661 w662 w663 w664 w665 w666 w667 w668 w669 w66a w66b w66c w66d" ID="s39"/>
+      <tc:sentence tokenIDs="w66e w66f w670 w671 w672 w673 w674 w675 w676 w677 w678 w679 w67a w67b w67c w67d w67e w67f w680 w681 w682 w683 w684 w685 w686 w687 w688 w689 w68a w68b w68c" ID="s3a"/>
+      <tc:sentence tokenIDs="w68d w68e w68f w690 w691 w692 w693 w694 w695 w696" ID="s3b"/>
+      <tc:sentence tokenIDs="w697 w698 w699 w69a w69b w69c w69d w69e w69f w6a0 w6a1 w6a2 w6a3 w6a4 w6a5 w6a6 w6a7 w6a8" ID="s3c"/>
+      <tc:sentence tokenIDs="w6a9 w6aa w6ab w6ac w6ad w6ae w6af w6b0 w6b1" ID="s3d"/>
+      <tc:sentence tokenIDs="w6b2 w6b3 w6b4 w6b5 w6b6 w6b7 w6b8 w6b9 w6ba w6bb w6bc" ID="s3e"/>
+      <tc:sentence tokenIDs="w6bd w6be w6bf w6c0 w6c1 w6c2 w6c3" ID="s3f"/>
+      <tc:sentence tokenIDs="w6c4 w6c5 w6c6 w6c7 w6c8 w6c9 w6ca w6cb w6cc w6cd w6ce w6cf" ID="s40"/>
+      <tc:sentence tokenIDs="w6d0 w6d1 w6d2 w6d3 w6d4 w6d5 w6d6 w6d7 w6d8 w6d9 w6da" ID="s41"/>
+      <tc:sentence tokenIDs="w6db w6dc w6dd w6de w6df w6e0 w6e1 w6e2 w6e3 w6e4 w6e5 w6e6 w6e7 w6e8 w6e9 w6ea w6eb w6ec w6ed w6ee w6ef w6f0 w6f1 w6f2" ID="s42"/>
+      <tc:sentence tokenIDs="w6f3 w6f4 w6f5 w6f6 w6f7 w6f8 w6f9 w6fa w6fb w6fc w6fd w6fe" ID="s43"/>
+      <tc:sentence tokenIDs="w6ff w700 w701 w702 w703 w704 w705 w706 w707 w708 w709 w70a w70b w70c w70d" ID="s44"/>
+      <tc:sentence tokenIDs="w70e w70f w710 w711 w712 w713 w714 w715" ID="s45"/>
+      <tc:sentence tokenIDs="w716 w717 w718 w719 w71a w71b w71c w71d w71e w71f w720 w721 w722 w723 w724 w725 w726 w727 w728 w729 w72a w72b w72c w72d w72e w72f w730 w731" ID="s46"/>
+      <tc:sentence tokenIDs="w732 w733 w734 w735 w736 w737 w738 w739 w73a w73b w73c w73d w73e w73f w740 w741" ID="s47"/>
+      <tc:sentence tokenIDs="w742 w743 w744 w745 w746 w747 w748 w749 w74a w74b w74c w74d w74e w74f" ID="s48"/>
+      <tc:sentence tokenIDs="w750 w751 w752 w753 w754 w755 w756 w757 w758 w759 w75a w75b w75c w75d w75e w75f" ID="s49"/>
+      <tc:sentence tokenIDs="w760 w761 w762 w763 w764 w765 w766" ID="s4a"/>
+      <tc:sentence tokenIDs="w767 w768 w769 w76a w76b w76c w76d w76e w76f w770 w771 w772 w773 w774 w775 w776 w777 w778 w779 w77a w77b w77c w77d w77e" ID="s4b"/>
+      <tc:sentence tokenIDs="w77f w780 w781 w782 w783 w784 w785 w786 w787 w788 w789" ID="s4c"/>
+      <tc:sentence tokenIDs="w78a w78b w78c w78d w78e" ID="s4d"/>
+      <tc:sentence tokenIDs="w78f w790 w791 w792 w793 w794 w795 w796 w797 w798 w799 w79a w79b w79c w79d w79e w79f w7a0 w7a1 w7a2 w7a3 w7a4 w7a5 w7a6 w7a7" ID="s4e"/>
+      <tc:sentence tokenIDs="w7a8 w7a9" ID="s4f"/>
+      <tc:sentence tokenIDs="w7aa w7ab w7ac w7ad w7ae w7af w7b0" ID="s50"/>
+      <tc:sentence tokenIDs="w7b1 w7b2 w7b3 w7b4 w7b5 w7b6 w7b7 w7b8 w7b9 w7ba w7bb w7bc w7bd w7be w7bf w7c0 w7c1 w7c2 w7c3 w7c4 w7c5 w7c6 w7c7 w7c8 w7c9 w7ca w7cb w7cc w7cd w7ce w7cf w7d0 w7d1 w7d2 w7d3 w7d4 w7d5" ID="s51"/>
+      <tc:sentence tokenIDs="w7d6 w7d7 w7d8 w7d9 w7da w7db w7dc w7dd w7de w7df" ID="s52"/>
+      <tc:sentence tokenIDs="w7e0 w7e1 w7e2 w7e3 w7e4" ID="s53"/>
+      <tc:sentence tokenIDs="w7e5 w7e6 w7e7 w7e8 w7e9 w7ea w7eb w7ec w7ed w7ee w7ef w7f0 w7f1 w7f2 w7f3 w7f4 w7f5 w7f6 w7f7" ID="s54"/>
+      <tc:sentence tokenIDs="w7f8 w7f9 w7fa w7fb w7fc w7fd w7fe" ID="s55"/>
+      <tc:sentence tokenIDs="w7ff w800 w801 w802 w803 w804 w805 w806 w807 w808 w809 w80a w80b w80c w80d w80e w80f w810 w811 w812 w813 w814 w815 w816 w817 w818 w819 w81a w81b" ID="s56"/>
+      <tc:sentence tokenIDs="w81c w81d w81e w81f w820 w821 w822" ID="s57"/>
+      <tc:sentence tokenIDs="w823 w824 w825 w826 w827 w828 w829 w82a w82b w82c w82d w82e w82f w830 w831 w832 w833 w834 w835 w836 w837 w838 w839 w83a w83b w83c w83d w83e w83f w840" ID="s58"/>
+      <tc:sentence tokenIDs="w841 w842 w843 w844 w845" ID="s59"/>
+      <tc:sentence tokenIDs="w846 w847 w848 w849 w84a w84b w84c w84d w84e w84f w850 w851 w852 w853 w854 w855 w856 w857" ID="s5a"/>
+      <tc:sentence tokenIDs="w858 w859 w85a w85b w85c w85d w85e w85f w860 w861 w862 w863 w864 w865 w866" ID="s5b"/>
+      <tc:sentence tokenIDs="w867 w868 w869 w86a w86b w86c w86d w86e w86f w870 w871 w872 w873 w874 w875 w876 w877 w878 w879 w87a w87b w87c w87d w87e w87f w880 w881 w882 w883 w884 w885 w886 w887 w888 w889 w88a" ID="s5c"/>
+      <tc:sentence tokenIDs="w88b w88c w88d w88e w88f w890 w891 w892 w893 w894 w895 w896 w897 w898 w899" ID="s5d"/>
+      <tc:sentence tokenIDs="w89a w89b w89c w89d w89e w89f w8a0" ID="s5e"/>
+      <tc:sentence tokenIDs="w8a1 w8a2 w8a3 w8a4" ID="s5f"/>
+      <tc:sentence tokenIDs="w8a5 w8a6 w8a7 w8a8 w8a9 w8aa w8ab w8ac w8ad w8ae w8af w8b0 w8b1 w8b2 w8b3 w8b4 w8b5 w8b6 w8b7" ID="s60"/>
+      <tc:sentence tokenIDs="w8b8" ID="s61"/>
+    </tc:sentences>
+    <tc:namedEntities xmlns:tc="http://www.dspin.de/data/textcorpus" type="tuebadz8">
+      <tc:entity class="ORG" tokenIDs="w29"/>
+      <tc:entity class="ORG" tokenIDs="w2b"/>
+      <tc:entity class="PER" tokenIDs="w3f"/>
+      <tc:entity class="OTH" tokenIDs="w42 w43 w44 w45"/>
+      <tc:entity class="ORG" tokenIDs="w79"/>
+      <tc:entity class="PER" tokenIDs="w7d"/>
+      <tc:entity class="ORG" tokenIDs="we8"/>
+      <tc:entity class="PER" tokenIDs="w121"/>
+      <tc:entity class="ORG" tokenIDs="w136"/>
+      <tc:entity class="GPE" tokenIDs="w137"/>
+      <tc:entity class="ORG" tokenIDs="w13a"/>
+      <tc:entity class="ORG" tokenIDs="w140 w141"/>
+      <tc:entity class="ORG" tokenIDs="w144 w145 w146 w147"/>
+      <tc:entity class="GPE" tokenIDs="w149 w14a"/>
+      <tc:entity class="ORG" tokenIDs="w14e w14f w150"/>
+      <tc:entity class="ORG" tokenIDs="w1bb"/>
+      <tc:entity class="PER" tokenIDs="w1c0"/>
+      <tc:entity class="PER" tokenIDs="w1d1"/>
+      <tc:entity class="GPE" tokenIDs="w21e"/>
+      <tc:entity class="OTH" tokenIDs="w229 w22a w22b w22c"/>
+      <tc:entity class="GPE" tokenIDs="w235"/>
+      <tc:entity class="ORG" tokenIDs="w279"/>
+      <tc:entity class="ORG" tokenIDs="w27b"/>
+      <tc:entity class="PER" tokenIDs="w28a"/>
+      <tc:entity class="PER" tokenIDs="w2ec"/>
+      <tc:entity class="PER" tokenIDs="w2ee"/>
+      <tc:entity class="PER" tokenIDs="w370"/>
+      <tc:entity class="PER" tokenIDs="w372"/>
+      <tc:entity class="OTH" tokenIDs="w375 w376 w377 w378"/>
+      <tc:entity class="PER" tokenIDs="w386"/>
+      <tc:entity class="PER" tokenIDs="w38b"/>
+      <tc:entity class="ORG" tokenIDs="w3c9 w3ca"/>
+      <tc:entity class="ORG" tokenIDs="w3d8 w3d9 w3da"/>
+      <tc:entity class="OTH" tokenIDs="w3dd w3de w3df w3e0"/>
+      <tc:entity class="PER" tokenIDs="w3f4"/>
+      <tc:entity class="PER" tokenIDs="w3f6"/>
+      <tc:entity class="OTH" tokenIDs="w44a w44b"/>
+      <tc:entity class="PER" tokenIDs="w489"/>
+      <tc:entity class="PER" tokenIDs="w48b"/>
+      <tc:entity class="OTH" tokenIDs="w4f2 w4f3"/>
+      <tc:entity class="PER" tokenIDs="w59f"/>
+      <tc:entity class="OTH" tokenIDs="w5e5 w5e6"/>
+      <tc:entity class="PER" tokenIDs="w647"/>
+      <tc:entity class="PER" tokenIDs="w649"/>
+      <tc:entity class="PER" tokenIDs="w64b"/>
+      <tc:entity class="PER" tokenIDs="w64d"/>
+      <tc:entity class="PER" tokenIDs="w64f"/>
+      <tc:entity class="PER" tokenIDs="w651 w652"/>
+      <tc:entity class="LOC" tokenIDs="w665 w666 w667"/>
+      <tc:entity class="PER" tokenIDs="w66e"/>
+      <tc:entity class="PER" tokenIDs="w670"/>
+      <tc:entity class="PER" tokenIDs="w672"/>
+      <tc:entity class="PER" tokenIDs="w674"/>
+      <tc:entity class="PER" tokenIDs="w676"/>
+      <tc:entity class="PER" tokenIDs="w678"/>
+      <tc:entity class="PER" tokenIDs="w67a"/>
+      <tc:entity class="PER" tokenIDs="w67c"/>
+      <tc:entity class="PER" tokenIDs="w67e"/>
+      <tc:entity class="PER" tokenIDs="w680"/>
+      <tc:entity class="PER" tokenIDs="w682"/>
+      <tc:entity class="PER" tokenIDs="w684"/>
+      <tc:entity class="PER" tokenIDs="w686"/>
+      <tc:entity class="PER" tokenIDs="w688"/>
+      <tc:entity class="OTH" tokenIDs="w68d w68e w68f w690"/>
+      <tc:entity class="ORG" tokenIDs="w6a9 w6aa"/>
+      <tc:entity class="ORG" tokenIDs="w6af w6b0"/>
+      <tc:entity class="GPE" tokenIDs="w6b2 w6b3"/>
+      <tc:entity class="PER" tokenIDs="w6bd w6be w6bf"/>
+      <tc:entity class="PER" tokenIDs="w6d0"/>
+      <tc:entity class="PER" tokenIDs="w6d2"/>
+      <tc:entity class="PER" tokenIDs="w6d4"/>
+      <tc:entity class="PER" tokenIDs="w6d6"/>
+      <tc:entity class="ORG" tokenIDs="w6ef w6f0 w6f1"/>
+      <tc:entity class="PER" tokenIDs="w6ff"/>
+      <tc:entity class="PER" tokenIDs="w701"/>
+      <tc:entity class="PER" tokenIDs="w703"/>
+      <tc:entity class="PER" tokenIDs="w705"/>
+      <tc:entity class="PER" tokenIDs="w707"/>
+      <tc:entity class="PER" tokenIDs="w709"/>
+      <tc:entity class="PER" tokenIDs="w721 w722"/>
+      <tc:entity class="PER" tokenIDs="w724 w725"/>
+      <tc:entity class="ORG" tokenIDs="w734"/>
+      <tc:entity class="PER" tokenIDs="w742"/>
+      <tc:entity class="PER" tokenIDs="w744"/>
+      <tc:entity class="PER" tokenIDs="w746"/>
+      <tc:entity class="PER" tokenIDs="w748"/>
+      <tc:entity class="OTH" tokenIDs="w74d w74e"/>
+      <tc:entity class="OTH" tokenIDs="w750 w751 w752 w753 w754 w755 w756 w757"/>
+      <tc:entity class="PER" tokenIDs="w760 w761 w762"/>
+      <tc:entity class="ORG" tokenIDs="w768"/>
+      <tc:entity class="OTH" tokenIDs="w76f w770 w771"/>
+      <tc:entity class="ORG" tokenIDs="w776 w777 w778"/>
+      <tc:entity class="PER" tokenIDs="w77f w780 w781"/>
+      <tc:entity class="PER" tokenIDs="w783"/>
+      <tc:entity class="PER" tokenIDs="w785"/>
+      <tc:entity class="OTH" tokenIDs="w78f w790 w791 w792 w793 w794 w795 w796 w797 w798 w799 w79a"/>
+      <tc:entity class="ORG" tokenIDs="w79f w7a0 w7a1 w7a2 w7a3 w7a4 w7a5"/>
+      <tc:entity class="PER" tokenIDs="w7a8"/>
+      <tc:entity class="PER" tokenIDs="w7aa"/>
+      <tc:entity class="PER" tokenIDs="w7ac"/>
+      <tc:entity class="OTH" tokenIDs="w7bc w7bd w7be w7bf w7c0 w7c1 w7c2 w7c3 w7c4 w7c5 w7c6 w7c7 w7c8 w7c9 w7ca"/>
+      <tc:entity class="PER" tokenIDs="w7d6"/>
+      <tc:entity class="PER" tokenIDs="w7d8"/>
+      <tc:entity class="ORG" tokenIDs="w7e3"/>
+      <tc:entity class="ORG" tokenIDs="w7e5 w7e6 w7e7"/>
+      <tc:entity class="ORG" tokenIDs="w7ed"/>
+      <tc:entity class="GPE" tokenIDs="w7ee"/>
+      <tc:entity class="PER" tokenIDs="w7f8"/>
+      <tc:entity class="PER" tokenIDs="w7fa"/>
+      <tc:entity class="PER" tokenIDs="w810"/>
+      <tc:entity class="PER" tokenIDs="w81c"/>
+      <tc:entity class="PER" tokenIDs="w81e"/>
+      <tc:entity class="PER" tokenIDs="w82e"/>
+      <tc:entity class="ORG" tokenIDs="w83f"/>
+      <tc:entity class="GPE" tokenIDs="w846"/>
+      <tc:entity class="GPE" tokenIDs="w848"/>
+      <tc:entity class="ORG" tokenIDs="w84a w84b w84c w84d w84e"/>
+      <tc:entity class="PER" tokenIDs="w858"/>
+      <tc:entity class="PER" tokenIDs="w85a"/>
+      <tc:entity class="PER" tokenIDs="w85c"/>
+      <tc:entity class="PER" tokenIDs="w85e"/>
+      <tc:entity class="PER" tokenIDs="w860"/>
+      <tc:entity class="PER" tokenIDs="w862"/>
+      <tc:entity class="PER" tokenIDs="w872"/>
+      <tc:entity class="PER" tokenIDs="w874"/>
+      <tc:entity class="PER" tokenIDs="w876"/>
+      <tc:entity class="PER" tokenIDs="w878"/>
+      <tc:entity class="PER" tokenIDs="w87a"/>
+      <tc:entity class="PER" tokenIDs="w87c"/>
+      <tc:entity class="PER" tokenIDs="w87e"/>
+      <tc:entity class="PER" tokenIDs="w880"/>
+      <tc:entity class="GPE" tokenIDs="w88b"/>
+      <tc:entity class="GPE" tokenIDs="w88d"/>
+      <tc:entity class="ORG" tokenIDs="w88f"/>
+      <tc:entity class="PER" tokenIDs="w89a w89b w89c"/>
+      <tc:entity class="ORG" tokenIDs="w8a1 w8a2 w8a3"/>
+      <tc:entity class="OTH" tokenIDs="w8a5 w8a6 w8a7 w8a8 w8a9 w8aa w8ab w8ac w8ad w8ae"/>
+      <tc:entity class="ORG" tokenIDs="w8b2 w8b3 w8b4"/>
+      <tc:entity class="ORG" tokenIDs="w8b6"/>
+    </tc:namedEntities>
+  </TextCorpus>
+</D-Spin>

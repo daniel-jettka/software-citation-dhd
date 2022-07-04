@@ -1,0 +1,670 @@
+<?xml version='1.0' encoding='UTF-8'?><D-Spin xmlns="http://www.dspin.de/data" version="5">
+  <MetaData xmlns="http://www.dspin.de/data/metadata"><Services><cmd:CMD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cmd="http://www.clarin.eu/cmd/1" CMDVersion="1.2" xsi:schemaLocation="http://www.clarin.eu/cmd/1 http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_1320657629623/xsd"><cmd:Resources><cmd:ResourceProxyList/><cmd:JournalFileProxyList/><cmd:ResourceRelationList/></cmd:Resources><cmd:Components><cmd:WebServiceToolChain><cmd:GeneralInfo><cmd:Descriptions><cmd:Description/></cmd:Descriptions><cmd:ResourceName>Custom chain</cmd:ResourceName><cmd:ResourceClass>Toolchain</cmd:ResourceClass></cmd:GeneralInfo><cmd:Toolchain><cmd:ToolInChain><cmd:PID>https://hdl.handle.net/21.11120/0000-0008-319A-3</cmd:PID><cmd:Parameter value="de" name="lang"/></cmd:ToolInChain><cmd:ToolInChain><cmd:PID>https://hdl.handle.net/21.11120/0000-0008-3183-C</cmd:PID><cmd:Parameter value="5" name="version"/></cmd:ToolInChain><cmd:ToolInChain><cmd:PID>http://hdl.handle.net/11022/0000-0007-DA29-6</cmd:PID><cmd:Parameter value="de" name="lang"/><cmd:Parameter value="5" name="version"/></cmd:ToolInChain></cmd:Toolchain></cmd:WebServiceToolChain></cmd:Components></cmd:CMD></Services></MetaData>
+  <TextCorpus xmlns="http://www.dspin.de/data/textcorpus" lang="de">
+    <textSource type="application/tei+xml;format-variant=tei-dta;tokenized=0">&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="HOFFMANN_Christoph_Science_as_a_Service_">
+&lt;teiHeader>
+&lt;fileDesc>
+&lt;titleStmt>
+&lt;title type="full">
+&lt;title type="main">Science as a Service?&lt;/title>
+&lt;title type="sub"> Chancen und Limits von serviceorientierten Softwarearchitekturen für die Digital Humanities&lt;/title>
+&lt;/title>
+&lt;author>
+&lt;persName>
+&lt;surname>Hoffmann&lt;/surname>
+&lt;forename>Christoph&lt;/forename>
+&lt;/persName>
+&lt;affiliation>Österreichische Akademie der Wissenschaften, Österreich&lt;/affiliation>
+&lt;email>christoph.hoffmann@oeaw.ac.at&lt;/email>
+&lt;/author>
+&lt;/titleStmt>
+&lt;editionStmt>
+&lt;edition>
+&lt;date>2018-01-14T20:37:00Z&lt;/date>
+&lt;/edition>
+&lt;/editionStmt>
+&lt;publicationStmt>
+&lt;t:publisher xmlns:t="http://www.tei-c.org/ns/1.0">Georg Vogeler, im Auftrag des Verbands Digital Humanities im deutschaprachigen Raum e.V.&lt;/t:publisher>
+&lt;t:address xmlns:t="http://www.tei-c.org/ns/1.0">
+&lt;t:addrLine>Universität Graz&lt;/t:addrLine>
+&lt;t:addrLine>Zentrum für Informationsmodellierung - Austrian Centre for Digital Humanities&lt;/t:addrLine>
+&lt;t:addrLine>Elisabethstraße 59/III&lt;/t:addrLine>
+&lt;t:addrLine>8010 Graz&lt;/t:addrLine>
+&lt;/t:address>
+&lt;/publicationStmt>
+&lt;sourceDesc>
+&lt;p>Converted from a Word document &lt;/p>
+&lt;/sourceDesc>
+&lt;/fileDesc>
+&lt;encodingDesc>
+&lt;appInfo>
+&lt;application ident="DHCONVALIDATOR" version="1.17">
+&lt;label>DHConvalidator&lt;/label>
+&lt;/application>
+&lt;/appInfo>
+&lt;/encodingDesc>
+&lt;profileDesc>
+&lt;textClass>
+&lt;keywords scheme="ConfTool" n="category">
+&lt;term>Paper&lt;/term>
+&lt;/keywords>
+&lt;keywords scheme="ConfTool" n="subcategory">
+&lt;term>Poster&lt;/term>
+&lt;/keywords>
+&lt;keywords scheme="ConfTool" n="keywords">
+&lt;term>REST API&lt;/term>
+&lt;/keywords>
+&lt;keywords scheme="ConfTool" n="topics">
+&lt;term>Teilen&lt;/term>
+&lt;term>Programmierung&lt;/term>
+&lt;term>Webentwicklung&lt;/term>
+&lt;term>Werkzeuge&lt;/term>
+&lt;/keywords>
+&lt;/textClass>
+&lt;settingDesc>
+&lt;ab n="conference">DHd2018 - "Kritik der Digitalen Vernunft", Köln&lt;/ab>
+&lt;ab n="paperID">269&lt;/ab>
+&lt;ab n="session_ID">60&lt;/ab>
+&lt;ab n="session_numberInSession">42&lt;/ab>
+&lt;ab n="session_short">Poster_1&lt;/ab>
+&lt;ab n="session_title">Postersession&lt;/ab>
+&lt;ab n="session_start">2018-03-01 17:45&lt;/ab>
+&lt;ab n="session_end">2018-03-01 23:00&lt;/ab>
+&lt;/settingDesc>
+&lt;/profileDesc>
+&lt;/teiHeader>
+&lt;text>
+&lt;body>
+&lt;p>Einer der am weitesten verbreiteten Ansprüche von Digital Humanities Projekten und Forschungsvorhaben ist jener, nachhaltig nutzbare Daten und Services zu produzieren bzw. zu hinterlassen. Neben archivierbaren Datenformaten und quelloffener Software ist die Einrichtung von REST – APIs eine vielgenutzte Möglichkeit, erstellte Services in anderen Projekten nutzbar zu machen.&lt;ref target="ftn1" n="1"/> Der Vorteil solcher Schnittstellen liegt darin, dass die ihnen zugrunde liegenden Technologie (im wesentlichen HTTP) in so gut wie allen Plattformen und Programmiersprachen bereits implementiert ist. So sind sowohl Services als auch Daten welche über eine sauber definierte REST – Schnittstelle zugänglich sind, relativ einfach in einer Vielzahl anderer Projekte zu integrieren. In vielen Bereichen der Software – Entwicklung hat dieser Vorteil dazu geführt dass Service orientierte Softwarearchitektur und ein „API first approach“ immer populärer geworden sind.&lt;/p>
+&lt;p>Auch das Austrian Center for Digital Humanities an der Österreichischen Akademie der Wissenschaften hat es sich für die kommenden zwei Jahre zu einer Aufgabe gemacht, die in den vergangenen drei Jahren in einer Vielzahl von Projekten entstandenen Daten und Services in standardisierten REST – Schnittstellen verfügbar zu machen bzw. bereits entstandene Schnittstellen entsprechend aufzubereiten und zu dokumentieren. Hierzu sollen zunächst wiederkehrende, generisch abbildbare Aufgaben in den Workflows identifiziert werden, sodann die Ihnen korrespondierenden, bereits bestehenden, Services für eine Verwendung außerhalb des Projektkontextes abgeändert werden.&lt;/p>
+&lt;p>Ziel dieses Vorhabens ist es, einen Katalog an REST-Services zu erstellen, welcher in einer Sandbox zum einen die direkte Verwendung erlaubt, zum anderen die Funktionen der verschiedenen Endpunkte unmittelbar kritisch dokumentiert. Des Weiteren sollen bereits vorhandene Standards&lt;ref target="ftn2" n="2"/> und semantische Erweiterungen &lt;ref target="ftn3" n="3"/> auf Ihre Tauglichkeit und Sinnhaftigkeit in Digital Humanities Kontexten hin geprüft, und gegebenenfalls in den Schnittstellen implementiert werden werden. Exemplarisch soll auch modular wiederverwendbare Front – End Komponenten angeboten werden (bspw. Autocompletes u.a.)&lt;/p>
+&lt;p>Parallel dazu gilt es, anhand der verwendeten Projekte kritisch zu reflektieren, welche Schritte, Funktionalitäten und Daten sich aus einem vorhandenen Projekt sinnvoll zur Nachnutzung herauslösen lassen. Wie kleinteilig lassen sich die Schritte eines geisteswissenschaftlichen Projektes modularisieren und an externe Services auslagern, wenn ein zur Kritik der Resultate fähiger Gesamtblick gewahrt bleiben soll? Wie exakt muss, umgekehrt gefragt, eine Schnittstelle dokumentiert sein, um einer kritischen Prüfung im Rahmen des verwendenden Projektes standhalten zu können? Diese und andere Betrachtungen sollen schlussendlich in einem White Paper zu REST – APIs für wiederkehrende Szenarien in Digital Humanities Projekten münden.&lt;/p>
+&lt;p>Das Poster soll zum einen den Katalog und die Sandbox als Tools präsentieren, zum anderen erste Ergebnisse der Standardisierung von APIs zur Diskussion stellen. Eine Debatte zu den oben genannten Fragen soll dem Vorhaben eine noch breitere Grundlage bei der Erstellung des White Papers geben.&lt;/p>
+&lt;/body>
+&lt;back>
+&lt;div type="notes">
+&lt;note xml:id="ftn1" n="1">
+&lt;ref target="http://digitalhumanities.berkeley.edu/blog/15/05/01/project-sustainability-dh-collaboration-and-community">http://digitalhumanities.berkeley.edu/blog/15/05/01/project-sustainability-dh-collaboration-and-community&lt;/ref> - 14.1.2018
+                    &lt;/note>
+&lt;note xml:id="ftn2" n="2">bspw. https://github.com/OAI/OpenAPI-Specification oder 
+                        &lt;ref target="http://jsonapi.org/">http://jsonapi.org/&lt;/ref> - 14.1.2018
+                    &lt;/note>
+&lt;note xml:id="ftn3" n="3">http://www.hydra-cg.com/spec/latest/core/ und 
+                        &lt;ref target="http://microformats.org/">http://microformats.org/&lt;/ref> - 14.1.2018
+                    &lt;/note>
+&lt;/div>
+&lt;/back>
+&lt;/text>
+&lt;/TEI>
+    </textSource>
+    <text>
+
+    
+
+
+
+
+
+Einer der am weitesten verbreiteten Ansprüche von Digital Humanities Projekten und Forschungsvorhaben ist jener, nachhaltig nutzbare Daten und Services zu produzieren bzw. zu hinterlassen. Neben archivierbaren Datenformaten und quelloffener Software ist die Einrichtung von REST – APIs eine vielgenutzte Möglichkeit, erstellte Services in anderen Projekten nutzbar zu machen.
+
+ Der Vorteil solcher Schnittstellen liegt darin, dass die ihnen zugrunde liegenden Technologie (im wesentlichen HTTP) in so gut wie allen Plattformen und Programmiersprachen bereits implementiert ist. So sind sowohl Services als auch Daten welche über eine sauber definierte REST – Schnittstelle zugänglich sind, relativ einfach in einer Vielzahl anderer Projekte zu integrieren. In vielen Bereichen der Software – Entwicklung hat dieser Vorteil dazu geführt dass Service orientierte Softwarearchitektur und ein „API first approach“ immer populärer geworden sind.
+
+  
+
+Auch das Austrian Center for Digital Humanities an der Österreichischen Akademie der Wissenschaften hat es sich für die kommenden zwei Jahre zu einer Aufgabe gemacht, die in den vergangenen drei Jahren in einer Vielzahl von Projekten entstandenen Daten und Services in standardisierten REST – Schnittstellen verfügbar zu machen bzw. bereits entstandene Schnittstellen entsprechend aufzubereiten und zu dokumentieren. Hierzu sollen zunächst wiederkehrende, generisch abbildbare Aufgaben in den Workflows identifiziert werden, sodann die Ihnen korrespondierenden, bereits bestehenden, Services für eine Verwendung außerhalb des Projektkontextes abgeändert werden.
+
+  
+
+Ziel dieses Vorhabens ist es, einen Katalog an REST-Services zu erstellen, welcher in einer Sandbox zum einen die direkte Verwendung erlaubt, zum anderen die Funktionen der verschiedenen Endpunkte unmittelbar kritisch dokumentiert. Des Weiteren sollen bereits vorhandene Standards
+
+ und semantische Erweiterungen 
+
+ auf Ihre Tauglichkeit und Sinnhaftigkeit in Digital Humanities Kontexten hin geprüft, und gegebenenfalls in den Schnittstellen implementiert werden werden. Exemplarisch soll auch modular wiederverwendbare Front – End Komponenten angeboten werden (bspw. Autocompletes u.a.)
+
+  
+
+Parallel dazu gilt es, anhand der verwendeten Projekte kritisch zu reflektieren, welche Schritte, Funktionalitäten und Daten sich aus einem vorhandenen Projekt sinnvoll zur Nachnutzung herauslösen lassen. Wie kleinteilig lassen sich die Schritte eines geisteswissenschaftlichen Projektes modularisieren und an externe Services auslagern, wenn ein zur Kritik der Resultate fähiger Gesamtblick gewahrt bleiben soll? Wie exakt muss, umgekehrt gefragt, eine Schnittstelle dokumentiert sein, um einer kritischen Prüfung im Rahmen des verwendenden Projektes standhalten zu können? Diese und andere Betrachtungen sollen schlussendlich in einem White Paper zu REST – APIs für wiederkehrende Szenarien in Digital Humanities Projekten münden.
+
+  
+
+Das Poster soll zum einen den Katalog und die Sandbox als Tools präsentieren, zum anderen erste Ergebnisse der Standardisierung von APIs zur Diskussion stellen. Eine Debatte zu den oben genannten Fragen soll dem Vorhaben eine noch breitere Grundlage bei der Erstellung des White Papers geben.
+
+  
+
+http://digitalhumanities.berkeley.edu/blog/15/05/01/project-sustainability-dh-collaboration-and-community
+ - 14.1.2018  
+
+
+
+bspw. https://github.com/OAI/OpenAPI-Specification oder   
+http://jsonapi.org/
+ - 14.1.2018  
+
+
+
+http://www.hydra-cg.com/spec/latest/core/ und   
+http://microformats.org/
+ - 14.1.2018  
+    </text>
+    <tc:tokens xmlns:tc="http://www.dspin.de/data/textcorpus">
+      <tc:token ID="w1">Einer</tc:token>
+      <tc:token ID="w2">der</tc:token>
+      <tc:token ID="w3">am</tc:token>
+      <tc:token ID="w4">weitesten</tc:token>
+      <tc:token ID="w5">verbreiteten</tc:token>
+      <tc:token ID="w6">Ansprüche</tc:token>
+      <tc:token ID="w7">von</tc:token>
+      <tc:token ID="w8">Digital</tc:token>
+      <tc:token ID="w9">Humanities</tc:token>
+      <tc:token ID="wa">Projekten</tc:token>
+      <tc:token ID="wb">und</tc:token>
+      <tc:token ID="wc">Forschungsvorhaben</tc:token>
+      <tc:token ID="wd">ist</tc:token>
+      <tc:token ID="we">jener</tc:token>
+      <tc:token ID="wf">,</tc:token>
+      <tc:token ID="w10">nachhaltig</tc:token>
+      <tc:token ID="w11">nutzbare</tc:token>
+      <tc:token ID="w12">Daten</tc:token>
+      <tc:token ID="w13">und</tc:token>
+      <tc:token ID="w14">Services</tc:token>
+      <tc:token ID="w15">zu</tc:token>
+      <tc:token ID="w16">produzieren</tc:token>
+      <tc:token ID="w17">bzw.</tc:token>
+      <tc:token ID="w18">zu</tc:token>
+      <tc:token ID="w19">hinterlassen</tc:token>
+      <tc:token ID="w1a">.</tc:token>
+      <tc:token ID="w1b">Neben</tc:token>
+      <tc:token ID="w1c">archivierbaren</tc:token>
+      <tc:token ID="w1d">Datenformaten</tc:token>
+      <tc:token ID="w1e">und</tc:token>
+      <tc:token ID="w1f">quelloffener</tc:token>
+      <tc:token ID="w20">Software</tc:token>
+      <tc:token ID="w21">ist</tc:token>
+      <tc:token ID="w22">die</tc:token>
+      <tc:token ID="w23">Einrichtung</tc:token>
+      <tc:token ID="w24">von</tc:token>
+      <tc:token ID="w25">REST</tc:token>
+      <tc:token ID="w26">–</tc:token>
+      <tc:token ID="w27">APIs</tc:token>
+      <tc:token ID="w28">eine</tc:token>
+      <tc:token ID="w29">vielgenutzte</tc:token>
+      <tc:token ID="w2a">Möglichkeit</tc:token>
+      <tc:token ID="w2b">,</tc:token>
+      <tc:token ID="w2c">erstellte</tc:token>
+      <tc:token ID="w2d">Services</tc:token>
+      <tc:token ID="w2e">in</tc:token>
+      <tc:token ID="w2f">anderen</tc:token>
+      <tc:token ID="w30">Projekten</tc:token>
+      <tc:token ID="w31">nutzbar</tc:token>
+      <tc:token ID="w32">zu</tc:token>
+      <tc:token ID="w33">machen</tc:token>
+      <tc:token ID="w34">.</tc:token>
+      <tc:token ID="w35">Der</tc:token>
+      <tc:token ID="w36">Vorteil</tc:token>
+      <tc:token ID="w37">solcher</tc:token>
+      <tc:token ID="w38">Schnittstellen</tc:token>
+      <tc:token ID="w39">liegt</tc:token>
+      <tc:token ID="w3a">darin</tc:token>
+      <tc:token ID="w3b">,</tc:token>
+      <tc:token ID="w3c">dass</tc:token>
+      <tc:token ID="w3d">die</tc:token>
+      <tc:token ID="w3e">ihnen</tc:token>
+      <tc:token ID="w3f">zugrunde</tc:token>
+      <tc:token ID="w40">liegenden</tc:token>
+      <tc:token ID="w41">Technologie</tc:token>
+      <tc:token ID="w42">(</tc:token>
+      <tc:token ID="w43">im</tc:token>
+      <tc:token ID="w44">wesentlichen</tc:token>
+      <tc:token ID="w45">HTTP</tc:token>
+      <tc:token ID="w46">)</tc:token>
+      <tc:token ID="w47">in</tc:token>
+      <tc:token ID="w48">so</tc:token>
+      <tc:token ID="w49">gut</tc:token>
+      <tc:token ID="w4a">wie</tc:token>
+      <tc:token ID="w4b">allen</tc:token>
+      <tc:token ID="w4c">Plattformen</tc:token>
+      <tc:token ID="w4d">und</tc:token>
+      <tc:token ID="w4e">Programmiersprachen</tc:token>
+      <tc:token ID="w4f">bereits</tc:token>
+      <tc:token ID="w50">implementiert</tc:token>
+      <tc:token ID="w51">ist</tc:token>
+      <tc:token ID="w52">.</tc:token>
+      <tc:token ID="w53">So</tc:token>
+      <tc:token ID="w54">sind</tc:token>
+      <tc:token ID="w55">sowohl</tc:token>
+      <tc:token ID="w56">Services</tc:token>
+      <tc:token ID="w57">als</tc:token>
+      <tc:token ID="w58">auch</tc:token>
+      <tc:token ID="w59">Daten</tc:token>
+      <tc:token ID="w5a">welche</tc:token>
+      <tc:token ID="w5b">über</tc:token>
+      <tc:token ID="w5c">eine</tc:token>
+      <tc:token ID="w5d">sauber</tc:token>
+      <tc:token ID="w5e">definierte</tc:token>
+      <tc:token ID="w5f">REST</tc:token>
+      <tc:token ID="w60">–</tc:token>
+      <tc:token ID="w61">Schnittstelle</tc:token>
+      <tc:token ID="w62">zugänglich</tc:token>
+      <tc:token ID="w63">sind</tc:token>
+      <tc:token ID="w64">,</tc:token>
+      <tc:token ID="w65">relativ</tc:token>
+      <tc:token ID="w66">einfach</tc:token>
+      <tc:token ID="w67">in</tc:token>
+      <tc:token ID="w68">einer</tc:token>
+      <tc:token ID="w69">Vielzahl</tc:token>
+      <tc:token ID="w6a">anderer</tc:token>
+      <tc:token ID="w6b">Projekte</tc:token>
+      <tc:token ID="w6c">zu</tc:token>
+      <tc:token ID="w6d">integrieren</tc:token>
+      <tc:token ID="w6e">.</tc:token>
+      <tc:token ID="w6f">In</tc:token>
+      <tc:token ID="w70">vielen</tc:token>
+      <tc:token ID="w71">Bereichen</tc:token>
+      <tc:token ID="w72">der</tc:token>
+      <tc:token ID="w73">Software</tc:token>
+      <tc:token ID="w74">–</tc:token>
+      <tc:token ID="w75">Entwicklung</tc:token>
+      <tc:token ID="w76">hat</tc:token>
+      <tc:token ID="w77">dieser</tc:token>
+      <tc:token ID="w78">Vorteil</tc:token>
+      <tc:token ID="w79">dazu</tc:token>
+      <tc:token ID="w7a">geführt</tc:token>
+      <tc:token ID="w7b">dass</tc:token>
+      <tc:token ID="w7c">Service</tc:token>
+      <tc:token ID="w7d">orientierte</tc:token>
+      <tc:token ID="w7e">Softwarearchitektur</tc:token>
+      <tc:token ID="w7f">und</tc:token>
+      <tc:token ID="w80">ein</tc:token>
+      <tc:token ID="w81">„</tc:token>
+      <tc:token ID="w82">API</tc:token>
+      <tc:token ID="w83">first</tc:token>
+      <tc:token ID="w84">approach</tc:token>
+      <tc:token ID="w85">“</tc:token>
+      <tc:token ID="w86">immer</tc:token>
+      <tc:token ID="w87">populärer</tc:token>
+      <tc:token ID="w88">geworden</tc:token>
+      <tc:token ID="w89">sind</tc:token>
+      <tc:token ID="w8a">.</tc:token>
+      <tc:token ID="w8b">Auch</tc:token>
+      <tc:token ID="w8c">das</tc:token>
+      <tc:token ID="w8d">Austrian</tc:token>
+      <tc:token ID="w8e">Center</tc:token>
+      <tc:token ID="w8f">for</tc:token>
+      <tc:token ID="w90">Digital</tc:token>
+      <tc:token ID="w91">Humanities</tc:token>
+      <tc:token ID="w92">an</tc:token>
+      <tc:token ID="w93">der</tc:token>
+      <tc:token ID="w94">Österreichischen</tc:token>
+      <tc:token ID="w95">Akademie</tc:token>
+      <tc:token ID="w96">der</tc:token>
+      <tc:token ID="w97">Wissenschaften</tc:token>
+      <tc:token ID="w98">hat</tc:token>
+      <tc:token ID="w99">es</tc:token>
+      <tc:token ID="w9a">sich</tc:token>
+      <tc:token ID="w9b">für</tc:token>
+      <tc:token ID="w9c">die</tc:token>
+      <tc:token ID="w9d">kommenden</tc:token>
+      <tc:token ID="w9e">zwei</tc:token>
+      <tc:token ID="w9f">Jahre</tc:token>
+      <tc:token ID="wa0">zu</tc:token>
+      <tc:token ID="wa1">einer</tc:token>
+      <tc:token ID="wa2">Aufgabe</tc:token>
+      <tc:token ID="wa3">gemacht</tc:token>
+      <tc:token ID="wa4">,</tc:token>
+      <tc:token ID="wa5">die</tc:token>
+      <tc:token ID="wa6">in</tc:token>
+      <tc:token ID="wa7">den</tc:token>
+      <tc:token ID="wa8">vergangenen</tc:token>
+      <tc:token ID="wa9">drei</tc:token>
+      <tc:token ID="waa">Jahren</tc:token>
+      <tc:token ID="wab">in</tc:token>
+      <tc:token ID="wac">einer</tc:token>
+      <tc:token ID="wad">Vielzahl</tc:token>
+      <tc:token ID="wae">von</tc:token>
+      <tc:token ID="waf">Projekten</tc:token>
+      <tc:token ID="wb0">entstandenen</tc:token>
+      <tc:token ID="wb1">Daten</tc:token>
+      <tc:token ID="wb2">und</tc:token>
+      <tc:token ID="wb3">Services</tc:token>
+      <tc:token ID="wb4">in</tc:token>
+      <tc:token ID="wb5">standardisierten</tc:token>
+      <tc:token ID="wb6">REST</tc:token>
+      <tc:token ID="wb7">–</tc:token>
+      <tc:token ID="wb8">Schnittstellen</tc:token>
+      <tc:token ID="wb9">verfügbar</tc:token>
+      <tc:token ID="wba">zu</tc:token>
+      <tc:token ID="wbb">machen</tc:token>
+      <tc:token ID="wbc">bzw.</tc:token>
+      <tc:token ID="wbd">bereits</tc:token>
+      <tc:token ID="wbe">entstandene</tc:token>
+      <tc:token ID="wbf">Schnittstellen</tc:token>
+      <tc:token ID="wc0">entsprechend</tc:token>
+      <tc:token ID="wc1">aufzubereiten</tc:token>
+      <tc:token ID="wc2">und</tc:token>
+      <tc:token ID="wc3">zu</tc:token>
+      <tc:token ID="wc4">dokumentieren</tc:token>
+      <tc:token ID="wc5">.</tc:token>
+      <tc:token ID="wc6">Hierzu</tc:token>
+      <tc:token ID="wc7">sollen</tc:token>
+      <tc:token ID="wc8">zunächst</tc:token>
+      <tc:token ID="wc9">wiederkehrende</tc:token>
+      <tc:token ID="wca">,</tc:token>
+      <tc:token ID="wcb">generisch</tc:token>
+      <tc:token ID="wcc">abbildbare</tc:token>
+      <tc:token ID="wcd">Aufgaben</tc:token>
+      <tc:token ID="wce">in</tc:token>
+      <tc:token ID="wcf">den</tc:token>
+      <tc:token ID="wd0">Workflows</tc:token>
+      <tc:token ID="wd1">identifiziert</tc:token>
+      <tc:token ID="wd2">werden</tc:token>
+      <tc:token ID="wd3">,</tc:token>
+      <tc:token ID="wd4">sodann</tc:token>
+      <tc:token ID="wd5">die</tc:token>
+      <tc:token ID="wd6">Ihnen</tc:token>
+      <tc:token ID="wd7">korrespondierenden</tc:token>
+      <tc:token ID="wd8">,</tc:token>
+      <tc:token ID="wd9">bereits</tc:token>
+      <tc:token ID="wda">bestehenden</tc:token>
+      <tc:token ID="wdb">,</tc:token>
+      <tc:token ID="wdc">Services</tc:token>
+      <tc:token ID="wdd">für</tc:token>
+      <tc:token ID="wde">eine</tc:token>
+      <tc:token ID="wdf">Verwendung</tc:token>
+      <tc:token ID="we0">außerhalb</tc:token>
+      <tc:token ID="we1">des</tc:token>
+      <tc:token ID="we2">Projektkontextes</tc:token>
+      <tc:token ID="we3">abgeändert</tc:token>
+      <tc:token ID="we4">werden</tc:token>
+      <tc:token ID="we5">.</tc:token>
+      <tc:token ID="we6">Ziel</tc:token>
+      <tc:token ID="we7">dieses</tc:token>
+      <tc:token ID="we8">Vorhabens</tc:token>
+      <tc:token ID="we9">ist</tc:token>
+      <tc:token ID="wea">es</tc:token>
+      <tc:token ID="web">,</tc:token>
+      <tc:token ID="wec">einen</tc:token>
+      <tc:token ID="wed">Katalog</tc:token>
+      <tc:token ID="wee">an</tc:token>
+      <tc:token ID="wef">REST-Services</tc:token>
+      <tc:token ID="wf0">zu</tc:token>
+      <tc:token ID="wf1">erstellen</tc:token>
+      <tc:token ID="wf2">,</tc:token>
+      <tc:token ID="wf3">welcher</tc:token>
+      <tc:token ID="wf4">in</tc:token>
+      <tc:token ID="wf5">einer</tc:token>
+      <tc:token ID="wf6">Sandbox</tc:token>
+      <tc:token ID="wf7">zum</tc:token>
+      <tc:token ID="wf8">einen</tc:token>
+      <tc:token ID="wf9">die</tc:token>
+      <tc:token ID="wfa">direkte</tc:token>
+      <tc:token ID="wfb">Verwendung</tc:token>
+      <tc:token ID="wfc">erlaubt</tc:token>
+      <tc:token ID="wfd">,</tc:token>
+      <tc:token ID="wfe">zum</tc:token>
+      <tc:token ID="wff">anderen</tc:token>
+      <tc:token ID="w100">die</tc:token>
+      <tc:token ID="w101">Funktionen</tc:token>
+      <tc:token ID="w102">der</tc:token>
+      <tc:token ID="w103">verschiedenen</tc:token>
+      <tc:token ID="w104">Endpunkte</tc:token>
+      <tc:token ID="w105">unmittelbar</tc:token>
+      <tc:token ID="w106">kritisch</tc:token>
+      <tc:token ID="w107">dokumentiert</tc:token>
+      <tc:token ID="w108">.</tc:token>
+      <tc:token ID="w109">Des</tc:token>
+      <tc:token ID="w10a">Weiteren</tc:token>
+      <tc:token ID="w10b">sollen</tc:token>
+      <tc:token ID="w10c">bereits</tc:token>
+      <tc:token ID="w10d">vorhandene</tc:token>
+      <tc:token ID="w10e">Standards</tc:token>
+      <tc:token ID="w10f">und</tc:token>
+      <tc:token ID="w110">semantische</tc:token>
+      <tc:token ID="w111">Erweiterungen</tc:token>
+      <tc:token ID="w112">auf</tc:token>
+      <tc:token ID="w113">Ihre</tc:token>
+      <tc:token ID="w114">Tauglichkeit</tc:token>
+      <tc:token ID="w115">und</tc:token>
+      <tc:token ID="w116">Sinnhaftigkeit</tc:token>
+      <tc:token ID="w117">in</tc:token>
+      <tc:token ID="w118">Digital</tc:token>
+      <tc:token ID="w119">Humanities</tc:token>
+      <tc:token ID="w11a">Kontexten</tc:token>
+      <tc:token ID="w11b">hin</tc:token>
+      <tc:token ID="w11c">geprüft</tc:token>
+      <tc:token ID="w11d">,</tc:token>
+      <tc:token ID="w11e">und</tc:token>
+      <tc:token ID="w11f">gegebenenfalls</tc:token>
+      <tc:token ID="w120">in</tc:token>
+      <tc:token ID="w121">den</tc:token>
+      <tc:token ID="w122">Schnittstellen</tc:token>
+      <tc:token ID="w123">implementiert</tc:token>
+      <tc:token ID="w124">werden</tc:token>
+      <tc:token ID="w125">werden</tc:token>
+      <tc:token ID="w126">.</tc:token>
+      <tc:token ID="w127">Exemplarisch</tc:token>
+      <tc:token ID="w128">soll</tc:token>
+      <tc:token ID="w129">auch</tc:token>
+      <tc:token ID="w12a">modular</tc:token>
+      <tc:token ID="w12b">wiederverwendbare</tc:token>
+      <tc:token ID="w12c">Front</tc:token>
+      <tc:token ID="w12d">–</tc:token>
+      <tc:token ID="w12e">End</tc:token>
+      <tc:token ID="w12f">Komponenten</tc:token>
+      <tc:token ID="w130">angeboten</tc:token>
+      <tc:token ID="w131">werden</tc:token>
+      <tc:token ID="w132">(</tc:token>
+      <tc:token ID="w133">bspw.</tc:token>
+      <tc:token ID="w134">Autocompletes</tc:token>
+      <tc:token ID="w135">u.a.</tc:token>
+      <tc:token ID="w136">)</tc:token>
+      <tc:token ID="w137">Parallel</tc:token>
+      <tc:token ID="w138">dazu</tc:token>
+      <tc:token ID="w139">gilt</tc:token>
+      <tc:token ID="w13a">es</tc:token>
+      <tc:token ID="w13b">,</tc:token>
+      <tc:token ID="w13c">anhand</tc:token>
+      <tc:token ID="w13d">der</tc:token>
+      <tc:token ID="w13e">verwendeten</tc:token>
+      <tc:token ID="w13f">Projekte</tc:token>
+      <tc:token ID="w140">kritisch</tc:token>
+      <tc:token ID="w141">zu</tc:token>
+      <tc:token ID="w142">reflektieren</tc:token>
+      <tc:token ID="w143">,</tc:token>
+      <tc:token ID="w144">welche</tc:token>
+      <tc:token ID="w145">Schritte</tc:token>
+      <tc:token ID="w146">,</tc:token>
+      <tc:token ID="w147">Funktionalitäten</tc:token>
+      <tc:token ID="w148">und</tc:token>
+      <tc:token ID="w149">Daten</tc:token>
+      <tc:token ID="w14a">sich</tc:token>
+      <tc:token ID="w14b">aus</tc:token>
+      <tc:token ID="w14c">einem</tc:token>
+      <tc:token ID="w14d">vorhandenen</tc:token>
+      <tc:token ID="w14e">Projekt</tc:token>
+      <tc:token ID="w14f">sinnvoll</tc:token>
+      <tc:token ID="w150">zur</tc:token>
+      <tc:token ID="w151">Nachnutzung</tc:token>
+      <tc:token ID="w152">herauslösen</tc:token>
+      <tc:token ID="w153">lassen</tc:token>
+      <tc:token ID="w154">.</tc:token>
+      <tc:token ID="w155">Wie</tc:token>
+      <tc:token ID="w156">kleinteilig</tc:token>
+      <tc:token ID="w157">lassen</tc:token>
+      <tc:token ID="w158">sich</tc:token>
+      <tc:token ID="w159">die</tc:token>
+      <tc:token ID="w15a">Schritte</tc:token>
+      <tc:token ID="w15b">eines</tc:token>
+      <tc:token ID="w15c">geisteswissenschaftlichen</tc:token>
+      <tc:token ID="w15d">Projektes</tc:token>
+      <tc:token ID="w15e">modularisieren</tc:token>
+      <tc:token ID="w15f">und</tc:token>
+      <tc:token ID="w160">an</tc:token>
+      <tc:token ID="w161">externe</tc:token>
+      <tc:token ID="w162">Services</tc:token>
+      <tc:token ID="w163">auslagern</tc:token>
+      <tc:token ID="w164">,</tc:token>
+      <tc:token ID="w165">wenn</tc:token>
+      <tc:token ID="w166">ein</tc:token>
+      <tc:token ID="w167">zur</tc:token>
+      <tc:token ID="w168">Kritik</tc:token>
+      <tc:token ID="w169">der</tc:token>
+      <tc:token ID="w16a">Resultate</tc:token>
+      <tc:token ID="w16b">fähiger</tc:token>
+      <tc:token ID="w16c">Gesamtblick</tc:token>
+      <tc:token ID="w16d">gewahrt</tc:token>
+      <tc:token ID="w16e">bleiben</tc:token>
+      <tc:token ID="w16f">soll</tc:token>
+      <tc:token ID="w170">?</tc:token>
+      <tc:token ID="w171">Wie</tc:token>
+      <tc:token ID="w172">exakt</tc:token>
+      <tc:token ID="w173">muss</tc:token>
+      <tc:token ID="w174">,</tc:token>
+      <tc:token ID="w175">umgekehrt</tc:token>
+      <tc:token ID="w176">gefragt</tc:token>
+      <tc:token ID="w177">,</tc:token>
+      <tc:token ID="w178">eine</tc:token>
+      <tc:token ID="w179">Schnittstelle</tc:token>
+      <tc:token ID="w17a">dokumentiert</tc:token>
+      <tc:token ID="w17b">sein</tc:token>
+      <tc:token ID="w17c">,</tc:token>
+      <tc:token ID="w17d">um</tc:token>
+      <tc:token ID="w17e">einer</tc:token>
+      <tc:token ID="w17f">kritischen</tc:token>
+      <tc:token ID="w180">Prüfung</tc:token>
+      <tc:token ID="w181">im</tc:token>
+      <tc:token ID="w182">Rahmen</tc:token>
+      <tc:token ID="w183">des</tc:token>
+      <tc:token ID="w184">verwendenden</tc:token>
+      <tc:token ID="w185">Projektes</tc:token>
+      <tc:token ID="w186">standhalten</tc:token>
+      <tc:token ID="w187">zu</tc:token>
+      <tc:token ID="w188">können</tc:token>
+      <tc:token ID="w189">?</tc:token>
+      <tc:token ID="w18a">Diese</tc:token>
+      <tc:token ID="w18b">und</tc:token>
+      <tc:token ID="w18c">andere</tc:token>
+      <tc:token ID="w18d">Betrachtungen</tc:token>
+      <tc:token ID="w18e">sollen</tc:token>
+      <tc:token ID="w18f">schlussendlich</tc:token>
+      <tc:token ID="w190">in</tc:token>
+      <tc:token ID="w191">einem</tc:token>
+      <tc:token ID="w192">White</tc:token>
+      <tc:token ID="w193">Paper</tc:token>
+      <tc:token ID="w194">zu</tc:token>
+      <tc:token ID="w195">REST</tc:token>
+      <tc:token ID="w196">–</tc:token>
+      <tc:token ID="w197">APIs</tc:token>
+      <tc:token ID="w198">für</tc:token>
+      <tc:token ID="w199">wiederkehrende</tc:token>
+      <tc:token ID="w19a">Szenarien</tc:token>
+      <tc:token ID="w19b">in</tc:token>
+      <tc:token ID="w19c">Digital</tc:token>
+      <tc:token ID="w19d">Humanities</tc:token>
+      <tc:token ID="w19e">Projekten</tc:token>
+      <tc:token ID="w19f">münden</tc:token>
+      <tc:token ID="w1a0">.</tc:token>
+      <tc:token ID="w1a1">Das</tc:token>
+      <tc:token ID="w1a2">Poster</tc:token>
+      <tc:token ID="w1a3">soll</tc:token>
+      <tc:token ID="w1a4">zum</tc:token>
+      <tc:token ID="w1a5">einen</tc:token>
+      <tc:token ID="w1a6">den</tc:token>
+      <tc:token ID="w1a7">Katalog</tc:token>
+      <tc:token ID="w1a8">und</tc:token>
+      <tc:token ID="w1a9">die</tc:token>
+      <tc:token ID="w1aa">Sandbox</tc:token>
+      <tc:token ID="w1ab">als</tc:token>
+      <tc:token ID="w1ac">Tools</tc:token>
+      <tc:token ID="w1ad">präsentieren</tc:token>
+      <tc:token ID="w1ae">,</tc:token>
+      <tc:token ID="w1af">zum</tc:token>
+      <tc:token ID="w1b0">anderen</tc:token>
+      <tc:token ID="w1b1">erste</tc:token>
+      <tc:token ID="w1b2">Ergebnisse</tc:token>
+      <tc:token ID="w1b3">der</tc:token>
+      <tc:token ID="w1b4">Standardisierung</tc:token>
+      <tc:token ID="w1b5">von</tc:token>
+      <tc:token ID="w1b6">APIs</tc:token>
+      <tc:token ID="w1b7">zur</tc:token>
+      <tc:token ID="w1b8">Diskussion</tc:token>
+      <tc:token ID="w1b9">stellen</tc:token>
+      <tc:token ID="w1ba">.</tc:token>
+      <tc:token ID="w1bb">Eine</tc:token>
+      <tc:token ID="w1bc">Debatte</tc:token>
+      <tc:token ID="w1bd">zu</tc:token>
+      <tc:token ID="w1be">den</tc:token>
+      <tc:token ID="w1bf">oben</tc:token>
+      <tc:token ID="w1c0">genannten</tc:token>
+      <tc:token ID="w1c1">Fragen</tc:token>
+      <tc:token ID="w1c2">soll</tc:token>
+      <tc:token ID="w1c3">dem</tc:token>
+      <tc:token ID="w1c4">Vorhaben</tc:token>
+      <tc:token ID="w1c5">eine</tc:token>
+      <tc:token ID="w1c6">noch</tc:token>
+      <tc:token ID="w1c7">breitere</tc:token>
+      <tc:token ID="w1c8">Grundlage</tc:token>
+      <tc:token ID="w1c9">bei</tc:token>
+      <tc:token ID="w1ca">der</tc:token>
+      <tc:token ID="w1cb">Erstellung</tc:token>
+      <tc:token ID="w1cc">des</tc:token>
+      <tc:token ID="w1cd">White</tc:token>
+      <tc:token ID="w1ce">Papers</tc:token>
+      <tc:token ID="w1cf">geben</tc:token>
+      <tc:token ID="w1d0">.</tc:token>
+      <tc:token ID="w1d1">http://digitalhumanities.berkeley.edu/blog/15/05/01/project-sustainability-dh-collaboration-and-community</tc:token>
+      <tc:token ID="w1d2">-</tc:token>
+      <tc:token ID="w1d3">14</tc:token>
+      <tc:token ID="w1d4">.</tc:token>
+      <tc:token ID="w1d5">1.</tc:token>
+      <tc:token ID="w1d6">2018</tc:token>
+      <tc:token ID="w1d7">bspw.</tc:token>
+      <tc:token ID="w1d8">https://github.com/OAI/OpenAPI-Specification</tc:token>
+      <tc:token ID="w1d9">oder</tc:token>
+      <tc:token ID="w1da">http://jsonapi.org/</tc:token>
+      <tc:token ID="w1db">-</tc:token>
+      <tc:token ID="w1dc">14</tc:token>
+      <tc:token ID="w1dd">.</tc:token>
+      <tc:token ID="w1de">1.</tc:token>
+      <tc:token ID="w1df">2018</tc:token>
+      <tc:token ID="w1e0">http://www.hydra-cg.com/spec/latest/core/</tc:token>
+      <tc:token ID="w1e1">und</tc:token>
+      <tc:token ID="w1e2">http://microformats.org/</tc:token>
+      <tc:token ID="w1e3">-</tc:token>
+      <tc:token ID="w1e4">14</tc:token>
+      <tc:token ID="w1e5">.</tc:token>
+      <tc:token ID="w1e6">1.</tc:token>
+      <tc:token ID="w1e7">2018</tc:token>
+    </tc:tokens>
+    <tc:sentences xmlns:tc="http://www.dspin.de/data/textcorpus">
+      <tc:sentence tokenIDs="w1 w2 w3 w4 w5 w6 w7 w8 w9 wa wb wc wd we wf w10 w11 w12 w13 w14 w15 w16 w17 w18 w19 w1a" ID="s1"/>
+      <tc:sentence tokenIDs="w1b w1c w1d w1e w1f w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 w2a w2b w2c w2d w2e w2f w30 w31 w32 w33 w34" ID="s2"/>
+      <tc:sentence tokenIDs="w35 w36 w37 w38 w39 w3a w3b w3c w3d w3e w3f w40 w41 w42 w43 w44 w45 w46 w47 w48 w49 w4a w4b w4c w4d w4e w4f w50 w51 w52" ID="s3"/>
+      <tc:sentence tokenIDs="w53 w54 w55 w56 w57 w58 w59 w5a w5b w5c w5d w5e w5f w60 w61 w62 w63 w64 w65 w66 w67 w68 w69 w6a w6b w6c w6d w6e" ID="s4"/>
+      <tc:sentence tokenIDs="w6f w70 w71 w72 w73 w74 w75 w76 w77 w78 w79 w7a w7b w7c w7d w7e w7f w80 w81 w82 w83 w84 w85 w86 w87 w88 w89 w8a" ID="s5"/>
+      <tc:sentence tokenIDs="w8b w8c w8d w8e w8f w90 w91 w92 w93 w94 w95 w96 w97 w98 w99 w9a w9b w9c w9d w9e w9f wa0 wa1 wa2 wa3 wa4 wa5 wa6 wa7 wa8 wa9 waa wab wac wad wae waf wb0 wb1 wb2 wb3 wb4 wb5 wb6 wb7 wb8 wb9 wba wbb wbc wbd wbe wbf wc0 wc1 wc2 wc3 wc4 wc5" ID="s6"/>
+      <tc:sentence tokenIDs="wc6 wc7 wc8 wc9 wca wcb wcc wcd wce wcf wd0 wd1 wd2 wd3 wd4 wd5 wd6 wd7 wd8 wd9 wda wdb wdc wdd wde wdf we0 we1 we2 we3 we4 we5" ID="s7"/>
+      <tc:sentence tokenIDs="we6 we7 we8 we9 wea web wec wed wee wef wf0 wf1 wf2 wf3 wf4 wf5 wf6 wf7 wf8 wf9 wfa wfb wfc wfd wfe wff w100 w101 w102 w103 w104 w105 w106 w107 w108" ID="s8"/>
+      <tc:sentence tokenIDs="w109 w10a w10b w10c w10d w10e w10f w110 w111 w112 w113 w114 w115 w116 w117 w118 w119 w11a w11b w11c w11d w11e w11f w120 w121 w122 w123 w124 w125 w126" ID="s9"/>
+      <tc:sentence tokenIDs="w127 w128 w129 w12a w12b w12c w12d w12e w12f w130 w131 w132 w133 w134 w135 w136" ID="sa"/>
+      <tc:sentence tokenIDs="w137 w138 w139 w13a w13b w13c w13d w13e w13f w140 w141 w142 w143 w144 w145 w146 w147 w148 w149 w14a w14b w14c w14d w14e w14f w150 w151 w152 w153 w154" ID="sb"/>
+      <tc:sentence tokenIDs="w155 w156 w157 w158 w159 w15a w15b w15c w15d w15e w15f w160 w161 w162 w163 w164 w165 w166 w167 w168 w169 w16a w16b w16c w16d w16e w16f w170" ID="sc"/>
+      <tc:sentence tokenIDs="w171 w172 w173 w174 w175 w176 w177 w178 w179 w17a w17b w17c w17d w17e w17f w180 w181 w182 w183 w184 w185 w186 w187 w188 w189" ID="sd"/>
+      <tc:sentence tokenIDs="w18a w18b w18c w18d w18e w18f w190 w191 w192 w193 w194 w195 w196 w197 w198 w199 w19a w19b w19c w19d w19e w19f w1a0" ID="se"/>
+      <tc:sentence tokenIDs="w1a1 w1a2 w1a3 w1a4 w1a5 w1a6 w1a7 w1a8 w1a9 w1aa w1ab w1ac w1ad w1ae w1af w1b0 w1b1 w1b2 w1b3 w1b4 w1b5 w1b6 w1b7 w1b8 w1b9 w1ba" ID="sf"/>
+      <tc:sentence tokenIDs="w1bb w1bc w1bd w1be w1bf w1c0 w1c1 w1c2 w1c3 w1c4 w1c5 w1c6 w1c7 w1c8 w1c9 w1ca w1cb w1cc w1cd w1ce w1cf w1d0 w1d1 w1d2 w1d3 w1d4" ID="s10"/>
+      <tc:sentence tokenIDs="w1d5 w1d6 w1d7 w1d8 w1d9 w1da w1db w1dc w1dd" ID="s11"/>
+      <tc:sentence tokenIDs="w1de w1df w1e0 w1e1 w1e2 w1e3 w1e4 w1e5" ID="s12"/>
+      <tc:sentence tokenIDs="w1e6 w1e7" ID="s13"/>
+    </tc:sentences>
+    <tc:namedEntities xmlns:tc="http://www.dspin.de/data/textcorpus" type="tuebadz8">
+      <tc:entity class="ORG" tokenIDs="w25"/>
+      <tc:entity class="ORG" tokenIDs="w8d w8e w8f w90 w91"/>
+      <tc:entity class="ORG" tokenIDs="w94 w95"/>
+      <tc:entity class="OTH" tokenIDs="w134"/>
+      <tc:entity class="ORG" tokenIDs="w195"/>
+      <tc:entity class="ORG" tokenIDs="w1cd w1ce"/>
+    </tc:namedEntities>
+  </TextCorpus>
+</D-Spin>

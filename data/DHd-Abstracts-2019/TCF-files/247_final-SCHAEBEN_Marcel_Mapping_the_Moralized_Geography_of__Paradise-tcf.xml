@@ -1,0 +1,1424 @@
+<?xml version='1.0' encoding='UTF-8'?><D-Spin xmlns="http://www.dspin.de/data" version="5">
+  <MetaData xmlns="http://www.dspin.de/data/metadata"><Services><cmd:CMD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cmd="http://www.clarin.eu/cmd/1" CMDVersion="1.2" xsi:schemaLocation="http://www.clarin.eu/cmd/1 http://catalog.clarin.eu/ds/ComponentRegistry/rest/registry/profiles/clarin.eu:cr1:p_1320657629623/xsd"><cmd:Resources><cmd:ResourceProxyList/><cmd:JournalFileProxyList/><cmd:ResourceRelationList/></cmd:Resources><cmd:Components><cmd:WebServiceToolChain><cmd:GeneralInfo><cmd:Descriptions><cmd:Description/></cmd:Descriptions><cmd:ResourceName>Custom chain</cmd:ResourceName><cmd:ResourceClass>Toolchain</cmd:ResourceClass></cmd:GeneralInfo><cmd:Toolchain><cmd:ToolInChain><cmd:PID>https://hdl.handle.net/21.11120/0000-0008-319A-3</cmd:PID><cmd:Parameter value="de" name="lang"/></cmd:ToolInChain><cmd:ToolInChain><cmd:PID>https://hdl.handle.net/21.11120/0000-0008-3183-C</cmd:PID><cmd:Parameter value="5" name="version"/></cmd:ToolInChain><cmd:ToolInChain><cmd:PID>http://hdl.handle.net/11022/0000-0007-DA29-6</cmd:PID><cmd:Parameter value="de" name="lang"/><cmd:Parameter value="5" name="version"/></cmd:ToolInChain></cmd:Toolchain></cmd:WebServiceToolChain></cmd:Components></cmd:CMD></Services></MetaData>
+  <TextCorpus xmlns="http://www.dspin.de/data/textcorpus" lang="de">
+    <textSource type="application/tei+xml;format-variant=tei-dta;tokenized=0">&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;TEI xml:id="247_final-SCHAEBEN_Marcel_Mapping_the_Moralized_Geography_of__Paradise" xmlns="http://www.tei-c.org/ns/1.0">
+&lt;teiHeader>
+&lt;fileDesc>
+&lt;titleStmt>
+&lt;title>Mapping the Moralized Geography of 'Paradise Lost': Prototypenbildung am Beispiel einer geo-kritischen Erschließung von Miltons Werk&lt;/title>
+&lt;author>
+&lt;persName>
+&lt;surname>Schaeben&lt;/surname>
+&lt;forename>Marcel&lt;/forename>
+&lt;/persName>
+&lt;affiliation>Cologne Center for eHumanities (CCeH), Universität zu Köln, Deutschland&lt;/affiliation>
+&lt;email>m.schaeben@uni-koeln.de&lt;/email>
+&lt;/author>
+&lt;author>
+&lt;persName>
+&lt;surname>El Khatib&lt;/surname>
+&lt;forename>Randa&lt;/forename>
+&lt;/persName>
+&lt;affiliation>Electronic Textual Cultures Lab, University of Victoria, Canada&lt;/affiliation>
+&lt;email>elkhatib.randa@gmail.com&lt;/email>
+&lt;/author>
+&lt;/titleStmt>
+&lt;editionStmt>
+&lt;edition>
+&lt;date>2015-10-04T22:02:00Z&lt;/date>
+&lt;/edition>
+&lt;/editionStmt>
+&lt;publicationStmt>
+&lt;t:publisher xmlns:t="http://www.tei-c.org/ns/1.0">Patrick Sahle, im Auftrag des Verbands Digital Humanities im deutschsprachigen Raum e.V.&lt;/t:publisher>
+&lt;t:address xmlns:t="http://www.tei-c.org/ns/1.0">
+&lt;t:addrLine>Universität zu Köln&lt;/t:addrLine>
+&lt;t:addrLine>Cologne Center for eHumanities&lt;/t:addrLine>
+&lt;t:addrLine>Albertus-Magnus-Platz&lt;/t:addrLine>
+&lt;t:addrLine>50923 Köln&lt;/t:addrLine>
+&lt;/t:address>
+&lt;/publicationStmt>
+&lt;sourceDesc>
+&lt;p>Converted from a Word document&lt;/p>
+&lt;/sourceDesc>
+&lt;/fileDesc>
+&lt;encodingDesc>
+&lt;appInfo>
+&lt;application ident="DHCONVALIDATOR" version="1.22">
+&lt;label>DHConvalidator&lt;/label>
+&lt;/application>
+&lt;/appInfo>
+&lt;/encodingDesc>
+&lt;profileDesc>
+&lt;textClass>
+&lt;keywords scheme="ConfTool" n="category">
+&lt;term>Paper&lt;/term>
+&lt;/keywords>
+&lt;keywords scheme="ConfTool" n="subcategory">
+&lt;term>Posterpräsentation&lt;/term>
+&lt;/keywords>
+&lt;keywords scheme="ConfTool" n="keywords">
+&lt;term>Literary Mapping&lt;/term>
+&lt;term>Deep Maps&lt;/term>
+&lt;term>Visualisierung&lt;/term>
+&lt;term>Georektifizierung&lt;/term>
+&lt;term>Prototyp&lt;/term>
+&lt;term>Web-App&lt;/term>
+&lt;term>Karte&lt;/term>
+&lt;term>Leaflet&lt;/term>
+&lt;term>Literatur der frühen Neuzeit&lt;/term>
+&lt;/keywords>
+&lt;keywords scheme="ConfTool" n="topics">
+&lt;term>Gestaltung&lt;/term>
+&lt;term>Programmierung&lt;/term>
+&lt;term>Webentwicklung&lt;/term>
+&lt;term>Visualisierung&lt;/term>
+&lt;term>Literatur&lt;/term>
+&lt;term>Karte&lt;/term>
+&lt;/keywords>
+&lt;/textClass>
+&lt;/profileDesc>
+&lt;/teiHeader>
+&lt;text>
+&lt;body>
+&lt;p style="text-align:left; ">Seit Anbeginn des digitalen Zeitalters untersuchen GeisteswissenschaftlerInnen mögliche Weiterentwicklungen und Alternativen zum Medium der Printedition. Bis heute entstanden und entstehen zahlreiche innovative und komplexe digitale Editionen von Texten, die angereichert durch Hyperlinks, Suchfunktionen, umfangreiche Register u.a. neue kritische Zugänge zu etwa literarischen Werken, historischen Quellen oder verschiedensten Materialarten wie z.B. Briefkorrespondenzen oder Tagebüchern bieten. Der primäre Zugangsweg, den digitale Editionen zu ihrem Gegenstand bieten, ist jedoch nach wie vor das Medium 
+&lt;hi rend="italic">Text&lt;/hi>: ein oder mehrere Textquellen sowie der kritische oder Sachapparat. Digitale Methoden bieten GeisteswissenschaftlerInnen jedoch die Möglichkeit, mit alternativen Zugängen zum Editionsgegenstand zu experimentieren.
+&lt;/p>
+&lt;p style="text-align:left; ">Das 1667 veröffentlichte epische Gedicht 
+&lt;hi rend="italic" xml:space="preserve">Paradise Lost &lt;/hi>von John Milton ist eine Neuerzählung des biblischen Buch Genesis, welches die Geschichte des Höllensturzes, der Versuchung von Adam und Eva und ihre Vertreibung aus dem Garten Eden enthält. Darin erwähnt Milton biblische, aber auch zahlreiche nicht-biblische Orte. Diese illustriert er durchweg mit Kommentaren und Anspielungen, die sich aus klassisch-mythologischen, biblischen sowie (Milton-)zeitgenössischen Ansichten zu diesen Orten speisen und deren Quellen weit über den biblischen Text hinausgehen. Milton zeigt eine tiefe Kenntnis „alter“ sowie „neuer“ Geographie, mithilfe derer er seinem Werk eine enorme raum-zeitliche Komplexität und Tiefe verleiht. Charakteristisch ist, dass Milton den Orten eine moralische Wertigkeit zuweist: die meisten Erwähnungen von Ortsnamen werden durch seinen literarischen Kommentar moralisch kontextualisiert und lassen eine positive oder negative Konnotation erkennen.
+&lt;/p>
+&lt;p style="text-align:left; ">Der Prototyp einer Web-App 
+&lt;hi rend="italic">Exploring the Moralized Geography of Paradise Lost&lt;/hi> soll, aufbauend auf Praktiken der 
+&lt;hi rend="italic">Literary Geography&lt;/hi> im Allgemeinen sowie der 
+&lt;hi rend="italic">Literary Cartography&lt;/hi> im Speziellen (Piatti 2016: 89), diese unterschiedlichen räumlichen und zeitlichen Dimensionen der literarischen Geographie 
+&lt;hi rend="italic">Paradise Losts&lt;/hi> erstmals visuell explorativ zugänglich machen und dabei den Kern einer geo-kritischen Edition bilden, die sowohl im pädagogischen, als auch im geisteswissenschaftlich-epistemologischen Kontext Wirkung entfalten kann. 
+&lt;/p>
+&lt;figure>
+&lt;graphic n="1001" width="15.991416666666666cm" height="10.556944444444444cm" url="247_final-690e47cfa047c07942ff5186f48696de.png" rend="inline"/>
+&lt;head>
+&lt;lb/>Abbildung 1. Hauptansicht mit eingeblendetem Kommentar und Textpassagen.
+&lt;/head>
+&lt;/figure>
+&lt;p style="text-align:left; ">Den zentralen Zugang zum Werk bildet hierbei der räumlich-geographische. Erwähnte Orte wurden manuell geokodiert und als Marker auf eine digitale Karte gelegt. Ein besonderes Augenmerk liegt auf Miltons moralischer Kontextualisierung: positiv, negativ sowie neutral konnotierte Orte werden farblich markiert; mehrere sich widersprechende Erwähnungen eines Ortes werden durch Farbtonnuancen oder alternativ durch Kreisdiagramme, die optional an die Stelle eines Markers treten können, visualisiert (Abb. 2).&lt;/p>
+&lt;figure>
+&lt;graphic n="1002" width="15.991416666666666cm" height="10.534027777777778cm" url="247_final-ceace39ca95f8e6cf6c3bdabf55a6479.png" rend="inline"/>
+&lt;head>
+&lt;lb/>Abbildung 2. Kreisdiagramme zur Illustration mehrerer Erwähnungen eines Ortes mit unterschiedlichen moralischen Konnotationen.
+&lt;/head>
+&lt;/figure>
+&lt;p style="text-align:left; ">Zur Illustration der unterschiedlichen Temporalitäten, die Miltons Geographie zugrunde liegen, können verschiedene historische Karten eingeblendet und über die Basis-Weltkarte gelegt werden, die durch die Technik der Georektifizierung an das Mercator-Koordinatensystem angepasst wurden. Gruppen thematisch verwandter Orte sowie die Anzahl der Erwähnungen der einzelnen Orte werden visuell hervorgehoben. Weiterhin enthält der Prototyp für jeden Ort die entsprechenden Passagen des Gedichts, in denen er erwähnt wird. Es kann zwischen vier Basis-Weltkarten gewählt werden, die je unterschiedliche topographische oder politische Charakteristiken hervortreten lassen. Ortsmarker für solche Orte, die im Buch der Genesis erwähnt werden, lassen sich optional zusätzlich einblenden, um einen Vergleich biblischer Geographie mit Miltons literarischer Geographie zu ermöglichen. Um die Dichte der Vielzahl visualisierter Faktoren zu entzerren, lassen sich bis zu vier synchronisierte Instanzen der Karte nebeneinander anzeigen, die unabhängig voneinander konfiguriert werden können (Abb. 3).&lt;/p>
+&lt;figure>
+&lt;graphic n="1003" width="15.991416666666666cm" height="10.592197222222222cm" url="247_final-b2e8743f514c5d0b1856130e0b192900.png" rend="inline"/>
+&lt;head>
+&lt;lb/>Abbildung 3. Vier unterschiedlich konfigurierte, synchronisierte Karten.
+&lt;/head>
+&lt;/figure>
+&lt;p style="text-align:left; ">Galey und Ruecker (2010: 406) argumentieren, dass ein experimenteller, digitaler Prototyp, ähnlich wie kritische Printeditionen und andere Produkte geisteswissenschaftlicher Forschung, als eine Art Verdinglichung einer Theorie bzw. einer Hypothese verstanden werden kann. Mit unserem Prototyp wollen wir verdeutlichen, dass digitale Kartographie weit mehr ermöglicht als die reine Illustration geographischer Zusammenhänge (Cooper und Gregory 2011: 90). Der Entwicklungsprozess eines digitalen kartenbasierten Prototyps ist ein Prozess kritischer Interpretation; sein Ergebnis wiederum versteht sich als Mittel zur weiteren kritischen Interpretation.&lt;/p>
+&lt;p style="text-align:left; ">In unserem Prototyp wird die durch den kartographischen Ansatz zunächst postulierte Beziehung zwischen realem und literarischem Ort durch editorische Kommentare sowie unterschiedliche Visualisierungen unmittelbar problematisiert. Im Sinne einer 
+&lt;hi rend="italic">Deep Map&lt;/hi> (Bodenhamer 2016: 212ff) sollen die diskursiven und ideologischen Dimensionen der 
+&lt;hi rend="italic">literarischen Topographie&lt;/hi> des Werks, und damit die sozialen und kulturellen Implikationen, die in Miltons literarische Geographie eingegangen sind (Hess-Lüttich 2017: 9), zugänglich gemacht werden. Damit soll ein Beitrag zur Bildung von Argumenten, Hypothesen und Fragestellungen auf der Grundlage des räumlich-zeitlichen Aspekts des Werks geleistet werden. Die in die Entwicklung des Prototyps selbst eingegangenen Vorannahmen sollen transparent dargestellt und diskutiert werden. Durch flexible Konfigurationsmöglichkeiten im Benutzerinterface wird es BenutzerInnen ermöglicht, selbst mit unterschiedlichen Visualisierungsmöglichkeiten einzelner Faktoren zu experimentieren.
+&lt;/p>
+&lt;p style="text-align:left; ">Auf unserem Poster präsentieren wir den aktuellen Stand unseres Prototyps und illustrieren Probleme und Herausforderungen, die sich bei der Visualisierung der unterschiedlichen Faktoren ergeben. Beispielhaft wird gezeigt, wie sich anhand des Prototyps für bestimmte Thesen über Miltons literarische Geographie argumentieren lässt.&lt;/p>
+&lt;/body>
+&lt;back>
+&lt;div type="bibliogr">
+&lt;listBibl>
+&lt;head>Bibliographie&lt;/head>
+&lt;bibl>
+&lt;hi rend="bold">Bodenhamer, David J. (2016):&lt;/hi>
+&lt;hi rend="italic">Making the Invisible Visible: Place, Spatial Stories and Deep Maps&lt;/hi>, 
+
+                        in: 
+&lt;hi rend="bold">Cooper, David / Donaldson, Christopher / Murrieta-Flores, Patricia (eds.):&lt;/hi>
+&lt;hi rend="italic">Literary Mapping in the Digital Age&lt;/hi>. 
+
+                        London / New York: Routledge 207-220.
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Cooper, David / Gregory, Ian N. (2011):&lt;/hi>
+&lt;hi rend="italic">Mapping the English Lake District: A Literary GIS&lt;/hi>, 
+
+                        in: Transactions of the Institute of British Geographers 36 (1): 89-108.
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Galey, Alan / Ruecker, Stan (2010):&lt;/hi>
+&lt;hi rend="italic">How a Prototype Argues&lt;/hi>, 
+
+                        in: Literary and Linguistic Computing 25 (4): 405-24.
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Hess-Lüttich, Ernest W. B. (2017):&lt;/hi>
+&lt;hi rend="italic">Spatial Turn: On the Concept of Space in Cultural Geography and Literary Theory&lt;/hi>, 
+
+                        in: Meta-Carto-Semiotics 5 (1): 27-37 http://ojs.meta-carto-semiotics.org/index.php/mcs/article/view/21 [letzter Zugriff 15. Oktober 2018].
+&lt;/bibl>
+&lt;bibl>
+&lt;hi rend="bold">Piatti, Barbara (2016):&lt;/hi>
+&lt;hi rend="italic">Mapping Fiction: The Theories, Tools and Potentials of Literary Cartography&lt;/hi>, 
+
+                        in: 
+&lt;hi rend="bold">Cooper, David / Donaldson, Christopher / Murrieta-Flores, Patricia (eds.):&lt;/hi>
+&lt;hi rend="italic">Literary Mapping in the Digital Age&lt;/hi>. 
+
+                        London / New York: Routledge 106-119.
+&lt;/bibl>
+&lt;/listBibl>
+&lt;/div>
+&lt;/back>
+&lt;/text>
+&lt;/TEI>
+    </textSource>
+    <text>
+
+    
+
+
+
+
+
+Seit Anbeginn des digitalen Zeitalters untersuchen GeisteswissenschaftlerInnen mögliche Weiterentwicklungen und Alternativen zum Medium der Printedition. Bis heute entstanden und entstehen zahlreiche innovative und komplexe digitale Editionen von Texten, die angereichert durch Hyperlinks, Suchfunktionen, umfangreiche Register u.a. neue kritische Zugänge zu etwa literarischen Werken, historischen Quellen oder verschiedensten Materialarten wie z.B. Briefkorrespondenzen oder Tagebüchern bieten. Der primäre Zugangsweg, den digitale Editionen zu ihrem Gegenstand bieten, ist jedoch nach wie vor das Medium   Text: ein oder mehrere Textquellen sowie der kritische oder Sachapparat. Digitale Methoden bieten GeisteswissenschaftlerInnen jedoch die Möglichkeit, mit alternativen Zugängen zum Editionsgegenstand zu experimentieren.  
+
+  
+
+Das 1667 veröffentlichte epische Gedicht   Paradise Lost von John Milton ist eine Neuerzählung des biblischen Buch Genesis, welches die Geschichte des Höllensturzes, der Versuchung von Adam und Eva und ihre Vertreibung aus dem Garten Eden enthält. Darin erwähnt Milton biblische, aber auch zahlreiche nicht-biblische Orte. Diese illustriert er durchweg mit Kommentaren und Anspielungen, die sich aus klassisch-mythologischen, biblischen sowie (Milton-)zeitgenössischen Ansichten zu diesen Orten speisen und deren Quellen weit über den biblischen Text hinausgehen. Milton zeigt eine tiefe Kenntnis „alter“ sowie „neuer“ Geographie, mithilfe derer er seinem Werk eine enorme raum-zeitliche Komplexität und Tiefe verleiht. Charakteristisch ist, dass Milton den Orten eine moralische Wertigkeit zuweist: die meisten Erwähnungen von Ortsnamen werden durch seinen literarischen Kommentar moralisch kontextualisiert und lassen eine positive oder negative Konnotation erkennen.  
+
+  
+
+Der Prototyp einer Web-App   Exploring the Moralized Geography of Paradise Lost soll, aufbauend auf Praktiken der   Literary Geography im Allgemeinen sowie der   Literary Cartography im Speziellen (Piatti 2016: 89), diese unterschiedlichen räumlichen und zeitlichen Dimensionen der literarischen Geographie   Paradise Losts erstmals visuell explorativ zugänglich machen und dabei den Kern einer geo-kritischen Edition bilden, die sowohl im pädagogischen, als auch im geisteswissenschaftlich-epistemologischen Kontext Wirkung entfalten kann.   
+
+    
+
+Den zentralen Zugang zum Werk bildet hierbei der räumlich-geographische. Erwähnte Orte wurden manuell geokodiert und als Marker auf eine digitale Karte gelegt. Ein besonderes Augenmerk liegt auf Miltons moralischer Kontextualisierung: positiv, negativ sowie neutral konnotierte Orte werden farblich markiert; mehrere sich widersprechende Erwähnungen eines Ortes werden durch Farbtonnuancen oder alternativ durch Kreisdiagramme, die optional an die Stelle eines Markers treten können, visualisiert (Abb. 2).
+
+    
+
+Zur Illustration der unterschiedlichen Temporalitäten, die Miltons Geographie zugrunde liegen, können verschiedene historische Karten eingeblendet und über die Basis-Weltkarte gelegt werden, die durch die Technik der Georektifizierung an das Mercator-Koordinatensystem angepasst wurden. Gruppen thematisch verwandter Orte sowie die Anzahl der Erwähnungen der einzelnen Orte werden visuell hervorgehoben. Weiterhin enthält der Prototyp für jeden Ort die entsprechenden Passagen des Gedichts, in denen er erwähnt wird. Es kann zwischen vier Basis-Weltkarten gewählt werden, die je unterschiedliche topographische oder politische Charakteristiken hervortreten lassen. Ortsmarker für solche Orte, die im Buch der Genesis erwähnt werden, lassen sich optional zusätzlich einblenden, um einen Vergleich biblischer Geographie mit Miltons literarischer Geographie zu ermöglichen. Um die Dichte der Vielzahl visualisierter Faktoren zu entzerren, lassen sich bis zu vier synchronisierte Instanzen der Karte nebeneinander anzeigen, die unabhängig voneinander konfiguriert werden können (Abb. 3).
+
+    
+
+Galey und Ruecker (2010: 406) argumentieren, dass ein experimenteller, digitaler Prototyp, ähnlich wie kritische Printeditionen und andere Produkte geisteswissenschaftlicher Forschung, als eine Art Verdinglichung einer Theorie bzw. einer Hypothese verstanden werden kann. Mit unserem Prototyp wollen wir verdeutlichen, dass digitale Kartographie weit mehr ermöglicht als die reine Illustration geographischer Zusammenhänge (Cooper und Gregory 2011: 90). Der Entwicklungsprozess eines digitalen kartenbasierten Prototyps ist ein Prozess kritischer Interpretation; sein Ergebnis wiederum versteht sich als Mittel zur weiteren kritischen Interpretation.
+
+  
+
+In unserem Prototyp wird die durch den kartographischen Ansatz zunächst postulierte Beziehung zwischen realem und literarischem Ort durch editorische Kommentare sowie unterschiedliche Visualisierungen unmittelbar problematisiert. Im Sinne einer   Deep Map (Bodenhamer 2016: 212ff) sollen die diskursiven und ideologischen Dimensionen der   literarischen Topographie des Werks, und damit die sozialen und kulturellen Implikationen, die in Miltons literarische Geographie eingegangen sind (Hess-Lüttich 2017: 9), zugänglich gemacht werden. Damit soll ein Beitrag zur Bildung von Argumenten, Hypothesen und Fragestellungen auf der Grundlage des räumlich-zeitlichen Aspekts des Werks geleistet werden. Die in die Entwicklung des Prototyps selbst eingegangenen Vorannahmen sollen transparent dargestellt und diskutiert werden. Durch flexible Konfigurationsmöglichkeiten im Benutzerinterface wird es BenutzerInnen ermöglicht, selbst mit unterschiedlichen Visualisierungsmöglichkeiten einzelner Faktoren zu experimentieren.  
+
+  
+
+Auf unserem Poster präsentieren wir den aktuellen Stand unseres Prototyps und illustrieren Probleme und Herausforderungen, die sich bei der Visualisierung der unterschiedlichen Faktoren ergeben. Beispielhaft wird gezeigt, wie sich anhand des Prototyps für bestimmte Thesen über Miltons literarische Geographie argumentieren lässt.
+
+  
+
+Abbildung 1. Hauptansicht mit eingeblendetem Kommentar und Textpassagen.  
+
+
+
+      
+
+
+
+  
+Abbildung 2. Kreisdiagramme zur Illustration mehrerer Erwähnungen eines Ortes mit unterschiedlichen moralischen Konnotationen.  
+
+Abbildung 3. Vier unterschiedlich konfigurierte, synchronisierte Karten.  
+
+
+
+  
+
+        Bodenhamer, David J. (2016):   Making the Invisible Visible: Place, Spatial Stories and Deep Maps,                          in:   Cooper, David / Donaldson, Christopher / Murrieta-Flores, Patricia (eds.):   Literary Mapping in the Digital Age.                          London / New York: Routledge 207-220.      Cooper, David / Gregory, Ian N. (2011):   Mapping the English Lake District: A Literary GIS,                          in: Transactions of the Institute of British Geographers 36 (1): 89-108.      Galey, Alan / Ruecker, Stan (2010):   How a Prototype Argues,                          in: Literary and Linguistic Computing 25 (4): 405-24.      Hess-Lüttich, Ernest W. B. (2017):   Spatial Turn: On the Concept of Space in Cultural Geography and Literary Theory,                          in: Meta-Carto-Semiotics 5 (1): 27-37 http://ojs.meta-carto-semiotics.org/index.php/mcs/article/view/21 [letzter Zugriff 15. Oktober 2018].      Piatti, Barbara (2016):   Mapping Fiction: The Theories, Tools and Potentials of Literary Cartography,                          in:   Cooper, David / Donaldson, Christopher / Murrieta-Flores, Patricia (eds.):   Literary Mapping in the Digital Age.                          London / New York: Routledge 106-119.      
+
+  
+
+
+
+Bibliographie
+    </text>
+    <tc:tokens xmlns:tc="http://www.dspin.de/data/textcorpus">
+      <tc:token ID="w1">Seit</tc:token>
+      <tc:token ID="w2">Anbeginn</tc:token>
+      <tc:token ID="w3">des</tc:token>
+      <tc:token ID="w4">digitalen</tc:token>
+      <tc:token ID="w5">Zeitalters</tc:token>
+      <tc:token ID="w6">untersuchen</tc:token>
+      <tc:token ID="w7">GeisteswissenschaftlerInnen</tc:token>
+      <tc:token ID="w8">mögliche</tc:token>
+      <tc:token ID="w9">Weiterentwicklungen</tc:token>
+      <tc:token ID="wa">und</tc:token>
+      <tc:token ID="wb">Alternativen</tc:token>
+      <tc:token ID="wc">zum</tc:token>
+      <tc:token ID="wd">Medium</tc:token>
+      <tc:token ID="we">der</tc:token>
+      <tc:token ID="wf">Printedition</tc:token>
+      <tc:token ID="w10">.</tc:token>
+      <tc:token ID="w11">Bis</tc:token>
+      <tc:token ID="w12">heute</tc:token>
+      <tc:token ID="w13">entstanden</tc:token>
+      <tc:token ID="w14">und</tc:token>
+      <tc:token ID="w15">entstehen</tc:token>
+      <tc:token ID="w16">zahlreiche</tc:token>
+      <tc:token ID="w17">innovative</tc:token>
+      <tc:token ID="w18">und</tc:token>
+      <tc:token ID="w19">komplexe</tc:token>
+      <tc:token ID="w1a">digitale</tc:token>
+      <tc:token ID="w1b">Editionen</tc:token>
+      <tc:token ID="w1c">von</tc:token>
+      <tc:token ID="w1d">Texten</tc:token>
+      <tc:token ID="w1e">,</tc:token>
+      <tc:token ID="w1f">die</tc:token>
+      <tc:token ID="w20">angereichert</tc:token>
+      <tc:token ID="w21">durch</tc:token>
+      <tc:token ID="w22">Hyperlinks</tc:token>
+      <tc:token ID="w23">,</tc:token>
+      <tc:token ID="w24">Suchfunktionen</tc:token>
+      <tc:token ID="w25">,</tc:token>
+      <tc:token ID="w26">umfangreiche</tc:token>
+      <tc:token ID="w27">Register</tc:token>
+      <tc:token ID="w28">u.a.</tc:token>
+      <tc:token ID="w29">neue</tc:token>
+      <tc:token ID="w2a">kritische</tc:token>
+      <tc:token ID="w2b">Zugänge</tc:token>
+      <tc:token ID="w2c">zu</tc:token>
+      <tc:token ID="w2d">etwa</tc:token>
+      <tc:token ID="w2e">literarischen</tc:token>
+      <tc:token ID="w2f">Werken</tc:token>
+      <tc:token ID="w30">,</tc:token>
+      <tc:token ID="w31">historischen</tc:token>
+      <tc:token ID="w32">Quellen</tc:token>
+      <tc:token ID="w33">oder</tc:token>
+      <tc:token ID="w34">verschiedensten</tc:token>
+      <tc:token ID="w35">Materialarten</tc:token>
+      <tc:token ID="w36">wie</tc:token>
+      <tc:token ID="w37">z.B.</tc:token>
+      <tc:token ID="w38">Briefkorrespondenzen</tc:token>
+      <tc:token ID="w39">oder</tc:token>
+      <tc:token ID="w3a">Tagebüchern</tc:token>
+      <tc:token ID="w3b">bieten</tc:token>
+      <tc:token ID="w3c">.</tc:token>
+      <tc:token ID="w3d">Der</tc:token>
+      <tc:token ID="w3e">primäre</tc:token>
+      <tc:token ID="w3f">Zugangsweg</tc:token>
+      <tc:token ID="w40">,</tc:token>
+      <tc:token ID="w41">den</tc:token>
+      <tc:token ID="w42">digitale</tc:token>
+      <tc:token ID="w43">Editionen</tc:token>
+      <tc:token ID="w44">zu</tc:token>
+      <tc:token ID="w45">ihrem</tc:token>
+      <tc:token ID="w46">Gegenstand</tc:token>
+      <tc:token ID="w47">bieten</tc:token>
+      <tc:token ID="w48">,</tc:token>
+      <tc:token ID="w49">ist</tc:token>
+      <tc:token ID="w4a">jedoch</tc:token>
+      <tc:token ID="w4b">nach</tc:token>
+      <tc:token ID="w4c">wie</tc:token>
+      <tc:token ID="w4d">vor</tc:token>
+      <tc:token ID="w4e">das</tc:token>
+      <tc:token ID="w4f">Medium</tc:token>
+      <tc:token ID="w50">Text</tc:token>
+      <tc:token ID="w51">:</tc:token>
+      <tc:token ID="w52">ein</tc:token>
+      <tc:token ID="w53">oder</tc:token>
+      <tc:token ID="w54">mehrere</tc:token>
+      <tc:token ID="w55">Textquellen</tc:token>
+      <tc:token ID="w56">sowie</tc:token>
+      <tc:token ID="w57">der</tc:token>
+      <tc:token ID="w58">kritische</tc:token>
+      <tc:token ID="w59">oder</tc:token>
+      <tc:token ID="w5a">Sachapparat</tc:token>
+      <tc:token ID="w5b">.</tc:token>
+      <tc:token ID="w5c">Digitale</tc:token>
+      <tc:token ID="w5d">Methoden</tc:token>
+      <tc:token ID="w5e">bieten</tc:token>
+      <tc:token ID="w5f">GeisteswissenschaftlerInnen</tc:token>
+      <tc:token ID="w60">jedoch</tc:token>
+      <tc:token ID="w61">die</tc:token>
+      <tc:token ID="w62">Möglichkeit</tc:token>
+      <tc:token ID="w63">,</tc:token>
+      <tc:token ID="w64">mit</tc:token>
+      <tc:token ID="w65">alternativen</tc:token>
+      <tc:token ID="w66">Zugängen</tc:token>
+      <tc:token ID="w67">zum</tc:token>
+      <tc:token ID="w68">Editionsgegenstand</tc:token>
+      <tc:token ID="w69">zu</tc:token>
+      <tc:token ID="w6a">experimentieren</tc:token>
+      <tc:token ID="w6b">.</tc:token>
+      <tc:token ID="w6c">Das</tc:token>
+      <tc:token ID="w6d">1667</tc:token>
+      <tc:token ID="w6e">veröffentlichte</tc:token>
+      <tc:token ID="w6f">epische</tc:token>
+      <tc:token ID="w70">Gedicht</tc:token>
+      <tc:token ID="w71">Paradise</tc:token>
+      <tc:token ID="w72">Lost</tc:token>
+      <tc:token ID="w73">von</tc:token>
+      <tc:token ID="w74">John</tc:token>
+      <tc:token ID="w75">Milton</tc:token>
+      <tc:token ID="w76">ist</tc:token>
+      <tc:token ID="w77">eine</tc:token>
+      <tc:token ID="w78">Neuerzählung</tc:token>
+      <tc:token ID="w79">des</tc:token>
+      <tc:token ID="w7a">biblischen</tc:token>
+      <tc:token ID="w7b">Buch</tc:token>
+      <tc:token ID="w7c">Genesis</tc:token>
+      <tc:token ID="w7d">,</tc:token>
+      <tc:token ID="w7e">welches</tc:token>
+      <tc:token ID="w7f">die</tc:token>
+      <tc:token ID="w80">Geschichte</tc:token>
+      <tc:token ID="w81">des</tc:token>
+      <tc:token ID="w82">Höllensturzes</tc:token>
+      <tc:token ID="w83">,</tc:token>
+      <tc:token ID="w84">der</tc:token>
+      <tc:token ID="w85">Versuchung</tc:token>
+      <tc:token ID="w86">von</tc:token>
+      <tc:token ID="w87">Adam</tc:token>
+      <tc:token ID="w88">und</tc:token>
+      <tc:token ID="w89">Eva</tc:token>
+      <tc:token ID="w8a">und</tc:token>
+      <tc:token ID="w8b">ihre</tc:token>
+      <tc:token ID="w8c">Vertreibung</tc:token>
+      <tc:token ID="w8d">aus</tc:token>
+      <tc:token ID="w8e">dem</tc:token>
+      <tc:token ID="w8f">Garten</tc:token>
+      <tc:token ID="w90">Eden</tc:token>
+      <tc:token ID="w91">enthält</tc:token>
+      <tc:token ID="w92">.</tc:token>
+      <tc:token ID="w93">Darin</tc:token>
+      <tc:token ID="w94">erwähnt</tc:token>
+      <tc:token ID="w95">Milton</tc:token>
+      <tc:token ID="w96">biblische</tc:token>
+      <tc:token ID="w97">,</tc:token>
+      <tc:token ID="w98">aber</tc:token>
+      <tc:token ID="w99">auch</tc:token>
+      <tc:token ID="w9a">zahlreiche</tc:token>
+      <tc:token ID="w9b">nicht-biblische</tc:token>
+      <tc:token ID="w9c">Orte</tc:token>
+      <tc:token ID="w9d">.</tc:token>
+      <tc:token ID="w9e">Diese</tc:token>
+      <tc:token ID="w9f">illustriert</tc:token>
+      <tc:token ID="wa0">er</tc:token>
+      <tc:token ID="wa1">durchweg</tc:token>
+      <tc:token ID="wa2">mit</tc:token>
+      <tc:token ID="wa3">Kommentaren</tc:token>
+      <tc:token ID="wa4">und</tc:token>
+      <tc:token ID="wa5">Anspielungen</tc:token>
+      <tc:token ID="wa6">,</tc:token>
+      <tc:token ID="wa7">die</tc:token>
+      <tc:token ID="wa8">sich</tc:token>
+      <tc:token ID="wa9">aus</tc:token>
+      <tc:token ID="waa">klassisch-mythologischen</tc:token>
+      <tc:token ID="wab">,</tc:token>
+      <tc:token ID="wac">biblischen</tc:token>
+      <tc:token ID="wad">sowie</tc:token>
+      <tc:token ID="wae">(Milton-)zeitgenössischen</tc:token>
+      <tc:token ID="waf">Ansichten</tc:token>
+      <tc:token ID="wb0">zu</tc:token>
+      <tc:token ID="wb1">diesen</tc:token>
+      <tc:token ID="wb2">Orten</tc:token>
+      <tc:token ID="wb3">speisen</tc:token>
+      <tc:token ID="wb4">und</tc:token>
+      <tc:token ID="wb5">deren</tc:token>
+      <tc:token ID="wb6">Quellen</tc:token>
+      <tc:token ID="wb7">weit</tc:token>
+      <tc:token ID="wb8">über</tc:token>
+      <tc:token ID="wb9">den</tc:token>
+      <tc:token ID="wba">biblischen</tc:token>
+      <tc:token ID="wbb">Text</tc:token>
+      <tc:token ID="wbc">hinausgehen</tc:token>
+      <tc:token ID="wbd">.</tc:token>
+      <tc:token ID="wbe">Milton</tc:token>
+      <tc:token ID="wbf">zeigt</tc:token>
+      <tc:token ID="wc0">eine</tc:token>
+      <tc:token ID="wc1">tiefe</tc:token>
+      <tc:token ID="wc2">Kenntnis</tc:token>
+      <tc:token ID="wc3">„</tc:token>
+      <tc:token ID="wc4">alter</tc:token>
+      <tc:token ID="wc5">“</tc:token>
+      <tc:token ID="wc6">sowie</tc:token>
+      <tc:token ID="wc7">„</tc:token>
+      <tc:token ID="wc8">neuer</tc:token>
+      <tc:token ID="wc9">“</tc:token>
+      <tc:token ID="wca">Geographie</tc:token>
+      <tc:token ID="wcb">,</tc:token>
+      <tc:token ID="wcc">mithilfe</tc:token>
+      <tc:token ID="wcd">derer</tc:token>
+      <tc:token ID="wce">er</tc:token>
+      <tc:token ID="wcf">seinem</tc:token>
+      <tc:token ID="wd0">Werk</tc:token>
+      <tc:token ID="wd1">eine</tc:token>
+      <tc:token ID="wd2">enorme</tc:token>
+      <tc:token ID="wd3">raum-zeitliche</tc:token>
+      <tc:token ID="wd4">Komplexität</tc:token>
+      <tc:token ID="wd5">und</tc:token>
+      <tc:token ID="wd6">Tiefe</tc:token>
+      <tc:token ID="wd7">verleiht</tc:token>
+      <tc:token ID="wd8">.</tc:token>
+      <tc:token ID="wd9">Charakteristisch</tc:token>
+      <tc:token ID="wda">ist</tc:token>
+      <tc:token ID="wdb">,</tc:token>
+      <tc:token ID="wdc">dass</tc:token>
+      <tc:token ID="wdd">Milton</tc:token>
+      <tc:token ID="wde">den</tc:token>
+      <tc:token ID="wdf">Orten</tc:token>
+      <tc:token ID="we0">eine</tc:token>
+      <tc:token ID="we1">moralische</tc:token>
+      <tc:token ID="we2">Wertigkeit</tc:token>
+      <tc:token ID="we3">zuweist</tc:token>
+      <tc:token ID="we4">:</tc:token>
+      <tc:token ID="we5">die</tc:token>
+      <tc:token ID="we6">meisten</tc:token>
+      <tc:token ID="we7">Erwähnungen</tc:token>
+      <tc:token ID="we8">von</tc:token>
+      <tc:token ID="we9">Ortsnamen</tc:token>
+      <tc:token ID="wea">werden</tc:token>
+      <tc:token ID="web">durch</tc:token>
+      <tc:token ID="wec">seinen</tc:token>
+      <tc:token ID="wed">literarischen</tc:token>
+      <tc:token ID="wee">Kommentar</tc:token>
+      <tc:token ID="wef">moralisch</tc:token>
+      <tc:token ID="wf0">kontextualisiert</tc:token>
+      <tc:token ID="wf1">und</tc:token>
+      <tc:token ID="wf2">lassen</tc:token>
+      <tc:token ID="wf3">eine</tc:token>
+      <tc:token ID="wf4">positive</tc:token>
+      <tc:token ID="wf5">oder</tc:token>
+      <tc:token ID="wf6">negative</tc:token>
+      <tc:token ID="wf7">Konnotation</tc:token>
+      <tc:token ID="wf8">erkennen</tc:token>
+      <tc:token ID="wf9">.</tc:token>
+      <tc:token ID="wfa">Der</tc:token>
+      <tc:token ID="wfb">Prototyp</tc:token>
+      <tc:token ID="wfc">einer</tc:token>
+      <tc:token ID="wfd">Web-App</tc:token>
+      <tc:token ID="wfe">Exploring</tc:token>
+      <tc:token ID="wff">the</tc:token>
+      <tc:token ID="w100">Moralized</tc:token>
+      <tc:token ID="w101">Geography</tc:token>
+      <tc:token ID="w102">of</tc:token>
+      <tc:token ID="w103">Paradise</tc:token>
+      <tc:token ID="w104">Lost</tc:token>
+      <tc:token ID="w105">soll</tc:token>
+      <tc:token ID="w106">,</tc:token>
+      <tc:token ID="w107">aufbauend</tc:token>
+      <tc:token ID="w108">auf</tc:token>
+      <tc:token ID="w109">Praktiken</tc:token>
+      <tc:token ID="w10a">der</tc:token>
+      <tc:token ID="w10b">Literary</tc:token>
+      <tc:token ID="w10c">Geography</tc:token>
+      <tc:token ID="w10d">im</tc:token>
+      <tc:token ID="w10e">Allgemeinen</tc:token>
+      <tc:token ID="w10f">sowie</tc:token>
+      <tc:token ID="w110">der</tc:token>
+      <tc:token ID="w111">Literary</tc:token>
+      <tc:token ID="w112">Cartography</tc:token>
+      <tc:token ID="w113">im</tc:token>
+      <tc:token ID="w114">Speziellen</tc:token>
+      <tc:token ID="w115">(</tc:token>
+      <tc:token ID="w116">Piatti</tc:token>
+      <tc:token ID="w117">2016</tc:token>
+      <tc:token ID="w118">:</tc:token>
+      <tc:token ID="w119">89</tc:token>
+      <tc:token ID="w11a">)</tc:token>
+      <tc:token ID="w11b">,</tc:token>
+      <tc:token ID="w11c">diese</tc:token>
+      <tc:token ID="w11d">unterschiedlichen</tc:token>
+      <tc:token ID="w11e">räumlichen</tc:token>
+      <tc:token ID="w11f">und</tc:token>
+      <tc:token ID="w120">zeitlichen</tc:token>
+      <tc:token ID="w121">Dimensionen</tc:token>
+      <tc:token ID="w122">der</tc:token>
+      <tc:token ID="w123">literarischen</tc:token>
+      <tc:token ID="w124">Geographie</tc:token>
+      <tc:token ID="w125">Paradise</tc:token>
+      <tc:token ID="w126">Losts</tc:token>
+      <tc:token ID="w127">erstmals</tc:token>
+      <tc:token ID="w128">visuell</tc:token>
+      <tc:token ID="w129">explorativ</tc:token>
+      <tc:token ID="w12a">zugänglich</tc:token>
+      <tc:token ID="w12b">machen</tc:token>
+      <tc:token ID="w12c">und</tc:token>
+      <tc:token ID="w12d">dabei</tc:token>
+      <tc:token ID="w12e">den</tc:token>
+      <tc:token ID="w12f">Kern</tc:token>
+      <tc:token ID="w130">einer</tc:token>
+      <tc:token ID="w131">geo-kritischen</tc:token>
+      <tc:token ID="w132">Edition</tc:token>
+      <tc:token ID="w133">bilden</tc:token>
+      <tc:token ID="w134">,</tc:token>
+      <tc:token ID="w135">die</tc:token>
+      <tc:token ID="w136">sowohl</tc:token>
+      <tc:token ID="w137">im</tc:token>
+      <tc:token ID="w138">pädagogischen</tc:token>
+      <tc:token ID="w139">,</tc:token>
+      <tc:token ID="w13a">als</tc:token>
+      <tc:token ID="w13b">auch</tc:token>
+      <tc:token ID="w13c">im</tc:token>
+      <tc:token ID="w13d">geisteswissenschaftlich-epistemologischen</tc:token>
+      <tc:token ID="w13e">Kontext</tc:token>
+      <tc:token ID="w13f">Wirkung</tc:token>
+      <tc:token ID="w140">entfalten</tc:token>
+      <tc:token ID="w141">kann</tc:token>
+      <tc:token ID="w142">.</tc:token>
+      <tc:token ID="w143">Den</tc:token>
+      <tc:token ID="w144">zentralen</tc:token>
+      <tc:token ID="w145">Zugang</tc:token>
+      <tc:token ID="w146">zum</tc:token>
+      <tc:token ID="w147">Werk</tc:token>
+      <tc:token ID="w148">bildet</tc:token>
+      <tc:token ID="w149">hierbei</tc:token>
+      <tc:token ID="w14a">der</tc:token>
+      <tc:token ID="w14b">räumlich-geographische</tc:token>
+      <tc:token ID="w14c">.</tc:token>
+      <tc:token ID="w14d">Erwähnte</tc:token>
+      <tc:token ID="w14e">Orte</tc:token>
+      <tc:token ID="w14f">wurden</tc:token>
+      <tc:token ID="w150">manuell</tc:token>
+      <tc:token ID="w151">geokodiert</tc:token>
+      <tc:token ID="w152">und</tc:token>
+      <tc:token ID="w153">als</tc:token>
+      <tc:token ID="w154">Marker</tc:token>
+      <tc:token ID="w155">auf</tc:token>
+      <tc:token ID="w156">eine</tc:token>
+      <tc:token ID="w157">digitale</tc:token>
+      <tc:token ID="w158">Karte</tc:token>
+      <tc:token ID="w159">gelegt</tc:token>
+      <tc:token ID="w15a">.</tc:token>
+      <tc:token ID="w15b">Ein</tc:token>
+      <tc:token ID="w15c">besonderes</tc:token>
+      <tc:token ID="w15d">Augenmerk</tc:token>
+      <tc:token ID="w15e">liegt</tc:token>
+      <tc:token ID="w15f">auf</tc:token>
+      <tc:token ID="w160">Miltons</tc:token>
+      <tc:token ID="w161">moralischer</tc:token>
+      <tc:token ID="w162">Kontextualisierung</tc:token>
+      <tc:token ID="w163">:</tc:token>
+      <tc:token ID="w164">positiv</tc:token>
+      <tc:token ID="w165">,</tc:token>
+      <tc:token ID="w166">negativ</tc:token>
+      <tc:token ID="w167">sowie</tc:token>
+      <tc:token ID="w168">neutral</tc:token>
+      <tc:token ID="w169">konnotierte</tc:token>
+      <tc:token ID="w16a">Orte</tc:token>
+      <tc:token ID="w16b">werden</tc:token>
+      <tc:token ID="w16c">farblich</tc:token>
+      <tc:token ID="w16d">markiert</tc:token>
+      <tc:token ID="w16e">;</tc:token>
+      <tc:token ID="w16f">mehrere</tc:token>
+      <tc:token ID="w170">sich</tc:token>
+      <tc:token ID="w171">widersprechende</tc:token>
+      <tc:token ID="w172">Erwähnungen</tc:token>
+      <tc:token ID="w173">eines</tc:token>
+      <tc:token ID="w174">Ortes</tc:token>
+      <tc:token ID="w175">werden</tc:token>
+      <tc:token ID="w176">durch</tc:token>
+      <tc:token ID="w177">Farbtonnuancen</tc:token>
+      <tc:token ID="w178">oder</tc:token>
+      <tc:token ID="w179">alternativ</tc:token>
+      <tc:token ID="w17a">durch</tc:token>
+      <tc:token ID="w17b">Kreisdiagramme</tc:token>
+      <tc:token ID="w17c">,</tc:token>
+      <tc:token ID="w17d">die</tc:token>
+      <tc:token ID="w17e">optional</tc:token>
+      <tc:token ID="w17f">an</tc:token>
+      <tc:token ID="w180">die</tc:token>
+      <tc:token ID="w181">Stelle</tc:token>
+      <tc:token ID="w182">eines</tc:token>
+      <tc:token ID="w183">Markers</tc:token>
+      <tc:token ID="w184">treten</tc:token>
+      <tc:token ID="w185">können</tc:token>
+      <tc:token ID="w186">,</tc:token>
+      <tc:token ID="w187">visualisiert</tc:token>
+      <tc:token ID="w188">(</tc:token>
+      <tc:token ID="w189">Abb.</tc:token>
+      <tc:token ID="w18a">2</tc:token>
+      <tc:token ID="w18b">)</tc:token>
+      <tc:token ID="w18c">.</tc:token>
+      <tc:token ID="w18d">Zur</tc:token>
+      <tc:token ID="w18e">Illustration</tc:token>
+      <tc:token ID="w18f">der</tc:token>
+      <tc:token ID="w190">unterschiedlichen</tc:token>
+      <tc:token ID="w191">Temporalitäten</tc:token>
+      <tc:token ID="w192">,</tc:token>
+      <tc:token ID="w193">die</tc:token>
+      <tc:token ID="w194">Miltons</tc:token>
+      <tc:token ID="w195">Geographie</tc:token>
+      <tc:token ID="w196">zugrunde</tc:token>
+      <tc:token ID="w197">liegen</tc:token>
+      <tc:token ID="w198">,</tc:token>
+      <tc:token ID="w199">können</tc:token>
+      <tc:token ID="w19a">verschiedene</tc:token>
+      <tc:token ID="w19b">historische</tc:token>
+      <tc:token ID="w19c">Karten</tc:token>
+      <tc:token ID="w19d">eingeblendet</tc:token>
+      <tc:token ID="w19e">und</tc:token>
+      <tc:token ID="w19f">über</tc:token>
+      <tc:token ID="w1a0">die</tc:token>
+      <tc:token ID="w1a1">Basis-Weltkarte</tc:token>
+      <tc:token ID="w1a2">gelegt</tc:token>
+      <tc:token ID="w1a3">werden</tc:token>
+      <tc:token ID="w1a4">,</tc:token>
+      <tc:token ID="w1a5">die</tc:token>
+      <tc:token ID="w1a6">durch</tc:token>
+      <tc:token ID="w1a7">die</tc:token>
+      <tc:token ID="w1a8">Technik</tc:token>
+      <tc:token ID="w1a9">der</tc:token>
+      <tc:token ID="w1aa">Georektifizierung</tc:token>
+      <tc:token ID="w1ab">an</tc:token>
+      <tc:token ID="w1ac">das</tc:token>
+      <tc:token ID="w1ad">Mercator-Koordinatensystem</tc:token>
+      <tc:token ID="w1ae">angepasst</tc:token>
+      <tc:token ID="w1af">wurden</tc:token>
+      <tc:token ID="w1b0">.</tc:token>
+      <tc:token ID="w1b1">Gruppen</tc:token>
+      <tc:token ID="w1b2">thematisch</tc:token>
+      <tc:token ID="w1b3">verwandter</tc:token>
+      <tc:token ID="w1b4">Orte</tc:token>
+      <tc:token ID="w1b5">sowie</tc:token>
+      <tc:token ID="w1b6">die</tc:token>
+      <tc:token ID="w1b7">Anzahl</tc:token>
+      <tc:token ID="w1b8">der</tc:token>
+      <tc:token ID="w1b9">Erwähnungen</tc:token>
+      <tc:token ID="w1ba">der</tc:token>
+      <tc:token ID="w1bb">einzelnen</tc:token>
+      <tc:token ID="w1bc">Orte</tc:token>
+      <tc:token ID="w1bd">werden</tc:token>
+      <tc:token ID="w1be">visuell</tc:token>
+      <tc:token ID="w1bf">hervorgehoben</tc:token>
+      <tc:token ID="w1c0">.</tc:token>
+      <tc:token ID="w1c1">Weiterhin</tc:token>
+      <tc:token ID="w1c2">enthält</tc:token>
+      <tc:token ID="w1c3">der</tc:token>
+      <tc:token ID="w1c4">Prototyp</tc:token>
+      <tc:token ID="w1c5">für</tc:token>
+      <tc:token ID="w1c6">jeden</tc:token>
+      <tc:token ID="w1c7">Ort</tc:token>
+      <tc:token ID="w1c8">die</tc:token>
+      <tc:token ID="w1c9">entsprechenden</tc:token>
+      <tc:token ID="w1ca">Passagen</tc:token>
+      <tc:token ID="w1cb">des</tc:token>
+      <tc:token ID="w1cc">Gedichts</tc:token>
+      <tc:token ID="w1cd">,</tc:token>
+      <tc:token ID="w1ce">in</tc:token>
+      <tc:token ID="w1cf">denen</tc:token>
+      <tc:token ID="w1d0">er</tc:token>
+      <tc:token ID="w1d1">erwähnt</tc:token>
+      <tc:token ID="w1d2">wird</tc:token>
+      <tc:token ID="w1d3">.</tc:token>
+      <tc:token ID="w1d4">Es</tc:token>
+      <tc:token ID="w1d5">kann</tc:token>
+      <tc:token ID="w1d6">zwischen</tc:token>
+      <tc:token ID="w1d7">vier</tc:token>
+      <tc:token ID="w1d8">Basis-Weltkarten</tc:token>
+      <tc:token ID="w1d9">gewählt</tc:token>
+      <tc:token ID="w1da">werden</tc:token>
+      <tc:token ID="w1db">,</tc:token>
+      <tc:token ID="w1dc">die</tc:token>
+      <tc:token ID="w1dd">je</tc:token>
+      <tc:token ID="w1de">unterschiedliche</tc:token>
+      <tc:token ID="w1df">topographische</tc:token>
+      <tc:token ID="w1e0">oder</tc:token>
+      <tc:token ID="w1e1">politische</tc:token>
+      <tc:token ID="w1e2">Charakteristiken</tc:token>
+      <tc:token ID="w1e3">hervortreten</tc:token>
+      <tc:token ID="w1e4">lassen</tc:token>
+      <tc:token ID="w1e5">.</tc:token>
+      <tc:token ID="w1e6">Ortsmarker</tc:token>
+      <tc:token ID="w1e7">für</tc:token>
+      <tc:token ID="w1e8">solche</tc:token>
+      <tc:token ID="w1e9">Orte</tc:token>
+      <tc:token ID="w1ea">,</tc:token>
+      <tc:token ID="w1eb">die</tc:token>
+      <tc:token ID="w1ec">im</tc:token>
+      <tc:token ID="w1ed">Buch</tc:token>
+      <tc:token ID="w1ee">der</tc:token>
+      <tc:token ID="w1ef">Genesis</tc:token>
+      <tc:token ID="w1f0">erwähnt</tc:token>
+      <tc:token ID="w1f1">werden</tc:token>
+      <tc:token ID="w1f2">,</tc:token>
+      <tc:token ID="w1f3">lassen</tc:token>
+      <tc:token ID="w1f4">sich</tc:token>
+      <tc:token ID="w1f5">optional</tc:token>
+      <tc:token ID="w1f6">zusätzlich</tc:token>
+      <tc:token ID="w1f7">einblenden</tc:token>
+      <tc:token ID="w1f8">,</tc:token>
+      <tc:token ID="w1f9">um</tc:token>
+      <tc:token ID="w1fa">einen</tc:token>
+      <tc:token ID="w1fb">Vergleich</tc:token>
+      <tc:token ID="w1fc">biblischer</tc:token>
+      <tc:token ID="w1fd">Geographie</tc:token>
+      <tc:token ID="w1fe">mit</tc:token>
+      <tc:token ID="w1ff">Miltons</tc:token>
+      <tc:token ID="w200">literarischer</tc:token>
+      <tc:token ID="w201">Geographie</tc:token>
+      <tc:token ID="w202">zu</tc:token>
+      <tc:token ID="w203">ermöglichen</tc:token>
+      <tc:token ID="w204">.</tc:token>
+      <tc:token ID="w205">Um</tc:token>
+      <tc:token ID="w206">die</tc:token>
+      <tc:token ID="w207">Dichte</tc:token>
+      <tc:token ID="w208">der</tc:token>
+      <tc:token ID="w209">Vielzahl</tc:token>
+      <tc:token ID="w20a">visualisierter</tc:token>
+      <tc:token ID="w20b">Faktoren</tc:token>
+      <tc:token ID="w20c">zu</tc:token>
+      <tc:token ID="w20d">entzerren</tc:token>
+      <tc:token ID="w20e">,</tc:token>
+      <tc:token ID="w20f">lassen</tc:token>
+      <tc:token ID="w210">sich</tc:token>
+      <tc:token ID="w211">bis</tc:token>
+      <tc:token ID="w212">zu</tc:token>
+      <tc:token ID="w213">vier</tc:token>
+      <tc:token ID="w214">synchronisierte</tc:token>
+      <tc:token ID="w215">Instanzen</tc:token>
+      <tc:token ID="w216">der</tc:token>
+      <tc:token ID="w217">Karte</tc:token>
+      <tc:token ID="w218">nebeneinander</tc:token>
+      <tc:token ID="w219">anzeigen</tc:token>
+      <tc:token ID="w21a">,</tc:token>
+      <tc:token ID="w21b">die</tc:token>
+      <tc:token ID="w21c">unabhängig</tc:token>
+      <tc:token ID="w21d">voneinander</tc:token>
+      <tc:token ID="w21e">konfiguriert</tc:token>
+      <tc:token ID="w21f">werden</tc:token>
+      <tc:token ID="w220">können</tc:token>
+      <tc:token ID="w221">(</tc:token>
+      <tc:token ID="w222">Abb.</tc:token>
+      <tc:token ID="w223">3</tc:token>
+      <tc:token ID="w224">)</tc:token>
+      <tc:token ID="w225">.</tc:token>
+      <tc:token ID="w226">Galey</tc:token>
+      <tc:token ID="w227">und</tc:token>
+      <tc:token ID="w228">Ruecker</tc:token>
+      <tc:token ID="w229">(</tc:token>
+      <tc:token ID="w22a">2010</tc:token>
+      <tc:token ID="w22b">:</tc:token>
+      <tc:token ID="w22c">406</tc:token>
+      <tc:token ID="w22d">)</tc:token>
+      <tc:token ID="w22e">argumentieren</tc:token>
+      <tc:token ID="w22f">,</tc:token>
+      <tc:token ID="w230">dass</tc:token>
+      <tc:token ID="w231">ein</tc:token>
+      <tc:token ID="w232">experimenteller</tc:token>
+      <tc:token ID="w233">,</tc:token>
+      <tc:token ID="w234">digitaler</tc:token>
+      <tc:token ID="w235">Prototyp</tc:token>
+      <tc:token ID="w236">,</tc:token>
+      <tc:token ID="w237">ähnlich</tc:token>
+      <tc:token ID="w238">wie</tc:token>
+      <tc:token ID="w239">kritische</tc:token>
+      <tc:token ID="w23a">Printeditionen</tc:token>
+      <tc:token ID="w23b">und</tc:token>
+      <tc:token ID="w23c">andere</tc:token>
+      <tc:token ID="w23d">Produkte</tc:token>
+      <tc:token ID="w23e">geisteswissenschaftlicher</tc:token>
+      <tc:token ID="w23f">Forschung</tc:token>
+      <tc:token ID="w240">,</tc:token>
+      <tc:token ID="w241">als</tc:token>
+      <tc:token ID="w242">eine</tc:token>
+      <tc:token ID="w243">Art</tc:token>
+      <tc:token ID="w244">Verdinglichung</tc:token>
+      <tc:token ID="w245">einer</tc:token>
+      <tc:token ID="w246">Theorie</tc:token>
+      <tc:token ID="w247">bzw.</tc:token>
+      <tc:token ID="w248">einer</tc:token>
+      <tc:token ID="w249">Hypothese</tc:token>
+      <tc:token ID="w24a">verstanden</tc:token>
+      <tc:token ID="w24b">werden</tc:token>
+      <tc:token ID="w24c">kann</tc:token>
+      <tc:token ID="w24d">.</tc:token>
+      <tc:token ID="w24e">Mit</tc:token>
+      <tc:token ID="w24f">unserem</tc:token>
+      <tc:token ID="w250">Prototyp</tc:token>
+      <tc:token ID="w251">wollen</tc:token>
+      <tc:token ID="w252">wir</tc:token>
+      <tc:token ID="w253">verdeutlichen</tc:token>
+      <tc:token ID="w254">,</tc:token>
+      <tc:token ID="w255">dass</tc:token>
+      <tc:token ID="w256">digitale</tc:token>
+      <tc:token ID="w257">Kartographie</tc:token>
+      <tc:token ID="w258">weit</tc:token>
+      <tc:token ID="w259">mehr</tc:token>
+      <tc:token ID="w25a">ermöglicht</tc:token>
+      <tc:token ID="w25b">als</tc:token>
+      <tc:token ID="w25c">die</tc:token>
+      <tc:token ID="w25d">reine</tc:token>
+      <tc:token ID="w25e">Illustration</tc:token>
+      <tc:token ID="w25f">geographischer</tc:token>
+      <tc:token ID="w260">Zusammenhänge</tc:token>
+      <tc:token ID="w261">(</tc:token>
+      <tc:token ID="w262">Cooper</tc:token>
+      <tc:token ID="w263">und</tc:token>
+      <tc:token ID="w264">Gregory</tc:token>
+      <tc:token ID="w265">2011</tc:token>
+      <tc:token ID="w266">:</tc:token>
+      <tc:token ID="w267">90</tc:token>
+      <tc:token ID="w268">)</tc:token>
+      <tc:token ID="w269">.</tc:token>
+      <tc:token ID="w26a">Der</tc:token>
+      <tc:token ID="w26b">Entwicklungsprozess</tc:token>
+      <tc:token ID="w26c">eines</tc:token>
+      <tc:token ID="w26d">digitalen</tc:token>
+      <tc:token ID="w26e">kartenbasierten</tc:token>
+      <tc:token ID="w26f">Prototyps</tc:token>
+      <tc:token ID="w270">ist</tc:token>
+      <tc:token ID="w271">ein</tc:token>
+      <tc:token ID="w272">Prozess</tc:token>
+      <tc:token ID="w273">kritischer</tc:token>
+      <tc:token ID="w274">Interpretation</tc:token>
+      <tc:token ID="w275">;</tc:token>
+      <tc:token ID="w276">sein</tc:token>
+      <tc:token ID="w277">Ergebnis</tc:token>
+      <tc:token ID="w278">wiederum</tc:token>
+      <tc:token ID="w279">versteht</tc:token>
+      <tc:token ID="w27a">sich</tc:token>
+      <tc:token ID="w27b">als</tc:token>
+      <tc:token ID="w27c">Mittel</tc:token>
+      <tc:token ID="w27d">zur</tc:token>
+      <tc:token ID="w27e">weiteren</tc:token>
+      <tc:token ID="w27f">kritischen</tc:token>
+      <tc:token ID="w280">Interpretation</tc:token>
+      <tc:token ID="w281">.</tc:token>
+      <tc:token ID="w282">In</tc:token>
+      <tc:token ID="w283">unserem</tc:token>
+      <tc:token ID="w284">Prototyp</tc:token>
+      <tc:token ID="w285">wird</tc:token>
+      <tc:token ID="w286">die</tc:token>
+      <tc:token ID="w287">durch</tc:token>
+      <tc:token ID="w288">den</tc:token>
+      <tc:token ID="w289">kartographischen</tc:token>
+      <tc:token ID="w28a">Ansatz</tc:token>
+      <tc:token ID="w28b">zunächst</tc:token>
+      <tc:token ID="w28c">postulierte</tc:token>
+      <tc:token ID="w28d">Beziehung</tc:token>
+      <tc:token ID="w28e">zwischen</tc:token>
+      <tc:token ID="w28f">realem</tc:token>
+      <tc:token ID="w290">und</tc:token>
+      <tc:token ID="w291">literarischem</tc:token>
+      <tc:token ID="w292">Ort</tc:token>
+      <tc:token ID="w293">durch</tc:token>
+      <tc:token ID="w294">editorische</tc:token>
+      <tc:token ID="w295">Kommentare</tc:token>
+      <tc:token ID="w296">sowie</tc:token>
+      <tc:token ID="w297">unterschiedliche</tc:token>
+      <tc:token ID="w298">Visualisierungen</tc:token>
+      <tc:token ID="w299">unmittelbar</tc:token>
+      <tc:token ID="w29a">problematisiert</tc:token>
+      <tc:token ID="w29b">.</tc:token>
+      <tc:token ID="w29c">Im</tc:token>
+      <tc:token ID="w29d">Sinne</tc:token>
+      <tc:token ID="w29e">einer</tc:token>
+      <tc:token ID="w29f">Deep</tc:token>
+      <tc:token ID="w2a0">Map</tc:token>
+      <tc:token ID="w2a1">(</tc:token>
+      <tc:token ID="w2a2">Bodenhamer</tc:token>
+      <tc:token ID="w2a3">2016</tc:token>
+      <tc:token ID="w2a4">:</tc:token>
+      <tc:token ID="w2a5">212</tc:token>
+      <tc:token ID="w2a6">ff</tc:token>
+      <tc:token ID="w2a7">)</tc:token>
+      <tc:token ID="w2a8">sollen</tc:token>
+      <tc:token ID="w2a9">die</tc:token>
+      <tc:token ID="w2aa">diskursiven</tc:token>
+      <tc:token ID="w2ab">und</tc:token>
+      <tc:token ID="w2ac">ideologischen</tc:token>
+      <tc:token ID="w2ad">Dimensionen</tc:token>
+      <tc:token ID="w2ae">der</tc:token>
+      <tc:token ID="w2af">literarischen</tc:token>
+      <tc:token ID="w2b0">Topographie</tc:token>
+      <tc:token ID="w2b1">des</tc:token>
+      <tc:token ID="w2b2">Werks</tc:token>
+      <tc:token ID="w2b3">,</tc:token>
+      <tc:token ID="w2b4">und</tc:token>
+      <tc:token ID="w2b5">damit</tc:token>
+      <tc:token ID="w2b6">die</tc:token>
+      <tc:token ID="w2b7">sozialen</tc:token>
+      <tc:token ID="w2b8">und</tc:token>
+      <tc:token ID="w2b9">kulturellen</tc:token>
+      <tc:token ID="w2ba">Implikationen</tc:token>
+      <tc:token ID="w2bb">,</tc:token>
+      <tc:token ID="w2bc">die</tc:token>
+      <tc:token ID="w2bd">in</tc:token>
+      <tc:token ID="w2be">Miltons</tc:token>
+      <tc:token ID="w2bf">literarische</tc:token>
+      <tc:token ID="w2c0">Geographie</tc:token>
+      <tc:token ID="w2c1">eingegangen</tc:token>
+      <tc:token ID="w2c2">sind</tc:token>
+      <tc:token ID="w2c3">(</tc:token>
+      <tc:token ID="w2c4">Hess-Lüttich</tc:token>
+      <tc:token ID="w2c5">2017</tc:token>
+      <tc:token ID="w2c6">:</tc:token>
+      <tc:token ID="w2c7">9</tc:token>
+      <tc:token ID="w2c8">)</tc:token>
+      <tc:token ID="w2c9">,</tc:token>
+      <tc:token ID="w2ca">zugänglich</tc:token>
+      <tc:token ID="w2cb">gemacht</tc:token>
+      <tc:token ID="w2cc">werden</tc:token>
+      <tc:token ID="w2cd">.</tc:token>
+      <tc:token ID="w2ce">Damit</tc:token>
+      <tc:token ID="w2cf">soll</tc:token>
+      <tc:token ID="w2d0">ein</tc:token>
+      <tc:token ID="w2d1">Beitrag</tc:token>
+      <tc:token ID="w2d2">zur</tc:token>
+      <tc:token ID="w2d3">Bildung</tc:token>
+      <tc:token ID="w2d4">von</tc:token>
+      <tc:token ID="w2d5">Argumenten</tc:token>
+      <tc:token ID="w2d6">,</tc:token>
+      <tc:token ID="w2d7">Hypothesen</tc:token>
+      <tc:token ID="w2d8">und</tc:token>
+      <tc:token ID="w2d9">Fragestellungen</tc:token>
+      <tc:token ID="w2da">auf</tc:token>
+      <tc:token ID="w2db">der</tc:token>
+      <tc:token ID="w2dc">Grundlage</tc:token>
+      <tc:token ID="w2dd">des</tc:token>
+      <tc:token ID="w2de">räumlich-zeitlichen</tc:token>
+      <tc:token ID="w2df">Aspekts</tc:token>
+      <tc:token ID="w2e0">des</tc:token>
+      <tc:token ID="w2e1">Werks</tc:token>
+      <tc:token ID="w2e2">geleistet</tc:token>
+      <tc:token ID="w2e3">werden</tc:token>
+      <tc:token ID="w2e4">.</tc:token>
+      <tc:token ID="w2e5">Die</tc:token>
+      <tc:token ID="w2e6">in</tc:token>
+      <tc:token ID="w2e7">die</tc:token>
+      <tc:token ID="w2e8">Entwicklung</tc:token>
+      <tc:token ID="w2e9">des</tc:token>
+      <tc:token ID="w2ea">Prototyps</tc:token>
+      <tc:token ID="w2eb">selbst</tc:token>
+      <tc:token ID="w2ec">eingegangenen</tc:token>
+      <tc:token ID="w2ed">Vorannahmen</tc:token>
+      <tc:token ID="w2ee">sollen</tc:token>
+      <tc:token ID="w2ef">transparent</tc:token>
+      <tc:token ID="w2f0">dargestellt</tc:token>
+      <tc:token ID="w2f1">und</tc:token>
+      <tc:token ID="w2f2">diskutiert</tc:token>
+      <tc:token ID="w2f3">werden</tc:token>
+      <tc:token ID="w2f4">.</tc:token>
+      <tc:token ID="w2f5">Durch</tc:token>
+      <tc:token ID="w2f6">flexible</tc:token>
+      <tc:token ID="w2f7">Konfigurationsmöglichkeiten</tc:token>
+      <tc:token ID="w2f8">im</tc:token>
+      <tc:token ID="w2f9">Benutzerinterface</tc:token>
+      <tc:token ID="w2fa">wird</tc:token>
+      <tc:token ID="w2fb">es</tc:token>
+      <tc:token ID="w2fc">BenutzerInnen</tc:token>
+      <tc:token ID="w2fd">ermöglicht</tc:token>
+      <tc:token ID="w2fe">,</tc:token>
+      <tc:token ID="w2ff">selbst</tc:token>
+      <tc:token ID="w300">mit</tc:token>
+      <tc:token ID="w301">unterschiedlichen</tc:token>
+      <tc:token ID="w302">Visualisierungsmöglichkeiten</tc:token>
+      <tc:token ID="w303">einzelner</tc:token>
+      <tc:token ID="w304">Faktoren</tc:token>
+      <tc:token ID="w305">zu</tc:token>
+      <tc:token ID="w306">experimentieren</tc:token>
+      <tc:token ID="w307">.</tc:token>
+      <tc:token ID="w308">Auf</tc:token>
+      <tc:token ID="w309">unserem</tc:token>
+      <tc:token ID="w30a">Poster</tc:token>
+      <tc:token ID="w30b">präsentieren</tc:token>
+      <tc:token ID="w30c">wir</tc:token>
+      <tc:token ID="w30d">den</tc:token>
+      <tc:token ID="w30e">aktuellen</tc:token>
+      <tc:token ID="w30f">Stand</tc:token>
+      <tc:token ID="w310">unseres</tc:token>
+      <tc:token ID="w311">Prototyps</tc:token>
+      <tc:token ID="w312">und</tc:token>
+      <tc:token ID="w313">illustrieren</tc:token>
+      <tc:token ID="w314">Probleme</tc:token>
+      <tc:token ID="w315">und</tc:token>
+      <tc:token ID="w316">Herausforderungen</tc:token>
+      <tc:token ID="w317">,</tc:token>
+      <tc:token ID="w318">die</tc:token>
+      <tc:token ID="w319">sich</tc:token>
+      <tc:token ID="w31a">bei</tc:token>
+      <tc:token ID="w31b">der</tc:token>
+      <tc:token ID="w31c">Visualisierung</tc:token>
+      <tc:token ID="w31d">der</tc:token>
+      <tc:token ID="w31e">unterschiedlichen</tc:token>
+      <tc:token ID="w31f">Faktoren</tc:token>
+      <tc:token ID="w320">ergeben</tc:token>
+      <tc:token ID="w321">.</tc:token>
+      <tc:token ID="w322">Beispielhaft</tc:token>
+      <tc:token ID="w323">wird</tc:token>
+      <tc:token ID="w324">gezeigt</tc:token>
+      <tc:token ID="w325">,</tc:token>
+      <tc:token ID="w326">wie</tc:token>
+      <tc:token ID="w327">sich</tc:token>
+      <tc:token ID="w328">anhand</tc:token>
+      <tc:token ID="w329">des</tc:token>
+      <tc:token ID="w32a">Prototyps</tc:token>
+      <tc:token ID="w32b">für</tc:token>
+      <tc:token ID="w32c">bestimmte</tc:token>
+      <tc:token ID="w32d">Thesen</tc:token>
+      <tc:token ID="w32e">über</tc:token>
+      <tc:token ID="w32f">Miltons</tc:token>
+      <tc:token ID="w330">literarische</tc:token>
+      <tc:token ID="w331">Geographie</tc:token>
+      <tc:token ID="w332">argumentieren</tc:token>
+      <tc:token ID="w333">lässt</tc:token>
+      <tc:token ID="w334">.</tc:token>
+      <tc:token ID="w335">Abbildung</tc:token>
+      <tc:token ID="w336">1.</tc:token>
+      <tc:token ID="w337">Hauptansicht</tc:token>
+      <tc:token ID="w338">mit</tc:token>
+      <tc:token ID="w339">eingeblendetem</tc:token>
+      <tc:token ID="w33a">Kommentar</tc:token>
+      <tc:token ID="w33b">und</tc:token>
+      <tc:token ID="w33c">Textpassagen</tc:token>
+      <tc:token ID="w33d">.</tc:token>
+      <tc:token ID="w33e">Abbildung</tc:token>
+      <tc:token ID="w33f">2.</tc:token>
+      <tc:token ID="w340">Kreisdiagramme</tc:token>
+      <tc:token ID="w341">zur</tc:token>
+      <tc:token ID="w342">Illustration</tc:token>
+      <tc:token ID="w343">mehrerer</tc:token>
+      <tc:token ID="w344">Erwähnungen</tc:token>
+      <tc:token ID="w345">eines</tc:token>
+      <tc:token ID="w346">Ortes</tc:token>
+      <tc:token ID="w347">mit</tc:token>
+      <tc:token ID="w348">unterschiedlichen</tc:token>
+      <tc:token ID="w349">moralischen</tc:token>
+      <tc:token ID="w34a">Konnotationen</tc:token>
+      <tc:token ID="w34b">.</tc:token>
+      <tc:token ID="w34c">Abbildung</tc:token>
+      <tc:token ID="w34d">3.</tc:token>
+      <tc:token ID="w34e">Vier</tc:token>
+      <tc:token ID="w34f">unterschiedlich</tc:token>
+      <tc:token ID="w350">konfigurierte</tc:token>
+      <tc:token ID="w351">,</tc:token>
+      <tc:token ID="w352">synchronisierte</tc:token>
+      <tc:token ID="w353">Karten</tc:token>
+      <tc:token ID="w354">.</tc:token>
+      <tc:token ID="w355">Bodenhamer</tc:token>
+      <tc:token ID="w356">,</tc:token>
+      <tc:token ID="w357">David</tc:token>
+      <tc:token ID="w358">J.</tc:token>
+      <tc:token ID="w359">(</tc:token>
+      <tc:token ID="w35a">2016</tc:token>
+      <tc:token ID="w35b">)</tc:token>
+      <tc:token ID="w35c">:</tc:token>
+      <tc:token ID="w35d">Making</tc:token>
+      <tc:token ID="w35e">the</tc:token>
+      <tc:token ID="w35f">Invisible</tc:token>
+      <tc:token ID="w360">Visible</tc:token>
+      <tc:token ID="w361">:</tc:token>
+      <tc:token ID="w362">Place</tc:token>
+      <tc:token ID="w363">,</tc:token>
+      <tc:token ID="w364">Spatial</tc:token>
+      <tc:token ID="w365">Stories</tc:token>
+      <tc:token ID="w366">and</tc:token>
+      <tc:token ID="w367">Deep</tc:token>
+      <tc:token ID="w368">Maps</tc:token>
+      <tc:token ID="w369">,</tc:token>
+      <tc:token ID="w36a">in</tc:token>
+      <tc:token ID="w36b">:</tc:token>
+      <tc:token ID="w36c">Cooper</tc:token>
+      <tc:token ID="w36d">,</tc:token>
+      <tc:token ID="w36e">David</tc:token>
+      <tc:token ID="w36f">/</tc:token>
+      <tc:token ID="w370">Donaldson</tc:token>
+      <tc:token ID="w371">,</tc:token>
+      <tc:token ID="w372">Christopher</tc:token>
+      <tc:token ID="w373">/</tc:token>
+      <tc:token ID="w374">Murrieta-Flores</tc:token>
+      <tc:token ID="w375">,</tc:token>
+      <tc:token ID="w376">Patricia</tc:token>
+      <tc:token ID="w377">(</tc:token>
+      <tc:token ID="w378">eds</tc:token>
+      <tc:token ID="w379">.</tc:token>
+      <tc:token ID="w37a">)</tc:token>
+      <tc:token ID="w37b">:</tc:token>
+      <tc:token ID="w37c">Literary</tc:token>
+      <tc:token ID="w37d">Mapping</tc:token>
+      <tc:token ID="w37e">in</tc:token>
+      <tc:token ID="w37f">the</tc:token>
+      <tc:token ID="w380">Digital</tc:token>
+      <tc:token ID="w381">Age</tc:token>
+      <tc:token ID="w382">.</tc:token>
+      <tc:token ID="w383">London</tc:token>
+      <tc:token ID="w384">/</tc:token>
+      <tc:token ID="w385">New</tc:token>
+      <tc:token ID="w386">York</tc:token>
+      <tc:token ID="w387">:</tc:token>
+      <tc:token ID="w388">Routledge</tc:token>
+      <tc:token ID="w389">207-220</tc:token>
+      <tc:token ID="w38a">.</tc:token>
+      <tc:token ID="w38b">Cooper</tc:token>
+      <tc:token ID="w38c">,</tc:token>
+      <tc:token ID="w38d">David</tc:token>
+      <tc:token ID="w38e">/</tc:token>
+      <tc:token ID="w38f">Gregory</tc:token>
+      <tc:token ID="w390">,</tc:token>
+      <tc:token ID="w391">Ian</tc:token>
+      <tc:token ID="w392">N.</tc:token>
+      <tc:token ID="w393">(</tc:token>
+      <tc:token ID="w394">2011</tc:token>
+      <tc:token ID="w395">)</tc:token>
+      <tc:token ID="w396">:</tc:token>
+      <tc:token ID="w397">Mapping</tc:token>
+      <tc:token ID="w398">the</tc:token>
+      <tc:token ID="w399">English</tc:token>
+      <tc:token ID="w39a">Lake</tc:token>
+      <tc:token ID="w39b">District</tc:token>
+      <tc:token ID="w39c">:</tc:token>
+      <tc:token ID="w39d">A</tc:token>
+      <tc:token ID="w39e">Literary</tc:token>
+      <tc:token ID="w39f">GIS</tc:token>
+      <tc:token ID="w3a0">,</tc:token>
+      <tc:token ID="w3a1">in</tc:token>
+      <tc:token ID="w3a2">:</tc:token>
+      <tc:token ID="w3a3">Transactions</tc:token>
+      <tc:token ID="w3a4">of</tc:token>
+      <tc:token ID="w3a5">the</tc:token>
+      <tc:token ID="w3a6">Institute</tc:token>
+      <tc:token ID="w3a7">of</tc:token>
+      <tc:token ID="w3a8">British</tc:token>
+      <tc:token ID="w3a9">Geographers</tc:token>
+      <tc:token ID="w3aa">36</tc:token>
+      <tc:token ID="w3ab">(</tc:token>
+      <tc:token ID="w3ac">1</tc:token>
+      <tc:token ID="w3ad">)</tc:token>
+      <tc:token ID="w3ae">:</tc:token>
+      <tc:token ID="w3af">89-108</tc:token>
+      <tc:token ID="w3b0">.</tc:token>
+      <tc:token ID="w3b1">Galey</tc:token>
+      <tc:token ID="w3b2">,</tc:token>
+      <tc:token ID="w3b3">Alan</tc:token>
+      <tc:token ID="w3b4">/</tc:token>
+      <tc:token ID="w3b5">Ruecker</tc:token>
+      <tc:token ID="w3b6">,</tc:token>
+      <tc:token ID="w3b7">Stan</tc:token>
+      <tc:token ID="w3b8">(</tc:token>
+      <tc:token ID="w3b9">2010</tc:token>
+      <tc:token ID="w3ba">)</tc:token>
+      <tc:token ID="w3bb">:</tc:token>
+      <tc:token ID="w3bc">How</tc:token>
+      <tc:token ID="w3bd">a</tc:token>
+      <tc:token ID="w3be">Prototype</tc:token>
+      <tc:token ID="w3bf">Argues</tc:token>
+      <tc:token ID="w3c0">,</tc:token>
+      <tc:token ID="w3c1">in</tc:token>
+      <tc:token ID="w3c2">:</tc:token>
+      <tc:token ID="w3c3">Literary</tc:token>
+      <tc:token ID="w3c4">and</tc:token>
+      <tc:token ID="w3c5">Linguistic</tc:token>
+      <tc:token ID="w3c6">Computing</tc:token>
+      <tc:token ID="w3c7">25</tc:token>
+      <tc:token ID="w3c8">(</tc:token>
+      <tc:token ID="w3c9">4</tc:token>
+      <tc:token ID="w3ca">)</tc:token>
+      <tc:token ID="w3cb">:</tc:token>
+      <tc:token ID="w3cc">405-24</tc:token>
+      <tc:token ID="w3cd">.</tc:token>
+      <tc:token ID="w3ce">Hess-Lüttich</tc:token>
+      <tc:token ID="w3cf">,</tc:token>
+      <tc:token ID="w3d0">Ernest</tc:token>
+      <tc:token ID="w3d1">W.</tc:token>
+      <tc:token ID="w3d2">B.</tc:token>
+      <tc:token ID="w3d3">(</tc:token>
+      <tc:token ID="w3d4">2017</tc:token>
+      <tc:token ID="w3d5">)</tc:token>
+      <tc:token ID="w3d6">:</tc:token>
+      <tc:token ID="w3d7">Spatial</tc:token>
+      <tc:token ID="w3d8">Turn</tc:token>
+      <tc:token ID="w3d9">:</tc:token>
+      <tc:token ID="w3da">On</tc:token>
+      <tc:token ID="w3db">the</tc:token>
+      <tc:token ID="w3dc">Concept</tc:token>
+      <tc:token ID="w3dd">of</tc:token>
+      <tc:token ID="w3de">Space</tc:token>
+      <tc:token ID="w3df">in</tc:token>
+      <tc:token ID="w3e0">Cultural</tc:token>
+      <tc:token ID="w3e1">Geography</tc:token>
+      <tc:token ID="w3e2">and</tc:token>
+      <tc:token ID="w3e3">Literary</tc:token>
+      <tc:token ID="w3e4">Theory</tc:token>
+      <tc:token ID="w3e5">,</tc:token>
+      <tc:token ID="w3e6">in</tc:token>
+      <tc:token ID="w3e7">:</tc:token>
+      <tc:token ID="w3e8">Meta-Carto-Semiotics</tc:token>
+      <tc:token ID="w3e9">5</tc:token>
+      <tc:token ID="w3ea">(</tc:token>
+      <tc:token ID="w3eb">1</tc:token>
+      <tc:token ID="w3ec">)</tc:token>
+      <tc:token ID="w3ed">:</tc:token>
+      <tc:token ID="w3ee">27-37</tc:token>
+      <tc:token ID="w3ef">http://ojs.meta-carto-semiotics.org/index.php/mcs/article/view/21</tc:token>
+      <tc:token ID="w3f0">[</tc:token>
+      <tc:token ID="w3f1">letzter</tc:token>
+      <tc:token ID="w3f2">Zugriff</tc:token>
+      <tc:token ID="w3f3">15.</tc:token>
+      <tc:token ID="w3f4">Oktober</tc:token>
+      <tc:token ID="w3f5">2018</tc:token>
+      <tc:token ID="w3f6">]</tc:token>
+      <tc:token ID="w3f7">.</tc:token>
+      <tc:token ID="w3f8">Piatti</tc:token>
+      <tc:token ID="w3f9">,</tc:token>
+      <tc:token ID="w3fa">Barbara</tc:token>
+      <tc:token ID="w3fb">(</tc:token>
+      <tc:token ID="w3fc">2016</tc:token>
+      <tc:token ID="w3fd">)</tc:token>
+      <tc:token ID="w3fe">:</tc:token>
+      <tc:token ID="w3ff">Mapping</tc:token>
+      <tc:token ID="w400">Fiction</tc:token>
+      <tc:token ID="w401">:</tc:token>
+      <tc:token ID="w402">The</tc:token>
+      <tc:token ID="w403">Theories</tc:token>
+      <tc:token ID="w404">,</tc:token>
+      <tc:token ID="w405">Tools</tc:token>
+      <tc:token ID="w406">and</tc:token>
+      <tc:token ID="w407">Potentials</tc:token>
+      <tc:token ID="w408">of</tc:token>
+      <tc:token ID="w409">Literary</tc:token>
+      <tc:token ID="w40a">Cartography</tc:token>
+      <tc:token ID="w40b">,</tc:token>
+      <tc:token ID="w40c">in</tc:token>
+      <tc:token ID="w40d">:</tc:token>
+      <tc:token ID="w40e">Cooper</tc:token>
+      <tc:token ID="w40f">,</tc:token>
+      <tc:token ID="w410">David</tc:token>
+      <tc:token ID="w411">/</tc:token>
+      <tc:token ID="w412">Donaldson</tc:token>
+      <tc:token ID="w413">,</tc:token>
+      <tc:token ID="w414">Christopher</tc:token>
+      <tc:token ID="w415">/</tc:token>
+      <tc:token ID="w416">Murrieta-Flores</tc:token>
+      <tc:token ID="w417">,</tc:token>
+      <tc:token ID="w418">Patricia</tc:token>
+      <tc:token ID="w419">(</tc:token>
+      <tc:token ID="w41a">eds</tc:token>
+      <tc:token ID="w41b">.</tc:token>
+      <tc:token ID="w41c">)</tc:token>
+      <tc:token ID="w41d">:</tc:token>
+      <tc:token ID="w41e">Literary</tc:token>
+      <tc:token ID="w41f">Mapping</tc:token>
+      <tc:token ID="w420">in</tc:token>
+      <tc:token ID="w421">the</tc:token>
+      <tc:token ID="w422">Digital</tc:token>
+      <tc:token ID="w423">Age</tc:token>
+      <tc:token ID="w424">.</tc:token>
+      <tc:token ID="w425">London</tc:token>
+      <tc:token ID="w426">/</tc:token>
+      <tc:token ID="w427">New</tc:token>
+      <tc:token ID="w428">York</tc:token>
+      <tc:token ID="w429">:</tc:token>
+      <tc:token ID="w42a">Routledge</tc:token>
+      <tc:token ID="w42b">106-119</tc:token>
+      <tc:token ID="w42c">.</tc:token>
+      <tc:token ID="w42d">Bibliographie</tc:token>
+    </tc:tokens>
+    <tc:sentences xmlns:tc="http://www.dspin.de/data/textcorpus">
+      <tc:sentence tokenIDs="w1 w2 w3 w4 w5 w6 w7 w8 w9 wa wb wc wd we wf w10" ID="s1"/>
+      <tc:sentence tokenIDs="w11 w12 w13 w14 w15 w16 w17 w18 w19 w1a w1b w1c w1d w1e w1f w20 w21 w22 w23 w24 w25 w26 w27 w28 w29 w2a w2b w2c w2d w2e w2f w30 w31 w32 w33 w34 w35 w36 w37 w38 w39 w3a w3b w3c" ID="s2"/>
+      <tc:sentence tokenIDs="w3d w3e w3f w40 w41 w42 w43 w44 w45 w46 w47 w48 w49 w4a w4b w4c w4d w4e w4f w50 w51" ID="s3"/>
+      <tc:sentence tokenIDs="w52 w53 w54 w55 w56 w57 w58 w59 w5a w5b" ID="s4"/>
+      <tc:sentence tokenIDs="w5c w5d w5e w5f w60 w61 w62 w63 w64 w65 w66 w67 w68 w69 w6a w6b" ID="s5"/>
+      <tc:sentence tokenIDs="w6c w6d w6e w6f w70 w71 w72 w73 w74 w75 w76 w77 w78 w79 w7a w7b w7c w7d w7e w7f w80 w81 w82 w83 w84 w85 w86 w87 w88 w89 w8a w8b w8c w8d w8e w8f w90 w91 w92" ID="s6"/>
+      <tc:sentence tokenIDs="w93 w94 w95 w96 w97 w98 w99 w9a w9b w9c w9d" ID="s7"/>
+      <tc:sentence tokenIDs="w9e w9f wa0 wa1 wa2 wa3 wa4 wa5 wa6 wa7 wa8 wa9 waa wab wac wad wae waf wb0 wb1 wb2 wb3 wb4 wb5 wb6 wb7 wb8 wb9 wba wbb wbc wbd" ID="s8"/>
+      <tc:sentence tokenIDs="wbe wbf wc0 wc1 wc2 wc3 wc4 wc5 wc6 wc7 wc8 wc9 wca wcb wcc wcd wce wcf wd0 wd1 wd2 wd3 wd4 wd5 wd6 wd7 wd8" ID="s9"/>
+      <tc:sentence tokenIDs="wd9 wda wdb wdc wdd wde wdf we0 we1 we2 we3 we4 we5 we6 we7 we8 we9 wea web wec wed wee wef wf0 wf1 wf2 wf3 wf4 wf5 wf6 wf7 wf8 wf9" ID="sa"/>
+      <tc:sentence tokenIDs="wfa wfb wfc wfd wfe wff w100 w101 w102 w103 w104 w105 w106 w107 w108 w109 w10a w10b w10c w10d w10e w10f w110 w111 w112 w113 w114 w115 w116 w117 w118 w119 w11a w11b w11c w11d w11e w11f w120 w121 w122 w123 w124 w125 w126 w127 w128 w129 w12a w12b w12c w12d w12e w12f w130 w131 w132 w133 w134 w135 w136 w137 w138 w139 w13a w13b w13c w13d w13e w13f w140 w141 w142" ID="sb"/>
+      <tc:sentence tokenIDs="w143 w144 w145 w146 w147 w148 w149 w14a w14b w14c" ID="sc"/>
+      <tc:sentence tokenIDs="w14d w14e w14f w150 w151 w152 w153 w154 w155 w156 w157 w158 w159 w15a" ID="sd"/>
+      <tc:sentence tokenIDs="w15b w15c w15d w15e w15f w160 w161 w162 w163 w164 w165 w166 w167 w168 w169 w16a w16b w16c w16d w16e w16f w170 w171 w172 w173 w174 w175 w176 w177 w178 w179 w17a w17b w17c w17d w17e w17f w180 w181 w182 w183 w184 w185 w186 w187 w188 w189 w18a w18b w18c" ID="se"/>
+      <tc:sentence tokenIDs="w18d w18e w18f w190 w191 w192 w193 w194 w195 w196 w197 w198 w199 w19a w19b w19c w19d w19e w19f w1a0 w1a1 w1a2 w1a3 w1a4 w1a5 w1a6 w1a7 w1a8 w1a9 w1aa w1ab w1ac w1ad w1ae w1af w1b0" ID="sf"/>
+      <tc:sentence tokenIDs="w1b1 w1b2 w1b3 w1b4 w1b5 w1b6 w1b7 w1b8 w1b9 w1ba w1bb w1bc w1bd w1be w1bf w1c0" ID="s10"/>
+      <tc:sentence tokenIDs="w1c1 w1c2 w1c3 w1c4 w1c5 w1c6 w1c7 w1c8 w1c9 w1ca w1cb w1cc w1cd w1ce w1cf w1d0 w1d1 w1d2 w1d3" ID="s11"/>
+      <tc:sentence tokenIDs="w1d4 w1d5 w1d6 w1d7 w1d8 w1d9 w1da w1db w1dc w1dd w1de w1df w1e0 w1e1 w1e2 w1e3 w1e4 w1e5" ID="s12"/>
+      <tc:sentence tokenIDs="w1e6 w1e7 w1e8 w1e9 w1ea w1eb w1ec w1ed w1ee w1ef w1f0 w1f1 w1f2 w1f3 w1f4 w1f5 w1f6 w1f7 w1f8 w1f9 w1fa w1fb w1fc w1fd w1fe w1ff w200 w201 w202 w203 w204" ID="s13"/>
+      <tc:sentence tokenIDs="w205 w206 w207 w208 w209 w20a w20b w20c w20d w20e w20f w210 w211 w212 w213 w214 w215 w216 w217 w218 w219 w21a w21b w21c w21d w21e w21f w220 w221 w222 w223 w224 w225" ID="s14"/>
+      <tc:sentence tokenIDs="w226 w227 w228 w229 w22a w22b w22c w22d w22e w22f w230 w231 w232 w233 w234 w235 w236 w237 w238 w239 w23a w23b w23c w23d w23e w23f w240 w241 w242 w243 w244 w245 w246 w247 w248 w249 w24a w24b w24c w24d" ID="s15"/>
+      <tc:sentence tokenIDs="w24e w24f w250 w251 w252 w253 w254 w255 w256 w257 w258 w259 w25a w25b w25c w25d w25e w25f w260 w261 w262 w263 w264 w265 w266 w267 w268 w269" ID="s16"/>
+      <tc:sentence tokenIDs="w26a w26b w26c w26d w26e w26f w270 w271 w272 w273 w274 w275 w276 w277 w278 w279 w27a w27b w27c w27d w27e w27f w280 w281" ID="s17"/>
+      <tc:sentence tokenIDs="w282 w283 w284 w285 w286 w287 w288 w289 w28a w28b w28c w28d w28e w28f w290 w291 w292 w293 w294 w295 w296 w297 w298 w299 w29a w29b" ID="s18"/>
+      <tc:sentence tokenIDs="w29c w29d w29e w29f w2a0 w2a1 w2a2 w2a3 w2a4 w2a5 w2a6 w2a7 w2a8 w2a9 w2aa w2ab w2ac w2ad w2ae w2af w2b0 w2b1 w2b2 w2b3 w2b4 w2b5 w2b6 w2b7 w2b8 w2b9 w2ba w2bb w2bc w2bd w2be w2bf w2c0 w2c1 w2c2 w2c3 w2c4 w2c5 w2c6 w2c7 w2c8 w2c9 w2ca w2cb w2cc w2cd" ID="s19"/>
+      <tc:sentence tokenIDs="w2ce w2cf w2d0 w2d1 w2d2 w2d3 w2d4 w2d5 w2d6 w2d7 w2d8 w2d9 w2da w2db w2dc w2dd w2de w2df w2e0 w2e1 w2e2 w2e3 w2e4" ID="s1a"/>
+      <tc:sentence tokenIDs="w2e5 w2e6 w2e7 w2e8 w2e9 w2ea w2eb w2ec w2ed w2ee w2ef w2f0 w2f1 w2f2 w2f3 w2f4" ID="s1b"/>
+      <tc:sentence tokenIDs="w2f5 w2f6 w2f7 w2f8 w2f9 w2fa w2fb w2fc w2fd w2fe w2ff w300 w301 w302 w303 w304 w305 w306 w307" ID="s1c"/>
+      <tc:sentence tokenIDs="w308 w309 w30a w30b w30c w30d w30e w30f w310 w311 w312 w313 w314 w315 w316 w317 w318 w319 w31a w31b w31c w31d w31e w31f w320 w321" ID="s1d"/>
+      <tc:sentence tokenIDs="w322 w323 w324 w325 w326 w327 w328 w329 w32a w32b w32c w32d w32e w32f w330 w331 w332 w333 w334" ID="s1e"/>
+      <tc:sentence tokenIDs="w335 w336 w337 w338 w339 w33a w33b w33c w33d" ID="s1f"/>
+      <tc:sentence tokenIDs="w33e w33f w340 w341 w342 w343 w344 w345 w346 w347 w348 w349 w34a w34b" ID="s20"/>
+      <tc:sentence tokenIDs="w34c w34d w34e w34f w350 w351 w352 w353 w354" ID="s21"/>
+      <tc:sentence tokenIDs="w355 w356 w357 w358 w359 w35a w35b w35c" ID="s22"/>
+      <tc:sentence tokenIDs="w35d w35e w35f w360 w361 w362 w363 w364 w365 w366 w367 w368 w369 w36a w36b w36c w36d w36e w36f w370 w371 w372 w373 w374 w375 w376 w377 w378 w379 w37a w37b w37c w37d w37e w37f w380 w381 w382" ID="s23"/>
+      <tc:sentence tokenIDs="w383 w384 w385 w386 w387 w388 w389 w38a" ID="s24"/>
+      <tc:sentence tokenIDs="w38b w38c w38d w38e w38f w390 w391 w392 w393 w394 w395 w396" ID="s25"/>
+      <tc:sentence tokenIDs="w397 w398 w399 w39a w39b w39c w39d w39e w39f w3a0 w3a1 w3a2 w3a3 w3a4 w3a5 w3a6 w3a7 w3a8 w3a9 w3aa w3ab w3ac w3ad w3ae w3af w3b0" ID="s26"/>
+      <tc:sentence tokenIDs="w3b1 w3b2 w3b3 w3b4 w3b5 w3b6 w3b7 w3b8 w3b9 w3ba w3bb" ID="s27"/>
+      <tc:sentence tokenIDs="w3bc w3bd w3be w3bf w3c0 w3c1 w3c2 w3c3 w3c4 w3c5 w3c6 w3c7 w3c8 w3c9 w3ca w3cb w3cc w3cd" ID="s28"/>
+      <tc:sentence tokenIDs="w3ce w3cf w3d0 w3d1 w3d2 w3d3 w3d4 w3d5 w3d6 w3d7 w3d8 w3d9" ID="s29"/>
+      <tc:sentence tokenIDs="w3da w3db w3dc w3dd w3de w3df w3e0 w3e1 w3e2 w3e3 w3e4 w3e5 w3e6 w3e7 w3e8 w3e9 w3ea w3eb w3ec w3ed w3ee w3ef w3f0 w3f1 w3f2 w3f3 w3f4 w3f5 w3f6 w3f7" ID="s2a"/>
+      <tc:sentence tokenIDs="w3f8 w3f9 w3fa w3fb w3fc w3fd w3fe w3ff w400 w401 w402 w403 w404 w405 w406 w407 w408 w409 w40a w40b w40c w40d w40e w40f w410 w411 w412 w413 w414 w415 w416 w417 w418 w419 w41a w41b w41c w41d w41e w41f w420 w421 w422 w423 w424" ID="s2b"/>
+      <tc:sentence tokenIDs="w425 w426 w427 w428 w429 w42a w42b w42c" ID="s2c"/>
+      <tc:sentence tokenIDs="w42d" ID="s2d"/>
+    </tc:sentences>
+    <tc:namedEntities xmlns:tc="http://www.dspin.de/data/textcorpus" type="tuebadz8">
+      <tc:entity class="OTH" tokenIDs="w71 w72"/>
+      <tc:entity class="PER" tokenIDs="w74 w75"/>
+      <tc:entity class="OTH" tokenIDs="w7c"/>
+      <tc:entity class="OTH" tokenIDs="w82"/>
+      <tc:entity class="PER" tokenIDs="w87"/>
+      <tc:entity class="PER" tokenIDs="w89"/>
+      <tc:entity class="LOC" tokenIDs="w90"/>
+      <tc:entity class="PER" tokenIDs="w95"/>
+      <tc:entity class="PER" tokenIDs="wbe"/>
+      <tc:entity class="PER" tokenIDs="wdd"/>
+      <tc:entity class="OTH" tokenIDs="w101 w102 w103 w104"/>
+      <tc:entity class="ORG" tokenIDs="w10b w10c"/>
+      <tc:entity class="ORG" tokenIDs="w111 w112"/>
+      <tc:entity class="PER" tokenIDs="w116"/>
+      <tc:entity class="OTH" tokenIDs="w125 w126"/>
+      <tc:entity class="PER" tokenIDs="w160"/>
+      <tc:entity class="PER" tokenIDs="w194"/>
+      <tc:entity class="OTH" tokenIDs="w1ef"/>
+      <tc:entity class="PER" tokenIDs="w1ff"/>
+      <tc:entity class="PER" tokenIDs="w226"/>
+      <tc:entity class="PER" tokenIDs="w228"/>
+      <tc:entity class="PER" tokenIDs="w262"/>
+      <tc:entity class="PER" tokenIDs="w264"/>
+      <tc:entity class="OTH" tokenIDs="w29f w2a0"/>
+      <tc:entity class="PER" tokenIDs="w2be"/>
+      <tc:entity class="PER" tokenIDs="w32f"/>
+      <tc:entity class="PER" tokenIDs="w355"/>
+      <tc:entity class="PER" tokenIDs="w357 w358"/>
+      <tc:entity class="OTH" tokenIDs="w35d w35e w35f w360"/>
+      <tc:entity class="OTH" tokenIDs="w362 w363 w364 w365 w366 w367 w368"/>
+      <tc:entity class="PER" tokenIDs="w36c"/>
+      <tc:entity class="PER" tokenIDs="w36e"/>
+      <tc:entity class="PER" tokenIDs="w370"/>
+      <tc:entity class="PER" tokenIDs="w372"/>
+      <tc:entity class="PER" tokenIDs="w376"/>
+      <tc:entity class="OTH" tokenIDs="w37c w37d w37e w37f w380 w381"/>
+      <tc:entity class="GPE" tokenIDs="w383"/>
+      <tc:entity class="GPE" tokenIDs="w385 w386"/>
+      <tc:entity class="ORG" tokenIDs="w388"/>
+      <tc:entity class="PER" tokenIDs="w38b"/>
+      <tc:entity class="PER" tokenIDs="w38d"/>
+      <tc:entity class="PER" tokenIDs="w38f"/>
+      <tc:entity class="PER" tokenIDs="w391 w392"/>
+      <tc:entity class="OTH" tokenIDs="w397 w398 w399 w39a w39b"/>
+      <tc:entity class="OTH" tokenIDs="w39d w39e w39f"/>
+      <tc:entity class="OTH" tokenIDs="w3a3 w3a4 w3a5 w3a6 w3a7 w3a8 w3a9"/>
+      <tc:entity class="PER" tokenIDs="w3b1"/>
+      <tc:entity class="PER" tokenIDs="w3b3"/>
+      <tc:entity class="PER" tokenIDs="w3b5"/>
+      <tc:entity class="PER" tokenIDs="w3b7"/>
+      <tc:entity class="OTH" tokenIDs="w3c3 w3c4 w3c5 w3c6"/>
+      <tc:entity class="GPE" tokenIDs="w3ce"/>
+      <tc:entity class="PER" tokenIDs="w3d0 w3d1 w3d2"/>
+      <tc:entity class="OTH" tokenIDs="w3d7 w3d8"/>
+      <tc:entity class="OTH" tokenIDs="w3da w3db w3dc w3dd w3de w3df w3e0 w3e1 w3e2 w3e3 w3e4"/>
+      <tc:entity class="OTH" tokenIDs="w3e8"/>
+      <tc:entity class="OTH" tokenIDs="w3f8 w3f9 w3fa"/>
+      <tc:entity class="OTH" tokenIDs="w3ff w400 w401 w402 w403 w404 w405 w406 w407 w408 w409 w40a"/>
+      <tc:entity class="PER" tokenIDs="w40e"/>
+      <tc:entity class="PER" tokenIDs="w410"/>
+      <tc:entity class="PER" tokenIDs="w412"/>
+      <tc:entity class="PER" tokenIDs="w414"/>
+      <tc:entity class="PER" tokenIDs="w418"/>
+      <tc:entity class="OTH" tokenIDs="w41e w41f w420 w421 w422 w423"/>
+      <tc:entity class="GPE" tokenIDs="w425"/>
+      <tc:entity class="GPE" tokenIDs="w427 w428"/>
+      <tc:entity class="ORG" tokenIDs="w42a"/>
+    </tc:namedEntities>
+  </TextCorpus>
+</D-Spin>
